@@ -18,7 +18,7 @@ public interface IMenuNavigation {
 
 	
 	
-	final By Menu_AccountBC = By.id("TabBar-AccountTab");
+	final By Menu_AccountBC = By.xpath("//div[@id='TabBar-AccountsTab']//div[2]");
 
 	
 	void click_Menu_Desktop(By Menu_Desktop);

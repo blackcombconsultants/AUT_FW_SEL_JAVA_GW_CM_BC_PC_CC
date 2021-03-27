@@ -78,7 +78,7 @@ public class MenuNavigation extends WebDriverUtils implements IMenuNavigation {
 		switch (strMenuOption) {
 
 		case "x":
-		case "NewAccount":
+		case "Account":
 			gwAutomate(Menu_AccountBC, "click", "Null");
 			break;
 		case "y":

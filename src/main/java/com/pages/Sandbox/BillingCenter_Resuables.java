@@ -1,23 +1,31 @@
 package com.pages.Sandbox;
 
-import org.openqa.selenium.By;
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class BillingCenter_Resuables extends WebDriverUtils implements IBillingCenter {
+	public WebDriver driver;
+	public String strAccountName = "Automation9";;
 
-	private static final By Zipcode = null;
-	String strPolicyNumber = "Policy Automation1";
-	String strAccountNumber;
-	String strAccountName = "Automation1";;
-	int strAmount = 1000;
-
+	public String strPolicyNumber = "Policy " + strAccountName;
+	public String strAccountNumber;
+	public String strAmount = "1000";
+	
+	
 	public BillingCenter_Resuables(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 
-	public WebDriver driver;
+	/*
+	 * --------------------------------------------------------------
+	 * getAccountInformationHeader
+	 * --------------------------------------------------------------
+	 */ public String getHeader_Accounts() {
+		return getText_Element(Accounts);
+	}
 
 	/*
 	 * --------------------------------------------------------------
@@ -25,6 +33,7 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	 * --------------------------------------------------------------
 	 */ public String getHeader_NewAccount() {
 		return getText_Element(NewAccount);
+		
 	}
 
 	/*
@@ -39,9 +48,11 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	 * --------------------------------------------------------------
 	 * getHeader_PolicyIssuanceWizard
 	 * --------------------------------------------------------------
-	 */ public String getHeader_PolicyIssuanceWizard() {
-		return getText_Element(PolicyIssuanceWizard);
-	}
+	 */ public String getHeader_PolicyIssuanceWizard1() {
+			return getText_Element(PolicyIssuanceWizard1);
+		}public String getHeader_PolicyIssuanceWizard2() {
+			return getText_Element(PolicyIssuanceWizard2);
+		}
 
 	/*
 	 * --------------------------------------------------------------
@@ -71,7 +82,7 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 		gwAutomate(City, "sendkeys", "");
 		gwAutomate(County, "sendkeys", "");
 		gwAutomate(State, "sendkeys", "");
-		gwAutomate(Zipcode, "sendkeys", "");
+		gwAutomate(ZipCode, "sendkeys", "");
 
 		gwAutomate(Search_Button, "click", "");
 
@@ -84,9 +95,16 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	@Override
 	public void bc_NewAccount() {
 
+		// ------> Verifying the page -
+		Assert.assertEquals(getHeader_Accounts(), "Accounts");
+		gwAutomate(Actions_Button, "click", "");
+		gwAutomate(NewAccount_Button, "click", "");
+		// ------> Verifying the page -
+		Assert.assertEquals(getHeader_NewAccount(), "New Account");
+
 		gwAutomate(AccountNumber, "", "");
-		gwAutomate(AccountName, "sendkeys", "QA Automation1");
-		gwAutomate(ParentAccount, "sendkeys", "");
+		gwAutomate(AccountName, "sendkeys", strAccountName);
+		// gwAutomate(ParentAccount, "sendkeys", "");
 		gwAutomate(AccountType, "selectByVisibleText", "Insured");
 		gwAutomate(BillingPlan, "selectByVisibleText", "QA1BILLINGPLAN01");
 		gwAutomate(DelinquencyPlan, "selectByVisibleText", "Equity-Based Delinquency Plan");
@@ -117,8 +135,11 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	}
 
 	public void bc_NewPolicy_PolicyIssuanceWizard_Step1() {
+
 		gwAutomate(Actions_Button, "click", "");
 		gwAutomate(NewPolicy_Button, "click", "");
+
+		Assert.assertEquals(getHeader_PolicyIssuanceWizard1(), "Policy Issuance Wizard - Step 1 of 2");
 
 		gwAutomate(PolicyNumber, "sendkeys", strPolicyNumber);
 		gwAutomate(BillingMethod, "selectByVisibleText", "Direct Bill");
@@ -136,14 +157,17 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	}
 
 	public void bc_NewPolicy_PolicyIssuanceWizard_Step2() {
+		Assert.assertEquals(getHeader_PolicyIssuanceWizard2(), "Policy Issuance Wizard - Step 2 of 2");
 
-		gwAutomate(OK_Button, "click", "");
+		///gwAutomate(OK_Button, "click", "");
 
 		gwAutomate(PolicyAddCharges_Button, "click", "");
 
 		gwAutomate(PolicyAddChargesType, "selectByVisibleText", "Premium");
-		gwAutomate(PolicyAddChargesAmount, "sendkeys", "1234");
+		gwAutomate(PolicyAddChargesAmount, "clear", strAmount);
+		gwAutomate(PolicyAddChargesAmount, "sendkeys", strAmount);
 
+		gwAutomate(PolicyFinish_Button, "click", "");
 		gwAutomate(PolicyFinish_Button, "click", "");
 
 	}
@@ -154,9 +178,9 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 		Assert.assertEquals(getText_Element(AccountName_InfoBar), strAccountName);
 		System.out.println(getText_Element(AccountNumber_InfoBar));
 		Assert.assertEquals(getText_Element(AS_AccountName), strAccountName);
-		Assert.assertEquals(getText_Element(AS_PayoffAmount), "$1,110.00");
-		Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber);
-		Assert.assertEquals(getText_Element(AS_TotalValue), "$1,110.00");
+		Assert.assertEquals(getText_Element(AS_PayoffAmount), "$1,000.00");
+		Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber+"-1");
+		Assert.assertEquals(getText_Element(AS_TotalValue), "$1,000.00");
 	}
 
 	@Override
@@ -180,7 +204,7 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	@Override
 	public void bc_AccountSummary_Invoices() {
 		bc_MenuNavigation_AccountSummary("Invoice");
-		Assert.assertEquals(getText_Element(InvoiceHeader), strAccountName);
+		Assert.assertEquals(getText_Element(InvoiceHeader), "Invoices");
 		Assert.assertEquals(getSize_ElementsList(InvoiceDetails), 11);
 
 	}

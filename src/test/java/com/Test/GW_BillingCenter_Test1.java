@@ -33,6 +33,12 @@ public class GW_BillingCenter_Test1 {
 	public static String pConfigproperties = "/src/main/resources/Config.Properties";
 	public static String pUserdir = System.getProperty("user.dir");
 
+	public String strPolicyNumber = "Policy Automation1";
+	public String strAccountNumber;
+	public String strAccountName = "Automation1";;
+	public int strAmount = 1000;
+
+	
 	@BeforeTest
 	public void setUp() throws Exception {
 		String url = "HI";
@@ -212,9 +218,6 @@ public class GW_BillingCenter_Test1 {
 	@Test
 	public void BillingTest() throws Exception {
 
-
-
-		
 		LoginGuideware lg = new LoginGuideware(driver);
 		BillingCenter_Resuables gwPC = new BillingCenter_Resuables(driver);
 		MenuNavigation mn = new MenuNavigation(driver);
@@ -222,21 +225,15 @@ public class GW_BillingCenter_Test1 {
 		//        ------>             login_PolicyCenter
 		lg.login_BillingCenter();
 		//        ------>             navigate to new account
-		mn.gwBillingCenter_MenuNavigation("Menu_AccountBC");
-		//        ------>             Verifying the page -
-		Assert.assertEquals(gwPC.getHeader_NewAccount(), "New Account");
-		//        ------>             Create Account
+		mn.gwBillingCenter_MenuNavigation("Account");
+
+		//        ------>             New Account
 		gwPC.bc_NewAccount();
 		//        ------>             Verifying the page -		
 		Assert.assertEquals(gwPC.getHeader_AccountSummary(), "Account Summary");
-		//        ------>             navigate to new account
-		mn.gwBillingCenter_MenuNavigation("Menu_AccountBC");
-		//        ------>             Verifying the page -
-		Assert.assertEquals(gwPC.getHeader_NewAccount(), "New Account");
-		//        ------>             Create Account
+		//        ------>             New Policy
 		gwPC.bc_NewPolicy_PolicyIssuanceWizard_Step1();
 		//        ------>             Verifying the page -				
-		Assert.assertEquals(gwPC.getHeader_PolicyIssuanceWizard(), "Policy Issuance Wizard - Step 2 of 2");
 		gwPC.bc_NewPolicy_PolicyIssuanceWizard_Step2();
 		//        ------>             Verifying the bc_AccountSummary -		
 		gwPC.bc_AccountSummary();

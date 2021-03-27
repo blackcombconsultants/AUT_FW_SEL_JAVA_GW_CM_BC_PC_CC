@@ -1,7 +1,6 @@
 package com.pages.Sandbox;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 
 public interface IBillingCenter {
 
@@ -9,13 +8,13 @@ public interface IBillingCenter {
 	 * search account information
 	 */
 
-	final By Actions_Button = By.id("AccountsGroup-AccountsMenuActions");
+	final By Actions_Button = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
 	final By NewAccount_Button = By.id("AccountsGroup-AccountsMenuActions-AccountsMenuActions_NewAccount");
 	final By NewPolicy_Button = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
 
 	final By AccountNumber = By.xpath("//input[contains(@name,'NewAccountDV-AccountNumber')]");
 	final By AccountName = By.xpath("//input[contains(@name,'NewAccountDV-AccountName')]");
-
+	final By AccountType = By.xpath("//select[contains(@name,'NewAccountDV-AccountTypeInput')]");
 	final By BillingPlan = By.xpath("//select[contains(@name,'NewAccountDV-BillingPlan')]");
 	final By DelinquencyPlan = By.xpath("//select[contains(@name,'NewAccountDV-DelinquencyPlan')]");
 	final By SendInvoicesBy = By.xpath("//select[contains(@name,'NewAccountDV-SendInvoicesBy')]");
@@ -74,13 +73,12 @@ public interface IBillingCenter {
 	 * ProducerStatus = By.xpath("//div[contains(text(),'Active')]"); final By
 	 * ProducerTier = By.xpath("//input[contains(@name,'SearchDV-Tier')]");
 	 */
-	final By PolicyNumber = By.xpath("//input[contains(@name,'PolicyNumber')]");
+	final By PolicyNumber = By.xpath("//input[contains(@name,'NewPolicyDV-PolicyNumber')]");
 	final By Account = By.xpath("//input[contains(@name,'SearchDV-AccountNumberCriterion')]");
 	final By AccountName2 = By.xpath("//input[contains(@name,'SearchDV-AccountNameCriterion')]");
 	final By accountnickname = By.xpath("//input[contains(@name,'Nickname')]");
 	final By AccountSegment = By.xpath("//select[contains(@name,'SearchDV-AccountSegmentCriterion')]");
 	final By AccountStatus = By.xpath("//select[contains(@name,'SearchDV-DelinquencyStatusCriterion')]");
-	final By AccountType = By.xpath("//select[contains(@name,'SearchDV-AccountTypeCriterion')]");
 
 	final By Search_Button = By.xpath("//div[contains(@id,'SearchLinksInputSet-Search')]");
 	final By Reset_Button = By.xpath("//div[contains(@id,'SearchLinksInputSet-Reset')]");
@@ -97,7 +95,7 @@ public interface IBillingCenter {
 			.xpath("//div[contains(@id,'NewAccountScreen-ttlBar')]//div[text()='Enter Account Information']");
 
 	final By Update_Button = By.xpath("//div[contains(@id,'Update']");
-	final By AddExistingContact_Button = By.xpath("//div[contains(@id,'addExistingContact']");
+	final By AddExistingContact_Button = By.xpath("//div[contains(@id,'ContactsLV_tb-addExistingContact')]");
 
 	final By WrightConstruction_Select = By.xpath(
 			"//div[text()='Wright Construction']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'Select')]");
@@ -114,16 +112,18 @@ public interface IBillingCenter {
 	final By PaymentPlan = By.xpath("//select[contains(@name,'NewPolicyDV-PaymentPlan')]");
 
 	final By Next_Button = By.id("NewPolicyWizard-Next");
-	final By PolicyAddCharges_Button = By.xpath("//div[contains(@id,'PolicyAddChargesLV_tb-Add']");
-
+	
+	final By PolicyAddCharges_Button = By.xpath("//div[contains(@id,'PolicyAddChargesLV_tb-Add')]");
 	final By PolicyAddChargesType = By.xpath("//select[contains(@name,'PolicyAddChargesLV-0-Type')]");
-	final By PolicyAddChargesAmount = By.xpath("//input[contains(@id,'PolicyAddChargesLV-0-Amount')]");
-
-	final By PolicyFinish_Button = By.id("NewPolicyWizard-Finish");
+	final By PolicyAddChargesAmount = By.xpath("//input[contains(@name,'PolicyAddChargesLV-0-Amount')]");
+	final By PolicyFinish_Button = By.xpath("//div[@id='NewPolicyWizard-Finish']//div[contains(text(),'inish')]");
+	final By PolicyRemoveCharges_Button = By.xpath("//div[contains(@id,'PolicyAddChargesLV_tb-Remove')]");
 
 	/*
 	 * AccountSummaryHeader:
 	 */
+	final By Accounts = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Accounts')]");
+
 	final By NewAccount = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'New Account')]");
 
 	final By AccountName_InfoBar = By
@@ -131,10 +131,12 @@ public interface IBillingCenter {
 	final By AccountNumber_InfoBar = By
 			.xpath("//div[@id='AccountGroup-AccountInfoBar-AccountNumber']/div[@class='gw-label gw-infoValue']");
 
-	final By AccountSummary = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'New Account')]");
+	final By AccountSummary = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Account Summary')]");
 
-	final By PolicyIssuanceWizard = By
-			.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'New Account')]");
+	final By PolicyIssuanceWizard1 = By.xpath(
+			"//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Policy Issuance Wizard - Step 1 of 2')]");
+	final By PolicyIssuanceWizard2 = By.xpath(
+			"//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Policy Issuance Wizard - Step 2 of 2')]");
 
 	final By AS_AccountName = By.id("AccountSummary-AccountSummaryScreen-Name");
 	final By AS_PayoffAmount = By.id("AccountSummary-AccountSummaryScreen-PayoffAmount");
@@ -150,7 +152,7 @@ public interface IBillingCenter {
 
 	final By InvoiceDetails = By.xpath(
 			"//table[@class='gw-ListViewWidget--table gw-table']//tr[contains(@id,'DetailPanel-AccountInvoicesLV') and contains(@class,'listDetail')]");
-	
+
 	void bc_SearchAccountInformation();
 
 	void bc_NewAccount();

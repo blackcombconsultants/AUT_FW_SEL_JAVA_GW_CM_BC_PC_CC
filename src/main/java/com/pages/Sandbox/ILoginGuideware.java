@@ -13,7 +13,7 @@ public interface ILoginGuideware {
 
 	final By Username = By.xpath("//input[contains(@name,'LoginDV-username')]");
 	final By Password = By.xpath("//input[contains(@name,'LoginDV-password')]");
-	final By Login = By.xpath("//id[contains(@name,'LoginDV-submit')]");
+	final By Login = By.xpath("//div[@id='Login-LoginScreen-LoginDV-submit']//div");
 	
 	final By ToolBar = By.id("TabBar-UnsavedWorkTabBarLink");
 	final By Setting = By.id("gw-TabBarWidget--settings");

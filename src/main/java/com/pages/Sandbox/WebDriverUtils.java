@@ -43,15 +43,12 @@ public class WebDriverUtils {
 			switch (Action) {
 			case "sendkeys":
 				we.sendKeys(strValue);
-
 				break;
 			case "clear":
 				we.clear();
-
 				break;
 			case "select":
 				new Select(we).selectByVisibleText(strValue);
-
 				break;
 			case "selectByVisibleText":
 				new Select(we).selectByVisibleText(strValue);
@@ -59,7 +56,6 @@ public class WebDriverUtils {
 				break;
 			case "click":
 				we.click();
-
 				break;
 
 			default:
@@ -72,8 +68,9 @@ public class WebDriverUtils {
 	}
 
 	public WebElement getElement(By Locator) {
-		WebElement Temp = driver.findElement(Locator);
-		return Temp;
+		WebElement we = driver.findElement(Locator);
+		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(we));
+		return we;
 	}
 
 	public int getSize_ElementsList(By Locator) {
