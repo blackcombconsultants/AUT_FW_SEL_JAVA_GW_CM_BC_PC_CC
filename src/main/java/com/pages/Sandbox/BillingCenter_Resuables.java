@@ -1,22 +1,27 @@
 package com.pages.Sandbox;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class BillingCenter_Resuables extends WebDriverUtils implements IBillingCenter {
+
+	SimpleDateFormat formatter = new SimpleDateFormat("ddMMMMyyyy HHmmss");
+
+	
 	public WebDriver driver;
 	public String strAccountName = "Automation9";;
+	public String strPolicyNumber = formatter.format(new Date());
 
-	public String strPolicyNumber = "Policy " + strAccountName;
 	public String strAccountNumber;
 	public String strAmount = "1000";
-	
+
 	
 	public BillingCenter_Resuables(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	/*
@@ -128,7 +133,9 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 
 	@Override
 	public void bc_NewPolicy() {
-
+		SimpleDateFormat formatter = new SimpleDateFormat("ddMMMMyyyy HHmmss");
+		strPolicyNumber = formatter.format(new Date());
+		
 		bc_NewPolicy_PolicyIssuanceWizard_Step1();
 		bc_NewPolicy_PolicyIssuanceWizard_Step2();
 

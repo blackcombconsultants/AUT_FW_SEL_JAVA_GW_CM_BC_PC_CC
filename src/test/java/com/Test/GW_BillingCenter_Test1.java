@@ -17,6 +17,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -25,6 +26,10 @@ import com.pages.Sandbox.LoginGuideware;
 import com.pages.Sandbox.MenuNavigation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class GW_BillingCenter_Test1 {
 	public WebDriver driver;
@@ -33,17 +38,14 @@ public class GW_BillingCenter_Test1 {
 	public static String pConfigproperties = "/src/main/resources/Config.Properties";
 	public static String pUserdir = System.getProperty("user.dir");
 
-	public String strPolicyNumber = "Policy Automation1";
+	public String strPolicyNumber;
 	public String strAccountNumber;
-	public String strAccountName = "Automation1";;
-	public int strAmount = 1000;
+	public String strAccountName;
+	public int strAmount;
+	String url = "HI";
 
-	
 	@BeforeTest
 	public void setUp() throws Exception {
-		String url = "HI";
-
-		js = (JavascriptExecutor) driver;
 
 		File oFile = new File(pUserdir + pConfigproperties);
 		FileInputStream oFIS = new FileInputStream(oFile);
@@ -214,7 +216,6 @@ public class GW_BillingCenter_Test1 {
 		oWebDriverWait = new WebDriverWait(driver, 20);
 	}
 
-
 	@Test
 	public void BillingTest() throws Exception {
 
@@ -222,27 +223,31 @@ public class GW_BillingCenter_Test1 {
 		BillingCenter_Resuables gwPC = new BillingCenter_Resuables(driver);
 		MenuNavigation mn = new MenuNavigation(driver);
 
-		//        ------>             login_PolicyCenter
+		// ------> login_PolicyCenter
 		lg.login_BillingCenter();
-		//        ------>             navigate to new account
+		// ------> navigate to new account
 		mn.gwBillingCenter_MenuNavigation("Account");
 
-		//        ------>             New Account
+		// ------> New Account
 		gwPC.bc_NewAccount();
-		//        ------>             Verifying the page -		
+		// ------> Verifying the page -
 		Assert.assertEquals(gwPC.getHeader_AccountSummary(), "Account Summary");
-		//        ------>             New Policy
+		// ------> New Policy
 		gwPC.bc_NewPolicy_PolicyIssuanceWizard_Step1();
-		//        ------>             Verifying the page -				
+		// ------> Verifying the page -
 		gwPC.bc_NewPolicy_PolicyIssuanceWizard_Step2();
-		//        ------>             Verifying the bc_AccountSummary -		
+		// ------> Verifying the bc_AccountSummary -
 		gwPC.bc_AccountSummary();
-		//        ------>             bc_AccountSummary_Invoices
+		// ------> bc_AccountSummary_Invoices
 		gwPC.bc_AccountSummary_Invoices();
-		//        ------>             logout_BillingCenter	
+		// ------> logout_BillingCenter
 		lg.logout_BillingCenter();
 
+	}
 
+	@AfterTest
+	public void Closure() {
+		driver.quit();
 	}
 
 }
