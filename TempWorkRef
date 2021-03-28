@@ -1,0 +1,58 @@
+
+
+
+
+public LinkedHashMap<String, String> getData(String process, String dataName,LinkedHashMap<String, String> configData)
+
+
+
+	LinkedHashMap<String, String> data = new LinkedHashMap<String, String>();
+
+	List<LinkedHashMap<String, String>> tdNameReference = Helper.ReadCSV_getRowDataForMatch(Driver.configDataPath + "\\TestDataNameReference.csv", "DataName=" + dataName, false);
+
+
+		// This method is used to get all the data from CSV file which matches your * requirement
+
+		public static List<LinkedHashMap<String, String>> ReadCSV_getRowDataForMatch(String filePath, String Matches,boolean readAllRow) throws Exception {
+
+			List<LinkedHashMap<String, String>> dataList = new ArrayList<LinkedHashMap<String, String>>();
+
+
+			reader = new CSVReader(new FileReader(filePath));
+			List<String[]> csvBody = reader.readAll();
+			reader.close();
+			List<Integer> rows = findRowNumberCSVForMatch(filePath, Matches, readAllRow);
+
+			if (rows.size() == 0) {
+				throw new Exception("Data[" + Matches + "] not found in[" + filePath + "]");
+			}
+
+			
+			String columns[] = csvBody.get(0);
+
+
+			// This method is used to find the row number in csv file against the dataname
+
+			private static List<Integer> findRowNumberCSVForMatch(String filePath, String dataName, boolean readAllRow) throws Exception {
+
+				List<Integer> rowNos = new ArrayList<Integer>();
+				return rowNos;
+
+			line = csvBody.get(rowNo);
+
+			LinkedHashMap<String, String> data = new LinkedHashMap<String, String>();
+
+			data.put(columns[i], line[i]);
+
+	
+
+
+				dataList.add(data);
+
+
+	public static void updateCSV(String filePath, String match, String columnName, String valueToBeUpdated)
+	public static void updateCSVWithRowNum(String filePath, int rownum, String columnName, String valueToBeUpdated)
+		int col = findColumnNumberCSV(filePath, columnName);
+
+
+

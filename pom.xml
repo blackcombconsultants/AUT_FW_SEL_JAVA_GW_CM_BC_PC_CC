@@ -7,8 +7,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>GWTestcase</name>
 	<description>GWTestcase</description>
-	
-	
+
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -29,8 +29,8 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
-		<dependencies>
+
+	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -52,33 +52,6 @@
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>4.0.9</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>4.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-scratchpad</artifactId>
-			<version>4.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-excelant</artifactId>
-			<version>4.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml-schemas</artifactId>
-			<version>4.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-contrib</artifactId>
-			<version>3.6</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
@@ -137,6 +110,15 @@
 
 
 
+		<!-- https://mvnrepository.com/artifact/com.codoid.products/fillo -->
+
+		<dependency>
+			<groupId>com.codoid.products</groupId>
+			<artifactId>fillo</artifactId>
+			<version>1.21</version>
+		</dependency>
+
+
 	</dependencies>
-	
+
 </project>
