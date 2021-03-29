@@ -13,17 +13,22 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class WebDriverUtils {
+import com.aventstack.extentreports.ExtentReports;
+
+public class GW_Utils_SeleniumWebDriver extends ReadDataFromFile {
 
 	WebDriver driver;
 	WebDriverWait oWebDriverWait;
+	ExtentReports er;
 
 	private static Properties oProperties;
 	private static FileInputStream oFIS;
 
-	public WebDriverUtils(WebDriver driver) {
-		// TODO Auto-generated constructor stub
+
+	public GW_Utils_SeleniumWebDriver(WebDriver driver, ExtentReports er) {
 		this.driver = driver;
+		this.er = er;
+
 	}
 
 	public void gwAutomate(By Locator, String Action, String strValue) {
@@ -32,9 +37,11 @@ public class WebDriverUtils {
 			// Highlight the Element using Java Script.
 
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", we);
 			try {
-				Thread.sleep(500);
+				js.executeScript("arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')",
+						we);
+
+				Thread.sleep(750);
 			} catch (InterruptedException e) {
 				System.out.println(e.getMessage());
 			}

@@ -6,10 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class WebEventListener  implements WebDriverEventListener  {
+import com.aventstack.extentreports.Status;
+
+public class GW_WebDriverEventListener extends GW_Base implements WebDriverEventListener {
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
 		System.out.println("Before navigating to: '" + url + "'");
+		oExtentTest.log(Status.INFO, "Before navigating to: '" + url + "'");
 	}
 
 	public void afterNavigateTo(String url, WebDriver driver) {
@@ -30,6 +33,7 @@ public class WebEventListener  implements WebDriverEventListener  {
 
 	public void afterClickOn(WebElement element, WebDriver driver) {
 		System.out.println("Clicked on: " + element.toString());
+		oExtentTest.log(Status.INFO, "Clicked on: " + element.toString());
 	}
 
 	public void beforeNavigateBack(WebDriver driver) {
@@ -54,8 +58,10 @@ public class WebEventListener  implements WebDriverEventListener  {
 
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
 		System.out.println("Found Element By : " + by.toString());
+		oExtentTest.log(Status.INFO, "Found Element By: " + by.toString());
+
 	}
-	
+
 	public void beforeScript(String script, WebDriver driver) {
 	}
 
@@ -64,66 +70,53 @@ public class WebEventListener  implements WebDriverEventListener  {
 
 	public void beforeAlertAccept(WebDriver driver) {
 
-
 	}
 
 	public void afterAlertAccept(WebDriver driver) {
-
 
 	}
 
 	public void afterAlertDismiss(WebDriver driver) {
 
-
 	}
 
 	public void beforeAlertDismiss(WebDriver driver) {
-
 
 	}
 
 	public void beforeNavigateRefresh(WebDriver driver) {
 
-
 	}
 
 	public void afterNavigateRefresh(WebDriver driver) {
-
 
 	}
 
 	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
 
-
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-
 
 	}
 
 	public <X> void afterGetScreenshotAs(OutputType<X> arg0, X arg1) {
 
-
 	}
 
 	public void afterGetText(WebElement arg0, WebDriver arg1, String arg2) {
-
 
 	}
 
 	public void afterSwitchToWindow(String arg0, WebDriver arg1) {
 
-
 	}
 
 	public <X> void beforeGetScreenshotAs(OutputType<X> arg0) {
 
-
 	}
 
 	public void beforeGetText(WebElement arg0, WebDriver arg1) {
-
 
 	}
 
@@ -133,6 +126,5 @@ public class WebEventListener  implements WebDriverEventListener  {
 
 	public void onException(Throwable arg0, WebDriver arg1) {
 
-		
 	}
 }

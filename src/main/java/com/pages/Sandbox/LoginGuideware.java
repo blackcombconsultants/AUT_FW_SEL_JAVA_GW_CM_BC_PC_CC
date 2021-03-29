@@ -1,13 +1,17 @@
 package com.pages.Sandbox;
 
+import java.util.LinkedHashMap;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginGuideware extends WebDriverUtils implements ILoginGuideware {
-	public LoginGuideware(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
+import com.aventstack.extentreports.ExtentReports;
+import com.codoid.products.exception.FilloException;
+
+public class LoginGuideware extends GW_Utils_SeleniumWebDriver implements ILoginGuideware {
+	public LoginGuideware(WebDriver driver, ExtentReports er) {
+		super(driver, er);
 	}
 
 	WebDriver driver;
@@ -91,9 +95,17 @@ public class LoginGuideware extends WebDriverUtils implements ILoginGuideware {
 
 	@Override
 	public void login_BillingCenter() {
-		gwAutomate(Username, "sendkeys", "su");
-		gwAutomate(Password, "sendkeys", "gw");
-		gwAutomate(Login, "click", "Null");
+
+		try {
+			LinkedHashMap<String, String> lhm_Data = getDataFromSheet_Fillo("Login", "SuperUser");
+
+			gwAutomate(Username, "sendkeys", lhm_Data.get("TD_UserName"));
+			gwAutomate(Password, "sendkeys", lhm_Data.get("TD_Password"));
+			gwAutomate(Login, "click", "Null");
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	@Override

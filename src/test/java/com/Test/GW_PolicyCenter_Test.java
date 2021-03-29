@@ -21,10 +21,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.pages.Sandbox.LoginGuideware;
-import com.pages.Sandbox.MenuNavigation;
-import com.pages.Sandbox.PolicyCenter_Resuables;
-import com.pages.Sandbox.WebEventListener;
+import com.aventstack.extentreports.ExtentReports;
+import com.pages.Sandbox.*;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -34,6 +32,7 @@ public class GW_PolicyCenter_Test {
 	public WebDriverWait oWebDriverWait;
 	public static String pConfigproperties = "/src/main/resources/Config.properties";
 	public static String pUserdir = System.getProperty("user.dir");
+	ExtentReports er;
 
 	@BeforeTest
 	public void setUp() throws Exception {
@@ -186,7 +185,7 @@ public class GW_PolicyCenter_Test {
 
 		if (true) {
 			EventFiringWebDriver efDriver = new EventFiringWebDriver(driver);
-			WebEventListener wel = new WebEventListener();
+			GW_WebDriverEventListener wel = new GW_WebDriverEventListener();
 			efDriver.register(wel);
 			driver = efDriver;
 		}
@@ -219,9 +218,9 @@ public class GW_PolicyCenter_Test {
 	@Test
 	public void createAccount() throws Exception {
 
-		LoginGuideware lg = new LoginGuideware(driver);
-		PolicyCenter_Resuables gwPC = new PolicyCenter_Resuables(driver);
-		MenuNavigation mn = new MenuNavigation(driver);
+		LoginGuideware lg = new LoginGuideware(driver, er);
+		PolicyCenter_Resuables gwPC = new PolicyCenter_Resuables(driver, er);
+		MenuNavigation mn = new MenuNavigation(driver, er);
 
 		// login_PolicyCenter
 		lg.login_PolicyCenter();

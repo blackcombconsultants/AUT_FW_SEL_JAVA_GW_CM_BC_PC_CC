@@ -2,16 +2,19 @@ package com.pages.Sandbox;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class BillingCenter_Resuables extends WebDriverUtils implements IBillingCenter {
+import com.aventstack.extentreports.ExtentReports;
+import com.codoid.products.exception.FilloException;
+
+public class BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver implements IBillingCenter {
 
 	SimpleDateFormat formatter = new SimpleDateFormat("ddMMMMyyyy HHmmss");
 
-	
 	public WebDriver driver;
 	public String strAccountName = "Automation9";;
 	public String strPolicyNumber = formatter.format(new Date());
@@ -19,9 +22,8 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	public String strAccountNumber;
 	public String strAmount = "1000";
 
-	
-	public BillingCenter_Resuables(WebDriver driver) {
-		super(driver);
+	public BillingCenter_Resuables(WebDriver driver, ExtentReports er) {
+		super(driver, er);
 	}
 
 	/*
@@ -38,7 +40,7 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	 * --------------------------------------------------------------
 	 */ public String getHeader_NewAccount() {
 		return getText_Element(NewAccount);
-		
+
 	}
 
 	/*
@@ -54,10 +56,12 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	 * getHeader_PolicyIssuanceWizard
 	 * --------------------------------------------------------------
 	 */ public String getHeader_PolicyIssuanceWizard1() {
-			return getText_Element(PolicyIssuanceWizard1);
-		}public String getHeader_PolicyIssuanceWizard2() {
-			return getText_Element(PolicyIssuanceWizard2);
-		}
+		return getText_Element(PolicyIssuanceWizard1);
+	}
+
+	public String getHeader_PolicyIssuanceWizard2() {
+		return getText_Element(PolicyIssuanceWizard2);
+	}
 
 	/*
 	 * --------------------------------------------------------------
@@ -100,34 +104,42 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	@Override
 	public void bc_NewAccount() {
 
-		// ------> Verifying the page -
-		Assert.assertEquals(getHeader_Accounts(), "Accounts");
-		gwAutomate(Actions_Button, "click", "");
-		gwAutomate(NewAccount_Button, "click", "");
-		// ------> Verifying the page -
-		Assert.assertEquals(getHeader_NewAccount(), "New Account");
+		try {
+			LinkedHashMap<String, String> lhm_Data = getDataFromSheet_Fillo("Account", "BillPlan1");
 
-		gwAutomate(AccountNumber, "", "");
-		gwAutomate(AccountName, "sendkeys", strAccountName);
-		// gwAutomate(ParentAccount, "sendkeys", "");
-		gwAutomate(AccountType, "selectByVisibleText", "Insured");
-		gwAutomate(BillingPlan, "selectByVisibleText", "QA1BILLINGPLAN01");
-		gwAutomate(DelinquencyPlan, "selectByVisibleText", "Equity-Based Delinquency Plan");
-		gwAutomate(SendInvoicesBy, "selectByVisibleText", "Email");
+			// ------> Verifying the page -
+			Assert.assertEquals(getHeader_Accounts(), "Accounts");
+			gwAutomate(Actions_Button, "click", "");
+			gwAutomate(NewAccount_Button, "click", "");
+			// ------> Verifying the page -
+			Assert.assertEquals(getHeader_NewAccount(), "New Account");
 
-		gwAutomate(AddExistingContact_Button, "click", "");
+			gwAutomate(AccountNumber, "", "");
+			strAccountName = lhm_Data.get("TD_AccountName");
+			gwAutomate(AccountName, "sendkeys", strAccountName);
+			// gwAutomate(ParentAccount, "sendkeys", "");
+			gwAutomate(AccountType, "selectByVisibleText", lhm_Data.get("TD_AccountType"));
+			gwAutomate(BillingPlan, "selectByVisibleText", lhm_Data.get("TD_BillingPlan"));
+			gwAutomate(DelinquencyPlan, "selectByVisibleText", lhm_Data.get("TD_DelinquencyPlan"));
+			gwAutomate(SendInvoicesBy, "selectByVisibleText", lhm_Data.get("TD_SendInvoicesBy"));
 
-		gwAutomate(CompanyName, "sendkeys", "Wright Construction");
-		gwAutomate(Search_Button, "click", "");
+			gwAutomate(AddExistingContact_Button, "click", "");
 
-		gwAutomate(WrightConstruction_Select, "click", "");
-		gwAutomate(WrightConstruction_Edit, "click", "");
+			gwAutomate(CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+			gwAutomate(Search_Button, "click", "");
 
-		gwAutomate(PrimaryPayer, "click", "");
+			gwAutomate(WrightConstruction_Select, "click", "");
+			gwAutomate(WrightConstruction_Edit, "click", "");
 
-		gwAutomate(OK_Button, "click", "");
+			gwAutomate(PrimaryPayer, "click", "");
 
-		gwAutomate(CreateAccount_Button, "click", "");
+			gwAutomate(OK_Button, "click", "");
+
+			gwAutomate(CreateAccount_Button, "click", "");
+
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -135,7 +147,7 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	public void bc_NewPolicy() {
 		SimpleDateFormat formatter = new SimpleDateFormat("ddMMMMyyyy HHmmss");
 		strPolicyNumber = formatter.format(new Date());
-		
+
 		bc_NewPolicy_PolicyIssuanceWizard_Step1();
 		bc_NewPolicy_PolicyIssuanceWizard_Step2();
 
@@ -166,7 +178,7 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 	public void bc_NewPolicy_PolicyIssuanceWizard_Step2() {
 		Assert.assertEquals(getHeader_PolicyIssuanceWizard2(), "Policy Issuance Wizard - Step 2 of 2");
 
-		///gwAutomate(OK_Button, "click", "");
+		/// gwAutomate(OK_Button, "click", "");
 
 		gwAutomate(PolicyAddCharges_Button, "click", "");
 
@@ -186,7 +198,7 @@ public class BillingCenter_Resuables extends WebDriverUtils implements IBillingC
 		System.out.println(getText_Element(AccountNumber_InfoBar));
 		Assert.assertEquals(getText_Element(AS_AccountName), strAccountName);
 		Assert.assertEquals(getText_Element(AS_PayoffAmount), "$1,000.00");
-		Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber+"-1");
+		Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber + "-1");
 		Assert.assertEquals(getText_Element(AS_TotalValue), "$1,000.00");
 	}
 

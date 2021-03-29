@@ -3,16 +3,17 @@ package com.pages.Sandbox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PolicyCenter_Resuables extends WebDriverUtils implements IPolicyCenter {
+import com.aventstack.extentreports.ExtentReports;
+
+public class PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implements IPolicyCenter {
 
 	private static final By Zipcode = null;
+	public WebDriver driver;
 
-	public PolicyCenter_Resuables(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
+	public PolicyCenter_Resuables(WebDriver driver, ExtentReports er) {
+		super(driver, er);
 	}
 
-	public WebDriver driver;
 
 	/*
 	 * --------------------------------------------------------------

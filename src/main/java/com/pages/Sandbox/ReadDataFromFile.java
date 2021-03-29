@@ -1,39 +1,43 @@
 package com.pages.Sandbox;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
-public class ReadDataFromFile {
+public class ReadDataFromFile extends GW_Base {
 
-	String pFilePath = "\\testdata\\BillingCenter.xlsx";
+	String pFilePath = System.getProperty("user.dir") + "\\testdata\\BillingCenter.xlsx";
 
-	public String getValue_Fillo(String pFilePath, String strSheetName, String strPrimaryKey, String strItem) throws FilloException {
-		String strValue = null;
+	public LinkedHashMap<String, String> getDataFromSheet_Fillo(String strSheetName, String strPrimaryKeyValue)
+			throws FilloException {
 
-		System.out.println("File Path = " + pFilePath);
+		LinkedHashMap<String, String> lhmTestDataSheet = new LinkedHashMap<String, String>();
 
 		Fillo oFillo = new Fillo();
 		Connection oConnection = oFillo.getConnection(pFilePath);
 
-		String strQuery = "Select * from " + strSheetName + " where PrimaryKey=" + strPrimaryKey + " and name='John'";
+		String strQuery = "Select * from " + strSheetName + " where PrimaryKey='" + strPrimaryKeyValue + "'";
 		System.out.println("strQuery = " + strQuery);
 
 		Recordset recordset = oConnection.executeQuery(strQuery);
+		List<String> oList_Header = recordset.getFieldNames();
 
-		while (recordset.next()) {
-			System.out.println(recordset.getField("TD_UserName"));
-			System.out.println(recordset.getField("TD_Passwprd"));
+		// Only first row
+		recordset.moveFirst();
+		for (String strHeaderName : oList_Header) {
+			lhmTestDataSheet.put(strHeaderName, recordset.getField(strHeaderName));
 		}
-		
-
 		recordset.close();
 		oConnection.close();
 
-		System.out.println(strItem + " = " + strValue);
-
-		return strValue;
+		return lhmTestDataSheet;
 
 	}
 }

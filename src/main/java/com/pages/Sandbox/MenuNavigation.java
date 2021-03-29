@@ -3,11 +3,12 @@ package com.pages.Sandbox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class MenuNavigation extends WebDriverUtils implements IMenuNavigation {
+import com.aventstack.extentreports.ExtentReports;
 
-	public MenuNavigation(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
+public class MenuNavigation extends GW_Utils_SeleniumWebDriver implements IMenuNavigation {
+
+	public MenuNavigation(WebDriver driver, ExtentReports er) {
+		super(driver, er);
 	}
 
 	@Override
