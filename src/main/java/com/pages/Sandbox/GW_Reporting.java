@@ -5,18 +5,19 @@ import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class GW_Reporting extends GW_Base {
 	public String ehrDate;
 	public static String pUserdir = System.getProperty("user.dir");
-
+	String pesrName;
+	
 	public ExtentReports getReport() {
 
 		SimpleDateFormat ddMMMMyyyy = new SimpleDateFormat("ddMMMMyyyy");
 		ehrDate = ddMMMMyyyy.format(new Date());
 
-		String pesrName = pUserdir + "\\reports\\ExtentReport_" + ehrDate + ".html";
+		//pesrName = pUserdir + "\\reports\\ExtentReport_" + ehrDate + ".html";
+		pesrName = pUserdir + "\\test-output\\extentreports\\index.html";
 		oExtentSparkReporter = new ExtentSparkReporter(pesrName);
 		oExtentSparkReporter.config().setReportName("Billing Center");
 		oExtentSparkReporter.config().setDocumentTitle("Automation Report");
