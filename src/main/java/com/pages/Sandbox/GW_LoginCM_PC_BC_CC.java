@@ -9,8 +9,8 @@ import org.openqa.selenium.WebElement;
 import com.aventstack.extentreports.ExtentReports;
 import com.codoid.products.exception.FilloException;
 
-public class LoginGuideware extends GW_Utils_SeleniumWebDriver implements ILoginGuideware {
-	public LoginGuideware(WebDriver driver, ExtentReports er) {
+public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements GW_LoginCM_PC_BC_CC_PO {
+	public GW_LoginCM_PC_BC_CC(WebDriver driver, ExtentReports er) {
 		super(driver, er);
 	}
 

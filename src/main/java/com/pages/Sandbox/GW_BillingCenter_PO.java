@@ -2,7 +2,7 @@ package com.pages.Sandbox;
 
 import org.openqa.selenium.By;
 
-public interface IBillingCenter {
+public interface GW_BillingCenter_PO {
 
 	/*
 	 * search account information

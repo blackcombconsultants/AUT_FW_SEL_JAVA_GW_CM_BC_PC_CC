@@ -2,7 +2,7 @@ package com.pages.Sandbox;
 
 import org.openqa.selenium.By;
 
-public interface IMenuNavigation {
+public interface GW_MenuNavigation_CM_PC_BC_CC_PO {
 
 	/*
 	 * Desktop Tab

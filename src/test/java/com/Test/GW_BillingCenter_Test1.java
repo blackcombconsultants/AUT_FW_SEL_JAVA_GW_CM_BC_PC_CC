@@ -13,10 +13,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.pages.Sandbox.BillingCenter_Resuables;
-import com.pages.Sandbox.GW_Base;
-import com.pages.Sandbox.LoginGuideware;
-import com.pages.Sandbox.MenuNavigation;
+import com.pages.Sandbox.*;
 
 public class GW_BillingCenter_Test1 extends GW_Base {
 	WebDriver driver;
@@ -64,11 +61,11 @@ public class GW_BillingCenter_Test1 extends GW_Base {
 	@Test
 	public void BillingTest() throws Exception {
 
-		LoginGuideware lg = new LoginGuideware(driver, oExtentReports);
+		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentReports);
 		oExtentTest.addScreenCaptureFromBase64String("login");
 
-		BillingCenter_Resuables gwPC = new BillingCenter_Resuables(driver, oExtentReports);
-		MenuNavigation mn = new MenuNavigation(driver, oExtentReports);
+		GW_BillingCenter_Resuables gwPC = new GW_BillingCenter_Resuables(driver, oExtentReports);
+		GW_MenuNavigation_CM_PC_BC_CC mn = new GW_MenuNavigation_CM_PC_BC_CC(driver, oExtentReports);
 
 		// ------> login_PolicyCenter
 		lg.login_BillingCenter();
@@ -85,7 +82,7 @@ public class GW_BillingCenter_Test1 extends GW_Base {
 
 		// ------> Verifying the page -
 		Assert.assertEquals(gwPC.getHeader_AccountSummary(), "Account Summary");
-		oExtentTest.log(Status.PASS, "Expectd = " + gwPC.getHeader_AccountSummary() + "Actual = " + "Account Summary");
+		oExtentTest.log(Status.PASS, "Expectd = " + gwPC.getHeader_AccountSummary() + " Actual = " + "Account Summary");
 
 		// ------> New Policy
 		gwPC.bc_NewPolicy_PolicyIssuanceWizard_Step1();

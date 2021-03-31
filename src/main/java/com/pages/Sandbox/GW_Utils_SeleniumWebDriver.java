@@ -15,14 +15,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
 
-public class GW_Utils_SeleniumWebDriver extends ReadDataFromFile {
+public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 
 	WebDriver driver;
 	WebDriverWait oWebDriverWait;
 	ExtentReports er;
-
-	private static Properties oProperties;
-	private static FileInputStream oFIS;
 
 
 	public GW_Utils_SeleniumWebDriver(WebDriver driver, ExtentReports er) {

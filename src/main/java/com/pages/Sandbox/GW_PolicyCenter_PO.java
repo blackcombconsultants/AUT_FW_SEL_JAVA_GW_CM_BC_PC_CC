@@ -2,7 +2,7 @@ package com.pages.Sandbox;
 
 import org.openqa.selenium.By;
 
-public interface IPolicyCenter {
+public interface GW_PolicyCenter_PO {
 
 	/*
 	 * search account information

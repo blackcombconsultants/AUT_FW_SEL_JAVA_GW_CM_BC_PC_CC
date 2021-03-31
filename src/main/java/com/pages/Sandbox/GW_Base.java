@@ -1,8 +1,10 @@
 package com.pages.Sandbox;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,12 +13,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -25,20 +30,26 @@ public class GW_Base {
 
 	WebDriver driver;
 	JavascriptExecutor js;
+	public WebDriverWait oWebDriverWait;
 
+	public static ExtentHtmlReporter oExtentHtmlReporter;
 	public static ExtentSparkReporter oExtentSparkReporter;
 	public static ExtentReports oExtentReports;
 	public static ExtentTest oExtentTest;
-	public WebDriverWait oWebDriverWait;
+
+	public static Properties oProperties;
+	public static FileInputStream oFIS;
+
 	public static String pConfigproperties = "/src/main/resources/Config.Properties";
 	public static String pUserdir = System.getProperty("user.dir");
-	public String pFilePath = pUserdir + "\\testdata\\BillingCenter.xlsx";
+	public static String pFilePath = pUserdir + "\\testdata\\BillingCenter.xlsx";
+	public static SimpleDateFormat ddMMMMyyyy = new SimpleDateFormat("ddMMMMyyyy");
+	public static String strCurrentDate = ddMMMMyyyy.format(new Date());
+
 	public String strPolicyNumber;
 	public String strAccountNumber;
 	public String strAccountName;
 	public int strAmount;
-	SimpleDateFormat ddMMMMyyyy = new SimpleDateFormat("ddMMMMyyyy");
-	public String ehrDate = ddMMMMyyyy.format(new Date());
 
 	public WebDriver getDriver() {
 
@@ -159,25 +170,23 @@ public class GW_Base {
 			driver = new OperaDriver();
 			break;
 
-		case "Headles":
+		case "HEADLESS":
 
-			driver = new OperaDriver();
+			HtmlUnitDriver driver = new HtmlUnitDriver();
 			break;
 
 		default:
-			driver = new OperaDriver();
 
 			break;
 		}
+
 		
-		/*
-		 * EventFiringWebDriver efDriver = new EventFiringWebDriver(driver);
-		 * WebEventListener wel = new WebEventListener(); efDriver.register(wel); driver
-		 * = efDriver;
-		 */
-		
+		  EventFiringWebDriver efDriver = new EventFiringWebDriver(driver);
+		  GW_Selenium_WebDriverEventListener wel = new
+		  GW_Selenium_WebDriverEventListener(); efDriver.register(wel); driver =
+		  efDriver;
+		 
 		return driver;
 	}
-	
 
 }

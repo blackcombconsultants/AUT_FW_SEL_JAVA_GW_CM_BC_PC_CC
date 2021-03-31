@@ -16,7 +16,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
-public class GW_TestListener extends GW_Base implements ITestListener {
+public class GW_TestNGListener extends GW_Base implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		// creating test name
@@ -73,7 +73,7 @@ public class GW_TestListener extends GW_Base implements ITestListener {
 	public void onStart(ITestContext context) {
 		// setup method called
 		try {
-			GW_Reporting r = new GW_Reporting();
+			GW_Selenium_Reporting r = new GW_Selenium_Reporting();
 			oExtentReports = r.getReport();
 
 		} catch (Exception e) {

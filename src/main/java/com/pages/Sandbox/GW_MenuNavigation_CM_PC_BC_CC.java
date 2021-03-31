@@ -5,33 +5,33 @@ import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 
-public class MenuNavigation extends GW_Utils_SeleniumWebDriver implements IMenuNavigation {
+public class GW_MenuNavigation_CM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements GW_MenuNavigation_CM_PC_BC_CC_PO {
 
-	public MenuNavigation(WebDriver driver, ExtentReports er) {
+	public GW_MenuNavigation_CM_PC_BC_CC(WebDriver driver, ExtentReports er) {
 		super(driver, er);
 	}
 
 	@Override
 	public void click_Menu_Desktop(By Menu_Desktop) {
-		gwAutomate(MenuNavigation.Menu_Desktop, "click", "Null");
+		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.Menu_Desktop, "click", "Null");
 
 	}
 
 	@Override
 	public void click_SuBMenu_Desktop_Summary(By SuBMenu_Desktop_Summary) {
-		gwAutomate(MenuNavigation.SuBMenu_Desktop_Summary, "click", "Null");
+		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.SuBMenu_Desktop_Summary, "click", "Null");
 
 	}
 
 	@Override
 	public void click_Menu_Account(By Menu_Account) {
-		gwAutomate(MenuNavigation.Menu_Account, "click", "Null");
+		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.Menu_Account, "click", "Null");
 
 	}
 
 	@Override
 	public void click_SubMenu_Account_Newaccount(By SubMenu_Account_Newaccount) {
-		gwAutomate(MenuNavigation.SubMenu_Account_Newaccount, "click", "Null");
+		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.SubMenu_Account_Newaccount, "click", "Null");
 
 	}
 

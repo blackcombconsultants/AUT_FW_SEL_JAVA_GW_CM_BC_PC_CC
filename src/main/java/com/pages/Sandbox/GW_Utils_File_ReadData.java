@@ -11,7 +11,7 @@ import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
-public class ReadDataFromFile extends GW_Base {
+public class GW_Utils_File_ReadData extends GW_Base {
 
 	String pFilePath = System.getProperty("user.dir") + "\\testdata\\BillingCenter.xlsx";
 

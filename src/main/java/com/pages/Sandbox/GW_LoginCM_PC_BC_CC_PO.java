@@ -9,7 +9,7 @@ package com.pages.Sandbox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public interface ILoginGuideware {
+public interface GW_LoginCM_PC_BC_CC_PO {
 
 	final By Username = By.xpath("//input[contains(@name,'LoginDV-username')]");
 	final By Password = By.xpath("//input[contains(@name,'LoginDV-password')]");

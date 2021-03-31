@@ -185,7 +185,7 @@ public class GW_PolicyCenter_Test {
 
 		if (true) {
 			EventFiringWebDriver efDriver = new EventFiringWebDriver(driver);
-			GW_WebDriverEventListener wel = new GW_WebDriverEventListener();
+			GW_Selenium_WebDriverEventListener wel = new GW_Selenium_WebDriverEventListener();
 			efDriver.register(wel);
 			driver = efDriver;
 		}
@@ -218,9 +218,9 @@ public class GW_PolicyCenter_Test {
 	@Test
 	public void createAccount() throws Exception {
 
-		LoginGuideware lg = new LoginGuideware(driver, er);
-		PolicyCenter_Resuables gwPC = new PolicyCenter_Resuables(driver, er);
-		MenuNavigation mn = new MenuNavigation(driver, er);
+		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, er);
+		GW_PolicyCenter_Resuables gwPC = new GW_PolicyCenter_Resuables(driver, er);
+		GW_MenuNavigation_CM_PC_BC_CC mn = new GW_MenuNavigation_CM_PC_BC_CC(driver, er);
 
 		// login_PolicyCenter
 		lg.login_PolicyCenter();

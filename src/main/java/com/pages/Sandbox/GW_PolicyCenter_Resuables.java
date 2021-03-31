@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 
-public class PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implements IPolicyCenter {
+public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implements GW_PolicyCenter_PO {
 
 	private static final By Zipcode = null;
 	public WebDriver driver;
 
-	public PolicyCenter_Resuables(WebDriver driver, ExtentReports er) {
+	public GW_PolicyCenter_Resuables(WebDriver driver, ExtentReports er) {
 		super(driver, er);
 	}
 

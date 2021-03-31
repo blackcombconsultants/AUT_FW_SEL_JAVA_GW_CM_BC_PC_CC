@@ -1,3 +1,4 @@
+
 package com.pages.Sandbox;
 
 import java.text.SimpleDateFormat;
@@ -11,7 +12,7 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentReports;
 import com.codoid.products.exception.FilloException;
 
-public class BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver implements IBillingCenter {
+public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver implements GW_BillingCenter_PO {
 
 	SimpleDateFormat formatter = new SimpleDateFormat("ddMMMMyyyy HHmmss");
 
@@ -22,7 +23,7 @@ public class BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver implemen
 	public String strAccountNumber;
 	public String strAmount = "1000";
 
-	public BillingCenter_Resuables(WebDriver driver, ExtentReports er) {
+	public GW_BillingCenter_Resuables(WebDriver driver, ExtentReports er) {
 		super(driver, er);
 	}
 
