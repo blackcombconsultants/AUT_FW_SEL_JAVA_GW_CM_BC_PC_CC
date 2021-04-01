@@ -9,7 +9,7 @@ public class GW_Selenium_Reporting extends GW_Base {
 
 	public ExtentReports getReport() {
 
-		pExtentReportFile = pUserdir + "\\test-output\\extentreports\\ExtentReport_" + strCurrentDate + ".html";
+		pExtentReportFile = pUserdir + "\\test-output\\extentreports\\index.html";
 
 		oExtentSparkReporter = new ExtentSparkReporter(pExtentReportFile);
 		oExtentSparkReporter.config().setDocumentTitle("Automation Report");
