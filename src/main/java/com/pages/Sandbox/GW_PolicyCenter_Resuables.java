@@ -6,8 +6,6 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implements GW_PolicyCenter_PO {
 
-	public WebDriver driver;
-
 	public GW_PolicyCenter_Resuables(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}

@@ -7,11 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.codoid.products.exception.FilloException;
 
 public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver implements GW_BillingCenter_PO {
 
-	WebDriver driver;
 	LinkedHashMap<String, String> lhm_Data;
 
 	public GW_BillingCenter_Resuables(WebDriver driver, ExtentTest oExtentTest) {
@@ -129,8 +129,14 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 			gwAutomate(OK_Button, "click", "");
 
 			gwAutomate(CreateAccount_Button, "click", "");
+			
+			
+			oExtentTest.log(Status.PASS, "CreateAccount is succesful");
+			oExtentTest.addScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver));
 
 		} catch (FilloException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 

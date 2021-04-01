@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.codoid.products.exception.FilloException;
 
 public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements GW_LoginCM_PC_BC_CC_PO {
@@ -102,7 +103,15 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 			gwAutomate(Username, "sendkeys", lhm_Data.get("TD_UserName"));
 			gwAutomate(Password, "sendkeys", lhm_Data.get("TD_Password"));
 			gwAutomate(Login, "click", "Null");
+			
+			oExtentTest.log(Status.PASS, "Login into Billing center is succesful");
+			oExtentTest.addScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver));
+			//oExtentTest.info((Markup) MediaEntityBuilder.createScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver)));
+			//oExtentTest.log(LogStatus.PASS, oExtentTest.addScreenCapture(getscreenshot(driver, Driver.strReportPath)));
+
 		} catch (FilloException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 

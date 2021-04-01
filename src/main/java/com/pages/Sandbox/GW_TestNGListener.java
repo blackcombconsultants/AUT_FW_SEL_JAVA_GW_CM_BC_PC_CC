@@ -1,8 +1,12 @@
 package com.pages.Sandbox;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -36,19 +40,6 @@ public class GW_TestNGListener extends GW_Base implements ITestListener {
 				MarkupHelper.createLabel(result.getMethod().getMethodName() + " Test Case Failed", ExtentColor.RED));
 		oExtentTest.log(Status.FAIL, result.getThrowable());
 
-		/*
-		 * File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		 * SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyy HH-mm-ss"); // get
-		 * current date Date date = new Date(); String actualDate = format.format(date);
-		 * String screenShotPath = System.getProperty("user.dir") +
-		 * "\\Screenshots\\ExtentReport_" + actualDate + ".jpeg";
-		 * 
-		 * File dest = new File(screenShotPath); try { FileUtils.copyFile(source, dest);
-		 * } catch (IOException e) { e.printStackTrace(); } //
-		 * test.addScreenCaptureFromPath(screenShotPath, "Test case failure //
-		 * screenshot"); try { oExtentTest.addScreenCaptureFromPath(screenShotPath); }
-		 * catch (IOException e) { e.printStackTrace(); }
-		 */
 
 	}
 
@@ -80,11 +71,10 @@ public class GW_TestNGListener extends GW_Base implements ITestListener {
 			oExtentReports.flush();
 
 			FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_TodayFile), true);
-			new ProcessBuilder("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", pExtentReport_indexFile)
-					.start();
+			new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", pExtentReport_indexFile).start();
 		} catch (Exception e) {
 			e.printStackTrace();
- 
+
 		}
 
 	}

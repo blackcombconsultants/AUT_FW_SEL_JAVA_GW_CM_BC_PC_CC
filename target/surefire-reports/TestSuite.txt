@@ -1,15 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.761 sec <<< FAILURE! - in TestSuite
-BillingTest(com.Test.GW_BillingCenter_Test1)  Time elapsed: 37.918 sec  <<< FAILURE!
-java.lang.AssertionError: expected [11] but found [12]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
-	at com.pages.Sandbox.GW_BillingCenter_Resuables.bc_AccountSummary_Invoices(GW_BillingCenter_Resuables.java:228)
-	at com.Test.GW_BillingCenter_Test1.BillingTest(GW_BillingCenter_Test1.java:100)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.831 sec - in TestSuite
