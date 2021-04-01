@@ -1,30 +1,21 @@
 
 package com.pages.Sandbox;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.LinkedHashMap;
-import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.codoid.products.exception.FilloException;
 
 public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver implements GW_BillingCenter_PO {
 
-	SimpleDateFormat formatter = new SimpleDateFormat("ddMMMMyyyy HHmmss");
+	WebDriver driver;
+	LinkedHashMap<String, String> lhm_Data;
 
-	public WebDriver driver;
-	public String strAccountName = "Automation9";;
-	public String strPolicyNumber = formatter.format(new Date());
-
-	public String strAccountNumber;
-	public String strAmount = "1000";
-
-	public GW_BillingCenter_Resuables(WebDriver driver, ExtentReports er) {
-		super(driver, er);
+	public GW_BillingCenter_Resuables(WebDriver driver, ExtentTest oExtentTest) {
+		super(driver, oExtentTest);
 	}
 
 	/*
@@ -106,7 +97,8 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 	public void bc_NewAccount() {
 
 		try {
-			LinkedHashMap<String, String> lhm_Data = getDataFromSheet_Fillo("Account", "BillPlan1");
+
+			lhm_Data = getDataFromSheet_Fillo("Account", "BillPlan1");
 
 			// ------> Verifying the page -
 			Assert.assertEquals(getHeader_Accounts(), "Accounts");
@@ -146,61 +138,82 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 
 	@Override
 	public void bc_NewPolicy() {
-		SimpleDateFormat formatter = new SimpleDateFormat("ddMMMMyyyy HHmmss");
-		strPolicyNumber = formatter.format(new Date());
 
-		bc_NewPolicy_PolicyIssuanceWizard_Step1();
-		bc_NewPolicy_PolicyIssuanceWizard_Step2();
+		try {
 
+			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
+			bc_NewPolicy_PolicyIssuanceWizard_Step1();
+			bc_NewPolicy_PolicyIssuanceWizard_Step2();
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void bc_NewPolicy_PolicyIssuanceWizard_Step1() {
 
-		gwAutomate(Actions_Button, "click", "");
-		gwAutomate(NewPolicy_Button, "click", "");
+		try {
 
-		Assert.assertEquals(getHeader_PolicyIssuanceWizard1(), "Policy Issuance Wizard - Step 1 of 2");
+			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
+			gwAutomate(Actions_Button, "click", "");
+			gwAutomate(NewPolicy_Button, "click", "");
 
-		gwAutomate(PolicyNumber, "sendkeys", strPolicyNumber);
-		gwAutomate(BillingMethod, "selectByVisibleText", "Direct Bill");
-		gwAutomate(PaymentPlan, "selectByVisibleText", "B Monthly 10% Down, Max 11 installments");
+			Assert.assertEquals(getHeader_PolicyIssuanceWizard1(), "Policy Issuance Wizard - Step 1 of 2");
 
-		gwAutomate(AddExistingContact_Button, "click", "");
+			gwAutomate(PolicyNumber, "sendkeys", strPolicyNumber);
+			gwAutomate(BillingMethod, "selectByVisibleText", lhm_Data.get("TD_BillingMethod"));
+			gwAutomate(PaymentPlan, "selectByVisibleText", lhm_Data.get("TD_PaymentPlan"));
 
-		gwAutomate(CompanyName, "sendkeys", "Wright Construction");
-		gwAutomate(Search_Button, "click", "");
+			gwAutomate(AddExistingContact_Button, "click", "");
 
-		gwAutomate(WrightConstruction_Select, "click", "");
+			gwAutomate(CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+			gwAutomate(Search_Button, "click", "");
 
-		gwAutomate(Next_Button, "click", "");
+			gwAutomate(WrightConstruction_Select, "click", "");
 
+			gwAutomate(Next_Button, "click", "");
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void bc_NewPolicy_PolicyIssuanceWizard_Step2() {
-		Assert.assertEquals(getHeader_PolicyIssuanceWizard2(), "Policy Issuance Wizard - Step 2 of 2");
 
-		/// gwAutomate(OK_Button, "click", "");
+		try {
 
-		gwAutomate(PolicyAddCharges_Button, "click", "");
+			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
+			Assert.assertEquals(getHeader_PolicyIssuanceWizard2(), "Policy Issuance Wizard - Step 2 of 2");
 
-		gwAutomate(PolicyAddChargesType, "selectByVisibleText", "Premium");
-		gwAutomate(PolicyAddChargesAmount, "clear", strAmount);
-		gwAutomate(PolicyAddChargesAmount, "sendkeys", strAmount);
+			/// gwAutomate(OK_Button, "click", "");
 
-		gwAutomate(PolicyFinish_Button, "click", "");
-		gwAutomate(PolicyFinish_Button, "click", "");
+			gwAutomate(PolicyAddCharges_Button, "click", "");
 
+			gwAutomate(PolicyAddChargesType, "selectByVisibleText", lhm_Data.get("TD_ChargesType"));
+			gwAutomate(PolicyAddChargesAmount, "clear", "");
+			gwAutomate(PolicyAddChargesAmount, "sendkeys", lhm_Data.get("TD_ChargesAmount"));
+
+			gwAutomate(PolicyFinish_Button, "click", "");
+			gwAutomate(PolicyFinish_Button, "click", "");
+
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void bc_AccountSummary() {
 
-		Assert.assertEquals(getText_Element(AccountName_InfoBar), strAccountName);
-		System.out.println(getText_Element(AccountNumber_InfoBar));
-		Assert.assertEquals(getText_Element(AS_AccountName), strAccountName);
-		Assert.assertEquals(getText_Element(AS_PayoffAmount), "$1,000.00");
-		Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber + "-1");
-		Assert.assertEquals(getText_Element(AS_TotalValue), "$1,000.00");
+		try {
+
+			lhm_Data = getDataFromSheet_Fillo("AcctSummary", "AcctSumry1");
+			Assert.assertEquals(getText_Element(AccountName_InfoBar), strAccountName);
+			System.out.println(getText_Element(AccountNumber_InfoBar));
+			Assert.assertEquals(getText_Element(AS_AccountName), strAccountName);
+			Assert.assertEquals(getText_Element(AS_PayoffAmount), lhm_Data.get("TD_PayoffAmount"));
+			Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber + "-1");
+			Assert.assertEquals(getText_Element(AS_TotalValue), lhm_Data.get("TD_TotalValue"));
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -223,10 +236,17 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 
 	@Override
 	public void bc_AccountSummary_Invoices() {
-		bc_MenuNavigation_AccountSummary("Invoice");
-		Assert.assertEquals(getText_Element(InvoiceHeader), "Invoices");
-		Assert.assertEquals(getSize_ElementsList(InvoiceDetails), 11);
 
+		try {
+
+			lhm_Data = getDataFromSheet_Fillo("Invoice", "InvoiceValues1");
+			bc_MenuNavigation_AccountSummary("Invoice");
+			Assert.assertEquals(getText_Element(InvoiceHeader), "Invoices");
+			Assert.assertEquals(getSize_ElementsList(InvoiceDetails), Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
+
+		} catch (FilloException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

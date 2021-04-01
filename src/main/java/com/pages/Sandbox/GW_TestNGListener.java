@@ -1,13 +1,8 @@
 package com.pages.Sandbox;
 
 import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -19,8 +14,12 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 public class GW_TestNGListener extends GW_Base implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
-		// creating test name
-		oExtentTest = oExtentReports.createTest(result.getMethod().getMethodName());
+		try {
+			oExtentTest = oExtentReports.createTest(result.getMethod().getMethodName());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -37,26 +36,20 @@ public class GW_TestNGListener extends GW_Base implements ITestListener {
 				MarkupHelper.createLabel(result.getMethod().getMethodName() + " Test Case Failed", ExtentColor.RED));
 		oExtentTest.log(Status.FAIL, result.getThrowable());
 
-		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyy HH-mm-ss");
-		// get current date
-		Date date = new Date();
-		String actualDate = format.format(date);
-		String screenShotPath = System.getProperty("user.dir") + "\\Screenshots\\ExtentReport_" + actualDate + ".jpeg";
+		/*
+		 * File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		 * SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyy HH-mm-ss"); // get
+		 * current date Date date = new Date(); String actualDate = format.format(date);
+		 * String screenShotPath = System.getProperty("user.dir") +
+		 * "\\Screenshots\\ExtentReport_" + actualDate + ".jpeg";
+		 * 
+		 * File dest = new File(screenShotPath); try { FileUtils.copyFile(source, dest);
+		 * } catch (IOException e) { e.printStackTrace(); } //
+		 * test.addScreenCaptureFromPath(screenShotPath, "Test case failure //
+		 * screenshot"); try { oExtentTest.addScreenCaptureFromPath(screenShotPath); }
+		 * catch (IOException e) { e.printStackTrace(); }
+		 */
 
-		File dest = new File(screenShotPath);
-		try {
-			FileUtils.copyFile(source, dest);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		// test.addScreenCaptureFromPath(screenShotPath, "Test case failure
-		// screenshot");
-		try {
-			oExtentTest.addScreenCaptureFromPath(screenShotPath);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 	public void onTestSkipped(ITestResult result) {
@@ -66,24 +59,33 @@ public class GW_TestNGListener extends GW_Base implements ITestListener {
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Started");
 	}
 
 	public void onStart(ITestContext context) {
-		// setup method called
-		try {
-			GW_Selenium_Reporting r = new GW_Selenium_Reporting();
-			oExtentReports = r.getReport();
+		System.out.println("onStart");
 
+		try {
+			oExtentReports = GW_Selenium_Reporting.getReport();
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		}
 
 	}
 
 	public void onFinish(ITestContext context) {
-		oExtentReports.flush();
+		try {
+
+			oExtentReports.flush();
+
+			FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_TodayFile), true);
+			new ProcessBuilder("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", pExtentReport_indexFile)
+					.start();
+		} catch (Exception e) {
+			e.printStackTrace();
+ 
+		}
 
 	}
 

@@ -5,18 +5,15 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class GW_Selenium_Reporting extends GW_Base {
-	String pExtentReportFile;
 
-	public ExtentReports getReport() {
+	public static ExtentReports getReport() {
 
-		pExtentReportFile = pUserdir + "\\test-output\\extentreports\\index.html";
-
-		oExtentSparkReporter = new ExtentSparkReporter(pExtentReportFile);
+		oExtentSparkReporter = new ExtentSparkReporter(pExtentReport_indexFile);
 		oExtentSparkReporter.config().setDocumentTitle("Automation Report");
 		oExtentSparkReporter.config().setReportName("Billing Center");
 		// oExtentSparkReporter.config().setTheme(Theme.DARK);
 
-		oExtentHtmlReporter = new ExtentHtmlReporter(pExtentReportFile);
+		oExtentHtmlReporter = new ExtentHtmlReporter(pExtentReport_indexFile);
 		oExtentHtmlReporter.config().setDocumentTitle("Automation Report");
 		oExtentHtmlReporter.config().setReportName("Billing Center");
 		// oExtentSparkReporter.config().setTheme(Theme.DARK);
@@ -25,9 +22,9 @@ public class GW_Selenium_Reporting extends GW_Base {
 		oExtentReports = new ExtentReports();
 
 		oExtentReports.attachReporter(oExtentHtmlReporter);
-		oExtentReports.setSystemInfo("Executed on OS: ", System.getProperty("os.name"));
-		oExtentReports.setSystemInfo("Executed by User: ", System.getProperty("user.name"));
-		oExtentReports.setSystemInfo("Hostname: ", System.getProperty("hostname"));
+		oExtentReports.setSystemInfo("Executed on OS: ", gstrOSname);
+		oExtentReports.setSystemInfo("Executed by User: ", gstrUsername);
+		oExtentReports.setSystemInfo("Hostname: ", gstrHostname);
 
 		return oExtentReports;
 

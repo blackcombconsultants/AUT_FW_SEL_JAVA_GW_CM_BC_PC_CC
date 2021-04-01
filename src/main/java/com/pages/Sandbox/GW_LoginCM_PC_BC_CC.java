@@ -6,12 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.codoid.products.exception.FilloException;
 
 public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements GW_LoginCM_PC_BC_CC_PO {
-	public GW_LoginCM_PC_BC_CC(WebDriver driver, ExtentReports er) {
-		super(driver, er);
+	public GW_LoginCM_PC_BC_CC(WebDriver driver, ExtentTest oExtentTest) {
+		super(driver, oExtentTest);
 	}
 
 	WebDriver driver;
@@ -176,14 +176,22 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 
 	@Override
 	public void logout_BillingCenter() {
-		gwAutomate(Setting, "click", "Null");
-		gwAutomate(Logout, "click", "Null");
+		try {
+			gwAutomate(Setting, "click", "Null");
+			gwAutomate(Logout, "click", "Null");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void logout_PolicyCenter() {
-		gwAutomate(Setting, "click", "Null");
-		gwAutomate(Logout, "click", "Null");
+		try {
+			gwAutomate(Setting, "click", "Null");
+			gwAutomate(Logout, "click", "Null");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -217,6 +225,7 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 
 	@Override
 	public void login_ClaimsCenter() {
+		System.out.println("Username");
 		gwAutomate(Username, "sendkeys", "su");
 		gwAutomate(Password, "sendkeys", "gw");
 		gwAutomate(Login, "click", "Null");
@@ -224,7 +233,12 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 
 	@Override
 	public void logout_ClaimsCenter() {
-		gwAutomate(Setting, "click", "Null");
-		gwAutomate(Logout, "click", "Null");
+		try {
+			gwAutomate(Setting, "click", "Null");
+			gwAutomate(Logout, "click", "Null");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 }

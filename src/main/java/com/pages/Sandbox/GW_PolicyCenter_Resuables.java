@@ -1,19 +1,16 @@
 package com.pages.Sandbox;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implements GW_PolicyCenter_PO {
 
-	private static final By Zipcode = null;
 	public WebDriver driver;
 
-	public GW_PolicyCenter_Resuables(WebDriver driver, ExtentReports er) {
-		super(driver, er);
+	public GW_PolicyCenter_Resuables(WebDriver driver, ExtentTest oExtentTest) {
+		super(driver, oExtentTest);
 	}
-
 
 	/*
 	 * --------------------------------------------------------------
@@ -55,13 +52,13 @@ public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implem
 		gwAutomate(lastname, "sendkeys", "Automation2");
 		gwAutomate(firstnameexactmatch, "sendkeys", "");
 		gwAutomate(lastnameexactmatch, "sendkeys", "");
-		
+
 		gwAutomate(Country, "sendkeys", "");
 		gwAutomate(City, "sendkeys", "");
 		gwAutomate(County, "sendkeys", "");
 		gwAutomate(State, "sendkeys", "");
-		gwAutomate(Zipcode, "sendkeys", "");
-		
+		gwAutomate(ZipCode, "sendkeys", "");
+
 		gwAutomate(Search_Button, "click", "");
 
 	}
@@ -92,7 +89,7 @@ public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implem
 		gwAutomate(City, "sendkeys", "Alaska");
 		gwAutomate(County, "sendkeys", "Anchorage");
 		gwAutomate(State, "selectByVisibleText", "Alaska");
-		gwAutomate(Zipcode, "sendkeys", "99501");
+		gwAutomate(ZipCode, "sendkeys", "99501");
 		gwAutomate(addresstype, "selectByVisibleText", "Home");
 		gwAutomate(description, "sendkeys", "description");
 
@@ -105,7 +102,7 @@ public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implem
 		gwAutomate(Update_Button, "click", "");
 
 	}
-	
+
 	/*
 	 * --------------------------------------------------------------
 	 * pc_CreateCompanyAccount
@@ -124,7 +121,7 @@ public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implem
 		gwAutomate(address1, "sendkeys", "123 Suites");
 		gwAutomate(address2, "sendkeys", "South Avenue");
 		gwAutomate(address3, "sendkeys", "Small County");
-		
+
 		gwAutomate(City, "sendkeys", "Alaska");
 		gwAutomate(County, "sendkeys", "Anchorage");
 		gwAutomate(State, "selectByVisibleText", "Alaska");
@@ -138,32 +135,30 @@ public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implem
 		pc_SearchOrganizations();
 		gwAutomate(Update_Button, "click", "");
 	}
-	
-	
+
 	public void pc_SearchOrganizations() {
-		
+
 		gwAutomate(OrganizationName, "sendkeys", "ACV Property Insurance");
 		gwAutomate(OrganizationType, "Agency", "");
-		
+
 		gwAutomate(Country, "United States", "");
 		gwAutomate(City, "sendkeys", "");
 		gwAutomate(County, "sendkeys", "");
 		gwAutomate(State, "sendkeys", "");
 		gwAutomate(ZipCode, "sendkeys", "");
-		
-		//gwAutomate(ProducerStatus, "sendkeys", "");
+
+		// gwAutomate(ProducerStatus, "sendkeys", "");
 		gwAutomate(ProducerTier, "", "");
 		gwAutomate(ProducerCode, "sendkeys", "301-008578 ACV Property Insurance");
 		gwAutomate(Policy, "sendkeys", "");
 		gwAutomate(Account, "sendkeys", "");
-		
+
 		gwAutomate(Search_Button, "click", "");
 		gwAutomate(Reset_Button, "", "");
 	}
-	
-	
+
 	public void pc_SearchProducer() {
-		
+
 		gwAutomate(ProducerCode, "sendkeys", "301-008578");
 		gwAutomate(ProducerDescription, "sendkeys", "301-008578");
 		gwAutomate(ParentProducerCode, "sendkeys", "301-008578");
@@ -173,16 +168,15 @@ public class GW_PolicyCenter_Resuables extends GW_Utils_SeleniumWebDriver implem
 		gwAutomate(AvailableToUser, "sendkeys", "");
 		gwAutomate(SearchForMissingPreferredUnderwriter, "sendkeys", "");
 		gwAutomate(PreferredUnderwriter, "sendkeys", "");
-		
+
 		gwAutomate(Country, "United States", "");
 		gwAutomate(City, "sendkeys", "");
 		gwAutomate(County, "sendkeys", "");
 		gwAutomate(State, "sendkeys", "");
-		gwAutomate(Zipcode, "sendkeys", "");
-		
+		gwAutomate(ZipCode, "sendkeys", "");
+
 		gwAutomate(Search_Button, "click", "");
 		gwAutomate(Reset_Button, "", "");
 	}
-
 
 }

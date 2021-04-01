@@ -26,7 +26,7 @@ import com.pages.Sandbox.*;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class GW_PolicyCenter_Test {
+public class GW_PolicyCenter_Test extends GW_Base {
 	public WebDriver driver;
 	JavascriptExecutor js;
 	public WebDriverWait oWebDriverWait;
@@ -218,9 +218,9 @@ public class GW_PolicyCenter_Test {
 	@Test
 	public void createAccount() throws Exception {
 
-		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, er);
-		GW_PolicyCenter_Resuables gwPC = new GW_PolicyCenter_Resuables(driver, er);
-		GW_MenuNavigation_CM_PC_BC_CC mn = new GW_MenuNavigation_CM_PC_BC_CC(driver, er);
+		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
+		GW_PolicyCenter_Resuables gwPC = new GW_PolicyCenter_Resuables(driver, oExtentTest);
+		GW_MenuNavigation_CM_PC_BC_CC mn = new GW_MenuNavigation_CM_PC_BC_CC(driver, oExtentTest);
 
 		// login_PolicyCenter
 		lg.login_PolicyCenter();

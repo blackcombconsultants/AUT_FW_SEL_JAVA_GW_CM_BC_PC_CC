@@ -3,12 +3,12 @@ package com.pages.Sandbox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 public class GW_MenuNavigation_CM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements GW_MenuNavigation_CM_PC_BC_CC_PO {
 
-	public GW_MenuNavigation_CM_PC_BC_CC(WebDriver driver, ExtentReports er) {
-		super(driver, er);
+	public GW_MenuNavigation_CM_PC_BC_CC(WebDriver driver, ExtentTest oExtentTest) {
+		super(driver, oExtentTest);
 	}
 
 	@Override

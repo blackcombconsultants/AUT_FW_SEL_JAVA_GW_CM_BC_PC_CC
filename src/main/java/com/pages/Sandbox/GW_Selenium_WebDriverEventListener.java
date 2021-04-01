@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import com.aventstack.extentreports.Status;
-
 public class GW_Selenium_WebDriverEventListener extends GW_Base implements WebDriverEventListener {
 
 	public void beforeNavigateTo(String url, WebDriver driver) {

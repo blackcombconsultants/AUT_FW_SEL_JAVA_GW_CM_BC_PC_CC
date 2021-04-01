@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test parallel="methods" name="Test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <listeners>
+    <listener class-name="com.pages.Sandbox.GW_TestNGListener"/>
+  </listeners>
+  <test name="Test(failed)" parallel="methods">
     <classes>
       <class name="com.Test.GW_BillingCenter_Test1">
         <methods>
           <include name="setUp"/>
-          <include name="createAccount"/>
+          <include name="Closure"/>
+          <include name="BillingTest"/>
         </methods>
       </class> <!-- com.Test.GW_BillingCenter_Test1 -->
     </classes>

@@ -2,6 +2,8 @@ package com.pages.Sandbox;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
@@ -11,60 +13,65 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
-import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 
 	WebDriver driver;
-	WebDriverWait oWebDriverWait;
-	ExtentReports er;
+	WebElement oWebElement;
+	ExtentTest oExtentTest;
 
-
-	public GW_Utils_SeleniumWebDriver(WebDriver driver, ExtentReports er) {
+	public GW_Utils_SeleniumWebDriver(WebDriver driver, ExtentTest oExtentTest) {
 		this.driver = driver;
-		this.er = er;
-
+		this.oExtentTest = oExtentTest;
 	}
 
 	public void gwAutomate(By Locator, String Action, String strValue) {
+
+		oWebElement = null;
+
 		try {
-			WebElement we = getElement(Locator);
-			// Highlight the Element using Java Script.
 
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			try {
-				js.executeScript("arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')",
-						we);
-
-				Thread.sleep(750);
-			} catch (InterruptedException e) {
-				System.out.println(e.getMessage());
-			}
-			js.executeScript("arguments[0].setAttribute('style','border: solid 2px white')", we);
+			// Get the Element.
+			oWebElement = getElement(Locator);
 
 			switch (Action) {
 			case "sendkeys":
-				we.sendKeys(strValue);
+				oWebElement.sendKeys(strValue);
 				break;
 			case "clear":
-				we.clear();
+				oWebElement.clear();
 				break;
 			case "select":
-				new Select(we).selectByVisibleText(strValue);
+				new Select(oWebElement).selectByVisibleText(strValue);
 				break;
 			case "selectByVisibleText":
-				new Select(we).selectByVisibleText(strValue);
+				new Select(oWebElement).selectByVisibleText(strValue);
 
 				break;
 			case "click":
-				we.click();
+				oWebElement.click();
 				break;
 
 			default:
 				break;
 			}
+
+			String LogMsg;
+			String strTemp = "Element : " + Locator.toString() + " Action : [" + Action.toString() + "] Value : ["
+					+ strValue.toString() + "]";
+			System.out.println(strTemp);
+			if (Action.equals("click")) {
+				LogMsg = "Clicked Element : " + Locator.toString();
+
+			} else {
+				LogMsg = "Element : " + Locator.toString() + " =  [" + strValue.toString() + "]";
+			}
+			oExtentTest.log(Status.INFO, LogMsg);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -72,9 +79,30 @@ public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 	}
 
 	public WebElement getElement(By Locator) {
-		WebElement we = driver.findElement(Locator);
-		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(we));
-		return we;
+
+		oWebElement = null;
+
+		try {
+
+			oWebElement = driver.findElement(Locator);
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+
+			// Highlight the Element.
+
+			oJavascriptExecutor = (JavascriptExecutor) driver;
+
+			oJavascriptExecutor.executeScript(
+					"arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", oWebElement);
+
+			Thread.sleep(500);
+
+			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')",
+					oWebElement);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return oWebElement;
 	}
 
 	public int getSize_ElementsList(By Locator) {
@@ -88,7 +116,7 @@ public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 
 	public String getText_ElementWait(By Locator) {
 		WebElement we = getElement(Locator);
-		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(we));
+		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));
 		return we.getText();
 	}
 
@@ -107,9 +135,9 @@ public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 
 	public void scrollUpToElement(WebElement element) {
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,0)");
-		js.executeScript("arguments[0].scrollIntoView();", element);
+		oJavascriptExecutor = (JavascriptExecutor) driver;
+		oJavascriptExecutor.executeScript("window.scrollBy(0,0)");
+		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", element);
 
 	}
 
@@ -119,14 +147,22 @@ public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 		strItem = "sample";
 
 		try {
-			File oFile = new File(pPropertiesFilePath);
-			oFIS = new FileInputStream(oFile);
-			oProperties = new Properties();
-			oProperties.load(oFIS);
+			oFile = new File(pUserdir + pConfigproperties);
+			Properties oProperties = new Properties();
+			try {
+				oFileInputStream = new FileInputStream(oFile);
+			} catch (FileNotFoundException e1) {
+				e1.printStackTrace();
+			}
+
+			try {
+				oProperties.load(oFileInputStream);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			strValue = oProperties.getProperty(strItem);
-			if (strValue != null)
-				return strValue;
-			else
+			if (strValue == null)
 				throw new RuntimeException(strItem + " not specified in " + pPropertiesFilePath);
 
 		} catch (Exception e) {
@@ -139,4 +175,10 @@ public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 		return strValue;
 	}
 
+	public void gwAssert(By Locator, String strExpected) {
+		String strActual = getText_Element(Locator);
+		Assert.assertEquals(strActual, strExpected);
+		System.out.println("Actual Value = [" + strActual + "] Expected Value = [" + strActual + "]");
+
+	}
 }
