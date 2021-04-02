@@ -248,7 +248,7 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 			lhm_Data = getDataFromSheet_Fillo("Invoice", "InvoiceValues1");
 			bc_MenuNavigation_AccountSummary("Invoice");
 			Assert.assertEquals(getText_Element(InvoiceHeader), "Invoices");
-			Assert.assertEquals(getSize_ElementsList(InvoiceDetails), Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
+			//Assert.assertEquals(getSize_ElementsList(InvoiceDetails), Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
 
 		} catch (FilloException e) {
 			e.printStackTrace();
