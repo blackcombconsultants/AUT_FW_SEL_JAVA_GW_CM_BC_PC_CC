@@ -106,8 +106,8 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 			GuidewireAutomate("NewAccount", NewAccount_Button, "click", "");
 			// ------> Verifying the page -
 			Assert.assertEquals(getHeader_NewAccount(), "New Account");
-
-			GuidewireAutomate("AccountNumber", AccountNumber, "", "");
+						
+			//GuidewireAutomate("AccountNumber", AccountNumber, "", "");
 			strAccountName = lhm_Data.get("TD_AccountName");
 			GuidewireAutomate("AccountName", AccountName, "sendkeys", strAccountName);
 			// GuidewireAutomate(ParentAccount, "sendkeys", "");
@@ -128,6 +128,8 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 			GuidewireAutomate("PrimaryPayer", PrimaryPayer, "click", "");
 
 			GuidewireAutomate("OK", OK_Button, "click", "");
+
+			//getText_ElementWait(AccountNumber);
 
 			GuidewireAutomate("CreateAccount", CreateAccount_Button, "click", "");
 
@@ -214,6 +216,7 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 			lhm_Data = getDataFromSheet_Fillo("AcctSummary", "AcctSumry1");
 			Assert.assertEquals(getText_Element(AccountName_InfoBar), strAccountName);
 			System.out.println(getText_Element(AccountNumber_InfoBar));
+			getText_ElementWait(AccountNumber_InfoBar);
 			Assert.assertEquals(getText_Element(AS_AccountName), strAccountName);
 			Assert.assertEquals(getText_Element(AS_PayoffAmount), lhm_Data.get("TD_PayoffAmount"));
 			Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber + "-1");

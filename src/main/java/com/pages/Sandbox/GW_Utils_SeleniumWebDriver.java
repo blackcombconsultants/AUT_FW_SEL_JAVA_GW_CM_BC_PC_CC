@@ -166,7 +166,12 @@ public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 	public String getText_ElementWait(By Locator) {
 		WebElement we = getElement(Locator);
 		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));
-		return we.getText();
+		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", we);
+
+		String stetemp = we.getText();
+		System.out.println(stetemp);
+		oExtentTest.log(Status.INFO, stetemp);
+		return stetemp;
 	}
 
 	public void click_Element(By Locator) {
