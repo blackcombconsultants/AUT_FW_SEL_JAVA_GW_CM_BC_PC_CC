@@ -42,7 +42,7 @@ public class GW_BillingCenter_Test1 extends GW_Base {
 			Assert.assertEquals(gwPC.getHeader_AccountSummary(), "Account Summary");
 			oExtentTest.addScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver));			
 			oExtentTest.log(Status.PASS,
-					"Expectd = " + gwPC.getHeader_AccountSummary() + " Actual = " + "Account Summary");
+					"Expectd = " + gwPC.getHeader_AccountSummary() + " 		Actual = " + "Account Summary");
 
 			// ------> New Policy
 			gwPC.bc_NewPolicy_PolicyIssuanceWizard_Step1();

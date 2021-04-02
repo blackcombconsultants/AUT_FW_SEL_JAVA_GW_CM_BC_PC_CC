@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="43909" started-at="2021-04-02T09:30:23Z" finished-at="2021-04-02T09:31:07Z">
+  <suite name="Suite" duration-ms="43819" started-at="2021-04-02T10:44:31Z" finished-at="2021-04-02T10:45:15Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="43909" started-at="2021-04-02T09:30:23Z" finished-at="2021-04-02T09:31:07Z">
+    <test name="Test" duration-ms="43819" started-at="2021-04-02T10:44:31Z" finished-at="2021-04-02T10:45:15Z">
       <class name="com.Test.GW_BillingCenter_Test1">
-        <test-method status="PASS" signature="BillingTest()[pri:0, instance:com.Test.GW_BillingCenter_Test1@3ba9ad43]" name="BillingTest" duration-ms="43778" started-at="2021-04-02T15:00:23Z" finished-at="2021-04-02T15:01:07Z">
+        <test-method status="PASS" signature="BillingTest()[pri:0, instance:com.Test.GW_BillingCenter_Test1@3ba9ad43]" name="BillingTest" duration-ms="43670" started-at="2021-04-02T16:14:31Z" finished-at="2021-04-02T16:15:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BillingTest -->

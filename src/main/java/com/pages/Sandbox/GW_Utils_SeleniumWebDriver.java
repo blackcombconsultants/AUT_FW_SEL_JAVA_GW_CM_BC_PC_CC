@@ -78,6 +78,55 @@ public class GW_Utils_SeleniumWebDriver extends GW_Utils_File_ReadData {
 
 	}
 
+	public void GuidewireAutomate(String ElementName, By Locator, String Action, String strValue) {
+
+		oWebElement = null;
+
+		try {
+
+			// Get the Element.
+			oWebElement = getElement(Locator);
+
+			switch (Action) {
+			case "sendkeys":
+				oWebElement.sendKeys(strValue);
+				break;
+			case "clear":
+				oWebElement.clear();
+				break;
+			case "select":
+				new Select(oWebElement).selectByVisibleText(strValue);
+				break;
+			case "selectByVisibleText":
+				new Select(oWebElement).selectByVisibleText(strValue);
+
+				break;
+			case "click":
+				oWebElement.click();
+				break;
+
+			default:
+				break;
+			}
+
+			String LogMsg;
+			String strTemp = "Element : " + Locator.toString() + " Action : [" + Action.toString() + "] Value : ["
+					+ strValue.toString() + "]";
+			System.out.println(strTemp);
+			if (Action.equals("click")) {
+				LogMsg = "Clicked : " + ElementName;
+
+			} else {
+				LogMsg = ElementName + " =  [" + strValue.toString() + "]";
+			}
+			oExtentTest.log(Status.INFO, LogMsg);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
 	public WebElement getElement(By Locator) {
 
 		oWebElement = null;

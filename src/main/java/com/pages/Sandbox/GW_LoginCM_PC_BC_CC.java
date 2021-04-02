@@ -1,5 +1,6 @@
 package com.pages.Sandbox;
 
+import java.util.Base64;
 import java.util.LinkedHashMap;
 
 import org.openqa.selenium.By;
@@ -31,13 +32,11 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 
 	@Override
 	public WebElement getUsername_PolicyCenter(By weValue) {
-		// TODO Auto-generated method stub
 		return getElement(Login);
 	}
 
 	@Override
 	public WebElement getpassword_PolicyCenter(By weValue) {
-		// TODO Auto-generated method stub
 		return getElement(Password);
 	}
 
@@ -81,39 +80,20 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 	}
 
 	public void mLoginPolicyCenter3() {
-		gwAutomate(Username, "sendkeys", "su");
-		gwAutomate(Password, "sendkeys", "gw");
-		gwAutomate(Login, "click", "Null");
+		login_Guidewire();
 
 	}
 
 	@Override
 	public void login_ContactManagement() {
-		gwAutomate(Username, "sendkeys", "su");
-		gwAutomate(Password, "sendkeys", "gw");
-		gwAutomate(Login, "click", "Null");
+		login_Guidewire();
+
 	}
 
 	@Override
 	public void login_BillingCenter() {
 
-		try {
-			LinkedHashMap<String, String> lhm_Data = getDataFromSheet_Fillo("Login", "SuperUser");
-
-			gwAutomate(Username, "sendkeys", lhm_Data.get("TD_UserName"));
-			gwAutomate(Password, "sendkeys", lhm_Data.get("TD_Password"));
-			gwAutomate(Login, "click", "Null");
-			
-			oExtentTest.log(Status.PASS, "Login into Billing center is succesful");
-			oExtentTest.addScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver));
-			//oExtentTest.info((Markup) MediaEntityBuilder.createScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver)));
-			//oExtentTest.log(LogStatus.PASS, oExtentTest.addScreenCapture(getscreenshot(driver, Driver.strReportPath)));
-
-		} catch (FilloException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		login_Guidewire();
 
 	}
 
@@ -185,22 +165,13 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 
 	@Override
 	public void logout_BillingCenter() {
-		try {
-			gwAutomate(Setting, "click", "Null");
-			gwAutomate(Logout, "click", "Null");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		logout_Guidewire();
+
 	}
 
 	@Override
 	public void logout_PolicyCenter() {
-		try {
-			gwAutomate(Setting, "click", "Null");
-			gwAutomate(Logout, "click", "Null");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		logout_Guidewire();
 	}
 
 	@Override
@@ -234,20 +205,47 @@ public class GW_LoginCM_PC_BC_CC extends GW_Utils_SeleniumWebDriver implements G
 
 	@Override
 	public void login_ClaimsCenter() {
-		System.out.println("Username");
-		gwAutomate(Username, "sendkeys", "su");
-		gwAutomate(Password, "sendkeys", "gw");
-		gwAutomate(Login, "click", "Null");
+		login_Guidewire();
 	}
 
 	@Override
 	public void logout_ClaimsCenter() {
+		logout_Guidewire();
+	}
+
+	public void login_Guidewire() {
+
 		try {
-			gwAutomate(Setting, "click", "Null");
-			gwAutomate(Logout, "click", "Null");
+			LinkedHashMap<String, String> lhm_Data = getDataFromSheet_Fillo("Login", "SuperUser");
+
+			GuidewireAutomate("Username", Username, "sendkeys", lhm_Data.get("TD_UserName"));			
+			GuidewireAutomate("Password", Password, "sendkeys", lhm_Data.get("TD_Password"));
+			//GuidewireAutomate("Password", Password, "sendkeys", new String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
+			GuidewireAutomate("Login", Login, "click", "Null");
+
+			oExtentTest.log(Status.PASS, "Login into Billing center is succesful");
+			oExtentTest.addScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver));
+			// oExtentTest.info((Markup)
+			// MediaEntityBuilder.createScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver)));
+			// oExtentTest.log(LogStatus.PASS,
+			// oExtentTest.addScreenCapture(getscreenshot(driver, Driver.strReportPath)));
+
+		} catch (FilloException e) {
+			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 	}
+
+	public void logout_Guidewire() {
+		try {
+			GuidewireAutomate("Setting", Setting, "click", "Null");
+			GuidewireAutomate("Logout", Logout, "click", "Null");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
 }

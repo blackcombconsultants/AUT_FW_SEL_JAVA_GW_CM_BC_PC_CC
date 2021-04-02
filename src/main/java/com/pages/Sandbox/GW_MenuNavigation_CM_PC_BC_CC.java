@@ -80,7 +80,7 @@ public class GW_MenuNavigation_CM_PC_BC_CC extends GW_Utils_SeleniumWebDriver im
 
 		case "x":
 		case "Account":
-			gwAutomate(Menu_AccountBC, "click", "Null");
+			GuidewireAutomate("Menu_Account",Menu_AccountBC, "click", "Null");
 			break;
 		case "y":
 			break;

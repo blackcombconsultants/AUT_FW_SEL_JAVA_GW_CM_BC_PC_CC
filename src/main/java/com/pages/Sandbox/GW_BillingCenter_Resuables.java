@@ -73,19 +73,19 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 
 	public void bc_SearchAccountInformation() {
 
-		gwAutomate(CompanyName, "sendkeys", "QA Automation2");
-		gwAutomate(firstname, "sendkeys", "QA");
-		gwAutomate(lastname, "sendkeys", "Automation2");
-		gwAutomate(firstnameexactmatch, "sendkeys", "");
-		gwAutomate(lastnameexactmatch, "sendkeys", "");
+		GuidewireAutomate("CompanyName", CompanyName, "sendkeys", "QA Automation2");
+		GuidewireAutomate("firstname", firstname, "sendkeys", "QA");
+		GuidewireAutomate("lastname", lastname, "sendkeys", "Automation2");
+		GuidewireAutomate("firstnameexactmatch", firstnameexactmatch, "sendkeys", "");
+		GuidewireAutomate("lastnameexactmatch", lastnameexactmatch, "sendkeys", "");
 
-		gwAutomate(Country, "sendkeys", "");
-		gwAutomate(City, "sendkeys", "");
-		gwAutomate(County, "sendkeys", "");
-		gwAutomate(State, "sendkeys", "");
-		gwAutomate(ZipCode, "sendkeys", "");
+		GuidewireAutomate("Country", Country, "sendkeys", "");
+		GuidewireAutomate("City", City, "sendkeys", "");
+		GuidewireAutomate("County", County, "sendkeys", "");
+		GuidewireAutomate("State", State, "sendkeys", "");
+		GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "");
 
-		gwAutomate(Search_Button, "click", "");
+		GuidewireAutomate("Search", Search_Button, "click", "");
 
 	}
 
@@ -102,35 +102,35 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 
 			// ------> Verifying the page -
 			Assert.assertEquals(getHeader_Accounts(), "Accounts");
-			gwAutomate(Actions_Button, "click", "");
-			gwAutomate(NewAccount_Button, "click", "");
+			GuidewireAutomate("Actions", Actions_Button, "click", "");
+			GuidewireAutomate("NewAccount", NewAccount_Button, "click", "");
 			// ------> Verifying the page -
 			Assert.assertEquals(getHeader_NewAccount(), "New Account");
 
-			gwAutomate(AccountNumber, "", "");
+			GuidewireAutomate("AccountNumber", AccountNumber, "", "");
 			strAccountName = lhm_Data.get("TD_AccountName");
-			gwAutomate(AccountName, "sendkeys", strAccountName);
-			// gwAutomate(ParentAccount, "sendkeys", "");
-			gwAutomate(AccountType, "selectByVisibleText", lhm_Data.get("TD_AccountType"));
-			gwAutomate(BillingPlan, "selectByVisibleText", lhm_Data.get("TD_BillingPlan"));
-			gwAutomate(DelinquencyPlan, "selectByVisibleText", lhm_Data.get("TD_DelinquencyPlan"));
-			gwAutomate(SendInvoicesBy, "selectByVisibleText", lhm_Data.get("TD_SendInvoicesBy"));
+			GuidewireAutomate("AccountName", AccountName, "sendkeys", strAccountName);
+			// GuidewireAutomate(ParentAccount, "sendkeys", "");
+			GuidewireAutomate("AccountType", AccountType, "selectByVisibleText", lhm_Data.get("TD_AccountType"));
+			GuidewireAutomate("BillingPlan", BillingPlan, "selectByVisibleText", lhm_Data.get("TD_BillingPlan"));
+			GuidewireAutomate("DelinquencyPlan", DelinquencyPlan, "selectByVisibleText",
+					lhm_Data.get("TD_DelinquencyPlan"));
+			GuidewireAutomate("SendInvoicesBy", SendInvoicesBy, "selectByVisibleText", lhm_Data.get("TD_SendInvoicesBy"));
 
-			gwAutomate(AddExistingContact_Button, "click", "");
+			GuidewireAutomate("AddExistingContact", AddExistingContact_Button, "click", "");
 
-			gwAutomate(CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
-			gwAutomate(Search_Button, "click", "");
+			GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+			GuidewireAutomate("Search", Search_Button, "click", "");
 
-			gwAutomate(WrightConstruction_Select, "click", "");
-			gwAutomate(WrightConstruction_Edit, "click", "");
+			GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
+			GuidewireAutomate("Edit", WrightConstruction_Edit, "click", "");
 
-			gwAutomate(PrimaryPayer, "click", "");
+			GuidewireAutomate("PrimaryPayer", PrimaryPayer, "click", "");
 
-			gwAutomate(OK_Button, "click", "");
+			GuidewireAutomate("OK", OK_Button, "click", "");
 
-			gwAutomate(CreateAccount_Button, "click", "");
-			
-			
+			GuidewireAutomate("CreateAccount", CreateAccount_Button, "click", "");
+
 			oExtentTest.log(Status.PASS, "CreateAccount is succesful");
 			oExtentTest.addScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver));
 
@@ -160,23 +160,23 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 		try {
 
 			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
-			gwAutomate(Actions_Button, "click", "");
-			gwAutomate(NewPolicy_Button, "click", "");
+			GuidewireAutomate("Actions", Actions_Button, "click", "");
+			GuidewireAutomate("NewPolicy", NewPolicy_Button, "click", "");
 
 			Assert.assertEquals(getHeader_PolicyIssuanceWizard1(), "Policy Issuance Wizard - Step 1 of 2");
 
-			gwAutomate(PolicyNumber, "sendkeys", strPolicyNumber);
-			gwAutomate(BillingMethod, "selectByVisibleText", lhm_Data.get("TD_BillingMethod"));
-			gwAutomate(PaymentPlan, "selectByVisibleText", lhm_Data.get("TD_PaymentPlan"));
+			GuidewireAutomate("PolicyNumber", PolicyNumber, "sendkeys", strPolicyNumber);
+			GuidewireAutomate("BillingMethod", BillingMethod, "selectByVisibleText", lhm_Data.get("TD_BillingMethod"));
+			GuidewireAutomate("PaymentPlan", PaymentPlan, "selectByVisibleText", lhm_Data.get("TD_PaymentPlan"));
 
-			gwAutomate(AddExistingContact_Button, "click", "");
+			GuidewireAutomate("AddExistingContac", AddExistingContact_Button, "click", "");
 
-			gwAutomate(CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
-			gwAutomate(Search_Button, "click", "");
+			GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+			GuidewireAutomate("Search", Search_Button, "click", "");
 
-			gwAutomate(WrightConstruction_Select, "click", "");
+			GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
 
-			gwAutomate(Next_Button, "click", "");
+			GuidewireAutomate("Next", Next_Button, "click", "");
 		} catch (FilloException e) {
 			e.printStackTrace();
 		}
@@ -189,16 +189,17 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
 			Assert.assertEquals(getHeader_PolicyIssuanceWizard2(), "Policy Issuance Wizard - Step 2 of 2");
 
-			/// gwAutomate(OK_Button, "click", "");
+			/// GuidewireAutomate(OK_Button, "click", "");
 
-			gwAutomate(PolicyAddCharges_Button, "click", "");
+			GuidewireAutomate("AddCharges", PolicyAddCharges_Button, "click", "");
 
-			gwAutomate(PolicyAddChargesType, "selectByVisibleText", lhm_Data.get("TD_ChargesType"));
-			gwAutomate(PolicyAddChargesAmount, "clear", "");
-			gwAutomate(PolicyAddChargesAmount, "sendkeys", lhm_Data.get("TD_ChargesAmount"));
+			GuidewireAutomate("ChargesType", PolicyAddChargesType, "selectByVisibleText",
+					lhm_Data.get("TD_ChargesType"));
+			GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "clear", "");
+			GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "sendkeys", lhm_Data.get("TD_ChargesAmount"));
 
-			gwAutomate(PolicyFinish_Button, "click", "");
-			gwAutomate(PolicyFinish_Button, "click", "");
+			GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
+			GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
 
 		} catch (FilloException e) {
 			e.printStackTrace();
@@ -226,10 +227,10 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 	public void bc_MenuNavigation_AccountSummary(String strMenuOption) {
 		switch (strMenuOption) {
 		case "History":
-			gwAutomate(AS_HistoryLink, "click", "Null");
+			GuidewireAutomate("History", AS_HistoryLink, "click", "Null");
 			break;
 		case "Invoice":
-			gwAutomate(AS_InvoicesLink, "click", "Null");
+			GuidewireAutomate("Invoices", AS_InvoicesLink, "click", "Null");
 			break;
 		case "x":
 		case "y":
@@ -248,7 +249,8 @@ public class GW_BillingCenter_Resuables extends GW_Utils_SeleniumWebDriver imple
 			lhm_Data = getDataFromSheet_Fillo("Invoice", "InvoiceValues1");
 			bc_MenuNavigation_AccountSummary("Invoice");
 			Assert.assertEquals(getText_Element(InvoiceHeader), "Invoices");
-			//Assert.assertEquals(getSize_ElementsList(InvoiceDetails), Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
+			// Assert.assertEquals(getSize_ElementsList(InvoiceDetails),
+			// Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
 
 		} catch (FilloException e) {
 			e.printStackTrace();
