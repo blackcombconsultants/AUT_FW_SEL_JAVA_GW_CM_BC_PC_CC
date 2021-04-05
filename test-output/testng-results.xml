@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="46510" started-at="2021-04-01T11:36:04Z" finished-at="2021-04-01T11:36:51Z">
+  <suite name="Suite" duration-ms="22069" started-at="2021-04-05T05:41:26Z" finished-at="2021-04-05T05:41:48Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="46510" started-at="2021-04-01T11:36:04Z" finished-at="2021-04-01T11:36:51Z">
-      <class name="com.Test.GW_BillingCenter_Test1">
-        <test-method status="PASS" signature="BillingTest()[pri:0, instance:com.Test.GW_BillingCenter_Test1@48e4374]" name="BillingTest" duration-ms="46335" started-at="2021-04-01T17:06:05Z" finished-at="2021-04-01T17:06:51Z">
+    <test name="Test" duration-ms="22069" started-at="2021-04-05T05:41:26Z" finished-at="2021-04-05T05:41:48Z">
+      <class name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice_Test">
+        <test-method status="PASS" signature="BillingTest()[pri:0, instance:com.Test.Guidewire.BilllingCenter.GW_BC_Invoice_Test@22a637e7]" name="BillingTest" duration-ms="21941" started-at="2021-04-05T11:11:26Z" finished-at="2021-04-05T11:11:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BillingTest -->
-      </class> <!-- com.Test.GW_BillingCenter_Test1 -->
+      </class> <!-- com.Test.Guidewire.BilllingCenter.GW_BC_Invoice_Test -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
