@@ -8,8 +8,6 @@
     <classes>
       <class name="com.Test.GW_BillingCenter_Test1">
         <methods>
-          <include name="setUp"/>
-          <include name="Closure"/>
           <include name="BillingTest"/>
         </methods>
       </class> <!-- com.Test.GW_BillingCenter_Test1 -->

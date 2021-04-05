@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="37.918" tests="1" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="45.163" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\bin"/>
     <property name="java.vm.version" value="25.281-b09"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Users\training2\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Users\asrikanth\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,30 +16,30 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Users\training2\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC"/>
+    <property name="user.dir" value="D:\Users\asrikanth\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC"/>
     <property name="java.runtime.version" value="1.8.0_281-b09"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="D:\Users\training2\AppData\Local\Temp\1\"/>
+    <property name="java.io.tmpdir" value="D:\Users\asrikanth\AppData\Local\Temp\2\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows Server 2016"/>
-    <property name="classworlds.conf" value="D:\Selenium\AkashWorkSpace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6156674179093738340.tmp"/>
+    <property name="classworlds.conf" value="D:\Users\asrikanth\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf14989675241801363714.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_281\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/JAVA/bin/server;D:/JAVA/bin;D:/JAVA/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Amazon\cfn-bootstrap\;C:\ProgramData\chocolatey\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;D:\Java\bin;D:\Maven Software\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Program Files\TortoiseGit\bin;D:\Users\training2\AppData\Local\Microsoft\WindowsApps;D:\GitFiles\Git\cmd;D:\eclipse;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_281\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Users/asrikanth/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;D:/Users/asrikanth/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Amazon\cfn-bootstrap\;C:\Program Files\Java\jdk1.8.0_281\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Amazon\WSP;D:\Users\asrikanth\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Java\jdk1.8.0_281\bin;C:\Windows\system32;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="user.home" value="D:\Users\training2"/>
+    <property name="user.home" value="D:\Users\asrikanth"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="user.name" value="training2"/>
-    <property name="java.class.path" value="D:\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.8.3.20180227-2135\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="user.name" value="asrikanth"/>
+    <property name="java.class.path" value="D:\Users\asrikanth\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735\jars\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_281\jre"/>
@@ -52,7 +52,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_281\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_281\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="D:\Users\training2\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\EMBEDDED"/>
+    <property name="maven.home" value="D:\Users\asrikanth\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -60,104 +60,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="BillingTest" classname="com.Test.GW_BillingCenter_Test1" time="37.918">
-    <failure message="expected [11] but found [12]" type="java.lang.AssertionError">java.lang.AssertionError: expected [11] but found [12]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at org.testng.Assert.assertEquals(Assert.java:399)
-	at com.pages.Sandbox.GW_BillingCenter_Resuables.bc_AccountSummary_Invoices(GW_BillingCenter_Resuables.java:228)
-	at com.Test.GW_BillingCenter_Test1.BillingTest(GW_BillingCenter_Test1.java:100)
-</failure>
-    <system-out><![CDATA[[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
-launching Chrome browser
-Before navigating to: 'http://ec2-13-235-133-40.ap-south-1.compute.amazonaws.com:8080/BillingCenter.do'
-Navigated to:'http://ec2-13-235-133-40.ap-south-1.compute.amazonaws.com:8080/BillingCenter.do'
-strQuery = Select * from Login where PrimaryKey='SuperUser'
-Found Element By : By.xpath: //input[contains(@name,'LoginDV-username')]
-Found Element By : By.xpath: //input[contains(@name,'LoginDV-password')]
-Found Element By : By.xpath: //div[@id='Login-LoginScreen-LoginDV-submit']//div
-Found Element By : By.xpath: //div[@id='TabBar-AccountsTab']//div[2]
-strQuery = Select * from Account where PrimaryKey='BillPlan1'
-Found Element By : By.xpath: //div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Accounts')]
-Found Element By : By.xpath: //div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]
-Found Element By : By.id: AccountsGroup-AccountsMenuActions-AccountsMenuActions_NewAccount
-Found Element By : By.xpath: //div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'New Account')]
-Found Element By : By.xpath: //input[contains(@name,'NewAccountDV-AccountNumber')]
-Found Element By : By.xpath: //input[contains(@name,'NewAccountDV-AccountName')]
-Found Element By : By.xpath: //select[contains(@name,'NewAccountDV-AccountTypeInput')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Insured"]
-Found Element By : By.xpath: //select[contains(@name,'NewAccountDV-BillingPlan')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "QA1BILLINGPLAN01"]
-Found Element By : By.xpath: //select[contains(@name,'NewAccountDV-DelinquencyPlan')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Equity-Based Delinquency Plan"]
-Found Element By : By.xpath: //select[contains(@name,'NewAccountDV-SendInvoicesBy')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Email"]
-Found Element By : By.xpath: //div[contains(@id,'ContactsLV_tb-addExistingContact')]
-Found Element By : By.xpath: //input[contains(@name,'GlobalContactNameInputSet-Name')]
-Found Element By : By.xpath: //div[contains(@id,'SearchLinksInputSet-Search')]
-Found Element By : By.xpath: //div[text()='Wright Construction']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'Select')]
-Found Element By : By.xpath: //div[text()='Wright Construction']/ancestor::td[contains(@id,'ContactName_Cell')]/preceding-sibling::td[contains(@id,'Edit')]//div[contains(@id,'Edit')]
-Found Element By : By.xpath: //input[contains(@id,'PrimaryPayer_0')]
-Found Element By : By.id: AccountContactDetailPopup-NewAccountContactScreen-Update
-Found Element By : By.id: NewAccount-NewAccountScreen-Update
-Found Element By : By.xpath: //div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Account Summary')]
-Found Element By : By.xpath: //div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Account Summary')]
-Found Element By : By.xpath: //div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]
-Found Element By : By.id: AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy
-Found Element By : By.xpath: //div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Policy Issuance Wizard - Step 1 of 2')]
-Found Element By : By.xpath: //input[contains(@name,'NewPolicyDV-PolicyNumber')]
-Found Element By : By.xpath: //select[contains(@name,'NewPolicyDV-BillingMethod')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Direct Bill"]
-Found Element By : By.xpath: //select[contains(@name,'NewPolicyDV-PaymentPlan')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "B Monthly 10% Down, Max 11 installments"]
-Found Element By : By.xpath: //div[contains(@id,'ContactsLV_tb-addExistingContact')]
-Found Element By : By.xpath: //input[contains(@name,'GlobalContactNameInputSet-Name')]
-Found Element By : By.xpath: //div[contains(@id,'SearchLinksInputSet-Search')]
-Found Element By : By.xpath: //div[text()='Wright Construction']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'Select')]
-Found Element By : By.id: NewPolicyWizard-Next
-Found Element By : By.xpath: //div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Policy Issuance Wizard - Step 2 of 2')]
-Found Element By : By.xpath: //div[contains(@id,'PolicyAddChargesLV_tb-Add')]
-Found Element By : By.xpath: //select[contains(@name,'PolicyAddChargesLV-0-Type')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Premium"]
-Found Element By : By.xpath: //input[contains(@name,'PolicyAddChargesLV-0-Amount')]
-Found Element By : By.xpath: //input[contains(@name,'PolicyAddChargesLV-0-Amount')]
-Found Element By : By.xpath: //div[@id='NewPolicyWizard-Finish']//div[contains(text(),'inish')]
-Found Element By : By.xpath: //div[@id='NewPolicyWizard-Finish']//div[contains(text(),'inish')]
-Found Element By : By.xpath: //div[@id='AccountGroup-AccountInfoBar-AccountName']/div[@class='gw-label gw-infoValue']
-Found Element By : By.xpath: //div[@id='AccountGroup-AccountInfoBar-AccountNumber']/div[@class='gw-label gw-infoValue']
-1000000370
-Found Element By : By.id: AccountSummary-AccountSummaryScreen-Name
-Found Element By : By.id: AccountSummary-AccountSummaryScreen-PayoffAmount
-Found Element By : By.xpath: //table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'PolicyNumber_Cell')]
-Found Element By : By.xpath: //table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'TotalValue_Cell')]
-Found Element By : By.id: AccountGroup-MenuLinks-AccountGroup_AccountDetailInvoices
-Found Element By : By.xpath: //div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Invoice')]
-Found Element By : By.xpath: //table[@class='gw-ListViewWidget--table gw-table']//tr[contains(@id,'DetailPanel-AccountInvoicesLV') and contains(@class,'listDetail')]
-]]></system-out>
-    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 8202
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Apr 01, 2021 12:56:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-java.lang.NullPointerException
-	at com.pages.Sandbox.GW_TestNGListener.onTestFailure(GW_TestNGListener.java:40)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1716)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1699)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:703)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-]]></system-err>
-  </testcase>
+  <testcase name="BillingTest" classname="com.Test.GW_BillingCenter_Test1" time="45.163"/>
 </testsuite>
