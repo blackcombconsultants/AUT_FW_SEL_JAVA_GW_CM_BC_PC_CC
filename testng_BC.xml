@@ -4,12 +4,12 @@
 
 
 	<listeners>
-		<listener class-name="com.pages.Sandbox.GW_TestNGListener" />
+		<listener class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
 	<test thread-count="2" parallel="methods" name="Test">
 		<classes>
-			<class name="com.Test.GW_BillingCenter_Test1" />
+			<class name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice_Test" />
 		</classes>
 	</test> <!-- Test -->
 
