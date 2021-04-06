@@ -1,0 +1,16 @@
+package com.pages.Guidewire.WorkersCompensation;
+
+import org.openqa.selenium.By;
+
+public interface WC_Supplementary_PO {
+
+	final By Any_employees_under_16_or_over_60_years_of_age=By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-WorkersCompSupplementalScreen-QuestionSetsDV-0-QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_NoPost_0");
+	final By Are_athletic_teams_sponsored=By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-WorkersCompSupplementalScreen-QuestionSetsDV-0-QuestionSetLV-2-QuestionModalInput-BooleanRadioInput_NoPost_0");
+	final By Any_work_performed_underground_or_above_15_feet=By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-WorkersCompSupplementalScreen-QuestionSetsDV-0-QuestionSetLV-4-QuestionModalInput-BooleanRadioInput_NoPost_0");
+	final By Do_employees_travel_out_of_state=By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-WorkersCompSupplementalScreen-QuestionSetsDV-0-QuestionSetLV-12-QuestionModalInput-BooleanRadioInput_NoPost_0");
+	final By Any_seasonal_employees=By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-WorkersCompSupplementalScreen-QuestionSetsDV-0-QuestionSetLV-17-QuestionModalInput-BooleanRadioInput_NoPost_0");
+	final By Is_there_any_volunteer_or_donated_labor=By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-WorkersCompSupplementalScreen-QuestionSetsDV-0-QuestionSetLV-21-QuestionModalInput-BooleanRadioInput_NoPost_0");
+	final By Do_any_employees_predominantly_work_at_home=By.id("SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-WorkersCompSupplementalScreen-QuestionSetsDV-0-QuestionSetLV-22-QuestionModalInput-BooleanRadioInput_NoPost_0");
+
+
+}
