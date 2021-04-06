@@ -1,6 +1,5 @@
 package com.pages.Guidewire;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -14,29 +13,17 @@ public class GW_MenuNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		super(driver, oExtentTest);
 	}
 
-	@Override
-	public void click_Menu_Desktop(By Menu_Desktop) {
-		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.Menu_Desktop, "click", "Null");
-
+	public void navigate_AccountTab_NewAccount() {
+		GuidewireAutomate("Tab_Account", Tab_Account, "click", "Null");
+		GuidewireAutomate("AccountTab_NewAccount", AccountTab_NewAccount, "click", "Null");
 	}
 
-	@Override
-	public void click_SuBMenu_Desktop_Summary(By SuBMenu_Desktop_Summary) {
-		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.SuBMenu_Desktop_Summary, "click", "Null");
-
+	public void navigate_AccountTab_AccountNumberSearch(String strValue) {
+		GuidewireAutomate("Tab_Account", Tab_Account, "click", "Null");
+		GuidewireAutomate("AccountTab_AccountNumber", AccountTab_AccountNumber, "sendkeys", strValue);
+		GuidewireAutomate("AccountTab_AccountNumberSearch", AccountTab_AccountNumberSearch, "click", "Null");
 	}
-
-	@Override
-	public void click_Menu_Account(By Menu_Account) {
-		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.Menu_Account, "click", "Null");
-
-	}
-
-	@Override
-	public void click_SubMenu_Account_Newaccount(By SubMenu_Account_Newaccount) {
-		gwAutomate(GW_MenuNavigation_CM_PC_BC_CC.SubMenu_Account_Newaccount, "click", "Null");
-
-	}
+	
 
 	/*
 	 * -------------------------------------------------------------- menuNavigation
@@ -65,13 +52,11 @@ public class GW_MenuNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 	public void gwPolicyCenter_MenuNavigation(String strMenuOption) {
 		switch (strMenuOption) {
 		case "NewAccount":
-			gwAutomate(Menu_Account, "click", "Null");
-			gwAutomate(SubMenu_Account_Newaccount, "click", "Null");
+			navigate_AccountTab_NewAccount();
 			break;
-		case "x":
-		case "y":
-		case "z":
-
+		case "AccountNumberSearch":
+			navigate_AccountTab_AccountNumberSearch(strMenuOption);
+			break;
 		default:
 			break;
 		}
@@ -84,21 +69,18 @@ public class GW_MenuNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 
 			switch (strMenuOption) {
 
-			case "x":
-			case "Account":
-				GuidewireAutomate("Menu_Account", Menu_AccountBC, "click", "Null");
+			case "NewAccount":
+				navigate_AccountTab_NewAccount();
 				break;
-			case "y":
+			case "AccountNumberSearch":
+				navigate_AccountTab_AccountNumberSearch(strMenuOption);
 				break;
-
-			case "z":
-				break;
-
 			default:
 				break;
 			}
 
-			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
