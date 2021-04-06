@@ -45,21 +45,30 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 
 	public void pc_SearchAccountInformation() {
 
-		gwAutomate(companyname, "sendkeys", "QA Automation2");
-		gwAutomate(companyname, "clear", "");
-		gwAutomate(firstname, "sendkeys", "QA");
-		gwAutomate(lastname, "sendkeys", "Automation2");
-		gwAutomate(firstnameexactmatch, "sendkeys", "");
-		gwAutomate(lastnameexactmatch, "sendkeys", "");
+		GuidewireAutomate("Company Name", companyname, "sendkeys", "QA Automation2");
+		GuidewireAutomate("Company Name", companyname, "clear", "");
+		GuidewireAutomate("First Name", firstname, "sendkeys", "QA");
+		GuidewireAutomate("Last Name", lastname, "sendkeys", "Automation2");
+		GuidewireAutomate("First Name Exact Match", firstnameexactmatch, "sendkeys", "");
+		GuidewireAutomate("Last Name Exact Match", lastnameexactmatch, "sendkeys", "");
 
-		gwAutomate(Country, "sendkeys", "");
-		gwAutomate(City, "sendkeys", "");
-		gwAutomate(County, "sendkeys", "");
-		gwAutomate(State, "sendkeys", "");
-		gwAutomate(ZipCode, "sendkeys", "");
+		GuidewireAutomate("Country", Country, "sendkeys", "");
+		GuidewireAutomate("City", City, "sendkeys", "");
+		GuidewireAutomate("county", County, "sendkeys", "");
+		GuidewireAutomate("State", State, "sendkeys", "");
+		GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "");
 
-		gwAutomate(Search_Button, "click", "");
+		GuidewireAutomate("Search_Button", Search_Button, "click", "");
 
+	}
+	
+	public void Account_Search_SubTab() {
+
+		GuidewireAutomate("Account_Tab_Dropdown", Account_Tab_Dropdown, "click", "");
+		GuidewireAutomate("Account_Tab_Search", Account_Tab_Search,"sendkeys", "4095103645");
+		GuidewireAutomate("Account_Tab_Search_Button", Account_Tab_Search_Button, "click", "");
+        // Validating the page header
+        
 	}
 
 	/*
@@ -69,36 +78,36 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 	 */
 	@Override
 	public void pc_CreatePersonAccount() {
-		gwAutomate(CreateNewAccount_Button, "click", "");
-		gwAutomate(CNA_Person_Button, "click", "");
+		GuidewireAutomate("CreateNewAccount_Button", CreateNewAccount_Button, "click", "");
+		GuidewireAutomate("CNA_Person_Button", CNA_Person_Button, "click", "");
 
-		gwAutomate(homephone, "sendkeys", "999111000");
-		gwAutomate(workphone, "sendkeys", "881110001");
-		gwAutomate(mobilephone, "sendkeys", "7771110001");
-		gwAutomate(faxphone, "sendkeys", "6661110001");
-		gwAutomate(primaryphone, "selectByVisibleText", "Work");
+		GuidewireAutomate("homephone", homephone, "sendkeys", "999111000");
+		GuidewireAutomate("workphone", workphone, "sendkeys", "881110001");
+		GuidewireAutomate("mobilephone", mobilephone, "sendkeys", "7771110001");
+		GuidewireAutomate("faxphone", faxphone, "sendkeys", "6661110001");
+		GuidewireAutomate("primaryphone", primaryphone, "selectByVisibleText", "Work");
 
-		gwAutomate(primaryEmail, "sendkeys", "test123@gmail.com");
-		gwAutomate(secondaryEmail, "sendkeys", "test456@gmail.com");
+		GuidewireAutomate("primaryEmail", primaryEmail, "sendkeys", "test123@gmail.com");
+		GuidewireAutomate("secondaryEmail", secondaryEmail, "sendkeys", "test456@gmail.com");
 
-		gwAutomate(Country, "selectByVisibleText", "United States");
-		gwAutomate(address1, "sendkeys", "123 Suites");
-		gwAutomate(address2, "sendkeys", "South Avenue");
-		gwAutomate(address3, "sendkeys", "Small County");
-		gwAutomate(City, "sendkeys", "Alaska");
-		gwAutomate(County, "sendkeys", "Anchorage");
-		gwAutomate(State, "selectByVisibleText", "Alaska");
-		gwAutomate(ZipCode, "sendkeys", "99501");
-		gwAutomate(addresstype, "selectByVisibleText", "Home");
-		gwAutomate(description, "sendkeys", "description");
+		GuidewireAutomate("Country", Country, "selectByVisibleText", "United States");
+		GuidewireAutomate("address1", address1, "sendkeys", "123 Suites");
+		GuidewireAutomate("address2", address2, "sendkeys", "South Avenue");
+		GuidewireAutomate("address3", address3, "sendkeys", "Small County");
+		GuidewireAutomate("City", City, "sendkeys", "Alaska");
+		GuidewireAutomate("County", County, "sendkeys", "Anchorage");
+		GuidewireAutomate("State", State, "selectByVisibleText", "Alaska");
+		GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "99501");
+		GuidewireAutomate("addresstype", addresstype, "selectByVisibleText", "Home");
+		GuidewireAutomate("description", description, "sendkeys", "description");
 
-		gwAutomate(officialID, "sendkeys", "999-11-0001");
-		gwAutomate(accountnickname, "sendkeys", "testnickname");
+		GuidewireAutomate("officialID", officialID, "sendkeys", "999-11-0001");
+		GuidewireAutomate("accountnickname", accountnickname, "sendkeys", "testnickname");
 
-		gwAutomate(Organization, "sendkeys", "ACV Property Insurance");
-		gwAutomate(ProducerCode, "selectByVisibleText", "301-008578 ACV Property Insurance");
+		GuidewireAutomate("Organization", Organization, "sendkeys", "ACV Property Insurance");
+		GuidewireAutomate("ProducerCode", ProducerCode, "selectByVisibleText", "301-008578 ACV Property Insurance");
 
-		gwAutomate(Update_Button, "click", "");
+		GuidewireAutomate("Update_Button", Update_Button, "click", "");
 
 	}
 
@@ -109,73 +118,71 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 	 */
 	@Override
 	public void pc_CreateCompanyAccount() {
-		gwAutomate(CreateNewAccount_Button, "click", "");
-		gwAutomate(CNA_Company_Button, "click", "");
+		GuidewireAutomate("CreateNewAccount_Button", CreateNewAccount_Button, "click", "");
+		GuidewireAutomate("CNA_Company_Button",CNA_Company_Button, "click", "");
 
-		gwAutomate(officephone, "sendkeys", "999111000");
-		gwAutomate(primaryEmail, "sendkeys", "test123@gmail.com");
-		gwAutomate(secondaryEmail, "sendkeys", "test456@gmail.com");
+		GuidewireAutomate("officephone", officephone, "sendkeys", "999111000");
+		GuidewireAutomate("primaryEmail", primaryEmail, "sendkeys", "test123@gmail.com");
+		GuidewireAutomate("secondaryEmail", secondaryEmail, "sendkeys", "test456@gmail.com");
 
-		gwAutomate(Country, "selectByVisibleText", "United States");
-		gwAutomate(address1, "sendkeys", "123 Suites");
-		gwAutomate(address2, "sendkeys", "South Avenue");
-		gwAutomate(address3, "sendkeys", "Small County");
+		GuidewireAutomate("Country", Country, "selectByVisibleText", "United States");
+		GuidewireAutomate("address1", address1, "sendkeys", "123 Suites");
+		GuidewireAutomate("address2", address2, "sendkeys", "South Avenue");
+		GuidewireAutomate("address3", address3, "sendkeys", "Small County");
 
-		gwAutomate(City, "sendkeys", "Alaska");
-		gwAutomate(County, "sendkeys", "Anchorage");
-		gwAutomate(State, "selectByVisibleText", "Alaska");
-		gwAutomate(ZipCode, "sendkeys", "99501");
-		gwAutomate(addresstype, "selectByVisibleText", "Home");
-		gwAutomate(description, "sendkeys", "description");
+		GuidewireAutomate("City", City, "sendkeys", "Alaska");
+		GuidewireAutomate("County", County, "sendkeys", "Anchorage");
+		GuidewireAutomate("State", State, "selectByVisibleText", "Alaska");
+		GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "99501");
+		GuidewireAutomate("addresstype", addresstype, "selectByVisibleText", "Home");
+		GuidewireAutomate("description", description, "sendkeys", "description");
 
-		gwAutomate(officialID, "sendkeys", "999-11-0001");
-		gwAutomate(accountnickname, "sendkeys", "testnickname");
+		GuidewireAutomate("officialID", officialID, "sendkeys", "999-11-0001");
+		GuidewireAutomate("accountnickname", accountnickname, "sendkeys", "testnickname");
 
-		pc_SearchOrganizations();
-		gwAutomate(Update_Button, "click", "");
+		//pc_SearchOrganizations();
+		GuidewireAutomate("Update_Button", Update_Button, "click", "");
 	}
 
-	public void pc_SearchOrganizations() {
-
-		gwAutomate(OrganizationName, "sendkeys", "ACV Property Insurance");
-		gwAutomate(OrganizationType, "Agency", "");
-
-		gwAutomate(Country, "United States", "");
-		gwAutomate(City, "sendkeys", "");
-		gwAutomate(County, "sendkeys", "");
-		gwAutomate(State, "sendkeys", "");
-		gwAutomate(ZipCode, "sendkeys", "");
-
-		// gwAutomate(ProducerStatus, "sendkeys", "");
-		gwAutomate(ProducerTier, "", "");
-		gwAutomate(ProducerCode, "sendkeys", "301-008578 ACV Property Insurance");
-		gwAutomate(Policy, "sendkeys", "");
-		gwAutomate(Account, "sendkeys", "");
-
-		gwAutomate(Search_Button, "click", "");
-		gwAutomate(Reset_Button, "", "");
-	}
-
-	public void pc_SearchProducer() {
-
-		gwAutomate(ProducerCode, "sendkeys", "301-008578");
-		gwAutomate(ProducerDescription, "sendkeys", "301-008578");
-		gwAutomate(ParentProducerCode, "sendkeys", "301-008578");
-		gwAutomate(Status, "sendkeys", "301-008578");
-		gwAutomate(BranchCode, "sendkeys", "ACV Property Insurance");
-		gwAutomate(OrganizationName, "sendkeys", "");
-		gwAutomate(AvailableToUser, "sendkeys", "");
-		gwAutomate(SearchForMissingPreferredUnderwriter, "sendkeys", "");
-		gwAutomate(PreferredUnderwriter, "sendkeys", "");
-
-		gwAutomate(Country, "United States", "");
-		gwAutomate(City, "sendkeys", "");
-		gwAutomate(County, "sendkeys", "");
-		gwAutomate(State, "sendkeys", "");
-		gwAutomate(ZipCode, "sendkeys", "");
-
-		gwAutomate(Search_Button, "click", "");
-		gwAutomate(Reset_Button, "", "");
-	}
-
+	/*
+	 * public void pc_SearchOrganizations() {
+	 * 
+	 * GuidewireAutomate("OrganizationName", OrganizationName, "sendkeys",
+	 * "ACV Property Insurance"); GuidewireAutomate("OrganizationType",
+	 * OrganizationType, "Agency", "");
+	 * 
+	 * GuidewireAutomate("Country", Country, "United States", "");
+	 * GuidewireAutomate("City", City, "sendkeys", ""); GuidewireAutomate("County",
+	 * County, "sendkeys", ""); GuidewireAutomate("State", State, "sendkeys", "");
+	 * GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "");
+	 * 
+	 * // GuidewireAutomate(ProducerStatus, "sendkeys", "");
+	 * GuidewireAutomate("ProducerTier", ProducerTier, "", "");
+	 * GuidewireAutomate("ProducerCode"ProducerCode, "sendkeys",
+	 * "301-008578 ACV Property Insurance"); GuidewireAutomate(Policy, "sendkeys",
+	 * ""); GuidewireAutomate(Account, "sendkeys", "");
+	 * 
+	 * GuidewireAutomate(Search_Button, "click", "");
+	 * GuidewireAutomate(Reset_Button, "", ""); }
+	 * 
+	 * public void pc_SearchProducer() {
+	 * 
+	 * GuidewireAutomate(ProducerCode, "sendkeys", "301-008578");
+	 * GuidewireAutomate(ProducerDescription, "sendkeys", "301-008578");
+	 * GuidewireAutomate(ParentProducerCode, "sendkeys", "301-008578");
+	 * GuidewireAutomate(Status, "sendkeys", "301-008578");
+	 * GuidewireAutomate(BranchCode, "sendkeys", "ACV Property Insurance");
+	 * GuidewireAutomate(OrganizationName, "sendkeys", "");
+	 * GuidewireAutomate(AvailableToUser, "sendkeys", "");
+	 * GuidewireAutomate(SearchForMissingPreferredUnderwriter, "sendkeys", "");
+	 * GuidewireAutomate(PreferredUnderwriter, "sendkeys", "");
+	 * 
+	 * GuidewireAutomate(Country, "United States", ""); GuidewireAutomate(City,
+	 * "sendkeys", ""); GuidewireAutomate(County, "sendkeys", "");
+	 * GuidewireAutomate(State, "sendkeys", ""); GuidewireAutomate(ZipCode,
+	 * "sendkeys", "");
+	 * 
+	 * GuidewireAutomate(Search_Button, "click", "");
+	 * GuidewireAutomate(Reset_Button, "", ""); }
+	 */
 }
