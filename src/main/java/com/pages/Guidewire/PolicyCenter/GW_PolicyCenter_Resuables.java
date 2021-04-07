@@ -144,45 +144,46 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate("Update_Button", Update_Button, "click", "");
 	}
 
-	/*
-	 * public void pc_SearchOrganizations() {
-	 * 
-	 * GuidewireAutomate("OrganizationName", OrganizationName, "sendkeys",
-	 * "ACV Property Insurance"); GuidewireAutomate("OrganizationType",
-	 * OrganizationType, "Agency", "");
-	 * 
-	 * GuidewireAutomate("Country", Country, "United States", "");
-	 * GuidewireAutomate("City", City, "sendkeys", ""); GuidewireAutomate("County",
-	 * County, "sendkeys", ""); GuidewireAutomate("State", State, "sendkeys", "");
-	 * GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "");
-	 * 
-	 * // GuidewireAutomate(ProducerStatus, "sendkeys", "");
-	 * GuidewireAutomate("ProducerTier", ProducerTier, "", "");
-	 * GuidewireAutomate("ProducerCode"ProducerCode, "sendkeys",
-	 * "301-008578 ACV Property Insurance"); GuidewireAutomate(Policy, "sendkeys",
-	 * ""); GuidewireAutomate(Account, "sendkeys", "");
-	 * 
-	 * GuidewireAutomate(Search_Button, "click", "");
-	 * GuidewireAutomate(Reset_Button, "", ""); }
-	 * 
-	 * public void pc_SearchProducer() {
-	 * 
-	 * GuidewireAutomate(ProducerCode, "sendkeys", "301-008578");
-	 * GuidewireAutomate(ProducerDescription, "sendkeys", "301-008578");
-	 * GuidewireAutomate(ParentProducerCode, "sendkeys", "301-008578");
-	 * GuidewireAutomate(Status, "sendkeys", "301-008578");
-	 * GuidewireAutomate(BranchCode, "sendkeys", "ACV Property Insurance");
-	 * GuidewireAutomate(OrganizationName, "sendkeys", "");
-	 * GuidewireAutomate(AvailableToUser, "sendkeys", "");
-	 * GuidewireAutomate(SearchForMissingPreferredUnderwriter, "sendkeys", "");
-	 * GuidewireAutomate(PreferredUnderwriter, "sendkeys", "");
-	 * 
-	 * GuidewireAutomate(Country, "United States", ""); GuidewireAutomate(City,
-	 * "sendkeys", ""); GuidewireAutomate(County, "sendkeys", "");
-	 * GuidewireAutomate(State, "sendkeys", ""); GuidewireAutomate(ZipCode,
-	 * "sendkeys", "");
-	 * 
-	 * GuidewireAutomate(Search_Button, "click", "");
-	 * GuidewireAutomate(Reset_Button, "", ""); }
-	 */
+	
+	  public void pc_SearchOrganizations() {
+	  
+	  GuidewireAutomate("OrganizationName", OrganizationName, "sendkeys","ACV Property Insurance"); 
+	  GuidewireAutomate("OrganizationType",OrganizationType, "Agency", "");
+	  
+	  GuidewireAutomate("Country", Country, "United States", "");
+	  GuidewireAutomate("City", City, "sendkeys", ""); 
+	  GuidewireAutomate("County",County, "sendkeys", ""); 
+	  GuidewireAutomate("State", State, "sendkeys", "");
+	  GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "");
+	  
+	  GuidewireAutomate("ProducerStatus", ProducerStatus, "sendkeys", "");
+	  GuidewireAutomate("ProducerTier", ProducerTier, "", "");
+	  GuidewireAutomate("ProducerCode", ProducerCode, "sendkeys","301-008578 ACV Property Insurance"); 
+	  GuidewireAutomate("Policy", Policy, "sendkeys",""); 
+	  GuidewireAutomate("Account", Account, "sendkeys", "");
+	  
+	  GuidewireAutomate("Search_Button", Search_Button, "click", "");
+	  GuidewireAutomate("Reset_Button", Reset_Button, "", ""); }
+	  
+	  public void pc_SearchProducer() {
+	  
+	  GuidewireAutomate("ProducerCode", ProducerCode, "sendkeys", "301-008578");
+	  GuidewireAutomate("ProducerDescription", ProducerDescription, "sendkeys", "301-008578");
+	  GuidewireAutomate("ParentProducerCode", ParentProducerCode, "sendkeys", "301-008578");
+	  GuidewireAutomate("Status", Status, "sendkeys", "301-008578");
+	  GuidewireAutomate("BranchCode", BranchCode, "sendkeys", "ACV Property Insurance");
+	  GuidewireAutomate("OrganizationName", OrganizationName, "sendkeys", "");
+	  GuidewireAutomate("AvailableToUser", AvailableToUser, "sendkeys", "");
+	  GuidewireAutomate("SearchForMissingPreferredUnderwriter", SearchForMissingPreferredUnderwriter, "sendkeys", "");
+	  GuidewireAutomate("PreferredUnderwriter", PreferredUnderwriter, "sendkeys", "");
+	  
+	  GuidewireAutomate("Country", Country, "United States", ""); 
+	  GuidewireAutomate("City", City,"sendkeys", ""); 
+	  GuidewireAutomate("County", County, "sendkeys", "");
+	  GuidewireAutomate("State", State, "sendkeys", ""); 
+	  GuidewireAutomate("ZipCode", ZipCode,"sendkeys", "");
+	  
+	  GuidewireAutomate("Search_Button", Search_Button, "click", "");
+	  GuidewireAutomate("Reset_Button", Reset_Button, "", ""); }
+	 
 }
