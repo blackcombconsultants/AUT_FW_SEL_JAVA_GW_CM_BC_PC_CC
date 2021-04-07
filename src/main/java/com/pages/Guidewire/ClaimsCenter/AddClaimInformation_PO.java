@@ -19,6 +19,7 @@ public interface AddClaimInformation_PO {
     final By testClickTop=By.id("gw-center-title-toolbar");
     final By next=By.id("FNOLWizard-Next");
     
-
+    void addClaimInfo() throws Throwable;
+    
 
 }

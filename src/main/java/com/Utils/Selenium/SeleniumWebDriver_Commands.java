@@ -302,10 +302,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			}
 
 			if (bValidation) {
-				LogMsg = ElementName + " =  [" + ElementName.toString() + "]";
+				LogMsg = ElementName + " =  [" + Expected + "]";
 				oExtentTest.log(Status.PASS, LogMsg);
 			} else {
-				LogMsg = ElementName + " =  [" + ElementName.toString() + "]";
+				LogMsg = ElementName + " =  [" + Expected + "]";
 				oExtentTest.log(Status.FAIL, LogMsg);
 			}
 

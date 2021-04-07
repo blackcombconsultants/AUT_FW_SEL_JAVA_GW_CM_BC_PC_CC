@@ -26,6 +26,7 @@
 						<suiteXmlFiles>
 							<suiteXmlFile>testng_BC.xml</suiteXmlFile>
 							<suiteXmlFile>testng_PC.xml</suiteXmlFile>
+							<suiteXmlFile>testng_CC.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

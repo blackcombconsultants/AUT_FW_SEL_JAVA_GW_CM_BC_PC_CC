@@ -95,6 +95,9 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By AccountSummary_Name = By
 			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[contains(text(),'Account Summary')]");
 
+	final By Producer_Header = By
+			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Producer')]");
+
 	final By NewSubmission_Header = By
 			.xpath("//div[contains(@id,'Screen-ttlBar')]//div[text()='New Submissions']");
 
