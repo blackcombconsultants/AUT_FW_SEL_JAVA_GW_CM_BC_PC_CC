@@ -7,9 +7,9 @@
 		<listener class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
-	<test thread-count="2" parallel="methods" name="Test">
+	<test thread-count="1" parallel="methods" name="Test">
 		<classes>
-			<class name="com.Test.Guidewire.PolicyCenter.GW_BC_AccountCreation" />
+			<class name="com.Test.Guidewire.PolicyCenter.GW_PC_NewSubmission" />
 		</classes>
 	</test> <!-- Test -->
 

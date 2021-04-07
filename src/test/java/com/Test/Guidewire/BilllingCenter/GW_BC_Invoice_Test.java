@@ -4,26 +4,25 @@ import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_LoginCM_PC_BC_CC;
-import com.pages.Guidewire.GW_MenuNavigation_CM_PC_BC_CC;
+import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
 import com.pages.Guidewire.BillingCenter.GW_BillingCenter_Resuables;
 
 public class GW_BC_Invoice_Test extends GW_GetDriver {
 
 	@Test
-	public void BillingTest() throws Exception {
+	public void GW_BC_Invoice() throws Throwable {
 
 		try {
 
 			GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
 			GW_BillingCenter_Resuables gwPC = new GW_BillingCenter_Resuables(driver, oExtentTest);
-			GW_MenuNavigation_CM_PC_BC_CC mn = new GW_MenuNavigation_CM_PC_BC_CC(driver, oExtentTest);
+			GW_TabNavigation_CM_PC_BC_CC mn = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
 
 			// ------> login_PolicyCenter
 			lg.login_BillingCenter();
 
 			// ------> navigate to new account
-			mn.gwBillingCenter_MenuNavigation("Account");
-
+			mn.gwBillingCenter_TabNavigation("Account");
 
 			// ------> New Account
 			gwPC.bc_NewAccount();

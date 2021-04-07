@@ -7,7 +7,7 @@
 		<listener class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
-	<test thread-count="2" parallel="methods" name="Test">
+	<test thread-count="2" parallel="methods" name="GW_BC_Invoice">
 		<classes>
 			<class name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice_Test" />
 		</classes>
