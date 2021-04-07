@@ -11,6 +11,7 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.codoid.products.exception.FilloException;
+import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
 
 public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands implements GW_BillingCenter_PO {
 
@@ -24,7 +25,7 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	 * --------------------------------------------------------------
 	 * getAccountInformationHeader
 	 * --------------------------------------------------------------
-	 */ public String getHeader_Accounts() {
+	 */ public String getHeader_Accounts() throws Throwable {
 		return getText_Element(Accounts);
 	}
 
@@ -32,7 +33,7 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	 * --------------------------------------------------------------
 	 * getAccountInformationHeader
 	 * --------------------------------------------------------------
-	 */ public String getHeader_NewAccount() {
+	 */ public String getHeader_NewAccount() throws Throwable {
 		return getText_Element(NewAccount);
 
 	}
@@ -41,7 +42,7 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	 * --------------------------------------------------------------
 	 * getAccountInformationHeader
 	 * --------------------------------------------------------------
-	 */ public String getHeader_AccountSummary() {
+	 */ public String getHeader_AccountSummary() throws Throwable {
 		return getText_Element(AccountSummary);
 	}
 
@@ -49,11 +50,11 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	 * --------------------------------------------------------------
 	 * getHeader_PolicyIssuanceWizard
 	 * --------------------------------------------------------------
-	 */ public String getHeader_PolicyIssuanceWizard1() {
+	 */ public String getHeader_PolicyIssuanceWizard1() throws Throwable {
 		return getText_Element(PolicyIssuanceWizard1);
 	}
 
-	public String getHeader_PolicyIssuanceWizard2() {
+	public String getHeader_PolicyIssuanceWizard2() throws Throwable {
 		return getText_Element(PolicyIssuanceWizard2);
 	}
 
@@ -63,9 +64,10 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	 * --------------------------------------------------------------
 	 */
 	// checking search result message
-	public String gettext_SearchAccountResultsMessage() {
+	public String gettext_SearchAccountResultsMessage() throws Throwable {
 		return getText_Element(SearchAccountResults_Msg);
 	}
+
 
 	/*
 	 * --------------------------------------------------------------
@@ -73,7 +75,7 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	 * --------------------------------------------------------------
 	 */
 
-	public void bc_SearchAccountInformation() {
+	public void bc_SearchAccountInformation() throws Throwable {
 
 		GuidewireAutomate("CompanyName", CompanyName, "sendkeys", "QA Automation2");
 		GuidewireAutomate("firstname", firstname, "sendkeys", "QA");
@@ -96,195 +98,128 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	 * --------------------------------------------------------------
 	 */
 	@Override
-	public void bc_NewAccount() {
+	public void bc_NewAccount() throws Throwable {
 
-		try {
+		lhm_Data = getDataFromSheet_Fillo("Account", "BillPlan1");
 
-			lhm_Data = getDataFromSheet_Fillo("Account", "BillPlan1");
+		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
+		t.gwBillingCenter_MenuNavigation("NewAccount");
 
-			// ------> Verifying the page -
-			Assert.assertEquals(getHeader_Accounts(), "Accounts");
-			GuidewireAutomate("Actions", Actions_Button, "click", "");
-			GuidewireAutomate("NewAccount", NewAccount_Button, "click", "");
-			// ------> Verifying the page -
-			Assert.assertEquals(getHeader_NewAccount(), "New Account");
+		// ------> Verifying the page -
+		Assert.assertEquals(getHeader_NewAccount(), "New Account");
+		// GuidewireAutomate("AccountNumber", AccountNumber, "", "");
+		strAccountName = lhm_Data.get("TD_AccountName");
+		GuidewireAutomate("AccountName", AccountName, "sendkeys", strAccountName);
+		// GuidewireAutomate(ParentAccount, "sendkeys", "");
+		GuidewireAutomate("AccountType", AccountType, "selectByVisibleText", lhm_Data.get("TD_AccountType"));
+		GuidewireAutomate("BillingPlan", BillingPlan, "selectByVisibleText", lhm_Data.get("TD_BillingPlan"));
+		GuidewireAutomate("DelinquencyPlan", DelinquencyPlan, "selectByVisibleText",
+				lhm_Data.get("TD_DelinquencyPlan"));
+		GuidewireAutomate("SendInvoicesBy", SendInvoicesBy, "selectByVisibleText", lhm_Data.get("TD_SendInvoicesBy"));
 
-			// GuidewireAutomate("AccountNumber", AccountNumber, "", "");
-			strAccountName = lhm_Data.get("TD_AccountName");
-			GuidewireAutomate("AccountName", AccountName, "sendkeys", strAccountName);
-			// GuidewireAutomate(ParentAccount, "sendkeys", "");
-			GuidewireAutomate("AccountType", AccountType, "selectByVisibleText", lhm_Data.get("TD_AccountType"));
-			GuidewireAutomate("BillingPlan", BillingPlan, "selectByVisibleText", lhm_Data.get("TD_BillingPlan"));
-			GuidewireAutomate("DelinquencyPlan", DelinquencyPlan, "selectByVisibleText",
-					lhm_Data.get("TD_DelinquencyPlan"));
-			GuidewireAutomate("SendInvoicesBy", SendInvoicesBy, "selectByVisibleText",
-					lhm_Data.get("TD_SendInvoicesBy"));
+		GuidewireAutomate("AddExistingContact", AddExistingContact_Button, "click", "");
 
-			GuidewireAutomate("AddExistingContact", AddExistingContact_Button, "click", "");
+		GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+		GuidewireAutomate("Search", Search_Button, "click", "");
 
-			GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
-			GuidewireAutomate("Search", Search_Button, "click", "");
+		GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
+		GuidewireAutomate("Edit", WrightConstruction_Edit, "click", "");
 
-			GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
-			GuidewireAutomate("Edit", WrightConstruction_Edit, "click", "");
+		GuidewireAutomate("PrimaryPayer", PrimaryPayer, "click", "");
 
-			GuidewireAutomate("PrimaryPayer", PrimaryPayer, "click", "");
+		GuidewireAutomate("OK", OK_Button, "click", "");
 
-			GuidewireAutomate("OK", OK_Button, "click", "");
+		// getText_ElementWait(AccountNumber);
 
-			// getText_ElementWait(AccountNumber);
+		GuidewireAutomate("CreateAccount", CreateAccount_Button, "click", "");
 
-			GuidewireAutomate("CreateAccount", CreateAccount_Button, "click", "");
+		oExtentTest.log(Status.PASS, "CreateAccount is succesful");
+		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 
-			oExtentTest.log(Status.PASS, "CreateAccount is succesful");
-			oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
-			
-
-			// ------> Verifying the page -
-			Assert.assertEquals(getHeader_AccountSummary(), "Account Summary");
-			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.PASS,
-					"Expectd = " + getHeader_AccountSummary() + " 		Actual = " + "Account Summary");
-
-
-		} catch (FilloException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		// ------> Verifying the page -
+		Assert.assertEquals(getHeader_AccountSummary(), "Account Summary");
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.PASS, "Expectd = " + getHeader_AccountSummary() + " 		Actual = " + "Account Summary");
 
 	}
 
 	@Override
-	public void bc_NewPolicy() {
-
-		try {
-
-			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
-			bc_NewPolicy_PolicyIssuanceWizard_Step1();
-			bc_NewPolicy_PolicyIssuanceWizard_Step2();
-		} catch (FilloException e) {
-			e.printStackTrace();
-		}
+	public void bc_NewPolicy() throws Throwable {
+		lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
+		bc_NewPolicy_PolicyIssuanceWizard_Step1();
+		bc_NewPolicy_PolicyIssuanceWizard_Step2();
 	}
 
-	public void bc_NewPolicy_PolicyIssuanceWizard_Step1() {
+	public void bc_NewPolicy_PolicyIssuanceWizard_Step1() throws Throwable {
 
-		try {
+		lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
 
-			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
-			GuidewireAutomate("Actions", Actions_Button, "click", "");
-			GuidewireAutomate("NewPolicy", NewPolicy_Button, "click", "");
+		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
+		t.gwBillingCenter_MenuNavigation("NewPolicy");
 
-			Assert.assertEquals(getHeader_PolicyIssuanceWizard1(), "Policy Issuance Wizard - Step 1 of 2");
+		// Policy Issuance Wizard - Step 1 of 2
+		Assert.assertEquals(getHeader_PolicyIssuanceWizard1(), "Policy Issuance Wizard - Step 1 of 2");
 
-			GuidewireAutomate("PolicyNumber", PolicyNumber, "sendkeys", strPolicyNumber);
-			GuidewireAutomate("BillingMethod", BillingMethod, "selectByVisibleText", lhm_Data.get("TD_BillingMethod"));
-			GuidewireAutomate("PaymentPlan", PaymentPlan, "selectByVisibleText", lhm_Data.get("TD_PaymentPlan"));
+		GuidewireAutomate("PolicyNumber", PolicyNumber, "sendkeys", strPolicyNumber);
+		GuidewireAutomate("BillingMethod", BillingMethod, "selectByVisibleText", lhm_Data.get("TD_BillingMethod"));
+		GuidewireAutomate("PaymentPlan", PaymentPlan, "selectByVisibleText", lhm_Data.get("TD_PaymentPlan"));
 
-			GuidewireAutomate("AddExistingContac", AddExistingContact_Button, "click", "");
+		GuidewireAutomate("AddExistingContac", AddExistingContact_Button, "click", "");
 
-			GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
-			GuidewireAutomate("Search", Search_Button, "click", "");
+		GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+		GuidewireAutomate("Search", Search_Button, "click", "");
 
-			GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
+		GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
 
-			GuidewireAutomate("Next", Next_Button, "click", "");
-			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "PolicyIssuanceWizard_Step1 is succesful");
-
-		} catch (FilloException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		GuidewireAutomate("Next", Next_Button, "click", "");
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "PolicyIssuanceWizard_Step1 is succesful");
 
 	}
 
-	public void bc_NewPolicy_PolicyIssuanceWizard_Step2() {
+	public void bc_NewPolicy_PolicyIssuanceWizard_Step2() throws Throwable {
+		lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
+		Assert.assertEquals(getHeader_PolicyIssuanceWizard2(), "Policy Issuance Wizard - Step 2 of 2");
 
-		try {
+		/// GuidewireAutomate(OK_Button, "click", "");
 
-			lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
-			Assert.assertEquals(getHeader_PolicyIssuanceWizard2(), "Policy Issuance Wizard - Step 2 of 2");
+		GuidewireAutomate("AddCharges", PolicyAddCharges_Button, "click", "");
 
-			/// GuidewireAutomate(OK_Button, "click", "");
+		GuidewireAutomate("ChargesType", PolicyAddChargesType, "selectByVisibleText", lhm_Data.get("TD_ChargesType"));
+		GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "clear", "");
+		GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "sendkeys", lhm_Data.get("TD_ChargesAmount"));
 
-			GuidewireAutomate("AddCharges", PolicyAddCharges_Button, "click", "");
+		GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
+		GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "NewPolicy_PolicyIssuanceWizard_Step2 is succesful");
 
-			GuidewireAutomate("ChargesType", PolicyAddChargesType, "selectByVisibleText",
-					lhm_Data.get("TD_ChargesType"));
-			GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "clear", "");
-			GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "sendkeys", lhm_Data.get("TD_ChargesAmount"));
-
-			GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
-			GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
-			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "NewPolicy_PolicyIssuanceWizard_Step2 is succesful");
-		} catch (FilloException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Override
-	public void bc_AccountSummary() {
+	public void bc_AccountSummary() throws Throwable {
 
-		try {
-
-			lhm_Data = getDataFromSheet_Fillo("AcctSummary", "AcctSumry1");
-			Assert.assertEquals(getText_Element(AccountName_InfoBar), strAccountName);
-			System.out.println(getText_Element(AccountNumber_InfoBar));
-			getText_ElementWait(AccountNumber_InfoBar);
-			Assert.assertEquals(getText_Element(AS_AccountName), strAccountName);
-			Assert.assertEquals(getText_Element(AS_PayoffAmount), lhm_Data.get("TD_PayoffAmount"));
-			Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber + "-1");
-			Assert.assertEquals(getText_Element(AS_TotalValue), lhm_Data.get("TD_TotalValue"));
-			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "AccountSummary is succesful");
-		} catch (FilloException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		lhm_Data = getDataFromSheet_Fillo("AcctSummary", "AcctSumry1");
+		Assert.assertEquals(getText_Element(AccountName_InfoBar), strAccountName);
+		System.out.println(getText_Element(AccountNumber_InfoBar));
+		getText_ElementWait(AccountNumber_InfoBar);
+		Assert.assertEquals(getText_Element(AS_AccountName), strAccountName);
+		Assert.assertEquals(getText_Element(AS_PayoffAmount), lhm_Data.get("TD_PayoffAmount"));
+		Assert.assertEquals(getText_Element(AS_PolicyNumber), strPolicyNumber + "-1");
+		Assert.assertEquals(getText_Element(AS_TotalValue), lhm_Data.get("TD_TotalValue"));
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "AccountSummary is succesful");
 	}
 
 	@Override
-	public void bc_MenuNavigation_AccountSummary(String strMenuOption) {
-		switch (strMenuOption) {
-		case "History":
-			GuidewireAutomate("History", AS_HistoryLink, "click", "Null");
-			break;
-		case "Invoice":
-			GuidewireAutomate("Invoices", AS_InvoicesLink, "click", "Null");
-			break;
-		case "x":
-		case "y":
-		case "z":
-
-		default:
-			break;
-		}
-	}
-
-	@Override
-	public void bc_AccountSummary_Invoices() {
-
-		try {
-
-			lhm_Data = getDataFromSheet_Fillo("Invoice", "InvoiceValues1");
-			bc_MenuNavigation_AccountSummary("Invoice");
-			Assert.assertEquals(getText_Element(InvoiceHeader), "Invoices");
-			// Assert.assertEquals(getSize_ElementsList(InvoiceDetails),
-			// Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
-			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Invoices verification is succesful");
-		} catch (FilloException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public void bc_AccountSummary_Invoices() throws Throwable {
+		lhm_Data = getDataFromSheet_Fillo("Invoice", "InvoiceValues1");
+		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
+		t.gwBillingCenter_MenuNavigation("Invoice");
+		// Assert.assertEquals(getSize_ElementsList(InvoiceDetails),
+		// Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "Invoices verification is succesful");
 
 	}
 
