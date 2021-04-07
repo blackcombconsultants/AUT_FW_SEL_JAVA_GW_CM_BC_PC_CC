@@ -25,7 +25,7 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
 		GuidewireAutomate("Login", Login, "click", "Null");
 
-		oExtentTest.log(Status.PASS, "Login into Billing center is succesful");
+		oExtentTest.log(Status.PASS, "Login succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 		// oExtentTest.info((Markup)
 		// MediaEntityBuilder.createScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver)));
@@ -38,7 +38,7 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 		GuidewireAutomate("Setting", Setting, "click", "Null");
 		GuidewireAutomate("Logout", Logout, "click", "Null");
 
-		oExtentTest.log(Status.PASS, "Login into Billing center is succesful");
+		oExtentTest.log(Status.PASS, "Logout is succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 
 	}

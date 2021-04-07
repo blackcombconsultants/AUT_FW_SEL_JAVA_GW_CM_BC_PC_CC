@@ -1,5 +1,7 @@
 package com.Test.Guidewire.PolicyCenter;
 
+import java.util.Date;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,7 +25,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 		mn.gwPolicyCenter_MenuNavigation("NewAccount");
 
 		// pc_SearchAccountInformation
-		gwPC.pc_SearchAccountInformation();
+		gwPC.pc_SearchAccountInformation("asdasdas");
 		Assert.assertEquals(gwPC.gettext_SearchAccountResultsMessage(),
 				"Information for the current page:\n" + "The search returned zero results.");
 		lg.logout_PolicyCenter();
@@ -32,6 +34,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	@Test
 	public void pc_CreatePersonAccount() throws Throwable {
+		strAccountName = sdf_ddMMMMyyyyHHmmss.format(new Date());
 
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
 		GW_PolicyCenter_Resuables gwPC = new GW_PolicyCenter_Resuables(driver, oExtentTest);
@@ -42,16 +45,18 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 		// navigate to new account
 		mn.gwPolicyCenter_MenuNavigation("NewAccount");
 		// pc_SearchAccountInformation
-		gwPC.pc_SearchAccountInformation();
+		gwPC.pc_SearchAccountInformation(strAccountName);
 		Assert.assertEquals(gwPC.gettext_SearchAccountResultsMessage(),
 				"Information for the current page:\n" + "The search returned zero results.");
 		// pc_CreatePersonAccount
 		gwPC.pc_CreatePersonAccount();
+		lg.logout_PolicyCenter();
 
 	}
 
 	@Test
 	public void pc_CreateCompanyAccount() throws Throwable {
+		strAccountName = sdf_ddMMMMyyyyHHmmss.format(new Date());
 
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
 		GW_PolicyCenter_Resuables gwPC = new GW_PolicyCenter_Resuables(driver, oExtentTest);
@@ -63,7 +68,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 		mn.gwPolicyCenter_MenuNavigation("NewAccount");
 
 		// pc_SearchAccountInformation
-		gwPC.pc_SearchAccountInformation();
+		gwPC.pc_SearchAccountInformation(strAccountName);
 		Assert.assertEquals(gwPC.gettext_SearchAccountResultsMessage(),
 				"Information for the current page:\n" + "The search returned zero results.");
 		// pc_CreatePersonAccount
