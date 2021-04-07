@@ -4,13 +4,24 @@ import org.openqa.selenium.By;
 
 public interface GW_BillingCenter_PO {
 
+	
+
+
+	
+	
+	
+	
+
+	/*
+	 * BillingCenter Menu Options End
+	 * ------------------------------------------------------------------------------------------------------------------
+	 */
+	
+	
 	/*
 	 * search account information
 	 */
 
-	final By Actions_Button = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
-	final By NewAccount_Button = By.id("AccountsGroup-AccountsMenuActions-AccountsMenuActions_NewAccount");
-	final By NewPolicy_Button = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
 
 	final By AccountNumber = By.xpath("//input[contains(@name,'NewAccountDV-AccountNumber')]");
 	final By AccountName = By.xpath("//input[contains(@name,'NewAccountDV-AccountName')]");
@@ -112,7 +123,7 @@ public interface GW_BillingCenter_PO {
 	final By PaymentPlan = By.xpath("//select[contains(@name,'NewPolicyDV-PaymentPlan')]");
 
 	final By Next_Button = By.id("NewPolicyWizard-Next");
-	
+
 	final By PolicyAddCharges_Button = By.xpath("//div[contains(@id,'PolicyAddChargesLV_tb-Add')]");
 	final By PolicyAddChargesType = By.xpath("//select[contains(@name,'PolicyAddChargesLV-0-Type')]");
 	final By PolicyAddChargesAmount = By.xpath("//input[contains(@name,'PolicyAddChargesLV-0-Amount')]");
@@ -145,24 +156,19 @@ public interface GW_BillingCenter_PO {
 	final By AS_TotalValue = By
 			.xpath("//table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'TotalValue_Cell')]");
 
-	final By AS_HistoryLink = By.id("AccountGroup-MenuLinks-AccountGroup_AccountDetailHistory");
-	final By AS_InvoicesLink = By.id("AccountGroup-MenuLinks-AccountGroup_AccountDetailInvoices");
 
-	final By InvoiceHeader = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Invoice')]");
 
 	final By InvoiceDetails = By.xpath(
 			"//table[@class='gw-ListViewWidget--table gw-table']//tr[contains(@id,'DetailPanel-AccountInvoicesLV') and contains(@class,'listDetail')]");
 
-	void bc_SearchAccountInformation();
+	void bc_SearchAccountInformation() throws Throwable;
 
-	void bc_NewAccount();
+	void bc_NewAccount() throws Throwable;
 
-	void bc_NewPolicy();
+	void bc_NewPolicy() throws Throwable;
 
-	void bc_AccountSummary();
+	void bc_AccountSummary() throws Throwable;
 
-	void bc_MenuNavigation_AccountSummary(String strMenuOption);
-
-	void bc_AccountSummary_Invoices();
+	void bc_AccountSummary_Invoices() throws Throwable;
 
 }
