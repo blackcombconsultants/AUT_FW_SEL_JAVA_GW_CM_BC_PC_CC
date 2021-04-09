@@ -32,6 +32,11 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		GuidewireAutomate("Search", AccountTab_AccountNumberSearch, "click", "Null");
 	}
 
+	public void navigate_ClaimTab() throws Throwable {
+		GuidewireAutomate("ClaimTab", ClaimTab, "click", "Null");
+		GuidewireAutomate("ClaimTab_NewClaim", ClaimTab_NewClaim, "click", "Null");
+
+	}
 	/*
 	 * -------------------------------------------------------------- menuNavigation
 	 * --------------------------------------------------------------

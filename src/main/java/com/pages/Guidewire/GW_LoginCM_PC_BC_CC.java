@@ -37,7 +37,7 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 	public void logout_Guidewire() throws Throwable {
 		GuidewireAutomate("Setting", Setting, "click", "Null");
 		GuidewireAutomate("Logout", Logout, "click", "Null");
-
+		
 		oExtentTest.log(Status.PASS, "Logout is succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 

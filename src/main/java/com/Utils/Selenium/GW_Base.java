@@ -20,6 +20,12 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class GW_Base {
 
+	public static SimpleDateFormat sdf_ddMMMMyyyy = new SimpleDateFormat("ddMMMMyyyy");
+	public static SimpleDateFormat sdf_ddMMMMyyyyHHmmss = new SimpleDateFormat("ddMMMMyyyy HHmmss");
+
+	public static String strCurrentDate_ddMMMMyyyy = sdf_ddMMMMyyyy.format(new Date());
+	public static String strCurrentDate_ddMMMMyyyyHHmmss = sdf_ddMMMMyyyyHHmmss.format(new Date());
+
 	public static WebDriver driver;
 	public static EventFiringWebDriver efDriver;
 	public static JavascriptExecutor oJavascriptExecutor;
@@ -42,24 +48,19 @@ public class GW_Base {
 	public static String gstrOSname = System.getProperty("os.name");
 	public static String pConfigproperties = pUserdir + "/src/main/resources/Config.Properties";
 
-	public static String pFilePath = pUserdir + "\\testdata\\BillingCenter.xlsx";
+	public static String pScreenshots;
+	public static String pExtentReport_TodayFile;
+	public static String pExtentReport_indexFile;
+	public static String pTestDataFilePath;
 	public static String pFile_TestBreakTracker = pUserdir + "\\testdata\\TestBreakTracker.xlsx";
 
-	public static SimpleDateFormat sdf_ddMMMMyyyy = new SimpleDateFormat("ddMMMMyyyy");
-	public static SimpleDateFormat sdf_ddMMMMyyyyHHmmss = new SimpleDateFormat("ddMMMMyyyy HHmmss");
+	public static String strPolicyNumber = strCurrentDate_ddMMMMyyyyHHmmss;
+	public static String strAccountNumber = strCurrentDate_ddMMMMyyyy;
+	public static String strAccountName;
+	public static String strAmount;
 
-	public static String strCurrentDate_ddMMMMyyyy = sdf_ddMMMMyyyy.format(new Date());
-	public static String strCurrentDate_ddMMMMyyyyHHmmss = sdf_ddMMMMyyyyHHmmss.format(new Date());
-
-	public static String pScreenshots = pUserdir + "\\test-output\\Screenshots\\";
-
-	public static String pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\ExtentReport_"
-			+ strCurrentDate_ddMMMMyyyy + ".html";
-	public static String pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\index.html";
-
-	public String strPolicyNumber = strCurrentDate_ddMMMMyyyyHHmmss;
-	public String strAccountNumber;
-	public String strAccountName;
-	public String strAmount;
+	public static String url;
+	public static String StrBrowser;
+	public static String strGW_Application;
 
 }

@@ -1,19 +1,14 @@
 package com.pages.Guidewire.PolicyCenter;
 
-import java.util.Date;
-
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.aventstack.extentreports.ExtentTest;
-import com.pages.Guidewire.*;
-import com.pages.Guidewire.PolicyCenter.*;
-
 import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
 
 public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implements GW_PolicyCenter_PO {
 
-	String strAccountName = null;
+	String strAccountName;
 	
 	public GW_PolicyCenter_Resuables(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
@@ -39,19 +34,19 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 			break;
 
 		case "Quote":
-			GuidewireAutomate("Search_Button", Search_Button, "click", "");
+			GuidewireAutomate("Search_Button", Quote_Button, "click", "");
 			break;
 
 		case "SaveDraft":
-			GuidewireAutomate("Search_Button", Search_Button, "click", "");
+			GuidewireAutomate("Search_Button", SaveDraft_Button, "click", "");
 			break;
 
 		case "Version":
-			GuidewireAutomate("Search_Button", Search_Button, "click", "");
+			GuidewireAutomate("Search_Button", Version_Button, "click", "");
 			break;
 
 		case "Closeoptions":
-			GuidewireAutomate("Search_Button", Search_Button, "click", "");
+			GuidewireAutomate("Search_Button", Closeoptions_Button, "click", "");
 			break;
 
 		default:
@@ -105,14 +100,14 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 	public void pc_CreatePersonAccount() throws Throwable {
 		GuidewireAutomate("CreateNewAccount_Button", CreateNewAccount_Button, "click", "");
 		GuidewireAutomate("CNA_Person_Button", CNA_Person_Button, "click", "");
-
+		GuidewireAutomate_Validation("Create account", GW_PolicyCenter_Resuables.CreateAccount_Header, "equals", "Create account");
 		GuidewireAutomate("First Name", firstname, "sendkeys", "QA");
 		GuidewireAutomate("Last Name", lastname, "sendkeys", "Automation");
 
-		GuidewireAutomate("homephone", homephone, "sendkeys", "999111000");
-		GuidewireAutomate("workphone", workphone, "sendkeys", "881110001");
-		GuidewireAutomate("mobilephone", mobilephone, "sendkeys", "7771110001");
-		GuidewireAutomate("faxphone", faxphone, "sendkeys", "6661110001");
+		GuidewireAutomate("homephone", homephone, "sendkeys", "2015551002");
+		GuidewireAutomate("workphone", workphone, "sendkeys", "2015551003");
+		GuidewireAutomate("mobilephone", mobilephone, "sendkeys", "2015551004");
+		GuidewireAutomate("faxphone", faxphone, "sendkeys", "2015551005");
 		GuidewireAutomate("primaryphone", primaryphone, "selectByVisibleText", "Work");
 
 		GuidewireAutomate("primaryEmail", primaryEmail, "sendkeys", "test123@gmail.com");
@@ -247,7 +242,7 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		// GuidewireAutomate("SeaerchButton", OrganizationName_SeaerchButton, "click",
 		// "");
 
-		GuidewireAutomate("Producer Code", ProducerCode, "selectByVisibleText", "501-002552 Allrisk Insurance");
+		GuidewireAutomate("Producer Code", ProducerCode, "selectByVisibleText", "301-008578 ACV Property Insurance");
 
 		GuidewireAutomate("Quote Type", QuoteType, "selectByVisibleText", "Full Application");
 		GuidewireAutomate("Default Base State", DefaultBaseState, "selectByVisibleText", "Ohio");
@@ -255,5 +250,25 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		// "04072021");
 
 	}
+
+	@Override
+	public void pc_LOB_Forms() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Payment() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Payment_change() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 }

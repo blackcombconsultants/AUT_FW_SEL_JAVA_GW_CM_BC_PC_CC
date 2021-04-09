@@ -10,6 +10,7 @@
 	<test thread-count="1" parallel="methods" name="Test">
 		<classes>
 			<class name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation" />
+			<class name="com.Test.Guidewire.PolicyCenter.GW_PC_NewSubmission" />
 		</classes>
 	</test> <!-- Test -->
 
