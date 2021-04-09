@@ -6,6 +6,7 @@ public interface BasicInformation_PO {
 
 	final By basicInfoName = By
 			.id("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-ReportedBy_Name-ReportedBy_NameMenuIcon");
+	final By basicInfo_screen_tittlebar=By.id("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-ttlBar");
 	final By clickNewPerson = By.id(
 			"FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-ReportedBy_Name-ClaimNewPersonOnlyPickerMenuItemSet-ClaimNewPersonOnlyPickerMenuItemSet_NewPersonMenuItem");
 	final By firstName = By.name(
@@ -30,6 +31,7 @@ public interface BasicInformation_PO {
 	final By relationShipToInsured = By
 			.name("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-Claim_ReportedByType");
 	final By insuredWorkersName = By.name("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-ReportedBy_Name");
+	final By involvedVehicleCheckBox=By.xpath("//div[contains(@id,'InsuredVehicleInputGroup-_checkbox')]");
 	final By next = By.id("FNOLWizard-Next");
 	final By dupButton = By
 			.id("NewClaimDuplicatesWorksheet-NewClaimDuplicatesScreen-NewClaimDuplicatesWorksheet_CloseButton");

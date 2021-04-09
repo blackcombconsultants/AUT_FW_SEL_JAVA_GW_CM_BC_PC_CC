@@ -20,25 +20,32 @@ public class GW_CC_AddClaimInformation extends SeleniumWebDriver_Commands implem
 	public void addClaimInfo() throws Throwable {
 
 		lhm_Data = getDataFromSheet_Fillo("addClaimInfo", "Scenario 1");
-
-		GuidewireAutomate("description", description, "sendkeys", lhm_Data.get("Description"));
-		GuidewireAutomate("dateOfEmployerNotified", dateOfEmployerNotified, "sendkeys",
-				lhm_Data.get("Date Employer Notified"));
-		GuidewireAutomate("locationlistbox", location, "selectByVisibleText", lhm_Data.get("Location"));
-		GuidewireAutomate("injuryDescription", injuryDescription, "sendkeys", lhm_Data.get("Injury Description"));
-		GuidewireAutomate("injury", injury, "click", "");
-		GuidewireAutomate("causeOfInjury", causeOfInjury, "selectByVisibleText",
-				lhm_Data.get("Cause of Injury / Source"));
-		GuidewireAutomate("detailedInjury", detailedInjury, "selectByVisibleText",
-				lhm_Data.get("Detailed Injury Type"));
-		GuidewireAutomate("medicalAttention", medicalAttention, "click", "");
-		GuidewireAutomate("areaOfBody", areaOfBody, "selectByVisibleText", lhm_Data.get("Area of Body"));
-		GuidewireAutomate("bodyPart", bodyPart, "selectByVisibleText", lhm_Data.get("Body Part"));
-		GuidewireAutomate("ppdPercentage", ppdPercentage, "sendkeys", lhm_Data.get("PPD Percentage"));
-		GuidewireAutomate("lostTimeFromWork", lostTimeFromWork, "click", "");
-		GuidewireAutomate("testClickTop", testClickTop, "click", "");
-		GuidewireAutomate("next", next, "click", "");
+		GuidewireAutomate_Validation("addClaimInfoScreen", addClaimInfo_screen_tittlebar, "equals", "Step 3 of 5: Add claim information");
+		GuidewireAutomate("description", description, "sendkeys",lhm_Data.get("Description"));
+		GuidewireAutomate("losscause", losscause, "selectByVisibleText",lhm_Data.get("Loss Cause"));
+		GuidewireAutomate("location", location, "selectByIndex",lhm_Data.get("Location"));
+		GuidewireAutomate("next",next,"click","");
 
 	}
+
+	@Override
+	public void services() throws Throwable {
+		
+		GuidewireAutomate_Validation("servicesScreen_titlebar",services_screen_tittlebar, "equals", "Step 4 of 5: Services");
+		GuidewireAutomate("next",next,"click","");
+		
+	}
+
+	@Override
+	public void saveandAssign() throws Throwable {
+		GuidewireAutomate_Validation("saveandassignscreen_titlebar",saveandassign_screen_tittlebar, "equals", "Step 5 of 5: Save and Assign Claim");
+		GuidewireAutomate("finish",finish,"click","");
+	} 
+	
+	
+	
+	
+	
+	
 
 }
