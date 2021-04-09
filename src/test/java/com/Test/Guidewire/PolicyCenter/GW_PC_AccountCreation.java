@@ -13,7 +13,7 @@ import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables;
 public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	//
-	@Test
+	@Test(enabled = false)
 	public void pc_SearchAccountInformation() throws Throwable {
 
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
@@ -54,7 +54,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void pc_CreateCompanyAccount() throws Throwable {
 		strAccountName = sdf_ddMMMMyyyyHHmmss.format(new Date());
 

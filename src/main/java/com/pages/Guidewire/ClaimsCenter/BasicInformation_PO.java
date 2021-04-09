@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 public interface BasicInformation_PO {
 
 	final By basicInfoName = By
-			.id("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-ReportedBy_Name-ReportedBy_NameMenuIcon");
+			.id("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-ReportedBy_Name-ReportedBy_NameMenuIcon");
 	final By clickNewPerson = By.id(
-			"FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-ReportedBy_Name-ClaimNewPersonOnlyPickerMenuItemSet-ClaimNewPersonOnlyPickerMenuItemSet_NewPersonMenuItem");
+			"FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-ReportedBy_Name-ClaimNewPersonOnlyPickerMenuItemSet-ClaimNewPersonOnlyPickerMenuItemSet_NewPersonMenuItem");
 	final By firstName = By.name(
 			"NewContactPopup-ContactDetailScreen-ContactBasicsDV-PersonNameInputSet-GlobalPersonNameInputSet-FirstName");
 	final By lastName = By.name(
@@ -28,8 +28,8 @@ public interface BasicInformation_PO {
 	final By update = By.xpath(
 			"//*[@id='NewContactPopup-ContactDetailScreen-ContactBasicsDV_tb-ContactDetailToolbarButtonSet-CustomUpdateButton']/div/div[2]");
 	final By relationShipToInsured = By
-			.name("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-Claim_ReportedByType");
-	final By insuredWorkersName = By.name("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-Claimant_Name");
+			.name("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-Claim_ReportedByType");
+	final By insuredWorkersName = By.name("FNOLWizard-FullWizardStepSet-FNOLWizard_BasicInfoScreen-PanelRow-BasicInfoDetailViewPanelDV-ReportedBy_Name");
 	final By next = By.id("FNOLWizard-Next");
 	final By dupButton = By
 			.id("NewClaimDuplicatesWorksheet-NewClaimDuplicatesScreen-NewClaimDuplicatesWorksheet_CloseButton");

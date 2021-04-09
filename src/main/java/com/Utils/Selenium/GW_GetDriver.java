@@ -21,33 +21,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GW_GetDriver extends Selenium_Reporting {
 
-	String url;
-	String StrBrowser;
-	String strGW_Application;
 
 	public WebDriver getDriver() throws Throwable {
 
 		try {
-
-			Selenium_Utils_File oGetFile = new Selenium_Utils_File();
-
-			StrBrowser = oGetFile.getValue_PropertiesFile(pConfigproperties, "Browser");
-			strGW_Application = oGetFile.getValue_PropertiesFile(pConfigproperties, "GW_Application");
-
-			switch (strGW_Application) {
-			case "BillingCenter":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BillingCenter");
-				break;
-			case "PolicyCenter":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "ClaimsCenter":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ClaimsCenter");
-				break;
-			default:
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContacttManagement");
-				break;
-			}
 
 			switch (StrBrowser) {
 			case "CHROME":

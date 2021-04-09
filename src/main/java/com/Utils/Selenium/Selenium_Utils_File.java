@@ -46,7 +46,7 @@ public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 		LinkedHashMap<String, String> lhmTestDataSheet = new LinkedHashMap<String, String>();
 
 		Fillo oFillo = new Fillo();
-		Connection oConnection = oFillo.getConnection(pFilePath);
+		Connection oConnection = oFillo.getConnection(pTestDataFilePath);
 
 		String strQuery = "Select * from " + strSheetName + " where PrimaryKey='" + strPrimaryKeyValue + "'";
 		System.out.println("strQuery = " + strQuery);

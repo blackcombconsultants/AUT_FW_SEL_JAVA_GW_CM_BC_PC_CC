@@ -9,7 +9,7 @@
 
 	<test thread-count="1" parallel="methods" name="Test">
 		<classes>
-			<class name="com.Test.Guidewire.PolicyCenter.GW_CC_CreateClaim" />
+			<class name="com.Test.Guidewire.ClaimsCenter.GW_CC_CreateClaim" />
 		</classes>
 	</test> <!-- Test -->
 
