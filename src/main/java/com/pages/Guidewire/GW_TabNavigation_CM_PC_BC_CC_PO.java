@@ -5,11 +5,12 @@ import org.openqa.selenium.By;
 public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 
 	/*
-	 * ------------------------------------------------------------------------------------------------------------------------
-	 * Policy Center Tabs
-	 * ------------------------------------------------------------------------------------------------------------------------
+	 * -----------------------------------------------------------------------------
+	 * ------------------------------------------- Policy Center Tabs
+	 * -----------------------------------------------------------------------------
+	 * -------------------------------------------
 	 */
-	
+
 	/*
 	 * Desktop Tab
 	 */
@@ -80,42 +81,37 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By AdministrationTab_MySubmission = By.id("TabBar-AccountTab-AdministrationTab_NewAccount");
 	final By AdministrationTab_MyRenewals = By.id("TabBar-AdministrationTab-AdministrationTab_NewAccount");
 
-	
 	/*
-	 * Page Headers - Policy Center 
+	 * Page Headers - Policy Center
 	 */
-	
 
 	final By EnterAccountInformation = By
 			.xpath("//div[contains(@id,'NewAccountScreen-ttlBar')]//div[text()='Enter Account Information']");
-	
+
 	final By AccountSummary = By
 			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Account Summary']");
 
 	final By AccountSummary_Name = By
 			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[contains(text(),'Account Summary')]");
 
-	final By Producer_Header = By
-			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Producer')]");
+	final By Producer_Header = By.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Producer')]");
 
-	final By NewSubmission_Header = By
-			.xpath("//div[contains(@id,'Screen-ttlBar')]//div[text()='New Submissions']");
+	final By NewSubmission_Header = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[text()='New Submissions']");
 
-
-	
 	/*
-	 * ------------------------------------------------------------------------------------------------------------------------
-	 * Billing Center Tabs
-	 * ------------------------------------------------------------------------------------------------------------------------
+	 * -----------------------------------------------------------------------------
+	 * ------------------------------------------- Billing Center Tabs
+	 * -----------------------------------------------------------------------------
+	 * -------------------------------------------
 	 */
 
-	
 	/*
-	 *  Menu Options
-	 * ------------------------------------------------------------------------------------------------------------------
+	 * Menu Options
+	 * -----------------------------------------------------------------------------
+	 * -------------------------------------
 	 */
 	final By Menu_Actions = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
-	
+
 	final By Actions_NewAccount = By.id("AccountsGroup-AccountsMenuActions-AccountsMenuActions_NewAccount");
 	final By Actions_NewPolicy = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
 	final By Actions_NewSubmission = By.xpath(
@@ -125,29 +121,31 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By AS_InvoicesLink = By.id("AccountGroup-MenuLinks-AccountGroup_AccountDetailInvoices");
 
 	final By InvoiceHeader = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Invoice')]");
-	
+
 	/*
-	 * Page Headers - Billing Center 
+	 * Page Headers - Billing Center
 	 */
-	
+
 	/*
-	 * ------------------------------------------------------------------------------------------------------------------------
-	 * Claims Center Tabs
-	 * ------------------------------------------------------------------------------------------------------------------------
+	 * -----------------------------------------------------------------------------
+	 * ------------------------------------------- Claims Center Tabs
+	 * -----------------------------------------------------------------------------
+	 * -------------------------------------------
 	 */
-	
+	final By ClaimTab = By.xpath("//div[@id='TabBar-ClaimTab']//div[3]");
+	final By ClaimTab_NewClaim = By.xpath("//div[text()='New Claim']");
+
 	/*
-	 * Page Headers - Claims Center 
+	 * Page Headers - Claims Center
 	 */
-	
-	
-	
+
 	/*
-	 * ------------------------------------------------------------------------------------------------------------------------
-	 * Conact Management Tabs
-	 * ------------------------------------------------------------------------------------------------------------------------
+	 * -----------------------------------------------------------------------------
+	 * ------------------------------------------- Conact Management Tabs
+	 * -----------------------------------------------------------------------------
+	 * -------------------------------------------
 	 */
-	
+
 	void gwContactManagement_TabNavigation(String Tab) throws Throwable;
 
 	void gwPolicyCenter_TabNavigation(String Tab) throws Throwable;
@@ -155,7 +153,7 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	void gwBillingCenter_TabNavigation(String Tab) throws Throwable;
 
 	void gwClaimsCenter_TabNavigation(String Tab) throws Throwable;
-	
+
 	void gwContactManagement_MenuNavigation(String strMenuOption) throws Throwable;
 
 	void gwPolicyCenter_MenuNavigation(String Menu) throws Throwable;
@@ -163,9 +161,5 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	void gwBillingCenter_MenuNavigation(String Menu) throws Throwable;
 
 	void gwClaimsCenter_MenuNavigation(String Menu) throws Throwable;
-	
 
-	
-	
-	
 }

@@ -16,16 +16,15 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 
 	public void onTestStart(ITestResult result) {
 		try {
+
 			GW_GetDriver a = new GW_GetDriver();
 			Selenium_Utils_Executables se = new Selenium_Utils_Executables();
-			Selenium_Utils_File f = new Selenium_Utils_File();
-			
+
 			oExtentTest = oExtentReports.createTest(result.getMethod().getMethodName());
 			driver = a.getDriver();
-		} catch (Exception e) {
-			e.printStackTrace();
 		} catch (Throwable e) {
 			e.printStackTrace();
+
 		}
 
 	}
@@ -43,7 +42,8 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 				MarkupHelper.createLabel(result.getMethod().getMethodName() + " Test Case Failed", ExtentColor.RED));
 		oExtentTest.log(Status.FAIL, result.getThrowable());
 		try {
-			oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest
+					.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -61,11 +61,51 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 
 	public void onStart(ITestContext context) {
 		System.out.println("onStart");
+		Selenium_Utils_File oGetFile = new Selenium_Utils_File();
 
 		try {
+
+			StrBrowser = oGetFile.getValue_PropertiesFile(pConfigproperties, "Browser");
+
+			strGW_Application = oGetFile.getValue_PropertiesFile(pConfigproperties, "GW_Application");
+
+			switch (strGW_Application) {
+			case "BillingCenter":
+				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BillingCenter");
+				pTestDataFilePath = pUserdir + "\\testdata\\BillingCenter.xlsx";
+				pScreenshots = pUserdir + "\\test-output\\Screenshots\\BillingCenter\\";
+				pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\BillingCenter\\index.html";
+				pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\BillingCenter\\ExtentReport_"
+						+ strCurrentDate_ddMMMMyyyy + ".html";
+				break;
+			case "PolicyCenter":
+				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+				pTestDataFilePath = pUserdir + "\\testdata\\PolicyCenter.xlsx";
+				pScreenshots = pUserdir + "\\test-output\\Screenshots\\PolicyCenter\\";
+				pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\PolicyCenter\\index.html";
+				pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\PolicyCenter\\ExtentReport_"
+						+ strCurrentDate_ddMMMMyyyy + ".html";
+				break;
+			case "ClaimsCenter":
+				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ClaimsCenter");
+				pTestDataFilePath = pUserdir + "\\testdata\\ClaimsCenter.xlsx";
+				pScreenshots = pUserdir + "\\test-output\\Screenshots\\ClaimsCenter\\";
+				pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\ClaimsCenter\\index.html";
+				pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\ClaimsCenter\\ExtentReport_"
+						+ strCurrentDate_ddMMMMyyyy + ".html";
+				break;
+			case "ContactManagement":
+				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
+				pTestDataFilePath = pUserdir + "\\testdata\\ContactManagement.xlsx";
+				pScreenshots = pUserdir + "\\test-output\\Screenshots\\ContactManagement\\";
+				pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\ContactManagement\\index.html";
+				pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\ContactManagement\\ExtentReport_"
+						+ strCurrentDate_ddMMMMyyyy + ".html";
+				break;
+			}
 			oExtentReports = Selenium_Reporting.getExtentReports();
 
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			e.printStackTrace();
 
 		}

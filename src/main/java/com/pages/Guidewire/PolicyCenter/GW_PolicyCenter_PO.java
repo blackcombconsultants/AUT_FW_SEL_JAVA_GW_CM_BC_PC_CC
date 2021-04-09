@@ -4,7 +4,27 @@ import org.openqa.selenium.By;
 
 public interface GW_PolicyCenter_PO {
 
+	/*
+	 * Tool Bar Buttons
+	 */
 	final By Next_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Next')]");
+	final By Quote_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Quote')]");
+	final By SaveDraft_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Save Draft')]");
+	final By Version_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Version')]");
+	final By Closeoptions_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Close options')]");
+	final By Bindoptions_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
+	final By Bindoptions_Issue_Button = By
+			.xpath("//div[contains(@id,'BindOptions')]//div[3]//div[contains(@id,'BindAndIssue')]");
+
+	final By Quote_New_Submission = By.xpath("//div[contains(@id,'QuoteTypeToolbarButtonSet-Quote')]");
+	final By Payment_Screen_Billing_Method = By.xpath("//div[contains(@id,'BillingPanel-BillingMethod')]");
+	final By Payment_Schedule_Monthly_Schedule = By.xpath("//div[contains(@id,'5-InstallmentPlan_radio')]");
+	final By Bind_Options_Button = By.xpath("//div[contains(@id,'BindOptions')]");
+	final By Bind_Options_Issue_Policy = By
+			.xpath("//div[contains(@id,'BindOptions')]//div[3]//div[contains(@id,'BindAndIssue')]");
+
+	final By Update_Button = By.xpath("//div[contains(@id,'Update')]");
+
 	final By Account_Tab_Dropdown = By.xpath("//div[@id='TabBar-AccountTab']//div[3]");
 	final By Account_Tab_Search = By.xpath("//input[@name='TabBar-AccountTab-AccountTab_AccountNumberSearchItem']");
 	final By Account_Tab_Search_Button = By
@@ -12,12 +32,7 @@ public interface GW_PolicyCenter_PO {
 	final By Account_Actions_Menu = By.xpath("//div[@id='AccountFile-AccountFileMenuActions']");
 	final By Account_Actions_NewSubmission = By.xpath(
 			"//div[@id=\"AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewSubmission\"]");
-	final By Quote_New_Submission = By.xpath("//div[contains(@id,'QuoteTypeToolbarButtonSet-Quote')]");
-	final By Payment_Screen_Billing_Method = By.xpath("//div[contains(@id,'BillingPanel-BillingMethod')]");
-	final By Payment_Schedule_Monthly_Schedule = By.xpath("//div[contains(@id,'5-InstallmentPlan_radio')]");
-	final By Bind_Options_Button = By.xpath("//div[contains(@id,'BindOptions')]");
-	final By Bind_Options_Issue_Policy = By
-			.xpath("//div[contains(@id,'BindOptions')]//div[3]//div[contains(@id,'BindAndIssue')]");
+
 	/*
 	 * search account information
 	 */
@@ -93,18 +108,18 @@ public interface GW_PolicyCenter_PO {
 	final By SearchAccountResults_Msg = By.xpath("//div[@id='NewAccount-NewAccountScreen-_msgs-0']");
 	final By SearchResults = By.xpath("//table[@class='gw-ListViewWidget--table gw-table']");
 	final By Select_SearchResult = By.xpath("//div[contains(@id,'SearchResultsLV-0')]/div[@role='button']");
-	
+
 	/*
 	 * NewAccount
 	 */
 	final By CreateNewAccount_Button = By.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton']");
+	final By CreateAccount_Header = By
+			.xpath("//div[@class='gw-TitleBar--title' and contains(text(),'Create account')]");
 
 	final By CNA_Person_Button = By
 			.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Person']");
 	final By CNA_Company_Button = By.xpath("//div[text()='Company']");
 	final By CNA_FromAddressBook_Button = By.xpath("//div[text()='From Address Book']");
-
-	final By Update_Button = By.xpath("//div[contains(@id,'Update')]");
 
 	String strReplace = null;
 
@@ -154,10 +169,15 @@ public interface GW_PolicyCenter_PO {
 	final By Add_Driver_to_Vehicles_Button = By.xpath("//div[contains(@id,'DriverPctLV_tb-AddDriver')]");
 	final By Cost_New = By.xpath("//input[contains(@name,'VehicleDV-CostNew_DV')]");
 
-	void pc_SearchAccountInformation(String strAccountName)throws Throwable;
+	void pc_SearchAccountInformation(String strAccountName) throws Throwable;
 
 	void pc_CreatePersonAccount() throws Throwable;
 
 	void pc_CreateCompanyAccount() throws Throwable;
 
+	void pc_LOB_Forms();
+
+	void Payment();
+
+	void Payment_change();
 }
