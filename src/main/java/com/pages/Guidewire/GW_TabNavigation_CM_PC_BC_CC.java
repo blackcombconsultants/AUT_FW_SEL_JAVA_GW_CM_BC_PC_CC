@@ -56,6 +56,9 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 			break;
 
 		default:
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
 			break;
 		}
 	}
@@ -74,6 +77,9 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 			break;
 
 		default:
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
 	}
@@ -88,6 +94,9 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 			navigate_AccountTab_AccountNumberSearch(Tab);
 			break;
 		default:
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
 			break;
 		}
 	}
@@ -115,6 +124,9 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 
 			break;
 		default:
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
 	}
@@ -122,24 +134,17 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 	@Override
 	public void gwBillingCenter_TabNavigation(String Tab) throws Throwable {
 
-		try {
+		switch (Tab) {
 
-			switch (Tab) {
+		case "Account":
+			navigate_AccountTab();
+			break;
 
-			case "Account":
-				navigate_AccountTab();
-				break;
-
-			default:
-				break;
-			}
-
+		default:
 			oExtentTest.addScreenCaptureFromPath(
 					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to New Account is succesful");
-
-		} catch (Exception e) {
-			e.printStackTrace();
+			oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
+			break;
 		}
 
 	}
@@ -170,14 +175,17 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		case "z":
 
 		default:
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
 
 	}
 
 	@Override
-	public void gwClaimsCenter_MenuNavigation(String strMenuOption) throws Throwable {
-		switch (strMenuOption) {
+	public void gwClaimsCenter_MenuNavigation(String Menu) throws Throwable {
+		switch (Menu) {
 
 		case "x":
 			break;
@@ -189,14 +197,25 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 			break;
 
 		default:
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
 	}
 
 	@Override
 	public void gwClaimsCenter_TabNavigation(String Tab) throws Throwable {
-		// TODO Auto-generated method stub
-
+		switch (Tab) {
+		case "NewClaim":
+			navigate_ClaimTab();
+			break;
+		default:
+			oExtentTest.addScreenCaptureFromPath(
+					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+			oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
+			break;
+		}
 	}
 
 }
