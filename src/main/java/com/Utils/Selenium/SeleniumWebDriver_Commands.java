@@ -62,6 +62,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				new Select(oWebElement).selectByVisibleText(strValue);
 
 				break;
+			case "selectByIndex":
+				new Select(oWebElement).selectByIndex(0);
+
+				break;
 			case "click":
 				oWebElement.click();
 				break;
@@ -272,10 +276,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			switch (strValidation) {
 
 			case "equals":
-				bValidation = getText_Element(Locator).equalsIgnoreCase(Expected);
+				bValidation = getElement_Property(Locator,"getText","").equalsIgnoreCase(Expected);
 				break;
 			case "contains":
-				bValidation = getText_Element(Locator).contains(Expected);
+				bValidation = getElement_Property(Locator,"getText","").contains(Expected);
 				break;
 			case "isEmpty":
 				bValidation = ElementName.isEmpty();
@@ -342,9 +346,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			// oExtentTest.log(Status.INFO, LogMsg);
 
 		} catch (Exception e) {
+			oWebElement = null;
+
 			LogMsg = "Element not found ";
 			oExtentTest.log(Status.FAIL, LogMsg);
-			oWebElement = null;
 			e.printStackTrace();
 			throw e;
 
@@ -353,60 +358,29 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		return oWebElement;
 	}
 
-	public int getSize_ElementsList(By Locator) {
-		List<WebElement> Temp = driver.findElements(Locator);
-		return Temp.size() - 1;
-	}
 
-	public String getText_Element(By Locator) throws Throwable {
-		return getElement(Locator).getText();
-	}
 
-	public String getText_ElementWait(By Locator) throws Throwable {
-		WebElement we = getElement(Locator);
-		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));
-		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", we);
+	public String getElement_Property(By Locator, String Property, String PropertyName) throws Throwable {
+		switch (Property) {
 
-		String stetemp = we.getText();
-		System.out.println(stetemp);
-		oExtentTest.log(Status.INFO, stetemp);
-		return stetemp;
-	}
-
-	public void scrollUpToElement(WebElement element) {
-
-		oJavascriptExecutor.executeScript("window.scrollBy(0,0)");
-		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", element);
-
-	}
-
-	public void gwAssertEquals(By Locator, String strExpected) throws Throwable {
-		String strActual = getText_Element(Locator);
-		LogMsg = "Actual Value = [" + strActual + "] 	Expected Value = [" + strActual + "]";
-		System.out.println(LogMsg);
-		Assert.assertEquals(strActual, strExpected);
-
-		if (strActual.equalsIgnoreCase(strExpected)) {
-			oExtentTest.log(Status.PASS, LogMsg);
-		} else {
-			oExtentTest.log(Status.FAIL, LogMsg);
-			throw new Exception(LogMsg);
+		case "getAttribute":
+			strValue = getElement(Locator).getAttribute(PropertyName);
+		case "getCssValue":
+			strValue = getElement(Locator).getCssValue(PropertyName);
+		case "getTagName":
+			strValue = getElement(Locator).getTagName();
+		case "getText":
+			strValue = getElement(Locator).getText();
+		case "getSize":
+			strValue = getElement(Locator).getSize().toString();
+		default:
+			break;
 		}
+		return strValue;
+
 	}
 
-	public void gwVerifyEquals(By Locator, String strExpected) throws Throwable {
-		String strActual = getText_Element(Locator);
-		LogMsg = "Actual Value = [" + strActual + "] 	Expected Value = [" + strActual + "]";
-		System.out.println(LogMsg);
-		Verify.verify(true, strActual, 0);
-
-		if (strActual.equalsIgnoreCase(strExpected)) {
-			oExtentTest.log(Status.PASS, LogMsg);
-		} else {
-			oExtentTest.log(Status.FAIL, LogMsg);
-			throw new Exception(LogMsg);
-		}
-	}
+	
 
 	public static void robotkey() throws AWTException {
 		Robot robot = new Robot();
@@ -496,6 +470,65 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 		System.out.println("No. of tabs: " + tabs.size());
 
+	}
+
+	
+	/*
+	 * Not Required
+	 */
+	public int getSize_ElementsList(By Locator) {
+		List<WebElement> Temp = driver.findElements(Locator);
+		return Temp.size() - 1;
+	}
+
+	public String getText_Element(By Locator) throws Throwable {
+		return getElement(Locator).getText();
+	}
+	
+	public String getText_ElementWait(By Locator) throws Throwable {
+		WebElement we = getElement(Locator);
+		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));
+		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", we);
+
+		String stetemp = we.getText();
+		System.out.println(stetemp);
+		oExtentTest.log(Status.INFO, stetemp);
+		return stetemp;
+	}
+
+	public void scrollUpToElement(WebElement element) {
+
+		oJavascriptExecutor.executeScript("window.scrollBy(0,0)");
+		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", element);
+
+	}
+
+	public void gwAssertEquals(By Locator, String strExpected) throws Throwable {
+		String strActual = getText_Element(Locator);
+		LogMsg = "Actual Value = [" + strActual + "] 	Expected Value = [" + strActual + "]";
+		System.out.println(LogMsg);
+		Assert.assertEquals(strActual, strExpected);
+
+		if (strActual.equalsIgnoreCase(strExpected)) {
+			oExtentTest.log(Status.PASS, LogMsg);
+		} else {
+			oExtentTest.log(Status.FAIL, LogMsg);
+			throw new Exception(LogMsg);
+		}
+	}
+
+	public void gwVerifyEquals(By Locator, String strExpected) throws Throwable {
+		String strActual = getText_Element(Locator);
+		LogMsg = "Actual Value = [" + strActual + "] 	Expected Value = [" + strActual + "]";
+		System.out.println(LogMsg);
+		Verify.verify(true, strActual, 0);
+
+		if (strActual.equalsIgnoreCase(strExpected)) {
+			oExtentTest.log(Status.PASS, LogMsg);
+		} else {
+			oExtentTest.log(Status.FAIL, LogMsg);
+			throw new Exception(LogMsg);
+		}
 	}
 
 	public static void waitForElementPresent(WebElement Element) {

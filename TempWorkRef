@@ -1,4 +1,22 @@
 
+
+
+		GuidewireAutomate_waitForElement(Update_Button, "visibilityOf", "NA");
+		GuidewireAutomate_waitForElement(Select_SearchResult, "elementToBeSelected", "NA");
+		GuidewireAutomate("addresstype", addresstype, "selectByVisibleText", lhm_Data.get("TD_Addresstype"));
+		GuidewireAutomate("Organization Name", OS_OrganizationName, "sendkeys",  lhm_Data.get("TD_OrganizationName"));
+		GuidewireAutomate("NewAccount", NewAccount, "moveToElement", "NA");
+		GuidewireAutomate_waitForElement(Select_SearchResult, "elementToBeClickable", "NA");
+		GuidewireAutomate("Search_Button", Search_Button, "click", "NA");
+		GuidewireAutomate_Validation("Account Summary", GW_TabNavigation_CM_PC_BC_CC.AccountSummary_Name, "contains", "ScreenName");
+		GuidewireAutomate_Validation("Producer Status", ProducerStatus, "equals", "Active");	
+		GuidewireAutomate_Handle("alertaccept", ""); 
+		GuidewireAutomate_Handle("alertdismisst", ""); 
+		GuidewireAutomate_Handle("childwindow", "<<childwindowid>>");
+		GuidewireAutomate_Handle("parentwindow", "<<parentwindowid>>");
+		
+		
+		
 http://198.19.93.113:9191/
 http://localhost:9191/
 
