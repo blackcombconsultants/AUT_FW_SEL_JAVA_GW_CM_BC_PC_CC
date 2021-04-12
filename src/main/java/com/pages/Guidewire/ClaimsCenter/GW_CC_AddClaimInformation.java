@@ -24,14 +24,14 @@ public class GW_CC_AddClaimInformation extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate("description", description, "sendkeys",lhm_Data.get("Description"));
 		GuidewireAutomate("losscause", losscause, "selectByVisibleText",lhm_Data.get("Loss Cause"));
 		GuidewireAutomate("location", location, "selectByIndex",lhm_Data.get("Location"));
-		GuidewireAutomate("next",next,"click","");
-
+		GuidewireAutomate("next", next, "click", "");
 	}
 
 	@Override
 	public void services() throws Throwable {
 		
 		GuidewireAutomate_Validation("servicesScreen_titlebar",services_screen_tittlebar, "equals", "Step 4 of 5: Services");
+		Thread.sleep(1000);
 		GuidewireAutomate("next",next,"click","");
 		
 	}
@@ -39,6 +39,7 @@ public class GW_CC_AddClaimInformation extends SeleniumWebDriver_Commands implem
 	@Override
 	public void saveandAssign() throws Throwable {
 		GuidewireAutomate_Validation("saveandassignscreen_titlebar",saveandassign_screen_tittlebar, "equals", "Step 5 of 5: Save and Assign Claim");
+		Thread.sleep(1000);
 		GuidewireAutomate("finish",finish,"click","");
 	} 
 	

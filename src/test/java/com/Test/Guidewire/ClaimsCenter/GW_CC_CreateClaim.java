@@ -1,10 +1,8 @@
 package com.Test.Guidewire.ClaimsCenter;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
-import com.aventstack.extentreports.ExtentTest;
 import com.pages.Guidewire.GW_LoginCM_PC_BC_CC;
 import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
 import com.pages.Guidewire.ClaimsCenter.GW_CC_AddClaimInformation;
@@ -15,7 +13,7 @@ public class GW_CC_CreateClaim extends GW_GetDriver {
  
 	
 	@Test
-	public void createClaim() throws Throwable {
+	 public void createClaim() throws Throwable {
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
 		GW_TabNavigation_CM_PC_BC_CC mn = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
 		GW_CC_SearchPolicy gs=new GW_CC_SearchPolicy(driver, oExtentTest);

@@ -18,7 +18,7 @@ public class GW_CC_BasicInformation extends SeleniumWebDriver_Commands implement
 	public void basicInfo() throws Throwable {
 
 		lhm_Data = getDataFromSheet_Fillo("basicInfo", "Scenario 1");
-		GuidewireAutomate_Validation("basicInfo", basicInfo_screen_tittlebar, "equals", "Step 2 of 5: Basic information");
+		//GuidewireAutomate_Validation("basicInfo", basicInfo_screen_tittlebar, "equals", "Step 2 of 5: Basic information");
 		GuidewireAutomate("basicInfoName", basicInfoName, "click", "");
 		GuidewireAutomate("clickNewPerson", clickNewPerson, "click", "");
 		GuidewireAutomate("firstName", firstName, "sendkeys", lhm_Data.get("First Name"));
