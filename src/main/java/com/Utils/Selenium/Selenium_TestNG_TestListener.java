@@ -15,13 +15,22 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 public class Selenium_TestNG_TestListener extends GW_Base implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
+
 		try {
 
-			GW_GetDriver a = new GW_GetDriver();
-			Selenium_Utils_Executables se = new Selenium_Utils_Executables();
+			GW_GetDriver oDriver = new GW_GetDriver();
+			Selenium_Utils_Executables oExe = new Selenium_Utils_Executables();
+			Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
-			oExtentTest = oExtentReports.createTest(result.getMethod().getMethodName());
-			driver = a.getDriver();
+			strTestCaseName = result.getMethod().getMethodName();
+			oExtentTest = oExtentReports.createTest(strTestCaseName);
+
+			driver = oDriver.getDriver();
+
+			// lhm_TestCase_Data = getData_MSExcel_WorkSheet_Fillo(strTable,
+			// strPrimaryKeyValue)
+			lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("Login", strTestCaseName);
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		} catch (Throwable e) {
 			e.printStackTrace();
 
@@ -61,13 +70,25 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 
 	public void onStart(ITestContext context) {
 		System.out.println("onStart");
-		Selenium_Utils_File oGetFile = new Selenium_Utils_File();
 
 		try {
 
-			StrBrowser = oGetFile.getValue_PropertiesFile(pConfigproperties, "Browser");
+			Selenium_Utils_File oGetFile = new Selenium_Utils_File();
+			/*
+			 * StrBrowser = oGetFile.getValue_PropertiesFile(pConfigproperties, "Browser");
+			 * StrEnvironment = oGetFile.getValue_PropertiesFile(pConfigproperties,
+			 * "Environment"); strGW_Application =
+			 * oGetFile.getValue_PropertiesFile(pConfigproperties, "GW_Application");
+			 */
+			StrBrowser = System.getProperty("gwbrowser");
+			StrEnvironment = System.getProperty("gwenv");
+			strGW_Application = System.getProperty("gwApplication");
+			strGW_Country = System.getProperty("gwCountry");
+			strGW_State = System.getProperty("gwState");
 
-			strGW_Application = oGetFile.getValue_PropertiesFile(pConfigproperties, "GW_Application");
+			System.out.println("System.getProperty gwbrowser" + StrBrowser);
+			System.out.println("System.getProperty gwenv" + StrEnvironment);
+			System.out.println("System.getProperty gwApplication" + strGW_Application);
 
 			switch (strGW_Application) {
 			case "BillingCenter":

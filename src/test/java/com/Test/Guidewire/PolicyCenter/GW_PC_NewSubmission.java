@@ -6,23 +6,19 @@ import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_LoginCM_PC_BC_CC;
 import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages_PO;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers_PO;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_NewSubmission_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_VehiclesPO;
 import com.pages.Guidewire.PolicyCenter.GW_PC_PolicyInfo;
-import com.pages.Guidewire.PolicyCenter.GW_PC_PolicyInfo_PO;
 import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables;
 
 public class GW_PC_NewSubmission extends GW_GetDriver {
 
-	@Test
-	public void AUT_TS_01() throws Throwable {
+	@Test(enabled = false)
+	public void AUT_PC_AC_04() throws Throwable {
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
 		GW_TabNavigation_CM_PC_BC_CC tab = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
 
@@ -70,10 +66,5 @@ public class GW_PC_NewSubmission extends GW_GetDriver {
 		pcr.pc_LOB_Forms();
 		pcr.clickButton("Next");
 
-		
-		
-		
-		
-		
 	}
 }
