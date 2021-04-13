@@ -107,8 +107,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		case "NewAccount":
 			GuidewireAutomate("Account", Tab_Account_dd, "click", "Null");
 			GuidewireAutomate("NewAccount", AccountTab_NewAccount, "click", "Null");
-			GuidewireAutomate_waitForElement(EnterAccountInformation, "visibilityOf", "true");
-			Assert.assertEquals(getText_Element(EnterAccountInformation), "Enter Account Information");
+			//GuidewireAutomate_waitForElement(EnterAccountInformation, "visibilityOf", "true");
+			//Assert.assertEquals(getText_Element(EnterAccountInformation), "Enter Account Information");
 			break;
 		case "NewPolicy":
 			// Navigation to NewPolicy

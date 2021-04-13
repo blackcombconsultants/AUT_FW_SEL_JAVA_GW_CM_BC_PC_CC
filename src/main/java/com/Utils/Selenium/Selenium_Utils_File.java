@@ -36,20 +36,17 @@ import java.sql.Statement;
 public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 
 	String strValue;
-
-	final static String JdbcOdbcDriver = "sun.jdbc.odbc.JdbcOdbcDriver";
-	final static String MicrosoftExcelDriver = "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=%s;DriverID=22;READONLY=false";
+	Fillo oFillo = new Fillo();
 
 	public LinkedHashMap<String, String> getDataFromSheet_Fillo(String strSheetName, String strPrimaryKeyValue)
 			throws FilloException {
 
 		LinkedHashMap<String, String> lhmTestDataSheet = new LinkedHashMap<String, String>();
 
-		Fillo oFillo = new Fillo();
 		Connection oConnection = oFillo.getConnection(pTestDataFilePath);
 
 		String strQuery = "Select * from " + strSheetName + " where PrimaryKey='" + strPrimaryKeyValue + "'";
-		System.out.println("strQuery = " + strQuery);
+		System.out.println("getDataFromSheet_Fillo strQuery = " + strQuery);
 
 		Recordset recordset = oConnection.executeQuery(strQuery);
 		List<String> oList_Header = recordset.getFieldNames();
@@ -65,6 +62,8 @@ public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 		return lhmTestDataSheet;
 
 	}
+
+
 
 	public String getValue_PropertiesFile(String pPropertiesFilePath, String strItem) throws Throwable {
 		strValue = null;
@@ -183,22 +182,7 @@ public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 
 	}
 
-	public void getValue_JdbcOdbcDriver(String pFilePath) throws Exception {
-		File file = new File(pFilePath);
-		Class.forName(JdbcOdbcDriver);
-		java.sql.Connection connection = DriverManager
-				.getConnection(String.format(MicrosoftExcelDriver, file.getAbsolutePath()));
 
-		Statement stmt = connection.createStatement();
-		ResultSet recordset = stmt.executeQuery("SELECT * FROM [Config$] where CONFIG_NAME='QA1_CSR'");
-
-		ArrayList<String> aField = ((Recordset) recordset).getFieldNames();
-		recordset.beforeFirst();
-		for (int i = 0; i < aField.size() - 1; i++) {
-			System.out.print(((Recordset) recordset).getField(aField.get(i)) + "\t");
-		}
-
-	}
 
 	public static void getValue_notepad() {
 		try {
@@ -229,8 +213,44 @@ public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 			ex.printStackTrace();
 		}
 	}
+
+	public String getValue_xmlFile(String pXMLFilePath, String strItem) {
+		String strValue = null;
+
+		System.out.println("File Path = " + pXMLFilePath);
+		System.out.println(strItem + " = " + strValue);
+		return strValue;
+
+	}
+
+	public String getValue_jsonFile(String pJSONFilePath, String strItem) {
+		String strValue = null;
+
+		System.out.println("File Path = " + pJSONFilePath);
+		System.out.println(strItem + " = " + strValue);
+		return strValue;
+
+	}
+
+	public String getValue_yaml(String pJSONFilePath, String strItem) {
+		strValue = null;
+
+		System.out.println("File Path = " + pJSONFilePath);
+		System.out.println(strItem + " = " + strValue);
+		return strValue;
+
+	}
 	
-	
+
+	public String getValue_NotepadFile(String pNotepadFilePath, String strItem) {
+		String strValue = null;
+
+		System.out.println("File Path = " + pNotepadFilePath);
+		System.out.println(strItem + " = " + strValue);
+		return strValue;
+
+	}
+
 	public String getRandomAlphabetic(int count) {
 		return RandomStringUtils.randomAlphabetic(count);
 	}
@@ -266,9 +286,8 @@ public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 		}
 		return values[r.nextInt(values.length)];
 	}
-	
-	
-	public static void ClipBoard()  {
+
+	public static void ClipBoard() {
 		String strFilepath = "asd";
 		StringSelection selection = new StringSelection(strFilepath);
 		java.awt.datatransfer.Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -276,5 +295,4 @@ public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 
 	}
 
-	
 }

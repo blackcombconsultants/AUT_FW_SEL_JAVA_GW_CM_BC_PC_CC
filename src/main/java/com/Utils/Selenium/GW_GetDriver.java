@@ -6,9 +6,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -20,7 +20,6 @@ import com.aventstack.extentreports.Status;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GW_GetDriver extends Selenium_Reporting {
-
 
 	public WebDriver getDriver() throws Throwable {
 
@@ -149,9 +148,46 @@ public class GW_GetDriver extends Selenium_Reporting {
 				capabilities.setCapability("openDeviceTimeout", 1);
 
 				break;
-			case "HEADLESS":
+			case "HtmlUnitDriver":
 
-				HtmlUnitDriver driver = new HtmlUnitDriver();
+				//HtmlUnitDriver driver = new HtmlUnitDriver();
+				break;
+
+			case "PhantomJSDriver":
+
+				/*
+				 * File file = new File(
+				 * "D:/Users/asrikanth/.m2/repository/com/codeborne/phantomjsdriver/1.4.1/phantomjsdriver-1.4.1-sources.jar"
+				 * ); System.setProperty("phantomjs.binary.path",
+				 * "D:/Users/asrikanth/.m2/repository/com/codeborne/phantomjsdriver/1.4.1/phantomjsdriver-1.4.1-sources.jar"
+				 * );
+				 * 
+				 * WebDriver driver = new PhantomJSDriver();
+				 */
+				break;
+
+			case "HEADLESSCHROME":
+
+				System.out.println("Headless Mode");
+
+				try {
+					Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+					Runtime.getRuntime().exec("taskkill /F /IM chromeDriverServer.exe");
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				WebDriverManager.chromedriver().setup();
+
+				// create object of chrome options
+				ChromeOptions options = new ChromeOptions();
+
+				// add the headless argument
+				options.addArguments("headless");
+
+				// pass the options parameter in the Chrome driver declaration
+				driver = new ChromeDriver(options);
 				break;
 
 			default:

@@ -39,6 +39,42 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		this.oExtentTest = oExtentTest;
 	}
 
+	protected WebElement getElement(By Locator) throws Throwable {
+
+		oWebElement = null;
+
+		try {
+
+			// Find the Element.
+			oWebElement = driver.findElement(Locator);
+
+			// Wait for the Element.
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+
+			// Highlight the Element.
+			oJavascriptExecutor.executeScript(
+					"arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", oWebElement);
+
+			Thread.sleep(500);
+
+			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')",
+					oWebElement);
+
+			// oExtentTest.log(Status.INFO, LogMsg);
+
+		} catch (Exception e) {
+			oWebElement = null;
+
+			LogMsg = "Element not found ";
+			oExtentTest.log(Status.FAIL, LogMsg);
+			e.printStackTrace();
+			throw e;
+
+		}
+
+		return oWebElement;
+	}
+
 	public void gwAutomate(By Locator, String command, String strValue) throws Throwable {
 
 		oWebElement = null;
@@ -60,7 +96,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				break;
 			case "selectByVisibleText":
 				new Select(oWebElement).selectByVisibleText(strValue);
-
 				break;
 			case "selectByIndex":
 				new Select(oWebElement).selectByIndex(0);
@@ -110,15 +145,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			case "alertdismiss":
 				driver.switchTo().alert().dismiss();
 				break;
-			case "click":
-				oWebElement.click();
-				break;
-			case "close":
-				// oWebElement.close();
-				break;
-			case "sendkeys":
-				oWebElement.sendKeys(strValue);
-				break;
 			case "moveToElement":
 				oAction = oActions.moveToElement(oWebElement).build();
 				oAction.perform();
@@ -146,8 +172,17 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			case "clear":
 				oWebElement.clear();
 				break;
-			case "select":
-				new Select(oWebElement).selectByVisibleText(strValue);
+			case "click":
+				oWebElement.click();
+				break;
+			case "close":
+				// oWebElement.close();
+				break;
+			case "sendkeys":
+				oWebElement.sendKeys(strValue);
+				break;
+			case "selectByIndex":
+				new Select(oWebElement).selectByIndex(Integer.parseInt(strValue));
 				break;
 			case "selectByVisibleText":
 				new Select(oWebElement).selectByVisibleText(strValue);
@@ -270,16 +305,20 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			throws Throwable {
 
 		boolean bValidation = false;
+		String strActual = null;
 
 		try {
 
 			switch (strValidation) {
 
 			case "equals":
-				bValidation = getElement_Property(Locator,"getText","").equalsIgnoreCase(Expected);
+				strActual = getText_Element(Locator);
+				bValidation = strActual.equalsIgnoreCase(Expected);
 				break;
 			case "contains":
-				bValidation = getElement_Property(Locator,"getText","").contains(Expected);
+				//strActual = getElement_Property(Locator, "getText", "");
+				strActual = getText_Element(Locator);
+				bValidation = strActual.contains(Expected);
 				break;
 			case "isEmpty":
 				bValidation = ElementName.isEmpty();
@@ -305,11 +344,12 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				break;
 			}
 
+			LogMsg = ElementName + " => Actual = [" + strActual + "] " + strValidation + " Expected = [" + Expected
+					+ "]";
+
 			if (bValidation) {
-				LogMsg = ElementName + " =  [" + Expected + "]";
 				oExtentTest.log(Status.PASS, LogMsg);
 			} else {
-				LogMsg = ElementName + " =  [" + Expected + "]";
 				oExtentTest.log(Status.FAIL, LogMsg);
 			}
 
@@ -322,45 +362,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
-	protected WebElement getElement(By Locator) throws Throwable {
-
-		oWebElement = null;
-
-		try {
-
-			// Find the Element.
-			oWebElement = driver.findElement(Locator);
-
-			// Wait for the Element.
-			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
-
-			// Highlight the Element.
-			oJavascriptExecutor.executeScript(
-					"arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", oWebElement);
-
-			Thread.sleep(500);
-
-			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')",
-					oWebElement);
-
-			// oExtentTest.log(Status.INFO, LogMsg);
-
-		} catch (Exception e) {
-			oWebElement = null;
-
-			LogMsg = "Element not found ";
-			oExtentTest.log(Status.FAIL, LogMsg);
-			e.printStackTrace();
-			throw e;
-
-		}
-
-		return oWebElement;
-	}
-
-
-
 	public String getElement_Property(By Locator, String Property, String PropertyName) throws Throwable {
+
+		strValue = null;
+
 		switch (Property) {
 
 		case "getAttribute":
@@ -370,7 +375,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		case "getTagName":
 			strValue = getElement(Locator).getTagName();
 		case "getText":
-			strValue = getElement(Locator).getText();
+			strValue = getText_Element(Locator);
 		case "getSize":
 			strValue = getElement(Locator).getSize().toString();
 		default:
@@ -379,8 +384,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		return strValue;
 
 	}
-
-	
 
 	public static void robotkey() throws AWTException {
 		Robot robot = new Robot();
@@ -472,7 +475,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
-	
 	/*
 	 * Not Required
 	 */
@@ -484,7 +486,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 	public String getText_Element(By Locator) throws Throwable {
 		return getElement(Locator).getText();
 	}
-	
+
 	public String getText_ElementWait(By Locator) throws Throwable {
 		WebElement we = getElement(Locator);
 		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));

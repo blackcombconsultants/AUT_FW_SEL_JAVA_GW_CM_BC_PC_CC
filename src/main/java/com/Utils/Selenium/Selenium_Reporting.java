@@ -22,9 +22,9 @@ public class Selenium_Reporting extends GW_Base {
 		oExtentReports = new ExtentReports();
 
 		oExtentReports.attachReporter(oExtentSparkReporter);
-		oExtentReports.setSystemInfo("Executed on OS: ", gstrOSname);
-		oExtentReports.setSystemInfo("Executed by User: ", gstrUsername);
-		oExtentReports.setSystemInfo("Hostname: ", gstrHostname);
+		oExtentReports.setSystemInfo("Executed on OS: ", gstr_OSname);
+		oExtentReports.setSystemInfo("Executed by User: ", gstr_Username);
+		oExtentReports.setSystemInfo("Hostname: ", gstr_Hostname);
 
 		return oExtentReports;
 

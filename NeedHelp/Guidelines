@@ -1,0 +1,60 @@
+
+Naming Conventions
+
+	public interface GW_BillingCenter_PO
+	public class GW_BillingCenter extends SeleniumWebDriver_Commands implements GW_BillingCenter_PO
+
+Naming Conventions
+	GW_BillingCenter
+	
+		final By AccountSummary = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[contains(text(),'Account Summary')]");
+	
+		final By AS_AccountName = By.id("AccountSummary-AccountSummaryScreen-Name");
+		final By AS_PayoffAmount = By.id("AccountSummary-AccountSummaryScreen-PayoffAmount");
+		final By AS_PolicyNumber = By
+				.xpath("//table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'PolicyNumber_Cell')]");
+		final By AS_TotalValue = By
+				.xpath("//table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'TotalValue_Cell')]");
+
+						
+		<defaultGoal>install</defaultGoal>
+
+
+
+											
+							<argLine>${gwbrowser}</argLine>
+							<argLine>${gwenv}</argLine>
+							<argLine>${gwApplication}</argLine>
+
+						<!-- pass testng.xml files as argument from command line -->
+						<suiteXmlFiles>
+							<suiteXmlFile>${testNGxml}</suiteXmlFile>
+						</suiteXmlFiles>
+						
+							<suiteXmlFile>testng_PC.xml</suiteXmlFile>
+							<suiteXmlFile>testng_BC.xml</suiteXmlFile>
+							<suiteXmlFile>testng_CC.xml</suiteXmlFile>
+	
+	Maven Execution
+	------------------------------------------------
+	
+	C:\Users\Username>mvn --version
+	
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: C:\Program Files\apache-maven-3.6.3\bin\..
+	Java version: 15.0.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-15.0.1
+	Default locale: en_IN, platform encoding: Cp1252
+	OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+	
+	
+	C:\Users\Username>cd\
+	
+	C:\>cd C:\Users\Username\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC
+	
+	//mvn clean test -Dsurefire.suiteXmlFiles=/path/to/testng.xml
+	//mvn test -Dsurefire.suiteXmlFiles=testng_PC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=PolicyCenter
+		
+	mvn test -DsuiteFile=testng_PC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=PolicyCenter -DgwCountry=United States -DgwState=Alaska
+
+		
+	[INFO] Scanning for projects...
