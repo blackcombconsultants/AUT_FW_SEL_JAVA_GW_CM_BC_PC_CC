@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.Properties;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -43,9 +44,11 @@ public class GW_Base {
 	public static XSSFWorkbook oXSSFWorkbook;
 
 	public static String pUserdir = System.getProperty("user.dir");
-	public static String gstrHostname = System.getProperty("hostname");
-	public static String gstrUsername = System.getProperty("user.name");
-	public static String gstrOSname = System.getProperty("os.name");
+	public static String gstr_Hostname = System.getProperty("hostname");
+	public static String gstr_Username = System.getProperty("user.name");
+	public static String gstr_OSname = System.getProperty("os.name");
+	public static String gstr_Userhome = System.getProperty("user.home");
+
 	public static String pConfigproperties = pUserdir + "/src/main/resources/Config.Properties";
 
 	public static String pScreenshots;
@@ -54,6 +57,10 @@ public class GW_Base {
 	public static String pTestDataFilePath;
 	public static String pFile_TestBreakTracker = pUserdir + "\\testdata\\TestBreakTracker.xlsx";
 
+	public static LinkedHashMap<String, String> lhm_TestCase_Data = new LinkedHashMap<String, String>();
+	public static LinkedHashMap<String, String> lhm_TestCase_Table_Data = new LinkedHashMap<String, String>();
+	public static String strTestCaseName=null;
+
 	public static String strPolicyNumber = strCurrentDate_ddMMMMyyyyHHmmss;
 	public static String strAccountNumber = strCurrentDate_ddMMMMyyyy;
 	public static String strAccountName;
@@ -61,6 +68,9 @@ public class GW_Base {
 
 	public static String url;
 	public static String StrBrowser;
+	public static String StrEnvironment;
 	public static String strGW_Application;
+	public static String strGW_Country;
+	public static String strGW_State;
 
 }

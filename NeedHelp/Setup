@@ -1,0 +1,208 @@
+
+Jenkins
+---------------------------------------------------------------------------------
+Jenkins Key = 5462a411c69e4183b7749e61b852f69d
+
+Server  Akash AWS		
+http://198.19.93.113:9191/
+http://localhost:9191/
+username : blackcomb
+password : blackcomb
+
+Sudhakar EC2
+http://ec2-13-233-150-243.ap-south-1.compute.amazonaws.com:8080/
+username : autotest
+password : autotest
+
+
+AWS Code Commit
+---------------------------------------------------------------------------------
+Manoj Kumar gaddam to provide access
+
+GitLab 
+---------------------------------------------------------------------------------
+SSH Keys generation
+
+
+
+Components
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Sikuli and Robot
+---------------------------------------------------------------------------------
+
+https://www.guru99.com/flash-testing-selenium.html
+https://www.ranorex.com/automated-ui-testing-of-flash-flex-applications/
+https://stackoverflow.com/questions/33252116/flex-monkium-integration-with-selenium-ide
+https://dzone.com/articles/flexmonkey-4-and-flexmonkium
+
+Winium
+---------------------------------------------------------------------------------
+
+JIRA
+---------------------------------------------------------------------------------
+
+Rally
+---------------------------------------------------------------------------------
+
+SauceLabs
+---------------------------------------------------------------------------------
+    
+		
+		
+
+
+
+
+
+
+public LinkedHashMap<String, String> getData(String process, String dataName,LinkedHashMap<String, String> configData)
+
+
+
+	LinkedHashMap<String, String> data = new LinkedHashMap<String, String>();
+
+	List<LinkedHashMap<String, String>> tdNameReference = Helper.ReadCSV_getRowDataForMatch(Driver.configDataPath + "\\TestDataNameReference.csv", "DataName=" + dataName, false);
+
+
+		// This method is used to get all the data from CSV file which matches your * requirement
+
+		public static List<LinkedHashMap<String, String>> ReadCSV_getRowDataForMatch(String filePath, String Matches,boolean readAllRow) throws Exception {
+
+			List<LinkedHashMap<String, String>> dataList = new ArrayList<LinkedHashMap<String, String>>();
+
+
+			reader = new CSVReader(new FileReader(filePath));
+			List<String[]> csvBody = reader.readAll();
+			reader.close();
+			List<Integer> rows = findRowNumberCSVForMatch(filePath, Matches, readAllRow);
+
+			if (rows.size() == 0) {
+				throw new Exception("Data[" + Matches + "] not found in[" + filePath + "]");
+			}
+
+			
+			String columns[] = csvBody.get(0);
+
+
+			// This method is used to find the row number in csv file against the dataname
+
+			private static List<Integer> findRowNumberCSVForMatch(String filePath, String dataName, boolean readAllRow) throws Exception {
+
+				List<Integer> rowNos = new ArrayList<Integer>();
+				return rowNos;
+
+			line = csvBody.get(rowNo);
+
+			LinkedHashMap<String, String> data = new LinkedHashMap<String, String>();
+
+			data.put(columns[i], line[i]);
+
+	
+
+
+				dataList.add(data);
+
+
+	public static void updateCSV(String filePath, String match, String columnName, String valueToBeUpdated)
+	public static void updateCSVWithRowNum(String filePath, int rownum, String columnName, String valueToBeUpdated)
+		int col = findColumnNumberCSV(filePath, columnName);
+
+
+
+			
+
+
+	LinkedHashMap<String, String> data = flObj.getData(process, dataName, configData);
+
+				data.put("testName", testCase);
+				data.put("processName", process);
+
+
+
+	/*************************************************************************************
+	 * This method is used to get the data from corresponding data process.csv file
+	 * 
+	 * @param filePath
+	 *            Absolute path of TestCase.csv
+	 * @param testCase
+	 *            Name of the test case
+	 * @return LinkedHashMap which will contains collection of process and
+	 *         corresponding data name(Key-Process, Value- Data name) Developed by:
+	 *         Ibbu Developed on: 10 Aug 2018 Modified by: Modified on: Modified
+	 *         reason:
+	 *************************************************************************************/
+
+	public LinkedHashMap<String, String> getData(String process, String dataName,
+			LinkedHashMap<String, String> configData) throws Exception {
+		LinkedHashMap<String, String> data = new LinkedHashMap<String, String>();
+
+		/*
+		 * To handle the different Data references in prerequisite it will fetch the
+		 * data reference in TestDataNameReference.csv
+		 */
+		if (process.equalsIgnoreCase("prerequisite")) {
+			if ((!dataName.toLowerCase().contains("eod")) && (!dataName.toLowerCase().contains("bod"))) {
+
+				reportStep_INFO("Searching TestDataNameReference.csv for : [" + dataName + " ] And CustomerType ["
+						+ Driver.fw_customer_source + "]");
+
+				List<LinkedHashMap<String, String>> tdNameReference = Helper.ReadCSV_getRowDataForMatch(
+						Driver.configDataPath + "\\TestDataNameReference.csv", "DataName=" + dataName, false);
+
+				/*
+				 * if empty - should not throw eror
+				 * 
+				 */
+				dataName = tdNameReference.get(0).get(Driver.fw_customer_source);
+				reportStep_INFO("Found : [" + dataName + " ] for customer source [" + Driver.fw_customer_source + "]");
+			}
+		}
+
+		/*
+		 * To handle different data combinations of customer We will replace the
+		 * dataname value with given customer combination
+		 */
+		if ((process.contains("brwrRegPersonalInfo")) | (process.contains("brwrRegIncome"))) {
+			if ((Driver.fw_customer_combination).toLowerCase().contains("customer")
+					&& (dataName.contains("Customer29"))) {
+
+				dataName = dataName.replace("Customer29", Driver.fw_customer_combination);
+				reportStep_INFO("based on Customer combinations data Name [" + dataName + " ] has been now modified  ");
+
+			}
+		}
+
+		strStepDescription = " Process = " + process + " <<>> csv  = " + process + ".csv <<>> dataName = " + dataName;
+		reportStep_INFO("<------------------------------------------------------------------------------------------>");
+		reportStep_INFO(strStepDescription);
+
+		LinkedHashMap<String, String> tempData = ReadCSV_getRowDataForMatch(
+				Driver.testDataPath + "\\" + process + ".csv", "DataName=" + dataName, false).get(0);
+
+		strStepDescription = " Data has been retrieved";
+		reportStep_INFO(strStepDescription);
+
+		for (String filed : tempData.keySet()) {
+			String key = filed;
+			String value = tempData.get(filed);
+			if (value != null) {
+				if (value.contains("CDF(")) {
+					String temp[] = (value.replace("CDF(", "").replace(")", "")).split("\\.");
+					if (value.contains("CDF(Config.")) {
+						value = configData.get("Config_" + temp[1].trim());
+					} else if (value.contains("CDF(StateData.")) {
+						value = configData.get("StateData_" + temp[1].trim());
+					} else {
+						value = Driver.allProcessdataForTest.get(temp[0] + "." + temp[1]);
+					}
+				}
+				data.put(process + "." + key, value);
+			}
+		}
+
+		data.putAll(configData);
+		Driver.allProcessdataForTest.putAll(data);
+		return data;
+	}

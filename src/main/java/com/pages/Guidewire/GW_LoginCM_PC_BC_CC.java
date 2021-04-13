@@ -6,10 +6,12 @@ import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Reporting_Utils;
+import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements GW_LoginCM_PC_BC_CC_PO {
+	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
 	public GW_LoginCM_PC_BC_CC(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
@@ -17,10 +19,10 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 
 	public void login_Guidewire() throws Throwable {
 
-		LinkedHashMap<String, String> lhm_Data = getDataFromSheet_Fillo("Login", "SuperUser");
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
 
-		GuidewireAutomate("Username", Username, "sendkeys", lhm_Data.get("TD_UserName"));
-		GuidewireAutomate("Password", Password, "sendkeys", lhm_Data.get("TD_Password"));
+		GuidewireAutomate("Username", Username, "sendkeys", lhm_TestCase_Table_Data.get("TD_UserName"));
+		GuidewireAutomate("Password", Password, "sendkeys", lhm_TestCase_Table_Data.get("TD_Password"));
 		// GuidewireAutomate("Password", Password, "sendkeys", new
 		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
 		GuidewireAutomate("Login", Login, "click", "Null");
@@ -37,7 +39,7 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 	public void logout_Guidewire() throws Throwable {
 		GuidewireAutomate("Setting", Setting, "click", "Null");
 		GuidewireAutomate("Logout", Logout, "click", "Null");
-		
+
 		oExtentTest.log(Status.PASS, "Logout is succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 
