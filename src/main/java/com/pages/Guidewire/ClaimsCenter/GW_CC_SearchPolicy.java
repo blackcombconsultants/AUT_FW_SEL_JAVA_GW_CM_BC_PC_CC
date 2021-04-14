@@ -28,7 +28,7 @@ public class GW_CC_SearchPolicy extends SeleniumWebDriver_Commands implements Se
 	@Override
 	public void fnol_Search_Exitsing_Policy() throws Throwable {
 
-		lhm_Data = getDataFromSheet_Fillo("policySearch", "Scenario 1");
+		lhm_Data = getDataFromSheet_Fillo("policySearch", strTestCaseName);
 		// ------> Verifying the page -
 		 GuidewireAutomate_Validation("policy screen", policy_screen_tittlebar, "equals", "Step 1: Search or Create Policy");
 		//Assert.assertEquals(getHeader_NewClaim(), "Step 1: Search or Create Policy");
