@@ -15,8 +15,9 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 	public void pac_CoveragesAppliedtoallvehicles() throws Throwable {
 		  
 		//------->Verify the Page Name
-	GuidewireAutomate_Validation("PA_Coverages_Screen_titlebar", PA_Coverages_Screen_titlebar, "equals", "PA Coverages");
-		
+	 GuidewireAutomate_Validation("PA_Coverages_Screen_titlebar", PA_Coverages_Screen_titlebar, "equals", "PA Coverages");
+	    
+	 //--------> 
 		
 		
 	}

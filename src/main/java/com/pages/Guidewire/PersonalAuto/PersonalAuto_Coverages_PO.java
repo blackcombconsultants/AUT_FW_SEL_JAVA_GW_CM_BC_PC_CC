@@ -9,7 +9,8 @@ public interface PersonalAuto_Coverages_PO {
 	final By PA_Coverages_Tab=By.xpath("//div[contains(@id,'PersonalAutoScreen-CoveragesTab')]");
 	final By PA_Coverages_AdditionalCoveragesTab=By.xpath("//div[contains(@id,'PersonalAutoScreen-AdditionalCoveragesTab')]");
 	final By PA_Coverages_ExclusionsAndConditionsCardTab=By.xpath("//div[contains(@id,'PersonalAutoScreen-exclusionsAndConditionsCardTab')]");
-   
+    final By PA_Coverages_Auto_Liability_Package=By.xpath("//select[contains(@name,'CovPatternInputGroup-LiabilityTermInput')]");
+
 	void pac_CoveragesAppliedtoallvehicles() throws Throwable;
 
 
