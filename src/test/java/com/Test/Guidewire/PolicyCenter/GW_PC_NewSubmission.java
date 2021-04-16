@@ -60,8 +60,8 @@ public class GW_PC_NewSubmission extends GW_GetDriver {
 		pcr.clickButton("Next");
 		papr.pr_VehiclesLevelCoverages();
 		pcr.clickButton("Quote");
-		paq.pr_QuoteDetails();
-		paq.pr_PolicyPremium();
+		paq.pa_QuoteDetails();
+		paq.pa_PolicyPremium();
 		pcr.clickButton("Next");
 		pcr.pc_LOB_Forms();
 		pcr.clickButton("Next");
