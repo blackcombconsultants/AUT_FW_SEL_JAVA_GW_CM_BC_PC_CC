@@ -30,7 +30,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PC_AC_02() throws Throwable {
 
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
@@ -47,7 +47,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PC_AC_03() throws Throwable {
 
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);

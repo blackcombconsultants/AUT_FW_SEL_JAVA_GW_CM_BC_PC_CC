@@ -8,11 +8,11 @@ import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_NewSubmission_Reusable;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
-import com.pages.Guidewire.PolicyCenter.GW_PC_PolicyInfo;
 import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables;
 
 public class GW_PC_NewSubmission extends GW_GetDriver {
@@ -24,7 +24,7 @@ public class GW_PC_NewSubmission extends GW_GetDriver {
 
 		GW_PolicyCenter_Resuables pcr = new GW_PolicyCenter_Resuables(driver, oExtentTest);
 		PersonalAuto_NewSubmission_Reusable par = new PersonalAuto_NewSubmission_Reusable(driver, oExtentTest);
-		GW_PC_PolicyInfo pi = new GW_PC_PolicyInfo(driver, oExtentTest);
+		PersonalAuto_PolicyInfo pi = new PersonalAuto_PolicyInfo(driver, oExtentTest);
 		PersonalAuto_Drivers pad = new PersonalAuto_Drivers(driver, oExtentTest);
 		PersonalAuto_Vehicles pav = new PersonalAuto_Vehicles(driver, oExtentTest);
 		PersonalAuto_Coverages pac = new PersonalAuto_Coverages(driver, oExtentTest);
@@ -39,7 +39,7 @@ public class GW_PC_NewSubmission extends GW_GetDriver {
 		par.NewSubmisisons_SelectLOB();
 		par.offering();
 		pcr.clickButton("Next");
-		par.Qualification();
+		par.qualification();
 		pcr.clickButton("Next");
 		pi.pi_PolicyDetails();
 		pi.pi_primaryInsured_NewPerson();
@@ -50,7 +50,7 @@ public class GW_PC_NewSubmission extends GW_GetDriver {
 		pi.pi_ProducerOfRecord();
 		pi.pi_UnderWritingCompany();
 		pcr.clickButton("Next");
-		pad.dr_Add_NewPerson();
+		pad.driver_Add_NewPerson();
 		pcr.clickButton("Next");
 		pav.ve_CreateVehicles();
 		pav.ve_AssaignDriver();
