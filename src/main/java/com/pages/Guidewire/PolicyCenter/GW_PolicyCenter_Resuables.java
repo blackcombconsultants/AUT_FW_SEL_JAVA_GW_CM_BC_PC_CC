@@ -163,8 +163,8 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Create account", GW_PolicyCenter_Resuables.CreateAccount_Header, "equals",
 				"Create account");
 
-		GuidewireAutomate("First Name", firstname, "sendkeys", strFirstName);
-		GuidewireAutomate("Last Name", lastname, "sendkeys", strLastName);
+		//GuidewireAutomate("First Name", firstname, "sendkeys", strFirstName);
+		//GuidewireAutomate("Last Name", lastname, "sendkeys", strLastName);
 
 		GuidewireAutomate("homephone", homephone, "sendkeys", lhm_TestCase_Table_Data.get("HomePhone"));
 		GuidewireAutomate("workphone", workphone, "sendkeys", lhm_TestCase_Table_Data.get("WorkPhone"));
