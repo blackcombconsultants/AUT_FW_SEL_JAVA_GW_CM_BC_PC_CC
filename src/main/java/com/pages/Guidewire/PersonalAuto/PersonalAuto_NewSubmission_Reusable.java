@@ -3,10 +3,12 @@ package com.pages.Guidewire.PersonalAuto;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
+import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 
 public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Commands
 		implements PersonalAuto_NewSubmission_ReusablePO {
+	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
 	public PersonalAuto_NewSubmission_Reusable(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
@@ -22,14 +24,20 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 
 	@Override
 	public void offering() throws Throwable {
-		GuidewireAutomate_Validation("Offerings Header", Screen_Header, " equals", "Offerings");
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("offering", strTestCaseName);
+
+		
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Offerings");
 		GuidewireAutomate("Offering Selection", OfferingSelection, "selectByVisibleText", "Basic Program");
 	}
 
 	@Override
 
-	public void Qualification() throws Throwable {
-		GuidewireAutomate_Validation("Qualifications Header", Screen_Header, " equals", "Qualifications");
+	public void qualification() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("qualification", strTestCaseName);
+
+		
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Qualifications");
 		GuidewireAutomate("IstApplicantCurrentlyInsured",
 				IstApplicantCurrentlyInsured, "selectByVisibleText", "No - New Driver");
 		GuidewireAutomate("IsApplicantLicenseCurrently_suspended_canceled_Rrevoked", IsApplicantLicenseCurrently_suspended_canceled_Rrevoked, "click", "No");
@@ -41,4 +49,38 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 
 	}
 
+	@Override
+	public void forms() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("forms", strTestCaseName);
+		
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Forms");
+
+	}
+
+	@Override
+	public void payments() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
+		
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
+
+	}
+	
+	@Override
+
+	public void validationResults() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
+		
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
+
+	}
+	
+	@Override
+
+	public void submissionBound() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
+		
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
+
+	}
+	
 }

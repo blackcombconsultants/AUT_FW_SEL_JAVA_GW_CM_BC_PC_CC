@@ -4,8 +4,9 @@ import org.openqa.selenium.By;
 
 public interface PersonalAuto_Coverages_PO {
 
-	final By NewSubmisison_Screen_PALOB_Button = By.xpath("//div[contains(@id,'-8-addSubmission')]");
     final By PA_Coverages_Screen_titlebar=By.xpath("//div[contains(@id,'PersonalAutoScreen-ttlBar')]//div[1]//div");
+
+	final By NewSubmisison_Screen_PALOB_Button = By.xpath("//div[contains(@id,'-8-addSubmission')]");
 	
   //--->PA_Coverages_CheckBox tabs
     final By PA_Coverages_Tab=By.xpath("//div[contains(@id,'PersonalAutoScreen-CoveragesTab')]");

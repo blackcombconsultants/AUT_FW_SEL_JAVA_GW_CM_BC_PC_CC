@@ -18,7 +18,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 	@Override
 	
 	public void pac_CoveragesAppliedtoallvehicles() throws Throwable {
-		lhm_Data = getDataFromSheet_Fillo("PA_Coverages",strTestCaseName);
+		lhm_Data = getDataFromSheet_Fillo("paCoverages",strTestCaseName);
 	 //------->Verify the Page Name
 	 GuidewireAutomate_Validation("PA_Coverages_Screen_titlebar", PA_Coverages_Screen_titlebar, "equals", "PA Coverages");
 	 //--------> selecting AutoLiabilityPackage

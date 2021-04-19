@@ -1,29 +1,82 @@
+	
+	Jenkins
+	---------------------------------------------------------------------------------
+	Jenkins Key = 5462a411c69e4183b7749e61b852f69d
+	
+	Server  Akash AWS		
+	http://198.19.93.113:9191/
+	http://localhost:9191/
+	username : blackcomb
+	password : blackcomb
+	
+	Sudhakar EC2
+	http://ec2-13-233-150-243.ap-south-1.compute.amazonaws.com:8080/
+	username : autotest
+	password : autotest
 
-Jenkins
----------------------------------------------------------------------------------
-Jenkins Key = 5462a411c69e4183b7749e61b852f69d
+						<suiteXmlFile>testng_CC.xml</suiteXmlFile>
+	
+		
+	Apache Maven pom.xml
+	------------------------------------------------
+			<defaultGoal>install</defaultGoal>
+	
+	Maven Execution
+	------------------------------------------------
+	
+	C:\Users\Username>mvn --version
+	
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: C:\Program Files\apache-maven-3.6.3\bin\..
+	Java version: 15.0.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-15.0.1
+	Default locale: en_IN, platform encoding: Cp1252
+	OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+	
+	
+	C:\Users\Username>cd\
+	
+	C:\>cd C:\Users\Username\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC
+	
+	//mvn clean test -Dsurefire.suiteXmlFiles=/path/to/testng.xml
+	//mvn test -Dsurefire.suiteXmlFiles=testng_PC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=PolicyCenter
+		
+	mvn clean test -DsuiteFile=testng_PC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=PolicyCenter -DgwCountry=United States -DgwState=Alaska
+	mvn clean test -DsuiteFile=testng_CC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=ClaimsCenter -DgwCountry=United States -DgwState=Alaska
 
-Server  Akash AWS		
-http://198.19.93.113:9191/
-http://localhost:9191/
-username : blackcomb
-password : blackcomb
+		
+	[INFO] Scanning for projects...
+	
+	
+	
+	Eclipse Understand
+	----------------------------------------------------------------------
+	Windows=>Show View-> Debug Shell
+	Windows=>Show View-> Debug
+	Windows=>Show View-> Console
+	
+	
+	Run=>Run Configurations->Java
+	Run=>Debug Configurations->TestNG
+	Run=>Debug Configurations->Maven Build
+	
+	
+	AWS Code Commit
+	---------------------------------------------------------------------------------
+	Manoj Kumar gaddam to provide access
+	
+	
+	GitLab 
+	---------------------------------------------------------------------------------
+	SSH Keys generation
+		
+	GitHub
+	---------------------------------------------------------------------------------
+	SSH Keys generation
+	
 
-Sudhakar EC2
-http://ec2-13-233-150-243.ap-south-1.compute.amazonaws.com:8080/
-username : autotest
-password : autotest
-
-
-AWS Code Commit
----------------------------------------------------------------------------------
-Manoj Kumar gaddam to provide access
-
-GitLab 
----------------------------------------------------------------------------------
-SSH Keys generation
-
-
+Java jdk
+Oracle
+username:shreenivasshelby@gmail.com Password:Bhanu@12345
 
 Components
 ---------------------------------------------------------------------------------

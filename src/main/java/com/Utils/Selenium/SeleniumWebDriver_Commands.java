@@ -14,6 +14,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -73,6 +74,49 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 
 		return oWebElement;
+	}
+
+	public List<WebElement> getElements(By Locator) throws Throwable {
+
+		oWebElement = null;
+		List<WebElement> oWebElement_List;
+
+		try {
+
+			// Find the Element.
+			oWebElement_List = driver.findElements(Locator);
+
+			int intsize = oWebElement_List.size();
+			if (intsize <= 0) {
+				oWebElement_List = null;
+				throw new NoSuchElementException(Locator.toString());
+			} else if (intsize >= 1) {
+				for (WebElement oWebElement : oWebElement_List) {
+
+					// Wait for the Element.
+					oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+
+					// Highlight the Element.
+					oJavascriptExecutor.executeScript(
+							"arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')",
+							oWebElement);
+
+					Thread.sleep(500);
+
+					oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')",
+							oWebElement);
+				}
+			}
+
+		} catch (Exception e) {
+			LogMsg = "Element not found ";
+			oExtentTest.log(Status.FAIL, LogMsg);
+			e.printStackTrace();
+			throw e;
+		}
+
+		return oWebElement_List;
+
 	}
 
 	public void gwAutomate(By Locator, String command, String strValue) throws Throwable {
@@ -215,6 +259,68 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
+	public void GuidewireAutomate_Table(String ElementName, By Locator, String command, String strValue)
+			throws Throwable {
+
+		oWebElement = null;
+		List<WebElement> oWebElement_List;
+
+		LogMsg = null;
+		Actions oActions = new Actions(driver);
+		Action oAction;
+		try {
+
+			// Get the Element.
+			oWebElement_List = getElements(Locator);
+
+			switch (command) {
+
+			case "sendkeys":
+				oWebElement.sendKeys(strValue);
+				break;
+			case "selectByIndex":
+				new Select(oWebElement).selectByIndex(Integer.parseInt(strValue));
+				break;
+			case "selectByVisibleText":
+				new Select(oWebElement).selectByVisibleText(strValue);
+				break;
+			case "selectByValue":
+				new Select(oWebElement).selectByValue(strValue);
+				break;
+			case "moveToElement":
+				oAction = oActions.moveToElement(oWebElement).build();
+				oAction.perform();
+				break;
+			case "clear":
+				oWebElement.clear();
+				break;
+			case "click":
+				oWebElement.click();
+				break;
+			default:
+				break;
+			}
+
+			String strTemp = "Element : " + Locator.toString() + " command : [" + command.toString() + "] Value : ["
+					+ strValue.toString() + "]";
+			System.out.println(strTemp);
+			if (command.equals("click")) {
+				LogMsg = "Clicked : " + ElementName;
+
+			} else {
+				LogMsg = ElementName + " =  [" + strValue.toString() + "]";
+			}
+			oExtentTest.log(Status.INFO, LogMsg);
+
+		} catch (Exception e) {
+			LogMsg = ElementName + " =  [" + strValue.toString() + "]";
+			oExtentTest.log(Status.FAIL, LogMsg);
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
+
 	public void GuidewireAutomate_Handle(String Handle, String HandleName) {
 		oWebElement = null;
 		LogMsg = null;
@@ -316,7 +422,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				bValidation = strActual.equalsIgnoreCase(Expected);
 				break;
 			case "contains":
-				//strActual = getElement_Property(Locator, "getText", "");
+				// strActual = getElement_Property(Locator, "getText", "");
 				strActual = getText_Element(Locator);
 				bValidation = strActual.contains(Expected);
 				break;
@@ -478,11 +584,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 	/*
 	 * Not Required
 	 */
-	public int getSize_ElementsList(By Locator) {
-		List<WebElement> Temp = driver.findElements(Locator);
-		return Temp.size() - 1;
-	}
-
 	public String getText_Element(By Locator) throws Throwable {
 		return getElement(Locator).getText();
 	}

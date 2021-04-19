@@ -13,14 +13,18 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 	@Override
 	public void ve_CreateVehicles() throws Throwable {
-		// TODO Auto-generated method stub
+        GuidewireAutomate_Validation("Vehicles Header", Screen_Header, "equals", "Vehicles");
+        GuidewireAutomate("Create_Vehicle", Create_Vehcile, "click", "NA");
+        GuidewireAutomate("Vehicle_type_dropdown", Vehicle_type_dropdown, "selectByVisibleText", "Passenger/Light Truck");
+        GuidewireAutomate("Vin No", Vin_NO, "sendkeys", "3VW1K7AJ9CM349218");
+        GuidewireAutomate("License_State", License_State, "selectByVisibleText", "Alaska");
+        GuidewireAutomate("Cost New", Cost_New, "sendkeys", "10000");
 		
 	}
 
 	@Override
 	public void ve_AssaignDriver() throws Throwable {
-		// TODO Auto-generated method stub
-		
+        GuidewireAutomate("Vehicle Identified", Vehicle_Identified, "click", "");		
 	}
 
 	@Override
