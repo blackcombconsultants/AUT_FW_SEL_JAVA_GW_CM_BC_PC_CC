@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public interface PersonalAuto_Drivers_PO {
 
 	final By Drivers_Header = By
-			.xpath("//div[contains(@id,'Screen-ttlBar')]//div[@class='gw-TitleBar--title' and text()='Drivers']");
+			.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title']");
 
 	/*
 	 * 

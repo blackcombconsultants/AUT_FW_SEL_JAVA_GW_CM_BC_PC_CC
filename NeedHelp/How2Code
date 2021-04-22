@@ -20,9 +20,33 @@
 		
 		
 
+	final By Quote_New_Submission = By.xpath("//div[contains(@id,'QuoteTypeToolbarButtonSet-Quote')]");
+	final By Payment_Screen_Billing_Method = By.xpath("//div[contains(@id,'BillingPanel-BillingMethod')]");
+	final By Payment_Schedule_Monthly_Schedule = By.xpath("//div[contains(@id,'5-InstallmentPlan_radio')]");
+
+
 		
 		
-		
+			final By NewSubmissions_PALob_Button = By.xpath(
+			"//div[@id=\"NewSubmission-NewSubmissionScreen-ProductOffersDV-ProductSelectionLV-8-addSubmission\"]");
+	final By PAuto_NewSubmission_Offering = By
+			.xpath("//select[contains(@name,'SubmissionWizard-OfferingScreen-OfferingSelection')]");
+	final By Qualification_CurrentlyInsured = By.xpath("//select[contains(@name,\'PreQualQuestion')]");
+	final By DriverScreen_AddDriver_Button = By.xpath("//div[contains(@id,'AddDriver')]");
+	final By Add_ExistingDriver = By.xpath("//div[contains(@id,'AddExistingContact')]");
+	final By License_No = By.xpath("//input[contains(@name,'LicenseNumber')]");
+	final By License_State = By.xpath("//select[contains(@name,'LicenseState')]");
+	final By Roles_Tab = By.xpath("//div[contains(@id,'RolesCardTab')]");
+	final By Year_First_Licensed = By.xpath("//input[contains(@name,'yearlicensed')]");
+	final By No_of_Accidents_Policy_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-11')]//td[2]");
+	final By No_of_Accidents_Account_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-11')]//td[3]");
+	final By No_of_Violations_Policy_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-15')]//td[2]");
+	final By No_of_Violations_Account_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-15')]//td[3]");
+	final By Create_Vehicle = By.xpath(
+			"//div[@id='SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel_tb-Add']");
+	final By VIN = By.xpath("//input[contains(@name, 'VehicleDV-Vin_DV')]");
+	final By Add_Driver_to_Vehicles_Button = By.xpath("//div[contains(@id,'DriverPctLV_tb-AddDriver')]");
+	final By Cost_New = By.xpath("//input[contains(@name,'VehicleDV-CostNew_DV')]");s
 		
 		
 http://198.19.93.113:9191/

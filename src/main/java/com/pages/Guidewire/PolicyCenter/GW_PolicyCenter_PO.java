@@ -4,27 +4,38 @@ import org.openqa.selenium.By;
 
 public interface GW_PolicyCenter_PO {
 
+	final By Screen_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title']");
+
+	
 	/*
 	 * Tool Bar Buttons
 	 */
-	final By Next_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Next')]");
-	final By Quote_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Quote')]");
-	final By SaveDraft_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Save Draft')]");
-	final By Version_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Version')]");
-	final By Closeoptions_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Close options')]");
-	final By Bindoptions_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
-	final By Bindoptions_Issue_Button = By
-			.xpath("//div[contains(@id,'BindOptions')]//div[3]//div[contains(@id,'BindAndIssue')]");
-
-	final By Quote_New_Submission = By.xpath("//div[contains(@id,'QuoteTypeToolbarButtonSet-Quote')]");
-	final By Payment_Screen_Billing_Method = By.xpath("//div[contains(@id,'BillingPanel-BillingMethod')]");
-	final By Payment_Schedule_Monthly_Schedule = By.xpath("//div[contains(@id,'5-InstallmentPlan_radio')]");
-	final By Bind_Options_Button = By.xpath("//div[contains(@id,'BindOptions')]");
-	final By Bind_Options_Issue_Policy = By
-			.xpath("//div[contains(@id,'BindOptions')]//div[3]//div[contains(@id,'BindAndIssue')]");
-
+	final By Search_Button = By.xpath("//div[contains(@id,'SearchLinksInputSet-Search')]");
+	final By Reset_Button = By.xpath("//div[contains(@id,'SearchLinksInputSet-Reset')]");
+	
 	final By Update_Button = By.xpath("//div[contains(@id,'Update')]");
+	final By OK_Button = By.xpath("//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='OK']");
+	final By Cancel_Button = By.xpath("//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
 
+	final By Back_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Back']");
+	final By Next_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']");
+	
+	final By Quote_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']");
+	final By ReleaseLock_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Quote')]/div[@role='button']");
+	final By SaveDraft_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Draft')]/div[@role='button']");
+	final By Versions_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Versions')]/div[@role='button']");
+	final By Start_SideBySide_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
+	final By BindOptions_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
+	final By BindOptions_BindOnly_Button = By
+			.xpath("//div[contains(@id,'BindOptions')]//div[3]//div[contains(@id,'BindOnly')]");
+	final By Bindoptions_IssuePolicy_Button = By
+			.xpath("//div[contains(@id,'BindOptions')]//div[3]//div[contains(@id,'BindAndIssue')]");
+
+	final By CloseOptions_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Close options')]");
+	final By WithdrawTransaction_Button = By
+			.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
+	
+	
 	final By Account_Tab_Dropdown = By.xpath("//div[@id='TabBar-AccountTab']//div[3]");
 	final By Account_Tab_Search = By.xpath("//input[@name='TabBar-AccountTab-AccountTab_AccountNumberSearchItem']");
 	final By Account_Tab_Search_Button = By
@@ -102,9 +113,6 @@ public interface GW_PolicyCenter_PO {
 	final By SearchForMissingPreferredUnderwriter = By.xpath("//input[contains(@name,'SearchDV-MissingPrefUW')]");
 	final By PreferredUnderwriter = By.xpath("//input[@type='checkbox' and contains(@name,'SearchDV-PrefUW')]");
 
-	final By Search_Button = By.xpath("//div[contains(@id,'SearchLinksInputSet-Search')]");
-	final By Reset_Button = By.xpath("//div[contains(@id,'SearchLinksInputSet-Reset')]");
-
 	final By SearchAccountResults_Msg = By.xpath("//div[@id='NewAccount-NewAccountScreen-_msgs-0']");
 	final By SearchResults = By.xpath("//table[@class='gw-ListViewWidget--table gw-table']");
 	final By Select_SearchResult = By.xpath("//div[contains(@id,'SearchResultsLV-0')]/div[@role='button']");
@@ -148,26 +156,6 @@ public interface GW_PolicyCenter_PO {
 	// Compensation']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection')
 	// and text()='Select']");
 
-	final By NewSubmissions_PALob_Button = By.xpath(
-			"//div[@id=\"NewSubmission-NewSubmissionScreen-ProductOffersDV-ProductSelectionLV-8-addSubmission\"]");
-	final By PAuto_NewSubmission_Offering = By
-			.xpath("//select[contains(@name,'SubmissionWizard-OfferingScreen-OfferingSelection')]");
-	final By Qualification_CurrentlyInsured = By.xpath("//select[contains(@name,\'PreQualQuestion')]");
-	final By DriverScreen_AddDriver_Button = By.xpath("//div[contains(@id,'AddDriver')]");
-	final By Add_ExistingDriver = By.xpath("//div[contains(@id,'AddExistingContact')]");
-	final By License_No = By.xpath("//input[contains(@name,'LicenseNumber')]");
-	final By License_State = By.xpath("//select[contains(@name,'LicenseState')]");
-	final By Roles_Tab = By.xpath("//div[contains(@id,'RolesCardTab')]");
-	final By Year_First_Licensed = By.xpath("//input[contains(@name,'yearlicensed')]");
-	final By No_of_Accidents_Policy_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-11')]//td[2]");
-	final By No_of_Accidents_Account_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-11')]//td[3]");
-	final By No_of_Violations_Policy_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-15')]//td[2]");
-	final By No_of_Violations_Account_Level = By.xpath("//tr[contains(@id,'PolicyContactRolePanelSet-15')]//td[3]");
-	final By Create_Vehicle = By.xpath(
-			"//div[@id='SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-PAVehiclesScreen-PAVehiclesPanelSet-VehiclesListDetailPanel_tb-Add']");
-	final By VIN = By.xpath("//input[contains(@name, 'VehicleDV-Vin_DV')]");
-	final By Add_Driver_to_Vehicles_Button = By.xpath("//div[contains(@id,'DriverPctLV_tb-AddDriver')]");
-	final By Cost_New = By.xpath("//input[contains(@name,'VehicleDV-CostNew_DV')]");
 
 	void pc_SearchAccountInformation(String strAccountName) throws Throwable;
 

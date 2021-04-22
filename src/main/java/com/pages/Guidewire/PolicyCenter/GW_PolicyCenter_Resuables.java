@@ -31,27 +31,56 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 
 	public void clickButton(String ButtonName) throws Throwable {
 		switch (ButtonName) {
-		case "Next":
-			GuidewireAutomate("Next_Button", Next_Button, "click", "");
-			break;
 		case "Search":
-			GuidewireAutomate("Search_Button", Search_Button, "click", "");
+			GuidewireAutomate("Search", Search_Button, "click", "");
 			break;
-
+		case "Reset":
+			GuidewireAutomate("Reset", Reset_Button, "click", "");
+			break;
+		case "OK":
+			GuidewireAutomate("OK", OK_Button, "click", "");
+			break;
+		case "Update":
+			GuidewireAutomate("Reset", Update_Button, "click", "");
+			break;
+		case "Cancel":
+			GuidewireAutomate("Reset", Cancel_Button, "click", "");
+			break;
+		case "Back":
+			GuidewireAutomate("Back", Back_Button, "click", "");
+			break;
+		case "Next":
+			GuidewireAutomate("Next", Next_Button, "click", "");
+			break;
+		case "Release Lock":
+			GuidewireAutomate("Release Lock", ReleaseLock_Button, "click", "");
+			break;
 		case "Quote":
-			GuidewireAutomate("Search_Button", Quote_Button, "click", "");
+			GuidewireAutomate("Quote", Quote_Button, "click", "");
 			break;
-
 		case "SaveDraft":
-			GuidewireAutomate("Search_Button", SaveDraft_Button, "click", "");
+			GuidewireAutomate("Save Draft", SaveDraft_Button, "click", "");
 			break;
-
-		case "Version":
-			GuidewireAutomate("Search_Button", Version_Button, "click", "");
+		case "Versions":
+			GuidewireAutomate("Versions", Versions_Button, "click", "");
 			break;
-
-		case "Closeoptions":
-			GuidewireAutomate("Search_Button", Closeoptions_Button, "click", "");
+		case "Start SideBySide":
+			GuidewireAutomate("Versions", Start_SideBySide_Button, "click", "");
+			break;
+		case "Bind Options":
+			GuidewireAutomate("Release Lock", BindOptions_Button, "click", "");
+			break;
+		case "Bind Only":
+			GuidewireAutomate("Release Lock", BindOptions_BindOnly_Button, "click", "");
+			break;
+		case "Issue Policy":
+			GuidewireAutomate("Release Lock", Bindoptions_IssuePolicy_Button, "click", "");
+			break;
+		case "Close Options":
+			GuidewireAutomate("Close Options", CloseOptions_Button, "click", "");
+			break;
+		case "Withdraw Transaction":
+			GuidewireAutomate("Withdraw Transaction", WithdrawTransaction_Button, "click", "");
 			break;
 
 		default:
