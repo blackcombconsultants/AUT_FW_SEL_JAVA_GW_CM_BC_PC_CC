@@ -28,6 +28,7 @@ public class GW_Base {
 	public static String strCurrentDate_ddMMMMyyyyHHmmss = sdf_ddMMMMyyyyHHmmss.format(new Date());
 
 	public static WebDriver driver;
+	public static WebDriver driver_ThirdPartyTool;
 	public static EventFiringWebDriver efDriver;
 	public static JavascriptExecutor oJavascriptExecutor;
 	public static WebDriverWait oWebDriverWait;

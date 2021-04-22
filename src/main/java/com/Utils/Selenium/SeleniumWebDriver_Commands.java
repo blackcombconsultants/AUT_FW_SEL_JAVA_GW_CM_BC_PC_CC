@@ -33,7 +33,9 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 	protected ExtentTest oExtentTest;
 
 	WebElement oWebElement;
+	List<WebElement> oList_WebElement;
 	String LogMsg;
+	By Locator;
 
 	public SeleniumWebDriver_Commands(WebDriver driver, ExtentTest oExtentTest) {
 		this.driver = driver;
@@ -643,4 +645,85 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
+	public void GWHandleTable() throws Throwable {
+
+		int intColumnNumber;
+		int intRowNumber;
+
+		By Locator_Table_ColumnHeaderCell = null;
+		By Locator_Table_RowCell = null;
+		String strTable_ColumnHeaderValue = null;
+		String strTable_RowCellValue = null;
+
+		intColumnNumber = getTable_ColumnNumber(Locator_Table_ColumnHeaderCell, strTable_ColumnHeaderValue);
+		intRowNumber = getTable_RowNumber(Locator_Table_RowCell, intColumnNumber, strTable_RowCellValue);
+
+	}
+
+	public int getTable_ColumnNumber(By Locator_Table_ColumnHeaderCell, String strTable_ColumnHeaderValue)
+			throws Throwable {
+		int intColumnNumber;
+		oWebElement = null;
+		boolean bFound = false;
+
+		try {
+
+			intColumnNumber = 0;
+
+			oList_WebElement = getElements(Locator_Table_ColumnHeaderCell);
+			for (WebElement oWebElement : oList_WebElement) {
+				if (oWebElement.getText().equalsIgnoreCase(strTable_ColumnHeaderValue)) {
+					bFound = true;
+					break;
+				} else {
+					intColumnNumber++;
+				}
+			}
+
+		} catch (Exception e) {
+			throw e;
+		}
+
+		if (!bFound) {
+			LogMsg = "HeaderColumnName = " + strTable_ColumnHeaderValue;
+			oExtentTest.log(Status.FAIL, LogMsg);
+			throw new Exception(LogMsg);
+
+		}
+
+		return intColumnNumber;
+	}
+
+	public int getTable_RowNumber(By Locator_Table_RowCell, int intColumnNumber, String strTable_RowCellValue)
+			throws Throwable {
+
+		int intRowNumber;
+		oWebElement = null;
+		boolean bFound = false;
+
+		try {
+			intRowNumber = 0;
+
+			oList_WebElement = getElements(Locator_Table_RowCell);
+			for (WebElement oWebElement : oList_WebElement) {
+				if (oWebElement.getText().equalsIgnoreCase(strTable_RowCellValue)) {
+					bFound = true;
+					break;
+				} else {
+					intRowNumber++;
+				}
+			}
+
+		} catch (Exception e) {
+			throw e;
+		}
+		if (!bFound) {
+			LogMsg = "Value  = " + strTable_RowCellValue;
+			oExtentTest.log(Status.FAIL, LogMsg);
+			throw new Exception(LogMsg);
+
+		}
+		return intRowNumber;
+
+	}
 }
