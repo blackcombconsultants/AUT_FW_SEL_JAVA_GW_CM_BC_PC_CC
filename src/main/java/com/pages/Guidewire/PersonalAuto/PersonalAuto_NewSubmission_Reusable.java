@@ -26,7 +26,6 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 	public void offering() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("offering", strTestCaseName);
 
-		
 		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Offerings");
 		GuidewireAutomate("Offering Selection", OfferingSelection, "selectByVisibleText", "Basic Program");
 	}
@@ -36,14 +35,15 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 	public void qualification() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("qualification", strTestCaseName);
 
-		
 		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Qualifications");
-		GuidewireAutomate("IstApplicantCurrentlyInsured",
-				IstApplicantCurrentlyInsured, "selectByVisibleText", "No - New Driver");
-		GuidewireAutomate("IsApplicantLicenseCurrently_suspended_canceled_Rrevoked", IsApplicantLicenseCurrently_suspended_canceled_Rrevoked, "click", "No");
-		GuidewireAutomate("Has_the_applicants_license_ever_been_canceled_suspended_or_revoked", Has_the_applicants_license_ever_been_canceled_suspended_or_revoked, "click", "No");
-		GuidewireAutomate("Anydriverswithconvictionsformovingtrafficviolationswithinthepast3years", Anydriverswithconvictionsformovingtrafficviolationswithinthepast3years,
-				"click", "No");
+		GuidewireAutomate("IstApplicantCurrentlyInsured", IstApplicantCurrentlyInsured, "selectByVisibleText",
+				"No - New Driver");
+		GuidewireAutomate("IsApplicantLicenseCurrently_suspended_canceled_Rrevoked",
+				IsApplicantLicenseCurrently_suspended_canceled_Rrevoked, "click", "No");
+		GuidewireAutomate("Has_the_applicants_license_ever_been_canceled_suspended_or_revoked",
+				Has_the_applicants_license_ever_been_canceled_suspended_or_revoked, "click", "No");
+		GuidewireAutomate("Anydriverswithconvictionsformovingtrafficviolationswithinthepast3years",
+				Anydriverswithconvictionsformovingtrafficviolationswithinthepast3years, "click", "No");
 		GuidewireAutomate("Hasanypolicyorcoveragebeendeclined_canceled_NonRenewedduringtheprior3years",
 				Hasanypolicyorcoveragebeendeclined_canceled_NonRenewedduringtheprior3years, "click", "No");
 
@@ -52,7 +52,7 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 	@Override
 	public void forms() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("forms", strTestCaseName);
-		
+
 		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Forms");
 
 	}
@@ -60,27 +60,43 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 	@Override
 	public void payments() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-		
+
 		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
 
 	}
-	
+
 	@Override
 
 	public void validationResults() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-		
+
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
+
+	}
+
+	@Override
+
+	public void submissionBound() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
+
 		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
 
 	}
 	
 	@Override
 
-	public void submissionBound() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-		
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
+	public void getRandomVIN(String vingenerator) throws Throwable {
+		switch (vingenerator) {
+		case "vingenerator":
+			url = "https://vingenerator.org/";
+			break;
+		case "randomvin":
+			url = "https://randomvin.com/";
+			break;
 
+		default:
+			driver_ThirdPartyTool = getDriver();
+			driver_ThirdPartyTool.navigate().to("https://vingenerator.org/");
+		}
 	}
-	
 }

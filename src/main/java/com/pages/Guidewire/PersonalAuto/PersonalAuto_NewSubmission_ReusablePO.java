@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public interface PersonalAuto_NewSubmission_ReusablePO {
 
-	final By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' and @role='heading']");
+	final By Screen_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title']");
 
 	final By NewSubmisison_Screen_PALOB_Button = By.xpath("//div[contains(@id,'-8-addSubmission')]");
 
@@ -37,4 +37,5 @@ public interface PersonalAuto_NewSubmission_ReusablePO {
 
 	void submissionBound() throws Throwable;
 
+	void getRandomVIN(String vingenerator) throws Throwable;
 }
