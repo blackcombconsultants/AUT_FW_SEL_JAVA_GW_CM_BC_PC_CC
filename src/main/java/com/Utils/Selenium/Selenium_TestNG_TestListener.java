@@ -107,6 +107,14 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 				pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\PolicyCenter\\ExtentReport_"
 						+ strCurrentDate_ddMMMMyyyy + ".html";
 				break;
+			case "PersonalAuto":
+				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+				pTestDataFilePath = pUserdir + "\\testdata\\PC_PersonalAuto.xlsx";
+				pScreenshots = pUserdir + "\\test-output\\Screenshots\\PersonalAuto\\";
+				pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\PersonalAuto\\index.html";
+				pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\PersonalAuto\\ExtentReport_"
+						+ strCurrentDate_ddMMMMyyyy + ".html";
+				break;
 			case "ClaimsCenter":
 				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ClaimsCenter");
 				pTestDataFilePath = pUserdir + "\\testdata\\ClaimsCenter.xlsx";

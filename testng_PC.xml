@@ -14,14 +14,23 @@
 	<test thread-count="1" parallel="methods" name="AccountCreation">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation" />
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
+				<methods>
+					<exclude name="AUT_PC_AC_01" />
+					<exclude name="AUT_PC_AC_03" />
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 
 	<test thread-count="1" parallel="methods" name="NewSubmission">
-		<classes>
+			<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_NewSubmission" />
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_NewSubmission">
+				<methods>
+					<exclude name="AUT_PC_NS_01" />
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 
