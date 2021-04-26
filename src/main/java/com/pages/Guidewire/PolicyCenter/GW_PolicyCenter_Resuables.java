@@ -188,7 +188,7 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 				lhm_TestCase_Table_Data.get("OS_OrganizationType"));
 
 		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
-		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
+		//GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
 		/*
 		 * GuidewireAutomate("City", GW_City, "",
 		 * lhm_TestCase_Table_Data.get("GW_City")); GuidewireAutomate("County",
@@ -333,8 +333,8 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Please confirm account information", CA_PleaseConfirmAccountInformation, "equals",
 				"Please confirm account information");
 
-		GuidewireAutomate_Validation("First Name", SA_FirstName, "equals", strFirstName);
-		GuidewireAutomate_Validation("Last Name", SA_LastName, "equals", strLastName);
+		GuidewireAutomate_Validation("First Name", SA_FirstName, "valueEquals", strFirstName);
+		GuidewireAutomate_Validation("Last Name", SA_LastName, "valueEquals", strLastName);
 
 		GuidewireAutomate("homephone", CA_HomePhone, "sendkeys", lhm_TestCase_Table_Data.get("CA_HomePhone"));
 		GuidewireAutomate("workphone", CA_WorkPhone, "sendkeys", lhm_TestCase_Table_Data.get("CA_WorkPhone"));
@@ -474,7 +474,7 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Please confirm account information", CA_PleaseConfirmAccountInformation, "equals",
 				"Please confirm account information");
 
-		GuidewireAutomate_Validation("Company Name", SA_CompanyName, "equals", strCompanyName);
+		GuidewireAutomate_Validation("Company Name", SA_CompanyName, "valueEquals", strCompanyName);
 
 		GuidewireAutomate("officephone", CA_OfficePhone, "sendkeys", lhm_TestCase_Table_Data.get("CA_OfficePhone"));
 		GuidewireAutomate("officephone", CA_FaxPhone, "sendkeys", lhm_TestCase_Table_Data.get("CA_FaxPhone"));

@@ -15,6 +15,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -47,9 +48,16 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		oWebElement = null;
 
 		try {
-
 			// Find the Element.
 			oWebElement = driver.findElement(Locator);
+		} catch (StaleElementReferenceException e) {
+			// Find the Element.
+			oWebElement = driver.findElement(Locator);
+		}
+
+		try {
+
+			// to handle StaleElementReferenceException
 
 			// Wait for the Element.
 			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
@@ -245,14 +253,18 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				break;
 			}
 
-			String strTemp = "Element : " + Locator.toString() + " command : [" + command.toString() + "] Value : ["
-					+ strValue.toString() + "]";
-			System.out.println(strTemp);
-			if (command.equals("click")) {
-				LogMsg = "Clicked : " + ElementName;
+			if (!command.isEmpty()) {
+				String LogMsg = "Element : " + Locator.toString() + " command : [" + command.toString() + "] Value : ["
+						+ strValue.toString() + "]";
+				System.out.println(LogMsg);
+			}
 
-			} else {
-				LogMsg = ElementName + " =  [" + strValue.toString() + "]";
+			if (command.isEmpty()) {
+
+			} else if (command.equals("click")) {
+				LogMsg = "Clicked : " + ElementName;
+			} else if (!command.equals("click")) {
+				LogMsg = ElementName + " = " + strValue;
 			}
 			oExtentTest.log(Status.INFO, LogMsg);
 
@@ -426,10 +438,18 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			case "equals":
 				strActual = getText_Element(Locator);
 				bValidation = strActual.equalsIgnoreCase(Expected);
+				
 				break;
 			case "contains":
-				// strActual = getElement_Property(Locator, "getText", "");
-				strActual = getText_Element(Locator);
+				strActual = getText_Element(Locator);				
+				bValidation = strActual.contains(Expected);
+				break;
+			case "valueEquals":
+				strActual = getAttribute_Element(Locator,"value");				
+				bValidation = strActual.equalsIgnoreCase(Expected);
+				break;
+			case "valuecontains":
+				strActual = getAttribute_Element(Locator,"value");				
 				bValidation = strActual.contains(Expected);
 				break;
 			case "isEmpty":
@@ -458,7 +478,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 			LogMsg = ElementName + " => Actual = [" + strActual + "] " + strValidation + " Expected = [" + Expected
 					+ "]";
-
+			System.out.println(LogMsg);
 			if (bValidation) {
 				oExtentTest.log(Status.PASS, LogMsg);
 			} else {
@@ -591,9 +611,19 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 	 * Not Required
 	 */
 	public String getText_Element(By Locator) throws Throwable {
-		return getElement(Locator).getText();
+		try {
+			return getElement(Locator).getText();
+		} catch (StaleElementReferenceException e) {
+			return getElement(Locator).getText();
+		}
 	}
-
+	public String getAttribute_Element(By Locator, String Attribute) throws Throwable {
+		try {
+			return getElement(Locator).getAttribute(Attribute);
+		} catch (StaleElementReferenceException e) {
+			return getElement(Locator).getAttribute(Attribute);
+		}
+	}
 	public String getText_ElementWait(By Locator) throws Throwable {
 		WebElement we = getElement(Locator);
 		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));
