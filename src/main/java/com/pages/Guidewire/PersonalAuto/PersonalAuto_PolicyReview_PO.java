@@ -4,28 +4,116 @@ import org.openqa.selenium.By;
 
 public interface PersonalAuto_PolicyReview_PO {
 
-	final By pr_Screen_title = By
-			.xpath("//div[contains(@id,'PolicyReviewScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By pr_Primary_Named_Insured = By.xpath(
-			"//div[contains(@id,'ReviewSummaryDV-PrimaryNamedInsured')]//div[@class='gw-value-readonly-wrapper']");
-	final By pr_Country = By
-			.xpath("//div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']");
-	final By pr_AddressType = By
-			.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType')]/div[2]//div[@class='gw-label']");
-	final By pr_effective_date = By
-			.xpath("//div[contains(@id,'ReviewSummaryDV-EffectiveDate')]//div[@class='gw-value-readonly-wrapper']");
-	final By pr_Expiration_Date = By
-			.xpath("//div[contains(@id,'ReviewSummaryDV-ExpirationDate')]//div[@class='gw-value-readonly-wrapper']");
+	/*
+	 * Primary Named Insured
+	 */
 
-	final By pr_Auto_Liability_Package = By.xpath(
-			"//tr[contains(@id,'PolicyLineSummaryPanelSet-LineLV-CoverageSummaryLV-0-0-0')]//td[2]//div[@class='gw-value-readonly-wrapper']");
-	final By pr_Medical_Limit = By.xpath(
-			"//tr[contains(@id,'PolicyLineSummaryPanelSet-LineLV-CoverageSummaryLV-1-0-0')]//td[2]//div[@class='gw-value-readonly-wrapper']");
-	final By pr_Uninsured_Motorist_Property_Damage_Limit = By.xpath(
-			"//tr[contains(@id,'PolicyLineSummaryPanelSet-LineLV-CoverageSummaryLV-3-0-0')]//td[2]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_PrimaryNamedInsured = By.xpath(
+			"//div[contains(@id,'ReviewSummaryDV-PrimaryNamedInsured')]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_Address = By.xpath(
+			"//div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_County = By
+			.xpath("//div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_AddressType = By
+			.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType')]//div[@class='gw-label']");
+	final By PR_AddressDescription = By.xpath(
+			"//div[contains(@id,'PolicyAddressDisplayInputSet-AddressDescription_Input')]//div[@class='gw-label']");
+	final By PR_DateQuoteNeeded = By.xpath(
+			"//div[contains(@id,'SubmissionWizard_ReviewSummaryDV-DateQuoteNeeded')]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_EffectiveDate = By.xpath(
+			"//div[contains(@id,'SubmissionWizard_ReviewSummaryDV-EffectiveDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_ExpirationDate = By.xpath(
+			"//div[contains(@id,'SubmissionWizard_ReviewSummaryDV-ExpirationDate_Input')]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_Product = By.xpath(
+			"//div[contains(@id,'SubmissionWizard_ReviewSummaryDV-Product')]//div[@class='gw-value-readonly-wrapper']");
+
+	/*
+	 * Personal Auto Line
+	 */
+	final By PR_PersonalAutoLine = By
+			.xpath("//div[@class='gw-TitleBar--title' and @role='heading' and text()='Personal Auto Line']");
+
+	/*
+	 * Policy Level Coverages
+	 */
+
+	final By PR_PAL_PolicyLevelCoverages = By
+			.xpath("//div[@class='gw-TitleBar--title' and @role='heading' and text()='Policy Level Coverages']");
+
+	final By PR_PAL_PLC_AutoLiabilityPackage = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Auto Liability Package']");
+
+	final By PR_PAL_PLC_AutoLiabilityPackage_Value = By.xpath(
+			"//div[@class='gw-value-readonly-wrapper' and text()='Auto Liability Package']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']");
+
+	final By PR_PAL_PLC_MedicalLimit = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Medical Limit']");
+
+	final By PR_PAL_PLC_MedicalLimit_Value = By.xpath(
+			"//div[@class='gw-value-readonly-wrapper' and text()='Medical Limit']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']");
+
+	/*
+	 * Vehicle Level Coverages
+	 */
+
+	final By PR_PAL_VehicleLevelCoverages = By
+			.xpath("//div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle Level Coverages']");
+	final By PR_PAL_VLC_Garage1 = By
+			.xpath("//div[@class='gw-TitleBar--title' and @role='heading' and text()='Garage 1']");
+	final By PR_PAL_VLC_Vehicle1 = By
+			.xpath("//div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle 1']");
+
+	final By PR_PAL_VLC_V_Year = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Year_Cell')]//div[@class='gw-value-readonly-wrapper']");
+	final By PR_PAL_VLC_V_VIN = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Vin_Cell')]//div[@class='gw-value-readonly-wrapper']");
+
+	/*
+	 * PrimaryDrivers
+	 */
+	final By PR_PAL_VLC_PrimaryDriver = By
+			.xpath("//div[@class='gw-VerbatimWidget--inner' and contains(text(),'Primary Driver')]");
+
+	/*
+	 * AssignedDrivers
+	 */
+	final By PR_PAL_VLC_AssignedDrivers = By
+			.xpath("//div[@class='gw-VerbatimWidget--inner' and text()='Assigned Drivers']");
+	final By PR_PAL_VLC_AD_Driver = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Driver_Cell')]//div[@class='gw-value-readonly-wrapper']");
+
+	/*
+	 * VehicleRateModifiers
+	 */
+	final By PR_PAL_VLC_V_VehicleRateModifiers = By
+			.xpath("//div[@class='gw-VerbatimWidget--inner' and text()='Vehicle Rate Modifiers']");
+	final By PR_PAL_VLC_V_VRM_AntiLockBrakesDiscount = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'ModIterator-0-VehicleModifierCell_Cell') and contains(@id,'VehicleModifierCell_Cell')]//div[contains(@class,'gw-label')]");
+	final By PR_PAL_VLC_V_VRM_AntiTheftDiscount = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'ModIterator-2-VehicleModifierCell_Cell') and contains(@id,'VehicleModifierCell_Cell')]//div[contains(@class,'gw-label')]");
+
+	/*
+	 * VehicleCoverages
+	 */
+	final By PR_PAL_VLC_V_VehicleCoverages = By
+			.xpath("//div[@class='gw-VerbatimWidget--inner' and text()='Vehicle Coverages']");
+
+	final By PR_PAL_VLC_V_VC_ComprehensiveDeductible = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Comprehensive Deductible']");
+
+	final By PR_PAL_VLC_V_VC_ComprehensiveDeductible_Value = By.xpath(
+			"//div[@class='gw-value-readonly-wrapper' and text()='Comprehensive Deductible']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']");
+
+	final By PR_PAL_VLC_V_VC_TowingandLaborLimit = By.xpath(
+			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Towing and Labor Limit']");
+
+	final By PR_PAL_VLC_V_VC_TowingandLaborLimit_Value = By.xpath(
+			"//div[@class='gw-value-readonly-wrapper' and text()='Towing and Labor Limit']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']");
 
 	void pr_policyDetails() throws Throwable;
 
-	void pr_Coverages() throws Throwable;
+	void pr_PolicyLevelCoverages() throws Throwable;
+
+	void pr_VehicleLevelCoverages() throws Throwable;
 
 }

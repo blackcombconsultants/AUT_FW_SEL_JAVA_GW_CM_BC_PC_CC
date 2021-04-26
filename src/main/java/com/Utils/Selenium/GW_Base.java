@@ -62,16 +62,20 @@ public class GW_Base {
 	public static LinkedHashMap<String, String> lhm_TestCase_Table_Data = new LinkedHashMap<String, String>();
 	public static String strTestCaseName=null;
 
-	public static String strPolicyNumber = strCurrentDate_ddMMMMyyyyHHmmss;
-	public static String strAccountNumber = strCurrentDate_ddMMMMyyyy;
-	public static String strAccountName;
-	public static String strAmount;
-
 	public static String url;
 	public static String StrBrowser;
 	public static String StrEnvironment;
 	public static String strGW_Application;
 	public static String strGW_Country;
 	public static String strGW_State;
+
+	public static String strJob;
+	public static String strWorkflow;
+	public static String strLOB;
+	public static String strEffectiveDate;
+	public static String strAccountName;
+	public static String strAccountNumber;
+	public static String strPolicyNumber;
+	public static String strAmount;
 
 }

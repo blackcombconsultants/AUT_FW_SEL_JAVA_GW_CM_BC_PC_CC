@@ -13,6 +13,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 public class Selenium_TestNG_TestListener extends GW_Base implements ITestListener {
+	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
 	public void onTestStart(ITestResult result) {
 
@@ -20,7 +21,6 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 
 			GW_GetDriver oDriver = new GW_GetDriver();
 			Selenium_Utils_Executables oExe = new Selenium_Utils_Executables();
-			Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
 			strTestCaseName = result.getMethod().getMethodName();
 			oExtentTest = oExtentReports.createTest(strTestCaseName);

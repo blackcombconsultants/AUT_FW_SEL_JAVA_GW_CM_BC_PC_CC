@@ -227,6 +227,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			case "sendkeys":
 				oWebElement.sendKeys(strValue);
 				break;
+			case "clearANDsendkeys":
+				oWebElement.clear();
+				oWebElement.sendKeys(strValue);
+				break;
 			case "selectByIndex":
 				new Select(oWebElement).selectByIndex(Integer.parseInt(strValue));
 				break;
