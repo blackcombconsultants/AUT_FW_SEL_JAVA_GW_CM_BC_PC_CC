@@ -75,12 +75,12 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 				VE_ADV_Percentageeachdriverusethisvehicle, "equals",
 				"What percentage does each driver use this vehicle?");
 
-		GuidewireAutomate("Add", VE_AssignDrivers_Add_Button, "click", "NA");
-		GuidewireAutomate("DriverName", VE_AssignDrivers_Add_DriverName, "click", "NA");
-		GuidewireAutomate_Validation(" AssignDrivers DriverName", VE_AssignDrivers_DriverName, "click", "NA");
-		GuidewireAutomate("AssignDrivers Driverpercentage", VE_AssignDrivers_Driverpercentage, "clear", "NA");
-		GuidewireAutomate("AssignDrivers Driverpercentage", VE_AssignDrivers_Driverpercentage, "sendkeys",
-				lhm_TestCase_Table_Data.get("VE_VD_BVI_AntiTheftDiscount"));
+		GuidewireAutomate("Add", VE_ADV_Add_Button, "click", "NA");
+		GuidewireAutomate("Driver Select", VE_ADV_Add_Select, "click", "NA");
+		GuidewireAutomate_Validation("Driver", VE_ADV_Driver, "click", "NA");
+		GuidewireAutomate("Percentage", VE_ADV_Percentage, "clear", "NA");
+		GuidewireAutomate("Percentage", VE_ADV_Percentage, "sendkeys",
+				lhm_TestCase_Table_Data.get("VE_ADV_Percentage"));
 
 	}
 
@@ -110,7 +110,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 	@Override
 	public void ve_AdditionalInterest_Add_FromAddressBook() throws Throwable {
-		
+
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicle", strTestCaseName);
 
 		GuidewireAutomate("Additional Interest", VE_Tab_AdditionalInterest, "click", "NA");

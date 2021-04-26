@@ -63,20 +63,20 @@ public interface PersonalAuto_VehiclesPO {
 	final By VE_ADV_Percentageeachdriverusethisvehicle = By.xpath(
 			"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='What percentage does each driver use this vehicle?']");
 
-	final By VE_AssignDrivers_Add_Button = By
+	final By VE_ADV_Add_Button = By
 			.xpath("//div[contains(@class,'gw-AddButtonWidget')]/div[contains(@class,'gw-action--expand-button')]");
 	final By VE_AssignDrivers_Remove_Button = By.xpath(
 			"//div[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-Remove')]/div[@role='button']");
 	final By VE_AssignDrivers_Add_DriverName = By.xpath(
 			"//div[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-AddDriver')]//div[@class='gw-label']");
 
-	final By VE_AssignDrivers_Select = By.xpath(
+	final By VE_ADV_Add_Select = By.xpath(
 			"//tr[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV') and contains(@class,'gw-standard-row')]/td[contains(@class,'gw-impl-cell--CB')]//div[contains(@id,'_Checkbox') and contains(@class,'gw-IteratorEntryCheckBoxWidget')]/input[@type='checkbox']");
 
-	final By VE_AssignDrivers_DriverName = By.xpath(
+	final By VE_ADV_Driver = By.xpath(
 			"//tr[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV') and contains(@class,'gw-standard-row')]/td[contains(@id,'Driver_Cell') and contains(@class,'gw-CellWidget')]//div[contains(@id,'Driver') and contains(@class,'gw-actionValue')]//div[contains(@id,'Driver_button')]");
 
-	final By VE_AssignDrivers_Driverpercentage = By.xpath(
+	final By VE_ADV_Percentage = By.xpath(
 			"//tr[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV') and contains(@class,'gw-standard-row')]/td[contains(@id,'Percentage_Cell') and contains(@class,'gw-CellWidget')]//div[contains(@id,'Percentage') and contains(@class,'gw-editable')]//input[contains(@name,'Percentage')]");
 
 	/*

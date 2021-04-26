@@ -10,13 +10,13 @@ import org.openqa.selenium.By;
 
 public interface GW_LoginCM_PC_BC_CC_PO {
 
-	final By Username = By.xpath("//input[contains(@name,'LoginDV-username')]");
-	final By Password = By.xpath("//input[contains(@name,'LoginDV-password')]");
-	final By Login = By.xpath("//div[@id='Login-LoginScreen-LoginDV-submit']//div");
+	final By GW_Username = By.xpath("//input[contains(@name,'LoginDV-username')]");
+	final By GW_Password = By.xpath("//input[contains(@name,'LoginDV-password')]");
+	final By GW_Login_Button = By.xpath("//div[@id='Login-LoginScreen-LoginDV-submit']//div");
 	
-	final By ToolBar = By.id("TabBar-UnsavedWorkTabBarLink");
-	final By Setting = By.id("gw-TabBarWidget--settings");
-	final By Logout = By.id("TabBar-LogoutTabBarLink");
+	final By GW_ToolBar_Link = By.id("TabBar-UnsavedWorkTabBarLink");
+	final By GW_Setting_Link = By.id("gw-TabBarWidget--settings");
+	final By GW_Logout_Link = By.id("TabBar-LogoutTabBarLink");
 
 	/*
 	 * ContactManagement

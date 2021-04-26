@@ -17,7 +17,7 @@ import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables;
 
 public class GW_PC_NewSubmission extends GW_GetDriver {
 
-	@Test(enabled = false)
+	@Test
 	public void AUT_PC_AC_04() throws Throwable {
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
 		GW_TabNavigation_CM_PC_BC_CC tab = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
@@ -33,24 +33,22 @@ public class GW_PC_NewSubmission extends GW_GetDriver {
 		PersonalAuto_Quote paq = new PersonalAuto_Quote(driver, oExtentTest);
 
 		lg.login_PolicyCenter();
-		tab.navigate_AccountTab_AccountNumberSearch("9747537483");
+		pcr.createPersonAccount();
 		tab.gwPolicyCenter_MenuNavigation("NewSubmission");
-		pcr.pc_NewSubmission();
-		par.NewSubmisisons_SelectLOB();
+		pcr.newSubmissions();
+		par.newSubmission_LOB();
 		par.offering();
 		pcr.clickButton("Next");
 		par.qualification();
 		pcr.clickButton("Next");
-		pi.pi_PolicyDetails();
-		pi.pi_primaryInsured_NewPerson();
-		pi.pi_AdditionalNamedInsured_Add_NewPerson();
+		pi.pi_PrimaryNamedInsured();
 		pi.pi_OfficialID();
-		pi.pi_SecondaryInsured_NewPerson();
+		pi.pi_PolicyDetails();
 		pi.pi_AffinityGroup();
 		pi.pi_ProducerOfRecord();
 		pi.pi_UnderWritingCompany();
 		pcr.clickButton("Next");
-		pad.driver_Add_NewPerson();
+		pad.driver_Add_ExistingDriver();
 		pcr.clickButton("Next");
 		pav.ve_CreateVehicles();
 		pav.ve_AssaignDriver();
@@ -58,13 +56,21 @@ public class GW_PC_NewSubmission extends GW_GetDriver {
 		pcr.clickButton("Next");
 		para.RA_ApproveUWIssues();
 		pcr.clickButton("Next");
-		papr.pr_VehiclesLevelCoverages();
+		papr.pr_policyDetails();
+		papr.pr_PolicyLevelCoverages();
+		papr.pr_VehicleLevelCoverages();
 		pcr.clickButton("Quote");
 		// paq.pa_QuoteDetails();
 		// paq.pa_PolicyPremium();
 		pcr.clickButton("Next");
-		pcr.pc_LOB_Forms();
-		pcr.clickButton("Next");
 
+		strJob = pcr.infoBar("Job");
+		strWorkflow = pcr.infoBar("Workflow");
+		strLOB = pcr.infoBar("LOB");
+		strEffectiveDate = pcr.infoBar("EffectiveDate");
+		strAccountName = pcr.infoBar("AccountName");
+		strAccountNumber = pcr.infoBar("AccountNumber");
+		strPolicyNumber = pcr.infoBar("PolicyNumber");
+		strAmount = pcr.infoBar("AccountName");
 	}
 }

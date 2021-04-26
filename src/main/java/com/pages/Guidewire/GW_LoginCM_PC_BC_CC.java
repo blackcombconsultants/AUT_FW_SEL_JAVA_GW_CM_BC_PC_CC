@@ -21,11 +21,11 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
 
-		GuidewireAutomate("Username", Username, "sendkeys", lhm_TestCase_Table_Data.get("TD_UserName"));
-		GuidewireAutomate("Password", Password, "sendkeys", lhm_TestCase_Table_Data.get("TD_Password"));
+		GuidewireAutomate("Username", GW_Username, "sendkeys", lhm_TestCase_Table_Data.get("GW_Username"));
+		GuidewireAutomate("Password", GW_Password, "sendkeys", lhm_TestCase_Table_Data.get("GW_Password"));
 		// GuidewireAutomate("Password", Password, "sendkeys", new
 		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
-		GuidewireAutomate("Login", Login, "click", "Null");
+		GuidewireAutomate("Login", GW_Login_Button, "click", lhm_TestCase_Table_Data.get("GW_Login_Button"));
 
 		oExtentTest.log(Status.PASS, "Login succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
@@ -37,8 +37,8 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 	}
 
 	public void logout_Guidewire() throws Throwable {
-		GuidewireAutomate("Setting", Setting, "click", "Null");
-		GuidewireAutomate("Logout", Logout, "click", "Null");
+		GuidewireAutomate("Setting", GW_Setting_Link, "click", "Null");
+		GuidewireAutomate("Logout", GW_Logout_Link, "click", "Null");
 
 		oExtentTest.log(Status.PASS, "Logout is succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));

@@ -30,7 +30,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test(enabled = false)
+	@Test
 	public void AUT_PC_AC_02() throws Throwable {
 
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
@@ -42,12 +42,12 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 		// navigate to new account
 		mn.gwPolicyCenter_MenuNavigation("NewAccount");
 		// pc_CreatePersonAccount
-		gwPC.pc_CreatePersonAccount();
+		gwPC.createPersonAccount();
 		lg.logout_PolicyCenter();
 
 	}
 
-	@Test(enabled = false)
+	@Test
 	public void AUT_PC_AC_03() throws Throwable {
 
 		GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
@@ -60,7 +60,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 		mn.gwPolicyCenter_MenuNavigation("NewAccount");
 
 		// pc_CreateCompanyAccount
-		gwPC.pc_CreateCompanyAccount();
+		gwPC.createCompanyAccount();
 		lg.logout_PolicyCenter();
 
 	}
