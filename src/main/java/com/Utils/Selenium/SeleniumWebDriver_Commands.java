@@ -51,8 +51,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			// Find the Element.
 			oWebElement = driver.findElement(Locator);
 		} catch (StaleElementReferenceException e) {
-			// Find the Element.
-			oWebElement = driver.findElement(Locator);
+			try {
+				oWebElement = driver.findElement(Locator);
+			} catch (StaleElementReferenceException e2) {
+				oWebElement = driver.findElement(Locator);
+			}
 		}
 
 		try {
@@ -185,9 +188,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 		oWebElement = null;
 		LogMsg = null;
-		Actions oActions = new Actions(driver);
 		Action oAction;
+
 		try {
+
+			Actions oActions = new Actions(driver);
 
 			// Get the Element.
 			oWebElement = getElement(Locator);
@@ -198,10 +203,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				break;
 			case "alertdismiss":
 				driver.switchTo().alert().dismiss();
-				break;
-			case "moveToElement":
-				oAction = oActions.moveToElement(oWebElement).build();
-				oAction.perform();
 				break;
 			case "keyDownF12":
 				oAction = oActions.keyDown(oWebElement, Keys.F12).build();
@@ -221,6 +222,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				break;
 			case "doubleClick":
 				oAction = oActions.doubleClick(oWebElement).build();
+				oAction.perform();
+				break;
+			case "moveToElement":
+				oAction = oActions.moveToElement(oWebElement).build();
 				oAction.perform();
 				break;
 			case "clear":
@@ -269,7 +274,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			oExtentTest.log(Status.INFO, LogMsg);
 
 		} catch (Exception e) {
-			LogMsg = ElementName + " =  [" + strValue.toString() + "]";
+			LogMsg = ElementName + " =  [" + strValue + "]";
 			oExtentTest.log(Status.FAIL, LogMsg);
 			e.printStackTrace();
 			throw e;
@@ -438,22 +443,31 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			case "equals":
 				strActual = getText_Element(Locator);
 				bValidation = strActual.equalsIgnoreCase(Expected);
-				
 				break;
 			case "contains":
-				strActual = getText_Element(Locator);				
+				strActual = getText_Element(Locator);
 				bValidation = strActual.contains(Expected);
 				break;
+			case "FirstSelectedOptionEquals":
+				strActual = getFirstSelectedOption_Element(Locator);
+				bValidation = strActual.equalsIgnoreCase(Expected);
+				break;
 			case "valueEquals":
-				strActual = getAttribute_Element(Locator,"value");				
+				strActual = getAttribute_Element(Locator, "value");
 				bValidation = strActual.equalsIgnoreCase(Expected);
 				break;
 			case "valuecontains":
-				strActual = getAttribute_Element(Locator,"value");				
+				strActual = getAttribute_Element(Locator, "value");
 				bValidation = strActual.contains(Expected);
 				break;
 			case "isEmpty":
 				bValidation = ElementName.isEmpty();
+				break;
+			case "isEnabled":
+				bValidation = getElement(Locator).isEnabled();
+				break;
+			case "isSelected":// Checkbox
+				bValidation = getElement(Locator).isSelected();
 				break;
 			case "isDisplayed":
 				bValidation = oWebDriverWait.until(ExpectedConditions.visibilityOf(getElement(Locator))) != null;
@@ -617,6 +631,23 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			return getElement(Locator).getText();
 		}
 	}
+
+	public String getFirstSelectedOption_Element(By Locator) throws Throwable {
+		try {
+			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
+		} catch (StaleElementReferenceException e) {
+			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
+		}
+	}
+
+	public String getOptions_Element(By Locator) throws Throwable {
+		try {
+			return new Select(getElement(Locator)).getOptions().toString();
+		} catch (StaleElementReferenceException e) {
+			return new Select(getElement(Locator)).getOptions().toString();
+		}
+	}
+
 	public String getAttribute_Element(By Locator, String Attribute) throws Throwable {
 		try {
 			return getElement(Locator).getAttribute(Attribute);
@@ -624,6 +655,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			return getElement(Locator).getAttribute(Attribute);
 		}
 	}
+
 	public String getText_ElementWait(By Locator) throws Throwable {
 		WebElement we = getElement(Locator);
 		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));

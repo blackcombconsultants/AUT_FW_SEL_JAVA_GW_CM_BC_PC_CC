@@ -1,34 +1,6 @@
 
 
 
-		Maven
-		----------------------------------------------------------------------------------
-		----------------------------------------------------------------------------------
-
-	
-		<test name="ChromeTest2" parallel="methods" thread-count="2">
-			<parameter name="StrBrowser" value="Chrome" />
-			<parameter name="TD_Username" value="9003130341" />
-			<parameter name="TD_password" value="U3JlRS5BdWcyMA==" />
-			<parameter name="TD_ProdType" value="Books" />
-			<parameter name="TD_ProdName"
-				value="Call Me by Your Name: A Novel (International Edition)" />
-			<classes>
-				<class name="com.wrapers.BaseTest">
-					<methods>
-						<exclude name=".*" />
-					</methods>
-				</class>
-				<class name="com.amazon.AmazonTest1">
-					<methods>
-						<exclude name=".*" />
-					</methods>
-				</class>
-			</classes>
-		</test> <!-- Test -->
-	
-
-
 	
 		xpath example
 		----------------------------------------------------------------------------------
@@ -130,6 +102,18 @@
 					lhm_TestCase_Table_Data.get("PrimaryNI_Name"));
 		}
 	
+			// Hande Dynamic Element - Click Existing driver
+		if (lhm_TestCase_Table_Data.get("DR_Add_Existing").contains("refer")) {
+			strAccountName = lhm_TestCase_Data.get("PrimaryNI_Name");
+		} else {
+			strAccountName = lhm_TestCase_Table_Data.get("DR_Add_Existing");
+		}
+		By DR_DriversDetails_Add_ExistingDriver_Name = By.xpath(
+				"//div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'DriversLV_tb-AddDriver-AddExistingContact')]//div[contains(@id,'UnassignedDriver')]//div[@class='gw-label' and text()='"
+						+ strAccountName + "']");
+		GuidewireAutomate("Existing Driver Name", DR_DriversDetails_Add_ExistingDriver_Name, "click", strAccountName);
+	
+	
 		// Validating Risk Analysis screen
 
 
@@ -228,6 +212,75 @@ public LinkedHashMap<String, String> getData(String process, String dataName,Lin
 	public static void updateCSV(String filePath, String match, String columnName, String valueToBeUpdated)
 	public static void updateCSVWithRowNum(String filePath, int rownum, String columnName, String valueToBeUpdated)
 		int col = findColumnNumberCSV(filePath, columnName);
+
+
+		Maven
+		----------------------------------------------------------------------------------
+		----------------------------------------------------------------------------------
+
+	
+		<test name="ChromeTest2" parallel="methods" thread-count="2">
+			<parameter name="StrBrowser" value="Chrome" />
+			<parameter name="TD_Username" value="9003130341" />
+			<parameter name="TD_password" value="U3JlRS5BdWcyMA==" />
+			<parameter name="TD_ProdType" value="Books" />
+			<parameter name="TD_ProdName"
+				value="Call Me by Your Name: A Novel (International Edition)" />
+			<classes>
+				<class name="com.wrapers.BaseTest">
+					<methods>
+						<exclude name=".*" />
+					</methods>
+				</class>
+				<class name="com.amazon.AmazonTest1">
+					<methods>
+						<exclude name=".*" />
+					</methods>
+				</class>
+			</classes>
+		</test> <!-- Test -->
+	
+	<test thread-count="1" parallel="methods" name="AccountCreation">
+		<classes>
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
+				<methods>
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_1_CreateNewPersonAccount" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_2_SearchPerson" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_3_ModifyPerson" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_4_WithdrawAccount" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_5_OrganizationModify" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_6_CheckforDuplicates" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_1_CreateNewCompanyAccount" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="1" parallel="methods" name="NewSubmission">
+			<classes>
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_NewSubmission">
+				<methods>
+					<include name ="AUT_PA_PC_NS_1_BasicProgram" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="1" parallel="methods" name="Issuance">
+			<classes>
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Issuance">
+				<methods>
+					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_5_IssuePolicy" />
+					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_4_Editpolicytransaction" />
+					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_1_WithdrawTransaction" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	
 
 
 

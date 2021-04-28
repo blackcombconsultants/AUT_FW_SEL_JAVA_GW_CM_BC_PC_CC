@@ -40,4 +40,10 @@ public interface PersonalAuto_SubmissionBoud_PO {
 
 	void Go_To_Your_Desktop() throws Throwable;
 
+	void submissionManager() throws Throwable;
+
+	void NotTaken() throws Throwable;
+
+	void SubmissionDecline() throws Throwable;
+
 }

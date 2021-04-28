@@ -71,24 +71,26 @@ public interface PersonalAuto_Payments_PO {
 	final By pa_Notes = By.xpath("//div[contains(@id,'PaymentMethodInputSet-Notes')]//input[@type='text']");
 	final By pa_OK_button = By.xpath("//div[text()='OK']");
 
-	void pa_Payment() throws Throwable;
+	void premiumSummary() throws Throwable;
 
-	void pa_Premium_Summary(String testingType) throws Throwable;
+	void payments() throws Throwable;
 
-	void pa_payments(String Type) throws Throwable;
+	void invoicing() throws Throwable;
 
-	void pa_BillingMethod(String Type) throws Throwable;
+	void billing() throws Throwable;
 
-	void pa_Alternate_Billing_Account(String Type) throws Throwable;
+	void billing_AlternateBillingAccount_Search() throws Throwable;
 
-	void pa_Alternate_Billing_Account_Search(String Type) throws Throwable;
+	void billing_AlternateBillingAccount_BillingSubaccounts() throws Throwable;
 
-	void pa_Billing_Contact(String Type) throws Throwable;
+	void billingContact(String Account) throws Throwable;
 
-	void pa_Payment_Schedule(String Type) throws Throwable;
+	void paymentSchedule() throws Throwable;
 
-	void pa_Invoicing_Overrides() throws Throwable;
+	void invoicingOverrides() throws Throwable;
 
-	void pa_Pay_Using(String type) throws Throwable;
+	void upFrontPayment() throws Throwable;
+
+	void payUsing() throws Throwable;
 
 }

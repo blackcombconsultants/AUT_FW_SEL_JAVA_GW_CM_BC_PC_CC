@@ -18,16 +18,17 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 	public void pa_Coverages() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 		GuidewireAutomate_Validation("Coverages Header", PA_Coverages_Screen_titlebar, "equals", "PA Coverages");
-		CoveragesAppliedtoallvehicles("EDIT");
-		CoveragesAppliedtoallvehicles("VERIFY");
-		AdditionalCoverages("EDIT");
-		ExclusionsAndConditions("EDIT");
+		coveragesAppliedtoallVehiclesIn("EDIT");
+		coveragesAppliedperVehiclesIn("VERIFY");
+		additionalcoveragesAppliedtoallVehiclesIn("EDIT");
+		additionalcoveragesAppliedperVehiclesIn("EDIT");
+		exclusionsAndConditions("EDIT");
 		SearchAddExclusionorCondition("EDIT");
 
 	}
 
 	@Override
-	public void CoveragesAppliedtoallvehicles(String testingType) throws Throwable {
+	public void coveragesAppliedtoallVehiclesIn(String testingType) throws Throwable {
 		switch (testingType) {
 		case "EDIT":
 			// --------> selecting AutoLiabilityPackage
@@ -61,7 +62,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 	}
 
 	@Override
-	public void AdditionalCoverages(String testingType) throws Throwable {
+	public void additionalcoveragesAppliedtoallVehiclesIn(String testingType) throws Throwable {
 		switch (testingType) {
 		case "EDIT":
 			// ------>clicking on Additional Coverages tab
@@ -80,7 +81,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 	}
 
 	@Override
-	public void ExclusionsAndConditions(String testingType) throws Throwable {
+	public void exclusionsAndConditions(String testingType) throws Throwable {
 		switch (testingType) {
 		case "EDIT":
 			// ----->clicking on Exclusions and Conditions tab
@@ -117,6 +118,18 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		default:
 			break;
 		}
+	}
+
+	@Override
+	public void coveragesAppliedperVehiclesIn(String testingType) throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void additionalcoveragesAppliedperVehiclesIn(String testingType) throws Throwable {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
