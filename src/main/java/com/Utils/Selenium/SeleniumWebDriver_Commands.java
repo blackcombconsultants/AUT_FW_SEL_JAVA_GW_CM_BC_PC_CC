@@ -232,6 +232,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				oWebElement.clear();
 				break;
 			case "click":
+				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
 				oWebElement.click();
 				break;
 			case "close":
@@ -318,6 +319,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				oWebElement.clear();
 				break;
 			case "click":
+				// oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
 				oWebElement.click();
 				break;
 			default:
