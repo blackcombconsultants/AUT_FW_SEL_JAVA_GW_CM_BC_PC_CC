@@ -88,8 +88,7 @@ public interface PersonalAuto_VehiclesPO {
 	final By VE_AI_PersonalVehicleAdditionalInterests = By.xpath(
 			"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Personal Vehicle Additional Interests']");
 
-	final By VE_AI_PVAI_Add_Button = By
-			.xpath("//div[contains(@id,'AdditionalInterestLV_tb-Add')]/div[@role='button']");
+	final By VE_AI_PVAI_Add_Button = By.xpath("//div[contains(@id,'AdditionalInterestLV_tb-Add')]/div[@role='button']");
 	final By VE_AI_PVAI_Remove_Button = By
 			.xpath("//div[contains(@id,'AdditionalInterestLV_tb-Remove')]/div[@role='button']");
 
@@ -99,11 +98,8 @@ public interface PersonalAuto_VehiclesPO {
 			"//div[contains(@id,'AdditionalInterestLV_tb-AddContactsButton') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='New Person']");
 	final By VE_AI_PVAI_Add_FromAddressBook = By.xpath(
 			"//div[contains(@id,'AdditionalInterestLV_tb-AddContactsButton') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='From Address Book']");
-	final By VE_AI_PVAI_Add_OtherContacts = By.xpath(
-			"//div[contains(@id,'AdditionalInterestLV_tb-AddContactsButton') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='Other Contacts']");
-
-	final By DR_DriversDetails_Add_OtherContacts_Name = By.xpath(
-			"//div[contains(@id,'AdditionalInterestLV_tb-AddContactsButton') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'AddContactsButton-AddOtherContact')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'acctContact')]");
+	final By VE_AI_PVAI_Add_ExistingAdditionalInterest = By.xpath(
+			"//div[contains(@id,'AdditionalInterestLV_tb-AddContactsButton') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='Existing Additional Interest']");
 
 	final By VE_AI_PVAI_Select = By.xpath(
 			"//tr[contains(@id,'AdditionalInterestLV') and contains(@class,'gw-standard-row')]/td[contains(@class,'gw-impl-cell--CB')]//div[contains(@id,'_Checkbox') and contains(@class,'gw-IteratorEntryCheckBoxWidget')]/input[@type='checkbox']");
@@ -132,7 +128,7 @@ public interface PersonalAuto_VehiclesPO {
 
 	void additionalInterest_Add_FromAddressBook() throws Throwable;
 
-	void additionalInterest_Add_OtherContacts() throws Throwable;
+	void additionalInterest_Add_ExistingAdditionalInterest() throws Throwable;
 
 	void ve_RemoveVehicles() throws Throwable;
 
