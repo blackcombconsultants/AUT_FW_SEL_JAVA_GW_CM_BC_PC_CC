@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter;
 
+import java.util.Date;
 import java.util.LinkedHashMap;
 
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 	String strAccountName;
 	LinkedHashMap<String, String> lhm_TestCase_Table_Data1;
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
+	GW_TabNavigation_CM_PC_BC_CC tab = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
 
 	public GW_PolicyCenter_Resuables(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
@@ -139,36 +141,6 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		return strInfobar;
 	}
 
-	/*
-	 * --------------------------------------------------------------
-	 * searchAccountInformation
-	 * --------------------------------------------------------------
-	 */
-
-	public void pc_SearchAccountInformation(String strAccountName) throws Throwable {
-
-//		// navigate to new account
-//		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-//		//t.navigate_AccountTab_AccountNumberSearch("6800979174");
-//		t.navigate_AccountTab_AccountNumberSearch("6800979174");
-
-		GuidewireAutomate("Company Name", SA_CompanyName, "clearAndsendkeys", strAccountName);
-
-		/*
-		 * GuidewireAutomate("City", City, "sendkeys", ""); GuidewireAutomate("county",
-		 * County, "sendkeys", ""); GuidewireAutomate("ZipCode", ZipCode, "sendkeys",
-		 * "");
-		 */
-		clickButton("Search");
-
-	}
-
-	public void Account_Search_SubTab() throws Throwable {
-
-		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-		t.navigate_AccountTab_AccountNumberSearch("6800979174");
-	}
-
 	@Override
 	public void select_SearchResult(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable {
 		GuidewireAutomate_waitForElement(Select_Button, "elementToBeClickable",
@@ -188,7 +160,8 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 				lhm_TestCase_Table_Data.get("OS_OrganizationType"));
 
 		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
-		//GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
+		// GuidewireAutomate("State", GW_State, "selectByVisibleText",
+		// lhm_TestCase_Table_Data.get("GW_State"));
 		/*
 		 * GuidewireAutomate("City", GW_City, "",
 		 * lhm_TestCase_Table_Data.get("GW_City")); GuidewireAutomate("County",
@@ -264,8 +237,8 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 			strFirstName = strCurrentDate_ddMMMMyyyy;
 		} else if (strFirstName.contentEquals("Now")) {
 			strFirstName = strCurrentDate_ddMMMMyyyyHHmmss;
-		} else if (strFirstName.contentEquals("Now")) {
-			strFirstName = String.valueOf(System.currentTimeMillis());			
+		} else if (strFirstName.contentEquals("NowSystem")) {
+			strFirstName = String.valueOf(System.currentTimeMillis());
 		}
 
 		String strLastName = lhm_TestCase_Table_Data.get("SA_LastName");
@@ -408,7 +381,7 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 		} else if (strCompanyName.contentEquals("Now")) {
 			strCompanyName = strCurrentDate_ddMMMMyyyyHHmmss;
 		} else if (strCompanyName.contentEquals("Now")) {
-			strCompanyName = String.valueOf(System.currentTimeMillis());			
+			strCompanyName = String.valueOf(System.currentTimeMillis());
 		}
 
 		String strAccountNickname = strCompanyName;
@@ -540,7 +513,7 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 
 	@Override
 
-	public void newSubmissions() throws Throwable {
+	public void newSubmissions_Edit() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("newSubmissions", strTestCaseName);
 
@@ -563,7 +536,7 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 				lhm_TestCase_Table_Data.get("NS_PO_QuoteType"));
 		GuidewireAutomate("Default Base State", NS_PO_DefaultBaseState, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("NS_PO_DefaultBaseState"));
-		GuidewireAutomate("Default Effective Date", NS_PO_DefaultEffectiveDate, "sendkeys",
+		GuidewireAutomate("Default Effective Date", NS_PO_DefaultEffectiveDate, "clearAndsendkeys",
 				lhm_TestCase_Table_Data.get("NS_PO_DefaultEffectiveDate"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
@@ -571,4 +544,135 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 
 	}
 
+	public void newSubmissions_Verify() throws Throwable {
+
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("newSubmissions", strTestCaseName);
+
+		/*
+		 * Select Producer
+		 */
+		GuidewireAutomate_Validation("Select Producer", PC_SelectProducer, "equals", "Select Producer");
+
+		/*
+		 * Product Offers
+		 */
+		GuidewireAutomate_Validation("Organization", CA_SP_Organization, "valueEquals",
+				lhm_TestCase_Table_Data.get("NS_PO_Organization"));
+		GuidewireAutomate_Validation("Producer Code", CA_SP_ProducerCode, "FirstSelectedOptionEquals",
+				lhm_TestCase_Table_Data.get("NS_PO_ProducerCode"));
+
+		GuidewireAutomate_Validation("Single or Multiple Policies", NS_PO_SingleorMultiplePolicies, "valueEquals",
+				lhm_TestCase_Table_Data.get("NS_PO_SingleorMultiplePolicies"));
+		GuidewireAutomate_Validation("Quote Type", NS_PO_QuoteType, "FirstSelectedOptionEquals",
+				lhm_TestCase_Table_Data.get("NS_PO_QuoteType"));
+		GuidewireAutomate_Validation("Default Base State", NS_PO_DefaultBaseState, "FirstSelectedOptionEquals",
+				lhm_TestCase_Table_Data.get("NS_PO_DefaultBaseState"));
+		GuidewireAutomate_Validation("Default Effective Date", NS_PO_DefaultEffectiveDate, "valueEquals",
+				sdf_ddMMMyyyy_GW1.format(new Date()));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
+
+	@Override
+	public void offering() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("offering", strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, " equals",
+				"Offerings");
+		GuidewireAutomate("Offering Selection", Of_OfferingSelection, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("Of_OfferingSelection"));
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	@Override
+	public void forms() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("forms", strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Forms");
+
+	}
+
+	@Override
+	public void payments() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
+
+	@Override
+
+	public void validationResults() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	@Override
+	public void gwPolicyCenter_TabNavigation_Acct_Search() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("search", strTestCaseName);
+
+		strAccountNumber = lhm_TestCase_Table_Data.get("AccountNumber");
+
+		tab.gwPolicyCenter_TabNavigation("Acct Search", strAccountNumber);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
+
+	@Override
+	public void gwPolicyCenter_TabNavigation_Sub_Search() throws Throwable {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void gwPolicyCenter_TabNavigation_Policy_Search() throws Throwable {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void gwPolicyCenter_TabNavigation_Contact_Search() throws Throwable {
+		// TODO Auto-generated method stub
+
+	}
+
+	/*
+	 * --------------------------------------------------------------
+	 * searchAccountInformation
+	 * --------------------------------------------------------------
+	 */
+
+	public void pc_SearchAccountInformation(String strAccountName) throws Throwable {
+
+//		// navigate to new account
+//		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
+//		//t.navigate_AccountTab_AccountNumberSearch("6800979174");
+//		t.navigate_AccountTab_AccountNumberSearch("6800979174");
+
+		GuidewireAutomate("Company Name", SA_CompanyName, "clearAndsendkeys", strAccountName);
+
+		/*
+		 * GuidewireAutomate("City", City, "sendkeys", ""); GuidewireAutomate("county",
+		 * County, "sendkeys", ""); GuidewireAutomate("ZipCode", ZipCode, "sendkeys",
+		 * "");
+		 */
+		clickButton("Search");
+
+	}
+
+	@Override
+	public void RiskApprovalManger() throws Throwable {
+		// TODO Auto-generated method stub
+
+	}
 }

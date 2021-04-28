@@ -12,37 +12,137 @@ public class GW_PC_AccountSummary extends SeleniumWebDriver_Commands implements 
 		super(driver, oExtentTest);
 	}
 
-
 	@Override
-	public void AccountSummary_Actions_NewSubmission() throws Throwable {
-		GW_TabNavigation_CM_PC_BC_CC tab = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-
-		tab.gwPolicyCenter_MenuNavigation("NewSubmission");
-
-	}
-
-	@Override
-	public void Detail_Verify() throws Throwable {
+	public void detail_Verify() throws Throwable {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void Details_Edit() throws Throwable {
+	public void details_Edit() throws Throwable {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void AccountSummary_AccountHolderSummary() throws Throwable {
+	public void CurrentActivities_Verify() throws Throwable {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void AccountSummary_AccountHolderSummary_Edit() throws Throwable {
+	public void PolicyTerms_Verify() throws Throwable {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	@Override
+	public void OpenPolicyTransactions_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Claims_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Overview_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Billing_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Contacts_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Producers_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Locations_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void RelatedAccounts_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Notes_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_Details_Edit() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_Details_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_Policies_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_OpenPolicyTransactions_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_Claims_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_Overview_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_Billing_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void accountHolderSummary_Notes_Verify() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

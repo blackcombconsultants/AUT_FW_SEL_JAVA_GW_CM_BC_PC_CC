@@ -22,7 +22,7 @@ public class GW_BC_Invoice_Test extends GW_GetDriver {
 			lg.login_BillingCenter();
 
 			// ------> navigate to new account
-			mn.gwBillingCenter_TabNavigation("Account");
+			mn.gwBillingCenter_TabNavigation("Account","NA");
 
 			// ------> New Account
 			gwPC.bc_NewAccount();

@@ -73,31 +73,71 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By SearchTab_ProducerCodes = By.id("TabBar-SearchTab-Search_ProducerCodeSearch");
 	final By SearchTab_Activities = By.id("TabBar-SearchTab-TabBar-SearchTab-Search_ActivitySearch");
 	final By SearchTab_Contacts = By.id("TabBar-SearchTab-TabBar-SearchTab-Search_ContactSearch");
+	
+	/*
+	 * Team Tab - SubMenu
+	 */
+
+	final By Team = By.xpath("//div[@id='TabBar-TeamTab']//div[@class='gw-label']");
+	
 	/*
 	 * AdministrationTab Tab - SubMenu
 	 */
-	final By AdministrationTab_MyActivities = By.id("TabBar-AdministrationTab-AdministrationTab_NewAccount");
-	final By AdministrationTab_MyAccounts = By.id("TabBar-AdministrationTab-AdministrationTab_NewAccount");
-	final By AdministrationTab_MySubmission = By.id("TabBar-AccountTab-AdministrationTab_NewAccount");
-	final By AdministrationTab_MyRenewals = By.id("TabBar-AdministrationTab-AdministrationTab_NewAccount");
-
+	final By AdministrationTab_Users_and_Security = By
+			.xpath("//div[@id='TabBar-AdminTab-Admin_UsersAndSecurity']/div[@class='gw-action--expand-button']");
+	final By AdministrationTab_Business_Settings = By
+			.xpath("//div[@id='TabBar-AdminTab-Admin_BusinessSettings']/div[@class='gw-action--expand-button']");
+	final By AdministrationTab_Monitoring = By
+			.xpath("//div[@id='TabBar-AdminTab-Admin_Monitoring']/div[@class='gw-action--expand-button']");
+	final By AdministrationTab_Utilities = By
+			.xpath("//div[@id='TabBar-AdminTab-Admin_Utilities']/div[@class='gw-action--expand-button']");
+	
 	/*
-	 * Page Headers - Policy Center
+	 * Menu Options
+	 * -----------------------------------------------------------------------------
+	 * -------------------------------------
 	 */
 
-	final By EnterAccountInformation = By
-			.xpath("//div[contains(@id,'NewAccountScreen-ttlBar')]//div[text()='Enter Account Information']");
+	final By Menu_Actions = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
 
-	final By AccountSummary = By
-			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Account Summary']");
+	final By Actions_NewAccount = By.id("AccountsGroup-AccountsMenuActions-AccountsMenuActions_NewAccount");
+	final By Actions_NewPolicy = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
+	final By Actions_NewSubmission = By.xpath(
+			"//div[@id=\"AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewSubmission\"]");
 
-	final By AccountSummary_Name = By
-			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[contains(text(),'Account Summary')]");
+	final By create = By.xpath(
+			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create']//div[@role='menuitem']");
+	final By New_Note = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
+	final By New_Document = By.xpath(
+			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewDocument']");
+	final By New_Email = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewEmail')]//div[@role='menuitem']");
+	final By New_Submission = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_NewSubmission')]//div[@role='menuitem']");
+	final By New_Activity = By.xpath("");
+	final By Withdraw_Account = By.xpath("");
+	final By Move_Policies_to_this_Account = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_MovePolicies')]//div[@role='menuitem']");
+	final By Rewrite_Policires_to_this_Account = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_RewritePolicies')]//div[@role='menuitem']");
+	final By Merge_Account_into_this_Account = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_MergeAccounts')]//div[@role='menuitem']");
 
-	final By Producer_Header = By.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Producer')]");
+	final By My_Summary = By
+			.xpath("//div[@id='Desktop-MenuLinks-Desktop_Underwriter_MySummary']/div[1]/div[text()='Summary']");
+	final By My_Activities = By
+			.xpath("//div[@id='Desktop-MenuLinks-Desktop_DesktopActivities']/div[1]/div[text()='My Activities']");
+	final By My_Accounts = By
+			.xpath("//div[@id='Desktop-MenuLinks-Desktop_DesktopAccounts']/div[1]/div[text()='My Accounts']");
+	final By My_Submissions = By
+			.xpath("//div[@id='Desktop-MenuLinks-Desktop_DesktopSubmissions']/div[1]/div[text()='My Submissions']");
+	final By My_Renewals = By
+			.xpath("//div[@id='Desktop-MenuLinks-Desktop_DesktopRenewals']/div[1]/div[text()='My Renewals']");
+	final By Other_Policy_Transactions = By.xpath(
+			"//div[@id='Desktop-MenuLinks-Desktop_DesktopOtherWorkOrders']/div[1]/div[text()='Other Policy Transactions']");
+	final By My_Queues = By
+			.xpath("//div[@id='Desktop-MenuLinks-Desktop_DesktopAssignableQueues']/div[1]/div[text()='My Queues']");
 
-	final By NewSubmission_Header = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[text()='New Submissions']");
-
+		
 	/*
 	 * -----------------------------------------------------------------------------
 	 * ------------------------------------------- Billing Center Tabs
@@ -110,12 +150,6 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	 * -----------------------------------------------------------------------------
 	 * -------------------------------------
 	 */
-	final By Menu_Actions = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
-
-	final By Actions_NewAccount = By.id("AccountsGroup-AccountsMenuActions-AccountsMenuActions_NewAccount");
-	final By Actions_NewPolicy = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
-	final By Actions_NewSubmission = By.xpath(
-			"//div[@id=\"AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewSubmission\"]");
 
 	final By AS_HistoryLink = By.id("AccountGroup-MenuLinks-AccountGroup_AccountDetailHistory");
 	final By AS_InvoicesLink = By.id("AccountGroup-MenuLinks-AccountGroup_AccountDetailInvoices");
@@ -145,14 +179,41 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	 * -----------------------------------------------------------------------------
 	 * -------------------------------------------
 	 */
+	
+	
+	
+	
+	/*
+	 * Page Headers - Policy Center
+	 */
 
-	void gwContactManagement_TabNavigation(String Tab) throws Throwable;
+	
+	final By Screen_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title']");
 
-	void gwPolicyCenter_TabNavigation(String Tab) throws Throwable;
+	final By EnterAccountInformation = By
+			.xpath("//div[contains(@id,'NewAccountScreen-ttlBar')]//div[text()='Enter Account Information']");
 
-	void gwBillingCenter_TabNavigation(String Tab) throws Throwable;
+	final By AccountSummary = By
+			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Account Summary']");
 
-	void gwClaimsCenter_TabNavigation(String Tab) throws Throwable;
+	final By AccountSummary_Name = By
+			.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[contains(text(),'Account Summary')]");
+
+	final By Producer_Header = By.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Producer')]");
+
+	final By NewSubmission_Header = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[text()='New Submissions']");
+
+	
+	
+	
+
+	void gwContactManagement_TabNavigation(String Tab, String Value) throws Throwable;
+
+	void gwPolicyCenter_TabNavigation(String Tab, String Value) throws Throwable;
+
+	void gwBillingCenter_TabNavigation(String Tab, String Value) throws Throwable;
+
+	void gwClaimsCenter_TabNavigation(String Tab, String Value) throws Throwable;
 
 	void gwContactManagement_MenuNavigation(String strMenuOption) throws Throwable;
 

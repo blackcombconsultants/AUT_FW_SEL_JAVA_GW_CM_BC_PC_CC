@@ -96,4 +96,22 @@ public class PersonalAuto_Submission extends SeleniumWebDriver_Commands implemen
 
 	}
 
+	@Override
+	public void submissionManager() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void NotTaken() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SubmissionDecline() throws Throwable {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

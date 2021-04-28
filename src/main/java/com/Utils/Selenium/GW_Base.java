@@ -23,6 +23,7 @@ public class GW_Base {
 
 	public static SimpleDateFormat sdf_ddMMMMyyyy = new SimpleDateFormat("ddMMMMyyyy");
 	public static SimpleDateFormat sdf_ddMMMMyyyyHHmmss = new SimpleDateFormat("ddMMMMyyyy HHmmss");
+	public static SimpleDateFormat sdf_ddMMMyyyy_GW1 = new SimpleDateFormat("MM/dd/yyyy");
 
 	public static String strCurrentDate_ddMMMMyyyy = sdf_ddMMMMyyyy.format(new Date());
 	public static String strCurrentDate_ddMMMMyyyyHHmmss = sdf_ddMMMMyyyyHHmmss.format(new Date());
