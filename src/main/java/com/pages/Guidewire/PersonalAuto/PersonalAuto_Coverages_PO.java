@@ -62,11 +62,15 @@ public interface PersonalAuto_Coverages_PO {
 
 	void pa_Coverages() throws Throwable;
 
-	void CoveragesAppliedtoallvehicles(String testingType) throws Throwable;
+	void coveragesAppliedtoallVehiclesIn(String testingType) throws Throwable;
 
-	void AdditionalCoverages(String testingType) throws Throwable;
+	void coveragesAppliedperVehiclesIn(String testingType) throws Throwable;
 
-	void ExclusionsAndConditions(String testingType) throws Throwable;
+	void additionalcoveragesAppliedtoallVehiclesIn(String testingType) throws Throwable;
+
+	void additionalcoveragesAppliedperVehiclesIn(String testingType) throws Throwable;
+
+	void exclusionsAndConditions(String testingType) throws Throwable;
 
 	void SearchAddExclusionorCondition(String testingType) throws Throwable;
 

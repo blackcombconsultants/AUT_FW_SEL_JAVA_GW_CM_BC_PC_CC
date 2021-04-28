@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
+import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Commands
 		implements PersonalAuto_NewSubmission_ReusablePO {
@@ -15,19 +16,8 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 	}
 
 	@Override
-	public void newSubmission_LOB() throws Throwable {
+	public void newSubmission_SelectLOB_PersonalAuto() throws Throwable {
 		GuidewireAutomate("LOB", LOB_PersonalAuto, "click", "");
-	}
-
-	@Override
-	public void offering() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("offering", strTestCaseName);
-
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Offerings");
-		GuidewireAutomate("Offering Selection", Of_OfferingSelection, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("Of_OfferingSelection"));
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
 	}
 
 	@Override
@@ -35,7 +25,8 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 	public void qualification() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("qualification", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Qualifications");
+		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, " equals",
+				"Qualifications");
 		GuidewireAutomate("QU_IsApplicantCurrentlyInsured", QU_IsApplicantCurrentlyInsured, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("QU_IsApplicantCurrentlyInsured"));
 		GuidewireAutomate("QU_IsApplicantLicenseCurrently_suspended_canceled_Revoked",
@@ -58,46 +49,10 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 	}
 
 	@Override
-	public void forms() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("forms", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Forms");
+	public String getRandomVIN(String vingenerator) throws Throwable {
+		String StrVIN = "sadasd";
 
-	}
-
-	@Override
-	public void payments() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-
-	}
-
-	@Override
-
-	public void validationResults() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-	}
-
-	@Override
-
-	public void submissionBound() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-	}
-
-	@Override
-
-	public void getRandomVIN(String vingenerator) throws Throwable {
 		switch (vingenerator) {
 		case "vingenerator":
 			url = "https://vingenerator.org/";
@@ -110,9 +65,10 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 			driver_ThirdPartyTool = getDriver();
 			driver_ThirdPartyTool.navigate().to("https://vingenerator.org/");
 		}
-		
+
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
-	}
 
+		return StrVIN;
+	}
 }

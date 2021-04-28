@@ -49,7 +49,7 @@ public interface PersonalAuto_VehiclesPO {
 	final By VE_VD_BVI_AnnualMileage = By.xpath("//input[contains(@name,'PersonalAuto_VehicleDV-annualmiles_DV')]");
 	final By VE_VD_BVI_PrimaryUse = By.xpath("//select[contains(@name,'PersonalAuto_VehicleDV-primaryuse_DV')]");
 	final By VE_VD_BVI_AntiTheftDiscount = By
-			.xpath("//select[contains(@name,'PersonalAuto_VehicleDV-TypeKeyModifier')]");
+			.xpath("//select[contains(@name,'PAVehicleModifiersInputSet-2-TypeKeyModifier')]");
 
 	final By VE_VD_VehicleRateModifiers = By.xpath(
 			"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Vehicle Rate Modifiers']");
@@ -64,7 +64,7 @@ public interface PersonalAuto_VehiclesPO {
 			"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='What percentage does each driver use this vehicle?']");
 
 	final By VE_ADV_Add_Button = By
-			.xpath("//div[contains(@class,'gw-AddButtonWidget')]/div[contains(@class,'gw-action--expand-button')]");
+			.xpath("//div[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-Add')]/div[@role='button']");
 	final By VE_AssignDrivers_Remove_Button = By.xpath(
 			"//div[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-Remove')]/div[@role='button']");
 	final By VE_AssignDrivers_Add_DriverName = By.xpath(
@@ -89,7 +89,7 @@ public interface PersonalAuto_VehiclesPO {
 			"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Personal Vehicle Additional Interests']");
 
 	final By VE_AI_PVAI_Add_Button = By
-			.xpath("//div[contains(@class,'gw-AddButtonWidget')]/div[contains(@class,'gw-action--expand-button')]");
+			.xpath("//div[contains(@id,'AdditionalInterestLV_tb-Add')]/div[@role='button']");
 	final By VE_AI_PVAI_Remove_Button = By
 			.xpath("//div[contains(@id,'AdditionalInterestLV_tb-Remove')]/div[@role='button']");
 
@@ -120,19 +120,19 @@ public interface PersonalAuto_VehiclesPO {
 	final By VE_AI_PVAI_ContractNo = By.xpath(
 			"//tr[contains(@id,'AdditionalInterestLV') and contains(@class,'gw-standard-row')]/td[contains(@id,'ContractNumber_Cell') and contains(@class,'gw-CellWidget')]//div[contains(@id,'ContractNumber') and contains(@class,'gw-editable')]//input[contains(@name,'ContractNumber')]");
 
-	void ve_CreateVehicles() throws Throwable;
+	void createVehicles() throws Throwable;
 
 	void ve_Edit_Vehicles() throws Throwable;
 
-	void ve_AssaignDriver() throws Throwable;
+	void ve_AssignDriver() throws Throwable;
 
-	void ve_AdditionalInterest_Add_NewCompany() throws Throwable;
+	void additionalInterest_Add_NewCompany() throws Throwable;
 
-	void ve_AdditionalInterest_Add_NewPerson() throws Throwable;
+	void additionalInterest_Add_NewPerson() throws Throwable;
 
-	void ve_AdditionalInterest_Add_FromAddressBook() throws Throwable;
+	void additionalInterest_Add_FromAddressBook() throws Throwable;
 
-	void ve_AdditionalInterest_Add_OtherContacts() throws Throwable;
+	void additionalInterest_Add_OtherContacts() throws Throwable;
 
 	void ve_RemoveVehicles() throws Throwable;
 

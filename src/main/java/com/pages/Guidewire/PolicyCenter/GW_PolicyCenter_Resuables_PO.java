@@ -10,7 +10,6 @@ public interface GW_PolicyCenter_Resuables_PO {
 	 * Headers
 	 */
 
-
 	final By InfoBar_Job = By.xpath("//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label']");
 	final By InfoBar_Workflow = By
 			.xpath("//div[contains(@id,'InfoBar-Workflow')]//div[@class='gw-label gw-infoValue']");
@@ -40,7 +39,8 @@ public interface GW_PolicyCenter_Resuables_PO {
 	final By AllError_Message = By.xpath(
 			"//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']");
 
-	final By SearchAccountResults_Msg = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]/div[contains(@class,'sub-group')]");
+	final By SearchAccountResults_Msg = By
+			.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]/div[contains(@class,'sub-group')]");
 	final By SearchResults = By.xpath("//table[@class='gw-ListViewWidget--table gw-table']");
 	final By Select_Button = By.xpath("//div[contains(@id,'SearchResultsLV-0')]/div[@role='button']");
 
@@ -158,7 +158,7 @@ public interface GW_PolicyCenter_Resuables_PO {
 	final By CA_A_Address3 = By.xpath("//input[contains(@name,'AddressLine3')]");
 	final By CA_A_Addresstype = By.xpath("//select[contains(@name,'AddressType')]");
 	final By CA_A_Description = By.xpath("//input[contains(@name,'AddressDescription')]");
-	
+
 	final By CA_OrganizationType = By.xpath("//select[contains(@name,'PrimaryLanguage')]");
 	final By CA_DescriptionofBusiness = By.xpath("//input[contains(@name,'Nickname')]");
 
@@ -167,7 +167,7 @@ public interface GW_PolicyCenter_Resuables_PO {
 	 */
 	final By CA_OfficialID = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Official IDs']");
 	final By CA_OID_SSN_FEIN = By.xpath("//input[contains(@name,'OfficialIDDV_Input')]");
-	
+
 	final By CA_AccountNickname = By.xpath("//input[contains(@name,'Nickname')]");
 	final By CA_PreferredLanguage = By.xpath("//select[contains(@name,'PrimaryLanguage')]");
 	final By CA_IndustryCode = By.xpath("//input[contains(@name,'IndustryCode')]");
@@ -199,8 +199,7 @@ public interface GW_PolicyCenter_Resuables_PO {
 	final By IndustryCode_Search_Button = By.xpath("//div[contains(@id,'IndustryCode-SelectIndustryCode')]");
 	final By IS_Code = By.xpath("//input[contains(@name,'SearchDV-Code')]");
 	final By IS_Classification = By.xpath("//input[contains(@name,'SearchDV-Classification')]");
-	
-	
+
 	final By ProducerCode = By.xpath("//select[contains(@name,'ProducerCode')]");
 	final By ProducerCode_Search = By.xpath("//input[contains(@name,'SearchDV-Code')]");
 	final By ProducerDescription = By.xpath("//input[contains(@name,'SearchDV-Description')]");
@@ -216,11 +215,11 @@ public interface GW_PolicyCenter_Resuables_PO {
 	/*
 	 * New Submissions
 	 */
-		
+
 	final By NS_PO_SingleorMultiplePolicies = By.xpath("//input[contains(@name,'ProductSettingsDV-CreateSingle')]");
 	final By NS_PO_QuoteType = By.xpath("//select[contains(@name,'ProductSettingsDV-QuoteType')]");
 	final By NS_PO_DefaultBaseState = By.xpath("//select[contains(@name,'ProductSettingsDV-DefaultBaseState')]");
-	final By NS_PO_DefaultEffectiveDate = By.xpath("//input[contains(@name,'DefaultPPEffDate-QuoteType')]");
+	final By NS_PO_DefaultEffectiveDate = By.xpath("//input[contains(@name,'DefaultPPEffDate')]");
 
 	/*
 	 * select LOB Xpath
@@ -251,16 +250,23 @@ public interface GW_PolicyCenter_Resuables_PO {
 	final By Account_Actions_NewSubmission = By.xpath(
 			"//div[@id=\"AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewSubmission\"]");
 
-	
 	final By OrganizationName = By.xpath("//input[contains(@name,'SearchDV-Organization')]");
 	final By OrganizationDescription = By.xpath("//input[contains(@name,'SearchDV-Description')]");
 
-	
+	final By Of_OfferingSelection = By.xpath("//select[@name='SubmissionWizard-OfferingScreen-OfferingSelection']");
 
 	/*
 	 * Modules
 	 */
 	String infoBar(String strLabel) throws Throwable;
+
+	void gwPolicyCenter_TabNavigation_Acct_Search() throws Throwable;
+
+	void gwPolicyCenter_TabNavigation_Sub_Search() throws Throwable;
+
+	void gwPolicyCenter_TabNavigation_Policy_Search() throws Throwable;
+
+	void gwPolicyCenter_TabNavigation_Contact_Search() throws Throwable;
 
 	void pc_SearchAccountInformation(String strAccountName) throws Throwable;
 
@@ -271,10 +277,22 @@ public interface GW_PolicyCenter_Resuables_PO {
 	void organizations(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable;
 
 	void industryCodeSearch(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable;
+
 	void producer(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable;
 
 	void select_SearchResult(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable;
 
-	void newSubmissions() throws Throwable;
+	void newSubmissions_Edit() throws Throwable;
 
+	void newSubmissions_Verify() throws Throwable;
+
+	void offering() throws Throwable;
+
+	void forms() throws Throwable;
+
+	void payments() throws Throwable;
+
+	void validationResults() throws Throwable;
+
+	void RiskApprovalManger() throws Throwable;
 }

@@ -16,105 +16,67 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void pa_Payment() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paPayment", strTestCaseName);
+	public void premiumSummary() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("payment", strTestCaseName);
+
 		GuidewireAutomate_Validation("Payment titlebar", Payment_titlebar, "equals", "Payment");
-		pa_Premium_Summary("VERIFY");
-		pa_payments("VERIFY");
-		pa_BillingMethod("Direct Bill");
+
+		GuidewireAutomate_Validation("Total Premium", Total_Premium, "equals",
+				lhm_TestCase_Table_Data.get("TotalPremium"));
+		GuidewireAutomate_Validation(" TaxesAndSurcharges", Taxes_And_Surcharges, "equals",
+				lhm_TestCase_Table_Data.get("TaxesandSurcharges"));
+	}
+
+	@Override
+	public void payments() throws Throwable {
+		GuidewireAutomate_Validation("Frequency", Frequency, "equals", lhm_TestCase_Table_Data.get("Frequency"));
+		GuidewireAutomate_Validation("Installements", Installements, "equals",
+				lhm_TestCase_Table_Data.get("Installments"));
+	}
+
+	@Override
+	public void invoicing() throws Throwable {
+		GuidewireAutomate_Validation("Frequency", Frequency, "equals", lhm_TestCase_Table_Data.get("Frequency"));
 
 	}
 
 	@Override
-	public void pa_Premium_Summary(String testingType) throws Throwable {
-
-		switch (testingType) {
-		case "VERIFY":
-			GuidewireAutomate_Validation("Total Premium", Total_Premium, "equals",
-					lhm_TestCase_Table_Data.get("TotalPremium"));
-			GuidewireAutomate_Validation(" TaxesAndSurcharges", Taxes_And_Surcharges, "equals",
-					lhm_TestCase_Table_Data.get("TaxesandSurcharges"));
-			break;
-		default:
-			break;
-		}
-
-	}
-
-	@Override
-	public void pa_payments(String testingType) throws Throwable {
-		switch (testingType) {
-		case "VERIFY":
-			GuidewireAutomate_Validation("Frequency", Frequency, "equals", lhm_TestCase_Table_Data.get("Frequency"));
-			GuidewireAutomate_Validation("Installements", Installements, "equals",
-					lhm_TestCase_Table_Data.get("Installments"));
-			break;
-		default:
-			break;
-		}
-	}
-
-	@Override
-	public void pa_BillingMethod(String Type) throws Throwable {
+	public void billing() throws Throwable {
 		GuidewireAutomate("Billing Method", Billing_Method, "click", "");
-		switch (Type) {
-		case "Direct Bill":
-			GuidewireAutomate("Direct Bill", Billing_Method, "selectByVisibleTex",
-					lhm_TestCase_Table_Data.get("BillingMethod"));
-			break;
-
-		case "List Bill":
-			GuidewireAutomate("List Bill", Billing_Method, "selectByVisibleTex",
-					lhm_TestCase_Table_Data.get("BillingMethod"));
-			break;
-		default:
-			break;
-		}
+		GuidewireAutomate("Billing_Method", Billing_Method, "selectByVisibleTex",
+				lhm_TestCase_Table_Data.get("BillingMethod"));
 	}
 
 	@Override
-	public void pa_Alternate_Billing_Account(String Type) throws Throwable {
-		GuidewireAutomate("Alternate Billing Account icon", Alternate_Billing_Account_icon, "click", "");
-		switch (Type) {
-		case "search":
-			pa_Alternate_Billing_Account_Search("EDIT");
-			break;
-		case "Billing Subaccounts":
-			GuidewireAutomate("Billing Subaccounts icon", Billing_Subaccounts_icon, "click", "");
-			break;
-		default:
-			break;
-		}
+	public void billing_AlternateBillingAccount_Search() throws Throwable {
+
+		GuidewireAutomate_Validation("Search title", pa_Alternate_Billing_Account_Search_titlebar, "equals",
+				"Search Accounts");
+		GuidewireAutomate("Alternate Billing Account Search", Alternate_Billing_Account_Search, "click", "");
+		GuidewireAutomate("Sending AccountNumber", pa_Alternate_Billing_Account_AccountNumber, "sendKeys",
+				lhm_TestCase_Table_Data.get("AccountNumber"));
+		GuidewireAutomate("Search", pa_Alternate_Billing_Account_Search_Button, "click", "");
+		GuidewireAutomate("Select", pa_Alternate_Billing_Account_Search_Select, "click", "");
 
 	}
 
 	@Override
-	public void pa_Alternate_Billing_Account_Search(String Type) throws Throwable {
+	public void billing_AlternateBillingAccount_BillingSubaccounts() throws Throwable {
+		GuidewireAutomate_Validation("Search title", pa_Alternate_Billing_Account_Search_titlebar, "equals",
+				"Search Accounts");
 
-		switch (Type) {
-		case "EDIT":
-			GuidewireAutomate("Alternate Billing Account Search", Alternate_Billing_Account_Search, "click", "");
-			GuidewireAutomate("Sending AccountNumber", pa_Alternate_Billing_Account_AccountNumber, "sendKeys",
-					lhm_TestCase_Table_Data.get("AccountNumber"));
-			GuidewireAutomate("Search", pa_Alternate_Billing_Account_Search_Button, "click", "");
-			GuidewireAutomate("Select", pa_Alternate_Billing_Account_Search_Select, "click", "");
-			break;
-
-		case "VERIFY":
-
-			GuidewireAutomate_Validation("Search title", pa_Alternate_Billing_Account_Search_titlebar, "equals",
-					"Search Accounts");
-			break;
-		default:
-			break;
-		}
+		GuidewireAutomate("Alternate Billing Account Search", Alternate_Billing_Account_Search, "click", "");
+		GuidewireAutomate("Sending AccountNumber", pa_Alternate_Billing_Account_AccountNumber, "sendKeys",
+				lhm_TestCase_Table_Data.get("AccountNumber"));
+		GuidewireAutomate("Search", pa_Alternate_Billing_Account_Search_Button, "click", "");
+		GuidewireAutomate("Select", pa_Alternate_Billing_Account_Search_Select, "click", "");
 
 	}
 
 	@Override
-	public void pa_Billing_Contact(String Type) throws Throwable {
+	public void billingContact(String Account) throws Throwable {
 		GuidewireAutomate("Billing Contact icon", Billing_Contact_icon, "click", "");
-		switch (Type) {
+		switch (Account) {
 		case "New Company":
 			GuidewireAutomate("New Company", Billing_Contact_NewCompany, "click", "");
 			break;
@@ -141,7 +103,7 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void pa_Payment_Schedule(String Type) throws Throwable {
+	public void paymentSchedule() throws Throwable {
 		String strDynamicXpath = lhm_TestCase_Table_Data.get("PaymentPlan");
 		By Payment_Plan = By.xpath("//div[text()='" + strDynamicXpath
 				+ "']/ancestor::td[contains(@class,'gw-CellWidget')]/preceding-sibling::td[contains(@class,'gw-CellWidget')]//input[@name='InstallmentsPlansGroup_Radio']");
@@ -160,7 +122,7 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void pa_Invoicing_Overrides() throws Throwable {
+	public void invoicingOverrides() throws Throwable {
 		GuidewireAutomate("Invoicing overrides checkbox", Invoicing_overrides_checkbox, "click", "");
 		GuidewireAutomate("Fix Invoices By", Fix_Invoices_By, "click", "");
 		GuidewireAutomate("Fix Invoices By", Fix_Invoices_By, "selectByVisibleTex",
@@ -173,33 +135,34 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void pa_Pay_Using(String type) throws Throwable {
-		GuidewireAutomate("PayUsing Add", PayUsing_Add, "click", "");
+	public void upFrontPayment() throws Throwable {
+		GuidewireAutomate("Invoicing overrides checkbox", Invoicing_overrides_checkbox, "click", "");
+		GuidewireAutomate("Fix Invoices By", Fix_Invoices_By, "click", "");
+		GuidewireAutomate("Fix Invoices By", Fix_Invoices_By, "selectByVisibleTex",
+				lhm_TestCase_Table_Data.get("FixInvoicesBy"));
+		GuidewireAutomate("Day of Month", Day_of_Month, "click", "");
+		GuidewireAutomate("Day of Month", Day_of_Month, "selectByVisibleTex",
+				lhm_TestCase_Table_Data.get("DayofMonth"));
+		GuidewireAutomate("Description", Description, "sendKeys", lhm_TestCase_Table_Data.get("Description"));
 
-		switch (type) {
-		case "VERIFY":
-			GuidewireAutomate_Validation("PayUsing titlebar", PayUsing_titlebar, "equals", "Demo Payment System");
-			GuidewireAutomate_Validation("Policy Transaction Number", Policy_Transaction_Number, "equals",
-					lhm_TestCase_Table_Data.get("PolicyTransactionNumber"));
-
-			break;
-
-		case "EDIT":
-			GuidewireAutomate("Payment_Method", Payment_Method, "selectByVisibleTex",
-					lhm_TestCase_Table_Data.get("PaymentMethod"));
-			GuidewireAutomate("Card_Type", Card_Type, "selectByVisibleTex", lhm_TestCase_Table_Data.get("CardType"));
-			GuidewireAutomate("Credit_Card_Number", Credit_Card_Number, "sendKeys",
-					lhm_TestCase_Table_Data.get("CreditCardNumber"));
-			GuidewireAutomate("Exp_Date", Exp_Date, "sendKeys", lhm_TestCase_Table_Data.get("ExpDate"));
-			GuidewireAutomate("Card_Holder_Name", Card_Holder_Name, "sendKeys",
-					lhm_TestCase_Table_Data.get("CardHolderName"));
-			GuidewireAutomate("pa_State", pa_State, "selectByVisibleTex", lhm_TestCase_Table_Data.get("State"));
-			GuidewireAutomate("pa_Notes", pa_Notes, "sendKeys", lhm_TestCase_Table_Data.get("Notes"));
-			GuidewireAutomate("pa_OK_button", pa_OK_button, "click", "");
-			break;
-		default:
-			break;
-		}
 	}
 
+	@Override
+	public void payUsing() throws Throwable {
+		GuidewireAutomate_Validation("PayUsing titlebar", PayUsing_titlebar, "equals", "Demo Payment System");
+		GuidewireAutomate_Validation("Policy Transaction Number", Policy_Transaction_Number, "equals",
+				lhm_TestCase_Table_Data.get("PolicyTransactionNumber"));
+
+		GuidewireAutomate("Payment_Method", Payment_Method, "selectByVisibleTex",
+				lhm_TestCase_Table_Data.get("PaymentMethod"));
+		GuidewireAutomate("Card_Type", Card_Type, "selectByVisibleTex", lhm_TestCase_Table_Data.get("CardType"));
+		GuidewireAutomate("Credit_Card_Number", Credit_Card_Number, "sendKeys",
+				lhm_TestCase_Table_Data.get("CreditCardNumber"));
+		GuidewireAutomate("Exp_Date", Exp_Date, "sendKeys", lhm_TestCase_Table_Data.get("ExpDate"));
+		GuidewireAutomate("Card_Holder_Name", Card_Holder_Name, "sendKeys",
+				lhm_TestCase_Table_Data.get("CardHolderName"));
+		GuidewireAutomate("pa_State", pa_State, "selectByVisibleTex", lhm_TestCase_Table_Data.get("State"));
+		GuidewireAutomate("pa_Notes", pa_Notes, "sendKeys", lhm_TestCase_Table_Data.get("Notes"));
+		GuidewireAutomate("pa_OK_button", pa_OK_button, "click", "");
+	}
 }

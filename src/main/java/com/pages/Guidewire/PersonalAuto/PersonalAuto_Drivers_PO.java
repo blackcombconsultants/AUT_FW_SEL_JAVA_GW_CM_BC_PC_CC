@@ -9,20 +9,19 @@ public interface PersonalAuto_Drivers_PO {
 	/*
 	 * 
 	 */
-	final By DR_DriversDetails_Add_Button = By
-			.xpath("//div[contains(@class,'gw-AddButtonWidget')]/div[contains(@class,'gw-action--expand-button')]");
+	final By DR_DriversDetails_Add_Button = By.xpath("//div[contains(@id,'DriversLV_tb-Add')]/div[@role='button']");
 	final By DR_DriversDetails_Add_NewPerson = By.xpath(
 			"//div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='New Person']");
 	final By DR_DriversDetails_Add_FromAddressBook = By.xpath(
 			"//div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='From Address Book']");
 	final By DR_DriversDetails_Add_ExistingDriver = By.xpath(
 			"//div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='Existing Driver']");
-	final By DR_DriversDetails_Add_ExistingDriver_Name = By.xpath(
-			"//div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'DriversLV_tb-AddDriver-AddExistingContact')]//div[contains(@id,'UnassignedDriver')]//div[@class='gw-label' and text()='CTLsSTQypCTLsSTQyp AutomationAutomation']");
 
-	final By DR_DriversDetails_Remove_Button = By.xpath("//div[contains(@id,'DriversLV_tb-Remove')]");
+	final By DR_DriversDetails_Remove_Button = By
+			.xpath("//div[contains(@id,'DriversLV_tb-Remove')]/div[@role='button']");
 
-	final By DR_DriversDetails_RetrieveMVR_Button = By.xpath("//div[contains(@id,'DriversLV_tb-RetrieveMVRButton')]");
+	final By DR_DriversDetails_RetrieveMVR_Button = By
+			.xpath("//div[contains(@id,'DriversLV_tb-RetrieveMVRButton')]/div[@role='button']");
 
 	/*
 	 * DriversDetails
@@ -32,9 +31,6 @@ public interface PersonalAuto_Drivers_PO {
 
 	final By DR_DriversDetails_Select = By.xpath(
 			"//td[contains(@class,'gw-impl-cell--CB')]/div[@class='gw-cell-inner']/div[contains(@id,'Checkbox')]/input[contains(@name,'Checkbox')]");
-
-	final By DR_DriversDetails_Name = By.xpath(
-			"//td[contains(@id,'Name_Cell') and contains(@class,'gw-CellWidget')]//div[text()='CTLsSTQypCTLsSTQyp AutomationAutomation']");
 
 	final By DR_DriversDetails_LicenseNumber = By.xpath(
 			"//td[contains(@id,'LicenseNumber_Cell') and contains(@class,'gw-CellWidget')]//div[@class='gw-value-readonly-wrapper' and text()='224242424']");
@@ -49,7 +45,7 @@ public interface PersonalAuto_Drivers_PO {
 	 * ContactDetails
 	 */
 
-	final By DR_Tab_ContatDetails = By.xpath("//div[contains(@id,'DriverDetailsCV-RolesCardTab')]");
+	final By DR_Tab_ContatDetails = By.xpath("//div[contains(@id,'DriverDetailsCV-PolicyContactDetailCardTab')]");
 
 	final By DR_CD_Person = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Person']");
 	final By DR_CD_P_FirstName = By
@@ -61,28 +57,34 @@ public interface PersonalAuto_Drivers_PO {
 	final By DR_CD_A_Address1 = By.xpath(
 			"//input[contains(@name,'AddressInputSet-globalAddressContainer-GlobalAddressInputSet-AddressLine1')]");
 
-	final By DR_CD_License = By.xpath("//input[contains(@name,'LicenseInputSet-LicenseNumber')]");
+	final By DR_CD_DateofBirth = By.xpath("//input[contains(@name,'DateOfBirth')]");
+	final By DR_CD_LicenseNumber = By.xpath("//input[contains(@name,'LicenseInputSet-LicenseNumber')]");
+	final By DR_CD_LicenseState = By.xpath("//select[contains(@name,'LicenseInputSet-LicenseState')]");
 
 	final By DR_CD_OfficialIDs = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Official IDs']");
-	final By DR_CD_OI_SSN = By.xpath("//input[contains(@name,'LicenseInputSet-OfficialIDDV_Input')]");
+	final By DR_CD_OI_SSN = By.xpath("//input[contains(@name,'OfficialIDDV_Input')]");
 
 	/*
 	 * Roles
 	 */
 
 	final By DR_Tab_Roles = By.xpath("//div[contains(@id,'DriverDetailsCV-RolesCardTab')]");
-	
-	final By DR_R_PrimaryNamedInsured = By.xpath("//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Primary Named Insured']");
-	final By DR_R_Driver = By.xpath("//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Driver']");
+
+	final By DR_R_PrimaryNamedInsured = By.xpath(
+			"//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Primary Named Insured']");
+	final By DR_R_Driver = By.xpath(
+			"//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Driver']");
 	final By DR_R_D_DateCompletedTrainingClass = By.xpath(
 			"//input[contains(@name,'PolicyContactRolePanelSet-PolicyDriverInfoDV-datecompletedtrainingclass')]");
 	final By DR_R_D_YearFirstLicensed = By
 			.xpath("//input[contains(@name,'PolicyContactRolePanelSet-PolicyDriverInfoDV-yearlicensed')]");
 
-	final By DR_R_D_Excluded = By
-			.xpath("//input[contains(@name,'PolicyContactRolePanelSet-PolicyDriverInfoDV-ExcludedDriver')]");
+	final By DR_R_D_ExcludedYes = By.xpath("//input[contains(@id,'ExcludedDriver_0')]");
+	final By DR_R_D_ExcludedNo = By.xpath("//input[contains(@id,'ExcludedDriver_1')]");
+	final By DR_R_D_DoNotOrderMVR = By.xpath("//input[contains(@name,'DoNotOrderMVR')]");
 
-	final By DR_R_AccidentViolationSummary = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Accident/Violation Summary']");
+	final By DR_R_AccidentViolationSummary = By
+			.xpath("//div[contains(@class,'gw-boldLabel') and text()='Accident/Violation Summary']");
 	final By DR_R_AVS_NumberOfAccidents_PolicyLevel = By
 			.xpath("//select[contains(@name,'PolicyContactRolePanelSet-PolicyDriverNumberOfAccidents')]");
 	final By DR_R_AVS_NumberOfAccidents_AccountLevel = By
@@ -96,13 +98,16 @@ public interface PersonalAuto_Drivers_PO {
 	 * Address
 	 */
 
-	final By DR_Tab_Addresses = By.xpath("//div[contains(@id,'DriverDetailsCV-AddressDetailCardTab')]");
+	final By DR_Tab_Addresses = By.xpath("//div[contains(@id,'AddressDetailCardTab')]/div[@role='tab']");
+	final By DR_A_CurrentlyPolicyAddress = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='This is currently the policy address']");
+
+	final By DR_A_AD_Address1 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine1')]");
 
 	/*
 	 * MVRDetail
 	 */
 
-	final By DR_Tab_MotorVehicleRecord = By.xpath("//div[contains(@id,'DriverDetailsCV-MVRDetailCardTab')]");
+	final By DR_Tab_MotorVehicleRecord = By.xpath("//div[contains(@id,'MVRDetailCardTab')]/div[@role='tab']");
 
 	/*
 	 * Modules

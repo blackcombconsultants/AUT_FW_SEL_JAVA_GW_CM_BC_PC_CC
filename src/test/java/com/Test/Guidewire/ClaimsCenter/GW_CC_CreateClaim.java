@@ -23,7 +23,7 @@ public class GW_CC_CreateClaim extends GW_GetDriver {
 		//-------->login to claimCenter
 		lg.login_ClaimsCenter();
 		// ------> navigate to new claim
-		mn.gwClaimsCenter_TabNavigation("NewClaim");
+		mn.gwClaimsCenter_TabNavigation("NewClaim","NA");
 		//-------->searching policy
 		gs.fnol_Search_Exitsing_Policy();
 		//------->entering basic information
