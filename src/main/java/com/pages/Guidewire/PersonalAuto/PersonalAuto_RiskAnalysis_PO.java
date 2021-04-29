@@ -24,7 +24,7 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	 * CreateNewUWIssue
 	 */
 	final By RA_AddUWIssue_Button = By.xpath(
-			"//div[contains(@id,'RiskAnalysisCV_tb-AddManualIssue]//div[@class='gw-label' and text()='Add UW Issue']");
+			"//div[contains(@id,'RiskAnalysisCV_tb-AddManualIssue')]//div[@class='gw-label' and text()='Add UW Issue']");
 	final By RA_AUI_CreateNewUWIssue = By.xpath("//div[@class='gw-TitleBar--title' and text()='Create New UW Issue']");
 
 	final By RA_AUI_CNUI_IssueType = By.xpath("//select[contains(@name,'IssueType')]");
@@ -35,7 +35,7 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	 * UWIssues Tab
 	 */
 
-	final By RA_Tab_UWIssues = By.xpath("//div[contains(@id,'Job_RiskAnalysisScreen-EvaluationIssuesCardTab')]");
+	final By RA_Tab_UWIssues = By.xpath("//div[contains(@id,'RiskAnalysisCV-EvaluationIssuesCardTab')]");
 	final By RA_UI_ViewIssuesBlocking = By.xpath(
 			"//div[contains(@id,'RiskEvaluationPanelSet-UserViewFilter')]//select[contains(@name,'UserViewFilter')]");
 
@@ -188,6 +188,8 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	void RA_AddUWIssue() throws Throwable;
 
 	void RA_ApproveUWIssues() throws Throwable;
+
+	void RA_Risk_Approval_Details() throws Throwable;
 
 	void RA_RejectUWIssues() throws Throwable;
 
