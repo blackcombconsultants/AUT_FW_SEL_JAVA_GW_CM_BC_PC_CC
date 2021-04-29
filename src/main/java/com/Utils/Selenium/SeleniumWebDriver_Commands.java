@@ -132,58 +132,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
-	public void gwAutomate(By Locator, String command, String strValue) throws Throwable {
-
-		oWebElement = null;
-
-		try {
-
-			// Get the Element.
-			oWebElement = getElement(Locator);
-
-			switch (command) {
-			case "sendkeys":
-				oWebElement.sendKeys(strValue);
-				break;
-			case "clear":
-				oWebElement.clear();
-				break;
-			case "select":
-				new Select(oWebElement).selectByVisibleText(strValue);
-				break;
-			case "selectByVisibleText":
-				new Select(oWebElement).selectByVisibleText(strValue);
-				break;
-			case "selectByIndex":
-				new Select(oWebElement).selectByIndex(0);
-
-				break;
-			case "click":
-				oWebElement.click();
-				break;
-
-			default:
-				break;
-			}
-
-			String LogMsg;
-			String strTemp = "Element : " + Locator.toString() + " command : [" + command.toString() + "] Value : ["
-					+ strValue.toString() + "]";
-			System.out.println(strTemp);
-			if (command.equals("click")) {
-				LogMsg = "Clicked Element : " + Locator.toString();
-
-			} else {
-				LogMsg = "Element : " + Locator.toString() + " =  [" + strValue.toString() + "]";
-			}
-			oExtentTest.log(Status.INFO, LogMsg);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
 	public void GuidewireAutomate(String ElementName, By Locator, String command, String strValue) throws Throwable {
 
 		oWebElement = null;
@@ -470,6 +418,8 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				break;
 			case "isSelected":// Checkbox
 				bValidation = getElement(Locator).isSelected();
+			case "isDisabled":// Checkbox
+				bValidation = (getElement(Locator).isSelected() ? false : true);
 				break;
 			case "isDisplayed":
 				bValidation = oWebDriverWait.until(ExpectedConditions.visibilityOf(getElement(Locator))) != null;
@@ -510,11 +460,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
-	public String getElement_Property(By Locator, String Property, String PropertyName) throws Throwable {
+	public String getElement_Property(By Locator, String Keyword, String PropertyName) throws Throwable {
 
 		strValue = null;
 
-		switch (Property) {
+		switch (Keyword) {
 
 		case "getAttribute":
 			strValue = getElement(Locator).getAttribute(PropertyName);
@@ -523,7 +473,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		case "getTagName":
 			strValue = getElement(Locator).getTagName();
 		case "getText":
-			strValue = getText_Element(Locator);
+			strValue = getElement(Locator).getText();
+		case "getOptions":
+			strValue = ((Select) getElement(Locator)).getOptions().toString();
+		case "getFirstSelectedOption":
+			new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
 		case "getSize":
 			strValue = getElement(Locator).getSize().toString();
 		default:

@@ -110,21 +110,16 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		 * call the modules/methods
 		 */
 
-		// Logging into Policy Center
-		loginScreen.login_PolicyCenter();
-		policycenter.gwPolicyCenter_TabNavigation_Sub_Search();
+		loginScreen.login_PolicyCenter(); 							// Logging into Policy Center
+		policycenter.gwPolicyCenter_TabNavigation_Acct_Search(); 	//Search Account
+		accountSummary.detail_Verify(); 							//accountSummary
+		navigate.gwPolicyCenter_MenuNavigation("New Submission"); 	//Click Menu - New Submission
+		policycenter.newSubmissions_Verify(); 						//New SubmissionFull Application
+		personalauto.newSubmission_SelectLOB_PersonalAuto();		// select LOB
 
-		/*
-		 * // Search Account policycenter.gwPolicyCenter_TabNavigation_Acct_Search(); //
-		 * accountSummary accountSummary.detail_Verify(); // Click Menu - New Submission
-		 * navigate.gwPolicyCenter_MenuNavigation("New Submission"); // newSubmissions
-		 * screen policycenter.newSubmissions_Verify();// Full Application // select LOB
-		 * personalauto.newSubmission_SelectLOB_PersonalAuto();
-		 * 
-		 * strAccountName = policycenter.infoBar("AccountName"); strAccountNumber =
-		 * policycenter.infoBar("AccountNumber");
-		 * 
-		 */
+		strAccountName = policycenter.infoBar("AccountName");
+		strAccountNumber = policycenter.infoBar("AccountNumber");
+
 		policycenter.offering();
 		policycenter.clickButton("Next");
 		personalauto.qualification();

@@ -84,7 +84,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Driver Select", DR_DriversDetails_Select, "click", "NA");
 		GuidewireAutomate("RetrieveMVR", DR_DriversDetails_RetrieveMVR_Button, "click", "NA");
 
-		GuidewireAutomate_Validation("MVRStatus", DR_DriversDetails_MVRStatus, "equals", "Received");
+		GuidewireAutomate_Validation("MVR Status", DR_DriversDetails_MVRStatus, "equals", "Received");
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -156,10 +156,10 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 			LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
 		}
 
-		GuidewireAutomate("License", DR_CD_DateofBirth, "clearAndsendkeys",
+		GuidewireAutomate("DateofBirth", DR_CD_DateofBirth, "clearAndsendkeys",
 				lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
-		GuidewireAutomate("License", DR_CD_LicenseNumber, "clearAndsendkeys", LicenseNumber);
-		GuidewireAutomate("License", DR_CD_LicenseState, "selectByVisibleText",
+		GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearAndsendkeys", LicenseNumber);
+		GuidewireAutomate("LicenseState", DR_CD_LicenseState, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
@@ -183,9 +183,9 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 			GuidewireAutomate_Validation("Primary Named Insured", DR_R_PrimaryNamedInsured, "equals",
 					"Primary Named Insured");
 
-			GuidewireAutomate("First name", DR_R_D_DateCompletedTrainingClass, "clearANDsendkeys",
+			GuidewireAutomate("DateCompletedTrainingClass", DR_R_D_DateCompletedTrainingClass, "clearANDsendkeys",
 					lhm_TestCase_Table_Data.get("DR_R_D_DateCompletedTrainingClass"));
-			GuidewireAutomate("Last name", DR_R_D_YearFirstLicensed, "clearANDsendkeys",
+			GuidewireAutomate("YearFirstLicensed", DR_R_D_YearFirstLicensed, "clearANDsendkeys",
 					lhm_TestCase_Table_Data.get("DR_R_D_YearFirstLicensed"));
 
 			GuidewireAutomate("Excluded?", DR_R_D_ExcludedNo, "click", lhm_TestCase_Table_Data.get("DR_R_D_Excluded"));
