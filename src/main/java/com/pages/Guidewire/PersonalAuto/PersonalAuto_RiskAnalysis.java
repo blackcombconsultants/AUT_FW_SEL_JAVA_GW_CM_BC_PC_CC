@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PersonalAuto;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -20,7 +21,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 	@Override
 	public void RA_AddUWIssue() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("Risk_Analysis", strTestCaseName);
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
 
 		// Validating Risk Analysis screen
 		GuidewireAutomate_Validation("Screen Header", PersonalAuto_NewSubmission_ReusablePO.Screen_Header, "equals",
@@ -32,14 +33,57 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 
 		// Entering value for the fields
 		GuidewireAutomate("Issue Type selector", RA_AUI_CNUI_IssueType, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("RA_AUI_CNUI_IssueType"));
-		GuidewireAutomate_Validation("Short Description", RA_AUI_CNUI_ShortDescription, "equals",
-				lhm_TestCase_Table_Data.get("RA_AUI_CNUI_ShortDescription"));
-		GuidewireAutomate_Validation("Long Description", RA_AUI_CNUI_LongDescription, "sendkeys",
-				lhm_TestCase_Table_Data.get("RA_AUI_CNUI_LongDescription"));
+				lhm_TestCase_Table_Data.get("RA_Issue_Type"));
+		GuidewireAutomate("Short Description", RA_AUI_CNUI_ShortDescription, "clearANDsendkeys",
+				lhm_TestCase_Table_Data.get("RA_Short_Description"));
+		GuidewireAutomate("Long Description", RA_AUI_CNUI_LongDescription, "clearANDsendkeys",
+				lhm_TestCase_Table_Data.get("RA_Long_Description"));
 		// Creating an UW issue
 		GuidewireAutomate("Create an UW Issue", RA_OK_Button, "click", "NA");
 
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
+
+	@Override
+	public void RA_ApproveUWIssues() throws Throwable {
+		String strUWIssues_Select = null;
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
+
+		/*
+		 * UWIssues Tab
+		 */
+		GuidewireAutomate("UWIssues Tab", RA_Tab_UWIssues, "click", "NA");
+		GuidewireAutomate("ViewIssuesBlocking", RA_UI_ViewIssuesBlocking, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("RA_UI_ViewIssuesBlocking"));
+
+		if (lhm_TestCase_Table_Data.get("RA_UI_Name").equalsIgnoreCase("randomvalue")) {
+			strUWIssues_Select = lhm_TestCase_Data.get("");
+		} else {
+			strUWIssues_Select = lhm_TestCase_Table_Data.get("RA_UI_Name");
+		}
+		By RA_UI_Select = By.xpath("//div[contains(@id,'ShortDescription_button') and text()='" + strUWIssues_Select
+				+ "']/ancestor::td[contains(@id,'ShortDescription_Cell')]/preceding-sibling::td[contains(@class,'gw-impl-cell--CB')]//input[@type='checkbox']");
+		GuidewireAutomate("UWIssues Select", RA_UI_Select, "click", strUWIssues_Select);
+
+		GuidewireAutomate_Validation("Name", RA_UI_Name, "equals", lhm_TestCase_Table_Data.get("RA_UI_Name"));
+
+		By RA_UI_Approve = By.xpath("//div[contains(@id,'ShortDescription_button') and text()='" + strUWIssues_Select
+				+ "']/ancestor::td[contains(@id,'ShortDescription_Cell')]/following-sibling::td[contains(@id,'UWIssueRowSet-6')]//div[contains(@id,'UWIssueRowSet-Approve')]");
+		GuidewireAutomate("UWIssues Approve", RA_UI_Approve, "click", strUWIssues_Select);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	@Override
+	public void RA_Risk_Approval_Details() throws Throwable {
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
+		// Validating Risk Approval Details screen
+		GuidewireAutomate_Validation("Screen Header", PersonalAuto_NewSubmission_ReusablePO.Screen_Header, "equals",
+				"Risk Approval Details");
+		GuidewireAutomate("RA_OK_Button", RA_OK_Button, "click", "NA");
 	}
 
 	/*
@@ -125,23 +169,6 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 
 		GuidewireAutomate("Release Lock", RA_RequestApproval_Button, "click", "NA");
 
-	}
-
-	@Override
-	public void RA_ApproveUWIssues() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("Risk_Analysis", strTestCaseName);
-
-		/*
-		 * UWIssues Tab
-		 */
-		GuidewireAutomate("UWIssues Tab", RA_Tab_UWIssues, "click", "NA");
-		GuidewireAutomate_Validation("ViewIssuesBlocking", RA_UI_ViewIssuesBlocking, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("RA_UI_ViewIssuesBlocking"));
-
-		GuidewireAutomate("UWIssues Select", RA_UI_Select, "click", lhm_TestCase_Table_Data.get("RA_UI_Select"));
-		GuidewireAutomate_Validation("Name", RA_UI_Name, "equals", lhm_TestCase_Table_Data.get("RA_UI_Name"));
-
-		GuidewireAutomate("UWIssues Approve", RA_UI_Approve, "click", lhm_TestCase_Table_Data.get("RA_UI_Approve"));
 	}
 
 	@Override
