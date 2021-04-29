@@ -74,8 +74,14 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	public void ve_AssignDriver() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
-		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals", "Drivers");
-		GuidewireAutomate("VE_ADV_Add_Button", VE_ADV_Add_Button, "click", "");
+
+		GuidewireAutomate_Validation("Assign Drivers to Vehicles", VE_AssignDriverstoVehicles, "equals",
+				"Assign Drivers to Vehicles");
+		GuidewireAutomate_Validation("What percentage does each driver use this vehicle?",
+				VE_ADV_Percentageeachdriverusethisvehicle, "equals",
+				"What percentage does each driver use this vehicle?");
+
+		GuidewireAutomate("Add", VE_ADV_Add_Button, "click", "");
 
 		// Hande Dynamic Element - Click Existing driver
 		if (lhm_TestCase_Table_Data.get("VE_ADV_Driver").contains("refer")) {

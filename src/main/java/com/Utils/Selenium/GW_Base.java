@@ -62,6 +62,9 @@ public class GW_Base {
 	public static LinkedHashMap<String, String> lhm_TestCase_Data = new LinkedHashMap<String, String>();
 	public static LinkedHashMap<String, String> lhm_TestCase_Table_Data = new LinkedHashMap<String, String>();
 	public static String strTestCaseName = null;
+	public static String strSheetName = null;
+	public static String strClassName = null;
+	public static String strMethodName = null;
 
 	public static String url;
 	public static String StrBrowser;
@@ -69,6 +72,14 @@ public class GW_Base {
 	public static String strGW_Application;
 	public static String strGW_Country;
 	public static String strGW_State;
+
+	/*
+	 * Guidewire
+	 */
+	public static String strURL_ContactManagement;
+	public static String strURL_BillingCenter;
+	public static String strURL_PolicyCenter;
+	public static String strURL_ClaimsCenter;
 
 	public static String strJob;
 	public static String strWorkflow;
