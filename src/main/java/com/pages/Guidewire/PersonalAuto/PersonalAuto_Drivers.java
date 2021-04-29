@@ -139,42 +139,29 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 			break;
 		default:
-
-			String LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
-			if (LicenseNumber.equalsIgnoreCase("Random")) {
-				LicenseNumber = getRandomAlphabetic(9);
-			} else if (LicenseNumber.equalsIgnoreCase("Today")) {
-				LicenseNumber = strCurrentDate_ddMMMMyyyy;
-			} else if (LicenseNumber.equalsIgnoreCase("CurrentTime")) {
-				LicenseNumber = strCurrentDate_ddMMMMyyyyHHmmss;
-			} else if (LicenseNumber.equalsIgnoreCase("NowSystem")) {
-				LicenseNumber = String.valueOf(System.currentTimeMillis());
-			} else {
-				LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
-			}
-			
-			GuidewireAutomate("License", DR_CD_DateofBirth, "clearAndsendkeys",
-					lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
-			GuidewireAutomate("License", DR_CD_LicenseNumber, "clearAndsendkeys", LicenseNumber);
-			GuidewireAutomate("License", DR_CD_LicenseState, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
-
 			break;
+
 		}
 
-		/*
-		 * String LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber"); if
-		 * (LicenseNumber.equalsIgnoreCase("Random")) { LicenseNumber =
-		 * getRandomAlphabetic(9); } else if (LicenseNumber.equalsIgnoreCase("Today")) {
-		 * LicenseNumber = strCurrentDate_ddMMMMyyyy; } else if
-		 * (LicenseNumber.equalsIgnoreCase("Now")) { LicenseNumber =
-		 * strCurrentDate_ddMMMMyyyyHHmmss; } else if
-		 * (LicenseNumber.equalsIgnoreCase("NowSystem")) { LicenseNumber =
-		 * String.valueOf(System.currentTimeMillis()); } GuidewireAutomate("License",
-		 * DR_CD_LicenseNumber, "clearAndsendkeys", LicenseNumber);
-		 * GuidewireAutomate("License", DR_CD_LicenseState, "selectByVisibleText",
-		 * lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
-		 */
+		String LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
+		if (LicenseNumber.equalsIgnoreCase("Random")) {
+			LicenseNumber = getRandomAlphabetic(9);
+		} else if (LicenseNumber.equalsIgnoreCase("Today")) {
+			LicenseNumber = strCurrentDate_ddMMMMyyyy;
+		} else if (LicenseNumber.equalsIgnoreCase("CurrentTime")) {
+			LicenseNumber = strCurrentDate_ddMMMMyyyyHHmmss;
+		} else if (LicenseNumber.equalsIgnoreCase("NowSystem")) {
+			LicenseNumber = String.valueOf(System.currentTimeMillis());
+		} else {
+			LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
+		}
+
+		GuidewireAutomate("License", DR_CD_DateofBirth, "clearAndsendkeys",
+				lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
+		GuidewireAutomate("License", DR_CD_LicenseNumber, "clearAndsendkeys", LicenseNumber);
+		GuidewireAutomate("License", DR_CD_LicenseState, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
+
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}

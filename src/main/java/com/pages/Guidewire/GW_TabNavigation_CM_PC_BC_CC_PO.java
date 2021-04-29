@@ -18,15 +18,15 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By Tab_DesktopTab_Account_dd = By.xpath("//div[@id='TabBar-DesktopTab']/div[3]");
 	final By Tab_Account = By.xpath("//div[@id='TabBar-AccountsTab']//div[@class='gw-label']");
 	final By Tab_Account_dd = By.xpath("//div[@id='TabBar-AccountTab']/div[3]");
-	final By Tab_Policy = By.xpath("//div[@id='TabBar-DesktopTab']/div[@class='gw-label']");
-	final By Tab_Policy_dd = By.xpath("//div[@id='TabBar-DesktopTab']/div[3]");
-	final By Tab_Contact = By.xpath("//div[@id='TabBar-DesktopTab']/div[@class='gw-label']");
-	final By Tab_Contact_dd = By.xpath("//div[@id='TabBar-DesktopTab']/div[3]");
-	final By Tab_Search = By.xpath("//div[@id='TabBar-DesktopTab']/div[@class='gw-label']");
-	final By Tab_Search_dd = By.xpath("//div[@id='TabBar-DesktopTab']/div[3]");
-	final By Tab_Team = By.xpath("//div[@id='TabBar-DesktopTab']/div[@class='gw-label']");
-	final By Tab_Administration = By.xpath("//div[@id='TabBar-DesktopTab']/div[@class='gw-label']");
-	final By Tab_Administration_dd = By.xpath("//div[@id='TabBar-DesktopTab']/div[3]");
+	final By Tab_Policy = By.xpath("//div[@id='TabBar-PolicyTab']/div[@class='gw-label']");
+	final By Tab_Policy_dd = By.xpath("//div[@id='TabBar-PolicyTab']/div[3]");
+	final By Tab_Contact = By.xpath("//div[@id='TabBar-ContactTab']/div[@class='gw-label']");
+	final By Tab_Contact_dd = By.xpath("//div[@id='TabBar-ContactTab']/div[3]");
+	final By Tab_Search = By.xpath("//div[@id='TabBar-SearchTab']/div[@class='gw-label']");
+	final By Tab_Search_dd = By.xpath("//div[@id='TabBar-SearchTab']/div[3]");
+	final By Tab_Team = By.xpath("//div[@id='TabBar-TeamTab']/div[@class='gw-label']");
+	final By Tab_Administration = By.xpath("//div[@id='TabBar-AdminTab']/div[@class='gw-label']");
+	final By Tab_Administration_dd = By.xpath("//div[@id='TabBar-AdminTab']/div[3]");
 
 	/*
 	 * Desktop Tab - SubMenu
@@ -73,13 +73,13 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By SearchTab_ProducerCodes = By.id("TabBar-SearchTab-Search_ProducerCodeSearch");
 	final By SearchTab_Activities = By.id("TabBar-SearchTab-TabBar-SearchTab-Search_ActivitySearch");
 	final By SearchTab_Contacts = By.id("TabBar-SearchTab-TabBar-SearchTab-Search_ContactSearch");
-	
+
 	/*
 	 * Team Tab - SubMenu
 	 */
 
 	final By Team = By.xpath("//div[@id='TabBar-TeamTab']//div[@class='gw-label']");
-	
+
 	/*
 	 * AdministrationTab Tab - SubMenu
 	 */
@@ -91,7 +91,7 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 			.xpath("//div[@id='TabBar-AdminTab-Admin_Monitoring']/div[@class='gw-action--expand-button']");
 	final By AdministrationTab_Utilities = By
 			.xpath("//div[@id='TabBar-AdminTab-Admin_Utilities']/div[@class='gw-action--expand-button']");
-	
+
 	/*
 	 * Menu Options
 	 * -----------------------------------------------------------------------------
@@ -137,7 +137,6 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By My_Queues = By
 			.xpath("//div[@id='Desktop-MenuLinks-Desktop_DesktopAssignableQueues']/div[1]/div[text()='My Queues']");
 
-		
 	/*
 	 * -----------------------------------------------------------------------------
 	 * ------------------------------------------- Billing Center Tabs
@@ -179,15 +178,11 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	 * -----------------------------------------------------------------------------
 	 * -------------------------------------------
 	 */
-	
-	
-	
-	
+
 	/*
 	 * Page Headers - Policy Center
 	 */
 
-	
 	final By Screen_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title']");
 
 	final By EnterAccountInformation = By
@@ -202,10 +197,6 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 	final By Producer_Header = By.xpath("//div[contains(@id,'AccountFile_Summary-ttlBar')]//div[text(),'Producer')]");
 
 	final By NewSubmission_Header = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[text()='New Submissions']");
-
-	
-	
-	
 
 	void gwContactManagement_TabNavigation(String Tab, String Value) throws Throwable;
 

@@ -112,42 +112,46 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 
 		// Logging into Policy Center
 		loginScreen.login_PolicyCenter();
-		// Search Account
-		policycenter.gwPolicyCenter_TabNavigation_Acct_Search();
-		// accountSummary
-		accountSummary.detail_Verify();
-		// Click Menu - New Submission
-		navigate.gwPolicyCenter_MenuNavigation("New Submission");
-		// newSubmissions screen
-		policycenter.newSubmissions_Verify();// Full Application
-		// select LOB
-		personalauto.newSubmission_SelectLOB_PersonalAuto();
-		
-		strAccountName = policycenter.infoBar("AccountName");
-		strAccountNumber = policycenter.infoBar("AccountNumber");
+		policycenter.gwPolicyCenter_TabNavigation_Sub_Search();
 
+		/*
+		 * // Search Account policycenter.gwPolicyCenter_TabNavigation_Acct_Search(); //
+		 * accountSummary accountSummary.detail_Verify(); // Click Menu - New Submission
+		 * navigate.gwPolicyCenter_MenuNavigation("New Submission"); // newSubmissions
+		 * screen policycenter.newSubmissions_Verify();// Full Application // select LOB
+		 * personalauto.newSubmission_SelectLOB_PersonalAuto();
+		 * 
+		 * strAccountName = policycenter.infoBar("AccountName"); strAccountNumber =
+		 * policycenter.infoBar("AccountNumber");
+		 * 
+		 */
 		policycenter.offering();
 		policycenter.clickButton("Next");
 		personalauto.qualification();
 		policycenter.clickButton("Next");
+
 		policyinfo.primaryNamedInsured();
 		policyinfo.pi_OfficialID();
 		policyinfo.policyDetails();
 		policyinfo.affinityGroup();
 		policyinfo.producerOfRecord();
 		policyinfo.underWritingCompany();
+
 		policycenter.clickButton("Next");
+
 		padriver.driver_Add_ExistingDriver();
 		padriver.driver_ContatDetails("VERIFY");
-		padriver.driver_Roles("EDIT");
-		//padriver.driver_RetrieveMVR();
+		padriver.driver_Roles("EDIT"); //
+		padriver.driver_RetrieveMVR();
 		padriver.driver_Addresses("VERIFY");
 		padriver.driver_MotorVehicleRecord("VERIFY");
+
 		policycenter.clickButton("Next");
+
 		pavehicle.createVehicles();
-		// continue
 		pavehicle.ve_AssignDriver();
-		pavehicle.additionalInterest_Add_OtherContacts();
+		// pavehicle.additionalInterest_Add_ExistingAdditionalInterest();
+
 		policycenter.clickButton("Next");
 		coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
 		coverages.coveragesAppliedperVehiclesIn("VERIFY");
@@ -179,7 +183,7 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		submissionbound.View_your_Policy();
 		policySummary.Detail_Verify();
 		policySummary.Account_Verify();
-		
+
 		strJob = policycenter.infoBar("Job");
 		strWorkflow = policycenter.infoBar("Workflow");
 		strLOB = policycenter.infoBar("LOB");
@@ -219,7 +223,7 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		policycenter.newSubmissions_Verify();// Full Application
 		// select LOB
 		personalauto.newSubmission_SelectLOB_PersonalAuto();
-		
+
 		strAccountName = policycenter.infoBar("AccountName");
 		strAccountNumber = policycenter.infoBar("AccountNumber");
 

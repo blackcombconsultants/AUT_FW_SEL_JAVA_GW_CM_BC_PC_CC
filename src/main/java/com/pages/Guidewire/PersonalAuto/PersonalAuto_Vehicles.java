@@ -10,6 +10,7 @@ import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements PersonalAuto_VehiclesPO {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
+
 	public PersonalAuto_Vehicles(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
@@ -18,26 +19,25 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	public void createVehicles() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
-		PersonalAuto_NewSubmission_Reusable nsr = new PersonalAuto_NewSubmission_Reusable(driver,oExtentTest);
+		PersonalAuto_NewSubmission_Reusable nsr = new PersonalAuto_NewSubmission_Reusable(driver, oExtentTest);
 
-
-		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals",
-				"Vehicles");
+		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles");
 
 		GuidewireAutomate("Create Vehicle", CreateVehicle_Button, "click", "NA");
-		
+
 		GuidewireAutomate("VehicleDetails Tab", VE_Tab_VehicleDetails, "click", "NA");
 
 		GuidewireAutomate_Validation("Basic Vehicle Information", VE_VD_BasicVehicleInformation, "equals",
 				"Basic Vehicle Information");
 
-		GuidewireAutomate("Vehicle Type", VE_VD_BVI_VehicleType, "selectByVisibleText", lhm_TestCase_Table_Data.get("VE_VD_BVI_VehicleType"));
+		GuidewireAutomate("Vehicle Type", VE_VD_BVI_VehicleType, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VehicleType"));
 
 		String StrVIN = lhm_TestCase_Table_Data.get("VE_VD_BVI_VIN");
 
 		if (StrVIN.equalsIgnoreCase("Random")) {
 			StrVIN = "2B4FK45J3KR" + getRandomNumeric(6);
-			//StrVIN = "3VW1K7AJ9CM349218";
+			// StrVIN = "3VW1K7AJ9CM349218";
 			// StrVIN = 1+"GC"+"HC231"+"81F"+getRandomNumeric
 		} else if (StrVIN.equalsIgnoreCase("vingenerator")) {
 			StrVIN = nsr.getRandomVIN("vingenerator");
@@ -61,37 +61,40 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate("Primary Use", VE_VD_BVI_PrimaryUse, "sendkeys",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_PrimaryUse"));
 
-		
 		GuidewireAutomate_Validation("Vehicle Rate Modifiers", VE_VD_VehicleRateModifiers, "equals",
 				"Vehicle Rate Modifiers");
 		GuidewireAutomate("Anti Theft Discount", VE_VD_BVI_AntiTheftDiscount, "sendkeys",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_AntiTheftDiscount"));
 
-		
-		
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
 	@Override
 	public void ve_AssignDriver() throws Throwable {
+
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals", "Drivers");
+		GuidewireAutomate("VE_ADV_Add_Button", VE_ADV_Add_Button, "click", "");
 
-		GuidewireAutomate_Validation("Assign Drivers to Vehicles", VE_AssignDriverstoVehicles, "equals",
-				"Assign Drivers to Vehicles");
-		GuidewireAutomate_Validation("What percentage does each driver use this vehicle",
-				VE_ADV_Percentageeachdriverusethisvehicle, "equals",
-				"What percentage does each driver use this vehicle?");
+		// Hande Dynamic Element - Click Existing driver
+		if (lhm_TestCase_Table_Data.get("VE_ADV_Driver").contains("refer")) {
+			strAccountName = lhm_TestCase_Data.get("PrimaryNI_Name");
+		} else {
+			strAccountName = lhm_TestCase_Table_Data.get("VE_ADV_Driver");
+		}
+		// xpath ve_add_driver=
+		// //div[contains(@id,'DriverPctLV_tb-AddDriver')]/div[@class='gw-subMenu']/div/div/div[text()='"+strAccountName+"']
 
-		GuidewireAutomate("Add", VE_ADV_Add_Button, "click", "NA");
-		GuidewireAutomate("Driver Select", VE_ADV_Add_Select, "click", lhm_TestCase_Table_Data.get("VE_ADV_Driver"));
-		GuidewireAutomate_Validation("Driver", VE_ADV_Driver, "click", lhm_TestCase_Table_Data.get("VE_ADV_Driver"));
-		GuidewireAutomate("Percentage", VE_ADV_Percentage, "clear", "NA");
-		GuidewireAutomate("Percentage", VE_ADV_Percentage, "sendkeys",
-				lhm_TestCase_Table_Data.get("VE_ADV_Percentage"));
+		By VE_ADV_Driver = By.xpath(
+				"//div[@class='gw-subMenu gw-open']//div[contains(@id,'DriverPctLV_tb-AddDriver') and contains(@class,'gw-AddMenuItemWidget')]//div[@class='gw-label' and text()='"
+						+ strAccountName + "']");
+		GuidewireAutomate("Driver " + strAccountName, VE_ADV_Driver, "click",
+				lhm_TestCase_Table_Data.get("VE_ADV_Driver"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
+
 	}
 
 	@Override
@@ -138,16 +141,30 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void additionalInterest_Add_OtherContacts() throws Throwable {
+	public void additionalInterest_Add_ExistingAdditionalInterest() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		GuidewireAutomate("Additional Interest", VE_Tab_AdditionalInterest, "click", "NA");
 		GuidewireAutomate_Validation("Personal Vehicle Additional Interests", VE_AI_PersonalVehicleAdditionalInterests,
 				"equals", "Personal Vehicle Additional Interests");
-		
+
 		GuidewireAutomate("Add", VE_AI_PVAI_Add_Button, "click", "NA");
-		GuidewireAutomate("OtherContacts", VE_AI_PVAI_Add_OtherContacts, "click", "NA");
-		GuidewireAutomate("OtherContacts Name", DR_DriversDetails_Add_OtherContacts_Name, "click", "NA");
+		GuidewireAutomate("ExistingAdditionalInteres", VE_AI_PVAI_Add_ExistingAdditionalInterest, "moveToElement",
+				"NA");
+
+		// Hande Dynamic Element - Click Existing
+		if (lhm_TestCase_Table_Data.get("VE_AI_PVAI_Name").contains("refer")) {
+			strAccountName = lhm_TestCase_Data.get("PrimaryNI_Name");
+		} else {
+			strAccountName = lhm_TestCase_Table_Data.get("VE_AI_PVAI_Name");
+		}
+
+		By DR_DriversDetails_Add_ExistingAdditionalInterest_Name = By.xpath(
+				"//div[@class='gw-subMenu gw-open']//div[contains(@id,'ExistingAdditionalInterest-AddDriver') and contains(@class,'gw-AddMenuItemWidget')]//div[@class='gw-label' and text()='"
+						+ strAccountName + "']");
+		GuidewireAutomate("ExistingAdditionalInterest_Name" + strAccountName,
+				DR_DriversDetails_Add_ExistingAdditionalInterest_Name, "click", strAccountName);
+		// Hande Dynamic Element - Click Existing - Completed
 
 		GuidewireAutomate("Additional Interest Select", VE_AI_PVAI_Select, "click", "NA");
 		GuidewireAutomate_Validation("Additional Interest Name", VE_AI_PVAI_Name, "equals", "NA");
@@ -164,9 +181,8 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 	@Override
 	public void ve_RemoveVehicles() throws Throwable {
-		
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -174,9 +190,8 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 	@Override
 	public void ve_Garage_NewLocation() throws Throwable {
-		
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -184,9 +199,8 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 	@Override
 	public void ve_Garage_EditLocation() throws Throwable {
-		
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -194,18 +208,16 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 	@Override
 	public void ve_Edit_Vehicles() throws Throwable {
-		
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
 	public void searchtable(By Locator, String CellValue) throws Throwable {
-		
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

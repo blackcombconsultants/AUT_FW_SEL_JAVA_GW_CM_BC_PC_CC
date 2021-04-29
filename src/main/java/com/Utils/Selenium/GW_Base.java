@@ -61,7 +61,7 @@ public class GW_Base {
 
 	public static LinkedHashMap<String, String> lhm_TestCase_Data = new LinkedHashMap<String, String>();
 	public static LinkedHashMap<String, String> lhm_TestCase_Table_Data = new LinkedHashMap<String, String>();
-	public static String strTestCaseName=null;
+	public static String strTestCaseName = null;
 
 	public static String url;
 	public static String StrBrowser;
@@ -76,6 +76,7 @@ public class GW_Base {
 	public static String strEffectiveDate;
 	public static String strAccountName;
 	public static String strAccountNumber;
+	public static String strSubmissionNumber;
 	public static String strPolicyNumber;
 	public static String strAmount;
 

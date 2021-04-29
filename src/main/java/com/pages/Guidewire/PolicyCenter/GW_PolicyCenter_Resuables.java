@@ -630,13 +630,27 @@ public class GW_PolicyCenter_Resuables extends SeleniumWebDriver_Commands implem
 
 	@Override
 	public void gwPolicyCenter_TabNavigation_Sub_Search() throws Throwable {
-		// TODO Auto-generated method stub
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("search", strTestCaseName);
+
+		strSubmissionNumber = lhm_TestCase_Table_Data.get("SubmissionNumber");
+
+		tab.gwPolicyCenter_TabNavigation("Sub Search", strSubmissionNumber);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 
 	}
 
 	@Override
 	public void gwPolicyCenter_TabNavigation_Policy_Search() throws Throwable {
-		// TODO Auto-generated method stub
+		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("search", strTestCaseName);
+
+		strPolicyNumber = lhm_TestCase_Table_Data.get("PolicyNumber");
+
+		tab.gwPolicyCenter_TabNavigation("Policy Search", strPolicyNumber);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 
 	}
 
