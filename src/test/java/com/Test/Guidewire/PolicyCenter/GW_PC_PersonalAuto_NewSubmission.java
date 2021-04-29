@@ -110,12 +110,12 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		 * call the modules/methods
 		 */
 
-		loginScreen.login_PolicyCenter(); 							// Logging into Policy Center
-		policycenter.gwPolicyCenter_TabNavigation_Acct_Search(); 	//Search Account
-		accountSummary.detail_Verify(); 							//accountSummary
-		navigate.gwPolicyCenter_MenuNavigation("New Submission"); 	//Click Menu - New Submission
-		policycenter.newSubmissions_Verify(); 						//New SubmissionFull Application
-		personalauto.newSubmission_SelectLOB_PersonalAuto();		// select LOB
+		loginScreen.login_PolicyCenter(); // Logging into Policy Center
+		policycenter.gwPolicyCenter_TabNavigation_Acct_Search(); // Search Account
+		accountSummary.detail_Verify(); // accountSummary
+		navigate.gwPolicyCenter_MenuNavigation("New Submission"); // Click Menu - New Submission
+		policycenter.newSubmissions_Verify(); // New SubmissionFull Application
+		personalauto.newSubmission_SelectLOB_PersonalAuto(); // select LOB
 
 		strAccountName = policycenter.infoBar("AccountName");
 		strAccountNumber = policycenter.infoBar("AccountNumber");
@@ -154,7 +154,11 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		coverages.additionalcoveragesAppliedperVehiclesIn("VERIFY");
 		coverages.exclusionsAndConditions("VERIFY");
 		policycenter.clickButton("Next");
+		riskanalysis.RA_AddUWIssue();
+
 		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.RA_Risk_Approval_Details();
+
 		policycenter.clickButton("Next");
 		policyreview.pr_PolicyLevelCoverages();
 		policyreview.pr_VehicleLevelCoverages();
