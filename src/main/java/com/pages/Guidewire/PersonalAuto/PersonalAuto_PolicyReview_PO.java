@@ -110,10 +110,10 @@ public interface PersonalAuto_PolicyReview_PO {
 	final By PR_PAL_VLC_V_VC_TowingandLaborLimit_Value = By.xpath(
 			"//div[@class='gw-value-readonly-wrapper' and text()='Towing and Labor Limit']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']");
 
-	void pr_policyDetails() throws Throwable;
+	void policyDetails() throws Throwable;
 
-	void pr_PolicyLevelCoverages() throws Throwable;
+	void policyLevelCoverages() throws Throwable;
 
-	void pr_VehicleLevelCoverages() throws Throwable;
+	void vehicleLevelCoverages() throws Throwable;
 
 }

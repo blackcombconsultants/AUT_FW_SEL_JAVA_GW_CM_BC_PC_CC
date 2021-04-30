@@ -68,9 +68,11 @@
 		final By RA_PP_PriorPolicies = By.xpath(
 				"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Prior Policies']");
 		final By CA_PleaseConfirmAccountInformation = By.xpath(
-			"//div[contains(@class,'gw-VerbatimWidget--inner') and text()='Please confirm account information']");
-			//div[contains(@class,'gw-boldLabel') and text()='Address']
 			//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Driver']
+			//div[contains(@class,'gw-ListView--UI-section')]//div[@class='gw-ListView--UI--title' and @role='heading' and text()='Pending']
+			//div[contains(@class,'gw-VerbatimWidget--inner') and text()='Please confirm account information']");
+			//div[contains(@class,'gw-boldLabel') and text()='Address']
+			//div[contains(@class,'TextValueWidget')]//div[@class='gw-value-readonly-wrapper' and text()='Blocking Issuance']
 	
 		final By RA_PP_Add_Button = By.xpath("//div[contains(@id,'PriorPolicyLV_tb-Add')]/div[@role='button']");
 		final By RA_PP_Remove_Button = By.xpath("//div[contains(@id,'PriorPolicyLV_tb-Remove')]/div[@role='button']");

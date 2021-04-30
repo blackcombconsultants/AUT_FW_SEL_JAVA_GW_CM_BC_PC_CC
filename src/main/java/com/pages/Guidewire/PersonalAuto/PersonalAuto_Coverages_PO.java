@@ -131,7 +131,7 @@ public interface PersonalAuto_Coverages_PO {
 
 	void additionalcoveragesAppliedperVehiclesIn(String testingType) throws Throwable;
 
-	void exclusionsAndConditions(String testingType) throws Throwable;
+	void exclusionsAndConditions() throws Throwable;
 
 	void SearchAddExclusionorCondition() throws Throwable;
 

@@ -79,10 +79,10 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		By DR_DriversDetails_Name = By
 				.xpath("//td[contains(@id,'Name_Cell') and contains(@class,'gw-CellWidget')]//div[text()='"
 						+ strAccountName + "']");
-		GuidewireAutomate("Driver Name", DR_DriversDetails_Name, "click", strAccountName);
+		GuidewireAutomate("Driver " + strAccountName, DR_DriversDetails_Name, "click", strAccountName);
 
 		GuidewireAutomate("Driver Select", DR_DriversDetails_Select, "click", "NA");
-		GuidewireAutomate("RetrieveMVR", DR_DriversDetails_RetrieveMVR_Button, "click", "NA");
+		GuidewireAutomate("RetrieveMVR", DR_DriversDetails_RetrieveMVR_Button, "clickAndwait", "NA");
 
 		GuidewireAutomate_Validation("MVR Status", DR_DriversDetails_MVRStatus, "equals", "Received");
 

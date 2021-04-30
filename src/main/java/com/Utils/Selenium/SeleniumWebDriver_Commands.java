@@ -183,6 +183,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
 				oWebElement.click();
 				break;
+			case "clickAndwait":
+				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
+				oWebElement.click();
+				Thread.sleep(2000);
+				break;
 			case "close":
 				// oWebElement.close();
 				break;

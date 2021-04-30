@@ -17,7 +17,7 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 
 	@Override
 	public void newSubmission_SelectLOB_PersonalAuto() throws Throwable {
-		GuidewireAutomate("LOB", LOB_PersonalAuto, "click", "");
+		GuidewireAutomate("LOB PersonalAuto", LOB_PersonalAuto, "click", "");
 	}
 
 	@Override
@@ -27,19 +27,25 @@ public class PersonalAuto_NewSubmission_Reusable extends SeleniumWebDriver_Comma
 
 		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, " equals",
 				"Qualifications");
-		GuidewireAutomate("QU_IsApplicantCurrentlyInsured", QU_IsApplicantCurrentlyInsured, "selectByVisibleText",
+
+		GuidewireAutomate_Validation("PA Pre-Qualification", QU_PA_PreQualification, " equals",
+				"PA Pre-Qualification");
+
+		GuidewireAutomate("Is the applicant currently insured?", QU_IsApplicantCurrentlyInsured, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("QU_IsApplicantCurrentlyInsured"));
-		GuidewireAutomate("QU_IsApplicantLicenseCurrently_suspended_canceled_Revoked",
+		GuidewireAutomate("Is the applicant's license currently suspended, canceled, or revoked?",
 				QU_IsApplicantLicenseCurrently_suspended_canceled_Revoked, "click",
 				lhm_TestCase_Table_Data.get("QU_IsApplicantLicenseCurrently_suspended_canceled_Revoked"));
-		GuidewireAutomate("Has_the_applicants_license_ever_been_canceled_suspended_or_revoked",
+		GuidewireAutomate("Has the applicant's license ever been canceled, suspended or revoked?",
 				QU_Has_the_applicants_license_ever_been_canceled_suspended_or_revoked, "click",
 				lhm_TestCase_Table_Data.get("QU_Has_the_applicants_license_ever_been_canceled_suspended_or_revoked"));
-		GuidewireAutomate("Anydriverswithconvictionsformovingtrafficviolationswithinthepast3years",
+		GuidewireAutomate(
+				"Any drivers with convictions for moving traffic violations within the past 3 years? If 'Yes' please explain",
 				QU_Anydriverswithconvictionsformovingtrafficviolationswithinthepast3years, "click",
 				lhm_TestCase_Table_Data
 						.get("QU_Anydriverswithconvictionsformovingtrafficviolationswithinthepast3years"));
-		GuidewireAutomate("Hasanypolicyorcoveragebeendeclined_canceled_NonRenewedduringtheprior3years",
+		GuidewireAutomate(
+				"Has any policy or coverage been declined, canceled, or non-renewed during the prior 3 years?",
 				QU_Hasanypolicyorcoveragebeendeclined_canceled_NonRenewedduringtheprior3years, "click",
 				lhm_TestCase_Table_Data
 						.get("QU_Hasanypolicyorcoveragebeendeclined_canceled_NonRenewedduringtheprior3years"));

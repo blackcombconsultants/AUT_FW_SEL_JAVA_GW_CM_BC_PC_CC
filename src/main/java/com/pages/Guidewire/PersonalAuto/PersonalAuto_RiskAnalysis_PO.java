@@ -36,19 +36,56 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	 */
 
 	final By RA_Tab_UWIssues = By.xpath("//div[contains(@id,'RiskAnalysisCV-EvaluationIssuesCardTab')]");
+	final By RA_UI_BlockingIssuance = By.xpath("//div[contains(@class,'TextValueWidget')]//div[@class='gw-value-readonly-wrapper' and text()='Blocking Issuance']");
 	final By RA_UI_ViewIssuesBlocking = By.xpath(
 			"//div[contains(@id,'RiskEvaluationPanelSet-UserViewFilter')]//select[contains(@name,'UserViewFilter')]");
 
-	final By RA_UI_Select = By.xpath(
-			"//div[contains(@id,'ShortDescription_button') and text()='asmd m,sand,mna,d,msa']/ancestor::td[contains(@id,'ShortDescription_Cell')]/preceding-sibling::td[contains(@class,'gw-impl-cell--CB')]//input[@type='checkbox']");
-	final By RA_UI_Name = By.xpath(
-			"//td[contains(@id,'ShortDescription_Cell')]//div[contains(@id,'ShortDescription') and contains(@class,'gw-actionValue')]//div[contains(@id,'ShortDescription_button')]");
-	final By RA_UI_Approve = By.xpath(
-			"//div[contains(@id,'ShortDescription_button') and text()='asmd m,sand,mna,d,msa']/ancestor::td[contains(@id,'ShortDescription_Cell')]/following-sibling::td[contains(@id,'UWIssueRowSet-6')]//div[contains(@id,'UWIssueRowSet-Approve')]");
 	final By RA_UI_Reject = By.xpath(
 			"//div[contains(@id,'ShortDescription_button') and text()='asmd m,sand,mna,d,msa']/ancestor::td[contains(@id,'ShortDescription_Cell')]/following-sibling::td[contains(@id,'UWIssueRowSet-6')]//div[contains(@id,'UWIssueRowSet-Reject')]");
 	final By RA_UI_Reopen = By.xpath(
 			"//div[contains(@id,'ShortDescription_button') and text()='asmd m,sand,mna,d,msa']/ancestor::td[contains(@id,'ShortDescription_Cell')]/following-sibling::td[contains(@id,'UWIssueRowSet-6')]//div[contains(@id,'UWIssueRowSet-Reopen')]");
+
+	/*
+	 * Risk Approval Details
+	 */
+
+	/*
+	 * NewApproval
+	 */
+	final By RAD_NewApproval = By.xpath(
+			"//div[contains(@class,'gw-ListView--UI--title') and @role = 'heading' and text()='New Approval']");
+
+	final By RAD_NA_AllowEdit_Yes = By.xpath(
+			"//input[contains(@id,'UWApprovalLV-EditBeforeBind_0')]");
+	final By RAD_NA_AllowEdit_No = By.xpath(
+			"//input[contains(@id,'UWApprovalLV-EditBeforeBind_1')]");
+	final By RAD_NA_Through = By.xpath(
+			"//select[contains(@name,'UWApprovalLV-BlockingPoint')]");
+	final By RAD_NA_Validuntil = By.xpath(
+			"//select[contains(@name,'UWApprovalLV-Duration')]");
+
+	/*
+	 * History
+	 */
+	final By RAD_History = By
+			.xpath("//div[contains(@class,'gw-ListView--UI--title') and @role = 'heading' and text()='History']");
+
+	final By RAD_H_User = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'ResponsibleUser_Cell')]//div[contains(@id,'ResponsibleUser')]//div[@class='gw-value-readonly-wrapper']");
+	final By RAD_H_Date = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'HistoryCreateDate_Cell')]//div[contains(@id,'HistoryCreateDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By RAD_H_EffectiveDate = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'HistoryEffDate_Cell')]//div[contains(@id,'HistoryEffDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By RAD_H_PolicyTransaction = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'Job_Cell')]//div[contains(@id,'Job')]//div[@class='gw-value-readonly-wrapper']");
+	final By RAD_H_AllowEdit = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'EditBeforeBind_Cell')]//div[contains(@id,'EditBeforeBind')]/div");
+	final By RAD_H_Though = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'ThroughValue_Cell')]//div[contains(@id,'ThroughValue')]//div[@class='gw-value-readonly-wrapper']");
+	final By RAD_H_ValidUntil = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'InvalidFrom_Cell')]//div[contains(@id,'InvalidFrom')]/div");
+	final By RAD_H_Status = By.xpath(
+			"//tr[contains(@id,'UWIssueHistoryLV')]/td[contains(@id,'HistoryStatus_Cell')]//div[contains(@id,'HistoryStatus')]//div[@class='gw-label']");
 
 	/*
 	 * Contingencies
@@ -70,6 +107,8 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	final By RA_Tab_Contingencies = By.xpath(
 			"//div[contains(@id,'RiskAnalysisCV-ContingenciesCardTab')]//div[@class='gw-label' and text()='Contingencies']");
 
+	final By RA_C_Pending = By.xpath(
+			"//div[contains(@class,'gw-ListView--UI-section')]//div[@class='gw-ListView--UI--title' and @role='heading' and text()='Pending']");
 	final By RA_C_Title = By.xpath(
 			"//td[contains(@id,'ContingencyTitle_Cell')]//div[contains(@id,'ContingencyTitle') and contains(@class,'gw-actionValue')]//div[contains(@id,'ContingencyTitle_button')]");
 	final By RA_C_DueDate = By.xpath(
@@ -183,50 +222,48 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	 * Scenarios
 	 */
 
-	void riskAnalysis() throws Throwable;
+	void addUWIssue() throws Throwable;
 
-	void RA_AddUWIssue() throws Throwable;
+	void approveUWIssues() throws Throwable;
 
-	void RA_ApproveUWIssues() throws Throwable;
+	void riskApprovalDetails() throws Throwable;
 
-	void RA_Risk_Approval_Details() throws Throwable;
+	void rejectUWIssues() throws Throwable;
 
-	void RA_RejectUWIssues() throws Throwable;
+	void reopenUWIssues() throws Throwable;
 
-	void RA_ReopenUWIssues() throws Throwable;
+	void addUWIssue_MandatoryValidation() throws Throwable;
 
-	void RA_AddUWIssue_MandatoryValidation() throws Throwable;
+	void addUWIssue_CancelValidation() throws Throwable;
 
-	void RA_AddUWIssue_CancelValidation() throws Throwable;
+	void addUWContingency() throws Throwable;
 
-	void RA_AddUWContingency() throws Throwable;
+	void approveContingency() throws Throwable;
 
-	void RA_ApproveContingency() throws Throwable;
+	void rejectContingency() throws Throwable;
 
-	void RA_RejectContingency() throws Throwable;
+	void reopenContingency() throws Throwable;
 
-	void RA_ReopenContingency() throws Throwable;
+	void priorPolicies_Add() throws Throwable;
 
-	void RA_Add_PriorPolicies() throws Throwable;
+	void priorPolicies_Edit() throws Throwable;
 
-	void RA_Edit_PriorPolicies() throws Throwable;
-
-	void RA_Remove_PriorPolicies() throws Throwable;
+	void priorPolicies_Remove() throws Throwable;
 
 	void RA_Claims_Search() throws Throwable;
 
-	void RA_Add_PriorLosses() throws Throwable;
+	void priorLosses_Add() throws Throwable;
 
-	void RA_Edit_PriorLosses() throws Throwable;
+	void priorLosses_Edit() throws Throwable;
 
-	void RA_Remove_PriorLosses() throws Throwable;
+	void priorLosses_Remove() throws Throwable;
 
 	void RA_MVR_Search_Validate() throws Throwable;
 
 	void RA_LockForReview() throws Throwable;
 
-	void RA_ReleaseLock() throws Throwable;
+	void releaseLock() throws Throwable;
 
-	void RA_RequestApproval() throws Throwable;
+	void requestApproval() throws Throwable;
 
 }

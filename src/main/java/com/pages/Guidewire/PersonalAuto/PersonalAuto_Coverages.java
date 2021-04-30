@@ -22,7 +22,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		coveragesAppliedperVehiclesIn("VERIFY");
 		additionalcoveragesAppliedtoallVehiclesIn("EDIT");
 		additionalcoveragesAppliedperVehiclesIn("EDIT");
-		exclusionsAndConditions("EDIT");
+		exclusionsAndConditions();
 		SearchAddExclusionorCondition();
 
 	}
@@ -35,7 +35,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		GuidewireAutomate_Validation("Screen_Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"PA Coverages");
 
-		GuidewireAutomate("Additional Coverages tab", PACoverages_CoveragesTab, "click", "");
+		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "");
 
 		GuidewireAutomate_Validation("Coverages applied to all vehicles", PAC_CT_CoveragesAppliedtoAllVehicles,
 				"contains", "Coverages applied to all vehicles");
@@ -77,7 +77,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		GuidewireAutomate_Validation("Screen_Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"PA Coverages");
 
-		GuidewireAutomate("Additional Coverages tab", PACoverages_CoveragesTab, "click", "");
+		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "");
 
 		GuidewireAutomate_Validation("Coverages applied per vehicle in", PAC_CT_CoveragesAppliedPerVehicleIn,
 				"contains", "Coverages applied per vehicle in");
@@ -106,7 +106,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate("Additional Coverages tab", PACoverages_CoveragesTab, "click", "");
+		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "click", "");
 
 		GuidewireAutomate_Validation("Coverages applied to all vehicles", PAC_ACT_CoveragesAppliedtoAllVehicles,
 				"contains", "Coverages applied to all vehicles");
@@ -139,9 +139,9 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate("Additional Coverages tab", PACoverages_CoveragesTab, "click", "");
+		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "click", "");
 
-		GuidewireAutomate_Validation("Coverages applied per vehicle in", PAC_CT_CoveragesAppliedPerVehicleIn,
+		GuidewireAutomate_Validation("Coverages applied per vehicle in", PAC_ACT_CoveragesAppliedPerVehicleIn,
 				"contains", "Coverages applied per vehicle in");
 
 		switch (testingType) {
@@ -167,7 +167,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 	}
 
 	@Override
-	public void exclusionsAndConditions(String testingType) throws Throwable {
+	public void exclusionsAndConditions() throws Throwable {
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
 		GuidewireAutomate("ExclusionsAndConditionsCardTab", PACoverages_ExclusionsAndConditionsCardTab, "click", "");
