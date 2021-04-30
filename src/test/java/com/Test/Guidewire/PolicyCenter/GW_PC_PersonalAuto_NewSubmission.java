@@ -121,10 +121,11 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		strAccountNumber = policycenter.infoBar("AccountNumber");
 
 		policycenter.offering();
+
 		policycenter.clickButton("Next");
 		personalauto.qualification();
-		policycenter.clickButton("Next");
 
+		policycenter.clickButton("Next");
 		policyinfo.primaryNamedInsured();
 		policyinfo.pi_OfficialID();
 		policyinfo.policyDetails();
@@ -133,7 +134,6 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		policyinfo.underWritingCompany();
 
 		policycenter.clickButton("Next");
-
 		padriver.driver_Add_ExistingDriver();
 		padriver.driver_ContatDetails("VERIFY");
 		padriver.driver_Roles("EDIT"); //
@@ -142,30 +142,50 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		padriver.driver_MotorVehicleRecord("VERIFY");
 
 		policycenter.clickButton("Next");
-
 		pavehicle.createVehicles();
-		pavehicle.ve_AssignDriver();
+		pavehicle.assignDriver();
 		// pavehicle.additionalInterest_Add_ExistingAdditionalInterest();
 
 		policycenter.clickButton("Next");
 		coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
 		coverages.coveragesAppliedperVehiclesIn("VERIFY");
-		coverages.additionalcoveragesAppliedtoallVehiclesIn("VERIFY");
-		coverages.additionalcoveragesAppliedperVehiclesIn("VERIFY");
-		coverages.exclusionsAndConditions("VERIFY");
-		policycenter.clickButton("Next");
-		riskanalysis.RA_AddUWIssue();
-
-		riskanalysis.RA_ApproveUWIssues();
-		riskanalysis.RA_Risk_Approval_Details();
+		//coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
+		//coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
+		coverages.exclusionsAndConditions();
 
 		policycenter.clickButton("Next");
-		policyreview.pr_PolicyLevelCoverages();
-		policyreview.pr_VehicleLevelCoverages();
+		riskanalysis.addUWIssue();
+		riskanalysis.approveUWIssues();
+		riskanalysis.riskApprovalDetails();
+		//riskanalysis.addUWContingency();
+		//riskanalysis.priorPolicies_Add();
+		//riskanalysis.priorLosses_Add();
+
+		policycenter.clickButton("Next");
+		policyreview.policyDetails();
+		policyreview.policyLevelCoverages();
+		policyreview.vehicleLevelCoverages();
+		
 		policycenter.clickButton("Quote");
-		// quote.pa_QuoteDetails();
+		
+		strJob = policycenter.infoBar("Job");
+		strWorkflow = policycenter.infoBar("Workflow");
+		strLOB = policycenter.infoBar("LOB");
+		strEffectiveDate = policycenter.infoBar("EffectiveDate");
+		strPolicyNumber = policycenter.infoBar("PolicyNumber");
+		strAmount = policycenter.infoBar("AccountName");
+		strAccountName = policycenter.infoBar("AccountName");
+		strAccountNumber = policycenter.infoBar("AccountNumber");
+		
+		quote.quoteDetails();
+		quote.policyPremium_Garage1();
+		quote.policyPremium_Vehicle1();
+		quote.policyPremium_PremiumSubtotalandTaxes();
+		
 		policycenter.clickButton("Next");
 		forms.pa_forms();
+		
+		policycenter.clickButton("Next");
 		payments.premiumSummary();
 		payments.payments();
 		payments.invoicing();
@@ -183,14 +203,7 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		policySummary.Detail_Verify();
 		policySummary.Account_Verify();
 
-		strJob = policycenter.infoBar("Job");
-		strWorkflow = policycenter.infoBar("Workflow");
-		strLOB = policycenter.infoBar("LOB");
-		strEffectiveDate = policycenter.infoBar("EffectiveDate");
-		strPolicyNumber = policycenter.infoBar("PolicyNumber");
-		strAmount = policycenter.infoBar("AccountName");
-		strAccountName = policycenter.infoBar("AccountName");
-		strAccountNumber = policycenter.infoBar("AccountNumber");
+
 		// Logout PC
 		loginScreen.logout_PolicyCenter();
 	}
@@ -250,11 +263,9 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// vehicles.ve_AssignDriver();
 		pavehicle.additionalInterest_Add_NewPerson();
 		policycenter.clickButton("Next");
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Next");
-		policyreview.pr_policyDetails();
-		policyreview.pr_PolicyLevelCoverages();
-		policyreview.pr_VehicleLevelCoverages();
+		policyreview.policyDetails();
 		policycenter.clickButton("Next");
 		// Policy Review screen*
 		policycenter.clickButton("Quote");
@@ -268,7 +279,7 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// If the submission blocks due to underwriter issues
 		// Add method for 'Issues that block Issuance' screen validation*
 		// Click button 'Details'*
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Quote");
 		policycenter.clickButton("Next");
 		// Policy Review screen
@@ -403,11 +414,9 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// vehicles.ve_AssignDriver();
 		pavehicle.additionalInterest_Add_NewPerson();
 		policycenter.clickButton("Next");
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Next");
-		policyreview.pr_policyDetails();
-		policyreview.pr_PolicyLevelCoverages();
-		policyreview.pr_VehicleLevelCoverages();
+		policyreview.policyDetails();
 		policycenter.clickButton("Next");
 		// Policy Review screen*
 		policycenter.clickButton("Quote");
@@ -421,7 +430,7 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// If the submission blocks due to underwriter issues
 		// Add method for 'Issues that block Issuance' screen validation*
 		// Click button 'Details'*
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Quote");
 		policycenter.clickButton("Next");
 		// Policy Review screen
@@ -496,12 +505,9 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// vehicles.ve_AssignDriver();
 		pavehicle.additionalInterest_Add_NewPerson();
 		policycenter.clickButton("Next");
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Next");
-		policyreview.pr_policyDetails();
-		policyreview.pr_PolicyLevelCoverages();
-		policyreview.pr_VehicleLevelCoverages();
-		policycenter.clickButton("Next");
+		policyreview.policyDetails();
 		// Policy Review screen*
 		policycenter.clickButton("Quote");
 		// quote.pa_QuoteDetails();
@@ -514,7 +520,7 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// If the submission blocks due to underwriter issues
 		// Add method for 'Issues that block Issuance' screen validation*
 		// Click button 'Details'*
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Quote");
 		policycenter.clickButton("Next");
 		// Policy Review screen
@@ -641,18 +647,16 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// vehicles.ve_AssignDriver();
 		pavehicle.additionalInterest_Add_NewPerson();
 		policycenter.clickButton("Next");
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Next");
-		policyreview.pr_policyDetails();
-		policyreview.pr_PolicyLevelCoverages();
-		policyreview.pr_VehicleLevelCoverages();
+		policyreview.policyDetails();
 		policycenter.clickButton("Next");
 		// Risk Analysis screen
 		policycenter.clickButton("Next");
 		// Policy Review screen
 		policycenter.clickButton("Quote");
 		// quote.pa_QuoteDetails();
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Quote");
 		policycenter.clickButton("Next");
 		forms.pa_forms();
@@ -721,11 +725,10 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// vehicles.ve_AssignDriver();
 		pavehicle.additionalInterest_Add_NewPerson();
 		policycenter.clickButton("Next");
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Next");
-		policyreview.pr_policyDetails();
-		policyreview.pr_PolicyLevelCoverages();
-		policyreview.pr_VehicleLevelCoverages();
+		policyreview.policyDetails();
+	
 		policycenter.clickButton("Next");
 		// Policy Review screen*
 		policycenter.clickButton("Quote");
@@ -739,7 +742,7 @@ public class GW_PC_PersonalAuto_NewSubmission extends GW_GetDriver {
 		// If the submission blocks due to underwriter issues
 		// Add method for 'Issues that block Issuance' screen validation*
 		// Click button 'Details'*
-		riskanalysis.RA_ApproveUWIssues();
+		riskanalysis.approveUWIssues();
 		policycenter.clickButton("Quote");
 		policycenter.clickButton("Next");
 		// Policy Review screen

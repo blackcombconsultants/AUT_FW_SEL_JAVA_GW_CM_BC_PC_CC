@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 
 public interface PersonalAuto_NewSubmission_ReusablePO {
 
-	final By Screen_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title']");
-
 	final By LOB_PersonalAuto = By.xpath(
 			"//div[text()='Personal Auto']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
 
 	final By Qualification_Screen_Header = By.xpath("div[class='gw-TitleBar--title']");
+	final By QU_PA_PreQualification = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='PA Pre-Qualification']");
+	
 	final By QU_IsApplicantCurrentlyInsured = By
 			.xpath("//select[contains(@name,'QuestionSetLV-0-QuestionModalInput-ChoiceSelectInput_NoPost')]");
 	final By QU_IsApplicantLicenseCurrently_suspended_canceled_Revoked = By

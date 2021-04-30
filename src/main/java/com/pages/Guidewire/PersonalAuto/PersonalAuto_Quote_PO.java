@@ -85,12 +85,11 @@ public interface PersonalAuto_Quote_PO {
 	final By PA_Quote_AK_Tax = By.xpath(
 			"//tr[contains(@id,'RatingCumulDetailsPanelSet-subTotalLV-0-0')]//td[2]//div[@class='gw-value-readonly-wrapper']");
 
-	void pa_QuoteScreen_Validate() throws Throwable;
 
-	void Quote_Details(String testingType) throws Throwable;
 
-	void Quote_Vehicles_Validate(String testingType) throws Throwable;
-
-	void Quote_Premium_Validate(String testingType) throws Throwable;
+	void quoteDetails() throws Throwable;
+	void policyPremium_Garage1() throws Throwable;
+	void policyPremium_Vehicle1() throws Throwable;
+	void policyPremium_PremiumSubtotalandTaxes() throws Throwable;
 
 }

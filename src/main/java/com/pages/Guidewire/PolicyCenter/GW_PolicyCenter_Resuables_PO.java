@@ -31,7 +31,7 @@ public interface GW_PolicyCenter_Resuables_PO {
 	final By Organizations_Header = By.xpath("//div[contains(@id,'title-toolbar')]//div[text()='Organizations']");
 	final By Producer_Header = By.xpath("//div[contains(@id,'title-toolbar')]//div[text()='Producer']");
 
-	final By Screen_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title']");
+	final By Screen_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
 	final By Error_Header = By.xpath(
 			"//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-subGroupLabel gw-text']");
 	final By Error_Message = By.xpath(

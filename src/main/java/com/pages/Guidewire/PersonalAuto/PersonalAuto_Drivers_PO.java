@@ -36,7 +36,7 @@ public interface PersonalAuto_Drivers_PO {
 			"//td[contains(@id,'LicenseNumber_Cell') and contains(@class,'gw-CellWidget')]//div[@class='gw-value-readonly-wrapper' and text()='224242424']");
 
 	final By DR_DriversDetails_MVRStatus = By.xpath(
-			"//td[contains(@id,'MVRStatus_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Received']");
+			"//td[contains(@id,'MVRStatus_Cell')]//div[@class='gw-value-readonly-wrapper']");
 
 	final By DR_DriversDetails_StatusDate = By
 			.xpath("//td[contains(@id,'StatusDate')]//div[@class='gw-value-readonly-wrapper' and text()='04/18/2021']");
