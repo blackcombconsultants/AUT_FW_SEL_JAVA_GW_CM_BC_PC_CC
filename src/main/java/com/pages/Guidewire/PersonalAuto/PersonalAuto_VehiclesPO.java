@@ -118,9 +118,11 @@ public interface PersonalAuto_VehiclesPO {
 
 	void createVehicles() throws Throwable;
 
-	void ve_Edit_Vehicles() throws Throwable;
+	void vehicle_Edit() throws Throwable;
 
-	void ve_AssignDriver() throws Throwable;
+	void vehicle_Remove() throws Throwable;
+
+	void assignDriver() throws Throwable;
 
 	void additionalInterest_Add_NewCompany() throws Throwable;
 
@@ -130,10 +132,8 @@ public interface PersonalAuto_VehiclesPO {
 
 	void additionalInterest_Add_ExistingAdditionalInterest() throws Throwable;
 
-	void ve_RemoveVehicles() throws Throwable;
+	void garage_NewLocation() throws Throwable;
 
-	void ve_Garage_NewLocation() throws Throwable;
-
-	void ve_Garage_EditLocation() throws Throwable;
+	void garage_EditLocation() throws Throwable;
 
 }

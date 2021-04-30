@@ -71,7 +71,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void ve_AssignDriver() throws Throwable {
+	public void assignDriver() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
@@ -186,7 +186,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void ve_RemoveVehicles() throws Throwable {
+	public void vehicle_Remove() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
@@ -195,7 +195,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void ve_Garage_NewLocation() throws Throwable {
+	public void garage_NewLocation() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
@@ -204,7 +204,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void ve_Garage_EditLocation() throws Throwable {
+	public void garage_EditLocation() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
@@ -213,7 +213,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 	}
 
 	@Override
-	public void ve_Edit_Vehicles() throws Throwable {
+	public void vehicle_Edit() throws Throwable {
 
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 

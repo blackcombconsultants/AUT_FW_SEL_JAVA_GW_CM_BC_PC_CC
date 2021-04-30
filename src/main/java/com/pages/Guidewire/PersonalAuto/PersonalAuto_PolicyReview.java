@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
+import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implements PersonalAuto_PolicyReview_PO {
 
@@ -15,13 +16,13 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 	}
 
 	@Override
-	public void pr_policyDetails() throws Throwable {
+	public void policyDetails() throws Throwable {
 		
 		//Fetch data
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyReview", strTestCaseName);
 		
 		// Validating Risk Analysis screen
-		GuidewireAutomate_Validation("Screen Header", PersonalAuto_NewSubmission_ReusablePO.Screen_Header, "equals",
+		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"Policy Review");
 
 		GuidewireAutomate_Validation("Primary Named Insured", PR_PrimaryNamedInsured, "equals",
@@ -43,7 +44,7 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 	}
 
 	@Override
-	public void pr_PolicyLevelCoverages() throws Throwable {
+	public void policyLevelCoverages() throws Throwable {
 
 		//Fetch data
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyReview", strTestCaseName);
@@ -60,7 +61,7 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 	}
 
 	@Override
-	public void pr_VehicleLevelCoverages() throws Throwable {
+	public void vehicleLevelCoverages() throws Throwable {
 		
 		//Fetch data
 		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyReview", strTestCaseName);
@@ -78,7 +79,7 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Driver", PR_PAL_VLC_AD_Driver, "equals",lhm_TestCase_Table_Data.get("PR_PAL_VLC_AD_Driver"));
 
 		GuidewireAutomate_Validation("Vehicle Rate Modifiers", PR_PAL_VLC_V_VehicleRateModifiers, "equals","Vehicle Rate Modifiers");
-		GuidewireAutomate_Validation("Anti Lock Brakes Discount", PR_PAL_VLC_V_VRM_AntiLockBrakesDiscount, "equals",lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VRM_AntiLockBrakesDiscount"));
+		//GuidewireAutomate_Validation("Anti Lock Brakes Discount", PR_PAL_VLC_V_VRM_AntiLockBrakesDiscount, "equals",lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VRM_AntiLockBrakesDiscount"));
 		GuidewireAutomate_Validation("Anti Theft Discount", PR_PAL_VLC_V_VRM_AntiTheftDiscount, "equals",lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VRM_AntiTheftDiscount"));
 
 		GuidewireAutomate_Validation("Vehicle Coverages", PR_PAL_VLC_V_VehicleCoverages, "equals","Vehicle Coverages");

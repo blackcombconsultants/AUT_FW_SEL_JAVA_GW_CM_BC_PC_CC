@@ -118,14 +118,12 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		// 25
 		pad.driver_Add_NewPerson();
 		pcr.clickButton("Next");
-		pav.ve_Edit_Vehicles();
+		pav.vehicle_Edit();
 		// pav.ve_AssignDriver();
 		pcr.clickButton("Next");
-		para.RA_ApproveUWIssues();
+		para.approveUWIssues();
 		pcr.clickButton("Next");
-		papr.pr_policyDetails();
-		papr.pr_PolicyLevelCoverages();
-		papr.pr_VehicleLevelCoverages();
+		papr.policyDetails();
 		pcr.clickButton("Next");
 		// Policy Review screen*
 		pcr.clickButton("Quote");
@@ -139,7 +137,7 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		// If the submission blocks due to underwriter issues
 		// Add method for 'Issues that block Issuance' screen validation*
 		// Click button 'Details'*
-		para.RA_ApproveUWIssues();
+		para.approveUWIssues();
 		pcr.clickButton("Quote");
 		pcr.clickButton("Next");
 		// Policy Review screen
@@ -197,14 +195,12 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		// 25
 		pad.driver_Add_NewPerson();
 		pcr.clickButton("Next");
-		pav.ve_Edit_Vehicles();
+		pav.vehicle_Edit();
 		// pav.ve_AssignDriver();
 		pcr.clickButton("Next");
-		para.RA_ApproveUWIssues();
+		para.approveUWIssues();
 		pcr.clickButton("Next");
-		papr.pr_policyDetails();
-		papr.pr_PolicyLevelCoverages();
-		papr.pr_VehicleLevelCoverages();
+		papr.policyDetails();
 		pcr.clickButton("Next");
 		// Policy Review screen*
 		pcr.clickButton("Quote");
@@ -218,7 +214,7 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		// If the submission blocks due to underwriter issues
 		// Add method for 'Issues that block Issuance' screen validation*
 		// Click button 'Details'*
-		para.RA_ApproveUWIssues();
+		para.approveUWIssues();
 		pcr.clickButton("Quote");
 		pcr.clickButton("Next");
 		// Policy Review screen
