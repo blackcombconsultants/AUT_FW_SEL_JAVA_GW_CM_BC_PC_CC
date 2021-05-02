@@ -14,10 +14,14 @@ public interface PersonalAuto_Forms_PO {
 	final By Replacement_Validate = By.xpath(
 			"//tr[contains(@id,'SubmissionWizard-FormsScreen-FormsDV-FormsLV-0-0')]//td[4]//div[@class='gw-value-readonly-wrapper']");
 
-	void pa_forms() throws Throwable;
-
-	void forms_validate(String testtingType) throws Throwable;
-
-	void description_validate(String testtingType) throws Throwable;
-
+	/*
+	 * 
+	 * Modules
+	 * 
+	 * void pa_forms() throws Throwable;
+	 * 
+	 * void forms_validate(String testtingType) throws Throwable;
+	 * 
+	 * void description_validate(String testtingType) throws Throwable;
+	 */
 }

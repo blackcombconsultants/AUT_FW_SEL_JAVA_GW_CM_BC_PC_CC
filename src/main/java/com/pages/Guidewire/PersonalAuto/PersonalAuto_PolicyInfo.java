@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
-import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables_PO;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implements PersonalAuto_PolicyInfo_PO {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
@@ -14,23 +14,22 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		super(driver, oExtentTest);
 	}
 
-	@Override
-	public void policyInfo() throws Throwable {
+	public static void policyInfo() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void primaryNamedInsured() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void primaryNamedInsured() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals",
-				"Policy Info");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
 
-		GuidewireAutomate("Date Quote Needed", PI_DateQuoteNeeded, "sendkeys",
+		GuidewireAutomate("Date Quote Needed", PI_DateQuoteNeeded, "sendKeys",
 				lhm_TestCase_Table_Data.get("PI_DateQuoteNeeded"));
 
 		if (lhm_TestCase_Table_Data.get("PrimaryNI_Name").contains("global")) {
@@ -58,66 +57,66 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void primaryNamedInsured_ChangeTo_NewPerson() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void primaryNamedInsured_ChangeTo_NewPerson() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void primaryNamedInsured_ChangeTo_FromAddressBook() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void primaryNamedInsured_ChangeTo_FromAddressBook() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void primaryNamedInsured_ChangeTo_ExistingContact() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void primaryNamedInsured_ChangeTo_ExistingContact() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void primaryNamedInsured_Edit() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void primaryNamedInsured_Edit() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void policyAddress() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void policyAddress() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 
 	}
 
-	@Override
-	public void policyAddress_ChangeTo_NewAddress() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void policyAddress_ChangeTo_NewAddress() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void policyAddress_ChangeTo_EditCurrentAddress() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void policyAddress_ChangeTo_EditCurrentAddress() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void pi_OfficialID() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void pi_OfficialID() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		GuidewireAutomate_Validation("Official IDs", PI_OfficialID, "equals", "Official IDs");
 
@@ -127,73 +126,73 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void secondaryInsured_NewPerson() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void secondaryInsured_NewPerson() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void secondaryInsured_FromAddressBook() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void secondaryInsured_FromAddressBook() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void secondaryInsured_ExistingContact() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void secondaryInsured_ExistingContact() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalNamedInsured_Add_NewCompany() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void additionalNamedInsured_Add_NewCompany() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalNamedInsured_Add_NewPerson() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void additionalNamedInsured_Add_NewPerson() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalNamedInsured_Add_FromAddresssBook() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void additionalNamedInsured_Add_FromAddresssBook() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalNamedInsured_Edit() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void additionalNamedInsured_Edit() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalNamedInsured_Remove() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void additionalNamedInsured_Remove() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void policyDetails() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void policyDetails() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		GuidewireAutomate_Validation("Policy Details", PI_PolicyDetails, "equals", "Policy Details");
 
@@ -203,11 +202,11 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		 * GuidewireAutomate_Validation("Term Number", PI_PD_TermNumber, "equals",
 		 * lhm_TestCase_Table_Data.get("PI_PD_TermNumber"));
 		 */
-		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearAndsendkeys",
+		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearAndsendKeys",
 				lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
 		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals",
 				lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
-		GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearAndsendkeys",
+		GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearAndsendKeys",
 				lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
 		/*
 		 * GuidewireAutomate_Validation("Rate AsOf Date", PI_PD_RateAsOfDate, "equals",
@@ -220,20 +219,20 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void affinityGroup() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void affinityGroup() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		GuidewireAutomate_Validation("Affinity Group", PI_AffinityGroup, "equals", "Affinity Group");
 
-		GuidewireAutomate("AffinityGroup_Name", PI_AG_Name, "sendkeys", lhm_TestCase_Table_Data.get("PI_AG_Name"));
+		GuidewireAutomate("AffinityGroup_Name", PI_AG_Name, "sendKeys", lhm_TestCase_Table_Data.get("PI_AG_Name"));
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void producerOfRecord() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void producerOfRecord() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		GuidewireAutomate_Validation("Producer of Record", PI_ProducerofRecord, "equals", "Producer of Record");
 
@@ -245,17 +244,15 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-
-	public void underWritingCompany() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+	public static void underWritingCompany() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
+				strTestCaseName);
 
 		GuidewireAutomate_Validation("Underwriting Companies", PI_UnderwritingCompanies, "equals",
 				"Underwriting Companies");
 
-		GuidewireAutomate("UC Name", PI_UC_Name, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("PI_UC_Name"));
-		
+		GuidewireAutomate("UC Name", PI_UC_Name, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_UC_Name"));
+
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}

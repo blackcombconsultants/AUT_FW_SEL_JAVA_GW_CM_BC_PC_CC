@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
-import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables_PO;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implements PersonalAuto_Coverages_PO {
 
@@ -15,9 +15,9 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		super(driver, oExtentTest);
 	}
 
-	@Override
-	public void pa_Coverages() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+	
+	public static void pa_Coverages() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 		coveragesAppliedtoallVehiclesIn("EDIT");
 		coveragesAppliedperVehiclesIn("VERIFY");
 		additionalcoveragesAppliedtoallVehiclesIn("EDIT");
@@ -27,12 +27,12 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 
 	}
 
-	@Override
-	public void coveragesAppliedtoallVehiclesIn(String testingType) throws Throwable {
+	
+	public static void coveragesAppliedtoallVehiclesIn(String testingType) throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen_Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals",
+		GuidewireAutomate_Validation("Screen_Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"PA Coverages");
 
 		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "");
@@ -69,12 +69,12 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void coveragesAppliedperVehiclesIn(String testingType) throws Throwable {
+	
+	public static void coveragesAppliedperVehiclesIn(String testingType) throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen_Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals",
+		GuidewireAutomate_Validation("Screen_Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"PA Coverages");
 
 		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "");
@@ -101,10 +101,10 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalcoveragesAppliedtoallVehiclesIn(String testingType) throws Throwable {
+	
+	public static void additionalcoveragesAppliedtoallVehiclesIn(String testingType) throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
 		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "click", "");
 
@@ -134,10 +134,10 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalcoveragesAppliedperVehiclesIn(String testingType) throws Throwable {
+	
+	public static void additionalcoveragesAppliedperVehiclesIn(String testingType) throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
 		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "click", "");
 
@@ -148,7 +148,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		case "EDIT":
 
 			// ------>clicking on Additional Coverages tab
-			if (lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_Rental_Car_Loss_of_Use")
+			if (lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment")
 					.equalsIgnoreCase("Electronic Equipment")) {
 				GuidewireAutomate("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "click",
 						lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment"));
@@ -166,9 +166,9 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void exclusionsAndConditions() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+	
+	public static void exclusionsAndConditions() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
 		GuidewireAutomate("ExclusionsAndConditionsCardTab", PACoverages_ExclusionsAndConditionsCardTab, "click", "");
 		GuidewireAutomate("AddExclusionCondition", PAC_ECT_AddExclusionCondition, "click", "");
@@ -179,15 +179,15 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void SearchAddExclusionorCondition() throws Throwable {
+	
+	public static void SearchAddExclusionorCondition() throws Throwable {
 		// ------->Verifying Search Exclusions And Conditions for Personal Auto Line
 		GuidewireAutomate_Validation("Search Exclusions And Conditions for Personal Auto Line title",
 				PAC_ECT_Search_Exclusions_And_Conditions_for_Personal_Auto_Line_titlebar, "equals",
 				"Search Exclusions And Conditions for Personal Auto Line");
 		GuidewireAutomate("Category", PAC_ECT_SEC_PAL_Category, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("PAC_ECT_SEC_PAL_Category"));
-		GuidewireAutomate("Keyword", PAC_ECT_SEC_PAL_Keyword, "clearANDsendkeys",
+		GuidewireAutomate("Keyword", PAC_ECT_SEC_PAL_Keyword, "clearANDsendKeys",
 				lhm_TestCase_Table_Data.get("PAC_ECT_SEC_PAL_Keyword"));
 		// ----->clicking on search button
 		GuidewireAutomate("Type_ExclusionandCondition", PAC_ECT_SEC_PAL_Type_ExclusionandCondition, "click", "");

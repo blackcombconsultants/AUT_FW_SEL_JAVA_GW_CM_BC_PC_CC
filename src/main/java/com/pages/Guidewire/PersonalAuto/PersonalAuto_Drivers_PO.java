@@ -35,8 +35,8 @@ public interface PersonalAuto_Drivers_PO {
 	final By DR_DriversDetails_LicenseNumber = By.xpath(
 			"//td[contains(@id,'LicenseNumber_Cell') and contains(@class,'gw-CellWidget')]//div[@class='gw-value-readonly-wrapper' and text()='224242424']");
 
-	final By DR_DriversDetails_MVRStatus = By.xpath(
-			"//td[contains(@id,'MVRStatus_Cell')]//div[@class='gw-value-readonly-wrapper']");
+	final By DR_DriversDetails_MVRStatus = By
+			.xpath("//td[contains(@id,'MVRStatus_Cell')]//div[@class='gw-value-readonly-wrapper']");
 
 	final By DR_DriversDetails_StatusDate = By
 			.xpath("//td[contains(@id,'StatusDate')]//div[@class='gw-value-readonly-wrapper' and text()='04/18/2021']");
@@ -99,7 +99,8 @@ public interface PersonalAuto_Drivers_PO {
 	 */
 
 	final By DR_Tab_Addresses = By.xpath("//div[contains(@id,'AddressDetailCardTab')]/div[@role='tab']");
-	final By DR_A_CurrentlyPolicyAddress = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='This is currently the policy address']");
+	final By DR_A_CurrentlyPolicyAddress = By
+			.xpath("//div[contains(@class,'gw-boldLabel') and text()='This is currently the policy address']");
 
 	final By DR_A_AD_Address1 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine1')]");
 
@@ -108,28 +109,29 @@ public interface PersonalAuto_Drivers_PO {
 	 */
 
 	final By DR_Tab_MotorVehicleRecord = By.xpath("//div[contains(@id,'MVRDetailCardTab')]/div[@role='tab']");
+	final By DR_MVR_Name = By.xpath("//div[contains(@id,'PersonalMotorVehicleRecordsDV-Name')]//div[@class='gw-value-readonly-wrapper']");
 
 	/*
 	 * Modules
+	 * 
+	 * void driver_ContatDetails(String TestingType) throws Throwable;
+	 * 
+	 * void driver_Roles(String TestingType) throws Throwable;
+	 * 
+	 * void driver_Addresses(String TestingType) throws Throwable;
+	 * 
+	 * void driver_MotorVehicleRecord(String TestingType) throws Throwable;
+	 * 
+	 * void driver_Add_NewPerson() throws Throwable;
+	 * 
+	 * void driver_Add_FromAddressBook() throws Throwable;
+	 * 
+	 * void driver_Add_ExistingDriver() throws Throwable;
+	 * 
+	 * void driver_Edit_ExistingDriver() throws Throwable;
+	 * 
+	 * void driver_Remove() throws Throwable;
+	 * 
+	 * void driver_RetrieveMVR() throws Throwable;
 	 */
-	void driver_ContatDetails(String TestingType) throws Throwable;
-
-	void driver_Roles(String TestingType) throws Throwable;
-
-	void driver_Addresses(String TestingType) throws Throwable;
-
-	void driver_MotorVehicleRecord(String TestingType) throws Throwable;
-
-	void driver_Add_NewPerson() throws Throwable;
-
-	void driver_Add_FromAddressBook() throws Throwable;
-
-	void driver_Add_ExistingDriver() throws Throwable;
-
-	void driver_Edit_ExistingDriver() throws Throwable;
-
-	void driver_Remove() throws Throwable;
-
-	void driver_RetrieveMVR() throws Throwable;
-
 }

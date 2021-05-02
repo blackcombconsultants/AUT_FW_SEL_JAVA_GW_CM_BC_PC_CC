@@ -6,12 +6,11 @@ import java.util.LinkedHashMap;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import com.Utils.Selenium.Selenium_Reporting_Utils;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
+import com.Utils.Selenium.Selenium_Reporting_Utils;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.codoid.products.exception.FilloException;
-import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
+import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
 
 public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands implements GW_BillingCenter_PO {
 
@@ -77,17 +76,17 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 
 	public void bc_SearchAccountInformation() throws Throwable {
 
-		GuidewireAutomate("CompanyName", CompanyName, "sendkeys", "QA Automation2");
-		GuidewireAutomate("firstname", firstname, "sendkeys", "QA");
-		GuidewireAutomate("lastname", lastname, "sendkeys", "Automation2");
-		GuidewireAutomate("firstnameexactmatch", firstnameexactmatch, "sendkeys", "");
-		GuidewireAutomate("lastnameexactmatch", lastnameexactmatch, "sendkeys", "");
+		GuidewireAutomate("CompanyName", CompanyName, "sendKeys", "QA Automation2");
+		GuidewireAutomate("firstname", firstname, "sendKeys", "QA");
+		GuidewireAutomate("lastname", lastname, "sendKeys", "Automation2");
+		GuidewireAutomate("firstnameexactmatch", firstnameexactmatch, "sendKeys", "");
+		GuidewireAutomate("lastnameexactmatch", lastnameexactmatch, "sendKeys", "");
 
-		GuidewireAutomate("Country", Country, "sendkeys", "");
-		GuidewireAutomate("City", City, "sendkeys", "");
-		GuidewireAutomate("County", County, "sendkeys", "");
-		GuidewireAutomate("State", State, "sendkeys", "");
-		GuidewireAutomate("ZipCode", ZipCode, "sendkeys", "");
+		GuidewireAutomate("Country", Country, "sendKeys", "");
+		GuidewireAutomate("City", City, "sendKeys", "");
+		GuidewireAutomate("County", County, "sendKeys", "");
+		GuidewireAutomate("State", State, "sendKeys", "");
+		GuidewireAutomate("ZipCode", ZipCode, "sendKeys", "");
 
 		GuidewireAutomate("Search", Search_Button, "click", "");
 
@@ -102,15 +101,14 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 
 		lhm_Data = getDataFromSheet_Fillo("Account", "BillPlan1");
 
-		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-		t.gwBillingCenter_MenuNavigation("NewAccount");
+		GW_CM_PC_BC_CC_TabNavigation.bcMenuNavigation("NewAccount");
 
 		// ------> Verifying the page -
 		Assert.assertEquals(getHeader_NewAccount(), "New Account");
 		// GuidewireAutomate("AccountNumber", AccountNumber, "", "");
 		strAccountName = lhm_Data.get("TD_AccountName");
-		GuidewireAutomate("AccountName", AccountName, "sendkeys", strAccountName);
-		// GuidewireAutomate(ParentAccount, "sendkeys", "");
+		GuidewireAutomate("AccountName", AccountName, "sendKeys", strAccountName);
+		// GuidewireAutomate(ParentAccount, "sendKeys", "");
 		GuidewireAutomate("AccountType", AccountType, "selectByVisibleText", lhm_Data.get("TD_AccountType"));
 		GuidewireAutomate("BillingPlan", BillingPlan, "selectByVisibleText", lhm_Data.get("TD_BillingPlan"));
 		GuidewireAutomate("DelinquencyPlan", DelinquencyPlan, "selectByVisibleText",
@@ -119,7 +117,7 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 
 		GuidewireAutomate("AddExistingContact", AddExistingContact_Button, "click", "");
 
-		GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+		GuidewireAutomate("CompanyName", CompanyName, "sendKeys", lhm_Data.get("TD_CompanyName"));
 		GuidewireAutomate("Search", Search_Button, "click", "");
 
 		GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
@@ -154,19 +152,18 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 
 		lhm_Data = getDataFromSheet_Fillo("Policy", "PaymentPlan1");
 
-		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-		t.gwBillingCenter_MenuNavigation("NewPolicy");
+		GW_CM_PC_BC_CC_TabNavigation.bcMenuNavigation("NewPolicy");
 
 		// Policy Issuance Wizard - Step 1 of 2
 		Assert.assertEquals(getHeader_PolicyIssuanceWizard1(), "Policy Issuance Wizard - Step 1 of 2");
 
-		GuidewireAutomate("PolicyNumber", PolicyNumber, "sendkeys", strPolicyNumber);
+		GuidewireAutomate("PolicyNumber", PolicyNumber, "sendKeys", strPolicyNumber);
 		GuidewireAutomate("BillingMethod", BillingMethod, "selectByVisibleText", lhm_Data.get("TD_BillingMethod"));
 		GuidewireAutomate("PaymentPlan", PaymentPlan, "selectByVisibleText", lhm_Data.get("TD_PaymentPlan"));
 
 		GuidewireAutomate("AddExistingContac", AddExistingContact_Button, "click", "");
 
-		GuidewireAutomate("CompanyName", CompanyName, "sendkeys", lhm_Data.get("TD_CompanyName"));
+		GuidewireAutomate("CompanyName", CompanyName, "sendKeys", lhm_Data.get("TD_CompanyName"));
 		GuidewireAutomate("Search", Search_Button, "click", "");
 
 		GuidewireAutomate("Select", WrightConstruction_Select, "click", "");
@@ -187,7 +184,7 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 
 		GuidewireAutomate("ChargesType", PolicyAddChargesType, "selectByVisibleText", lhm_Data.get("TD_ChargesType"));
 		GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "clear", "");
-		GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "sendkeys", lhm_Data.get("TD_ChargesAmount"));
+		GuidewireAutomate("ChargesAmount", PolicyAddChargesAmount, "sendKeys", lhm_Data.get("TD_ChargesAmount"));
 
 		GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
 		GuidewireAutomate("Finish", PolicyFinish_Button, "click", "");
@@ -214,8 +211,7 @@ public class GW_BillingCenter_Resuables extends SeleniumWebDriver_Commands imple
 	@Override
 	public void bc_AccountSummary_Invoices() throws Throwable {
 		lhm_Data = getDataFromSheet_Fillo("Invoice", "InvoiceValues1");
-		GW_TabNavigation_CM_PC_BC_CC t = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-		t.gwBillingCenter_MenuNavigation("Invoice");
+		GW_CM_PC_BC_CC_TabNavigation.bcMenuNavigation("Invoice");
 		// Assert.assertEquals(getSize_ElementsList(InvoiceDetails),
 		// Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
 		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));

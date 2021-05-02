@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
-import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables_PO;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements PersonalAuto_Drivers_PO {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
@@ -15,25 +15,22 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		super(driver, oExtentTest);
 	}
 
-	@Override
-	public void driver_Add_NewPerson() throws Throwable {
+	public static void driver_Add_NewPerson() throws Throwable {
 		// TODO Auto-generated method stub
-		// GuidewireAutomate("Organization Name", OS_OrganizationName, "sendkeys",
+		// GuidewireAutomate("Organization Name", OS_OrganizationName, "sendKeys",
 		// lhm_Data.get("TD_OrganizationName"));
 
 	}
 
-	@Override
-	public void driver_Add_FromAddressBook() throws Throwable {
+	public static void driver_Add_FromAddressBook() throws Throwable {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
-	public void driver_Add_ExistingDriver() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+	public static void driver_Add_ExistingDriver() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals", "Drivers");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Drivers");
 
 		GuidewireAutomate("Add", DR_DriversDetails_Add_Button, "click", lhm_TestCase_Table_Data.get("DR_Add"));
 		GuidewireAutomate("Existing Driver", DR_DriversDetails_Add_ExistingDriver, "moveToElement",
@@ -56,18 +53,16 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 	}
 
-	@Override
-	public void driver_Remove() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+	public static void driver_Remove() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void driver_RetrieveMVR() throws Throwable {
+	public static void driver_RetrieveMVR() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		// Hande Dynamic Element - Click Existing driver
 		if (lhm_TestCase_Table_Data.get("DR_Add_DD_Name").contains("refer")) {
@@ -90,17 +85,15 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void driver_Edit_ExistingDriver() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+	public static void driver_Edit_ExistingDriver() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void driver_ContatDetails(String TestingType) throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+	public static void driver_ContatDetails(String TestingType) throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		GuidewireAutomate("Contat Details Tab", DR_Tab_ContatDetails, "click", "NA");
 
@@ -125,17 +118,17 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		case "EDIT":
 
 			GuidewireAutomate_Validation("Person", DR_CD_Person, "equals", "Person");
-			GuidewireAutomate("First name", DR_CD_P_FirstName, "clearAndsendkeys",
+			GuidewireAutomate("First name", DR_CD_P_FirstName, "clearAndsendKeys",
 					lhm_TestCase_Table_Data.get("DR_CD_P_FirstName"));
-			GuidewireAutomate("Last name", DR_CD_P_LastName, "clearAndsendkeys",
+			GuidewireAutomate("Last name", DR_CD_P_LastName, "clearAndsendKeys",
 					lhm_TestCase_Table_Data.get("DR_CD_P_LastName"));
 
 			GuidewireAutomate_Validation("Address", DR_CD_Address, "equals", "Address");
-			GuidewireAutomate("Address1", DR_CD_A_Address1, "clearAndsendkeys",
+			GuidewireAutomate("Address1", DR_CD_A_Address1, "clearAndsendKeys",
 					lhm_TestCase_Table_Data.get("DR_CD_A_Address1"));
 
 			GuidewireAutomate_Validation("Official IDs", DR_CD_OfficialIDs, "equals", "Official IDs");
-			GuidewireAutomate("SSN", DR_CD_OI_SSN, "clearAndsendkeys", lhm_TestCase_Table_Data.get("DR_CD_OI_SSN"));
+			GuidewireAutomate("SSN", DR_CD_OI_SSN, "clearAndsendKeys", lhm_TestCase_Table_Data.get("DR_CD_OI_SSN"));
 
 			break;
 		default:
@@ -156,9 +149,9 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 			LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
 		}
 
-		GuidewireAutomate("DateofBirth", DR_CD_DateofBirth, "clearAndsendkeys",
+		GuidewireAutomate("DateofBirth", DR_CD_DateofBirth, "clearAndsendKeys",
 				lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
-		GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearAndsendkeys", LicenseNumber);
+		GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearAndsendKeys", LicenseNumber);
 		GuidewireAutomate("LicenseState", DR_CD_LicenseState, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
 
@@ -166,12 +159,14 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void driver_Roles(String TestingType) throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+	public static void driver_Roles(String TestingType) throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		GuidewireAutomate("Roles Tab", DR_Tab_Roles, "click", "NA");
 
+		GuidewireAutomate_Validation("Primary Named Insured", DR_R_PrimaryNamedInsured, "equals",
+				"Primary Named Insured");
+		
 		GuidewireAutomate_Validation("Driver", DR_R_Driver, "equals", "Driver");
 
 		switch (TestingType) {
@@ -180,12 +175,9 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 			break;
 		case "EDIT":
 
-			GuidewireAutomate_Validation("Primary Named Insured", DR_R_PrimaryNamedInsured, "equals",
-					"Primary Named Insured");
-
-			GuidewireAutomate("DateCompletedTrainingClass", DR_R_D_DateCompletedTrainingClass, "clearANDsendkeys",
+			GuidewireAutomate("DateCompletedTrainingClass", DR_R_D_DateCompletedTrainingClass, "clearANDsendKeys",
 					lhm_TestCase_Table_Data.get("DR_R_D_DateCompletedTrainingClass"));
-			GuidewireAutomate("YearFirstLicensed", DR_R_D_YearFirstLicensed, "clearANDsendkeys",
+			GuidewireAutomate("YearFirstLicensed", DR_R_D_YearFirstLicensed, "clearANDsendKeys",
 					lhm_TestCase_Table_Data.get("DR_R_D_YearFirstLicensed"));
 
 			GuidewireAutomate("Excluded?", DR_R_D_ExcludedNo, "click", lhm_TestCase_Table_Data.get("DR_R_D_Excluded"));
@@ -212,10 +204,9 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void driver_Addresses(String TestingType) throws Throwable {
+	public static void driver_Addresses(String TestingType) throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		GuidewireAutomate("Addresses Tab", DR_Tab_Addresses, "click", "NA");
 
@@ -238,14 +229,15 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void driver_MotorVehicleRecord(String TestingType) throws Throwable {
+	public static void driver_MotorVehicleRecord(String TestingType) throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		GuidewireAutomate("MotorVehicleRecord Tab", DR_Tab_MotorVehicleRecord, "click", "NA");
 		switch (TestingType) {
 		case "VERIFY":
+			GuidewireAutomate_Validation("Name", DR_MVR_Name, "equals",
+					lhm_TestCase_Table_Data.get("DR_MVR_Name"));
 
 			break;
 		case "EDIT":

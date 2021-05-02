@@ -13,11 +13,11 @@ import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
 public class Selenium_Utils_DataBase extends Selenium_Utils_File {
-	Connection oConnection = null;
+	static Connection oConnection = null;
 	final static String JdbcOdbcDriver = "sun.jdbc.odbc.JdbcOdbcDriver";
 	final static String MicrosoftExcelDriver = "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=%s;DriverID=22;READONLY=false";
 
-	public Connection getConnection(String strConnectionType, String pFilePath) throws Throwable {
+	public static Connection getConnection(String strConnectionType, String pFilePath) throws Throwable {
 
 		switch (strConnectionType) {
 		case "Fillo":
@@ -49,7 +49,7 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 	}
 
-	public LinkedHashMap<String, String> executeQuery(Connection oConnection, String strQuery) throws Throwable {
+	public static LinkedHashMap<String, String> executeQuery(Connection oConnection, String strQuery) throws Throwable {
 
 		LinkedHashMap<String, String> lhmQueryResult = new LinkedHashMap<String, String>();
 
@@ -70,7 +70,7 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 	}
 
-	public LinkedHashMap<String, String> getData_MSExcel_WorkSheet_Fillo(String strTable, String strPrimaryKeyValue)
+	public static LinkedHashMap<String, String> getData_MSExcel_WorkSheet_Fillo(String strTable, String strPrimaryKeyValue)
 			throws Throwable {
 
 		String strQuery = "Select * from " + strTable + " where PrimaryKey='" + strPrimaryKeyValue + "'";

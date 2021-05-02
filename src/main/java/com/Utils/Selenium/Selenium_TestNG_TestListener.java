@@ -11,20 +11,20 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.pages.Guidewire.GW_LoginCM_PC_BC_CC;
-import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
+import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
+import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Forms;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_NewSubmission_Reusable;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Payments;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_Submission;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
-import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
 public class Selenium_TestNG_TestListener extends GW_Base implements ITestListener {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
@@ -52,14 +52,14 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 			/*
 			 * Creating object reference for the New submission_Bind only
 			 */
-			GW_LoginCM_PC_BC_CC loginScreen = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
-			GW_TabNavigation_CM_PC_BC_CC navigate = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-			GW_PolicyCenter_Resuables policycenter = new GW_PolicyCenter_Resuables(driver, oExtentTest);
+			GW_CM_PC_BC_CC_Login loginScreen = new GW_CM_PC_BC_CC_Login(driver, oExtentTest);
+			GW_CM_PC_BC_CC_TabNavigation navigate = new GW_CM_PC_BC_CC_TabNavigation(driver, oExtentTest);
+			PolicyCenter_Resuables policycenter = new PolicyCenter_Resuables(driver, oExtentTest);
 
 			/*
 			 * Personal Auto
 			 */
-			PersonalAuto_NewSubmission_Reusable personalauto = new PersonalAuto_NewSubmission_Reusable(driver, oExtentTest);
+			PersonalAuto_Reusable personalauto = new PersonalAuto_Reusable(driver, oExtentTest);
 			PersonalAuto_PolicyInfo policyinfo = new PersonalAuto_PolicyInfo(driver, oExtentTest);
 			PersonalAuto_Drivers padriver = new PersonalAuto_Drivers(driver, oExtentTest);
 			PersonalAuto_Vehicles pavehicle = new PersonalAuto_Vehicles(driver, oExtentTest);
@@ -69,7 +69,7 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 			PersonalAuto_Quote quote = new PersonalAuto_Quote(driver, oExtentTest);
 			PersonalAuto_Forms forms = new PersonalAuto_Forms(driver, oExtentTest);
 			PersonalAuto_Payments payments = new PersonalAuto_Payments(driver, oExtentTest);
-			PersonalAuto_Submission submissionbound = new PersonalAuto_Submission(driver, oExtentTest);
+			PolicyCenter_SubmissionBound submissionbound = new PolicyCenter_SubmissionBound(driver, oExtentTest);
 
 			
 			

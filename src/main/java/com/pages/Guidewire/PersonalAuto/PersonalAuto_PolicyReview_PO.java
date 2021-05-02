@@ -14,10 +14,10 @@ public interface PersonalAuto_PolicyReview_PO {
 			"//div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']");
 	final By PR_County = By
 			.xpath("//div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']");
-	final By PR_AddressType = By
-			.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType')]//div[@class='gw-label']");
+	final By PR_AddressType = By.xpath(
+			"//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType') and contains(@class,'gw-ValueWidget')]//div[@class='gw-label']");
 	final By PR_AddressDescription = By.xpath(
-			"//div[contains(@id,'PolicyAddressDisplayInputSet-AddressDescription_Input')]//div[@class='gw-label']");
+			"//div[contains(@id,'AddressDescription') and contains(@class,'gw-ValueWidget')]//div[@class='gw-value-readonly-wrapper']");
 	final By PR_DateQuoteNeeded = By.xpath(
 			"//div[contains(@id,'SubmissionWizard_ReviewSummaryDV-DateQuoteNeeded')]//div[@class='gw-value-readonly-wrapper']");
 	final By PR_EffectiveDate = By.xpath(
@@ -88,9 +88,11 @@ public interface PersonalAuto_PolicyReview_PO {
 	final By PR_PAL_VLC_V_VehicleRateModifiers = By
 			.xpath("//div[@class='gw-VerbatimWidget--inner' and text()='Vehicle Rate Modifiers']");
 	final By PR_PAL_VLC_V_VRM_AntiLockBrakesDiscount = By.xpath(
-			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'ModIterator-0-VehicleModifierCell_Cell') and contains(@id,'VehicleModifierCell_Cell')]//div[contains(@class,'gw-label')]");
+			"//td[contains(@id,'VehicleModifierCell_Cell')]//div[contains(@id,'PolicyLineSummaryPanelSet-0-0-ModIterator-0-BooleanModifier')]");
+	final By PR_PAL_VLC_V_VRM_PassiveRestraintSystem = By.xpath(
+			"//td[contains(@id,'VehicleModifierCell_Cell')]//div[contains(@id,'PolicyLineSummaryPanelSet-0-0-ModIterator-1-TypeKeyModifier')]");
 	final By PR_PAL_VLC_V_VRM_AntiTheftDiscount = By.xpath(
-			"//tr[contains(@class,'gw-standard-row')]/td[contains(@id,'ModIterator-2-VehicleModifierCell_Cell') and contains(@id,'VehicleModifierCell_Cell')]//div[contains(@class,'gw-label')]");
+			"//td[contains(@id,'VehicleModifierCell_Cell')]//div[contains(@id,'PolicyLineSummaryPanelSet-0-0-ModIterator-2')]//div[contains(@id,'ModIterator-2-TypeKeyModifier')]");
 
 	/*
 	 * VehicleCoverages
@@ -110,10 +112,19 @@ public interface PersonalAuto_PolicyReview_PO {
 	final By PR_PAL_VLC_V_VC_TowingandLaborLimit_Value = By.xpath(
 			"//div[@class='gw-value-readonly-wrapper' and text()='Towing and Labor Limit']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']");
 
-	void policyDetails() throws Throwable;
+	/*
+	 * Exclusions
+	 */
+	final By PR_PAL_ExclusionsConditions = By
+			.xpath("//div[@class='gw-TitleBar--title' and @role='heading' and text()='Exclusions and Conditions']");
 
-	void policyLevelCoverages() throws Throwable;
-
-	void vehicleLevelCoverages() throws Throwable;
-
+	/*
+	 * 
+	 * 
+	 * void policyDetails() throws Throwable;
+	 * 
+	 * void policyLevelCoverages() throws Throwable;
+	 * 
+	 * void vehicleLevelCoverages() throws Throwable;
+	 */
 }

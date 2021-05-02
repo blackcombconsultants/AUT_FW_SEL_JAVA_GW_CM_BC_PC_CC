@@ -1,36 +1,36 @@
-package com.Test.Guidewire.PolicyCenter;
+	package com.Test.Guidewire.PolicyCenter;
 
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
-import com.pages.Guidewire.GW_LoginCM_PC_BC_CC;
-import com.pages.Guidewire.GW_TabNavigation_CM_PC_BC_CC;
+import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
+import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Forms;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_NewSubmission_Reusable;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Payments;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_Submission;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
-import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
 public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 
 	/*
 	 * Creating object reference for the New submission_Issue
 	 */
-	GW_LoginCM_PC_BC_CC lg = new GW_LoginCM_PC_BC_CC(driver, oExtentTest);
-	GW_TabNavigation_CM_PC_BC_CC tab = new GW_TabNavigation_CM_PC_BC_CC(driver, oExtentTest);
-	GW_PolicyCenter_Resuables pcr = new GW_PolicyCenter_Resuables(driver, oExtentTest);
+	GW_CM_PC_BC_CC_Login lg = new GW_CM_PC_BC_CC_Login(driver, oExtentTest);
+	GW_CM_PC_BC_CC_TabNavigation tab = new GW_CM_PC_BC_CC_TabNavigation(driver, oExtentTest);
+	PolicyCenter_Resuables pcr = new PolicyCenter_Resuables(driver, oExtentTest);
 
 	/*
 	 * Personal Auto
 	 */
-	PersonalAuto_NewSubmission_Reusable par = new PersonalAuto_NewSubmission_Reusable(driver, oExtentTest);
+	PersonalAuto_Reusable par = new PersonalAuto_Reusable(driver, oExtentTest);
 	PersonalAuto_PolicyInfo pi = new PersonalAuto_PolicyInfo(driver, oExtentTest);
 	PersonalAuto_Drivers pad = new PersonalAuto_Drivers(driver, oExtentTest);
 	PersonalAuto_Vehicles pav = new PersonalAuto_Vehicles(driver, oExtentTest);
@@ -40,7 +40,7 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 	PersonalAuto_Quote paq = new PersonalAuto_Quote(driver, oExtentTest);
 	PersonalAuto_Forms forms = new PersonalAuto_Forms(driver, oExtentTest);
 	PersonalAuto_Payments payments = new PersonalAuto_Payments(driver, oExtentTest);
-	PersonalAuto_Submission submissionbound = new PersonalAuto_Submission(driver, oExtentTest);
+	PolicyCenter_SubmissionBound submissionbound = new PolicyCenter_SubmissionBound(driver, oExtentTest);
 
 	/*
 	 * Testcase = Full Quote Issue Policy Author = Arun Date Created = 27/04/21 LOB
@@ -70,9 +70,8 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		payments.payments();
 		pcr.clickButton("Issue Policy");
 		// Confirming submission transaction
-		submissionbound.submissionBound();
+		submissionbound.ViewYourPolicy();
 		// Verify Policy number
-		submissionbound.View_your_Policy();
 
 		strJob = pcr.infoBar("Job");
 		strWorkflow = pcr.infoBar("Workflow");
@@ -150,7 +149,7 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		// Confirming submission transaction
 		submissionbound.submissionBound();
 		// Verify Policy number
-		submissionbound.View_your_Policy();
+		submissionbound.ViewYourPolicy();
 
 		strJob = pcr.infoBar("Job");
 		strWorkflow = pcr.infoBar("Workflow");
