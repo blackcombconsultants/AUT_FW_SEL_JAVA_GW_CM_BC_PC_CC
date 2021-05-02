@@ -15,7 +15,7 @@
 	<test thread-count="1" parallel="methods" name="NewSubmission">
 			<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_NewSubmission">
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
 				<methods>
 					<include name ="AUT_PA_PC_NS_1_BasicProgram" />
 				</methods>

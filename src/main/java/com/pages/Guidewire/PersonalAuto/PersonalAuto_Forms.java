@@ -14,34 +14,34 @@ public class PersonalAuto_Forms extends SeleniumWebDriver_Commands implements Pe
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void pa_forms() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("paForms", strTestCaseName);
+	
+	public static void pa_forms() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("forms", strTestCaseName);
 		GuidewireAutomate_Validation("forms Header", Forms_Header, "equals", "Forms");
 		forms_validate("VERIFY");
 		description_validate("VERIFY");
 
 	}
 
-	@Override
-	public void forms_validate(String testingType) throws Throwable {
+	
+	public static void forms_validate(String testingType) throws Throwable {
 		switch (testingType) {
 		case "VERIFY":
 
 			GuidewireAutomate_Validation("forms Validate", Forms_Validate, "equals",
-					lhm_TestCase_Table_Data.get("form"));
+					lhm_TestCase_Table_Data.get("F_Form_ID1"));
 			break;
 		default:
 			break;
 		}
 	}
 
-	@Override
-	public void description_validate(String testingType) throws Throwable {
+	
+	public static void description_validate(String testingType) throws Throwable {
 		switch (testingType) {
 		case "VERIFY":
 			GuidewireAutomate_Validation("Description Validate", Description_Validate, "equals",
-					lhm_TestCase_Table_Data.get("Description"));
+					lhm_TestCase_Table_Data.get("F_Form_Description1"));
 
 			break;
 		default:

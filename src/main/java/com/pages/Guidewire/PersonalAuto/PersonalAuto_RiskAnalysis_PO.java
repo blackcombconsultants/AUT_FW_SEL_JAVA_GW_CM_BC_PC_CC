@@ -36,7 +36,8 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	 */
 
 	final By RA_Tab_UWIssues = By.xpath("//div[contains(@id,'RiskAnalysisCV-EvaluationIssuesCardTab')]");
-	final By RA_UI_BlockingIssuance = By.xpath("//div[contains(@class,'TextValueWidget')]//div[@class='gw-value-readonly-wrapper' and text()='Blocking Issuance']");
+	final By RA_UI_BlockingIssuance = By.xpath(
+			"//div[contains(@class,'TextValueWidget')]//div[@class='gw-value-readonly-wrapper' and text()='Blocking Issuance']");
 	final By RA_UI_ViewIssuesBlocking = By.xpath(
 			"//div[contains(@id,'RiskEvaluationPanelSet-UserViewFilter')]//select[contains(@name,'UserViewFilter')]");
 
@@ -52,17 +53,13 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	/*
 	 * NewApproval
 	 */
-	final By RAD_NewApproval = By.xpath(
-			"//div[contains(@class,'gw-ListView--UI--title') and @role = 'heading' and text()='New Approval']");
+	final By RAD_NewApproval = By
+			.xpath("//div[contains(@class,'gw-ListView--UI--title') and @role = 'heading' and text()='New Approval']");
 
-	final By RAD_NA_AllowEdit_Yes = By.xpath(
-			"//input[contains(@id,'UWApprovalLV-EditBeforeBind_0')]");
-	final By RAD_NA_AllowEdit_No = By.xpath(
-			"//input[contains(@id,'UWApprovalLV-EditBeforeBind_1')]");
-	final By RAD_NA_Through = By.xpath(
-			"//select[contains(@name,'UWApprovalLV-BlockingPoint')]");
-	final By RAD_NA_Validuntil = By.xpath(
-			"//select[contains(@name,'UWApprovalLV-Duration')]");
+	final By RAD_NA_AllowEdit_Yes = By.xpath("//input[contains(@id,'UWApprovalLV-EditBeforeBind_0')]");
+	final By RAD_NA_AllowEdit_No = By.xpath("//input[contains(@id,'UWApprovalLV-EditBeforeBind_1')]");
+	final By RAD_NA_Through = By.xpath("//select[contains(@name,'UWApprovalLV-BlockingPoint')]");
+	final By RAD_NA_Validuntil = By.xpath("//select[contains(@name,'UWApprovalLV-Duration')]");
 
 	/*
 	 * History
@@ -125,25 +122,44 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	 * UW Activity
 	 */
 	final By RA_UWA_Subject = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
+			"//input[contains(@name,'NewActivityDV-Subject')]");
 	final By RA_UWA_Description = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
+			"//input[contains(@name,'NewActivityDV-Description')]");
 	final By RA_UWA_DueDate = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
+			"//input[contains(@name,'NewActivityDV-TargetDate')]");
 	final By RA_UWA_EscalationDate = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
+			"//input[contains(@name,'NewActivityDV-EscalationDate')]");
 	final By RA_UWA_Priority = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
-	final By RA_UWA_Mandatory = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
-	final By RA_UWA_Recurring = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
+			"//select[contains(@name,'NewActivityDV-Priority')]");
+	final By RA_UWA_Mandatory_Yes = By.xpath(
+			"//input[contains(@id,'NewActivityDV-Mandatory_0')]");
+	final By RA_UWA_Mandatory_No = By.xpath(
+			"//input[contains(@id,'NewActivityDV-Mandatory_1')]");
+	final By RA_UWA_Recurring_Yes = By.xpath(
+			"//input[contains(@id,'NewActivityDV-Recurring_0')]");
+	final By RA_UWA_Recurring_No = By.xpath(
+			"//input[contains(@id,'NewActivityDV-Recurring_1')]");
 	final By RA_UWA_AssignTo = By.xpath(
+			"//select[contains(@name,'NewActivityDV-SelectFromList')]");
+	/*
+	 * New Note
+	 */
+	final By RA_UWA_NewNote = By.xpath(
+			"//div[contains(@class,'gw-boldLabel') and text()='New Note']");
+
+	final By RA_UWA_NN_Topic = By.xpath(
+			"//select[contains(@name,'ActivityDetailNoteDV-Topic')]");
+	final By RA_UWA_NN_Subject = By.xpath(
+			"//input[contains(@name,'ActivityDetailNoteDV-NoteSubject')]");
+	final By RA_UWA_NN_RelatedTo = By.xpath(
 			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
-	final By RA_UWA_SecurityLevel = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
+	final By RA_UWA_NN_SecurityLevel = By.xpath(
+			"//select[contains(@name,'ActivityDetailNoteDV-SecurityLevel')]");
+	final By RA_UWA_NN_Text = By.xpath(
+			"//textarea[contains(@name,'ActivityDetailNoteDV-Text')]");
+
 	final By RA_UWA_Release = By.xpath(
-			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
+			"//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Release']");
 
 	/*
 	 * Prior Policies Tab
@@ -218,52 +234,54 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	final By RA_PL_Status = By.xpath(
 			"//tr[contains(@id,'PriorPolicyLV') and contains(@class,'gw-standard-row')]/td[contains(@id,'TotalLosses_Cell') and contains(@class,'gw-CellWidget')]//div[contains(@id,'TotalLosses') and contains(@class,'gw-editable')]//input[contains(@name,'TotalLosses')]");
 
+	
 	/*
 	 * Scenarios
+	 * 
+	 * 
+	 * void addUWIssue() throws Throwable;
+	 * 
+	 * void approveUWIssues() throws Throwable;
+	 * 
+	 * void riskApprovalDetails() throws Throwable;
+	 * 
+	 * void rejectUWIssues() throws Throwable;
+	 * 
+	 * void reopenUWIssues() throws Throwable;
+	 * 
+	 * void addUWIssue_MandatoryValidation() throws Throwable;
+	 * 
+	 * void addUWIssue_CancelValidation() throws Throwable;
+	 * 
+	 * void addUWContingency() throws Throwable;
+	 * 
+	 * void approveContingency() throws Throwable;
+	 * 
+	 * void rejectContingency() throws Throwable;
+	 * 
+	 * void reopenContingency() throws Throwable;
+	 * 
+	 * void priorPolicies_Add() throws Throwable;
+	 * 
+	 * void priorPolicies_Edit() throws Throwable;
+	 * 
+	 * void priorPolicies_Remove() throws Throwable;
+	 * 
+	 * void RA_Claims_Search() throws Throwable;
+	 * 
+	 * void priorLosses_Add() throws Throwable;
+	 * 
+	 * void priorLosses_Edit() throws Throwable;
+	 * 
+	 * void priorLosses_Remove() throws Throwable;
+	 * 
+	 * void RA_MVR_Search_Validate() throws Throwable;
+	 * 
+	 * void RA_LockForReview() throws Throwable;
+	 * 
+	 * void releaseLock() throws Throwable;
+	 * 
+	 * void requestApproval() throws Throwable;
 	 */
-
-	void addUWIssue() throws Throwable;
-
-	void approveUWIssues() throws Throwable;
-
-	void riskApprovalDetails() throws Throwable;
-
-	void rejectUWIssues() throws Throwable;
-
-	void reopenUWIssues() throws Throwable;
-
-	void addUWIssue_MandatoryValidation() throws Throwable;
-
-	void addUWIssue_CancelValidation() throws Throwable;
-
-	void addUWContingency() throws Throwable;
-
-	void approveContingency() throws Throwable;
-
-	void rejectContingency() throws Throwable;
-
-	void reopenContingency() throws Throwable;
-
-	void priorPolicies_Add() throws Throwable;
-
-	void priorPolicies_Edit() throws Throwable;
-
-	void priorPolicies_Remove() throws Throwable;
-
-	void RA_Claims_Search() throws Throwable;
-
-	void priorLosses_Add() throws Throwable;
-
-	void priorLosses_Edit() throws Throwable;
-
-	void priorLosses_Remove() throws Throwable;
-
-	void RA_MVR_Search_Validate() throws Throwable;
-
-	void RA_LockForReview() throws Throwable;
-
-	void releaseLock() throws Throwable;
-
-	void requestApproval() throws Throwable;
 
 }

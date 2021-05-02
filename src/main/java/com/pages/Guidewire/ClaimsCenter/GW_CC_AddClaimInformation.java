@@ -21,7 +21,7 @@ public class GW_CC_AddClaimInformation extends SeleniumWebDriver_Commands implem
 
 		lhm_Data = getDataFromSheet_Fillo("addClaimInfo",strTestCaseName);
 		GuidewireAutomate_Validation("addClaimInfoScreen", addClaimInfo_screen_tittlebar, "equals", "Step 3 of 5: Add claim information");
-		GuidewireAutomate("description", description, "sendkeys",lhm_Data.get("Description"));
+		GuidewireAutomate("description", description, "sendKeys",lhm_Data.get("Description"));
 		GuidewireAutomate("losscause", losscause, "selectByVisibleText",lhm_Data.get("Loss Cause"));
 		//GuidewireAutomate("location", location, "selectByIndex",lhm_Data.get("Location"));
 		GuidewireAutomate("location", location, "selectByIndex","1");

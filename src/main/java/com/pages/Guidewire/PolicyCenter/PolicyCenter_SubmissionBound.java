@@ -1,4 +1,4 @@
-package com.pages.Guidewire.PersonalAuto;
+package com.pages.Guidewire.PolicyCenter;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,18 +7,18 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 
-public class PersonalAuto_Submission extends SeleniumWebDriver_Commands implements PersonalAuto_SubmissionBoud_PO {
+public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands implements PolicyCenter_SubmissionBoud_PO {
 
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
-	public PersonalAuto_Submission(WebDriver driver, ExtentTest oExtentTest) {
+	public PolicyCenter_SubmissionBound(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
-		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void submissionBound() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("pasubmissionBound", strTestCaseName);
+	public static void submissionBound() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("submissionBound",
+				strTestCaseName);
 		String strDynamicXpath = lhm_TestCase_Table_Data.get("SubmissionBound");
 		By View_your_Submission = By.xpath("//div[contains(text(),'" + strDynamicXpath);
 		By View_your_Policy = By.xpath("//div[contains(text(),'" + strDynamicXpath);
@@ -29,37 +29,29 @@ public class PersonalAuto_Submission extends SeleniumWebDriver_Commands implemen
 
 	}
 
-	@Override
 	// ------>clicking on view_your_SubmissionIt will go to Quote Screen
-	public void view_your_Submission() throws Throwable {
+	public static void viewYourSubmission() throws Throwable {
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Submission Bound");
 
-		GuidewireAutomate_Validation("PA Quote Screen titlebar", PA_Quote_Screen_titlebar, "equals", "Quote");
-		/// ----->verifying the PA Quote Address
-		GuidewireAutomate_Validation("Address", PA_Quote_Address, "equals", lhm_TestCase_Table_Data.get("Address"));
-		// ---->verifying the PA Quote Model year
-		GuidewireAutomate_Validation("Model Year", PA_Quote_Model_Year, "equals",
-				lhm_TestCase_Table_Data.get("ModelYear"));
 	}
 
-	@Override
 	// ------>clicking on View_your_Policy It will go to Summary Screen
-	public void View_your_Policy() throws Throwable {
+	public static void ViewYourPolicy() throws Throwable {
 
-		// ---->verifying summary screen title
-		GuidewireAutomate_Validation("summary_screen_title", summary_screen_title, "equals",
-				"Policy Summary: 8462126871");
-		// -------->verifying summary product
-		GuidewireAutomate_Validation("summary_product", summary_product, "equals",
-				lhm_TestCase_Table_Data.get("summaryProduct"));
-		// -------->verifying summary offering
-		GuidewireAutomate_Validation("summary_offering", summary_offering, "equals",
-				lhm_TestCase_Table_Data.get("Offering"));
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Submission Bound");
+		
+		GuidewireAutomate("View_your_Policy", View_your_Policy, "click", "NA");
 
 	}
 
-	@Override
 	// ------>clicking on submission manager
-	public void Go_to_the_submission(String type) throws Throwable {
+	public static void GoToTheSubmissionManagerforthisAccount(String type) throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Submission Bound");
+
 		// ---->verifying summary screen title
 		GuidewireAutomate_Validation("submission_title", submission_title, "equals", "Submission Manager");
 		GuidewireAutomate("submission_filter", submission_filter, "click", type);
@@ -82,36 +74,36 @@ public class PersonalAuto_Submission extends SeleniumWebDriver_Commands implemen
 		}
 	}
 
-	@Override
 	// ------->clicking on new submission screen
-	public void Submit_an_application() throws Throwable {
+	public static void submitApplicationForDifferentAccount() throws Throwable {
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Submission Bound");
+
 		GuidewireAutomate("Submit an_application_for_a_different_account",
 				Submit_an_application_for_a_different_account, "click", "");
 
 	}
 
-	@Override
-	public void Go_To_Your_Desktop() throws Throwable {
+	public static void goToYourDesktop() throws Throwable {
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Submission Bound");
 		GuidewireAutomate("Go_To_Your_Desktop", Go_To_Your_Desktop, "click", "");
 
 	}
 
-	@Override
-	public void submissionManager() throws Throwable {
+	public static void submissionManager() throws Throwable {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	@Override
-	public void NotTaken() throws Throwable {
+	public static void NotTaken() throws Throwable {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	@Override
-	public void SubmissionDecline() throws Throwable {
+	public static void SubmissionDecline() throws Throwable {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

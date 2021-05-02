@@ -5,43 +5,43 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.aventstack.extentreports.ExtentTest;
 
-public class GW_PC_MySummary extends SeleniumWebDriver_Commands implements GW_PC_MySummary_PO{
+public class PolicyCenter_MySummary extends SeleniumWebDriver_Commands implements PolicyCenter_MySummary_PO{
 	
-	public GW_PC_MySummary(WebDriver driver, ExtentTest oExtentTest) {
+	public PolicyCenter_MySummary(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
-	@Override
-	public void overview() {
+	
+	public static void overview() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void myActivities() {
+	
+	public static void myActivities() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void mySubmissions() {
+	
+	public static void mySubmissions() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void myRenewals() {
+	
+	public static void myRenewals() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void otherPolicyTransactions() {
+	
+	public static void otherPolicyTransactions() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void myQueues() {
+	
+	public static void myQueues() {
 		// TODO Auto-generated method stub
 		
 	}

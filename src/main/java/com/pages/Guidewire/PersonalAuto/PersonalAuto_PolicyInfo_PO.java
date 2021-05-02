@@ -33,7 +33,7 @@ public interface PersonalAuto_PolicyInfo_PO {
 			"//div[contains(@id,'AddressType') and contains(@class,'gw-ValueWidget')]//div[contains(@class,'gw-label')]");
 	final By PrimaryNamedInsured_AddressDescription = By.xpath(
 			"//div[contains(@id,'AddressDescription') and contains(@class,'gw-ValueWidget')]//div[contains(@class,'gw-value-readonly-wrapper')]");
-	
+
 	/*
 	 * Official IDs
 	 */
@@ -44,8 +44,8 @@ public interface PersonalAuto_PolicyInfo_PO {
 	/*
 	 * Secondary Named Insured
 	 */
-	final By PI_SecondaryNamedInsured = By.xpath(
-			"//div[contains(@class,'gw-boldLabel') and text()='Secondary Named Insured']");
+	final By PI_SecondaryNamedInsured = By
+			.xpath("//div[contains(@class,'gw-boldLabel') and text()='Secondary Named Insured']");
 
 	final By SecondaryNamedInsured_Add_Button = By
 			.xpath("//div[contains(@id,'ChangeSecondaryNamedInsuredButtonMenuIcon')]");
@@ -59,8 +59,8 @@ public interface PersonalAuto_PolicyInfo_PO {
 	/*
 	 * Additional Named Insureds
 	 */
-	final By PI_AdditionalNamedInsureds = By.xpath(
-			"//div[contains(@class,'gw-boldLabel') and text()='Additional Named Insureds']");
+	final By PI_AdditionalNamedInsureds = By
+			.xpath("//div[contains(@class,'gw-boldLabel') and text()='Additional Named Insureds']");
 
 	final By AdditionalNamedInsured_Add_Button = By.xpath(
 			"//div[contains(@id,'AdditionalNamedInsuredInputSet-NamedInsuredsLV_tb-AddContactsButton')]//div[text()='Add']");
@@ -74,8 +74,7 @@ public interface PersonalAuto_PolicyInfo_PO {
 	/*
 	 * Policy Details
 	 */
-	final By PI_PolicyDetails = By.xpath(
-			"//div[contains(@class,'gw-boldLabel') and text()='Policy Details']");
+	final By PI_PolicyDetails = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Policy Details']");
 
 	final By PI_PD_TermType = By.xpath("//select[contains(@name,'PolicyInfoInputSet-TermType')]");
 	final By PI_PD_TermNumber = By.xpath(
@@ -92,80 +91,74 @@ public interface PersonalAuto_PolicyInfo_PO {
 	/*
 	 * Affinity Group
 	 */
-	final By PI_AffinityGroup = By.xpath(
-			"//div[contains(@class,'gw-boldLabel') and text()='Affinity Group']");
+	final By PI_AffinityGroup = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Affinity Group']");
 
 	final By PI_AG_Name = By.xpath("//input[contains(@name,'PolicyInfoInputSet-AffinityGroup')]");
-
 
 	/*
 	 * Producer of Record
 	 */
-	final By PI_ProducerofRecord = By.xpath(
-			"//div[contains(@class,'gw-boldLabel') and text()='Producer of Record']");
+	final By PI_ProducerofRecord = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Producer of Record']");
 
-	final By PI_PR_Organization = By
-			.xpath("//input[contains(@name,'PolicyInfoProducerOfRecordInputSet-Producer')]");
+	final By PI_PR_Organization = By.xpath("//input[contains(@name,'PolicyInfoProducerOfRecordInputSet-Producer')]");
 	final By PI_PR_ProducerCode = By
 			.xpath("//select[contains(@name,'PolicyInfoProducerOfRecordInputSet-ProducerCode')]");
 
 	/*
 	 * Underwriting Companies
-
+	 * 
 	 */
-	final By PI_UnderwritingCompanies = By.xpath(
-			"//div[contains(@class,'gw-boldLabel') and text()='Underwriting Companies']");
+	final By PI_UnderwritingCompanies = By
+			.xpath("//div[contains(@class,'gw-boldLabel') and text()='Underwriting Companies']");
 
 	final By PI_UC_Name = By.xpath("//select[contains(@name,'UWCompanyInputSet-UWCompany')]");
 
-	
-	
-	
 	/*
 	 * Modules
+	 * 
+	 * void policyInfo() throws Throwable;
+	 * 
+	 * void primaryNamedInsured() throws Throwable;
+	 * 
+	 * void primaryNamedInsured_ChangeTo_NewPerson() throws Throwable;
+	 * 
+	 * void primaryNamedInsured_ChangeTo_FromAddressBook() throws Throwable;
+	 * 
+	 * void primaryNamedInsured_ChangeTo_ExistingContact() throws Throwable;
+	 * 
+	 * void primaryNamedInsured_Edit() throws Throwable;
+	 * 
+	 * void policyAddress() throws Throwable;
+	 * 
+	 * void policyAddress_ChangeTo_NewAddress() throws Throwable;
+	 * 
+	 * void policyAddress_ChangeTo_EditCurrentAddress() throws Throwable;
+	 * 
+	 * void pi_OfficialID() throws Throwable;
+	 * 
+	 * void secondaryInsured_NewPerson() throws Throwable;
+	 * 
+	 * void secondaryInsured_FromAddressBook() throws Throwable;
+	 * 
+	 * void secondaryInsured_ExistingContact() throws Throwable;
+	 * 
+	 * void additionalNamedInsured_Add_NewCompany() throws Throwable;
+	 * 
+	 * void additionalNamedInsured_Add_NewPerson() throws Throwable;
+	 * 
+	 * void additionalNamedInsured_Add_FromAddresssBook() throws Throwable;
+	 * 
+	 * void additionalNamedInsured_Edit() throws Throwable;
+	 * 
+	 * void additionalNamedInsured_Remove() throws Throwable;
+	 * 
+	 * void policyDetails() throws Throwable;
+	 * 
+	 * void affinityGroup() throws Throwable;
+	 * 
+	 * void producerOfRecord() throws Throwable;
+	 * 
+	 * void underWritingCompany() throws Throwable;
 	 */
-	void policyInfo() throws Throwable;
-
-	void primaryNamedInsured() throws Throwable;
-
-	void primaryNamedInsured_ChangeTo_NewPerson() throws Throwable;
-
-	void primaryNamedInsured_ChangeTo_FromAddressBook() throws Throwable;
-
-	void primaryNamedInsured_ChangeTo_ExistingContact() throws Throwable;
-
-	void primaryNamedInsured_Edit() throws Throwable;
-
-	void policyAddress() throws Throwable;
-
-	void policyAddress_ChangeTo_NewAddress() throws Throwable;
-
-	void policyAddress_ChangeTo_EditCurrentAddress() throws Throwable;
-
-	void pi_OfficialID() throws Throwable;
-
-	void secondaryInsured_NewPerson() throws Throwable;
-
-	void secondaryInsured_FromAddressBook() throws Throwable;
-
-	void secondaryInsured_ExistingContact() throws Throwable;
-
-	void additionalNamedInsured_Add_NewCompany() throws Throwable;
-
-	void additionalNamedInsured_Add_NewPerson() throws Throwable;
-
-	void additionalNamedInsured_Add_FromAddresssBook() throws Throwable;
-
-	void additionalNamedInsured_Edit() throws Throwable;
-
-	void additionalNamedInsured_Remove() throws Throwable;
-
-	void policyDetails() throws Throwable;
-
-	void affinityGroup() throws Throwable;
-
-	void producerOfRecord() throws Throwable;
-
-	void underWritingCompany() throws Throwable;
 
 }
