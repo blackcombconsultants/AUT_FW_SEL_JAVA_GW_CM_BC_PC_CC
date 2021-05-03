@@ -1,7 +1,5 @@
 package com.pages.Guidewire;
 
-import java.util.LinkedHashMap;
-
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -10,20 +8,19 @@ import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements GW_LoginCM_PC_BC_CC_PO {
-	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
+public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements GW_CM_PC_BC_CC_Login_PO {
 
-	public GW_LoginCM_PC_BC_CC(WebDriver driver, ExtentTest oExtentTest) {
+	public GW_CM_PC_BC_CC_Login(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
 
-	public void login_Guidewire() throws Throwable {
+	public static void login_Guidewire() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
 
-		GuidewireAutomate("Username", GW_Username, "sendkeys", lhm_TestCase_Table_Data.get("GW_Username"));
-		GuidewireAutomate("Password", GW_Password, "sendkeys", lhm_TestCase_Table_Data.get("GW_Password"));
-		// GuidewireAutomate("Password", Password, "sendkeys", new
+		GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
+		GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
+		// GuidewireAutomate("Password", Password, "sendKeys", new
 		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
 		GuidewireAutomate("Login", GW_Login_Button, "click", lhm_TestCase_Table_Data.get("GW_Login_Button"));
 
@@ -36,7 +33,7 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 
 	}
 
-	public void logout_Guidewire() throws Throwable {
+	public static void logout_Guidewire() throws Throwable {
 		GuidewireAutomate("Setting", GW_Setting_Link, "click", "Null");
 		GuidewireAutomate("Logout", GW_Logout_Link, "click", "Null");
 
@@ -45,38 +42,32 @@ public class GW_LoginCM_PC_BC_CC extends SeleniumWebDriver_Commands implements G
 
 	}
 
-	@Override
-	public void login_BillingCenter() throws Throwable {
+	public static void login_BillingCenter() throws Throwable {
 		login_Guidewire();
 
 	}
 
-	@Override
-	public void logout_BillingCenter() throws Throwable {
+	public static void logout_BillingCenter() throws Throwable {
 		logout_Guidewire();
 
 	}
 
-	@Override
-	public void login_PolicyCenter() throws Throwable {
+	public static void login_PolicyCenter() throws Throwable {
 		login_Guidewire();
 
 	}
 
-	@Override
-	public void logout_PolicyCenter() throws Throwable {
+	public static void logout_PolicyCenter() throws Throwable {
 		logout_Guidewire();
 
 	}
 
-	@Override
-	public void login_ClaimsCenter() throws Throwable {
+	public static void login_ClaimsCenter() throws Throwable {
 		login_Guidewire();
 
 	}
 
-	@Override
-	public void logout_ClaimsCenter() throws Throwable {
+	public static void logout_ClaimsCenter() throws Throwable {
 		logout_Guidewire();
 
 	}

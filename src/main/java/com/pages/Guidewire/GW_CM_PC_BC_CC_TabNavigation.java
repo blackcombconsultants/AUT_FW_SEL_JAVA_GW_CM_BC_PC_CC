@@ -7,14 +7,14 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
-		implements GW_TabNavigation_CM_PC_BC_CC_PO {
+public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
+		implements GW_CM_PC_BC_CC_TabNavigation_PO {
 
-	public GW_TabNavigation_CM_PC_BC_CC(WebDriver driver, ExtentTest oExtentTest) {
+	public GW_CM_PC_BC_CC_TabNavigation(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
 
-	public void navigate_ClaimTab() throws Throwable {
+	public static void navigate_ClaimTab() throws Throwable {
 
 	}
 	/*
@@ -22,8 +22,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 	 * --------------------------------------------------------------
 	 */
 
-	@Override
-	public void gwContactManagement_TabNavigation(String Tab, String Value) throws Throwable {
+	
+	public static void gwContactManagement_TabNavigation(String Tab, String Value) throws Throwable {
 		switch (Tab) {
 
 		case "x":
@@ -43,8 +43,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		}
 	}
 
-	@Override
-	public void gwContactManagement_MenuNavigation(String Menu) throws Throwable {
+	
+	public static void gwContactManagement_MenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 
 		case "x":
@@ -64,8 +64,7 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		}
 	}
 
-	@Override
-	public void gwPolicyCenter_TabNavigation(String Tab, String Value) throws Throwable {
+	public static void pcTabNavigation(String Tab, String Value) throws Throwable {
 		switch (Tab) {
 		case "New Account":
 			GuidewireAutomate("Account", Tab_Account_dd, "click", "Null");
@@ -75,8 +74,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 			break;
 		case "Acct Search":
 			GuidewireAutomate("Account", Tab_Account_dd, "click", "Null");
-			GuidewireAutomate("Account Number", AccountTab_AccountNumber, "sendkeys", Value);
-			GuidewireAutomate("Account Search", AccountTab_AccountNumberSearch, "click", "Null");
+			GuidewireAutomate("Account Number", AccountTab_AccountNumber, "sendKeys", Value);
+			GuidewireAutomate("Account Search", AccountTab_AccountNumberSearch, "clickAndwait", "Null");
 			break;
 		case "New Submission":
 			GuidewireAutomate("PolicyTab", Tab_Policy_dd, "click", "Null");
@@ -86,13 +85,13 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 			break;
 		case "Sub Search":
 			GuidewireAutomate("Policy", Tab_Policy_dd, "click", "Null");
-			GuidewireAutomate("Sub Number", PolicyTab_SubNumber, "sendkeys", Value);
-			GuidewireAutomate("Sub Search", PolicyTab_SubSearch, "click", "Null");
+			GuidewireAutomate("Sub Number", PolicyTab_SubNumber, "sendKeys", Value);
+			GuidewireAutomate("Sub Search", PolicyTab_SubSearch, "clickAndwait", "Null");
 			break;
 		case "Policy Search":
 			GuidewireAutomate("Policy", Tab_Policy_dd, "click", "Null");
-			GuidewireAutomate("Sub Number", PolicyTab_PolicyNumber, "sendkeys", Value);
-			GuidewireAutomate("Sub Search", PolicyTab_PolicyNumberSearch, "click", "Null");
+			GuidewireAutomate("Sub Number", PolicyTab_PolicyNumber, "sendKeys", Value);
+			GuidewireAutomate("Sub Search", PolicyTab_PolicyNumberSearch, "clickAndwait", "Null");
 			break;
 		case "New Contact":
 			GuidewireAutomate("ContactsTab", Tab_Search_dd, "click", "Null");
@@ -158,8 +157,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		}
 	}
 
-	@Override
-	public void gwPolicyCenter_MenuNavigation(String Menu) throws Throwable {
+	
+	public static void pcMenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 		case "New Account":
 			GuidewireAutomate("Actions", Menu_Actions, "click", "");
@@ -262,8 +261,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		}
 	}
 
-	@Override
-	public void gwBillingCenter_TabNavigation(String Tab, String Value) throws Throwable {
+	
+	public static void bcTabNavigation(String Tab, String Value) throws Throwable {
 
 		switch (Tab) {
 
@@ -281,7 +280,7 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 
 	}
 
-	public void gwBillingCenter_MenuNavigation(String Menu) throws Throwable {
+	public static void bcMenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 		case "NewAccount":
 			// ------> Verifying the page -
@@ -315,8 +314,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 
 	}
 
-	@Override
-	public void gwClaimsCenter_MenuNavigation(String Menu) throws Throwable {
+	
+	public static void ccMenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 
 		case "x":
@@ -336,8 +335,8 @@ public class GW_TabNavigation_CM_PC_BC_CC extends SeleniumWebDriver_Commands
 		}
 	}
 
-	@Override
-	public void gwClaimsCenter_TabNavigation(String Tab, String Value) throws Throwable {
+	
+	public static void ccTabNavigation(String Tab, String Value) throws Throwable {
 		switch (Tab) {
 		case "NewClaim":
 			GuidewireAutomate("ClaimTab", ClaimTab, "click", "Null");

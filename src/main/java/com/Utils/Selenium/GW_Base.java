@@ -89,6 +89,7 @@ public class GW_Base {
 	public static String strAccountNumber;
 	public static String strSubmissionNumber;
 	public static String strPolicyNumber;
+	public static String strUnderwriter;
 	public static String strAmount;
 
 }

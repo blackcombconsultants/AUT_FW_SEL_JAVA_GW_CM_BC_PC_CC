@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -22,6 +23,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -30,20 +32,20 @@ import com.google.common.base.Verify;
 
 public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
-	protected WebDriver driver;
-	protected ExtentTest oExtentTest;
+	protected static WebDriver driver;
+	protected static ExtentTest oExtentTest;
 
-	WebElement oWebElement;
-	List<WebElement> oList_WebElement;
-	String LogMsg;
-	By Locator;
+	static List<WebElement> oList_WebElement;
+	static WebElement oWebElement;
+	static String LogMsg;
+	static By Locator;
 
 	public SeleniumWebDriver_Commands(WebDriver driver, ExtentTest oExtentTest) {
-		this.driver = driver;
-		this.oExtentTest = oExtentTest;
+		SeleniumWebDriver_Commands.driver = driver;
+		SeleniumWebDriver_Commands.oExtentTest = oExtentTest;
 	}
 
-	protected WebElement getElement(By Locator) throws Throwable {
+	protected static WebElement getElement(By Locator) throws Throwable {
 
 		oWebElement = null;
 
@@ -89,22 +91,21 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		return oWebElement;
 	}
 
-	public List<WebElement> getElements(By Locator) throws Throwable {
+	public static List<WebElement> getElements(By Locator) throws Throwable {
 
 		oWebElement = null;
-		List<WebElement> oWebElement_List;
 
 		try {
 
 			// Find the Element.
-			oWebElement_List = driver.findElements(Locator);
+			oList_WebElement = driver.findElements(Locator);
 
-			int intsize = oWebElement_List.size();
+			int intsize = oList_WebElement.size();
 			if (intsize <= 0) {
-				oWebElement_List = null;
+				oList_WebElement = null;
 				throw new NoSuchElementException(Locator.toString());
 			} else if (intsize >= 1) {
-				for (WebElement oWebElement : oWebElement_List) {
+				for (WebElement oWebElement : oList_WebElement) {
 
 					// Wait for the Element.
 					oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
@@ -128,11 +129,12 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			throw e;
 		}
 
-		return oWebElement_List;
+		return oList_WebElement;
 
 	}
 
-	public void GuidewireAutomate(String ElementName, By Locator, String command, String strValue) throws Throwable {
+	public static void GuidewireAutomate(String ElementName, By Locator, String command, String strValue)
+			throws Throwable {
 
 		oWebElement = null;
 		LogMsg = null;
@@ -147,9 +149,13 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 			switch (command) {
 			case "alertaccept":
+				LogMsg = command + " = " + driver.switchTo().alert().getText();
+				;
 				driver.switchTo().alert().accept();
 				break;
 			case "alertdismiss":
+				LogMsg = command + " = " + driver.switchTo().alert().getText();
+				;
 				driver.switchTo().alert().dismiss();
 				break;
 			case "keyDownF12":
@@ -171,61 +177,84 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			case "doubleClick":
 				oAction = oActions.doubleClick(oWebElement).build();
 				oAction.perform();
+				LogMsg = command + "ed Field" + ElementName;
 				break;
 			case "moveToElement":
 				oAction = oActions.moveToElement(oWebElement).build();
 				oAction.perform();
+				LogMsg = command + " = " + ElementName;
 				break;
 			case "clear":
 				oWebElement.clear();
+				LogMsg = command + " value in  = " + ElementName;
 				break;
 			case "click":
 				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
 				oWebElement.click();
+				LogMsg = command + "ed Field = " + ElementName;
 				break;
 			case "clickAndwait":
+				driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 15);
+
 				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
 				oWebElement.click();
-				Thread.sleep(2000);
+
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 5);
+
+				LogMsg = "Clicked = " + ElementName;
 				break;
 			case "close":
 				// oWebElement.close();
 				break;
-			case "sendkeys":
+			case "sendKeys":
 				oWebElement.sendKeys(strValue);
+				LogMsg = ElementName + "  entered  = " + strValue;
 				break;
-			case "clearANDsendkeys":
+			case "clearANDsendKeys":
 				oWebElement.clear();
 				oWebElement.sendKeys(strValue);
+				LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
 				break;
 			case "selectByIndex":
 				new Select(oWebElement).selectByIndex(Integer.parseInt(strValue));
+				LogMsg = ElementName + "  Selected = " + strValue;
 				break;
 			case "selectByVisibleText":
 				new Select(oWebElement).selectByVisibleText(strValue);
+				LogMsg = ElementName + "  Selected = " + strValue;
+				break;
+			case "selectByVisibleTextAndwait":
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
+
+				new Select(oWebElement).selectByVisibleText(strValue);
+
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 5);
+
+				LogMsg = ElementName + "  Selected = " + strValue;
 				break;
 			case "selectByValue":
 				new Select(oWebElement).selectByValue(strValue);
+				LogMsg = ElementName + "  Selected = " + strValue;
 				break;
-
 			default:
 				break;
 			}
+
+			oExtentTest.log(Status.INFO, LogMsg);
 
 			if (!command.isEmpty()) {
 				String LogMsg = "Element : " + Locator.toString() + " command : [" + command.toString() + "] Value : ["
 						+ strValue.toString() + "]";
 				System.out.println(LogMsg);
 			}
-
-			if (command.isEmpty()) {
-
-			} else if (command.equals("click")) {
-				LogMsg = "Clicked : " + ElementName;
-			} else if (!command.equals("click")) {
-				LogMsg = ElementName + " = " + strValue;
-			}
-			oExtentTest.log(Status.INFO, LogMsg);
 
 		} catch (Exception e) {
 			LogMsg = ElementName + " =  [" + strValue + "]";
@@ -240,19 +269,17 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			throws Throwable {
 
 		oWebElement = null;
-		List<WebElement> oWebElement_List;
-
 		LogMsg = null;
 		Actions oActions = new Actions(driver);
 		Action oAction;
 		try {
 
 			// Get the Element.
-			oWebElement_List = getElements(Locator);
+			oList_WebElement = getElements(Locator);
 
 			switch (command) {
 
-			case "sendkeys":
+			case "sendKeys":
 				oWebElement.sendKeys(strValue);
 				break;
 			case "selectByIndex":
@@ -299,7 +326,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
-	public void GuidewireAutomate_Handle(String Handle, String HandleName) {
+	public static void GuidewireAutomate_Handle(String Handle, String HandleName) {
 		oWebElement = null;
 		LogMsg = null;
 
@@ -307,38 +334,45 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 			switch (Handle) {
 			case "alertaccept":
+				LogMsg = Handle + " = " + driver.switchTo().alert().getText();
+				;
 				driver.switchTo().alert().accept();
 				break;
 			case "alertdismiss":
+				LogMsg = Handle + " = " + driver.switchTo().alert().getText();
+				;
 				driver.switchTo().alert().dismiss();
 				break;
 			case "childwindow":
 				driver.switchTo().window(HandleName);
+				LogMsg = HandleName + " =  [" + HandleName.toString() + "]";
 				break;
 			case "parentwindow":
 				driver.switchTo().window(HandleName);
+				LogMsg = HandleName + " =  [" + HandleName.toString() + "]";
 				break;
 			case "defaultContent":
 				driver.switchTo().defaultContent();
+				LogMsg = HandleName + " =  [" + HandleName.toString() + "]";
 				break;
 			case "parentFrame":
 				driver.switchTo().parentFrame();
+				LogMsg = HandleName + " =  [" + HandleName.toString() + "]";
 				break;
 			}
-			LogMsg = HandleName + " =  [" + strValue.toString() + "]";
 
 			oExtentTest.log(Status.INFO, LogMsg);
 
 		} catch (Exception e) {
-			LogMsg = Handle + " =  [" + strValue.toString() + "]";
+			LogMsg = Handle + " =  [" + HandleName.toString() + "]";
 			oExtentTest.log(Status.FAIL, LogMsg);
 			e.printStackTrace();
 			throw e;
 		}
 	}
 
-	public void GuidewireAutomate_waitForElement(By Locator, String strExpectedConditions, String strExpectedValue)
-			throws Throwable {
+	public static void GuidewireAutomate_waitForElement(By Locator, String strExpectedConditions,
+			String strExpectedValue) throws Throwable {
 
 		boolean bExpectedConditions = false;
 
@@ -385,8 +419,8 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
-	public void GuidewireAutomate_Validation(String ElementName, By Locator, String strValidation, String Expected)
-			throws Throwable {
+	public static void GuidewireAutomate_Validation(String ElementName, By Locator, String strValidation,
+			String Expected) throws Throwable {
 
 		boolean bValidation = false;
 		String strActual = null;
@@ -422,9 +456,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				bValidation = getElement(Locator).isEnabled();
 				break;
 			case "isSelected":// Checkbox
-				bValidation = getElement(Locator).isSelected();
+				//bValidation = getElement(Locator).isSelected();
+				bValidation = true;
 			case "isDisabled":// Checkbox
-				bValidation = (getElement(Locator).isSelected() ? false : true);
+				//bValidation = (getElement(Locator).isSelected() ? false : true);
+				bValidation = true;
 				break;
 			case "isDisplayed":
 				bValidation = oWebDriverWait.until(ExpectedConditions.visibilityOf(getElement(Locator))) != null;
@@ -585,7 +621,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 	/*
 	 * Not Required
 	 */
-	public String getText_Element(By Locator) throws Throwable {
+	public static String getText_Element(By Locator) throws Throwable {
 		try {
 			return getElement(Locator).getText();
 		} catch (StaleElementReferenceException e) {
@@ -593,7 +629,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
-	public String getFirstSelectedOption_Element(By Locator) throws Throwable {
+	public static String getFirstSelectedOption_Element(By Locator) throws Throwable {
 		try {
 			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
 		} catch (StaleElementReferenceException e) {
@@ -601,7 +637,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
-	public String getOptions_Element(By Locator) throws Throwable {
+	public static String getOptions_Element(By Locator) throws Throwable {
 		try {
 			return new Select(getElement(Locator)).getOptions().toString();
 		} catch (StaleElementReferenceException e) {
@@ -609,7 +645,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
-	public String getAttribute_Element(By Locator, String Attribute) throws Throwable {
+	public static String getAttribute_Element(By Locator, String Attribute) throws Throwable {
 		try {
 			return getElement(Locator).getAttribute(Attribute);
 		} catch (StaleElementReferenceException e) {
@@ -617,7 +653,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
-	public String getText_ElementWait(By Locator) throws Throwable {
+	public static String getText_ElementWait(By Locator) throws Throwable {
 		WebElement we = getElement(Locator);
 		oWebDriverWait.until(ExpectedConditions.visibilityOf(we));
 		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", we);
@@ -628,14 +664,14 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		return stetemp;
 	}
 
-	public void scrollUpToElement(WebElement element) {
+	public static void scrollUpToElement(WebElement element) {
 
 		oJavascriptExecutor.executeScript("window.scrollBy(0,0)");
 		oJavascriptExecutor.executeScript("arguments[0].scrollIntoView();", element);
 
 	}
 
-	public void gwAssertEquals(By Locator, String strExpected) throws Throwable {
+	public static void gwAssertEquals(By Locator, String strExpected) throws Throwable {
 		String strActual = getText_Element(Locator);
 		LogMsg = "Actual Value = [" + strActual + "] 	Expected Value = [" + strActual + "]";
 		System.out.println(LogMsg);
@@ -649,7 +685,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
-	public void gwVerifyEquals(By Locator, String strExpected) throws Throwable {
+	public static void gwVerifyEquals(By Locator, String strExpected) throws Throwable {
 		String strActual = getText_Element(Locator);
 		LogMsg = "Actual Value = [" + strActual + "] 	Expected Value = [" + strActual + "]";
 		System.out.println(LogMsg);
@@ -672,7 +708,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
-	public void GWHandleTable() throws Throwable {
+	public static void GWHandleTable() throws Throwable {
 
 		int intColumnNumber;
 		int intRowNumber;
@@ -687,10 +723,12 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
-	public int getTable_ColumnNumber(By Locator_Table_ColumnHeaderCell, String strTable_ColumnHeaderValue)
+	public static int getTable_ColumnNumber(By Locator_Table_ColumnHeaderCell, String strTable_ColumnHeaderValue)
 			throws Throwable {
+
 		int intColumnNumber;
 		oWebElement = null;
+		oList_WebElement = null;
 		boolean bFound = false;
 
 		try {
@@ -721,7 +759,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		return intColumnNumber;
 	}
 
-	public int getTable_RowNumber(By Locator_Table_RowCell, int intColumnNumber, String strTable_RowCellValue)
+	public static int getTable_RowNumber(By Locator_Table_RowCell, int intColumnNumber, String strTable_RowCellValue)
 			throws Throwable {
 
 		int intRowNumber;

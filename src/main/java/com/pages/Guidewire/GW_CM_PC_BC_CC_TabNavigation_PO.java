@@ -2,7 +2,7 @@ package com.pages.Guidewire;
 
 import org.openqa.selenium.By;
 
-public interface GW_TabNavigation_CM_PC_BC_CC_PO {
+public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 
 	/*
 	 * -----------------------------------------------------------------------------
@@ -198,20 +198,25 @@ public interface GW_TabNavigation_CM_PC_BC_CC_PO {
 
 	final By NewSubmission_Header = By.xpath("//div[contains(@id,'Screen-ttlBar')]//div[text()='New Submissions']");
 
-	void gwContactManagement_TabNavigation(String Tab, String Value) throws Throwable;
-
-	void gwPolicyCenter_TabNavigation(String Tab, String Value) throws Throwable;
-
-	void gwBillingCenter_TabNavigation(String Tab, String Value) throws Throwable;
-
-	void gwClaimsCenter_TabNavigation(String Tab, String Value) throws Throwable;
-
-	void gwContactManagement_MenuNavigation(String strMenuOption) throws Throwable;
-
-	void gwPolicyCenter_MenuNavigation(String Menu) throws Throwable;
-
-	void gwBillingCenter_MenuNavigation(String Menu) throws Throwable;
-
-	void gwClaimsCenter_MenuNavigation(String Menu) throws Throwable;
+	/*
+	 * void gwContactManagement_TabNavigation(String Tab, String Value) throws
+	 * Throwable;
+	 * 
+	 * void gwPolicyCenter_TabNavigation(String Tab, String Value) throws Throwable;
+	 * 
+	 * void gwBillingCenter_TabNavigation(String Tab, String Value) throws
+	 * Throwable;
+	 * 
+	 * void gwClaimsCenter_TabNavigation(String Tab, String Value) throws Throwable;
+	 * 
+	 * void gwContactManagement_MenuNavigation(String strMenuOption) throws
+	 * Throwable;
+	 * 
+	 * void gwPolicyCenter_MenuNavigation(String Menu) throws Throwable;
+	 * 
+	 * void gwBillingCenter_MenuNavigation(String Menu) throws Throwable;
+	 * 
+	 * void gwClaimsCenter_MenuNavigation(String Menu) throws Throwable;
+	 */
 
 }

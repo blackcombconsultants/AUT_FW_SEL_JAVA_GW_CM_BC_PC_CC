@@ -69,6 +69,7 @@
 				"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Prior Policies']");
 		final By CA_PleaseConfirmAccountInformation = By.xpath(
 			//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Driver']
+			//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']
 			//div[contains(@class,'gw-ListView--UI-section')]//div[@class='gw-ListView--UI--title' and @role='heading' and text()='Pending']
 			//div[contains(@class,'gw-VerbatimWidget--inner') and text()='Please confirm account information']");
 			//div[contains(@class,'gw-boldLabel') and text()='Address']

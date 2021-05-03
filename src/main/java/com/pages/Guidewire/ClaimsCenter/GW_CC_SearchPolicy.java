@@ -32,9 +32,9 @@ public class GW_CC_SearchPolicy extends SeleniumWebDriver_Commands implements Se
 		// ------> Verifying the page -
 		 GuidewireAutomate_Validation("policy screen", policy_screen_tittlebar, "equals", "Step 1: Search or Create Policy");
 		//Assert.assertEquals(getHeader_NewClaim(), "Step 1: Search or Create Policy");
-		GuidewireAutomate("PolicyNumber", PolicyNumber, "sendkeys", lhm_Data.get("Policy Number"));
+		GuidewireAutomate("PolicyNumber", PolicyNumber, "sendKeys", lhm_Data.get("Policy Number"));
 		GuidewireAutomate("Search", Search, "click", "");
-		GuidewireAutomate("LossDate", LossDate, "sendkeys", lhm_Data.get("Loss Date"));
+		GuidewireAutomate("LossDate", LossDate, "sendKeys", lhm_Data.get("Loss Date"));
 
 		GuidewireAutomate("next", next, "click", "");
 

@@ -6,22 +6,21 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
-import com.pages.Guidewire.PolicyCenter.GW_PolicyCenter_Resuables_PO;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
-public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements PersonalAuto_VehiclesPO {
+public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements PersonalAuto_Vehicles_PO {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
 	public PersonalAuto_Vehicles(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
 
-	@Override
-	public void createVehicles() throws Throwable {
+	public static void createVehicles() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
-		PersonalAuto_NewSubmission_Reusable nsr = new PersonalAuto_NewSubmission_Reusable(driver, oExtentTest);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		PersonalAuto_Reusable nsr = new PersonalAuto_Reusable(driver, oExtentTest);
 
-		GuidewireAutomate_Validation("Screen Header", GW_PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles");
 
 		GuidewireAutomate("Create Vehicle", CreateVehicle_Button, "click", "NA");
 
@@ -45,35 +44,38 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 			StrVIN = nsr.getRandomVIN("randomvin");
 		}
 
-		GuidewireAutomate("Vin", VE_VD_BVI_VIN, "sendkeys", StrVIN);
+		GuidewireAutomate("Vin", VE_VD_BVI_VIN, "sendKeys", StrVIN);
 		GuidewireAutomate("Body Type", VE_VD_BVI_BodyType, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_BodyType"));
 		GuidewireAutomate("License_State", VE_VD_BVI_LicenseState, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_LicenseState"));
 
-		GuidewireAutomate("Cost New", VE_VD_BVI_CostNew, "sendkeys", lhm_TestCase_Table_Data.get("VE_VD_BVI_CostNew"));
-		GuidewireAutomate("Stated Value", VE_VD_BVI_StatedValue, "sendkeys",
+		GuidewireAutomate("Cost New", VE_VD_BVI_CostNew, "sendKeys", lhm_TestCase_Table_Data.get("VE_VD_BVI_CostNew"));
+		GuidewireAutomate("Stated Value", VE_VD_BVI_StatedValue, "sendKeys",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_StatedValue"));
 
-		GuidewireAutomate("Annual Mileage", VE_VD_BVI_AnnualMileage, "sendkeys",
+		GuidewireAutomate("Annual Mileage", VE_VD_BVI_AnnualMileage, "sendKeys",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_AnnualMileage"));
 
-		GuidewireAutomate("Primary Use", VE_VD_BVI_PrimaryUse, "sendkeys",
+		GuidewireAutomate("Primary Use", VE_VD_BVI_PrimaryUse, "sendKeys",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_PrimaryUse"));
 
-		GuidewireAutomate_Validation("Vehicle Rate Modifiers", VE_VD_VehicleRateModifiers, "equals",
+		GuidewireAutomate_Validation("Vehicle Rate Modifiers", VE_VD_BVI_VehicleRateModifiers, "equals",
 				"Vehicle Rate Modifiers");
-		GuidewireAutomate("Anti Theft Discount", VE_VD_BVI_AntiTheftDiscount, "sendkeys",
-				lhm_TestCase_Table_Data.get("VE_VD_BVI_AntiTheftDiscount"));
+		GuidewireAutomate("Anti-Lock Brakes Discount", VE_VD_BVI_VRM_AntiLockBrakesDiscount_No, "click",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_AntiLockBrakesDiscount"));
+		GuidewireAutomate("Passive Restraint System", VE_VD_BVI_VRM_PassiveRestraintSystem, "sendKeys",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_PassiveRestraintSystem"));
+		GuidewireAutomate("Anti Theft Discount", VE_VD_BVI_VRM_AntiTheftDiscount, "sendKeys",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_AntiTheftDiscount"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void assignDriver() throws Throwable {
+	public static void assignDriver() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		GuidewireAutomate_Validation("Assign Drivers to Vehicles", VE_AssignDriverstoVehicles, "equals",
 				"Assign Drivers to Vehicles");
@@ -103,9 +105,8 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 	}
 
-	@Override
-	public void additionalInterest_Add_NewCompany() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+	public static void additionalInterest_Add_NewCompany() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		GuidewireAutomate("Additional Interest", VE_Tab_AdditionalInterest, "click", "NA");
 		GuidewireAutomate_Validation("Personal Vehicle Additional Interests", VE_AI_PersonalVehicleAdditionalInterests,
@@ -117,9 +118,8 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalInterest_Add_NewPerson() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+	public static void additionalInterest_Add_NewPerson() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		GuidewireAutomate("Additional Interest", VE_Tab_AdditionalInterest, "click", "NA");
 		GuidewireAutomate_Validation("Personal Vehicle Additional Interests", VE_AI_PersonalVehicleAdditionalInterests,
@@ -131,10 +131,9 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalInterest_Add_FromAddressBook() throws Throwable {
+	public static void additionalInterest_Add_FromAddressBook() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		GuidewireAutomate("Additional Interest", VE_Tab_AdditionalInterest, "click", "NA");
 		GuidewireAutomate_Validation("Personal Vehicle Additional Interests", VE_AI_PersonalVehicleAdditionalInterests,
@@ -146,9 +145,8 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void additionalInterest_Add_ExistingAdditionalInterest() throws Throwable {
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+	public static void additionalInterest_Add_ExistingAdditionalInterest() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		GuidewireAutomate("Additional Interest", VE_Tab_AdditionalInterest, "click", "NA");
 		GuidewireAutomate_Validation("Personal Vehicle Additional Interests", VE_AI_PersonalVehicleAdditionalInterests,
@@ -178,52 +176,48 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 				lhm_TestCase_Table_Data.get("VE_AI_PVAI_IntrestType"));
 		GuidewireAutomate("Additional Interest Certificate Required", VE_AI_PVAI_CertificateReq, "click",
 				lhm_TestCase_Table_Data.get("CertificateReq"));
-		GuidewireAutomate("Additional Interest ContractNo", VE_AI_PVAI_ContractNo, "sendkeys",
+		GuidewireAutomate("Additional Interest ContractNo", VE_AI_PVAI_ContractNo, "sendKeys",
 				lhm_TestCase_Table_Data.get("VE_AI_PVAI_ContractNo"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void vehicle_Remove() throws Throwable {
+	public static void vehicle_Remove() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
-
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-	}
-
-	@Override
-	public void garage_NewLocation() throws Throwable {
-
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	@Override
-	public void garage_EditLocation() throws Throwable {
+	public static void garage_NewLocation() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
-
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-	}
-
-	@Override
-	public void vehicle_Edit() throws Throwable {
-
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	public void searchtable(By Locator, String CellValue) throws Throwable {
+	public static void garage_EditLocation() throws Throwable {
 
-		lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	public static void vehicle_Edit() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	public static void searchtable(By Locator, String CellValue) throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

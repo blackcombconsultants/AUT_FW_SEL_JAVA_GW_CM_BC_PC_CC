@@ -2,7 +2,7 @@ package com.pages.Guidewire.PersonalAuto;
 
 import org.openqa.selenium.By;
 
-public interface PersonalAuto_VehiclesPO {
+public interface PersonalAuto_Vehicles_PO {
 
 	final By VehicleDetails = By
 			.xpath("//div[contains(@class,'gw-panelRefWidget--titleArea')]//div[@class='gw-TitleBar--title']");
@@ -51,10 +51,14 @@ public interface PersonalAuto_VehiclesPO {
 	final By VE_VD_BVI_AntiTheftDiscount = By
 			.xpath("//select[contains(@name,'PAVehicleModifiersInputSet-2-TypeKeyModifier')]");
 
-	final By VE_VD_VehicleRateModifiers = By.xpath(
+	final By VE_VD_BVI_VehicleRateModifiers = By.xpath(
 			"//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Vehicle Rate Modifiers']");
 
-	final By VE_VD_VRM_AntiTheftDiscount = By
+	final By VE_VD_BVI_VRM_AntiLockBrakesDiscount_No = By
+			.xpath("//input[contains(@id,'PAVehicleModifiersInputSet-0-BooleanModifier_1')]");
+	final By VE_VD_BVI_VRM_PassiveRestraintSystem = By
+			.xpath("//select[contains(@name,'PAVehicleModifiersInputSet-1-TypeKeyModifier')]");
+	final By VE_VD_BVI_VRM_AntiTheftDiscount = By
 			.xpath("//select[contains(@name,'PAVehicleModifiersInputSet-2-TypeKeyModifier')]");
 
 	final By VE_AssignDriverstoVehicles = By.xpath(
@@ -116,24 +120,27 @@ public interface PersonalAuto_VehiclesPO {
 	final By VE_AI_PVAI_ContractNo = By.xpath(
 			"//tr[contains(@id,'AdditionalInterestLV') and contains(@class,'gw-standard-row')]/td[contains(@id,'ContractNumber_Cell') and contains(@class,'gw-CellWidget')]//div[contains(@id,'ContractNumber') and contains(@class,'gw-editable')]//input[contains(@name,'ContractNumber')]");
 
-	void createVehicles() throws Throwable;
-
-	void vehicle_Edit() throws Throwable;
-
-	void vehicle_Remove() throws Throwable;
-
-	void assignDriver() throws Throwable;
-
-	void additionalInterest_Add_NewCompany() throws Throwable;
-
-	void additionalInterest_Add_NewPerson() throws Throwable;
-
-	void additionalInterest_Add_FromAddressBook() throws Throwable;
-
-	void additionalInterest_Add_ExistingAdditionalInterest() throws Throwable;
-
-	void garage_NewLocation() throws Throwable;
-
-	void garage_EditLocation() throws Throwable;
-
+	/*
+	 * Modules
+	 * 
+	 * void createVehicles() throws Throwable;
+	 * 
+	 * void vehicle_Edit() throws Throwable;
+	 * 
+	 * void vehicle_Remove() throws Throwable;
+	 * 
+	 * void assignDriver() throws Throwable;
+	 * 
+	 * void additionalInterest_Add_NewCompany() throws Throwable;
+	 * 
+	 * void additionalInterest_Add_NewPerson() throws Throwable;
+	 * 
+	 * void additionalInterest_Add_FromAddressBook() throws Throwable;
+	 * 
+	 * void additionalInterest_Add_ExistingAdditionalInterest() throws Throwable;
+	 * 
+	 * void garage_NewLocation() throws Throwable;
+	 * 
+	 * void garage_EditLocation() throws Throwable;
+	 */
 }

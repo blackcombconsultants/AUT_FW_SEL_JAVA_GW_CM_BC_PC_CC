@@ -35,7 +35,7 @@ import java.sql.Statement;
 
 public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 
-	String strValue;
+	static String strValue;
 	Fillo oFillo = new Fillo();
 
 	public LinkedHashMap<String, String> getDataFromSheet_Fillo(String strSheetName, String strPrimaryKeyValue)
@@ -251,7 +251,7 @@ public class Selenium_Utils_File extends Selenium_Reporting_Utils {
 
 	}
 
-	public String getRandomAlphabetic(int count) {
+	public static String getRandomAlphabetic(int count) {
 		return RandomStringUtils.randomAlphabetic(count);
 	}
 
