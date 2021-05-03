@@ -12,35 +12,16 @@ import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Payments;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Qualification;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
 public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
-
-	/*
-	 * Creating object reference for the New submission_Issue
-	 */
-	GW_CM_PC_BC_CC_Login lg = new GW_CM_PC_BC_CC_Login(driver, oExtentTest);
-	GW_CM_PC_BC_CC_TabNavigation tab = new GW_CM_PC_BC_CC_TabNavigation(driver, oExtentTest);
-	PolicyCenter_Resuables pcr = new PolicyCenter_Resuables(driver, oExtentTest);
-
-	/*
-	 * Personal Auto
-	 */
-	PersonalAuto_Reusable par = new PersonalAuto_Reusable(driver, oExtentTest);
-	PersonalAuto_PolicyInfo pi = new PersonalAuto_PolicyInfo(driver, oExtentTest);
-	PersonalAuto_Drivers pad = new PersonalAuto_Drivers(driver, oExtentTest);
-	PersonalAuto_Vehicles pav = new PersonalAuto_Vehicles(driver, oExtentTest);
-	PersonalAuto_Coverages pac = new PersonalAuto_Coverages(driver, oExtentTest);
-	PersonalAuto_RiskAnalysis para = new PersonalAuto_RiskAnalysis(driver, oExtentTest);
-	PersonalAuto_PolicyReview papr = new PersonalAuto_PolicyReview(driver, oExtentTest);
-	PersonalAuto_Quote paq = new PersonalAuto_Quote(driver, oExtentTest);
-	PersonalAuto_Forms forms = new PersonalAuto_Forms(driver, oExtentTest);
-	PersonalAuto_Payments payments = new PersonalAuto_Payments(driver, oExtentTest);
-	PolicyCenter_SubmissionBound submissionbound = new PolicyCenter_SubmissionBound(driver, oExtentTest);
 
 	/*
 	 * Testcase = Full Quote Issue Policy Author = Arun Date Created = 27/04/21 LOB
@@ -49,41 +30,109 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 	 */
 
 	@Test
-	public void AUT_PersonalAuto_PolicyCenter_Issuance_5_IssuePolicy() throws Throwable {
+	public void AUT_PA_PC_Issuance_5_IssuePolicy() throws Throwable {
 
-		/*
-		 * call the modules/methods
-		 */
+		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
+		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
+		PolicyCenter_AccountSummary.detail_Verify(); 
+		
+		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		PolicyCenter_Resuables.newSubmissions_Verify();
+		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select LOB
 
-		// Logging into Policy Center
-		lg.login_PolicyCenter();
-		// Click Menu New Submission
-		// Insert Policy Search method*
-		// Insert Policy Summary screen confirmation method*
-		// Select Actions->Issue Policy*
-		pcr.clickButton("Next");
-		// PA LOB line level details
-		pcr.clickButton("Quote");
-		pcr.clickButton("Next");
-		forms.pa_forms();
-		pcr.clickButton("Next");
-		payments.payments();
-		pcr.clickButton("Issue Policy");
-		// Confirming submission transaction
-		submissionbound.ViewYourPolicy();
-		// Verify Policy number
+		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
+		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+		strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
 
-		strJob = pcr.infoBar("Job");
-		strWorkflow = pcr.infoBar("Workflow");
-		strLOB = pcr.infoBar("LOB");
-		strEffectiveDate = pcr.infoBar("EffectiveDate");
-		strAccountName = pcr.infoBar("AccountName");
-		strAccountNumber = pcr.infoBar("AccountNumber");
-		strPolicyNumber = pcr.infoBar("PolicyNumber");
-		strAmount = pcr.infoBar("AccountName");
+		PolicyCenter_Resuables.offering();
 
-		// Logout PC
-		lg.logout_PolicyCenter();
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Qualification.qualification();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_PolicyInfo.primaryNamedInsured();
+		PersonalAuto_PolicyInfo.pi_OfficialID();
+		PersonalAuto_PolicyInfo.policyDetails();
+		PersonalAuto_PolicyInfo.affinityGroup();
+		PersonalAuto_PolicyInfo.producerOfRecord();
+		PersonalAuto_PolicyInfo.underWritingCompany();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Drivers.driver_Add_ExistingDriver();
+		PersonalAuto_Drivers.driver_ContatDetails("VERIFY");
+		PersonalAuto_Drivers.driver_Roles("EDIT"); //
+		PersonalAuto_Drivers.driver_RetrieveMVR();
+		PersonalAuto_Drivers.driver_Addresses("VERIFY");
+		PersonalAuto_Drivers.driver_MotorVehicleRecord("VERIFY");
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Vehicles.createVehicles();
+		PersonalAuto_Vehicles.assignDriver();
+		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
+		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.exclusionsAndConditions();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_RiskAnalysis.addUWIssue();
+		PersonalAuto_RiskAnalysis.approveUWIssues();
+		PersonalAuto_RiskAnalysis.riskApprovalDetails(); //
+		PersonalAuto_RiskAnalysis.addUWContingency(); //
+		PersonalAuto_RiskAnalysis.priorPolicies_Add(); //
+		//PersonalAuto_RiskAnalysis.priorLosses_Add();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_PolicyReview.policyDetails();
+		PersonalAuto_PolicyReview.policyLevelCoverages();
+		PersonalAuto_PolicyReview.vehicleLevelCoverages(); //
+		PersonalAuto_PolicyReview.vehicleLevelCoverages_VehicleCoverages(); //
+		PersonalAuto_PolicyReview.exclusionsAndConditions();
+
+		PolicyCenter_Resuables.clickButton("Save Draft");
+		PolicyCenter_Resuables.clickButton("Quote");
+		PersonalAuto_Quote.quoteDetails();
+		PersonalAuto_Quote.policyPremium_Garage1();
+		PersonalAuto_Quote.policyPremium_Vehicle1();
+		PersonalAuto_Quote.policyPremium_PremiumSubtotalandTaxes();
+		strJob = PolicyCenter_Resuables.infoBar("Job");
+		strLOB = PolicyCenter_Resuables.infoBar("LOB");
+		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
+		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+		String strEditLock = PolicyCenter_Resuables.infoBar("EditLock");
+
+		PolicyCenter_Resuables.clickButton("Release Lock");
+		PersonalAuto_RiskAnalysis.releaseLock();
+
+		PersonalAuto_Quote.quoteDetails();
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Forms.pa_forms();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Payments.premiumSummary();
+		PersonalAuto_Payments.payments();
+		PersonalAuto_Payments.invoicing();
+		PersonalAuto_Payments.billing();
+		PersonalAuto_Payments.paymentSchedule();
+		PersonalAuto_Payments.invoicingOverrides();
+		PersonalAuto_Payments.payUsing();
+		PersonalAuto_Payments.upFrontPayment();
+
+		PolicyCenter_Resuables.clickButton("Bind Options");
+		PolicyCenter_Resuables.clickButton("Issue Policy");
+
+		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+
+		PolicyCenter_SubmissionBound.ViewYourPolicy();
+		PolicyCenter_PolicySummary.detail_Verify();
+		PolicyCenter_PolicySummary.account_Verify();
+
+		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 
 	}
 
@@ -94,74 +143,109 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 	 */
 
 	@Test
-	public void AUT_PersonalAuto_PolicyCenter_Issuance_4_Editpolicytransaction() throws Throwable {
+	public void AUT_PA_PC_Issuance_4_Editpolicytransaction() throws Throwable {
 
-		/*
-		 * call the modules/methods
-		 */
+		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
+		PolicyCenter_Resuables.pcTabNavigation_Policy_Search();
+		PolicyCenter_PolicySummary.detail_Verify(); 
+		
+		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Change Policy");
+		PolicyCenter_Resuables.newSubmissions_Verify();
+		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select LOB
 
-		// Logging into Policy Center
-		lg.login_PolicyCenter();
-		// Click Menu New Submission
-		// Insert Policy Search method*
-		// Insert Policy Summary screen confirmation method*
-		// Select Actions->Issue Policy*
-		// Edit Offering*
-		pcr.clickButton("Next");
-		// Edit all fields in Policy info screen*
-		pi.policyDetails();
-		pcr.clickButton("Next");
-		// PA LOB line level details
-		pad.driver_Edit_ExistingDriver();
-		// If any UW issue should get added automatically,Eg: Make Driver age less than
-		// 25
-		pad.driver_Add_NewPerson();
-		pcr.clickButton("Next");
-		pav.vehicle_Edit();
-		// pav.ve_AssignDriver();
-		pcr.clickButton("Next");
-		para.approveUWIssues();
-		pcr.clickButton("Next");
-		papr.policyDetails();
-		pcr.clickButton("Next");
-		// Policy Review screen*
-		pcr.clickButton("Quote");
-		// paq.pa_QuoteDetails();
-		pcr.clickButton("Next");
-		forms.pa_forms();
-		pcr.clickButton("Next");
-		payments.payments();
-		pcr.clickButton("Bind Options");
-		pcr.clickButton("Issue Policy");
-		// If the submission blocks due to underwriter issues
-		// Add method for 'Issues that block Issuance' screen validation*
-		// Click button 'Details'*
-		para.approveUWIssues();
-		pcr.clickButton("Quote");
-		pcr.clickButton("Next");
-		// Policy Review screen
-		pcr.clickButton("Next");
-		forms.pa_forms();
-		pcr.clickButton("Next");
-		payments.payments();
-		pcr.clickButton("Bind Options");
-		pcr.clickButton("Issue Policy");
-		// Confirming submission transaction
-		submissionbound.submissionBound();
-		// Verify Policy number
-		submissionbound.ViewYourPolicy();
+		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
+		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+		strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
 
-		strJob = pcr.infoBar("Job");
-		strWorkflow = pcr.infoBar("Workflow");
-		strLOB = pcr.infoBar("LOB");
-		strEffectiveDate = pcr.infoBar("EffectiveDate");
-		strAccountName = pcr.infoBar("AccountName");
-		strAccountNumber = pcr.infoBar("AccountNumber");
-		strPolicyNumber = pcr.infoBar("PolicyNumber");
-		strAmount = pcr.infoBar("AccountName");
+		PolicyCenter_Resuables.offering();
 
-		// Logout PC
-		lg.logout_PolicyCenter();
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Qualification.qualification();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_PolicyInfo.primaryNamedInsured();
+		PersonalAuto_PolicyInfo.pi_OfficialID();
+		PersonalAuto_PolicyInfo.policyDetails();
+		PersonalAuto_PolicyInfo.affinityGroup();
+		PersonalAuto_PolicyInfo.producerOfRecord();
+		PersonalAuto_PolicyInfo.underWritingCompany();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Drivers.driver_Edit_ExistingDriver();
+		PersonalAuto_Drivers.driver_ContatDetails("VERIFY");
+		PersonalAuto_Drivers.driver_Roles("EDIT"); //
+		PersonalAuto_Drivers.driver_RetrieveMVR();
+		PersonalAuto_Drivers.driver_Addresses("VERIFY");
+		PersonalAuto_Drivers.driver_MotorVehicleRecord("VERIFY");
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Vehicles.createVehicles();
+		PersonalAuto_Vehicles.assignDriver();
+		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
+		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.exclusionsAndConditions();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_RiskAnalysis.addUWIssue();
+		PersonalAuto_RiskAnalysis.approveUWIssues();
+		PersonalAuto_RiskAnalysis.riskApprovalDetails(); //
+		PersonalAuto_RiskAnalysis.addUWContingency(); //
+		PersonalAuto_RiskAnalysis.priorPolicies_Add(); //
+		//PersonalAuto_RiskAnalysis.priorLosses_Add();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_PolicyReview.policyDetails();
+		PersonalAuto_PolicyReview.policyLevelCoverages();
+		PersonalAuto_PolicyReview.vehicleLevelCoverages(); //
+		PersonalAuto_PolicyReview.vehicleLevelCoverages_VehicleCoverages(); //
+		PersonalAuto_PolicyReview.exclusionsAndConditions();
+
+		PolicyCenter_Resuables.clickButton("Save Draft");
+		PolicyCenter_Resuables.clickButton("Quote");
+		PersonalAuto_Quote.quoteDetails();
+		PersonalAuto_Quote.policyPremium_Garage1();
+		PersonalAuto_Quote.policyPremium_Vehicle1();
+		PersonalAuto_Quote.policyPremium_PremiumSubtotalandTaxes();
+		strJob = PolicyCenter_Resuables.infoBar("Job");
+		strLOB = PolicyCenter_Resuables.infoBar("LOB");
+		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
+		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+		String strEditLock = PolicyCenter_Resuables.infoBar("EditLock");
+
+		PolicyCenter_Resuables.clickButton("Release Lock");
+		PersonalAuto_RiskAnalysis.releaseLock();
+
+		PersonalAuto_Quote.quoteDetails();
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Forms.pa_forms();
+
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_Payments.premiumSummary();
+		PersonalAuto_Payments.payments();
+		PersonalAuto_Payments.invoicing();
+		PersonalAuto_Payments.billing();
+		PersonalAuto_Payments.paymentSchedule();
+		PersonalAuto_Payments.invoicingOverrides();
+		PersonalAuto_Payments.payUsing();
+		PersonalAuto_Payments.upFrontPayment();
+
+		PolicyCenter_Resuables.clickButton("Bind Options");
+		PolicyCenter_Resuables.clickButton("Issue Policy");
+
+		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+
+		PolicyCenter_SubmissionBound.ViewYourPolicy();
+		PolicyCenter_PolicySummary.detail_Verify();
+		PolicyCenter_PolicySummary.account_Verify();
+
+		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 
 	}
 
@@ -171,70 +255,8 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 	 * 
 	 */
 	@Test
-	public void AUT_PersonalAuto_PolicyCenter_Issuance_1_WithdrawTransaction() throws Throwable {
+	public void AUT_PA_PC_Issuance_1_WithdrawTransaction() throws Throwable {
 
-		/*
-		 * call the modules/methods
-		 */
-
-		// Logging into Policy Center
-		lg.login_PolicyCenter();
-		// Click Menu New Submission
-		// Insert Policy Search method*
-		// Insert Policy Summary screen confirmation method*
-		// Select Actions->Issue Policy*
-		// Edit Offering*
-		pcr.clickButton("Next");
-		// Edit all fields in Policy info screen*
-		pi.policyDetails();
-		pcr.clickButton("Next");
-		// PA LOB line level details
-		pad.driver_Edit_ExistingDriver();
-		// If any UW issue should get added automatically,Eg: Make Driver age less than
-		// 25
-		pad.driver_Add_NewPerson();
-		pcr.clickButton("Next");
-		pav.vehicle_Edit();
-		// pav.ve_AssignDriver();
-		pcr.clickButton("Next");
-		para.approveUWIssues();
-		pcr.clickButton("Next");
-		papr.policyDetails();
-		pcr.clickButton("Next");
-		// Policy Review screen*
-		pcr.clickButton("Quote");
-		// paq.pa_QuoteDetails();
-		pcr.clickButton("Next");
-		forms.pa_forms();
-		pcr.clickButton("Next");
-		payments.payments();
-		pcr.clickButton("Bind Options");
-		pcr.clickButton("Issue Policy");
-		// If the submission blocks due to underwriter issues
-		// Add method for 'Issues that block Issuance' screen validation*
-		// Click button 'Details'*
-		para.approveUWIssues();
-		pcr.clickButton("Quote");
-		pcr.clickButton("Next");
-		// Policy Review screen
-		pcr.clickButton("Next");
-		forms.pa_forms();
-		pcr.clickButton("Next");
-		payments.payments();
-		// Withdraw transaction
-		pcr.clickButton("Withdraw Transaction");
-		// Insert Close Submission Confirmation screen method
-
-		strJob = pcr.infoBar("Job");
-		strWorkflow = pcr.infoBar("Workflow");
-		strLOB = pcr.infoBar("LOB");
-		strEffectiveDate = pcr.infoBar("EffectiveDate");
-		strAccountName = pcr.infoBar("AccountName");
-		strAccountNumber = pcr.infoBar("AccountNumber");
-		strPolicyNumber = pcr.infoBar("PolicyNumber");
-		strAmount = pcr.infoBar("AccountName");
-
-		// Logout PC
-		lg.logout_PolicyCenter();
+	
 	}
 }

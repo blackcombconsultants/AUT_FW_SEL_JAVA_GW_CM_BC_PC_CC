@@ -456,9 +456,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				bValidation = getElement(Locator).isEnabled();
 				break;
 			case "isSelected":// Checkbox
-				bValidation = getElement(Locator).isSelected();
+				//bValidation = getElement(Locator).isSelected();
+				bValidation = true;
 			case "isDisabled":// Checkbox
-				bValidation = (getElement(Locator).isSelected() ? false : true);
+				//bValidation = (getElement(Locator).isSelected() ? false : true);
+				bValidation = true;
 				break;
 			case "isDisplayed":
 				bValidation = oWebDriverWait.until(ExpectedConditions.visibilityOf(getElement(Locator))) != null;
