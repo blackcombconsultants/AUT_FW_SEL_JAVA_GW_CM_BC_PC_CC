@@ -231,7 +231,26 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 			break;
 		case "EDIT":
-
+			GuidewireAutomate("Address1", DR_A_AD_Address1, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_AD_Address1"));
+			GuidewireAutomate("Address Type", DR_A_AD_AddressType, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("DR_A_AD_AddressType"));
+			
+			break;
+		case "ADD":
+			
+			GuidewireAutomate("Addresses Add", DR_A_AD_ADD, "clickAndwait", "NA");
+		
+			GuidewireAutomate("Address1", DR_A_AD_Address1, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_AD_Address1"));
+			GuidewireAutomate("Address State", DR_A_AD_State, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("DR_A_AD_State"));
+			GuidewireAutomate("Address Type", DR_A_AD_AddressType, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("DR_A_AD_AddressType"));
+			GuidewireAutomate("DR_A_AD_Primary", DR_A_AD_Primary, "clickAndwait", "NA");
+			
+			
+			
 			break;
 		default:
 			break;
