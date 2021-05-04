@@ -96,7 +96,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
 		GuidewireAutomate("Contat Details Tab", DR_Tab_ContatDetails, "click", "NA");
-
+		String LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
 		switch (TestingType) {
 		case "VERIFY":
 
@@ -106,6 +106,8 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 					lhm_TestCase_Table_Data.get("DR_CD_P_FirstName"));
 			GuidewireAutomate_Validation("Last name", DR_CD_P_LastName, "valueEquals",
 					lhm_TestCase_Table_Data.get("DR_CD_P_LastName"));
+			
+			GuidewireAutomate("Date Of Birth", DR_CD_DateofBirth, "clearANDsendKeys",lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
 
 			GuidewireAutomate_Validation("Address", DR_CD_Address, "equals", "Address");
 			GuidewireAutomate_Validation("Address1", DR_CD_A_Address1, "valueEquals",
@@ -113,8 +115,16 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 			GuidewireAutomate_Validation("SSN", DR_CD_OI_SSN, "valuecontains",
 					lhm_TestCase_Table_Data.get("DR_CD_OI_SSN"));
+		
+			GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearANDsendKeys",lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber"));
 
+			GuidewireAutomate("LicenseState", DR_CD_LicenseState, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
+
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
 			break;
+			
 		case "EDIT":
 
 			GuidewireAutomate_Validation("Person", DR_CD_Person, "equals", "Person");
@@ -122,6 +132,8 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 					lhm_TestCase_Table_Data.get("DR_CD_P_FirstName"));
 			GuidewireAutomate("Last name", DR_CD_P_LastName, "clearAndsendKeys",
 					lhm_TestCase_Table_Data.get("DR_CD_P_LastName"));
+			GuidewireAutomate("DateofBirth", DR_CD_DateofBirth, "clearAndsendKeys",
+					lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
 
 			GuidewireAutomate_Validation("Address", DR_CD_Address, "equals", "Address");
 			GuidewireAutomate("Address1", DR_CD_A_Address1, "clearAndsendKeys",
@@ -129,34 +141,33 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 			GuidewireAutomate_Validation("Official IDs", DR_CD_OfficialIDs, "equals", "Official IDs");
 			GuidewireAutomate("SSN", DR_CD_OI_SSN, "clearAndsendKeys", lhm_TestCase_Table_Data.get("DR_CD_OI_SSN"));
+			
+			if (LicenseNumber.equalsIgnoreCase("Random")) {
+				LicenseNumber = getRandomAlphabetic(9);
+			} else if (LicenseNumber.equalsIgnoreCase("Today")) {
+				LicenseNumber = strCurrentDate_ddMMMMyyyy;
+			} else if (LicenseNumber.equalsIgnoreCase("CurrentTime")) {
+				LicenseNumber = strCurrentDate_ddMMMMyyyyHHmmss;
+			} else if (LicenseNumber.equalsIgnoreCase("NowSystem")) {
+				LicenseNumber = String.valueOf(System.currentTimeMillis());
+			} else {
+				LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
+			}
 
+			
+			GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearAndsendKeys", LicenseNumber);
+			GuidewireAutomate("LicenseState", DR_CD_LicenseState, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
+
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
 			break;
 		default:
 			break;
 
 		}
 
-		String LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
-		if (LicenseNumber.equalsIgnoreCase("Random")) {
-			LicenseNumber = getRandomAlphabetic(9);
-		} else if (LicenseNumber.equalsIgnoreCase("Today")) {
-			LicenseNumber = strCurrentDate_ddMMMMyyyy;
-		} else if (LicenseNumber.equalsIgnoreCase("CurrentTime")) {
-			LicenseNumber = strCurrentDate_ddMMMMyyyyHHmmss;
-		} else if (LicenseNumber.equalsIgnoreCase("NowSystem")) {
-			LicenseNumber = String.valueOf(System.currentTimeMillis());
-		} else {
-			LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
-		}
-
-		GuidewireAutomate("DateofBirth", DR_CD_DateofBirth, "clearAndsendKeys",
-				lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
-		GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearAndsendKeys", LicenseNumber);
-		GuidewireAutomate("LicenseState", DR_CD_LicenseState, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
-
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
+		
 	}
 
 	public static void driver_Roles(String TestingType) throws Throwable {

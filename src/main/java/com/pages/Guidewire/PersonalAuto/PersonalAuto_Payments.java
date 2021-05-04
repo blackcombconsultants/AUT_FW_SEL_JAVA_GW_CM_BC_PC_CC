@@ -20,7 +20,7 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 	public static void premiumSummary() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("payment", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Payment");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Payment_Header, "equals", "Payment");
 
 		GuidewireAutomate_Validation("Premium Summary", PA_PremiumSummary, "equals", "Premium Summary");
 

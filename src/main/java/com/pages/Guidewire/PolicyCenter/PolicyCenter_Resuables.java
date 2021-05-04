@@ -216,7 +216,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 	public static void offering() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("offering", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, " equals", "Offerings");
+		GuidewireAutomate_Validation("Screen Header",PolicyCenter_Resuables_PO.Offerings_Header, "equals", "Offerings");
 
 		GuidewireAutomate("Offering Selection", Of_OfferingSelection, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("Of_OfferingSelection"));

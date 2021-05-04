@@ -19,9 +19,9 @@ public class PolicyCenter_AccountSummary extends SeleniumWebDriver_Commands impl
 		GuidewireAutomate_Validation("Details", AS_Details, "equals", "Details");
 
 		GuidewireAutomate_Validation("AccountNo", AS_D_AccountNo, "equals", strAccountNumber);
-		GuidewireAutomate_Validation("AccountHolder", AS_D_AccountHolder, "equals", strAccountName);
-		GuidewireAutomate_Validation("HomeAddress", AS_D_HomeAddress, "equals", strAccountName);
-		GuidewireAutomate_Validation("Description", AS_D_Description, "contains", "temp");
+		//GuidewireAutomate_Validation("AccountHolder", AS_D_AccountHolder, "equals", strAccountName);
+		//GuidewireAutomate_Validation("HomeAddress", AS_D_HomeAddress, "equals", strAccountName);
+		//GuidewireAutomate_Validation("Description", AS_D_Description, "contains", "temp");
 		GuidewireAutomate_Validation("Status", AS_D_Status, "equals", "Active");
 
 	}

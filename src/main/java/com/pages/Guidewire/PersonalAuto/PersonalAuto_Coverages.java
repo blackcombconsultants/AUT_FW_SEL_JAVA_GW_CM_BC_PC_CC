@@ -91,7 +91,10 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 					lhm_TestCase_Table_Data.get("PAC_CT_CAPV_C_ComprehensiveDeductible"));
 
 		case "VERIFY":
-
+			GuidewireAutomate_Validation("Comprehensive", PAC_CT_CAPV_Comprehensive, "isSelected",
+					lhm_TestCase_Table_Data.get("PAC_CT_CAPV_Comprehensive"));
+			GuidewireAutomate_Validation("Comprehensive Deductible", PAC_CT_CAPV_C_ComprehensiveDeductible, "FirstSelectedOptionEquals",
+					lhm_TestCase_Table_Data.get("PAC_CT_CAPV_C_ComprehensiveDeductible"));
 			break;
 		default:
 			break;

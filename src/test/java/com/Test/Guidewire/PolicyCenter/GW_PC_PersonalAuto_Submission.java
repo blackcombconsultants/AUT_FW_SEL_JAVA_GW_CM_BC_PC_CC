@@ -23,7 +23,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
 
 public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 
-	@Test
+	@Test(enabled=false)
 	public void AUT_PA_PC_Newsubmission_1_BasicProgram() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -117,9 +117,9 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 
 		PolicyCenter_Resuables.clickButton("Bind Options");
 		PolicyCenter_Resuables.clickButton("Bind Only");
-
+		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		//strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
 
 		PolicyCenter_SubmissionBound.ViewYourPolicy();
@@ -129,8 +129,9 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		// Logout PC
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}
-
-	@Test
+ 
+	
+	@Test(enabled=false)
 	public void AUT_PA_PC_Newsubmission_2_StandardProgram() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -173,7 +174,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
-		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("VERIFY");
 		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
 		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
 		PersonalAuto_Coverages.exclusionsAndConditions();
@@ -226,7 +227,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		PolicyCenter_Resuables.clickButton("Bind Only");
 
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		//strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
 
 		PolicyCenter_SubmissionBound.ViewYourPolicy();
@@ -280,7 +281,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
-		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("VERIFY");
 		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
 		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
 		PersonalAuto_Coverages.exclusionsAndConditions();

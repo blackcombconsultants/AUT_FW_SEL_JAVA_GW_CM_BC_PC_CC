@@ -34,6 +34,15 @@ public interface PolicyCenter_Resuables_PO {
 
 	final By Screen_Header = By
 			.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
+	final By Offerings_Header = By
+			.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Offerings']");
+	final By Qualification_Header = By
+			.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Qualification']");
+	final By Payment_Header = By
+			.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Payment']");
+	
+	final By policySummary_Header = By
+			.xpath("//div[@id='PolicyFile_Summary-ttlBar']//div[@class='gw-TitleBar--title' and text()='Policy Summary: 4203743943']");
 	final By Error_Header = By.xpath(
 			"//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-subGroupLabel gw-text']");
 	final By Error_Message = By.xpath(
