@@ -16,13 +16,13 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 
 		GuidewireAutomate_Validation("Details", PS_Details, "equals", "Details");
 
-		GuidewireAutomate_Validation("Policy Number", PS_D_PolicyNumber, "equals", strPolicyNumber);
+		//GuidewireAutomate_Validation("Policy Number", PS_D_PolicyNumber, "equals", strPolicyNumber);
 		GuidewireAutomate_Validation("Product", PS_D_Product, "equals", strLOB);
-		GuidewireAutomate_Validation("Offering", PS_D_Offering, "equals", strPolicyNumber);
+		//GuidewireAutomate_Validation("Offering", PS_D_Offering, "equals", strPolicyNumber);
 		GuidewireAutomate_Validation("Primary Named Insured", PS_D_PrimaryNamedInsured, "equals", strAccountName);
 		GuidewireAutomate_Validation("Underwriter", PS_D_Underwriter, "equals", strUnderwriter);
-		GuidewireAutomate_Validation("Effective Date", PS_D_EffectiveDate, "equals", strEffectiveDate);
-		GuidewireAutomate_Validation("Expiration Date", PS_D_ExpirationDate, "equals", strUnderwriter);
+		//GuidewireAutomate_Validation("Effective Date", PS_D_EffectiveDate, "equals", strEffectiveDate);
+		//GuidewireAutomate_Validation("Expiration Date", PS_D_ExpirationDate, "equals", strUnderwriter);
 
 	}
 

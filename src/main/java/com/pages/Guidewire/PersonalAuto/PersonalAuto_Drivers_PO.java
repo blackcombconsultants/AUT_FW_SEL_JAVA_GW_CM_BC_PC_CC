@@ -57,7 +57,7 @@ public interface PersonalAuto_Drivers_PO {
 	final By DR_CD_A_Address1 = By.xpath(
 			"//input[contains(@name,'AddressInputSet-globalAddressContainer-GlobalAddressInputSet-AddressLine1')]");
 
-	final By DR_CD_DateofBirth = By.xpath("//input[contains(@name,'DateOfBirth')]");
+	final By DR_CD_DateofBirth = By.xpath("//div[contains(@id,'DateOfBirth_Input')]//div[@class='gw-value']//input[contains(@name,'DateOfBirth')]");
 	final By DR_CD_LicenseNumber = By.xpath("//input[contains(@name,'LicenseInputSet-LicenseNumber')]");
 	final By DR_CD_LicenseState = By.xpath("//select[contains(@name,'LicenseInputSet-LicenseState')]");
 
