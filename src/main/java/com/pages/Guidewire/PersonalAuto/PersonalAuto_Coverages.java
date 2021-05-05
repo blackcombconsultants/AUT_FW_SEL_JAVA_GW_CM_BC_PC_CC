@@ -61,6 +61,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 					"FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PAC_CT_CATAV_MP_MedicalLimit"));
 
 			break;
+			
 		default:
 			break;
 		}
@@ -68,7 +69,35 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
+	public static void Add_coveragesAppliedtoallVehiclesIn() throws Throwable {
 
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen_Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"PA Coverages");
+
+		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "");
+
+		GuidewireAutomate_Validation("Coverages applied to all vehicles", PAC_CT_CoveragesAppliedtoAllVehicles,
+				"contains", "Coverages applied to all vehicles");
+		GuidewireAutomate("AutoLiabilityPackage", PAC_CT_CATAV_LBIPD_AutoLiabilityPackage,
+				"selectByVisibleText",
+				lhm_TestCase_Table_Data.get("PAC_CT_CATAV_LBIPD_AutoLiabilityPackage"));
+
+		GuidewireAutomate("MedicalLimit", PAC_CT_CATAV_MP_MedicalLimit,
+				"selectByVisibleText",
+				lhm_TestCase_Table_Data.get("PAC_CT_CATAV_MP_MedicalLimit"));
+					
+		GuidewireAutomate("UninsuredMotorist Propert DamageLimit", PAC_CT_CATAV_UMBD_UninsuredMotorist_PropertyDamageLimit,
+				"selectByVisibleText",
+				lhm_TestCase_Table_Data.get("PAC_CT_CATAV_Uninsured_Motorist _Property_ Damage Limit"));
+	
+		
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	
 	
 	public static void coveragesAppliedperVehiclesIn(String testingType) throws Throwable {
 
@@ -158,9 +187,12 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "selectByVisibleText",
 						lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
 			}
+			break;
 
 		case "VERIFY":
-
+           break;
+		
+		
 		default:
 			break;
 		}

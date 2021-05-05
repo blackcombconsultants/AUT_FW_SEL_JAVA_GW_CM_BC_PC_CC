@@ -72,6 +72,37 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
+	
+	public static void Vehicles_Edit() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		PersonalAuto_Reusable nsr = new PersonalAuto_Reusable(driver, oExtentTest);
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles");
+
+		GuidewireAutomate("Create Vehicle", CreateVehicle_Button, "click", "NA");
+
+		GuidewireAutomate("VehicleDetails Tab", VE_Tab_VehicleDetails, "click", "NA");
+		GuidewireAutomate("Vehicle Type", VE_VD_BVI_VehicleType, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VehicleType"));
+
+
+		GuidewireAutomate("Body Type", VE_VD_BVI_BodyType, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_BodyType"));
+		GuidewireAutomate("Cost New", VE_VD_BVI_CostNew, "sendKeys", lhm_TestCase_Table_Data.get("VE_VD_BVI_CostNew"));
+		GuidewireAutomate("Anti-Lock Brakes Discount", VE_VD_BVI_VRM_AntiLockBrakesDiscount_No, "clickAndwait",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_AntiLockBrakesDiscount"));
+		GuidewireAutomate("Passive Restraint System", VE_VD_BVI_VRM_PassiveRestraintSystem, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_PassiveRestraintSystem"));
+		GuidewireAutomate("Anti Theft Discount", VE_VD_BVI_VRM_AntiTheftDiscount, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_AntiTheftDiscount"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+		
+	}
+		
+	
 
 	public static void assignDriver() throws Throwable {
 
@@ -207,13 +238,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		lhm_TestCase_Table_Data.clear();
 	}
 
-	public static void vehicle_Edit() throws Throwable {
-
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
-
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-	}
+	
 
 	public static void searchtable(By Locator, String CellValue) throws Throwable {
 
