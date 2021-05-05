@@ -18,10 +18,10 @@ public class PersonalAuto_Qualification extends SeleniumWebDriver_Commands imple
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("qualification",
 				strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, " equals",
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Qualification_Header, "equals",
 				"Qualification");
 
-		GuidewireAutomate_Validation("PA Pre-Qualification", QU_PA_PreQualification, " equals", "PA Pre-Qualification");
+		GuidewireAutomate_Validation("PA Pre-Qualification", QU_PA_PreQualification, "equals", "PA Pre-Qualification");
 
 		GuidewireAutomate("Is the applicant currently insured?", QU_IsApplicantCurrentlyInsured, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("QU_IsApplicantCurrentlyInsured"));
