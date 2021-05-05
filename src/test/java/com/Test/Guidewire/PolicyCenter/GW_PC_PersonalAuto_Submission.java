@@ -344,7 +344,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void AUT_PA_PC_NewSubmission_13_AddressAdd() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -560,7 +560,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}
 
-	@Test(enabled = false)
+	@Test(enabled=false)
 	public void AUT_PA_PC_NewSubmission_22_VehicleInfoMod() throws Throwable
 
 	{
@@ -599,7 +599,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		PersonalAuto_Drivers.driver_MotorVehicleRecord("VERIFY");
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Vehicles.createVehicles();
+		PersonalAuto_Vehicles.Vehicles_Edit();
 		PersonalAuto_Vehicles.assignDriver();
 		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
 
@@ -669,7 +669,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}
 
-	@Test(enabled = false)
+	@Test(enabled=false)
 	public void AUT_PA_PC_NewSubmission_23_CoveragesAdd() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -711,7 +711,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
+		PersonalAuto_Coverages.Add_coveragesAppliedtoallVehiclesIn();
 		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("VERIFY");
 		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
 		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
