@@ -50,9 +50,11 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 				lhm_TestCase_Table_Data.get("PrimaryNI_County"));
 		GuidewireAutomate_Validation("Address Type", PrimaryNamedInsured_AddressType, "equals",
 				lhm_TestCase_Table_Data.get("PrimaryNI_AddressType"));
-		GuidewireAutomate_Validation("Address Description", PrimaryNamedInsured_AddressDescription, "equals",
-				lhm_TestCase_Table_Data.get("PrimaryNI_AddressDescription"));
-
+		/*
+		 * GuidewireAutomate_Validation("Address Description",
+		 * PrimaryNamedInsured_AddressDescription, "equals",
+		 * lhm_TestCase_Table_Data.get("PrimaryNI_AddressDescription"));
+		 */
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}

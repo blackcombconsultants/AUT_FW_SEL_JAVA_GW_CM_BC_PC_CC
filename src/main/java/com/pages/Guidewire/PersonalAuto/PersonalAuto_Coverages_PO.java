@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 public interface PersonalAuto_Coverages_PO {
 
+	
 	final By PA_Coverages_Screen_titlebar = By.xpath("//div[contains(@id,'PersonalAutoScreen-ttlBar')]//div[1]//div");
 
 	/*
@@ -21,6 +22,7 @@ public interface PersonalAuto_Coverages_PO {
 	// --->PA_Coverages_CheckBox xpath
 	final By PAC_CT_CATAV_Liability_Bodily_Injury_and_Property_Damage = By.xpath(
 			"//div[@role='heading' and text()='Liability - Bodily Injury and Property Damage']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]");
+
 	final By PAC_CT_CATAV_LBIPD_AutoLiabilityPackage = By.xpath(
 			"//div[@class='gw-label' and text()='Auto Liability Package']/parent::div//select[contains(@name,'CoverageInputSet')]");
 
