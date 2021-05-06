@@ -776,7 +776,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}
 
-	@Test(enabled = false)
+	@Test
 	public void AUT_PA_PC_NewSubmission_26_Priorpoliciesentry() throws Throwable
 
 	{
@@ -940,7 +940,8 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		PersonalAuto_RiskAnalysis.approveUWIssues();
 		PersonalAuto_RiskAnalysis.riskApprovalDetails(); //
 		PersonalAuto_RiskAnalysis.addUWContingency(); //
-		PersonalAuto_RiskAnalysis.priorPolicies_Add(); //
+		PersonalAuto_RiskAnalysis.priorPolicies_Edit();
+		
 		// PersonalAuto_RiskAnalysis.priorLosses_Add();
 
 		PolicyCenter_Resuables.clickButton("Next");
