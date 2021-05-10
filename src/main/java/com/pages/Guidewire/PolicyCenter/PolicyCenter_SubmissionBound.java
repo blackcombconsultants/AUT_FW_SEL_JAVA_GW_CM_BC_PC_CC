@@ -25,7 +25,7 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 		By Go_to_the_submission_manager_for_this_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
 		By Submit_an_application_for_a_different_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
 		By Go_To_Your_Desktop = By.xpath("//div[contains(text(),'" + strDynamicXpath);
-		GuidewireAutomate("View your Submission", View_your_Submission, "click", "");
+		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "NA");
 
 	}
 
@@ -33,6 +33,7 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 	public static void viewYourSubmission() throws Throwable {
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"Submission Bound");
+		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "NA");
 
 	}
 
@@ -42,7 +43,7 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"Submission Bound");
 		
-		GuidewireAutomate("View_your_Policy", View_your_Policy, "click", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
 
 	}
 

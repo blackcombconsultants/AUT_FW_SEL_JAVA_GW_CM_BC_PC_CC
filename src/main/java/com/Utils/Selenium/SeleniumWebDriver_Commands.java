@@ -51,11 +51,14 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 		try {
 			// Find the Element.
+			oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
 			oWebElement = driver.findElement(Locator);
 		} catch (StaleElementReferenceException e) {
 			try {
+				oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
 				oWebElement = driver.findElement(Locator);
 			} catch (StaleElementReferenceException e2) {
+				oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
 				oWebElement = driver.findElement(Locator);
 			}
 		}
@@ -194,18 +197,19 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				LogMsg = command + "ed Field = " + ElementName;
 				break;
 			case "clickAndwait":
-				driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-				driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-				oWebDriverWait = new WebDriverWait(driver, 15);
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
 
 				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
 				oWebElement.click();
 
-				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-				driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-				oWebDriverWait = new WebDriverWait(driver, 5);
+				driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 7);
 
 				LogMsg = "Clicked = " + ElementName;
+				Thread.sleep(1000);
 				break;
 			case "close":
 				// oWebElement.close();
@@ -334,13 +338,23 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 			switch (Handle) {
 			case "alertaccept":
+
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
+
 				LogMsg = Handle + " = " + driver.switchTo().alert().getText();
-				;
+
 				driver.switchTo().alert().accept();
+
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 10);
+
 				break;
 			case "alertdismiss":
 				LogMsg = Handle + " = " + driver.switchTo().alert().getText();
-				;
+
 				driver.switchTo().alert().dismiss();
 				break;
 			case "childwindow":
@@ -430,8 +444,42 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			switch (strValidation) {
 
 			case "equals":
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
+				oWebDriverWait.until(ExpectedConditions.textToBePresentInElementLocated(Locator, Expected));
+
 				strActual = getText_Element(Locator);
 				bValidation = strActual.equalsIgnoreCase(Expected);
+
+				driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 7);
+
+				break;
+			case "fetch":
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
+
+				strActual = getText_Element(Locator);
+				bValidation = true;
+
+				driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 7);
+				strFetchValue = strActual;
+				break;
+			case "fetchValue":
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
+
+				strActual = getAttribute_Element(Locator, "value");
+				bValidation = true;
+
+				driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 7);
+				strFetchValue = strActual;
 				break;
 			case "contains":
 				strActual = getText_Element(Locator);
@@ -450,17 +498,19 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				bValidation = strActual.contains(Expected);
 				break;
 			case "isEmpty":
-				bValidation = ElementName.isEmpty();
+				strActual = Boolean.toString(ElementName.isEmpty());
+				bValidation = strActual.equalsIgnoreCase("isEmpty");
 				break;
 			case "isEnabled":
-				bValidation = getElement(Locator).isEnabled();
+				strActual = (getElement(Locator).isEnabled()) == true ? "isEnabled" : "isNotEnabled";
+				bValidation = strActual.equalsIgnoreCase("isEnabled");
 				break;
 			case "isSelected":// Checkbox
-				//bValidation = getElement(Locator).isSelected();
-				bValidation = true;
-			case "isDisabled":// Checkbox
-				//bValidation = (getElement(Locator).isSelected() ? false : true);
-				bValidation = true;
+				strActual = (getElement(Locator).isSelected()) == true ? "isSelected" : "isNotSelected";
+				bValidation = strActual.equalsIgnoreCase("isSelected");
+			case "isDisabled":
+				strActual = (getElement(Locator).isSelected()) == true ? "isDisabled" : "isDisabled";
+				bValidation = strActual.equalsIgnoreCase("isDisabled");
 				break;
 			case "isDisplayed":
 				bValidation = oWebDriverWait.until(ExpectedConditions.visibilityOf(getElement(Locator))) != null;
@@ -483,10 +533,19 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				break;
 			}
 
-			LogMsg = ElementName + " => Actual = [" + strActual + "] " + strValidation + " Expected = [" + Expected
-					+ "]";
+			if (strValidation.contains("fetch")) {
+				LogMsg = ElementName + " => Fetched value = [" + strActual + "]";
+
+			} else {
+				LogMsg = ElementName + " => Actual = [" + strActual + "] " + strValidation + " Expected = [" + Expected
+						+ "]";
+			}
+
 			System.out.println(LogMsg);
-			if (bValidation) {
+
+			if (strValidation.contains("fetch")) {
+				oExtentTest.log(Status.INFO, LogMsg);
+			} else if (bValidation) {
 				oExtentTest.log(Status.PASS, LogMsg);
 			} else {
 				oExtentTest.log(Status.FAIL, LogMsg);
@@ -623,6 +682,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 	 */
 	public static String getText_Element(By Locator) throws Throwable {
 		try {
+			oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
 			return getElement(Locator).getText();
 		} catch (StaleElementReferenceException e) {
 			return getElement(Locator).getText();
@@ -631,6 +691,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	public static String getFirstSelectedOption_Element(By Locator) throws Throwable {
 		try {
+			oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
 			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
 		} catch (StaleElementReferenceException e) {
 			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
@@ -639,6 +700,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	public static String getOptions_Element(By Locator) throws Throwable {
 		try {
+			oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
 			return new Select(getElement(Locator)).getOptions().toString();
 		} catch (StaleElementReferenceException e) {
 			return new Select(getElement(Locator)).getOptions().toString();
@@ -647,6 +709,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	public static String getAttribute_Element(By Locator, String Attribute) throws Throwable {
 		try {
+			oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
 			return getElement(Locator).getAttribute(Attribute);
 		} catch (StaleElementReferenceException e) {
 			return getElement(Locator).getAttribute(Attribute);

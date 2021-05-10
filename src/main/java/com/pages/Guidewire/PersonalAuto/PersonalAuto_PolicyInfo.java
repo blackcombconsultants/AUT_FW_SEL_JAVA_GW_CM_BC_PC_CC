@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implements PersonalAuto_PolicyInfo_PO {
@@ -32,19 +33,11 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		GuidewireAutomate("Date Quote Needed", PI_DateQuoteNeeded, "sendKeys",
 				lhm_TestCase_Table_Data.get("PI_DateQuoteNeeded"));
 
-		if (lhm_TestCase_Table_Data.get("PrimaryNI_Name").contains("global")) {
-			GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals", strAccountName);
-		} else if (lhm_TestCase_Table_Data.get("PrimaryNI_Name").contains("refer")) {
-			GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals",
-					lhm_TestCase_Data.get("PrimaryNI_Name"));
-		} else {
-			GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals",
-					lhm_TestCase_Table_Data.get("PrimaryNI_Name"));
-		}
+		GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals", strAccountName);
 
 		GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "equals",
 				lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
-		GuidewireAutomate_Validation("Policy Address", PrimaryNamedInsured_PolicyAddress, "equals",
+		GuidewireAutomate_Validation("Policy Address", PrimaryNamedInsured_PolicyAddress, "contains",
 				lhm_TestCase_Table_Data.get("PrimaryNI_PolicyAddress"));
 		GuidewireAutomate_Validation("County", PrimaryNamedInsured_County, "equals",
 				lhm_TestCase_Table_Data.get("PrimaryNI_County"));
@@ -122,7 +115,7 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 
 		GuidewireAutomate_Validation("Official IDs", PI_OfficialID, "equals", "Official IDs");
 
-		GuidewireAutomate_Validation("SSN", PI_OI_SSN, "valueEquals", lhm_TestCase_Table_Data.get("PrimaryNI_SSN"));
+		//GuidewireAutomate_Validation("SSN", PI_OI_SSN, "valueEquals", lhm_TestCase_Table_Data.get("PrimaryNI_SSN"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -198,17 +191,17 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 
 		GuidewireAutomate_Validation("Policy Details", PI_PolicyDetails, "equals", "Policy Details");
 
-		GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleText",
+		GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait",
 				lhm_TestCase_Table_Data.get("PI_PD_TermType"));
 		/*
 		 * GuidewireAutomate_Validation("Term Number", PI_PD_TermNumber, "equals",
 		 * lhm_TestCase_Table_Data.get("PI_PD_TermNumber"));
 		 */
-		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearAndsendKeys",
+		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearANDsendKeys",
 				lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
 		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals",
 				lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
-		GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearAndsendKeys",
+		GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearANDsendKeys",
 				lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
 		/*
 		 * GuidewireAutomate_Validation("Rate AsOf Date", PI_PD_RateAsOfDate, "equals",

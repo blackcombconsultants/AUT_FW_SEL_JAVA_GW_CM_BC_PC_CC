@@ -13,25 +13,22 @@ import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Qualification;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
 
-public class GW_PC_PersonalAuto_ReWrite extends GW_GetDriver {
+public class GW_PC_PersonalAuto_Rewrite_RemainingOfTerm extends GW_GetDriver {
 
 	@Test
-	public void AUT_PA_PC_Reinstatement_11_Editpolicytransaction() throws Throwable {
+	public void AUT_PA_PC_Rewrite_RemainingOfTerm_01() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 		PolicyCenter_Resuables.pcTabNavigation_Policy_Search();
 		PolicyCenter_PolicySummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Reinstate Policy");
-		PolicyCenter_Resuables.newSubmissions_Verify();
-		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select LOB
+		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Rewrite Remainder of Term");
 
 		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
@@ -51,39 +48,28 @@ public class GW_PC_PersonalAuto_ReWrite extends GW_GetDriver {
 		PersonalAuto_PolicyInfo.underWritingCompany();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Drivers.driver_Edit_ExistingDriver();
+		PersonalAuto_Drivers.driver_Add_ExistingDriver();
 		PersonalAuto_Drivers.driver_ContatDetails("VERIFY");
 		PersonalAuto_Drivers.driver_Roles("EDIT"); //
-		PersonalAuto_Drivers.driver_RetrieveMVR();
-		PersonalAuto_Drivers.driver_Addresses("VERIFY");
-		PersonalAuto_Drivers.driver_MotorVehicleRecord("VERIFY");
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_Vehicles.createVehicles();
 		PersonalAuto_Vehicles.assignDriver();
-		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
-		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("EDIT");
-		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
-		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
-		PersonalAuto_Coverages.exclusionsAndConditions();
+		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_RiskAnalysis.addUWIssue();
-		PersonalAuto_RiskAnalysis.approveUWIssues();
-		PersonalAuto_RiskAnalysis.riskApprovalDetails(); //
-		PersonalAuto_RiskAnalysis.addUWContingency(); //
-		PersonalAuto_RiskAnalysis.priorPolicies_Add(); //
-		// PersonalAuto_RiskAnalysis.priorLosses_Add();
+		PersonalAuto_RiskAnalysis.button_Verify();
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_PolicyReview.policyDetails();
 		PersonalAuto_PolicyReview.policyLevelCoverages();
-		PersonalAuto_PolicyReview.vehicleLevelCoverages(); //
-		PersonalAuto_PolicyReview.vehicleLevelCoverages_VehicleCoverages(); //
-		PersonalAuto_PolicyReview.exclusionsAndConditions();
+		PersonalAuto_PolicyReview.vehicleLevelCoverages();
+		PersonalAuto_PolicyReview.vehicleLevelCoverages_VehicleCoverages();
 
 		PolicyCenter_Resuables.clickButton("Save Draft");
 		PolicyCenter_Resuables.clickButton("Quote");
@@ -91,14 +77,9 @@ public class GW_PC_PersonalAuto_ReWrite extends GW_GetDriver {
 		PersonalAuto_Quote.policyPremium_Garage1();
 		PersonalAuto_Quote.policyPremium_Vehicle1();
 		PersonalAuto_Quote.policyPremium_PremiumSubtotalandTaxes();
-		strJob = PolicyCenter_Resuables.infoBar("Job");
-		strLOB = PolicyCenter_Resuables.infoBar("LOB");
 		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
 		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
 		String strEditLock = PolicyCenter_Resuables.infoBar("EditLock");
-
-		PolicyCenter_Resuables.clickButton("Release Lock");
-		PersonalAuto_RiskAnalysis.releaseLock();
 
 		PersonalAuto_Quote.quoteDetails();
 		PolicyCenter_Resuables.clickButton("Next");
@@ -110,13 +91,13 @@ public class GW_PC_PersonalAuto_ReWrite extends GW_GetDriver {
 		PersonalAuto_Payments.invoicing();
 		PersonalAuto_Payments.billing();
 		PersonalAuto_Payments.paymentSchedule();
-		PersonalAuto_Payments.invoicingOverrides();
-		PersonalAuto_Payments.payUsing();
 		PersonalAuto_Payments.upFrontPayment();
 
 		PolicyCenter_Resuables.clickButton("Bind Options");
-		PolicyCenter_Resuables.clickButton("Issue Policy");
-
+		PolicyCenter_Resuables.clickButton("Bind Only");
+		strJob = PolicyCenter_Resuables.infoBar("Job");
+		strLOB = PolicyCenter_Resuables.infoBar("LOB");
+		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
 		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
@@ -125,8 +106,8 @@ public class GW_PC_PersonalAuto_ReWrite extends GW_GetDriver {
 		PolicyCenter_PolicySummary.detail_Verify();
 		PolicyCenter_PolicySummary.account_Verify();
 
+		// Logout PC
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
-
 	}
 
 }

@@ -24,13 +24,13 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate_Validation("Premium Summary", PA_PremiumSummary, "equals", "Premium Summary");
 
-		GuidewireAutomate_Validation("Total Premium", PA_PA_TotalPremium, "equals",
+		GuidewireAutomate_Validation("Total Premium", PA_PA_TotalPremium, "fetch",
 				lhm_TestCase_Table_Data.get("PA_PA_TotalPremium"));
-		GuidewireAutomate_Validation("Taxes And Surcharges", PA_PA_TaxesSurcharges, "equals",
+		GuidewireAutomate_Validation("Taxes And Surcharges", PA_PA_TaxesSurcharges, "fetch",
 				lhm_TestCase_Table_Data.get("PA_PA_TaxesSurcharges"));
 		// GuidewireAutomate_Validation("Fees", PA_PA_Fees, "equals",
 		// lhm_TestCase_Table_Data.get("PA_PA_Fees"));
-		GuidewireAutomate_Validation("Total Cost", PA_PA_TotalCost, "equals",
+		GuidewireAutomate_Validation("Total Cost", PA_PA_TotalCost, "fetch",
 				lhm_TestCase_Table_Data.get("PA_PA_TotalCost"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
@@ -45,9 +45,9 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate_Validation("Frequency", PA_P_Frequency, "equals",
 				lhm_TestCase_Table_Data.get("PA_P_Frequency"));
-		GuidewireAutomate_Validation("Down Payment", PA_P_DownPayment, "equals",
+		GuidewireAutomate_Validation("Down Payment", PA_P_DownPayment, "fetch",
 				lhm_TestCase_Table_Data.get("PA_P_DownPayment"));
-		GuidewireAutomate_Validation("Installements", PA_P_Installements, "equals",
+		GuidewireAutomate_Validation("Installements", PA_P_Installements, "fetch",
 				lhm_TestCase_Table_Data.get("PA_P_Installements"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
@@ -170,11 +170,11 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 				+ "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td['DownPayment'=substring(@id,197,string-length(@id))]//div[@class='gw-value']/div/div[1]");
 
 		GuidewireAutomate("Payment Plan", PA_PS_PaymentPlan, "clickAndwait", "");
-		GuidewireAutomate_Validation("DownPayment", PA_PS_DownPayment, "equals",
+		GuidewireAutomate_Validation("Down Payment", PA_PS_DownPayment, "fetch",
 				lhm_TestCase_Table_Data.get("PA_PS_DownPayment"));
-		GuidewireAutomate_Validation("Installment", PA_PS_Installment, "equals",
+		GuidewireAutomate_Validation("Installment", PA_PS_Installment, "fetch",
 				lhm_TestCase_Table_Data.get("PA_PS_Installment"));
-		GuidewireAutomate_Validation("Total", PA_PS_Total, "equals", lhm_TestCase_Table_Data.get("PA_PS_Total"));
+		GuidewireAutomate_Validation("Total", PA_PS_Total, "fetch", lhm_TestCase_Table_Data.get("PA_PS_Total"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -213,8 +213,8 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"Demo Payment System");
 
-		GuidewireAutomate_Validation("Policy Transaction Number", DPS_PolicyTransactionNumber, "equals",
-				lhm_TestCase_Table_Data.get("DPS_PolicyTransactionNumber"));
+		strPolicyNumber = getText_Element(DPS_PolicyTransactionNumber);
+
 		GuidewireAutomate("Payment Method", DPS_PaymentMethod, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("DPS_PaymentMethod"));
 		GuidewireAutomate("Card Type", DPS_CardType, "selectByVisibleText",
@@ -226,8 +226,8 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 					lhm_TestCase_Table_Data.get("DPS_CreditCardNumber"));
 
 		}
-		GuidewireAutomate("Exp_Date", DPS_ExpDate, "sendKeys", lhm_TestCase_Table_Data.get("DPS_ExpDate"));
-		GuidewireAutomate("Card_Holder_Name", DPS_CardHolderName, "sendKeys",
+		GuidewireAutomate("Exp Date", DPS_ExpDate, "sendKeys", lhm_TestCase_Table_Data.get("DPS_ExpDate"));
+		GuidewireAutomate("Card Holder Name", DPS_CardHolderName, "sendKeys",
 				lhm_TestCase_Table_Data.get("DPS_CardHolderName"));
 
 		GuidewireAutomate_Validation("Billing Address", DPS_BillingAddress, "equals", "Billing Address");
@@ -256,15 +256,38 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate_Validation("Up-front Payment", PA_UpFrontPayment, "equals", "Up-front Payment");
 
-		GuidewireAutomate("HeldbyAgent checkbox", PA_UFP_HeldbyAgent, "clickAndwait", "");
-		GuidewireAutomate_Validation("Amount", PA_UFP_HA_Amount, "valueEquals", lhm_TestCase_Table_Data.get("PA_UFP_HA_Amount"));
-		GuidewireAutomate("Check", PA_UFP_Check, "clickAndwait", "");
-		GuidewireAutomate_Validation("Amount", PA_UFP_CheckAmount, "valueEquals", lhm_TestCase_Table_Data.get("PA_UFP_CheckAmount"));
-		GuidewireAutomate("Cash", PA_UFP_Cash, "clickAndwait", "");
-		GuidewireAutomate_Validation("Amount", PA_UFP_Cash_Amount, "valueEquals", lhm_TestCase_Table_Data.get("PA_UFP_Cash_Amount"));
-		GuidewireAutomate("Electronic", PA_UFP_Electronic, "clickAndwait", "");
-		GuidewireAutomate_Validation("Amount", PA_UFP_Electronic_Amount, "valueEquals",
-				lhm_TestCase_Table_Data.get("PA_UFP_Electronic_Amount"));
+		if (lhm_TestCase_Table_Data.get("PA_UFP_HeldbyAgent").equalsIgnoreCase("Yes")) {
+			GuidewireAutomate("HeldbyAgent checkbox", PA_UFP_HeldbyAgent, "clickAndwait",
+					lhm_TestCase_Table_Data.get("PA_UFP_HeldbyAgent"));
+			GuidewireAutomate_Validation("Amount", PA_UFP_HA_Amount, "fetchValue",
+					lhm_TestCase_Table_Data.get("PA_UFP_HA_Amount"));
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Amount", strFetchValue);
+		}
+
+		if (lhm_TestCase_Table_Data.get("PA_UFP_Check").equalsIgnoreCase("Yes")) {
+
+			GuidewireAutomate("Check", PA_UFP_Check, "clickAndwait", lhm_TestCase_Table_Data.get("PA_UFP_Check"));
+			GuidewireAutomate_Validation("Amount", PA_UFP_CheckAmount, "fetchValue",
+					lhm_TestCase_Table_Data.get("PA_UFP_CheckAmount"));
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Amount", strFetchValue);
+		}
+
+		if (lhm_TestCase_Table_Data.get("PA_UFP_Cash").equalsIgnoreCase("Yes")) {
+
+			GuidewireAutomate("Cash", PA_UFP_Cash, "clickAndwait", lhm_TestCase_Table_Data.get("PA_UFP_Cash"));
+			GuidewireAutomate_Validation("Amount", PA_UFP_Cash_Amount, "fetchValue",
+					lhm_TestCase_Table_Data.get("PA_UFP_Cash_Amount"));
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Amount", strFetchValue);
+		}
+
+		if (lhm_TestCase_Table_Data.get("PA_UFP_Electronic").equalsIgnoreCase("Yes")) {
+
+			GuidewireAutomate("Electronic", PA_UFP_Electronic, "clickAndwait",
+					lhm_TestCase_Table_Data.get("PA_UFP_Electronic"));
+			GuidewireAutomate_Validation("Amount", PA_UFP_Electronic_Amount, "fetchValue",
+					lhm_TestCase_Table_Data.get("PA_UFP_Electronic_Amount"));
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Amount", strFetchValue);
+		}
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

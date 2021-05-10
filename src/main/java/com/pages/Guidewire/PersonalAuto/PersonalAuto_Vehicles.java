@@ -72,7 +72,7 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
-	
+
 	public static void Vehicles_Edit() throws Throwable {
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
@@ -80,29 +80,53 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles");
 
-		GuidewireAutomate("Create Vehicle", CreateVehicle_Button, "click", "NA");
+		GuidewireAutomate("Select", VehicleDetails_Select, "click", "NA");
 
 		GuidewireAutomate("VehicleDetails Tab", VE_Tab_VehicleDetails, "click", "NA");
-		GuidewireAutomate("Vehicle Type", VE_VD_BVI_VehicleType, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("VE_VD_BVI_VehicleType"));
-
 
 		GuidewireAutomate("Body Type", VE_VD_BVI_BodyType, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("VE_VD_BVI_BodyType"));
-		GuidewireAutomate("Cost New", VE_VD_BVI_CostNew, "sendKeys", lhm_TestCase_Table_Data.get("VE_VD_BVI_CostNew"));
-		GuidewireAutomate("Anti-Lock Brakes Discount", VE_VD_BVI_VRM_AntiLockBrakesDiscount_No, "clickAndwait",
-				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_AntiLockBrakesDiscount"));
-		GuidewireAutomate("Passive Restraint System", VE_VD_BVI_VRM_PassiveRestraintSystem, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_PassiveRestraintSystem"));
-		GuidewireAutomate("Anti Theft Discount", VE_VD_BVI_VRM_AntiTheftDiscount, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_AntiTheftDiscount"));
+
+		String strVE_VD_BVI_CostNew = lhm_TestCase_Table_Data.get("VE_VD_BVI_CostNew");
+		if (strVE_VD_BVI_CostNew.equalsIgnoreCase("Random")) {
+			strVE_VD_BVI_CostNew = getRandomNumeric(5);
+		}
+
+		GuidewireAutomate("Cost New", VE_VD_BVI_CostNew, "clearANDsendKeys", strVE_VD_BVI_CostNew);
+
+		String strVE_VD_BVI_AnnualMileage = lhm_TestCase_Table_Data.get("VE_VD_BVI_AnnualMileage");
+		if (strVE_VD_BVI_AnnualMileage.equalsIgnoreCase("Random")) {
+			strVE_VD_BVI_AnnualMileage = getRandomNumeric(5);
+		}
+		GuidewireAutomate("Annual Mileage", VE_VD_BVI_AnnualMileage, "clearANDsendKeys", strVE_VD_BVI_AnnualMileage);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
-		
+
 	}
-		
-	
+
+	public static void Vehicles_Verify() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("vehicles", strTestCaseName);
+		PersonalAuto_Reusable nsr = new PersonalAuto_Reusable(driver, oExtentTest);
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles");
+
+		GuidewireAutomate("VehicleDetails Tab", VE_Tab_VehicleDetails, "click", "NA");
+
+		GuidewireAutomate_Validation("Vehicle Type", VE_VD_BVI_VehicleType, "FirstSelectedOptionEquals",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_VehicleType"));
+		GuidewireAutomate_Validation("Body Type", VE_VD_BVI_BodyType, "FirstSelectedOptionEquals",
+				lhm_TestCase_Table_Data.get("VE_VD_BVI_BodyType"));
+		GuidewireAutomate_Validation("Passive Restraint System", VE_VD_BVI_VRM_PassiveRestraintSystem,
+				"FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_PassiveRestraintSystem"));
+		GuidewireAutomate_Validation("Anti Theft Discount", VE_VD_BVI_VRM_AntiTheftDiscount,
+				"FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("VE_VD_BVI_VRM_AntiTheftDiscount"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
 
 	public static void assignDriver() throws Throwable {
 
@@ -115,15 +139,6 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 				"What percentage does each driver use this vehicle?");
 
 		GuidewireAutomate("Add", VE_ADV_Add_Button, "click", "");
-
-		// Hande Dynamic Element - Click Existing driver
-		if (lhm_TestCase_Table_Data.get("VE_ADV_Driver").contains("refer")) {
-			strAccountName = lhm_TestCase_Data.get("PrimaryNI_Name");
-		} else {
-			strAccountName = lhm_TestCase_Table_Data.get("VE_ADV_Driver");
-		}
-		// xpath ve_add_driver=
-		// //div[contains(@id,'DriverPctLV_tb-AddDriver')]/div[@class='gw-subMenu']/div/div/div[text()='"+strAccountName+"']
 
 		By VE_ADV_Driver = By.xpath(
 				"//div[@class='gw-subMenu gw-open']//div[contains(@id,'DriverPctLV_tb-AddDriver') and contains(@class,'gw-AddMenuItemWidget')]//div[@class='gw-label' and text()='"
@@ -237,8 +252,6 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
-
-	
 
 	public static void searchtable(By Locator, String CellValue) throws Throwable {
 

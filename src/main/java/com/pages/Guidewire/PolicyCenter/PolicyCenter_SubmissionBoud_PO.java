@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 
 public interface PolicyCenter_SubmissionBoud_PO {
 	// ------>submission bound xpaths
-	final By View_your_Submission = By
+	final By SB_ViewYourSubmission = By
 			.xpath("//div[contains(@id,'JobCompleteDV-ViewJob')]//div[contains(text(),'View your submission')]");
-	final By View_your_Policy = By
+	final By SB_ViewYourPolicy = By
 			.xpath("//div[contains(@id,'JobCompleteDV-ViewPolicy')]//div[contains(text(),'View your policy')]");
 	final By Go_to_the_submission_manager_for_this_account = By.xpath(
 			"//div[contains(@id,'JobCompleteDV-SubmissionManager')]//div[text()='Go to the submission manager for this account']");

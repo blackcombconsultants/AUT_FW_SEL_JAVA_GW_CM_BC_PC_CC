@@ -36,12 +36,12 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Existing Driver", DR_DriversDetails_Add_ExistingDriver, "moveToElement",
 				lhm_TestCase_Table_Data.get("DR_Add"));
 
-		// Hande Dynamic Element - Click Existing driver
-		if (lhm_TestCase_Table_Data.get("DR_Add_DD_Name").contains("refer")) {
-			strAccountName = lhm_TestCase_Data.get("PrimaryNI_Name");
-		} else {
-			strAccountName = lhm_TestCase_Table_Data.get("DR_Add_DD_Name");
-		}
+		/*
+		 * // Hande Dynamic Element - Click Existing driver if
+		 * (lhm_TestCase_Table_Data.get("DR_Add_DD_Name").contains("refer")) {
+		 * strAccountName = lhm_TestCase_Data.get("PrimaryNI_Name"); } else {
+		 * strAccountName = lhm_TestCase_Table_Data.get("DR_Add_DD_Name"); }
+		 */
 		By DR_DriversDetails_Add_ExistingDriver_Name = By.xpath(
 				"//div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'DriversLV_tb-AddDriver-AddExistingContact')]//div[contains(@id,'UnassignedDriver')]//div[@class='gw-label' and text()='"
 						+ strAccountName + "']");
@@ -67,8 +67,6 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		// Hande Dynamic Element - Click Existing driver
 		if (lhm_TestCase_Table_Data.get("DR_Add_DD_Name").contains("refer")) {
 			strAccountName = lhm_TestCase_Data.get("PrimaryNI_Name");
-		} else {
-			strAccountName = lhm_TestCase_Table_Data.get("DR_Add_DD_Name");
 		}
 
 		By DR_DriversDetails_Name = By
@@ -79,7 +77,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Driver Select", DR_DriversDetails_Select, "click", "NA");
 		GuidewireAutomate("RetrieveMVR", DR_DriversDetails_RetrieveMVR_Button, "clickAndwait", "NA");
 
-		GuidewireAutomate_Validation("MVR Status", DR_DriversDetails_MVRStatus, "equals", "Received");
+		GuidewireAutomate_Validation("MVR Status", DR_DriversDetails_MVRStatus, "equals", "Ordered");
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -102,21 +100,26 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 			GuidewireAutomate_Validation("Person", DR_CD_Person, "equals", "Person");
 
-			GuidewireAutomate_Validation("First name", DR_CD_P_FirstName, "valueEquals",
-					lhm_TestCase_Table_Data.get("DR_CD_P_FirstName"));
+			/*
+			 * GuidewireAutomate_Validation("First name", DR_CD_P_FirstName, "valueEquals",
+			 * lhm_TestCase_Table_Data.get("DR_CD_P_FirstName"));
+			 */
 			GuidewireAutomate_Validation("Last name", DR_CD_P_LastName, "valueEquals",
 					lhm_TestCase_Table_Data.get("DR_CD_P_LastName"));
-			
-			GuidewireAutomate("Date Of Birth", DR_CD_DateofBirth, "clearANDsendKeys",lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
+
+			GuidewireAutomate("Date Of Birth", DR_CD_DateofBirth, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("DR_CD_DateofBirth"));
 
 			GuidewireAutomate_Validation("Address", DR_CD_Address, "equals", "Address");
-			GuidewireAutomate_Validation("Address1", DR_CD_A_Address1, "valueEquals",
-					lhm_TestCase_Table_Data.get("DR_CD_A_Address1"));
-
-			GuidewireAutomate_Validation("SSN", DR_CD_OI_SSN, "valuecontains",
-					lhm_TestCase_Table_Data.get("DR_CD_OI_SSN"));
-		
-			GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearANDsendKeys",lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber"));
+			/*
+			 * GuidewireAutomate_Validation("Address1", DR_CD_A_Address1, "valueEquals",
+			 * lhm_TestCase_Table_Data.get("DR_CD_A_Address1"));
+			 * 
+			 * GuidewireAutomate_Validation("SSN", DR_CD_OI_SSN, "valuecontains",
+			 * lhm_TestCase_Table_Data.get("DR_CD_OI_SSN"));
+			 */
+			GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber"));
 
 			GuidewireAutomate("LicenseState", DR_CD_LicenseState, "selectByVisibleText",
 					lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
@@ -124,7 +127,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
 			break;
-			
+
 		case "EDIT":
 
 			GuidewireAutomate_Validation("Person", DR_CD_Person, "equals", "Person");
@@ -141,7 +144,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 			GuidewireAutomate_Validation("Official IDs", DR_CD_OfficialIDs, "equals", "Official IDs");
 			GuidewireAutomate("SSN", DR_CD_OI_SSN, "clearAndsendKeys", lhm_TestCase_Table_Data.get("DR_CD_OI_SSN"));
-			
+
 			if (LicenseNumber.equalsIgnoreCase("Random")) {
 				LicenseNumber = getRandomAlphabetic(9);
 			} else if (LicenseNumber.equalsIgnoreCase("Today")) {
@@ -154,7 +157,6 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 				LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
 			}
 
-			
 			GuidewireAutomate("LicenseNumber", DR_CD_LicenseNumber, "clearAndsendKeys", LicenseNumber);
 			GuidewireAutomate("LicenseState", DR_CD_LicenseState, "selectByVisibleText",
 					lhm_TestCase_Table_Data.get("DR_CD_LicenseState"));
@@ -167,7 +169,6 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 		}
 
-		
 	}
 
 	public static void driver_Roles(String TestingType) throws Throwable {
@@ -177,7 +178,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 		GuidewireAutomate_Validation("Primary Named Insured", DR_R_PrimaryNamedInsured, "equals",
 				"Primary Named Insured");
-		
+
 		GuidewireAutomate_Validation("Driver", DR_R_Driver, "equals", "Driver");
 
 		switch (TestingType) {
@@ -226,32 +227,44 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 		switch (TestingType) {
 		case "VERIFY":
-			GuidewireAutomate_Validation("First Address1", DR_A_AD_Address1, "valueEquals",
-					lhm_TestCase_Table_Data.get("DR_A_AD_Address1"));
+			GuidewireAutomate_Validation("State", DR_A_ADD_State, "FirstSelectedOptionEquals",
+					lhm_TestCase_Table_Data.get("DR_A_AD_State"));
 
 			break;
 		case "EDIT":
-			GuidewireAutomate("Address1", DR_A_AD_Address1, "clearANDsendKeys",
-					lhm_TestCase_Table_Data.get("DR_A_AD_Address1"));
-			GuidewireAutomate("Address Type", DR_A_AD_AddressType, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("DR_A_AD_AddressType"));
-			
+
+			GuidewireAutomate("Select", DR_A_ADD_Address_Select, "clickAndwait", "NA");
+
+			GuidewireAutomate("Address1", DR_A_ADD_Address1, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_Address1"));
+			GuidewireAutomate("Address Description", DR_A_ADD_AddressDescription, "sendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_AddressDescription"));
+			GuidewireAutomate("Valid Until", DR_A_ADD_ValidUntil, "sendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_ValidUntil"));
 			break;
+			
 		case "ADD":
-			
-			GuidewireAutomate("Addresses Add", DR_A_AD_ADD, "clickAndwait", "NA");
-		
-			GuidewireAutomate("Address1", DR_A_AD_Address1, "clearANDsendKeys",
-					lhm_TestCase_Table_Data.get("DR_A_AD_Address1"));
-			GuidewireAutomate("Address State", DR_A_AD_State, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("DR_A_AD_State"));
-			GuidewireAutomate("Address Type", DR_A_AD_AddressType, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("DR_A_AD_AddressType"));
-			GuidewireAutomate("DR_A_AD_Primary", DR_A_AD_Primary, "clickAndwait", "NA");
-			
-			
-			
+
+			GuidewireAutomate("Add", DR_A_ADD, "clickAndwait", "NA");
+			GuidewireAutomate("Select", DR_A_ADD_Address_Select, "clickAndwait", "NA");
+
+			GuidewireAutomate("Address1", DR_A_ADD_Address1, "sendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_Address1"));
+			GuidewireAutomate("Address State", DR_A_ADD_State, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_State"));
+			GuidewireAutomate("Address Type", DR_A_ADD_AddressType, "sendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_AddressType"));
+			GuidewireAutomate("Address Description", DR_A_ADD_AddressDescription, "sendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_AddressDescription"));
+			GuidewireAutomate("Valid Until", DR_A_ADD_ValidUntil, "sendKeys",
+					lhm_TestCase_Table_Data.get("DR_A_ADD_ValidUntil"));
 			break;
+		case "REMOVE":
+
+			GuidewireAutomate("Select", DR_A_ADD_Address_Select, "clickAndwait", "NA");
+			GuidewireAutomate("Add", DR_A_Remove, "clickAndwait", "NA");
+			break;
+			
 		default:
 			break;
 		}
@@ -266,8 +279,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("MotorVehicleRecord Tab", DR_Tab_MotorVehicleRecord, "click", "NA");
 		switch (TestingType) {
 		case "VERIFY":
-			GuidewireAutomate_Validation("Name", DR_MVR_Name, "equals",
-					lhm_TestCase_Table_Data.get("DR_MVR_Name"));
+			GuidewireAutomate_Validation("Name", DR_MVR_Name, "equals", strAccountName);
 
 			break;
 		case "EDIT":

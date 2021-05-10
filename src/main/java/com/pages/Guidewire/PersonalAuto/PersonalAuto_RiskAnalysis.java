@@ -30,7 +30,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"Risk Analysis");
 
-		GuidewireAutomate("Add UW Issue", RA_AddUWIssue_Button, "click", "NA");
+		GuidewireAutomate("Add UW Issue", RA_AddUWIssue_Button, "clickAndwait", "NA");
 
 		GuidewireAutomate_Validation("Create New UW Issue", RA_AUI_CreateNewUWIssue, "equals", "Create New UW Issue");
 
@@ -56,7 +56,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		/*
 		 * UWIssues Tab
 		 */
-		GuidewireAutomate("UWIssues Tab", RA_Tab_UWIssues, "click", "NA");
+		GuidewireAutomate("UWIssues Tab", RA_Tab_UWIssues, "clickAndwait", "NA");
 
 		GuidewireAutomate_Validation("Blocking Issuance", RA_UI_BlockingIssuance, "equals", "Blocking Issuance");
 
@@ -449,4 +449,14 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 
 	}
 
+	public static void button_Verify() throws Throwable {
+		// Validating Risk Analysis screen
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Risk Analysis");
+
+		GuidewireAutomate_Validation("Add UW Issue", RA_AddUWIssue_Button, "isDisplayed", "true");
+		GuidewireAutomate_Validation("Add UW Issue", RA_AddContingency_Button, "isDisplayed", "true");
+		GuidewireAutomate_Validation("Add UW Issue", RA_RequestApproval_Button, "isDisplayed", "true");
+
+	}
 }

@@ -3,6 +3,7 @@ package com.pages.Guidewire.PolicyCenter;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
+import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 
 public class PolicyCenter_AccountSummary extends SeleniumWebDriver_Commands implements PolicyCenter_AccountSummary_PO {
@@ -12,18 +13,29 @@ public class PolicyCenter_AccountSummary extends SeleniumWebDriver_Commands impl
 	}
 
 	public static void detail_Verify() throws Throwable {
-		
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("accountSummary",
+				strTestCaseName);
+
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "contains",
-				"My Summary");
+				"Account Summary");
 
 		GuidewireAutomate_Validation("Details", AS_Details, "equals", "Details");
 
-		GuidewireAutomate_Validation("AccountNo", AS_D_AccountNo, "equals", strAccountNumber);
-		//GuidewireAutomate_Validation("AccountHolder", AS_D_AccountHolder, "equals", strAccountName);
-		//GuidewireAutomate_Validation("HomeAddress", AS_D_HomeAddress, "equals", strAccountName);
-		//GuidewireAutomate_Validation("Description", AS_D_Description, "contains", "temp");
-		GuidewireAutomate_Validation("Status", AS_D_Status, "equals", "Active");
+		strAccountNumber = getText_Element(AS_D_AccountNo);
+		strAccountName = getText_Element(AS_D_AccountHolder);
 
+		GuidewireAutomate_Validation("AccountNo", AS_D_AccountNo, "equals", strAccountNumber);
+		GuidewireAutomate_Validation("AccountHolder", AS_D_AccountHolder, "equals", strAccountName);
+		/*
+		 * GuidewireAutomate_Validation("HomeAddress", AS_D_HomeAddress, "equals",
+		 * lhm_TestCase_Table_Data.get("AS_D_HomeAddress"));
+		 */
+		GuidewireAutomate_Validation("Description", AS_D_Description, "contains", strAccountName);
+		GuidewireAutomate_Validation("Status", AS_D_Status, "equals", lhm_TestCase_Table_Data.get("AS_D_Status"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 	}
 
 	public static void details_Edit() throws Throwable {

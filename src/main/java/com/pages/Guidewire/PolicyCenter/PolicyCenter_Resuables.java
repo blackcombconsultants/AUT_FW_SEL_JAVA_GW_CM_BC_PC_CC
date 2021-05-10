@@ -57,6 +57,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 			break;
 		case "Edit Policy Transaction":
 			GuidewireAutomate("Edit Policy Transaction", EditPolicyTransaction_Button, "clickAndwait", "");
+			GuidewireAutomate_Handle("alertaccept", "NA");
 			break;
 		case "Quote":
 			GuidewireAutomate("Quote", Quote_Button, "clickAndwait", "");
@@ -110,27 +111,35 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		switch (strLabel) {
 		case "Job":
 			strInfobar = getText_Element(InfoBar_Job);
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Job", strInfobar);
 			break;
 		case "SubmissionNumber":
 			strInfobar = getText_Element(InfoBar_SubmissionNumber);
+			strInfobar = strInfobar.substring(11, strInfobar.length());
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "SubmissionNumber", strInfobar);
 			break;
 		case "Workflow":
 			strInfobar = getText_Element(InfoBar_Workflow);
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Workflow", strInfobar);
 			break;
 		case "LOB":
 			strInfobar = getText_Element(InfoBar_LOB);
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "LOB", strInfobar);
 			break;
 		case "EffectiveDate":
 			strInfobar = getText_Element(InfoBar_EffectiveDate);
 			break;
 		case "AccountName":
 			strInfobar = getText_Element(InfoBar_AccountName);
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "AccountName", strInfobar);
 			break;
 		case "AccountNumber":
 			strInfobar = getText_Element(InfoBar_AccountNumber);
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "AccountNumber", strInfobar);
 			break;
 		case "PolicyNumber":
 			strInfobar = getText_Element(InfoBar_PolicyNumber);
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "PolicyNumber", strInfobar);
 			break;
 		case "EditLock":
 			strInfobar = getText_Element(InfoBar_EditLock);
@@ -141,9 +150,52 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		default:
 			break;
 		}
-
-		oExtentTest.log(Status.INFO, " Fetched from Info Bar => " +strLabel + " = " + strInfobar);
+		oExtentTest.log(Status.INFO, " Fetched from Info Bar => " + strLabel + " = " + strInfobar);
 		return strInfobar;
+	}
+
+	public static void pcTabNavigation_Acct_Search() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("searchValues",
+				strTestCaseName);
+
+		strAccountNumber = lhm_TestCase_Table_Data.get("AccountNumber");
+
+		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("Acct Search", strAccountNumber);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
+
+	public static void pcTabNavigation_Sub_Search() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("searchValues",
+				strTestCaseName);
+
+		strSubmissionNumber = lhm_TestCase_Table_Data.get("SubmissionNumber");
+
+		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("Sub Search", strSubmissionNumber);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
+
+	public static void pcTabNavigation_Policy_Search() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("searchValues",
+				strTestCaseName);
+
+		strPolicyNumber = lhm_TestCase_Table_Data.get("PolicyNumber");
+
+		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("Policy Search", strPolicyNumber);
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
+
+	public static void pcTabNavigation_Contact_Search() throws Throwable {
+		// TODO Auto-generated method stub
+
 	}
 
 	public static void newSubmissions_Edit() throws Throwable {
@@ -216,78 +268,12 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 	public static void offering() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("offering", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen Header",PolicyCenter_Resuables_PO.Offerings_Header, "equals", "Offerings");
-
+		GuidewireAutomate_Validation("Screen Header", Offerings_Header, "equals", "Offerings");
 		GuidewireAutomate("Offering Selection", Of_OfferingSelection, "selectByVisibleText",
 				lhm_TestCase_Table_Data.get("Of_OfferingSelection"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
-	}
-
-	public static void forms() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("forms", strTestCaseName);
-
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Forms");
-
-	}
-
-	public static void payments() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-
-	}
-
-	public static void validationResults() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("payments", strTestCaseName);
-
-		GuidewireAutomate_Validation("Screen Header", Screen_Header, " equals", "Payment");
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-	}
-
-	public static void pcTabNavigation_Acct_Search() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("search", strTestCaseName);
-
-		strAccountNumber = lhm_TestCase_Table_Data.get("AccountNumber");
-
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("Acct Search", strAccountNumber);
-
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-
-	}
-
-	public static void pcTabNavigation_Sub_Search() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("search", strTestCaseName);
-
-		strSubmissionNumber = lhm_TestCase_Table_Data.get("SubmissionNumber");
-
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("Sub Search", strSubmissionNumber);
-
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-
-	}
-
-	public static void pcTabNavigation_Policy_Search() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("search", strTestCaseName);
-
-		strPolicyNumber = lhm_TestCase_Table_Data.get("PolicyNumber");
-
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("Policy Search", strPolicyNumber);
-
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
-
-	}
-
-	public static void pcTabNavigation_Contact_Search() throws Throwable {
-		// TODO Auto-generated method stub
-
 	}
 
 	public static void RiskApprovalManger() throws Throwable {
@@ -296,17 +282,58 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 	}
 
 	public static void startPolicyChange() throws Throwable {
-		// TODO Auto-generated method stub
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicyChange",
+				strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header", SPC_ScreenHeader, "equals", "Start Policy Change");
+		GuidewireAutomate("EffectiveDate", SPC_EffectiveDate, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("PA_PC_EffectiveDate"));
 
+		GuidewireAutomate("Description", SPC_Description, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("PA_PC_Description"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 	}
 
 	public static void startCancellationForPolicy() throws Throwable {
-		// TODO Auto-generated method stub
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CancelPolicy",
+				strTestCaseName);
+
+		GuidewireAutomate("Source", SCFP_Source, "selectByVisibleText", lhm_TestCase_Table_Data.get("PA_CP_Source"));
+		Thread.sleep(2000);
+		GuidewireAutomate("Reason", SCFP_Reason, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("PA_CP_Reason"));
+		GuidewireAutomate("ReasonDescription", SCFP_ReasonDescription, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("PA_CP_Reason _Description"));
+		GuidewireAutomate_Validation("RefundMethod", SCFP_RefundMethod, "equals",
+				lhm_TestCase_Table_Data.get("PA_CP_Refund_Method"));
+
+		GuidewireAutomate("StartCancellation", StartCancellation_Button, "click", "");
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 
 	}
 
 	public static void Confirmation() throws Throwable {
-		// TODO Auto-generated method stub
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Confirmation",
+				strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Confirmation");
+		GuidewireAutomate_Validation("PolicyNumber", SCFP_PolicyNumber, "equals",
+				lhm_TestCase_Table_Data.get("PA_CP_PolicyNumber"));
+		GuidewireAutomate_Validation("Primary_Named_Insured", SCFP_Primary_Named_Insured, "equals",
+				lhm_TestCase_Table_Data.get("PA_CP_Primary_Name_ Insured"));
+		GuidewireAutomate_Validation("Address", SCFP_Address, "equals", lhm_TestCase_Table_Data.get("PA_CP_Address"));
+		GuidewireAutomate_Validation("County", SCFP_County, "equals", lhm_TestCase_Table_Data.get("PA_CP_County"));
+		GuidewireAutomate_Validation("Address_Type", SCFP_Address_Type, "equals",
+				lhm_TestCase_Table_Data.get("PA_CP_Address _Type"));
+		GuidewireAutomate_Validation("Address_Description", SCFP_Address_Description, "equals",
+				lhm_TestCase_Table_Data.get("PA_CP_Address Description"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 
 	}
 
@@ -316,12 +343,42 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 	}
 
 	public static void startReinstatement_PolicyDetails() throws Throwable {
-		// TODO Auto-generated method stub
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("StartReinstatement",
+				strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+				"Start Reinstatement");
+		GuidewireAutomate_Validation("PolicyDetails", SR_PolicyDetails, "equals", "Policy Details");
+		GuidewireAutomate_Validation("TermType", SR_PD_TermType, "equals",
+				lhm_TestCase_Table_Data.get("PA_SR_Term _Type"));
+		GuidewireAutomate_Validation("TermNumber", SR_PD_TermNumber, "equals",
+				lhm_TestCase_Table_Data.get("PA_SR_Term _Number"));
+		GuidewireAutomate_Validation("EffectiveDate", SR_PD_EffectiveDate, "equals",
+				lhm_TestCase_Table_Data.get("PA_SR_Effective_Date"));
+		GuidewireAutomate_Validation("ExpirationDate", SR_PD_ExpirationDate, "equals",
+				lhm_TestCase_Table_Data.get("PA_SR_Expiration_Date"));
+		GuidewireAutomate_Validation("WrittenDate", SR_PD_WrittenDate, "equals",
+				lhm_TestCase_Table_Data.get("PA_SR_Written_Date"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 
 	}
 
 	public static void startReinstatement_AffinityGroup() throws Throwable {
-		// TODO Auto-generated method stub
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("StartReinstatement",
+				strTestCaseName);
+
+		GuidewireAutomate_Validation("AffinityGroup", SR_AffinityGroup, "equals", "Affinity Group");
+		GuidewireAutomate_Validation("ReinstatementDate", SR_AG_ReinstatementDate, "equals",
+				lhm_TestCase_Table_Data.get("PA_SR_Effective_Date_of_Reinstatement"));
+		GuidewireAutomate("ReasonCode", SR_AG_ReasonCode, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("PA_SR_Reason"));
+		GuidewireAutomate("ReasonDescription", SR_AG_ReasonDescription, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("PA_SR_Reason_Description"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 
 	}
 

@@ -70,13 +70,25 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 	}
 
-	public static LinkedHashMap<String, String> getData_MSExcel_WorkSheet_Fillo(String strTable, String strPrimaryKeyValue)
+	public static LinkedHashMap<String, String> getData_MSExcel_WorkSheet_Fillo(String strTable,
+			String strPrimaryKeyValue) throws Throwable {
+
+		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strPrimaryKeyValue + "'";
+
+		oConnection = getConnection("Fillo", pTestDataFilePath);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static void UpdateData_MSExcel_WorkSheet_Fillo(String strTable, String strcolumn, String strValue)
 			throws Throwable {
 
-		String strQuery = "Select * from " + strTable + " where PrimaryKey='" + strPrimaryKeyValue + "'";
-		
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='"
+				+ strTestCaseName + "'";
+		System.out.println(strUpdateQuery);
 		oConnection = getConnection("Fillo", pTestDataFilePath);
-		return executeQuery(oConnection, strQuery);
+		oConnection.executeUpdate(strUpdateQuery);
+		oConnection.close();
 
 	}
 
@@ -87,7 +99,7 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 				.getConnection(String.format(MicrosoftExcelDriver, file.getAbsolutePath()));
 
 		Statement stmt = connection.createStatement();
-		ResultSet recordset = stmt.executeQuery("SELECT * FROM [Config$] where CONFIG_NAME='QA1_CSR'");
+		ResultSet recordset = stmt.executeQuery("SELECT * FROM [Config$]");
 
 		ArrayList<String> aField = ((Recordset) recordset).getFieldNames();
 		recordset.beforeFirst();

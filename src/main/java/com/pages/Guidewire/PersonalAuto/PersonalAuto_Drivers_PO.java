@@ -101,11 +101,17 @@ public interface PersonalAuto_Drivers_PO {
 	final By DR_Tab_Addresses = By.xpath("//div[contains(@id,'AddressDetailCardTab')]/div[@role='tab']");
 	final By DR_A_CurrentlyPolicyAddress = By
 			.xpath("//div[contains(@class,'gw-boldLabel') and text()='This is currently the policy address']");
-    final By DR_A_AD_Primary=By.xpath("//div[@class='gw-label' and text()='Other']//ancestor::td[contains(@id,'AddressType_Cell')]//preceding-sibling::td[contains(@id,'Primary_Cell')]//div[@role='radio']");
-	final By DR_A_AD_Address1 = By.xpath("//div[contains(@id,'AddressLine1')]//input[contains(@name,'GlobalAddressInputSet-AddressLine1')]");
-    final By DR_A_AD_ADD=By.xpath("//div[contains(@id,'AddressesLV_tb-Add')]//div[@role='button']");
-    final By DR_A_AD_State=By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
-	final By DR_A_AD_AddressType=By.xpath("//select[contains(@name,'AddressDetailDV-AddressType')]");
+    final By DR_A_ADD=By.xpath("//div[contains(@id,'AddressesLV_tb-Add')]//div[@role='button']");
+    final By DR_A_Remove=By.xpath("//div[contains(@id,'AddressesLV_tb-Remove')]//div[@role='button']");
+
+    final By DR_A_ADD_Address_Select=By.xpath("//input[contains(@name,'AddressesPanelSet-AddressesLV-1-_Checkbox')]");
+    final By DR_A_ADD_Primary=By.xpath("//div[contains(@id,'AddressesLV-1-Primary_radio')]");
+
+    final By DR_A_ADD_Address1 = By.xpath("//div[contains(@id,'AddressLine1')]//input[contains(@name,'GlobalAddressInputSet-AddressLine1')]");
+    final By DR_A_ADD_State=By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
+	final By DR_A_ADD_AddressType=By.xpath("//select[contains(@name,'AddressDetailDV-AddressType')]");
+	final By DR_A_ADD_AddressDescription=By.xpath("//input[contains(@name,'AddressDetailDV-Description')]");
+	final By DR_A_ADD_ValidUntil=By.xpath("//input[contains(@name,'AddressDetailDV-ValidUntil')]");
     /*
 	 * MVRDetail
 	 */

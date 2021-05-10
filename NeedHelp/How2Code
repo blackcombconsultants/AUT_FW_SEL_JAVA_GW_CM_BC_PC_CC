@@ -260,16 +260,6 @@ public LinkedHashMap<String, String> getData(String process, String dataName,Lin
 		</classes>
 	</test> <!-- Test -->
 
-	<test thread-count="1" parallel="methods" name="NewSubmission">
-			<classes>
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_NewSubmission">
-				<methods>
-					<include name ="AUT_PA_PC_NS_1_BasicProgram" />
-				</methods>
-			</class>
-		</classes>
-	</test> <!-- Test -->
 
 	<test thread-count="1" parallel="methods" name="Issuance">
 			<classes>
@@ -278,7 +268,6 @@ public LinkedHashMap<String, String> getData(String process, String dataName,Lin
 				<methods>
 					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_5_IssuePolicy" />
 					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_4_Editpolicytransaction" />
-					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_1_WithdrawTransaction" />
 				</methods>
 			</class>
 		</classes>
