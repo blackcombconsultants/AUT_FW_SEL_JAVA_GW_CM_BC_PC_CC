@@ -20,7 +20,7 @@ public interface PersonalAuto_Coverages_PO {
 			"//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Coverages applied to all vehicles')]");
 
 	// --->PA_Coverages_CheckBox xpath
-	final By PAC_CT_CATAV_Liability_Bodily_Injury_and_Property_Damage = By.xpath(
+	final By PAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage = By.xpath(
 			"//div[@role='heading' and text()='Liability - Bodily Injury and Property Damage']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]");
 
 	final By PAC_CT_CATAV_LBIPD_AutoLiabilityPackage = By.xpath(
@@ -31,22 +31,22 @@ public interface PersonalAuto_Coverages_PO {
 	final By PAC_CT_CATAV_MP_MedicalLimit = By.xpath(
 			"//div[@class='gw-label' and text()='Medical Limit']/parent::div//select[contains(@name,'CoverageInputSet')]");
 
-	final By PAC_CT_CATAV_Uninsured_Motorist_Bodily_Injury = By.xpath(
+	final By PAC_CT_CATAV_UninsuredMotoristBodilyInjury = By.xpath(
 			"//div[@role='heading' and text()='Uninsured Motorist - Bodily Injury']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]");
-	final By PAC_CT_CATAV_UMBI_UninsuredMotorist_BILimits = By.xpath(
+	final By PAC_CT_CATAV_UMBI_UninsuredMotoristBILimits = By.xpath(
 			"//div[@class='gw-label' and text()='Uninsured Motorist - BI Limits']/parent::div//select[contains(@name,'CoverageInputSet')]");
 
-	final By PAC_CT_CATAV_Uninsured_Motorist_Property_Damage = By.xpath(
+	final By PAC_CT_CATAV_UninsuredMotoristPropertyDamage = By.xpath(
 			"//div[@role='heading' and text()='Uninsured Motorist - Property Damage']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]");
-	final By PAC_CT_CATAV_UMBD_UninsuredMotorist_PropertyDamageLimit = By.xpath(
+	final By PAC_CT_CATAV_UMPD_UninsuredMotoristPropertyDamageLimit = By.xpath(
 			"//div[@class='gw-label' and text()='Uninsured Motorist - Property Damage Limit']/parent::div//select[contains(@name,'CoverageInputSet')]");
 
-	final By PAC_CT_CATAV_Underinsured_Motorist_Property_Damage = By.xpath(
+	final By PAC_CT_CATAV_UnderinsuredMotoristPropertyDamage = By.xpath(
 			"//div[@role='heading' and text()='Underinsured Motorist - Property Damage']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]");
 	final By PAC_CT_CATAV_UMPD_UnderinsuredMotorist_PropertyDamageLimit = By.xpath(
 			"//div[@class='gw-label' and text()='Underinsured Motorist - Property Damage Limit']/parent::div//select[contains(@name,'CoverageInputSet')]");
 
-	final By PAC_CT_CATAV_Mexico_Coverage_Limited = By.xpath(
+	final By PAC_CT_CATAV_MexicoCoverageLimited = By.xpath(
 			"//div[@role='heading' and text()='Mexico Coverage - Limited']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]");
 	/*
 	 * Coverages applied per vehicle in
@@ -91,9 +91,9 @@ public interface PersonalAuto_Coverages_PO {
 	final By PAC_ACT_CoveragesAppliedtoAllVehicles = By.xpath(
 			"//div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Coverages applied to all vehicles')]");
 
-	final By PAC_ACT_CATAV_Rental_Car_Loss_of_Use = By.xpath(
+	final By PAC_ACT_CATAV_RentalCarLossOfUse = By.xpath(
 			"//div[@role='heading' and text()='Rental Car Loss of Use']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]");
-	final By PAC_ACT_CATAV_RCL_Rental_Car_Loss_of_Use_Limit = By.xpath(
+	final By PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit = By.xpath(
 			"//div[@class='gw-label' and text()='Rental Car Loss of Use Limit']/parent::div//select[contains(@name,'CoverageInputSet')]");
 
 	/*

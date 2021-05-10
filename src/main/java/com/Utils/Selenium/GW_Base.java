@@ -91,5 +91,6 @@ public class GW_Base {
 	public static String strPolicyNumber;
 	public static String strUnderwriter;
 	public static String strAmount;
+	public static String strFetchValue;
 
 }

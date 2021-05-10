@@ -21,7 +21,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
-public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
+public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 
 	/*
 	 * Testcase = Full Quote Issue Policy Author = Arun Date Created = 27/04/21 LOB
@@ -30,7 +30,7 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 	 */
 
 	@Test
-	public void AUT_PA_PC_Issuance_5_IssuePolicy() throws Throwable {
+	public void AUT_PA_PC_IssuePolicy_01() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
@@ -71,10 +71,10 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
-		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("EDIT");
-		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
-		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn();
 		PersonalAuto_Coverages.exclusionsAndConditions();
 
 		PolicyCenter_Resuables.clickButton("Next");
@@ -184,10 +184,10 @@ public class GW_PC_PersonalAuto_Issuance extends GW_GetDriver {
 		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn("VERIFY");
-		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn("EDIT");
-		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn("EDIT");
-		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn("EDIT");
+		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn();
 		PersonalAuto_Coverages.exclusionsAndConditions();
 
 		PolicyCenter_Resuables.clickButton("Next");

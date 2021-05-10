@@ -100,20 +100,33 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 
 	final By Menu_Actions = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
 
+	/*
+	 * GoTo
+	 */
+	final By Action_GoTo_AccountFile = By.xpath(
+			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create']//div[@role='menuitem']");
+	final By Action_GoTo_PolicyFile = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
+
+	/*
+	 * Create
+	 */
+	final By Action_Create = By.xpath(
+			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create']//div[@role='menuitem']");
+	final By Action_Create_NewNote = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
+	final By Action_Create_NewDocument = By.xpath(
+			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewDocument']");
+	final By Action_Create_NewEmail = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_NewEmail')]//div[@role='menuitem']");
+	final By Action_Create_New_Submission = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_NewSubmission')]//div[@role='menuitem']");
+	final By Action_Create_NewActivity = By
+			.xpath("//div[contains(@id,'AccountFileMenuActions_NewSubmission')]//div[@role='menuitem']");
 	final By Actions_NewAccount = By.id("AccountsGroup-AccountsMenuActions-AccountsMenuActions_NewAccount");
 	final By Actions_NewPolicy = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
 	final By Actions_NewSubmission = By.xpath(
 			"//div[@id=\"AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewSubmission\"]");
-
-	final By create = By.xpath(
-			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create']//div[@role='menuitem']");
-	final By New_Note = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
-	final By New_Document = By.xpath(
-			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewDocument']");
-	final By New_Email = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewEmail')]//div[@role='menuitem']");
-	final By New_Submission = By
-			.xpath("//div[contains(@id,'AccountFileMenuActions_NewSubmission')]//div[@role='menuitem']");
-	final By New_Activity = By.xpath("");
 	final By Withdraw_Account = By.xpath("");
 	final By Move_Policies_to_this_Account = By
 			.xpath("//div[contains(@id,'AccountFileMenuActions_MovePolicies')]//div[@role='menuitem']");
@@ -121,6 +134,21 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 			.xpath("//div[contains(@id,'AccountFileMenuActions_RewritePolicies')]//div[@role='menuitem']");
 	final By Merge_Account_into_this_Account = By
 			.xpath("//div[contains(@id,'AccountFileMenuActions_MergeAccounts')]//div[@role='menuitem']");
+	/*
+	 * New Policy Transaction
+	 */
+	final By Action_NewPolicyTransaction_ChangePolicy = By.xpath("//div[contains(@id,'ChangePolicy')]//div[@class='gw-label']");
+	final By Action_NewPolicyTransaction_CancelPolicy = By
+			.xpath("//div[contains(@id,'CancelPolicy')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By Action_NewPolicyTransaction_RenewPolicy = By
+			.xpath("//div[contains(@id,'PolicyFileMenuActions_RenewPolicy')]//div[@class='gw-label']");
+	final By Action_NewPolicyTransaction_Reinstate = By
+			.xpath("//div[contains(@id,'PolicyFileMenuActions_ReinstatePolicy')]//div[@class='gw-label']");
+
+	final By Action_NewPolicyTransaction_RewriteNewTerm = By
+			.xpath("//div[contains(@id,'StartRewriteMenuItemSet-RewriteNewTerm')]//div[@class='gw-label']");
+	final By Action_NewPolicyTransaction_RewriteRemainderOfTerm = By
+			.xpath("//div[contains(@id,'RewriteRemainderOfTerm')]//div[@class='gw-label']");
 
 	final By My_Summary = By
 			.xpath("//div[@id='Desktop-MenuLinks-Desktop_Underwriter_MySummary']/div[1]/div[text()='Summary']");

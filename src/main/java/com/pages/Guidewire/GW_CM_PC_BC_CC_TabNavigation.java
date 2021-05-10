@@ -22,7 +22,6 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 	 * --------------------------------------------------------------
 	 */
 
-	
 	public static void gwContactManagement_TabNavigation(String Tab, String Value) throws Throwable {
 		switch (Tab) {
 
@@ -43,7 +42,6 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 		}
 	}
 
-	
 	public static void gwContactManagement_MenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 
@@ -57,11 +55,10 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 			break;
 
 		default:
-			oExtentTest.addScreenCaptureFromPath(
-					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 	}
 
 	public static void pcTabNavigation(String Tab, String Value) throws Throwable {
@@ -150,14 +147,12 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 			break;
 
 		default:
-			oExtentTest.addScreenCaptureFromPath(
-					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
 			break;
 		}
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
 	}
 
-	
 	public static void pcMenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 		case "New Account":
@@ -179,50 +174,80 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 
 			break;
 		case "Summary":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("My_Summary", My_Summary, "click", "");
 			break;
 		case "My Activities":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("My_Activities", My_Activities, "click", "");
 			break;
 		case "My Accounts":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("My_Accounts", My_Accounts, "click", "");
 			break;
 		case "My Submissions":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("My_Submissions", My_Submissions, "click", "");
 			break;
 		case "My Renewals":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("My_Renewals", My_Renewals, "click", "");
 			break;
 		case "Other Policy Transactions":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("Other_Policy_Transactions", Other_Policy_Transactions, "click", "");
 			break;
 		case "My Queues":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("My_Queues", My_Queues, "click", "");
 			break;
 		case "New Note":
-			GuidewireAutomate("New_Note", New_Note, "click", "");
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
+			GuidewireAutomate("New_Note", Menu_Actions, "click", "");
 			break;
 
 		case "New Document":
-			GuidewireAutomate("New_Document", New_Document, "click", "");
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
+			GuidewireAutomate("New_Document", Menu_Actions, "click", "");
 			break;
 
 		case "New Email":
-			GuidewireAutomate("New_Email", New_Email, "click", "");
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
+			GuidewireAutomate("New_Email", Menu_Actions, "click", "");
 			break;
 		case "New Activity":
-			GuidewireAutomate("New_Activity", New_Activity, "click", "");
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
+			GuidewireAutomate("New_Activity", Menu_Actions, "click", "");
 			break;
 		case "Copy Submission":
 
 			break;
 		case "Move Policies to this Account":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("Move_Policies_to_this_Account", Move_Policies_to_this_Account, "click", "");
 
 		case "Rewrite Policires to this Account":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("Rewrite_Policires_to_this_Account", Rewrite_Policires_to_this_Account, "click", "");
 			break;
 		case "Merge Account into this Account":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+
 			GuidewireAutomate("Merge_Account_into_this_Account", Merge_Account_into_this_Account, "click", "");
 			break;
 		case "Account File":
@@ -238,30 +263,42 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 		case "Issue Policy":
 			break;
 		case "Cancel Policy":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+			GuidewireAutomate("Cancel Policy", Menu_Actions, "click", "");
 			break;
 		case "Change Policy":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+			GuidewireAutomate("Change Policy", Menu_Actions, "click", "");
 			break;
 		case "Renew Policy":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+			GuidewireAutomate("Change Policy", Menu_Actions, "click", "");
+			GuidewireAutomate_Handle("alertaccept", "NA");
 			break;
 		case "Reinstate Policy":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+			GuidewireAutomate("Reinstate Policy", Menu_Actions, "click", "");
 			break;
 		case "Rewrite Remainder of Term":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+			GuidewireAutomate("Reinstate Policy", Menu_Actions, "click", "");
+
 			break;
 		case "Rewrite New Term":
+			GuidewireAutomate("Actions", Menu_Actions, "click", "");
+			GuidewireAutomate("Rewrite New Term", Menu_Actions, "click", "");
 			break;
 		case "Rescind Cancellation":
 			break;
 		case "EnableorDisable":
 			break;
 		default:
-			oExtentTest.addScreenCaptureFromPath(
-					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 	}
 
-	
 	public static void bcTabNavigation(String Tab, String Value) throws Throwable {
 
 		switch (Tab) {
@@ -306,15 +343,13 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 		case "z":
 
 		default:
-			oExtentTest.addScreenCaptureFromPath(
-					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 
 	}
 
-	
 	public static void ccMenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 
@@ -328,14 +363,12 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 			break;
 
 		default:
-			oExtentTest.addScreenCaptureFromPath(
-					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 			break;
 		}
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
 	}
 
-	
 	public static void ccTabNavigation(String Tab, String Value) throws Throwable {
 		switch (Tab) {
 		case "NewClaim":
@@ -343,11 +376,10 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands
 			GuidewireAutomate("ClaimTab_NewClaim", ClaimTab_NewClaim, "click", "Null");
 			break;
 		default:
-			oExtentTest.addScreenCaptureFromPath(
-					SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
 			break;
 		}
+		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
+		oExtentTest.log(Status.INFO, "Navigation to " + Tab + " is succesful");
 	}
 
 }

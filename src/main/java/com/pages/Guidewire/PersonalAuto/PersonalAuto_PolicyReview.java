@@ -25,10 +25,9 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"Policy Review");
 
-		GuidewireAutomate_Validation("Primary Named Insured", PR_PrimaryNamedInsured, "equals",
-				lhm_TestCase_Table_Data.get("PR_PrimaryNamedInsured"));
+		GuidewireAutomate_Validation("Primary Named Insured", PR_PrimaryNamedInsured, "equals", strAccountName);
 		GuidewireAutomate_Validation("County", PR_County, "equals", lhm_TestCase_Table_Data.get("PR_County"));
-		GuidewireAutomate_Validation("Address Type", PR_AddressType, "equals",
+		GuidewireAutomate_Validation("Address Type", PR_AddressType, "contains",
 				lhm_TestCase_Table_Data.get("PR_AddressType"));
 		/*
 		 * GuidewireAutomate_Validation("Address Description", PR_AddressDescription,
@@ -83,17 +82,17 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Garage 1", PR_PAL_VLC_Garage1, "equals", "Garage 1");
 
 		GuidewireAutomate_Validation("Vehicle 1", PR_PAL_VLC_Vehicle1, "equals", "Vehicle 1");
-		GuidewireAutomate_Validation("Year", PR_PAL_VLC_V_Year, "equals",
-				lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_Year"));
-		GuidewireAutomate_Validation("VIN", PR_PAL_VLC_V_VIN, "equals",
-				lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VIN"));
+		/*
+		 * GuidewireAutomate_Validation("Year", PR_PAL_VLC_V_Year, "equals",
+		 * lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_Year"));
+		 */
+		GuidewireAutomate_Validation("VIN", PR_PAL_VLC_V_VIN, "contains",
+				lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VIN").substring(1, 10));
 
-		GuidewireAutomate_Validation("Primary Drivers", PR_PAL_VLC_PrimaryDriver, "equals",
-				lhm_TestCase_Table_Data.get("PR_PAL_VLC_PrimaryDrivers"));
+		GuidewireAutomate_Validation("Primary Drivers", PR_PAL_VLC_PrimaryDriver, "contains", strAccountName);
 
 		GuidewireAutomate_Validation("Assigned Drivers", PR_PAL_VLC_AssignedDrivers, "equals", "Assigned Drivers");
-		GuidewireAutomate_Validation("Driver", PR_PAL_VLC_AD_Driver, "equals",
-				lhm_TestCase_Table_Data.get("PR_PAL_VLC_AD_Driver"));
+		GuidewireAutomate_Validation("Driver", PR_PAL_VLC_AD_Driver, "equals", strAccountName);
 
 		GuidewireAutomate_Validation("Vehicle Rate Modifiers", PR_PAL_VLC_V_VehicleRateModifiers, "equals",
 				"Vehicle Rate Modifiers");
@@ -136,8 +135,8 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyReview",
 				strTestCaseName);
 
-		GuidewireAutomate_Validation("Exclusions and Conditions", PR_PAL_ExclusionsConditions, "equals", "Exclusions and Conditions");
-
+		GuidewireAutomate_Validation("Exclusions and Conditions", PR_PAL_ExclusionsConditions, "equals",
+				"Exclusions and Conditions");
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

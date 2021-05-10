@@ -11,7 +11,8 @@ import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
 
 public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements PolicyCenter_Account_PO {
 
-	String strAccountName;
+	public static String strAddress1;
+	static String strOfficialID;
 	LinkedHashMap<String, String> lhm_TestCase_Table_Data1;
 	static Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
@@ -30,8 +31,9 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 
 		GuidewireAutomate("OrganizationSearch", CA_SP_OrganizationSearch_Button, "click", "");
 
-		GuidewireAutomate_Validation("Organization Name", PolicyCenter_Resuables.Screen_Header, "equals",
+		GuidewireAutomate_Validation("Organization Name", PolicyCenter_Resuables.Organizations_Header, "equals",
 				"Organizations");
+		
 		GuidewireAutomate("Organization Name", OS_OrganizationName, "sendKeys",
 				lhm_TestCase_Table_Data.get("OS_OrganizationName"));
 		GuidewireAutomate("Organization Type", OS_OrganizationType, "selectByVisibleText",
@@ -106,11 +108,12 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 	 * createPersonAccount
 	 * --------------------------------------------------------------
 	 */
-	
+
 	public static void createPersonAccount() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("createAccount", strTestCaseName);
-
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("createAccount",
+				strTestCaseName);
+		
 		String strFirstName = lhm_TestCase_Table_Data.get("SA_FirstName");
 		if (strFirstName.contentEquals("Random")) {
 			strFirstName = getRandomAlphabetic(9);
@@ -128,7 +131,7 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		}
 		String strAccountNickname = strFirstName + " " + strLastName;
 
-		String strAddress1 = lhm_TestCase_Table_Data.get("CA_Address1");
+		strAddress1 = lhm_TestCase_Table_Data.get("CA_Address1");
 		if (strAddress1.contentEquals("Random")) {
 			strAddress1 = getRandomNumeric(3) + "  " + getRandomAlphabetic(7) + " Suites";
 		}
@@ -136,7 +139,7 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		if (strPrimaryEmail.contentEquals("Random")) {
 			strPrimaryEmail = strFirstName + "." + strLastName + "@blackcombconsultants.com";
 		}
-		String strOfficialID = lhm_TestCase_Table_Data.get("CA_OfficialID");
+		strOfficialID = lhm_TestCase_Table_Data.get("CA_OfficialID");
 		if (strOfficialID.contentEquals("Random")) {
 			strOfficialID = "999-11-" + getRandomNumeric(4);
 		}
@@ -148,6 +151,9 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 				"Enter Account Information");
 		GuidewireAutomate("First Name", SA_FirstName, "sendKeys", strFirstName);
 		GuidewireAutomate("Last Name", SA_LastName, "sendKeys", strLastName);
+
+		GuidewireAutomate("Company Name", SA_CompanyNameExactMatch, "click",
+				lhm_TestCase_Table_Data.get("SA_CompanyNameExactMatch"));
 		GuidewireAutomate("First Name Exact Match", SA_FirstNameExactMatch, "click",
 				lhm_TestCase_Table_Data.get("SA_FirstNameExactMatch"));
 		GuidewireAutomate("Last Name Exact Match", SA_LastNameExactMatch, "click",
@@ -181,7 +187,7 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		/*
 		 * Create account
 		 */
-		GuidewireAutomate_Validation("Create account", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+		GuidewireAutomate_Validation("Create account", PolicyCenter_Resuables_PO.CreateAccount_Header, "equals",
 				"Create account");
 
 		GuidewireAutomate_Validation("Please confirm account information", CA_PleaseConfirmAccountInformation, "equals",
@@ -249,10 +255,11 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 	 * pc_CreateCompanyAccount
 	 * --------------------------------------------------------------
 	 */
-	
+
 	public static void createCompanyAccount() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("createAccount", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("createAccount",
+				strTestCaseName);
 
 		String strCompanyName = lhm_TestCase_Table_Data.get("CA_CompanyName");
 		if (strCompanyName.contentEquals("Random")) {
@@ -288,8 +295,13 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 				"Enter Account Information");
 
 		GuidewireAutomate("Company Name", SA_CompanyName, "clearANDsendKeys", strCompanyName);
+
 		GuidewireAutomate("Company Name", SA_CompanyNameExactMatch, "click",
 				lhm_TestCase_Table_Data.get("SA_CompanyNameExactMatch"));
+		GuidewireAutomate("First Name Exact Match", SA_FirstNameExactMatch, "click",
+				lhm_TestCase_Table_Data.get("SA_FirstNameExactMatch"));
+		GuidewireAutomate("Last Name Exact Match", SA_LastNameExactMatch, "click",
+				lhm_TestCase_Table_Data.get("SA_LastNameExactMatch"));
 
 		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
 		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
@@ -313,8 +325,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		 * "Information for the current page:\n" + "The search returned zero results.");
 		 * 
 		 */
-		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables.Error_Message,
-				"equals", "The search returned zero results.");
+		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables.Error_Message, "equals",
+				"The search returned zero results.");
 
 		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "click", "");
 		GuidewireAutomate("CNA_Person_Button", SA_CNA_Company_Button, "click", "");
@@ -418,27 +430,27 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 
 	public static void searchPerson() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void modifyPerson() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void withdrawAccount() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void organization_Modify() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void checkDuplicates() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
