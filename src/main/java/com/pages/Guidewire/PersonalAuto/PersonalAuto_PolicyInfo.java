@@ -193,12 +193,10 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 
 		GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait",
 				lhm_TestCase_Table_Data.get("PI_PD_TermType"));
-		/*
-		 * GuidewireAutomate_Validation("Term Number", PI_PD_TermNumber, "equals",
-		 * lhm_TestCase_Table_Data.get("PI_PD_TermNumber"));
-		 */
 		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearANDsendKeys",
 				lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
+		GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
 		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals",
 				lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
 		GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearANDsendKeys",
@@ -207,8 +205,6 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		 * GuidewireAutomate_Validation("Rate AsOf Date", PI_PD_RateAsOfDate, "equals",
 		 * lhm_TestCase_Table_Data.get("PI_PD_RateAsOfDate"));
 		 */
-		GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

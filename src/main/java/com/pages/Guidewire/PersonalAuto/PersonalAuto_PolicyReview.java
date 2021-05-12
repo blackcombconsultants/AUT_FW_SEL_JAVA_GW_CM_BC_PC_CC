@@ -121,9 +121,12 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 
 		GuidewireAutomate_Validation("Comprehensive Deductible", PR_PAL_VLC_V_VC_ComprehensiveDeductible, "equals",
 				lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VC_ComprehensiveDeductible"));
-		GuidewireAutomate_Validation("ComprehensiveDeductible Value", PR_PAL_VLC_V_VC_ComprehensiveDeductible_Value,
-				"equals", lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VC_ComprehensiveDeductible_Value"));
-
+		/*
+		 * GuidewireAutomate_Validation("ComprehensiveDeductible Value",
+		 * PR_PAL_VLC_V_VC_ComprehensiveDeductible_Value, "equals",
+		 * lhm_TestCase_Table_Data.get("PR_PAL_VLC_V_VC_ComprehensiveDeductible_Value"))
+		 * ;
+		 */
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 
