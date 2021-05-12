@@ -347,9 +347,9 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 				driver.switchTo().alert().accept();
 
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-				driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-				oWebDriverWait = new WebDriverWait(driver, 10);
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 5);
 
 				break;
 			case "alertdismiss":

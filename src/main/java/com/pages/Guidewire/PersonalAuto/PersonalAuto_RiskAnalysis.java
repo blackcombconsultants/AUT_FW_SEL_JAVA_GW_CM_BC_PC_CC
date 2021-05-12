@@ -454,9 +454,9 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 				"Risk Analysis");
 
-		GuidewireAutomate_Validation("Add UW Issue", RA_AddUWIssue_Button, "isDisplayed", "true");
-		GuidewireAutomate_Validation("Add UW Issue", RA_AddContingency_Button, "isDisplayed", "true");
-		GuidewireAutomate_Validation("Add UW Issue", RA_RequestApproval_Button, "isDisplayed", "true");
+		GuidewireAutomate_Validation("Add UWIssue", RA_AddUWIssue_Button, "isDisplayed", "true");
+		GuidewireAutomate_Validation("Add Contingency", RA_AddContingency_Button, "isDisplayed", "true");
+		GuidewireAutomate_Validation("Request Approval", RA_RequestApproval_Button, "isDisplayed", "true");
 
 	}
 }

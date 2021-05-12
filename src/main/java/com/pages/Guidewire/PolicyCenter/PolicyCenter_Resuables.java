@@ -80,6 +80,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		case "Bind Only":
 			GuidewireAutomate("Bind Only", BindOptions_BindOnly_Button, "clickAndwait", "");
 			GuidewireAutomate_Handle("alertaccept", "NA");
+			GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Submission (Bound)");
 			break;
 		case "Issue Policy":
 			GuidewireAutomate("Issue Policy", Bindoptions_IssuePolicy_Button, "clickAndwait", "");

@@ -2,55 +2,26 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="methods"
 	name="TestSuite_PersonalAuto">
-	<parameter name="GW_Application" value="PersonalAuto PC NewSubmission" />
+	<parameter name="GW_Application"
+		value="PersonalAuto PC NewSubmission" />
 
 	<listeners>
 		<listener
 			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
-	<test thread-count="1" parallel="methods" name="PersonalAuto PC NewSubmission Regression Test">
-			<classes>
+	<test thread-count="1" parallel="methods"
+		name="PersonalAuto PC NewSubmission Regression Test">
+		<classes>
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
 				<methods>
-					<exclude
-						name="AUT_PA_PC_NewSubmission_1_Account_OpenPolicyTransaction_NewSubmission" />
 					<include
 						name="AUT_PA_PC_NewSubmission_2_NewAccount_NewSubmission" />
 					<include
 						name="AUT_PA_PC_NewSubmission_3_SearchAccount_NewSubmission" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_4_Organization_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_5_Producercode_Modify" />
-					<exclude name="AUT_PA_PC_NewSubmission_6_Single_QuickQuote" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_7_Single_QuickQuote_DefaultBaseState_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_8_Single_QuickQuote_DefaultEffectiveDate_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_9_Single_QuickQuote_Driver_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_10_Single_QuickQuote_DriverRemove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_11_Single_QuickQuote_Vehicle_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_12_Single_QuickQuote_VehicleRemove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_13_Single_QuickQuote_UseDefault" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_14_Single_QuickQuote_Quote" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_15_Single_QuickQuote_FullApplication" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_16_Single_QuickQuote_Version" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_17_Single_QuickQuote_Version_FullApplication" />
 					<include
 						name="AUT_PA_PC_NewSubmission_18_Single_FullApplication" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_19_Single_FullApplication_DefaultBaseState_Modify" />
 					<include
 						name="AUT_PA_PC_NewSubmission_20_Single_FullApplication_DefaultEffectiveDate_Modify" />
 					<include
@@ -67,42 +38,10 @@
 						name="AUT_PA_PC_NewSubmission_26_PA_PreQualification_PreviousPolicydidnotrenew" />
 					<include
 						name="AUT_PA_PC_NewSubmission_27_PA_PreQualification_NotKnown" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_28_PA_PreQualification_ApplicantLicense_CurrentCanceled" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_29_PA_PreQualification_ApplicantLicense_EverCanceled" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_30_PA_PreQualification_DriverCovictions" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_31_PA_PreQualification_PolicyCanceled" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_32_PA_PreQualification_Negative" />
 					<include
 						name="AUT_PA_PC_NewSubmission_33_PI_QuoteNeeded_BackDated" />
 					<include
 						name="AUT_PA_PC_NewSubmission_34_PI_QuoteNeeded_FutureDate" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_35_PI_PrimaryNamedInsured_ChangeTo_NewPerson" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_36_PI_PrimaryNamedInsured_ChangeTo_From_AddressBook" />
-					<include
-						name="AUT_PA_PC_NewSubmission_37_PI_Policy_Address_ChangeTo_Existing_Address" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_38_PI_Policy_Address_ChangeTo_New_Address" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_39_PI_Policy_Address_ChangeTo_EditCurrent_Address" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_41_PI_AdditionalInsured_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_42_PI_AdditionalInsured_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_43_PI_AdditionalInsured_Delete" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_44_PI_SecondaryNamedInsured_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_45_PI_SecondaryNamedInsured_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_46_PI_SecondaryNamedInsured_Delete" />
 					<include
 						name="AUT_PA_PC_NewSubmission_47_PI_TermType_Annual" />
 					<include
@@ -113,216 +52,51 @@
 						name="AUT_PA_PC_NewSubmission_50_PI_WrittenDate_BackDated" />
 					<include
 						name="AUT_PA_PC_NewSubmission_51_PI_WrittenDate_FutureDated" />
-					<exclude name="AUT_PA_PC_NewSubmission_52_PI_AffinityGoup" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_53_PI_Organization_Modify" />
-					<include
-						name="AUT_PA_PC_NewSubmission_54_PI_UnderwritingCompany" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_55_PI_Negative_EffectiveDate" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_56_PA_Driver_Add_NewPerson" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_57_PA_Driver_Add_From_Addressbook" />
 					<include
 						name="AUT_PA_PC_NewSubmission_58_PA_Driver_Add_ExistingDriver" />
-					<include name="AUT_PA_PC_NewSubmission_59_PA_Driver_Modify" />
-					<include
-						name="AUT_PA_PC_NewSubmission_60_PA_Driver_Modify_ContactDetails" />
-					<include
-						name="AUT_PA_PC_NewSubmission_61_PA_Driver_Modify_Roles" />
-					<include
-						name="AUT_PA_PC_NewSubmission_62_PA_Driver_Modify_Addresses_Add" />
-					<include
-						name="AUT_PA_PC_NewSubmission_63_PA_Driver_Modify_Addresses_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_64_PA_Driver_MVRReportDetails" />
-					<exclude name="AUT_PA_PC_NewSubmission_65_PA_Driver_Remove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_66_PA_Driver_Negative_Atleast1Driver" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_67_PA_Driver_Negative_Roles" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_68_PA_Driver_Negative_AgeLessThan25" />
 					<include name="AUT_PA_PC_NewSubmission_69_PA_CreateVehicle" />
 					<include
-						name="AUT_PA_PC_NewSubmission_70_PA_Vehicle_Modify" />
-					<include name="AUT_PA_PC_NewSubmission_71_PA_RemoveVehicle" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_72_PA_Vehicle_AdditionalInterest_Add_NewPerson" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_73_PA_Vehicle_AdditionalInterest_Add_NewCompany" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_74_PA_Vehicle_AdditionalInterest_Add_From_Addressbook" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_75_PA_Vehicle_AdditionalInterest_Add_OtherContacts" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_76_PA_Vehicle_Negative_Atleast1Vehicle" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_77_PA_Vehicle_Negative_AssignDriver" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_78_PA_Vehicle_Negative_VIN" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_79_PA_Vehicle_Negative_LicenseState" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_80_PA_Vehicle_Negative_CostNew" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_81_PA_Coverages_AllVehicles_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_82_PA_Coverages_AllVehicles_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_83_PA_Coverages_AllVehicles_Remove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_84_PA_Coverages_PerVehicle_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_85_PA_Coverages_PerVehicle_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_86_PA_Coverages_PerVehicle_Remove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_87_PA_AdditionalCoverages_AllVehicles_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_88_PA_AdditionalCoverages_AllVehicles_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_89_PA_AdditionalCoverages_AllVehicles_Remove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_90_PA_AdditionalCoverages_PerVehicle_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_91_PA_AdditionalCoverages_PerVehicle_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_92_PA_AdditionalCoverages_PerVehicle_Remove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_93_PA_ExclusionandCondition_Add_Exclusion" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_94_PA_ExclusionandCondition_Add_Condition" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_95_PA_ExclusionandCondition_Add_ExclusionandCondition" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_96_PA_ExclusionandCondition_Modify_Exclusion" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_97_PA_ExclusionandCondition_Modify_Condition" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_98_PA_ExclusionandCondition_Modify_ExclusionandCondition" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_99_PA_RiskAnalysis_ApproveUWIssue" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_100_RiskAnalysis_AddUWIssue" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_101_RiskAnalysis_ApproveUWIssue" />
-					<exclude
 						name="AUT_PA_PC_NewSubmission_102_RiskAnalysis_AddContingency" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_103_RiskAnalysis_LockforReview" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_104_RiskAnalysis_RequestApproval" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_105_RiskAnalysis_PriorPolicies_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_106_RiskAnalysis_PriorPolicies_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_107_RiskAnalysis_PriorPolicies_Remove" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_108_RiskAnalysis_Claims" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_109_RiskAnalysis_PriorLosses_Add" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_110_RiskAnalysis_PriorLosses_Modify" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_111_RiskAnalysis_PriorLosses_Remove" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_112_PolicyReview_InsuredDetais" />
-					<exclude name="AUT_PA_PC_NewSubmission_113_PA_PolicyReview" />
-					<exclude
+					<include name="AUT_PA_PC_NewSubmission_113_PA_PolicyReview" />
+					<include
 						name="AUT_PA_PC_NewSubmission_114_Quote_InsuredDetais" />
-					<exclude name="AUT_PA_PC_NewSubmission_115_PA_Quote" />
-					<exclude name="AUT_PA_PC_NewSubmission_116_PA_Forms" />
-					<exclude
+					<include name="AUT_PA_PC_NewSubmission_115_PA_Quote" />
+					<include
 						name="AUT_PA_PC_NewSubmission_117_Pay_BillingMethod_DirectBill" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_118_Pay_BillingMethod_ListBill" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_119_Pay_AlternateBillingAccount_Search" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_120_Pay_AlternateBillingAccount_BillingSubAccount" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_121_Pay_AlternateBillingContact_NewCompany" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_122_Pay_AlternateBillingContact_NewPerson" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_123_Pay_AlternateBillingContact_From_AddressBook" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_124_Pay_AlternateBillingContact_ExistingBillingContact" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_125_Pay_AlternateBillingContact_OtherContact" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_126_Pay_PaymentSchedule_A" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_127_Pay_PaymentSchedule_B" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_128_Pay_PaymentSchedule_C" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_129_Pay_PaymentSchedule_D" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_130_Pay_PaymentSchedule_E" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_131_Pay_PaymentSchedule_F" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_132_Pay_PaymentSchedule_Monthly" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_133_Pay_PaymentSchedule_Monthly2" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_134_Pay_PaymentSchedule_Monthly3" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_135_Pay_PaymentSchedule_EveryOtherWeek" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_136_Pay_FixInvoice_BillDute" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_137_Pay_FixInvoice_DueDute" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_138_Pay_PayUsing_ACH_EFT" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_139_Pay_PayUsing_CreditCard" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_140_Pay_UpFrontPayment_HeldByAgent" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_141_Pay_UpFrontPayment_Check" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_142_Pay_UpFrontPayment_Cash" />
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_143_Pay_UpFrontPayment_Electronic" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_144_Policy_NewSubmission" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_145_Versions_Multiple_FullApplication" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_146_Versions_Multiple_FA_DefaultbaseState" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_147_Versions_Multiple_FA_Defaulteffectivedate" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_148_Versions_Multiple_QuickQuote" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_149_Versions_Multiple_QQ_DefaultbaseState" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_150_Versions_Multiple_QQ_Defaulteffectivedate" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_151_Versions_SideBySide" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_152_Quote_CloseOptions_Withdraw" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_153_Quote_CloseOptions_Decline" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_154_Quote_CloseOptions_NotTaken" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_155_Quote_BindOption_BindOnly" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_156_SubmissionBound_PolicyNumberValidation" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_157_SubmissionManager" />
-					<exclude name="AUT_PA_PC_NewSubmission_158_SaveDraft" />
-					<exclude
-						name="AUT_PA_PC_NewSubmission_159_EditPolicyTransaction" />
-					<exclude name="AUT_PA_PC_NewSubmission_160_ReleaseLock" />
-					<exclude name="AUT_PA_PC_NewSubmission_161_BureauID" />
-
 				</methods>
 			</class>	<!-- class -->
 		</classes>	<!-- classes -->

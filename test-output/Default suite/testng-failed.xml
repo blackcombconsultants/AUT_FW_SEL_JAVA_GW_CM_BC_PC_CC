@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Test.GW_PolicyCenter_Test">
+      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
         <methods>
-          <include name="setUp"/>
-          <include name="createAccount"/>
+          <include name="AUT_PA_PC_NewSubmission_110_RiskAnalysis_PriorLosses_Modify"/>
         </methods>
-      </class> <!-- com.Test.GW_PolicyCenter_Test -->
+      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

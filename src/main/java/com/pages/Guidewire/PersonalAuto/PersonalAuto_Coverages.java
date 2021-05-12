@@ -173,7 +173,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages",
 				strTestCaseName);
 
-		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "click", "");
+		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "clickAndwait", "");
 
 		GuidewireAutomate_Validation("Coverages applied to all vehicles", PAC_ACT_CoveragesAppliedtoAllVehicles,
 				"contains", "Coverages applied to all vehicles");
