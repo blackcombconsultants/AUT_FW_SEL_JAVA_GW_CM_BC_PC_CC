@@ -25,7 +25,7 @@ public class GW_GetDriver extends Selenium_Reporting {
 
 		try {
 
-			switch (StrBrowser) {
+			switch (StrBROWSER) {
 			case "CHROME":
 
 				System.out.println("-------------------------------------------------------------------------");

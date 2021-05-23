@@ -67,11 +67,12 @@ public class GW_Base {
 	public static String strMethodName = null;
 
 	public static String url;
-	public static String StrBrowser;
-	public static String StrEnvironment;
-	public static String strGW_Application;
-	public static String strGW_Country;
-	public static String strGW_State;
+	public static String StrBROWSER;
+	public static String StrENVIRONMENT;
+	public static String StrINTERFACE;
+	public static String gwAPPLICATION;
+	public static String gwCOUNTRY;
+	public static String gwSTATE;
 
 	/*
 	 * Guidewire

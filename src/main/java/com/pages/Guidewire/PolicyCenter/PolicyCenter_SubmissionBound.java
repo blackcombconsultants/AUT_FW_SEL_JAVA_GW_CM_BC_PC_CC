@@ -17,22 +17,20 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 
 	public static void submissionBound() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("submissionBound",
-				strTestCaseName);
-		String strDynamicXpath = lhm_TestCase_Table_Data.get("SubmissionBound");
-		By View_your_Submission = By.xpath("//div[contains(text(),'" + strDynamicXpath);
-		By View_your_Policy = By.xpath("//div[contains(text(),'" + strDynamicXpath);
-		By Go_to_the_submission_manager_for_this_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
-		By Submit_an_application_for_a_different_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
-		By Go_To_Your_Desktop = By.xpath("//div[contains(text(),'" + strDynamicXpath);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("submissionBound", strTestCaseName);
+		String strDynamicXpath                               = lhm_TestCase_Table_Data.get("SubmissionBound");
+		By     View_your_Submission                          = By.xpath("//div[contains(text(),'" + strDynamicXpath);
+		By     View_your_Policy                              = By.xpath("//div[contains(text(),'" + strDynamicXpath);
+		By     Go_to_the_submission_manager_for_this_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
+		By     Submit_an_application_for_a_different_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
+		By     Go_To_Your_Desktop                            = By.xpath("//div[contains(text(),'" + strDynamicXpath);
 		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "NA");
 
 	}
 
 	// ------>clicking on view_your_SubmissionIt will go to Quote Screen
 	public static void viewYourSubmission() throws Throwable {
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
-				"Submission Bound");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
 		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "NA");
 
 	}
@@ -40,9 +38,16 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 	// ------>clicking on View_your_Policy It will go to Summary Screen
 	public static void ViewYourPolicy() throws Throwable {
 
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
-				"Submission Bound");
-		
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
+
+	public static void Cancellation_ViewYourPolicy() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
+
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
 
 	}
@@ -50,44 +55,37 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 	// ------>clicking on submission manager
 	public static void GoToTheSubmissionManagerforthisAccount(String type) throws Throwable {
 
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
-				"Submission Bound");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
 
 		// ---->verifying summary screen title
 		GuidewireAutomate_Validation("submission_title", submission_title, "equals", "Submission Manager");
 		GuidewireAutomate("submission_filter", submission_filter, "click", type);
 		switch (type) {
-		case "All Submissions":
-			GuidewireAutomate("submission_filtert", submission_filter, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("submissionfilter"));
-			break;
-		case "Open Submissions":
-			GuidewireAutomate("submission_filtert", submission_filter, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("submissionfilter"));
-			break;
-		case "Complete Submissions":
-			GuidewireAutomate("submission_filtert", submission_filter, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("submissionfilter"));
-			break;
-		default:
-			break;
+			case "All Submissions" :
+				GuidewireAutomate("submission_filtert", submission_filter, "selectByVisibleText", lhm_TestCase_Table_Data.get("submissionfilter"));
+				break;
+			case "Open Submissions" :
+				GuidewireAutomate("submission_filtert", submission_filter, "selectByVisibleText", lhm_TestCase_Table_Data.get("submissionfilter"));
+				break;
+			case "Complete Submissions" :
+				GuidewireAutomate("submission_filtert", submission_filter, "selectByVisibleText", lhm_TestCase_Table_Data.get("submissionfilter"));
+				break;
+			default :
+				break;
 
 		}
 	}
 
 	// ------->clicking on new submission screen
 	public static void submitApplicationForDifferentAccount() throws Throwable {
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
-				"Submission Bound");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
 
-		GuidewireAutomate("Submit an_application_for_a_different_account",
-				Submit_an_application_for_a_different_account, "click", "");
+		GuidewireAutomate("Submit an_application_for_a_different_account", Submit_an_application_for_a_different_account, "click", "");
 
 	}
 
 	public static void goToYourDesktop() throws Throwable {
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
-				"Submission Bound");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
 		GuidewireAutomate("Go_To_Your_Desktop", Go_To_Your_Desktop, "click", "");
 
 	}

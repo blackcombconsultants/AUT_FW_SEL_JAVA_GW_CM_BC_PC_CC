@@ -1,0 +1,64 @@
+{
+	"Department":[
+		{
+		"id":1,
+		"Departmentid":1,
+		"name":"Accounts",
+		"Head":"AccountsHead",
+		"ProjectId":1,
+		"Email":"AccountsHead@blackcombcom"
+
+		},
+		{
+		"id":2,			
+		"Departmentid":2,
+		"name":"HR",
+		"Head":"HRHead",
+		"ProjectId":1,
+		"Email":"HRHead@blackcombcom"
+		},
+		{
+		"id":3,			
+		"Departmentid":3,
+		"name":"Development",
+		"Head":"DevelopmentHead",
+		"ProjectId":2,			
+		"Email":"DevelopmentHead@blackcombcom"
+		},
+		{
+		"id":4,			
+		"Departmentid":4,
+		"name":"Cloud",
+		"Head":"CloudHead",
+		"ProjectId":2,			
+		"Email":"CloudHead@blackcombcom"
+		},
+		{
+		"id":5,			
+		"Departmentid":5,
+		"name":"QA",
+		"Head":"QAHead",
+		"ProjectId":3 ,			
+		"Email":"QAHead@blackcombcom"
+		}
+	],
+	"Projects":[
+		{
+		"id":1,			
+		"ProjectId":1,
+		"ProjectName":"InHouse",
+		"App":"Sandbox"
+		},		{
+		"id":2,			
+		"ProjectId":2,
+		"ProjectName":"Donnegal",
+		"App":"PolicyCenter"
+		},
+		{
+		"id":3,			
+		"ProjectId":3,			
+		"ProjectName":"krima",
+		"App":"BillingCenter"
+		}
+	]
+}

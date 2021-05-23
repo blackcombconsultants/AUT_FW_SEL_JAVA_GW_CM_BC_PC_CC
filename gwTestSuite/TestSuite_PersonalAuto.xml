@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="TestSuite_PersonalAuto">
+	<parameter name="GW_Application" value="PersonalAuto" />
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="PersonalAuto PC Regression Test">
+		<classes>
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
+				<methods>
+					<include
+						name="AUT_PA_PC_Account_CreateNewPersonAccount" />
+				</methods>
+			</class>
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
+				<methods>
+					<include
+						name="AUT_PA_PC_NewSubmission_NewAccount_NewSubmission" />
+					<include
+						name="AUT_PA_PC_NewSubmission_SaveDraft" />
+					<include
+						name="AUT_PA_PC_NewSubmission_BindOption_BindOnly" />
+					<include
+						name="AUT_PA_PC_NewSubmission_BindOption_IssuePolicy" />
+					<include
+						name="AUT_PA_PC_NewSubmission_CloseOptions_Withdraw" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy">
+				<methods>
+					<exclude name="AUT_PA_PC_ChangePolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy">
+				<methods>
+					<exclude name="AUT_PA_PC_RenewPolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy">
+				<methods>
+					<include name="AUT_PA_PC_CancelPolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy">
+				<methods>
+					<exclude name="AUT_PA_PC_ReinstatePolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm">
+				<methods>
+					<exclude name="AUT_PA_PC_Rewrite_FullTerm_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm">
+				<methods>
+					<exclude name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
+				<methods>
+					<exclude name="AUT_PA_PC_Rewrite_NewTerm_01" />
+				</methods>
+			</class>	<!-- class -->
+
+		</classes>	<!-- classes -->
+	</test> <!-- Test -->
+
+
+
+</suite> <!-- Suite -->

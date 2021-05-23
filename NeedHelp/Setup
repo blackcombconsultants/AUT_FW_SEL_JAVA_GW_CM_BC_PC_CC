@@ -1,6 +1,7 @@
 	
 	Jenkins
 	---------------------------------------------------------------------------------
+	
 	Jenkins Key = 5462a411c69e4183b7749e61b852f69d
 	
 	Server  Akash AWS		
@@ -81,49 +82,65 @@
 
 testngxml
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="methods"
-	name="TestSuite_PersonalAuto">
+		Maven
+		----------------------------------------------------------------------------------
+		----------------------------------------------------------------------------------
 
-	<listeners>
-		<listener
-			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
-	</listeners>
-
-	<test thread-count="1" parallel="methods" name="Personal Auto PC">
-		<parameter name="GW_Application" value="PolicyCenter" />
+	
+		<test name="ChromeTest2" parallel="methods" thread-count="2">
+			<parameter name="StrBrowser" value="Chrome" />
+			<parameter name="TD_Username" value="9003130341" />
+			<parameter name="TD_password" value="U3JlRS5BdWcyMA==" />
+			<parameter name="TD_ProdType" value="Books" />
+			<parameter name="TD_ProdName"
+				value="Call Me by Your Name: A Novel (International Edition)" />
+			<classes>
+				<class name="com.wrapers.BaseTest">
+					<methods>
+						<exclude name=".*" />
+					</methods>
+				</class>
+				<class name="com.amazon.AmazonTest1">
+					<methods>
+						<exclude name=".*" />
+					</methods>
+				</class>
+			</classes>
+		</test> <!-- Test -->
+	
+	<test thread-count="1" parallel="methods" name="AccountCreation">
 		<classes>
-
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
 				<methods>
-					<include name="AUT_PA_PC_Newsubmission_1_BasicProgram" />
-					<include name="AUT_PA_PC_Newsubmission_2_StandardProgram" />
-					<include name="AUT_PA_PC_Newsubmission_3_PremiumProgram" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_1_CreateNewPersonAccount" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_2_SearchPerson" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_3_ModifyPerson" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_4_WithdrawAccount" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_5_OrganizationModify" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_6_CheckforDuplicates" />
+					<exclude name="AUT_PersonalAuto_PolicyCenter_AccountCreation_1_CreateNewCompanyAccount" />
 				</methods>
 			</class>
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test thread-count="1" parallel="methods" name="Issuance">
+			<classes>
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Issuance">
 				<methods>
-					<include name="AUT_PA_PC_Issuance_5_IssuePolicy" />
-					<include name="AUT_PA_PC_Issuance_5_IssuePolicy" />
+					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_5_IssuePolicy" />
+					<exclude name ="AUT_PersonalAuto_PolicyCenter_Issuance_4_Editpolicytransaction" />
 				</methods>
 			</class>
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Reinstatement">
-				<methods>
-					<include
-						name="AUT_PA_PC_Reinstatement_11_Editpolicytransaction" />
-					<include
-						name="AUT_PA_PC_Reinstatement_11_Editpolicytransaction" />
-					<!-- <exclude name="dummy" /> -->
-				</methods>
-			</class>
-
-		</classes>	<!-- classes -->
+		</classes>
 	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	
+
+
+
 
 
 Components
