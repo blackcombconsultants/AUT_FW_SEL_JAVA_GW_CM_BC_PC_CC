@@ -111,7 +111,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By SCFP_PrimaryNamedInsured       = By.xpath("//div[contains(@id,'Quote_SummaryDV-Insured')]//div[@class='gw-value-readonly-wrapper']");
 	final By SCFP_Address                   = By.xpath("//div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']");
 	final By SCFP_County                    = By.xpath("//div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']");
-	final By SCFP_AddressType               = By.xpath("//div[contains(@id,'Quote_SummaryDV-Insured')]//div[@class='gw-value-readonly-wrapper']");
+	final By SCFP_AddressType               = By.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType') and contains(@class,'gw-ValueWidget')]//div[@class='gw-label']");
 	final By SCFP_AddressDescription        = By.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressDescription')]//div[@class='gw-value-readonly-wrapper']");
 
 	final By BindOptions_ScheduleCancellation_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-SubmitCancellation')]/div[@role='menuitem']");

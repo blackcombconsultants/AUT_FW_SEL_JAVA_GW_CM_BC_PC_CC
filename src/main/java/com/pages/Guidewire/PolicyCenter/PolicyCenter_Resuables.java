@@ -97,9 +97,9 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				break;
 			case "Cancel Now" :
-				GuidewireAutomate("Reinstate", Bindoptions_CancelNow_Button, "clickAndwait", "");
+				GuidewireAutomate("Cancel Now", Bindoptions_CancelNow_Button, "clickAndwait", "");
 				GuidewireAutomate_Handle("alertaccept", "NA");
-				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Cancel (Bound)");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Cancellation (Bound)");
 				break;
 			case "Reinstate" :
 				GuidewireAutomate("Reinstate", Reinstate_Button, "clickAndwait", "");
@@ -107,14 +107,19 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				break;
 			case "Close Options" :
 				GuidewireAutomate("Close Options", CloseOptions_Button, "click", "");
+				break;
 			case "Withdraw Transaction" :
 				GuidewireAutomate("Withdraw Transaction", CloseOptions_WithdrawTransaction_Button, "click", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Submission (Withdrawn)");
 				break;
 			case "Decline" :
 				GuidewireAutomate("Decline", CloseOptions_Decline_Button, "clickAndwait", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
 				break;
 			case "Not Taken" :
 				GuidewireAutomate("Not Taken", CloseOptions_NotTaken_Button, "clickAndwait", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
 				break;
 			case "Print Quote" :
 				GuidewireAutomate("Print Quote", PrintQuote_Button, "clickAndwait", "");
@@ -320,11 +325,11 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Confirmation", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Confirmation");
 		GuidewireAutomate_Validation("PolicyNumber", SCFP_PolicyNumber, "equals", strPolicyNumber);
-		GuidewireAutomate_Validation("Primary_Named_Insured", SCFP_PrimaryNamedInsured, "equals", lhm_TestCase_Table_Data.get("PA_CP_PrimaryNameInsured"));
-		GuidewireAutomate_Validation("Address", SCFP_Address, "contains", lhm_TestCase_Table_Data.get("PA_CP_Address"));
-		GuidewireAutomate_Validation("County", SCFP_County, "equals", lhm_TestCase_Table_Data.get("PA_CP_County"));
-		GuidewireAutomate_Validation("Address_Type", SCFP_AddressType, "equals", lhm_TestCase_Table_Data.get("PA_CP_AddressType"));
-		GuidewireAutomate_Validation("Address_Description", SCFP_AddressDescription, "contains", lhm_TestCase_Table_Data.get("PA_CP_AddressDescription"));
+		GuidewireAutomate_Validation("Primary_Named_Insured", SCFP_PrimaryNamedInsured, "equals", lhm_TestCase_Table_Data.get("SCFP_PrimaryNamedInsured"));
+		GuidewireAutomate_Validation("Address", SCFP_Address, "contains", lhm_TestCase_Table_Data.get("SCFP_Address"));
+		GuidewireAutomate_Validation("County", SCFP_County, "equals", lhm_TestCase_Table_Data.get("SCFP_County"));
+		GuidewireAutomate_Validation("Address Type", SCFP_AddressType, "equals", lhm_TestCase_Table_Data.get("SCFP_AddressType"));
+		GuidewireAutomate_Validation("Address_Description", SCFP_AddressDescription, "contains", lhm_TestCase_Table_Data.get("SCFP_AddressDescription"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

@@ -28,13 +28,12 @@ public class GW_PC_PersonalAuto_CancelPolicy extends GW_GetDriver {
 		PolicyCenter_SubmissionBound.Cancellation_ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
 
-		strJob           = PolicyCenter_Resuables.infoBar("Job");
 		strLOB           = PolicyCenter_Resuables.infoBar("LOB");
 		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
 		strAccountName   = PolicyCenter_Resuables.infoBar("AccountName");
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
 		strPolicyNumber  = PolicyCenter_Resuables.infoBar("PolicyNumber");
-		strUnderwriter   = PolicyCenter_Resuables.infoBar("Underwriter");
+		strEffectiveDate = PolicyCenter_Resuables.infoBar("Status");
 
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}

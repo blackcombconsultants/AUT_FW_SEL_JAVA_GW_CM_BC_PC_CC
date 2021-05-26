@@ -29,7 +29,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PA_PC_Account_SearchPerson() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -39,7 +39,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PA_PC_Account_ModifyPerson() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -49,7 +49,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PA_PC_Account_WithdrawAccount() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -59,7 +59,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PA_PC_Account_OrganizationModify() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -68,7 +68,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PA_PC_Account_CheckforDuplicates() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -78,7 +78,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PA_PC_Account_Summary() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();

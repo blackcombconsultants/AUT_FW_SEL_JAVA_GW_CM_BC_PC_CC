@@ -39,7 +39,7 @@
 	C:\>cd C:\Users\Username\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC
 	
 	mvn clean test -DsuiteFile=testng_PC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=PolicyCenter -DgwCountry=United States -DgwState=Alaska
-	mvn clean test -DsuiteFile=testng_CC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=ClaimsCenter -DgwCountry=United States -DgwState=Alaska
+	mvn clean test -DsuiteFile=gwTestSuite/TestSuite_PersonalAuto.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=ClaimsCenter -DgwCountry=United States -DgwState=Alaska
 
 		
 	[INFO] Scanning for projects...
@@ -75,7 +75,8 @@
 	Java jdk
 	---------------------------------------------------------------------------------
 	Oracle
-	username:shreenivasshelby@gmail.com Password:Bhanu@12345
+	username:	shreenivasshelby@gmail.com 
+	Password:	Bhanu@12345
 
 
 

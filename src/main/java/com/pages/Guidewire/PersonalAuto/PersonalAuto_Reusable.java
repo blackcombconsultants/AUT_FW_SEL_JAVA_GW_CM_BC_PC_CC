@@ -216,7 +216,6 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				PolicyCenter_Resuables.newSubmissions_Verify();
 				PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																				// LOB
-
 				strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
 				strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
 				strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
@@ -267,6 +266,17 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
 				strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
 				strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+
+				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_Forms.pa_forms();
+
+				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_Payments.premiumSummary();
+				PersonalAuto_Payments.payments();
+				PersonalAuto_Payments.invoicing();
+				PersonalAuto_Payments.billing();
+				PersonalAuto_Payments.paymentSchedule();
+				PersonalAuto_Payments.upFrontPayment();
 
 				PolicyCenter_Resuables.clickButton("Bind Options");
 				PolicyCenter_Resuables.clickButton("Bind Only");
@@ -337,6 +347,16 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
 				strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
 
+				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_Forms.pa_forms();
+
+				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_Payments.premiumSummary();
+				PersonalAuto_Payments.payments();
+				PersonalAuto_Payments.invoicing();
+				PersonalAuto_Payments.billing();
+				PersonalAuto_Payments.paymentSchedule();
+				PersonalAuto_Payments.upFrontPayment();
 				PolicyCenter_Resuables.clickButton("Bind Options");
 				PolicyCenter_Resuables.clickButton("Issue Policy");
 				strJob = PolicyCenter_Resuables.infoBar("Job");
