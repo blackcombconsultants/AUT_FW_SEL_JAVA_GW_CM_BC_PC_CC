@@ -8,17 +8,21 @@ public interface PolicyCenter_Resuables_PO {
 	 * Headers
 	 */
 
-	final By InfoBar_SubmissionNumber = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Submission ')]");
-	final By InfoBar_Job              = By.xpath("//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label']");
-	final By InfoBar_Workflow         = By.xpath("//div[contains(@id,'InfoBar-Workflow')]//div[@class='gw-label gw-infoValue']");
-	final By InfoBar_LOB              = By.xpath("//div[contains(@id,'InfoBar-LOBLabel')]//div[@class='gw-label']");
-	final By InfoBar_Status           = By.xpath("//div[contains(@id,'InfoBar-StatusAndExpDate')]//div[@class='gw-label']");
-	final By InfoBar_EffectiveDate    = By.xpath("//div[contains(@id,'InfoBar-EffectiveDate')]//div[@class='gw-label']");
-	final By InfoBar_AccountName      = By.xpath("//div[contains(@id,'InfoBar-AccountName')]//div[@class='gw-label gw-infoValue']");
-	final By InfoBar_AccountNumber    = By.xpath("//div[contains(@id,'InfoBar-AccountNumber')]//div[@class='gw-label gw-infoValue']");
-	final By InfoBar_PolicyNumber     = By.xpath("//div[contains(@id,'InfoBar-PolicyNumber')]//div[@class='gw-label gw-infoValue']");
-	final By InfoBar_Underwriter      = By.xpath("//div[contains(@id,'InfoBar-Underwriter')]//div[@class='gw-label gw-infoValue']");
-	final By InfoBar_EditLock         = By.xpath("//div[contains(@id,'InfoBar-EditLock')]//div[@class='gw-label gw-infoValue']");
+	final By InfoBar_SubmissionNumber    = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Submission ')]");
+	final By InfoBar_ReinstatementNumber = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Reinstatement ')]");
+	final By InfoBar_RewriteNumber       = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Rewrite ')]");
+	final By InfoBar_Job                 = By.xpath("//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label']");
+	final By InfoBar_ReinstatementJob    = By.xpath("//div[contains(@id,'InfoBar-ReinstatementLabel')]//div[@class='gw-label']");
+	final By InfoBar_RewriteJob          = By.xpath("//div[contains(@id,'InfoBar-RewriteLabel')]//div[@class='gw-label']");
+	final By InfoBar_Workflow            = By.xpath("//div[contains(@id,'InfoBar-Workflow')]//div[@class='gw-label gw-infoValue']");
+	final By InfoBar_LOB                 = By.xpath("//div[contains(@id,'InfoBar-LOBLabel')]//div[@class='gw-label']");
+	final By InfoBar_Status              = By.xpath("//div[contains(@id,'InfoBar-StatusAndExpDate')]//div[@class='gw-label']");
+	final By InfoBar_EffectiveDate       = By.xpath("//div[contains(@id,'InfoBar-EffectiveDate')]//div[@class='gw-label']");
+	final By InfoBar_AccountName         = By.xpath("//div[contains(@id,'InfoBar-AccountName')]//div[@class='gw-label gw-infoValue']");
+	final By InfoBar_AccountNumber       = By.xpath("//div[contains(@id,'InfoBar-AccountNumber')]//div[@class='gw-label gw-infoValue']");
+	final By InfoBar_PolicyNumber        = By.xpath("//div[contains(@id,'InfoBar-PolicyNumber')]//div[@class='gw-label gw-infoValue']");
+	final By InfoBar_Underwriter         = By.xpath("//div[contains(@id,'InfoBar-Underwriter')]//div[@class='gw-label gw-infoValue']");
+	final By InfoBar_EditLock            = By.xpath("//div[contains(@id,'InfoBar-EditLock')]//div[@class='gw-label gw-infoValue']");
 
 	final By Producer_Header = By.xpath("//div[contains(@id,'title-toolbar')]//div[text()='Producer']");
 
@@ -32,9 +36,10 @@ public interface PolicyCenter_Resuables_PO {
 	final By Forms_Header         = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Forms']");
 	final By PolicySummary_Header = By.xpath("//div[@id='PolicyFile_Summary-ttlBar']//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Policy Summary')]");
 
-	final By Error_Header     = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-subGroupLabel gw-text']");
-	final By Error_Message    = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']");
-	final By AllError_Message = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']");
+	final By Error_Header         = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-subGroupLabel gw-text']");
+	final By Error_Message        = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']");
+	final By AllError_Message     = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']");
+	final By DiscardUnsavedChange = By.xpath("//div[text()='Discard Unsaved Change']");
 
 	final By SearchAccountResults_Msg = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]/div[contains(@class,'sub-group')]");
 	final By SearchResults            = By.xpath("//table[@class='gw-ListViewWidget--table gw-table']");
@@ -122,29 +127,30 @@ public interface PolicyCenter_Resuables_PO {
 	 */
 
 	final By SR_PolicyDetails     = By.xpath("//div[contains(@class,'boldLabel') and text()='Policy Details']");
-	final By SR_PD_TermType       = By.xpath("//div[contains(@id,'TermType')]//div[@contains(@class,'gw-label')]");
+	final By SR_PD_TermType       = By.xpath("//div[contains(@id,'TermType') and contains(@class,'gw-ValueWidget')]//div[contains(@class,'gw-label')]");
 	final By SR_PD_TermNumber     = By.xpath("//div[contains(@id,'TermNumber')]//div[@contains(@class,'gw-label')]");
-	final By SR_PD_EffectiveDate  = By.xpath("//div[contains(@id,'EffectiveDate')]//div[@contains(@class,'gw-label')]");
-	final By SR_PD_ExpirationDate = By.xpath("//div[contains(@id,'ExpirationDate')]//div[@contains(@class,'gw-label')]");
-	final By SR_PD_WrittenDate    = By.xpath("//div[contains(@id,'WrittenDate')]//div[@contains(@class,'gw-label')]");
-	final By SR_PD_RateAsOfDate   = By.xpath("//div[contains(@id,'RateAsOfDate')]//div[@contains(@class,'gw-label')]");
+	final By SR_PD_EffectiveDate  = By.xpath("//div[contains(@id,'EffectiveDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By SR_PD_ExpirationDate = By.xpath("//div[contains(@id,'ExpirationDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By SR_PD_WrittenDate    = By.xpath("//div[contains(@id,'WrittenDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By SR_PD_RateAsOfDate   = By.xpath("//div[contains(@id,'RateAsOfDate')]//div[@class='gw-value-readonly-wrapper']");
 
 	final By SR_AffinityGroup        = By.xpath("//div[contains(@class,'boldLabel') and text()='Affinity Group']");
-	final By SR_AG_Name              = By.xpath("//div[contains(@id,'AffinityGroup')]//div[@contains(@class,'gw-label')]");
-	final By SR_AG_ReinstatementDate = By.xpath("//div[contains(@id,'ReinstatementDate')]//div[@contains(@class,'gw-label')]");
-	final By SR_AG_ReasonCode        = By.xpath("//select[contains(@id,'ReasonCode')]");
-	final By SR_AG_ReasonDescription = By.xpath("//input[contains(@id,'ReasonDescription')]");
+	final By SR_AG_Name              = By.xpath("//div[contains(@id,'AffinityGroup')]//div[@class='gw-value-readonly-wrapper']");
+	final By SR_AG_ReinstatementDate = By.xpath("//div[contains(@id,'ReinstatementDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By SR_AG_ReasonCode        = By.xpath("//select[contains(@name,'ReinstatePolicyDV-ReasonCode')]");
+	final By SR_AG_ReasonDescription = By.xpath("//textarea[contains(@name,'ReinstatePolicyDV-ReasonDescription')]");
 
 	/*
 	 * Start Policy Change
 	 */
 
 	final By SPC_ScreenHeader  = By.xpath("//div[@id='StartPolicyChange-StartPolicyChangeScreen-ttlBar']//div[text()='Start Policy Change']");
-	final By SPC_EffectiveDate = By.xpath("//input[contains(@name,'StartPolicyChangeDV-EffectiveDate')]");
-	final By SPC_Description   = By.xpath("//input[contains(@name,'StartPolicyChangeDV-Description')]");
+	final By SPC_EffectiveDate = By.xpath("//div[contains(@id,'ReinstatementDate')]//div[@class='gw-value-readonly-wrapper']");
+	final By SPC_Description   = By.xpath("//textarea[contains(@name,'ReinstatePolicyDV-ReasonDescription')]");
 
 	/*
-	 * rewrite
+	 * renewal
 	 */
+	final By RDE_RenewalCode = By.xpath("//select[contains(@name,'RenewalCode')]");
 
 }

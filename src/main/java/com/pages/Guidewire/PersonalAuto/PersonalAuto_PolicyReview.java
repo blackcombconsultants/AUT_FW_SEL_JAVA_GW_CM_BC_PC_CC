@@ -36,12 +36,6 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Primary Named Insured", PR_PrimaryNamedInsured, "equals", strAccountName);
 		GuidewireAutomate_Validation("County", PR_County, "equals", lhm_TestCase_Table_Data.get("PR_County"));
 		GuidewireAutomate_Validation("Address Type", PR_AddressType, "contains", lhm_TestCase_Table_Data.get("PR_AddressType"));
-		/*
-		 * GuidewireAutomate_Validation("Address Description",
-		 * PR_AddressDescription, "equals",
-		 * lhm_TestCase_Table_Data.get("PR_AddressDescription"));
-		 */
-		GuidewireAutomate_Validation("Date Quote Needed", PR_DateQuoteNeeded, "equals", lhm_TestCase_Table_Data.get("PR_DateQuoteNeeded"));
 
 		GuidewireAutomate_Validation("Product", PR_Product, "equals", lhm_TestCase_Table_Data.get("PR_Product"));
 		GuidewireAutomate_Validation("Effective Date", PR_EffectiveDate, "equals", lhm_TestCase_Table_Data.get("PR_EffectiveDate"));

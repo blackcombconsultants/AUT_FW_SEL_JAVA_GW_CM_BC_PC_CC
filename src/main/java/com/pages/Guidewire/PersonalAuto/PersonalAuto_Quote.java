@@ -26,6 +26,16 @@ public class PersonalAuto_Quote extends SeleniumWebDriver_Commands implements Pe
 		GuidewireAutomate_Validation("Address", QU_Address, "contains", lhm_TestCase_Table_Data.get("QU_Address"));
 		GuidewireAutomate_Validation("Address Type", QU_AddressType, "equals", lhm_TestCase_Table_Data.get("QU_AddressType"));
 	}
+	public static void viewQuoteDetails() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("quote", strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Quote_Header, "Contains", "Quote");
+
+		GuidewireAutomate_Validation("PrimaryNamedInsured", QU_PrimaryNamedInsured, "equals", strAccountName);
+		GuidewireAutomate_Validation("Address", QU_Address, "contains", lhm_TestCase_Table_Data.get("QU_Address"));
+		GuidewireAutomate_Validation("Address Type", QU_AddressType, "equals", lhm_TestCase_Table_Data.get("QU_AddressType"));
+	}
 
 	public static void policyPremium_Garage1() throws Throwable {
 		GuidewireAutomate_Validation("Garage 1", QU_PP_Garage1, "equals", "Garage 1");

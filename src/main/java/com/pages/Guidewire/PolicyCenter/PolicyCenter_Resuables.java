@@ -88,9 +88,10 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Submission (Bound)");
 				break;
-			case "Issue Policy for Rewrite" :
+			case "Issue Policy for Policy Change" :
 				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "");
 				GuidewireAutomate_Handle("alertaccept", "NA");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Policy Change (Bound)");
 				break;
 			case "Schedule Cancellation" :
 				GuidewireAutomate("Schedule Cancellation", BindOptions_ScheduleCancellation_Button, "clickAndwait", "");
@@ -101,9 +102,34 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Cancellation (Bound)");
 				break;
+			case "Renew" :
+				GuidewireAutomate("Renew", BindOptions_ScheduleCancellation_Button, "clickAndwait", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
+				break;
+			case "Issue Now" :
+				GuidewireAutomate("Issue Now", Bindoptions_CancelNow_Button, "clickAndwait", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Cancellation (Bound)");
+				break;
 			case "Reinstate" :
 				GuidewireAutomate("Reinstate", Reinstate_Button, "clickAndwait", "");
 				GuidewireAutomate_Handle("alertaccept", "NA");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Reinstatement (Bound)");
+				break;
+			case "Issue Policy for Rewrite Full Term" :
+				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Rewrite Full Term (Bound)");
+				break;
+			case "Issue Policy for Rewrite New Term" :
+				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Rewrite New Term (Bound)");
+				break;
+			case "Issue Policy for Rewrite Remainder of Term" :
+				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Rewrite Remainder of Term (Bound)");
 				break;
 			case "Close Options" :
 				GuidewireAutomate("Close Options", CloseOptions_Button, "click", "");
@@ -141,9 +167,37 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				strInfobar = getText_Element(InfoBar_Job);
 				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Job", strInfobar);
 				break;
+			case "ReinstatementJob" :
+				strInfobar = getText_Element(InfoBar_ReinstatementJob);
+				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Job", strInfobar);
+				break;
+			case "RewriteJob" :
+				strInfobar = getText_Element(InfoBar_RewriteJob);
+				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "Job", strInfobar);
+				break;
 			case "SubmissionNumber" :
 				strInfobar = getText_Element(InfoBar_SubmissionNumber);
-				strInfobar = strInfobar.substring(11, strInfobar.length());
+				strInfobar = strInfobar.substring("Submission".length() + 1, strInfobar.length());
+				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "SubmissionNumber", strInfobar);
+				break;
+			case "PolicyChangeNumber" :
+				strInfobar = getText_Element(InfoBar_SubmissionNumber);
+				strInfobar = strInfobar.substring("Policy Change".length() + 1, strInfobar.length());
+				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "SubmissionNumber", strInfobar);
+				break;
+			case "RenewalNumber" :
+				strInfobar = getText_Element(InfoBar_SubmissionNumber);
+				strInfobar = strInfobar.substring("Renewal".length() + 1, strInfobar.length());
+				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "SubmissionNumber", strInfobar);
+				break;
+			case "ReinstatementNumber" :
+				strInfobar = getText_Element(InfoBar_ReinstatementNumber);
+				strInfobar = strInfobar.substring("Reinstatement".length() + 1, strInfobar.length());
+				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "SubmissionNumber", strInfobar);
+				break;
+			case "RewriteNumber" :
+				strInfobar = getText_Element(InfoBar_RewriteNumber);
+				strInfobar = strInfobar.substring("Rewrite".length() + 1, strInfobar.length());
 				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "SubmissionNumber", strInfobar);
 				break;
 			case "Workflow" :
@@ -347,24 +401,39 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Start Reinstatement");
 		GuidewireAutomate_Validation("PolicyDetails", SR_PolicyDetails, "equals", "Policy Details");
 
-		GuidewireAutomate_Validation("TermType", SR_PD_TermType, "equals", lhm_TestCase_Table_Data.get("PA_SR_Term _Type"));
-		GuidewireAutomate_Validation("TermNumber", SR_PD_TermNumber, "equals", lhm_TestCase_Table_Data.get("PA_SR_Term _Number"));
-		GuidewireAutomate_Validation("EffectiveDate", SR_PD_EffectiveDate, "equals", lhm_TestCase_Table_Data.get("PA_SR_Effective_Date"));
-		GuidewireAutomate_Validation("ExpirationDate", SR_PD_ExpirationDate, "equals", lhm_TestCase_Table_Data.get("PA_SR_Expiration_Date"));
-		GuidewireAutomate_Validation("WrittenDate", SR_PD_WrittenDate, "equals", lhm_TestCase_Table_Data.get("PA_SR_Written_Date"));
+		GuidewireAutomate_Validation("TermType", SR_PD_TermType, "equals", lhm_TestCase_Table_Data.get("SRFP_TermType"));
+		// GuidewireAutomate_Validation("TermNumber", SR_PD_TermNumber,
+		// "equals", lhm_TestCase_Table_Data.get("SRFP_Term Number"));
+		GuidewireAutomate_Validation("EffectiveDate", SR_PD_EffectiveDate, "equals", lhm_TestCase_Table_Data.get("SRFP_EffectiveDate"));
+		GuidewireAutomate_Validation("ExpirationDate", SR_PD_ExpirationDate, "equals", lhm_TestCase_Table_Data.get("SRFP_ExpirationDate"));
+		GuidewireAutomate_Validation("WrittenDate", SR_PD_WrittenDate, "equals", lhm_TestCase_Table_Data.get("SRFP_WrittenDate"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 
 	}
 
+	public static void renewalDataEntry() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("StartReinstatement", strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Data Entry");
+
+		GuidewireAutomate("Renewal Code", RDE_RenewalCode, "selectByVisibleTextAndwait", "Renew - account consideration");
+		GuidewireAutomate("ok", OK_Button, "click", "");
+		GuidewireAutomate_Handle("alertaccept", "NA");
+		GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Renewal (Renewing)");
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+
+	}
 	public static void startReinstatement_AffinityGroup() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("StartReinstatement", strTestCaseName);
 
 		GuidewireAutomate_Validation("AffinityGroup", SR_AffinityGroup, "equals", "Affinity Group");
-		GuidewireAutomate_Validation("ReinstatementDate", SR_AG_ReinstatementDate, "equals", lhm_TestCase_Table_Data.get("PA_SR_Effective_Date_of_Reinstatement"));
-		GuidewireAutomate("ReasonCode", SR_AG_ReasonCode, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PA_SR_Reason"));
-		GuidewireAutomate("ReasonDescription", SR_AG_ReasonDescription, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PA_SR_Reason_Description"));
+		GuidewireAutomate_Validation("ReinstatementDate", SR_AG_ReinstatementDate, "equals", lhm_TestCase_Table_Data.get("SRFP_EffectiveDateReinstatement"));
+		GuidewireAutomate("ReasonCode", SR_AG_ReasonCode, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("SRFP_Reason"));
+		GuidewireAutomate("ReasonDescription", SR_AG_ReasonDescription, "clearANDsendKeys", lhm_TestCase_Table_Data.get("SRFP_ReasonDescription"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

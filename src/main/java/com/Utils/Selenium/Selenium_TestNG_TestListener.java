@@ -28,7 +28,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 
 public class Selenium_TestNG_TestListener extends GW_Base implements ITestListener {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();

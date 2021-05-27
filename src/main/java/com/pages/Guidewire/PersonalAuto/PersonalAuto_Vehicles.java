@@ -119,10 +119,10 @@ public class PersonalAuto_Vehicles extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate_Validation("Assign Drivers to Vehicles", VE_AssignDriverstoVehicles, "equals", "Assign Drivers to Vehicles");
 		GuidewireAutomate_Validation("What percentage does each driver use this vehicle?", VE_ADV_Percentageeachdriverusethisvehicle, "equals", "What percentage does each driver use this vehicle?");
 
-		GuidewireAutomate("Add", VE_ADV_Add_Button, "click", "");
+		GuidewireAutomate("Add", VE_ADV_Add_Button, "clickAndwait", "");
 
 		By VE_ADV_Driver = By.xpath("//div[@class='gw-subMenu gw-open']//div[contains(@id,'DriverPctLV_tb-AddDriver') and contains(@class,'gw-AddMenuItemWidget')]//div[@class='gw-label' and text()='" + strAccountName + "']");
-		GuidewireAutomate("Driver " + strAccountName, VE_ADV_Driver, "click", lhm_TestCase_Table_Data.get("VE_ADV_Driver"));
+		GuidewireAutomate("Driver " + strAccountName, VE_ADV_Driver, "clickAndwait", lhm_TestCase_Table_Data.get("VE_ADV_Driver"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

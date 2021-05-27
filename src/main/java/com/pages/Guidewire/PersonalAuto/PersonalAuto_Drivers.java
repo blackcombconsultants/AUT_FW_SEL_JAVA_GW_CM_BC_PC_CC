@@ -45,7 +45,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		By DR_DriversDetails_Add_ExistingDriver_Name = By.xpath(
 				"//div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'DriversLV_tb-AddDriver-AddExistingContact')]//div[contains(@id,'UnassignedDriver')]//div[@class='gw-label' and text()='"
 						+ strAccountName + "']");
-		GuidewireAutomate("Existing Driver " + strAccountName, DR_DriversDetails_Add_ExistingDriver_Name, "click", strAccountName);
+		GuidewireAutomate("Existing Driver " + strAccountName, DR_DriversDetails_Add_ExistingDriver_Name, "clickAndwait", strAccountName);
 		// Hande Dynamic Element - Click Existing driver - Completed
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);

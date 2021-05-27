@@ -8,7 +8,7 @@ import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 
 public class GW_PC_PersonalAuto_CancelPolicy extends GW_GetDriver {
 
@@ -25,11 +25,10 @@ public class GW_PC_PersonalAuto_CancelPolicy extends GW_GetDriver {
 		PolicyCenter_Resuables.Confirmation();
 		PolicyCenter_Resuables.clickButton("Bind Options");
 		PolicyCenter_Resuables.clickButton("Cancel Now");
-		PolicyCenter_SubmissionBound.Cancellation_ViewYourPolicy();
+		PolicyCenter_Bound.Cancellation_ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
 
 		strLOB           = PolicyCenter_Resuables.infoBar("LOB");
-		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
 		strAccountName   = PolicyCenter_Resuables.infoBar("AccountName");
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
 		strPolicyNumber  = PolicyCenter_Resuables.infoBar("PolicyNumber");

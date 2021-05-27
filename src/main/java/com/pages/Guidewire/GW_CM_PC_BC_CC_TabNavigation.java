@@ -289,11 +289,11 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 			case "Renew Policy" :
 				GuidewireAutomate("Actions", Menu_Actions, "click", "");
 				GuidewireAutomate("Renew Policy", MenuPC_Actions_Policy_NewPolicyTransaction_RenewPolicy, "click", "");
+				GuidewireAutomate_Handle("alertaccept", "NA");
 				break;
 			case "Reinstate Policy" :
 				GuidewireAutomate("Actions", Menu_Actions, "click", "");
 				GuidewireAutomate("Reinstate Policy", MenuPC_Actions_Policy_NewPolicyTransaction_ReinstatePolicy, "click", "");
-				GuidewireAutomate_Handle("alertaccept", "NA");
 				break;
 			case "Rewrite Full Term" :
 				GuidewireAutomate("Actions", Menu_Actions, "click", "");

@@ -20,7 +20,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 
 public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 
@@ -136,7 +136,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		strJob          = PolicyCenter_Resuables.infoBar("Job");
 		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 
-		PolicyCenter_SubmissionBound.ViewYourPolicy();
+		PolicyCenter_Bound.ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
 		PolicyCenter_PolicySummary.account_Verify();
 

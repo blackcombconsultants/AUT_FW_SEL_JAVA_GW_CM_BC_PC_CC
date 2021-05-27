@@ -14,9 +14,21 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		super(driver, oExtentTest);
 	}
 
-	public static void policyInfo() throws Throwable {
+	public static void discardUnsavedChange() throws Throwable {
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
 
+		GuidewireAutomate_Validation("The object you are trying to update was changed by another user", PolicyCenter_Resuables_PO.Error_Message, "equals",
+				"The object you are trying to update was changed by another user. Please try your change again.");
+		GuidewireAutomate("AffinityGroup_Name", PolicyCenter_Resuables_PO.DiscardUnsavedChange, "clickAndwait", "NA");
+
+	}
+
+	public static void dateQuoteNeeded() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
+
+		GuidewireAutomate("Date Quote Needed", PI_DateQuoteNeeded, "sendKeys", lhm_TestCase_Table_Data.get("PI_DateQuoteNeeded"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -26,8 +38,6 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
-
-		GuidewireAutomate("Date Quote Needed", PI_DateQuoteNeeded, "sendKeys", lhm_TestCase_Table_Data.get("PI_DateQuoteNeeded"));
 
 		GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals", strAccountName);
 

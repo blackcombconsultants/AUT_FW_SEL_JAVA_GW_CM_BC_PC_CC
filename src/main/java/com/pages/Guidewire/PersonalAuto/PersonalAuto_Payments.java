@@ -147,9 +147,14 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 
 		String strDynamicXpath   = lhm_TestCase_Table_Data.get("PA_PS_PaymentPlan");
 		By     PA_PS_PaymentPlan = By.xpath("//div[text()='" + strDynamicXpath + "']/ancestor::td[contains(@class,'gw-CellWidget')]/preceding-sibling::td[contains(@class,'gw-CellWidget')]//div[@role='radio']");
-		By     PA_PS_Installment = By.xpath("//div[text()='" + strDynamicXpath + "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td['Installment'=substring(@id,197,string-length(@id))]//div[@class='gw-value']/div/div[1]");
-		By     PA_PS_Total       = By.xpath("//div[text()='" + strDynamicXpath + "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td['Total'=substring(@id,197,string-length(@id))]//div[@class='gw-value']/div/div[1]");
-		By     PA_PS_DownPayment = By.xpath("//div[text()='" + strDynamicXpath + "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td['DownPayment'=substring(@id,197,string-length(@id))]//div[@class='gw-value']/div/div[1]");
+		By     PA_PS_DownPayment = By
+				.xpath("//div[text()='" + strDynamicXpath + "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td[contains(@id,'DownPayment') and contains(@class,'gw-FormatCellWidget')]//div[@class='gw-value']/div/div[1]");
+		By     PA_PS_Installment = By
+				.xpath("//div[text()='" + strDynamicXpath + "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td[contains(@id,'-Installment') and contains(@class,'gw-FormatCellWidget')]//div[contains(@id,'InstallmentPreview')]");
+		By     PA_PS_Total       = By
+				.xpath("//div[text()='" + strDynamicXpath + "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td[contains(@id,'Total') and contains(@class,'gw-FormatCellWidget')]//div[@class='gw-value']/div/div[1]");
+		// By PA_PS_Total = By.xpath("//div[text()='" + strDynamicXpath +
+		// "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td['Total'=substring(@id,197,string-length(@id))]//div[@class='gw-value']/div/div[1]");
 
 		GuidewireAutomate("Payment Plan = " + strDynamicXpath, PA_PS_PaymentPlan, "clickAndwait", "");
 		GuidewireAutomate_Validation("Down Payment", PA_PS_DownPayment, "fetch", lhm_TestCase_Table_Data.get("PA_PS_DownPayment"));

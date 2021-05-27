@@ -11,13 +11,13 @@ import com.pages.Guidewire.PersonalAuto.PersonalAuto_Forms;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Payments;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_Qualification;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
 
 public class GW_PC_PersonalAuto_RenewPolicy extends GW_GetDriver {
 
@@ -25,17 +25,24 @@ public class GW_PC_PersonalAuto_RenewPolicy extends GW_GetDriver {
 	public void AUT_PA_PC_RenewPolicy_01() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		PolicyCenter_Resuables.pcTabNavigation_Policy_Search();
-		PolicyCenter_PolicySummary.detail_Verify();
+		PersonalAuto_Reusable.submissionProcess("New Account", "Issue Policy");
+
 		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Renew Policy");
 
-		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
-		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
-		PolicyCenter_Resuables.offering();
+		PersonalAuto_Reusable.paMenuNavigation("Policy Info");
+		PolicyCenter_Resuables.clickButton("Edit Policy Transaction");
+		PersonalAuto_PolicyInfo.discardUnsavedChange();
 
-		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Qualification.qualification();
+		strJob              = PolicyCenter_Resuables.infoBar("Job");
+		strLOB              = PolicyCenter_Resuables.infoBar("LOB");
+		strEffectiveDate    = PolicyCenter_Resuables.infoBar("EffectiveDate");
+		strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+		strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
+		strPolicyNumber     = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		strUnderwriter      = PolicyCenter_Resuables.infoBar("Underwriter");
+		strSubmissionNumber = PolicyCenter_Resuables.infoBar("RenewalNumber");
+
+		PolicyCenter_Resuables.offering();
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_PolicyInfo.primaryNamedInsured();
@@ -47,51 +54,32 @@ public class GW_PC_PersonalAuto_RenewPolicy extends GW_GetDriver {
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_Drivers.driver_Edit_ExistingDriver();
-		PersonalAuto_Drivers.driver_ContatDetails("VERIFY");
-		PersonalAuto_Drivers.driver_Roles("EDIT"); //
-		PersonalAuto_Drivers.driver_RetrieveMVR();
-		PersonalAuto_Drivers.driver_Addresses("VERIFY");
-		PersonalAuto_Drivers.driver_MotorVehicleRecord("VERIFY");
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_Vehicles.createVehicles();
-		PersonalAuto_Vehicles.assignDriver();
-		// PersonalAuto_Vehicles.additionalInterest_Add_ExistingAdditionalInterest();
+		PersonalAuto_Vehicles.Vehicles_Edit();
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedtoallVehiclesIn();
+		PersonalAuto_Coverages.additionalcoveragesAppliedperVehiclesIn();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_RiskAnalysis.addUWIssue();
-		PersonalAuto_RiskAnalysis.approveUWIssues();
-		PersonalAuto_RiskAnalysis.riskApprovalDetails(); //
-		PersonalAuto_RiskAnalysis.addUWContingency(); //
-		PersonalAuto_RiskAnalysis.priorPolicies_Add(); //
-		// PersonalAuto_RiskAnalysis.priorLosses_Add();
+		PersonalAuto_RiskAnalysis.button_Verify();
 
 		PolicyCenter_Resuables.clickButton("Next");
-		PersonalAuto_PolicyReview.policyDetails();
+		PersonalAuto_PolicyReview.clickTab_PolicyReview("Differences");
+		PersonalAuto_PolicyReview.clickTab_PolicyReview("Policy Review");
 		PersonalAuto_PolicyReview.policyLevelCoverages();
-		PersonalAuto_PolicyReview.vehicleLevelCoverages(); //
-		PersonalAuto_PolicyReview.vehicleLevelCoverages_VehicleCoverages(); //
-		PersonalAuto_PolicyReview.exclusionsAndConditions();
+		PersonalAuto_PolicyReview.vehicleLevelCoverages();
 
 		PolicyCenter_Resuables.clickButton("Save Draft");
 		PolicyCenter_Resuables.clickButton("Quote");
-		PersonalAuto_Quote.quoteDetails();
+		PersonalAuto_Quote.viewQuoteDetails();
 		PersonalAuto_Quote.policyPremium_Garage1();
 		PersonalAuto_Quote.policyPremium_Vehicle1();
 		PersonalAuto_Quote.policyPremium_PremiumSubtotalandTaxes();
-		strJob = PolicyCenter_Resuables.infoBar("Job");
-		strLOB = PolicyCenter_Resuables.infoBar("LOB");
-		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
-		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
-		String strEditLock = PolicyCenter_Resuables.infoBar("EditLock");
 
-		PolicyCenter_Resuables.clickButton("Release Lock");
-		PersonalAuto_RiskAnalysis.releaseLock();
-
-		PersonalAuto_Quote.quoteDetails();
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_Forms.pa_forms();
 
@@ -101,18 +89,19 @@ public class GW_PC_PersonalAuto_RenewPolicy extends GW_GetDriver {
 		PersonalAuto_Payments.invoicing();
 		PersonalAuto_Payments.billing();
 		PersonalAuto_Payments.paymentSchedule();
-		PersonalAuto_Payments.invoicingOverrides();
-		PersonalAuto_Payments.payUsing();
-		PersonalAuto_Payments.upFrontPayment();
-
 		PolicyCenter_Resuables.clickButton("Bind Options");
-		PolicyCenter_Resuables.clickButton("Issue Policy");
+		PolicyCenter_Resuables.clickButton("Renew");
+		PolicyCenter_Resuables.renewalDataEntry();
 
+		strJob           = PolicyCenter_Resuables.infoBar("Job");
+		strLOB           = PolicyCenter_Resuables.infoBar("LOB");
+		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
+		strAccountName   = PolicyCenter_Resuables.infoBar("AccountName");
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
-		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+		strPolicyNumber  = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		strUnderwriter   = PolicyCenter_Resuables.infoBar("Underwriter");
 
-		PolicyCenter_SubmissionBound.ViewYourPolicy();
+		PolicyCenter_Bound.RenewalRenewing_ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
 		PolicyCenter_PolicySummary.account_Verify();
 

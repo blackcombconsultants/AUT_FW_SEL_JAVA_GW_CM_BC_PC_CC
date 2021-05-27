@@ -7,11 +7,11 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 
-public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands implements PolicyCenter_SubmissionBoud_PO {
+public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements PolicyCenter_Bound_PO {
 
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
-	public PolicyCenter_SubmissionBound(WebDriver driver, ExtentTest oExtentTest) {
+	public PolicyCenter_Bound(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
 
@@ -43,6 +43,13 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
 
 	}
+	public static void policyChangeBound_ViewYourPolicy() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Change Bound");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
 
 	public static void Cancellation_ViewYourPolicy() throws Throwable {
 
@@ -51,7 +58,62 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
 
 	}
+	public static void Reinstatement_ViewYourPolicy() throws Throwable {
 
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Reinstatement Bound");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
+	public static void Reinstatement_ViewYourrenewal() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Renewing");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourrenewal, "clickAndwait", "NA");
+
+	}
+	public static void RenewalRenewing_ViewYourPolicy() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Renewing");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
+	public static void RewriteFullTermBound_ViewYourPolicy() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Rewrite Full Term Bound");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
+	public static void RewriteNewTermBound_ViewYourPolicy() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Rewrite New Term Bound");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
+	public static void RewriteRemainderofTermBound_ViewYourPolicy() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Rewrite Remainder of Term Bound");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
+	public static void RewriteFullTermBound_ReviewChanges() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+
+	}
+	public static void RewriteFullTermBound_goToYourDesktop() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
+
+		GuidewireAutomate("View your Policy", GoToYourDesktop, "clickAndwait", "NA");
+
+	}
 	// ------>clicking on submission manager
 	public static void GoToTheSubmissionManagerforthisAccount(String type) throws Throwable {
 
@@ -80,13 +142,13 @@ public class PolicyCenter_SubmissionBound extends SeleniumWebDriver_Commands imp
 	public static void submitApplicationForDifferentAccount() throws Throwable {
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
 
-		GuidewireAutomate("Submit an_application_for_a_different_account", Submit_an_application_for_a_different_account, "click", "");
+		GuidewireAutomate("Submit an_application_for_a_different_account", Submit_an_application_for_a_different_account, "clickAndwait", "");
 
 	}
 
 	public static void goToYourDesktop() throws Throwable {
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
-		GuidewireAutomate("Go_To_Your_Desktop", Go_To_Your_Desktop, "click", "");
+		GuidewireAutomate("Go_To_Your_Desktop", GoToYourDesktop, "clickAndwait", "");
 
 	}
 

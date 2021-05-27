@@ -13,7 +13,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements PersonalAuto_Reusable_PO {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
@@ -90,6 +90,9 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				PolicyCenter_AccountSummary.detail_Verify();
 
 				break;
+			case "Rewrite" :
+
+				break;
 
 			default :
 				throw new IOException("No support for Account : " + Account);
@@ -112,6 +115,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				PersonalAuto_Qualification.qualification();
 
 				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_PolicyInfo.dateQuoteNeeded();
 				PersonalAuto_PolicyInfo.primaryNamedInsured();
 				PersonalAuto_PolicyInfo.pi_OfficialID();
 				PersonalAuto_PolicyInfo.policyDetails();
@@ -130,6 +134,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+				PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_RiskAnalysis.button_Verify();
@@ -167,6 +172,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				PersonalAuto_Qualification.qualification();
 
 				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_PolicyInfo.dateQuoteNeeded();
 				PersonalAuto_PolicyInfo.primaryNamedInsured();
 				PersonalAuto_PolicyInfo.pi_OfficialID();
 				PersonalAuto_PolicyInfo.policyDetails();
@@ -185,6 +191,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+				PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_RiskAnalysis.button_Verify();
@@ -226,6 +233,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				PersonalAuto_Qualification.qualification();
 
 				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_PolicyInfo.dateQuoteNeeded();
 				PersonalAuto_PolicyInfo.primaryNamedInsured();
 				PersonalAuto_PolicyInfo.pi_OfficialID();
 				PersonalAuto_PolicyInfo.policyDetails();
@@ -244,6 +252,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+				PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_RiskAnalysis.button_Verify();
@@ -283,7 +292,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				strJob = PolicyCenter_Resuables.infoBar("Job");
 				strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 
-				PolicyCenter_SubmissionBound.ViewYourPolicy();
+				PolicyCenter_Bound.ViewYourPolicy();
 				PolicyCenter_PolicySummary.detail_Verify();
 				PolicyCenter_PolicySummary.account_Verify();
 
@@ -295,7 +304,6 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				PolicyCenter_Resuables.newSubmissions_Verify();
 				PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																				// LOB
-
 				strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
 				strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
 				strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
@@ -306,6 +314,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				PersonalAuto_Qualification.qualification();
 
 				PolicyCenter_Resuables.clickButton("Next");
+				PersonalAuto_PolicyInfo.dateQuoteNeeded();
 				PersonalAuto_PolicyInfo.primaryNamedInsured();
 				PersonalAuto_PolicyInfo.pi_OfficialID();
 				PersonalAuto_PolicyInfo.policyDetails();
@@ -324,6 +333,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_Coverages.coveragesAppliedtoallVehiclesIn();
+				PersonalAuto_Coverages.coveragesAppliedperVehiclesIn();
 
 				PolicyCenter_Resuables.clickButton("Next");
 				PersonalAuto_RiskAnalysis.button_Verify();
@@ -362,15 +372,32 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 				strJob = PolicyCenter_Resuables.infoBar("Job");
 				strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 
-				PolicyCenter_SubmissionBound.ViewYourPolicy();
+				PolicyCenter_Bound.ViewYourPolicy();
 				PolicyCenter_PolicySummary.detail_Verify();
 				PolicyCenter_PolicySummary.account_Verify();
+
+				break;
+
+			case "Rewrite" :
 
 				break;
 
 			default :
 				throw new IOException("No support for Job : " + Job);
 		}
+
+	}
+
+	public static void cancellationProcess() throws Throwable {
+		PersonalAuto_Reusable.submissionProcess("New Account", "Issue Policy");
+		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Cancel Policy");
+		PolicyCenter_Resuables.startCancellationForPolicy();
+		PolicyCenter_Resuables.Confirmation();
+		PolicyCenter_Resuables.clickButton("Bind Options");
+		PolicyCenter_Resuables.clickButton("Cancel Now");
+		PolicyCenter_Bound.Cancellation_ViewYourPolicy();
+		PolicyCenter_PolicySummary.detail_Verify();
+		strEffectiveDate = PolicyCenter_Resuables.infoBar("Status");
 
 	}
 
