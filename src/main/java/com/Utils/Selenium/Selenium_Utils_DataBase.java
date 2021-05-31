@@ -1,6 +1,7 @@
 package com.Utils.Selenium;
 
 import java.io.File;
+import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -13,39 +14,71 @@ import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
 public class Selenium_Utils_DataBase extends Selenium_Utils_File {
-	static Connection oConnection = null;
-	final static String JdbcOdbcDriver = "sun.jdbc.odbc.JdbcOdbcDriver";
+	static Connection   oConnection          = null;
+	final static String JdbcOdbcDriver       = "sun.jdbc.odbc.JdbcOdbcDriver";
 	final static String MicrosoftExcelDriver = "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};DBQ=%s;DriverID=22;READONLY=false";
 
 	public static Connection getConnection(String strConnectionType, String pFilePath) throws Throwable {
 
 		switch (strConnectionType) {
-		case "Fillo":
-			Fillo oFillo = new Fillo();
-			oConnection = oFillo.getConnection(pFilePath);
-			break;
+			case "Fillo" :
+				Fillo oFillo = new Fillo();
+				oConnection = oFillo.getConnection(pFilePath);
+				break;
 
-		case "JdbcOdbcDriver":
+			case "JdbcOdbcDriver" :
 
-			break;
+				break;
 
-		case "Oracle":
+			case "Oracle" :
 
-			break;
+				break;
 
-		case "MySQL":
+			case "MySQL" :
 
-			break;
+				break;
 
-		case "mongoDB":
+			case "mongoDB" :
 
-			break;
+				break;
 
-		default:
-			break;
+			default :
+				throw new IOException("No Support for Connection " + strConnectionType);
 		}
 
 		return oConnection;
+
+	}
+
+	public static void Query(Connection oConnection, String SQL, String strQuery) throws Throwable {
+
+		switch (SQL) {
+			case "SELECT" :
+
+				break;
+
+			case "CREATE" :
+
+				break;
+
+			case "ALTER" :
+
+				break;
+
+			case "INSERT" :
+
+				break;
+
+			case "UPDATE" :
+
+				break;
+			case "DELETE" :
+
+				break;
+
+			default :
+				throw new IOException("No Support for SQL " + SQL);
+		}
 
 	}
 
@@ -70,21 +103,32 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 	}
 
-	public static LinkedHashMap<String, String> getData_MSExcel_WorkSheet_Fillo(String strTable,
-			String strPrimaryKeyValue) throws Throwable {
+	public static LinkedHashMap<String, String> getData_MSExcel_WorkSheet_Fillo(String strTable, String strPrimaryKeyValue) throws Throwable {
 
 		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strPrimaryKeyValue + "'";
-
 		oConnection = getConnection("Fillo", pTestDataFilePath);
 		return executeQuery(oConnection, strSelectQuery);
 
 	}
 
-	public static void UpdateData_MSExcel_WorkSheet_Fillo(String strTable, String strcolumn, String strValue)
-			throws Throwable {
+	public static LinkedHashMap<String, String> getData_MSExcel_WorkBook_WorkSheet_Fillo(String pWorkBook, String WorkSheet, String PrimaryKey) throws Throwable {
 
-		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='"
-				+ strTestCaseName + "'";
+		String strSelectQuery = "Select * from " + WorkSheet + " WHERE PrimaryKey='" + PrimaryKey + "'";
+		oConnection = getConnection("Fillo", pWorkBook);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static LinkedHashMap<String, String> getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(String pFilePath, String WorkSheet, String PrimaryKey, String DataSet) throws Throwable {
+		String strSelectQuery = "Select * from " + WorkSheet + " WHERE PrimaryKey='" + PrimaryKey + "' AND DataSet='" + DataSet + "'";
+		oConnection = getConnection("Fillo", pFilePath);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static void UpdateData_MSExcel_WorkSheet_Fillo(String strTable, String strcolumn, String strValue) throws Throwable {
+
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
 		System.out.println(strUpdateQuery);
 		oConnection = getConnection("Fillo", pTestDataFilePath);
 		oConnection.executeUpdate(strUpdateQuery);
@@ -95,10 +139,9 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 	public void getValue_JdbcOdbcDriver(String pFilePath) throws Exception {
 		File file = new File(pFilePath);
 		Class.forName(JdbcOdbcDriver);
-		java.sql.Connection connection = DriverManager
-				.getConnection(String.format(MicrosoftExcelDriver, file.getAbsolutePath()));
+		java.sql.Connection connection = DriverManager.getConnection(String.format(MicrosoftExcelDriver, file.getAbsolutePath()));
 
-		Statement stmt = connection.createStatement();
+		Statement stmt      = connection.createStatement();
 		ResultSet recordset = stmt.executeQuery("SELECT * FROM [Config$]");
 
 		ArrayList<String> aField = ((Recordset) recordset).getFieldNames();

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public interface PolicyCenter_Resuables_PO {
 
 	/*
-	 * Headers
+	 * InfoBar
 	 */
 
 	final By InfoBar_SubmissionNumber    = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Submission ')]");
@@ -24,6 +24,9 @@ public interface PolicyCenter_Resuables_PO {
 	final By InfoBar_Underwriter         = By.xpath("//div[contains(@id,'InfoBar-Underwriter')]//div[@class='gw-label gw-infoValue']");
 	final By InfoBar_EditLock            = By.xpath("//div[contains(@id,'InfoBar-EditLock')]//div[@class='gw-label gw-infoValue']");
 
+	/*
+	 * Headers
+	 */
 	final By Producer_Header = By.xpath("//div[contains(@id,'title-toolbar')]//div[text()='Producer']");
 
 	final By Screen_Header        = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
@@ -74,6 +77,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By PrintQuote_Button                       = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'CreateSubmissionQuote')]/div[@role='button']");
 	final By WithdrawTransaction_Button              = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
 	final By Reinstate_Button                        = By.xpath("//div[contains(@id,'ToolbarButtonSet-Reinstate')]/div[@role='button']");
+
 	/*
 	 * New Submissions
 	 */

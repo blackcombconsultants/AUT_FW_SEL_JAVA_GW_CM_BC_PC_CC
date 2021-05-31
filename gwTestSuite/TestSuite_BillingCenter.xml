@@ -7,9 +7,15 @@
 		<listener class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
-	<test thread-count="2" parallel="methods" name="GW_BC_Invoice">
+	<test thread-count="2" parallel="methods"
+	name="PersonalAuto BilllingCenter Regression">
 		<classes>
-			<class name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice_Test" />
+			<class
+				name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice">
+				<methods>
+					<include name="AUT_PA_BC_Invoice_01" />
+				</methods>
+			</class>	<!-- class -->
 		</classes>
 	</test> <!-- Test -->
 

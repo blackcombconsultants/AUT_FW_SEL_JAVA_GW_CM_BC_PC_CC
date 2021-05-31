@@ -11,7 +11,8 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	 * 
 	 */
 
-	final By Menu_Actions = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
+	final By Menu_ActionsBC = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
+	final By Menu_Actions   = By.xpath("//div[contains(@id,'MenuActions')]/div[@role='button']/div[2]");
 
 	/*
 	 * -------------------------------------------------------------------------
@@ -245,9 +246,9 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	 * Account Tab
 	 */
 	final By TabBC_Account                      = By.xpath("//div[@id='TabBar-AccountsTab']//div[@class='gw-label']");
-	final By TabBC_Account_dd                   = By.xpath("//div[@id='TabBar-AccountTab']/div[3]");
-	final By TabBC_Account_AccountNumber        = By.xpath("//*[@id='TabBar-AccountTab-AccountTab_AccountNumberSearchItem']/div/input");
-	final By TabBC_Account_AccountNumber_Search = By.xpath("//*[@id='TabBar-AccountTab-AccountTab_AccountNumberSearchItem_Button']/span");
+	final By TabBC_Account_dd                   = By.xpath("//div[@id='TabBar-AccountsTab']/div[3]");
+	final By TabBC_Account_AccountNumber        = By.xpath("//input[@name='TabBar-AccountsTab-AccountNumberSearchItem']");
+	final By TabBC_Account_AccountNumber_Search = By.xpath("//div[@id='TabBar-AccountsTab-AccountNumberSearchItem_Button']/span");
 	/*
 	 * NewAccount
 	 */
@@ -265,17 +266,18 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	 * Actions
 	 */
 
-	final By MenuBC_Account_Actions_AddPolicy                      = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
-	final By MenuBC_Account_Actions_NewPayment                     = By.id("Group-MenuActions-MenuActions_NewPayment");
-	final By MenuBC_Account_Actions_NewTransaction                 = By.id("Group-MenuActions-MenuActions_NewTransaction");
-	final By MenuBC_Account_Actions_TransferPolicies               = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_TransferPolicies");
-	final By MenuBC_Account_Actions_NewNote                        = By.id("AccountGroup-AccountDetailMenuActions-AccountsMenuActions_NewNote");
-	final By MenuBC_Account_Actions_NewDocument                    = By.id("AccountGroup-AccountDetailMenuActions-NewDocument");
-	final By MenuBC_Account_Actions_NewDocument_CreateFromTemplate = By.id("AccountGroup-AccountDetailMenuActions-NewDocument");
-	final By MenuBC_Account_Actions_NewDocument_UploadDocument     = By.id("AccountGroup-AccountDetailMenuActions-NewDocument");
-	final By MenuBC_Account_Actions_NewEmail                       = By.id("AccountGroup-AccountDetailMenuActions-NewEmail");
-	final By MenuBC_Account_Actions_NewEmail_NewEmail              = By.id("AccountGroup-AccountDetailMenuActions-NewEmail");
-	final By MenuBC_Account_Actions_NewEmail_NewEmailTemplete      = By.id("AccountGroup-AccountDetailMenuActions-NewEmail");
+	final By MenuBC_Account_Actions_AddPolicy                       = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewPolicy");
+	final By MenuBC_Account_Actions_NewPayment                      = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_Payments");
+	final By MenuBC_Account_Actions_NewPayment_NewDirectBillPayment = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_Payments-AccountDetailMenuActions_NewDirectBillPayment");
+	final By MenuBC_Account_Actions_NewTransaction                  = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewTransaction");
+	final By MenuBC_Account_Actions_TransferPolicies                = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_TransferPolicies");
+	final By MenuBC_Account_Actions_NewNote                         = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewNote");
+	final By MenuBC_Account_Actions_NewDocument                     = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewDocument");
+	final By MenuBC_Account_Actions_NewDocument_CreateFromTemplate  = By.id("AccountGroup-AccountDetailMenuActions-NewDocument");
+	final By MenuBC_Account_Actions_NewDocument_UploadDocument      = By.id("AccountGroup-AccountDetailMenuActions-NewDocument");
+	final By MenuBC_Account_Actions_NewEmail                        = By.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewEmail");
+	final By MenuBC_Account_Actions_NewEmail_NewEmail               = By.id("AccountGroup-AccountDetailMenuActions-NewEmail");
+	final By MenuBC_Account_Actions_NewEmail_NewEmailTemplete       = By.id("AccountGroup-AccountDetailMenuActions-NewEmail");
 
 	final By MenuBC_Account_Summary        = By.xpath("//div[@id='AccountGroup-MenuLinks-AccountGroup_AccountOverview-AccountOverview_AccountSummary']//div[@class='gw-label']");
 	final By MenuBC_Account_Details        = By.xpath("//div[@id='AccountGroup-MenuLinks-AccountGroup_AccountOverview-AccountOverview_AccountDetailSummary']//div[@class='gw-label']");

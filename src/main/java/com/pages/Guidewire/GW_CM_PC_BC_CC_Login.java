@@ -26,10 +26,6 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 
 		oExtentTest.log(Status.PASS, "Login succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
-		// oExtentTest.info((Markup)
-		// MediaEntityBuilder.createScreenCaptureFromPath(GW_Utils_Log.getScreenShoFt(driver)));
-		// oExtentTest.log(LogStatus.PASS,
-		// oExtentTest.addScreenCapture(getscreenshot(driver, Driver.strReportPath)));
 
 	}
 
@@ -48,8 +44,12 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 	}
 
 	public static void logout_BillingCenter() throws Throwable {
-		logout_Guidewire();
+		GuidewireAutomate("Setting", GW_Setting_Link, "click", "Null");
+		GuidewireAutomate("Logout", GW_Logout_Link, "click", "Null");
+		GuidewireAutomate_Handle("alertaccept", "NA");
 
+		oExtentTest.log(Status.PASS, "Logout is succesful");
+		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 	}
 
 	public static void login_PolicyCenter() throws Throwable {

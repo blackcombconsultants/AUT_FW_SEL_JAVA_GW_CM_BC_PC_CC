@@ -1,0 +1,29 @@
+package com.pages.Guidewire.ClaimsCenter;
+
+import org.openqa.selenium.WebDriver;
+
+import com.Utils.Selenium.SeleniumWebDriver_Commands;
+import com.Utils.Selenium.Selenium_Utils_DataBase;
+import com.aventstack.extentreports.ExtentTest;
+
+public class ClaimCenter_CreateRecovery extends SeleniumWebDriver_Commands implements ClaimCenter_CreateRecovery_PO {
+
+	public ClaimCenter_CreateRecovery(WebDriver driver, ExtentTest oExtentTest) {
+		super(driver, oExtentTest);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void createRecovery() throws Throwable
+	{
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("recovery",
+				strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header",CreateRecovery_Header, "equals", "Create Recovery");
+		 GuidewireAutomate("Payer", CR_Payer, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_Payer"));
+		 GuidewireAutomate("Reserve Line", CR_ReserveLine, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_ReserveLine"));
+		 GuidewireAutomate("Recovery Category", CR_RecoveryCategory, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_RecoveryCategory"));
+		 GuidewireAutomate("Category", CR_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_Category"));
+		 GuidewireAutomate("Amount", CR_Amount, "clearANDsendKeys",  lhm_TestCase_Table_Data.get("TD__Amount"));
+	
+	}
+
+}

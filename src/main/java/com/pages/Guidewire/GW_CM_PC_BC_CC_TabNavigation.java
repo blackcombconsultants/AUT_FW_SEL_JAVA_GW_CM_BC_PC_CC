@@ -379,19 +379,19 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				break;
 			case "Acct Search" :
 				GuidewireAutomate("Account Tab", TabBC_Account_dd, "click", "Null");
-				GuidewireAutomate("Account Number", TabBC_Account_AccountNumber, "clearANDsendKeys", "Null");
+				GuidewireAutomate("Account Number", TabBC_Account_AccountNumber, "clearANDsendKeys", Value);
 				GuidewireAutomate("AccountNumberSearch", TabBC_Account_AccountNumber_Search, "click", "Null");
 				break;
 
 			case "Policy Search" :
 				GuidewireAutomate("Policy Tab", TabBC_Policy_dd, "click", "Null");
-				GuidewireAutomate("Account Number", TabBC_Policy_PolicyNumber, "clearANDsendKeys", "Null");
+				GuidewireAutomate("Account Number", TabBC_Policy_PolicyNumber, "clearANDsendKeys", Value);
 				GuidewireAutomate("AccountNumberSearch", TabBC_Policy_PolicyNumber_Search, "click", "Null");
 				break;
 
 			case "Producer Search" :
 				GuidewireAutomate("Producer Tab", TabBC_Producer_dd, "click", "Null");
-				GuidewireAutomate("Producer Name", TabBC_Producer_ProducerName, "clearANDsendKeys", "Null");
+				GuidewireAutomate("Producer Name", TabBC_Producer_ProducerName, "clearANDsendKeys", Value);
 				GuidewireAutomate("ProducerName Search", TabBC_Producer_ProducerNameSearch, "click", "Null");
 				break;
 
@@ -536,6 +536,11 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 			case "New Payment" :
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
 				GuidewireAutomate("New Payment", MenuBC_Account_Actions_NewPayment, "click", "");
+				break;
+			case "New Direct Bill Payment" :
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
+				GuidewireAutomate("New Payment", MenuBC_Account_Actions_NewPayment, "moveToElement", "");
+				GuidewireAutomate("New Payment", MenuBC_Account_Actions_NewPayment_NewDirectBillPayment, "click", "");
 				break;
 			case "New Transaction" :
 				GuidewireAutomate("Actions", Menu_Actions, "click", "");

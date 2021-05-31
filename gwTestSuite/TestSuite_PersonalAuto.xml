@@ -10,146 +10,146 @@
 	</listeners>
 
 	<test thread-count="1" parallel="methods"
-		name="PersonalAuto PC Regression Test">
+		name="PersonalAuto PolicyCenter Regression">
 		<classes>
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
 				<methods>
-					<include name="AUT_PA_PC_Account_CreateNewPersonAccount" />
+					<exclude name="AUT_PA_PC_Account_CreateNewPersonAccount" />
 				</methods>
 			</class>
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
 				<methods>
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_NewAccount_NewSubmission" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_SearchAccount_NewSubmission" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Single_FullApplication" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Single_FullApplication_DefaultEffectiveDate_Modify" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Offering_BasicProgram" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Offering_PremiumProgram" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Offering_StandardProgram" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PA_PreQualification_Yes" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PA_PreQualification_NoNewDriver" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PA_PreQualification_PreviousPolicydidnotrenew" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PA_PreQualification_NotKnown" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PI_QuoteNeeded_BackDated" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PI_QuoteNeeded_FutureDate" />
-					<include name="AUT_PA_PC_NewSubmission_PI_TermType_Annual" />
-					<include
+					<exclude name="AUT_PA_PC_NewSubmission_PI_TermType_Annual" />
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PI_EffectiveDate_BackDated" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PI_EffectiveDate_FutureDated" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PI_WrittenDate_BackDated" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PI_WrittenDate_FutureDated" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PI_UnderwritingCompany" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PA_Driver_Add_ExistingDriver" />
-					<include name="AUT_PA_PC_NewSubmission_PA_CreateVehicle" />
-					<include
+					<exclude name="AUT_PA_PC_NewSubmission_PA_CreateVehicle" />
+					<exclude
 						name="AUT_PA_PC_NewSubmission_PolicyReview_InsuredDetais" />
-					<include name="AUT_PA_PC_NewSubmission_PA_PolicyReview" />
-					<include name="AUT_PA_PC_NewSubmission_Quote_InsuredDetais" />
-					<include name="AUT_PA_PC_NewSubmission_PA_Quote" />
-					<include
+					<exclude name="AUT_PA_PC_NewSubmission_PA_PolicyReview" />
+					<exclude name="AUT_PA_PC_NewSubmission_Quote_InsuredDetais" />
+					<exclude name="AUT_PA_PC_NewSubmission_PA_Quote" />
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_BillingMethod_DirectBill" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_A" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_B" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_C" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_D" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_E" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_F" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Compass" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10AlwaysTransferExcess" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_EveryOtherWeek" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_FixInvoice_BillDate" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_PayUsing_CreditCard" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_HeldByAgent" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Check" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Cash" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Electronic" />
-					<include name="AUT_PA_PC_NewSubmission_SaveDraft" />
-					<include
+					<exclude name="AUT_PA_PC_NewSubmission_SaveDraft" />
+					<exclude
 						name="AUT_PA_PC_NewSubmission_CloseOptions_Withdraw" />
-					<include name="AUT_PA_PC_NewSubmission_BindOption_BindOnly" />
-					<include
+					<exclude name="AUT_PA_PC_NewSubmission_BindOption_BindOnly" />
+					<exclude
 						name="AUT_PA_PC_NewSubmission_BindOption_IssuePolicy" />
-					<include
+					<exclude
 						name="AUT_PA_PC_NewSubmission_SubmissionBound_ViewYourPolicy" />
 				</methods>
 			</class>	<!-- class -->
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy">
 				<methods>
-					<include name="AUT_PA_PC_ChangePolicy_01" />
+					<exclude name="AUT_PA_PC_ChangePolicy_01" />
 				</methods>
 			</class>	<!-- class -->
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy">
 				<methods>
-					<include name="AUT_PA_PC_RenewPolicy_01" />
+					<exclude name="AUT_PA_PC_RenewPolicy_01" />
 				</methods>
 			</class>	<!-- class -->
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy">
 				<methods>
-					<include name="AUT_PA_PC_CancelPolicy_01" />
+					<exclude name="AUT_PA_PC_CancelPolicy_01" />
 				</methods>
 			</class>	<!-- class -->
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy">
 				<methods>
-					<include name="AUT_PA_PC_ReinstatePolicy_01" />
+					<exclude name="AUT_PA_PC_ReinstatePolicy_01" />
 				</methods>
 			</class>	<!-- class -->
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm">
 				<methods>
-					<include name="AUT_PA_PC_Rewrite_FullTerm_01" />
+					<exclude name="AUT_PA_PC_Rewrite_FullTerm_01" />
 				</methods>
 			</class>	<!-- class -->
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm">
 				<methods>
-					<include name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" />
+					<exclude name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" />
 				</methods>
 			</class>	<!-- class -->
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
 				<methods>
-					<include name="AUT_PA_PC_Rewrite_NewTerm_01" />
+					<exclude name="AUT_PA_PC_Rewrite_NewTerm_01" />
 				</methods>
 			</class>	<!-- class -->
 
