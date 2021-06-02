@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="PolicyCenter_TestSuite">
+
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="PersonalAuto ClaimsCenter Regression">
+		<classes>
+			<class
+				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
+				<methods>
+					<include
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_01" />
+				</methods>
+			</class>	<!-- class -->
+
+		</classes>
+	</test> <!-- Test -->
+
+
+</suite> <!-- Suite -->

@@ -16,7 +16,7 @@ import com.pages.Guidewire.PersonalAuto.PersonalAuto_Qualification;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_SubmissionBound;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
@@ -128,7 +128,7 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
 
-		PolicyCenter_SubmissionBound.ViewYourPolicy();
+		PolicyCenter_Bound.ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
 		PolicyCenter_PolicySummary.account_Verify();
 
@@ -241,7 +241,7 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
 
-		PolicyCenter_SubmissionBound.ViewYourPolicy();
+		PolicyCenter_Bound.ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
 		PolicyCenter_PolicySummary.account_Verify();
 

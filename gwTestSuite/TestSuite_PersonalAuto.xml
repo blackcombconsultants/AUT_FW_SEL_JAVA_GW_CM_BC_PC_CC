@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="TestSuite_PersonalAuto">
+	<parameter name="GW_Application" value="PersonalAuto" />
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="PersonalAuto PolicyCenter Regression">
+		<classes>
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
+				<methods>
+					<exclude name="AUT_PA_PC_Account_CreateNewPersonAccount" />
+				</methods>
+			</class>
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
+				<methods>
+					<exclude
+						name="AUT_PA_PC_NewSubmission_NewAccount_NewSubmission" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_SearchAccount_NewSubmission" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Single_FullApplication" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Single_FullApplication_DefaultEffectiveDate_Modify" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Offering_BasicProgram" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Offering_PremiumProgram" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Offering_StandardProgram" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PA_PreQualification_Yes" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PA_PreQualification_NoNewDriver" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PA_PreQualification_PreviousPolicydidnotrenew" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PA_PreQualification_NotKnown" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PI_QuoteNeeded_BackDated" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PI_QuoteNeeded_FutureDate" />
+					<exclude name="AUT_PA_PC_NewSubmission_PI_TermType_Annual" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PI_EffectiveDate_BackDated" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PI_EffectiveDate_FutureDated" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PI_WrittenDate_BackDated" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PI_WrittenDate_FutureDated" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PI_UnderwritingCompany" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PA_Driver_Add_ExistingDriver" />
+					<exclude name="AUT_PA_PC_NewSubmission_PA_CreateVehicle" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_PolicyReview_InsuredDetais" />
+					<exclude name="AUT_PA_PC_NewSubmission_PA_PolicyReview" />
+					<exclude name="AUT_PA_PC_NewSubmission_Quote_InsuredDetais" />
+					<exclude name="AUT_PA_PC_NewSubmission_PA_Quote" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_BillingMethod_DirectBill" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_A" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_B" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_C" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_D" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_E" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_F" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Compass" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10AlwaysTransferExcess" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_EveryOtherWeek" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_FixInvoice_BillDate" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_PayUsing_CreditCard" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_HeldByAgent" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Check" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Cash" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Electronic" />
+					<exclude name="AUT_PA_PC_NewSubmission_SaveDraft" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_CloseOptions_Withdraw" />
+					<exclude name="AUT_PA_PC_NewSubmission_BindOption_BindOnly" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_BindOption_IssuePolicy" />
+					<exclude
+						name="AUT_PA_PC_NewSubmission_SubmissionBound_ViewYourPolicy" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy">
+				<methods>
+					<exclude name="AUT_PA_PC_ChangePolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy">
+				<methods>
+					<exclude name="AUT_PA_PC_RenewPolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy">
+				<methods>
+					<exclude name="AUT_PA_PC_CancelPolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy">
+				<methods>
+					<exclude name="AUT_PA_PC_ReinstatePolicy_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm">
+				<methods>
+					<exclude name="AUT_PA_PC_Rewrite_FullTerm_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm">
+				<methods>
+					<exclude name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" />
+				</methods>
+			</class>	<!-- class -->
+			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
+				<methods>
+					<exclude name="AUT_PA_PC_Rewrite_NewTerm_01" />
+				</methods>
+			</class>	<!-- class -->
+
+		</classes>	<!-- classes -->
+	</test> <!-- Test -->
+
+
+
+</suite> <!-- Suite -->
