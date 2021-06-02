@@ -3,11 +3,11 @@
 <suite thread-count="2" parallel="methods"
 	name="TestSuite_PersonalAuto">
 	<parameter name="GW_Application"
-		value="PersonalAuto PC NewSubmission" />
+		value="PersonalAuto PC NewSubmission"/>
 
 	<listeners>
 		<listener
-			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener"/>
 	</listeners>
 
 	<test thread-count="1" parallel="methods"
@@ -17,86 +17,86 @@
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
 				<methods>
 					<include
-						name="AUT_PA_PC_NewSubmission_2_NewAccount_NewSubmission" />
+						name="AUT_PA_PC_NewSubmission_2_NewAccount_NewSubmission"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_3_SearchAccount_NewSubmission" />
+						name="AUT_PA_PC_NewSubmission_3_SearchAccount_NewSubmission"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_18_Single_FullApplication" />
+						name="AUT_PA_PC_NewSubmission_18_Single_FullApplication"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_20_Single_FullApplication_DefaultEffectiveDate_Modify" />
+						name="AUT_PA_PC_NewSubmission_20_Single_FullApplication_DefaultEffectiveDate_Modify"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_21_Offering_BasicProgram" />
+						name="AUT_PA_PC_NewSubmission_21_Offering_BasicProgram"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_22_Offering_PremiumProgram" />
+						name="AUT_PA_PC_NewSubmission_22_Offering_PremiumProgram"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_23_Offering_StandardProgram" />
+						name="AUT_PA_PC_NewSubmission_23_Offering_StandardProgram"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_24_PA_PreQualification_Yes" />
+						name="AUT_PA_PC_NewSubmission_24_PA_PreQualification_Yes"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_25_PA_PreQualification_NoNewDriver" />
+						name="AUT_PA_PC_NewSubmission_25_PA_PreQualification_NoNewDriver"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_26_PA_PreQualification_PreviousPolicydidnotrenew" />
+						name="AUT_PA_PC_NewSubmission_26_PA_PreQualification_PreviousPolicydidnotrenew"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_27_PA_PreQualification_NotKnown" />
+						name="AUT_PA_PC_NewSubmission_27_PA_PreQualification_NotKnown"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_33_PI_QuoteNeeded_BackDated" />
+						name="AUT_PA_PC_NewSubmission_33_PI_QuoteNeeded_BackDated"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_34_PI_QuoteNeeded_FutureDate" />
+						name="AUT_PA_PC_NewSubmission_34_PI_QuoteNeeded_FutureDate"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_47_PI_TermType_Annual" />
+						name="AUT_PA_PC_NewSubmission_47_PI_TermType_Annual"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_48_PI_EffectiveDate_BackDated" />
+						name="AUT_PA_PC_NewSubmission_48_PI_EffectiveDate_BackDated"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_49_PI_EffectiveDate_FutureDated" />
+						name="AUT_PA_PC_NewSubmission_49_PI_EffectiveDate_FutureDated"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_50_PI_WrittenDate_BackDated" />
+						name="AUT_PA_PC_NewSubmission_50_PI_WrittenDate_BackDated"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_51_PI_WrittenDate_FutureDated" />
+						name="AUT_PA_PC_NewSubmission_51_PI_WrittenDate_FutureDated"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_58_PA_Driver_Add_ExistingDriver" />
-					<include name="AUT_PA_PC_NewSubmission_69_PA_CreateVehicle" />
+						name="AUT_PA_PC_NewSubmission_58_PA_Driver_Add_ExistingDriver"/>
+					<include name="AUT_PA_PC_NewSubmission_69_PA_CreateVehicle"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_102_RiskAnalysis_AddContingency" />
+						name="AUT_PA_PC_NewSubmission_102_RiskAnalysis_AddContingency"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_105_RiskAnalysis_PriorPolicies_Add" />
+						name="AUT_PA_PC_NewSubmission_105_RiskAnalysis_PriorPolicies_Add"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_112_PolicyReview_InsuredDetais" />
-					<include name="AUT_PA_PC_NewSubmission_113_PA_PolicyReview" />
+						name="AUT_PA_PC_NewSubmission_112_PolicyReview_InsuredDetais"/>
+					<include name="AUT_PA_PC_NewSubmission_113_PA_PolicyReview"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_114_Quote_InsuredDetais" />
-					<include name="AUT_PA_PC_NewSubmission_115_PA_Quote" />
+						name="AUT_PA_PC_NewSubmission_114_Quote_InsuredDetais"/>
+					<include name="AUT_PA_PC_NewSubmission_115_PA_Quote"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_117_Pay_BillingMethod_DirectBill" />
+						name="AUT_PA_PC_NewSubmission_117_Pay_BillingMethod_DirectBill"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_126_Pay_PaymentSchedule_A" />
+						name="AUT_PA_PC_NewSubmission_126_Pay_PaymentSchedule_A"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_127_Pay_PaymentSchedule_B" />
+						name="AUT_PA_PC_NewSubmission_127_Pay_PaymentSchedule_B"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_128_Pay_PaymentSchedule_C" />
+						name="AUT_PA_PC_NewSubmission_128_Pay_PaymentSchedule_C"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_129_Pay_PaymentSchedule_D" />
+						name="AUT_PA_PC_NewSubmission_129_Pay_PaymentSchedule_D"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_130_Pay_PaymentSchedule_E" />
+						name="AUT_PA_PC_NewSubmission_130_Pay_PaymentSchedule_E"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_131_Pay_PaymentSchedule_F" />
+						name="AUT_PA_PC_NewSubmission_131_Pay_PaymentSchedule_F"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_132_Pay_PaymentSchedule_Monthly" />
+						name="AUT_PA_PC_NewSubmission_132_Pay_PaymentSchedule_Monthly"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_133_Pay_PaymentSchedule_Monthly2" />
+						name="AUT_PA_PC_NewSubmission_133_Pay_PaymentSchedule_Monthly2"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_135_Pay_PaymentSchedule_EveryOtherWeek" />
+						name="AUT_PA_PC_NewSubmission_135_Pay_PaymentSchedule_EveryOtherWeek"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_136_Pay_FixInvoice_BillDute" />
+						name="AUT_PA_PC_NewSubmission_136_Pay_FixInvoice_BillDute"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_139_Pay_PayUsing_CreditCard" />
+						name="AUT_PA_PC_NewSubmission_139_Pay_PayUsing_CreditCard"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_140_Pay_UpFrontPayment_HeldByAgent" />
+						name="AUT_PA_PC_NewSubmission_140_Pay_UpFrontPayment_HeldByAgent"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_141_Pay_UpFrontPayment_Check" />
+						name="AUT_PA_PC_NewSubmission_141_Pay_UpFrontPayment_Check"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_142_Pay_UpFrontPayment_Cash" />
+						name="AUT_PA_PC_NewSubmission_142_Pay_UpFrontPayment_Cash"/>
 					<include
-						name="AUT_PA_PC_NewSubmission_143_Pay_UpFrontPayment_Electronic" />
+						name="AUT_PA_PC_NewSubmission_143_Pay_UpFrontPayment_Electronic"/>
 				</methods>
 			</class>	<!-- class -->
 		</classes>	<!-- classes -->

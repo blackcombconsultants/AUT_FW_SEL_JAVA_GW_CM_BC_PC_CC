@@ -2,6 +2,7 @@ package com.pages.Guidewire.ClaimsCenter;
 
 import java.util.LinkedHashMap;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -16,14 +17,17 @@ public class ClaimCenter_BasicInformation extends SeleniumWebDriver_Commands imp
 	}
 
 	public static void basicInfo() throws Throwable {
+		String insuredName=driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo",
+				strTestCaseName);
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo",
 				strTestCaseName);
-		 GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");
-		 GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_Name"));
-		 GuidewireAutomate("InvolvedVehicles", BI_IV_CheckBox, "click", "");
-	
-
+		GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");
+		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText",insuredName);
 		
 	}
+
+	
+
+
 
 }

@@ -1,4 +1,4 @@
-package com.REST;
+package com.Test.REST;
 
 import org.testng.annotations.Test;
 

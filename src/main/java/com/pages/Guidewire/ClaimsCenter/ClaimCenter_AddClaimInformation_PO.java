@@ -11,7 +11,7 @@ public interface ClaimCenter_AddClaimInformation_PO {
 	final By ADI_WhatHappened=By.xpath("//textarea[contains(@name,'LossDetailsAddressDV-Description')]");
 	final By ADI_LossCause=By.xpath("//select[contains(@name,'LossDetailsAddressDV-Claim_LossCause')]");
 	final By ADI_location=By.xpath("//select[contains(@name,'globalAddressContainer-Address_Picker')]");
-
+    final By  ADI_State=By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
 	final By addClaimInfo_Header=By.id("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-ttlBar");
 	
 	

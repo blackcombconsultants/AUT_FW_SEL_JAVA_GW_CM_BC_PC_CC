@@ -21,7 +21,7 @@ public class ClaimCenter_Contacts extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate_Validation("Screen Header",Contacts_Header, "equals", "Contacts");
 		GuidewireAutomate("NewContact", NewContact, "click", "NA");
 
-		String strDynamicxpath=lhm_TestCase_Table_Data.get("TD_NewContact");
+		String strDynamicxpath=lhm_TestCase_Table_Data.get("NewContact");
 		
 		final By NewContact_Person=By.xpath("//div[contains(@id,'ClaimContacts_CreateNewContactButton-ClaimContacts')]//div[@class='gw-label' and text()='"+strDynamicxpath+"']");
 		final By NewContact_Vendor=By.xpath("//div[contains(@id,'ClaimContacts_CreateNewContactButton-ClaimContacts')]//div[@class='gw-label' and text()='"+strDynamicxpath+"']");
@@ -31,12 +31,12 @@ public class ClaimCenter_Contacts extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Autobody Repair Shop", NC_V_AutobodyRepairShop, "click", "NA");
 		GuidewireAutomate_Validation("Screen Header",NC_V_ARS_Header, "equals", "New Auto Repair Shop");
 		GuidewireAutomate("Add", NC_V_Add, "click", "NA");
-		GuidewireAutomate("Role", NC_V_Role, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_Role"));
-		GuidewireAutomate("Comments", NC_V_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TD_Comments"));
-		GuidewireAutomate("Name", NC_V_ARS_Name, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TD_Name"));
-		GuidewireAutomate("Address1", NC_V_PA_Address1, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TD_Address1"));
-		GuidewireAutomate("State", NC_V_PA_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_State"));
-		GuidewireAutomate("Comments", NC_V_TI_TaxID, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TD_TaxID"));
+		GuidewireAutomate("Role", NC_V_Role, "selectByVisibleText", lhm_TestCase_Table_Data.get("Role"));
+		GuidewireAutomate("Comments", NC_V_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Comments"));
+		GuidewireAutomate("Name", NC_V_ARS_Name, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Name"));
+		GuidewireAutomate("Address1", NC_V_PA_Address1, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Address1"));
+		GuidewireAutomate("State", NC_V_PA_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("State"));
+		GuidewireAutomate("Comments", NC_V_TI_TaxID, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TaxID"));
 
 		GuidewireAutomate("Update", NC_V_Update, "click", "NA");
 

@@ -9,19 +9,42 @@
 			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
-	<test thread-count="1" parallel="methods"
-		name="PersonalAuto ClaimsCenter Regression">
+	<test thread-count="1" parallel="methods" name="Test">
 		<classes>
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
 				<methods>
-					<include
-						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_01" />
-				</methods>
-			</class>	<!-- class -->
+					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
+					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_QuickClaimAuto" />
 
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_Contacts" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_NewExposure_MedicalPayments" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_AddingRecovery" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_ManualAdjusterCheck_Create" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_Recovery_CreateRecovery" />
+				</methods>
+			</class>
+			<class
+				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_UnverifiedPolicy">
+				<methods>
+					<exclude
+						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto" />
+					<exclude
+						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
+					<exclude
+						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_QuickClaimAuto" />
+
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
-
-
 </suite> <!-- Suite -->

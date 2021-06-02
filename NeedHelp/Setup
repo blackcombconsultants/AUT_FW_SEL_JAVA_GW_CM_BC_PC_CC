@@ -37,10 +37,8 @@
 	C:\Users\Username>cd\
 	
 	C:\>cd C:\Users\Username\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC
-	
-	mvn clean test -DsuiteFile=testng_PC.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=PolicyCenter -DgwCountry=United States -DgwState=Alaska
-	mvn clean test -DsuiteFile=gwTestSuite/TestSuite_PersonalAuto.xml -Dgwbrowser=CHROME -Dgwenv=Sanbox -DgwApplication=ClaimsCenter -DgwCountry=United States -DgwState=Alaska
 
+	mvn clean test -DgwSUITE=gwTestSuite/TestSuite_ClaimsCenter.xml -DBROWSER=CHROME -DENVIRONMENT=OOTB -DgwAPPLICATION=ClaimsCenter -DgwCOUNTRY=UnitedStates -DgwSTATE=Alaska -DINTERFACE=GUI
 		
 	[INFO] Scanning for projects...
 	

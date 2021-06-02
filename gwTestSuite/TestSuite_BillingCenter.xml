@@ -13,11 +13,10 @@
 			<class
 				name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice">
 				<methods>
-					<include name="AUT_PA_BC_Invoice_01" />
+					<include name="AUT_PA_BC_Invoice_01"/>
 				</methods>
 			</class>	<!-- class -->
 		</classes>
 	</test> <!-- Test -->
-
 
 </suite> <!-- Suite -->

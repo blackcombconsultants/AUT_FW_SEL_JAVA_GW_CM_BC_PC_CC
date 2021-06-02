@@ -18,11 +18,11 @@ public class ClaimCenter_CreateRecovery extends SeleniumWebDriver_Commands imple
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("recovery",
 				strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header",CreateRecovery_Header, "equals", "Create Recovery");
-		 GuidewireAutomate("Payer", CR_Payer, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_Payer"));
-		 GuidewireAutomate("Reserve Line", CR_ReserveLine, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_ReserveLine"));
-		 GuidewireAutomate("Recovery Category", CR_RecoveryCategory, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_RecoveryCategory"));
-		 GuidewireAutomate("Category", CR_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_Category"));
-		 GuidewireAutomate("Amount", CR_Amount, "clearANDsendKeys",  lhm_TestCase_Table_Data.get("TD__Amount"));
+		 GuidewireAutomate("Payer", CR_Payer, "selectByVisibleText", lhm_TestCase_Table_Data.get("Payer"));
+		 GuidewireAutomate("Reserve Line", CR_ReserveLine, "selectByVisibleText", lhm_TestCase_Table_Data.get("ReserveLine"));
+		 GuidewireAutomate("Recovery Category", CR_RecoveryCategory, "selectByVisibleText", lhm_TestCase_Table_Data.get("RecoveryCategory"));
+		 GuidewireAutomate("Category", CR_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("Category"));
+		 GuidewireAutomate("Amount", CR_Amount, "clearANDsendKeys",  lhm_TestCase_Table_Data.get("Amount"));
 	
 	}
 

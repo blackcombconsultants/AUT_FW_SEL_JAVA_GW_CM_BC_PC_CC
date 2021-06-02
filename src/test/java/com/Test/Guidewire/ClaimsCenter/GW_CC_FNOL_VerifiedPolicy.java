@@ -7,20 +7,17 @@ import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_AddClaimInformation;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_BasicInformation;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Contacts;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_CreateManualCheck;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_CreateRecovery;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Resuables;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_SearchPolicy;
 
 public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 
-	@Test
-	public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_01() throws Throwable {
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
 
-		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("NewClaim", "NA");
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
 		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
 		ClaimCenter_Resuables.clickButton("Next");
 		ClaimCenter_BasicInformation.basicInfo();
@@ -33,39 +30,155 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		ClaimCenter_Resuables.clickButton("Finish");
 		ClaimCenter_Resuables.newClaimSaved();
 
-		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("Claim Search", "");
-
 		// --->Assigning Claim
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Assign Claim");
 		ClaimCenter_Resuables.assignClaim();
 
-		// ---->Adding new exposure
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Medical Payments");
-		ClaimCenter_Resuables.newExposure();
+	}
 
-		// ---->Adding new contact
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Contacts");
-		ClaimCenter_Contacts.New_Contact();
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto() throws Throwable {
 
-		// ------>Adding Reserve
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Reserve");
-		ClaimCenter_Resuables.addingReserve();
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
 
-		// ----->Adding manual check
-
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Manual Check");
-		ClaimCenter_CreateManualCheck.Enterpayeeinformation();
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
 		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_CreateManualCheck.Enterpaymentinformation();
+		ClaimCenter_BasicInformation.basicInfo();
 		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_CreateManualCheck.Setcheckinstructions();
+		ClaimCenter_AddClaimInformation.addClaimInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.services();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.saveandAssign();
 		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
 
-		// ------->Recovery
+	}
 
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Recovery");
-		ClaimCenter_CreateRecovery.createRecovery();
-		ClaimCenter_Resuables.clickButton("Update");
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_AutoFirstandFinal() throws Throwable {
+
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.NewClaim_AutoFirstandFinal();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
+
+	}
+
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_QuickClaimAuto() throws Throwable {
+
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.New_QuickClaimAuto();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
+
+	}
+
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_Contacts() throws Throwable {
+
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_BasicInformation.basicInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_AddClaimInformation.addClaimInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.services();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.saveandAssign();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
+
+	}
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_NewExposure_MedicalPayments() throws Throwable {
+
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_BasicInformation.basicInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_AddClaimInformation.addClaimInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.services();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.saveandAssign();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
+
+	}
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_AddingRecovery() throws Throwable {
+
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_BasicInformation.basicInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_AddClaimInformation.addClaimInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.services();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.saveandAssign();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
+
+	}
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_ManualAdjusterCheck_Create() throws Throwable {
+
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_BasicInformation.basicInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_AddClaimInformation.addClaimInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.services();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.saveandAssign();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
+
+	}
+	@Test()
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_Recovery_CreateRecovery() throws Throwable {
+
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_BasicInformation.basicInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_AddClaimInformation.addClaimInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.services();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.saveandAssign();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
 
 	}
 

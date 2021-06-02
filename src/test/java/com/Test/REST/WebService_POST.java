@@ -1,4 +1,4 @@
-package com.REST;
+package com.Test.REST;
 
 import org.apache.commons.collections.map.HashedMap;
 import org.json.simple.JSONObject;
