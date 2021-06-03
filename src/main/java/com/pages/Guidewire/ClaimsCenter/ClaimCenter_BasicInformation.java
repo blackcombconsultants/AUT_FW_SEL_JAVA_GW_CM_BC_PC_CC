@@ -17,8 +17,8 @@ public class ClaimCenter_BasicInformation extends SeleniumWebDriver_Commands imp
 	}
 
 	public static void basicInfo() throws Throwable {
-		String insuredName=driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo",
-				strTestCaseName);
+
+		String insuredName=ClaimCenter_Resuables.infoBar("InsuredName");
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo",
 				strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");

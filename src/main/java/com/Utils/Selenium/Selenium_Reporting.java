@@ -10,12 +10,12 @@ public class Selenium_Reporting extends GW_Base {
 
 		oExtentSparkReporter = new ExtentSparkReporter(pExtentReport_indexFile);
 		oExtentSparkReporter.config().setDocumentTitle("Automation Report");
-		oExtentSparkReporter.config().setReportName("Billing Center");
+		oExtentSparkReporter.config().setReportName(gwAPPLICATION);
 		// oExtentSparkReporter.config().setTheme(Theme.DARK);
 
 		oExtentHtmlReporter = new ExtentHtmlReporter(pExtentReport_indexFile);
 		oExtentHtmlReporter.config().setDocumentTitle("Automation Report");
-		oExtentHtmlReporter.config().setReportName("Billing Center");
+		oExtentHtmlReporter.config().setReportName(gwAPPLICATION);
 		// oExtentSparkReporter.config().setTheme(Theme.DARK);
 
 		// oExtentReports = new ExtentReports(pesrName,true);
@@ -29,6 +29,5 @@ public class Selenium_Reporting extends GW_Base {
 		return oExtentReports;
 
 	}
-
 
 }

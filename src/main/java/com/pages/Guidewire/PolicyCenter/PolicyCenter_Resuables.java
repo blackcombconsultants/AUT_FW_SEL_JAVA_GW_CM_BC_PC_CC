@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -363,10 +364,14 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CancelPolicy", strTestCaseName);
 
 		GuidewireAutomate("Source", SCFP_Source, "selectByVisibleText", lhm_TestCase_Table_Data.get("PA_CP_Source"));
-		Thread.sleep(2000);
-		GuidewireAutomate("Reason", SCFP_Reason, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PA_CP_Reason"));
+		try {
+			GuidewireAutomate("Reason", SCFP_Reason, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PA_CP_Reason"));
+		} catch (StaleElementReferenceException e) {
+			GuidewireAutomate("Reason", SCFP_Reason, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PA_CP_Reason"));
+		}
 		GuidewireAutomate("ReasonDescription", SCFP_ReasonDescription, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PA_CP_Reason _Description"));
-		GuidewireAutomate_Validation("RefundMethod", SCFP_RefundMethod, "equals", lhm_TestCase_Table_Data.get("PA_CP_Refund_Method"));
+		// GuidewireAutomate_Validation("RefundMethod", SCFP_RefundMethod,
+		// "equals", lhm_TestCase_Table_Data.get("PA_CP_Refund_Method"));
 
 		GuidewireAutomate("StartCancellation", StartCancellation_Button, "click", "");
 

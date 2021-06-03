@@ -17,7 +17,7 @@ public class GW_CC_FNOL_UnverifiedPolicy extends GW_GetDriver {
 	public void AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto() throws Throwable {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
 
-		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("NewClaim", "NA");
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
 		ClaimCenter_SearchPolicy.fnol_Search_UnverifiedPolicy();
 		ClaimCenter_Resuables.clickButton("Update"); //
 		ClaimCenter_Resuables.clickButton("Next"); //

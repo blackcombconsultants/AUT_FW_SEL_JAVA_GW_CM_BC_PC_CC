@@ -174,13 +174,25 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 					break;
 				case "clearsendKeysRobotTAB" :
 					oWebElement.clear();
-					oRobot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 					oWebElement.sendKeys(strValue);
 					oRobot.keyPress(KeyEvent.VK_TAB);
+					oRobot.keyRelease(KeyEvent.VK_TAB);
+					oRobot.keyPress(KeyEvent.VK_TAB);
+					oRobot.keyRelease(KeyEvent.VK_TAB);
+					LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
+					break;
+				case "clearsendKeysoActionsTAB" :
+					oWebElement.clear();
+					oWebElement.sendKeys(strValue);
+					oActions.sendKeys(Keys.TAB).build().perform();
+					oActions.sendKeys(Keys.TAB).build().perform();
+					LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
 					break;
 				case "clearsendKeysoJavascriptExecutor" :
 					oWebElement.clear();
 					oJavascriptExecutor.executeScript("arguments[0].value='" + strValue + "';", oWebElement);
+					LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
+
 					break;
 				case "RobotTAB" :
 					oRobot.keyPress(KeyEvent.VK_TAB);
@@ -189,6 +201,10 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				case "doubleClick" :
 					oAction = oActions.doubleClick(oWebElement).build();
 					oAction.perform();
+					LogMsg = command + "ed Field" + ElementName;
+					break;
+				case "mouseClick" :
+					oActions.click(oWebElement);
 					LogMsg = command + "ed Field" + ElementName;
 					break;
 				case "moveToElement" :
