@@ -27,6 +27,10 @@ public class ClaimCenter_CreateManualCheck extends SeleniumWebDriver_Commands im
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("manualCheck", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", Enterpaymentinformation_Header, "equals", "Step 2 of 3: Enter payment information");
 		GuidewireAutomate("Reserve Line", PD_ReserveLine, "selectByVisibleText", lhm_TestCase_Table_Data.get("ReserveLine"));
+		GuidewireAutomate("CostType", PD_CostType, "selectByVisibleText", lhm_TestCase_Table_Data.get("CostType"));
+		GuidewireAutomate("CostCategory", PD_CostCategory, "selectByVisibleText", lhm_TestCase_Table_Data.get("CostCategory"));
+
+		
 		try {
 			GuidewireAutomate("Payment Type", PD_PaymentType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PaymentType"));
 		} catch (StaleElementReferenceException e) {

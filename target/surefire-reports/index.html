@@ -24,21 +24,21 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+            <a href="#" panel-name="suite-TestSuite_PersonalAuto" class="navigator-link">
+              <span class="suite-name border-failed">TestSuite_PersonalAuto</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\Users\asrikanth\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\testng_BC.xml</span>
+                  <a href="#" panel-name="test-xml-TestSuite_PersonalAuto" class="navigator-link ">
+                    <span>C:\Users\labor\git\blackcomb\gwTestSuite\TestSuite_PersonalAuto.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                  <a href="#" panel-name="testlist-TestSuite_PersonalAuto" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                  <a href="#" panel-name="group-TestSuite_PersonalAuto" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                  <a href="#" panel-name="times-TestSuite_PersonalAuto" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                  <a href="#" panel-name="reporter-TestSuite_PersonalAuto" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                  <a href="#" panel-name="ignored-methods-TestSuite_PersonalAuto" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                  <a href="#" panel-name="chronological-TestSuite_PersonalAuto" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestSuite_PersonalAuto" class="hide-methods failed suite-TestSuite_PersonalAuto"> (hide)</a> <!-- hide-methods failed suite-TestSuite_PersonalAuto -->
+                      <a href="#" panel-name="suite-TestSuite_PersonalAuto" class="show-methods failed suite-TestSuite_PersonalAuto"> (show)</a> <!-- show-methods failed suite-TestSuite_PersonalAuto -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-TestSuite_PersonalAuto">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Test.GW_BillingCenter_Test1" hash-for-method="BillingTest">BillingTest</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite_PersonalAuto" title="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm" class="method navigator-link" hash-for-method="AUT_PA_PC_Rewrite_NewTerm_01">AUT_PA_PC_Rewrite_NewTerm_01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite_PersonalAuto" title="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm" class="method navigator-link" hash-for-method="AUT_PA_PC_Rewrite_RemainingOfTerm_01">AUT_PA_PC_Rewrite_RemainingOfTerm_01</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestSuite_PersonalAuto -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,117 +121,465 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+        <div panel-name="suite-TestSuite_PersonalAuto" class="panel TestSuite_PersonalAuto">
+          <div class="suite-TestSuite_PersonalAuto-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.Test.GW_BillingCenter_Test1</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="BillingTest">
-                  </a> <!-- BillingTest -->
-                  <span class="method-name">BillingTest</span>
+                  <a name="AUT_PA_PC_Rewrite_NewTerm_01">
+                  </a> <!-- AUT_PA_PC_Rewrite_NewTerm_01 -->
+                  <span class="method-name">AUT_PA_PC_Rewrite_NewTerm_01</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;Rewrite New Term (Bound)&apos;) to be present in element found by By.xpath: //div[contains(@id,&apos;InfoBar-JobLabel&apos;)]//div[@class=&apos;gw-label&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;JMD&apos;, ip: &apos;192.168.8.100&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56394}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c34a05cb7bae957076bef7f500e7345a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:469)
+	at com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables.clickButton(PolicyCenter_Resuables.java:128)
+	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm.AUT_PA_PC_Rewrite_NewTerm_01(GW_PC_PersonalAuto_Rewrite_NewTerm.java:88)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-        </div> <!-- panel Suite -->
-        <div panel-name="test-xml-Suite" class="panel">
+          </div> <!-- suite-TestSuite_PersonalAuto-class-failed -->
+          <div class="suite-TestSuite_PersonalAuto-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AUT_PA_PC_Rewrite_RemainingOfTerm_01">
+                  </a> <!-- AUT_PA_PC_Rewrite_RemainingOfTerm_01 -->
+                  <span class="method-name">AUT_PA_PC_Rewrite_RemainingOfTerm_01</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@id,&apos;PolicyInfoInputSet-ExpirationDate&apos;)]//div[contains(@class,&apos;gw-value-readonly-wrapper&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.getText_Element(SeleniumWebDriver_Commands.java:703)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:483)
+	at com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo.policyDetails_fetch(PersonalAuto_PolicyInfo.java:196)
+	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm.AUT_PA_PC_Rewrite_RemainingOfTerm_01(GW_PC_PersonalAuto_Rewrite_RemainingOfTerm.java:46)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@id,&apos;PolicyInfoInputSet-ExpirationDate&apos;)]//div[contains(@class,&apos;gw-value-readonly-wrapper&apos;)]&quot;}
+  (Session info: chrome=90.0.4430.212)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;JMD&apos;, ip: &apos;192.168.8.100&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55971}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 64fd2e482c5fdd51d372579dd6d85488
+*** Element info: {Using=xpath, value=//div[contains(@id,&apos;PolicyInfoInputSet-ExpirationDate&apos;)]//div[contains(@class,&apos;gw-value-readonly-wrapper&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite_PersonalAuto-class-failed -->
+        </div> <!-- panel TestSuite_PersonalAuto -->
+        <div panel-name="test-xml-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Users\asrikanth\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\testng_BC.xml</span>
+            <span class="header-content">C:\Users\labor\git\blackcomb\gwTestSuite\TestSuite_PersonalAuto.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot; parallel=&quot;methods&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;TestSuite_PersonalAuto&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;GW_Application&quot; value=&quot;PersonalAuto&quot;/&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.pages.Sandbox.GW_TestNGListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.Utils.Selenium.Selenium_TestNG_TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot; parallel=&quot;methods&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;PersonalAuto PolicyCenter Regression&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.Test.GW_BillingCenter_Test1&quot;/&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_Account_CreateNewPersonAccount&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_NewAccount_NewSubmission&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_SearchAccount_NewSubmission&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Single_FullApplication&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Single_FullApplication_DefaultEffectiveDate_Modify&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Offering_BasicProgram&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Offering_PremiumProgram&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Offering_StandardProgram&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_PreQualification_Yes&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_PreQualification_NoNewDriver&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_PreQualification_PreviousPolicydidnotrenew&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_PreQualification_NotKnown&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_QuoteNeeded_BackDated&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_QuoteNeeded_FutureDate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_TermType_Annual&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_EffectiveDate_BackDated&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_EffectiveDate_FutureDated&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_WrittenDate_BackDated&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_WrittenDate_FutureDated&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PI_UnderwritingCompany&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_Driver_Add_ExistingDriver&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_CreateVehicle&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PolicyReview_InsuredDetais&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_PolicyReview&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Quote_InsuredDetais&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_PA_Quote&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_BillingMethod_DirectBill&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_A&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_B&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_C&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_D&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_E&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_F&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Compass&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10AlwaysTransferExcess&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_EveryOtherWeek&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_FixInvoice_BillDate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_PayUsing_CreditCard&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_HeldByAgent&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Check&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Cash&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Electronic&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_SaveDraft&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_CloseOptions_Withdraw&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_BindOption_BindOnly&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_BindOption_IssuePolicy&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_NewSubmission_SubmissionBound_ViewYourPolicy&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_ChangePolicy_01&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_RenewPolicy_01&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_CancelPolicy_01&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_ReinstatePolicy_01&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_Rewrite_FullTerm_01&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;AUT_PA_PC_Rewrite_RemainingOfTerm_01&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm --&gt;
+      &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;AUT_PA_PC_Rewrite_NewTerm_01&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- Suite --&gt;
+  &lt;/test&gt; &lt;!-- PersonalAuto PolicyCenter Regression --&gt;
+&lt;/suite&gt; &lt;!-- TestSuite_PersonalAuto --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Suite" class="panel">
+        <div panel-name="testlist-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Suite</span>
+            <span class="header-content">Tests for TestSuite_PersonalAuto</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">PersonalAuto PolicyCenter Regression (9 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Suite" class="panel">
+        <div panel-name="group-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Suite</span>
+            <span class="header-content">Groups for TestSuite_PersonalAuto</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Suite" class="panel">
+        <div panel-name="times-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Suite</span>
+            <span class="header-content">Times for TestSuite_PersonalAuto</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Suite');
-function tableData_Suite() {
+suiteTableInitFunctions.push('tableData_TestSuite_PersonalAuto');
+function tableData_TestSuite_PersonalAuto() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'BillingTest')
-data.setCell(0, 2, 'com.Test.GW_BillingCenter_Test1')
-data.setCell(0, 3, 45165);
-window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+data.setCell(0, 1, 'AUT_PA_PC_Rewrite_NewTerm_01')
+data.setCell(0, 2, 'com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm')
+data.setCell(0, 3, 386417);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'AUT_PA_PC_Rewrite_RemainingOfTerm_01')
+data.setCell(1, 2, 'com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm')
+data.setCell(1, 3, 309339);
+window.suiteTableData['TestSuite_PersonalAuto']= { tableData: data, tableDiv: 'times-div-TestSuite_PersonalAuto'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
-              <div id="times-div-Suite">
-              </div> <!-- times-div-Suite -->
+              <span class="suite-total-time">Total running time: 11 minutes</span>
+              <div id="times-div-TestSuite_PersonalAuto">
+              </div> <!-- times-div-TestSuite_PersonalAuto -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Suite" class="panel">
+        <div panel-name="reporter-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Suite</span>
+            <span class="header-content">Reporter output for TestSuite_PersonalAuto</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Suite" class="panel">
+        <div panel-name="ignored-methods-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">62 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_ReinstatePolicy_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Single_FullApplication_DefaultEffectiveDate_Modify</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_WrittenDate_BackDated</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_FixInvoice_BillDate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PayUsing_CreditCard</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_PreQualification_NoNewDriver</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_WrittenDate_FutureDated</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_D</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Quote_InsuredDetais</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_Driver_Add_ExistingDriver</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Offering_PremiumProgram</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_UnderwritingCompany</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_E</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_F</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Check</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_CreateVehicle</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_A</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_B</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_SaveDraft</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Compass</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_SubmissionBound_ViewYourPolicy</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_C</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Single_FullApplication</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_EveryOtherWeek</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Electronic</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_BillingMethod_DirectBill</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_BindOption_BindOnly</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Account_OpenPolicyTransaction_NewSubmission</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Cash</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_SearchAccount_NewSubmission</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_QuoteNeeded_FutureDate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_EffectiveDate_FutureDated</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_PolicyReview</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PolicyReview_InsuredDetais</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_BindOption_IssuePolicy</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_PreQualification_NotKnown</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_HeldByAgent</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_PreQualification_Yes</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_PreQualification_PreviousPolicydidnotrenew</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10AlwaysTransferExcess</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_QuoteNeeded_BackDated</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_EffectiveDate_BackDated</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Offering_StandardProgram</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Offering_BasicProgram</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_NewAccount_NewSubmission</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_Quote</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_CloseOptions_Withdraw</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PI_TermType_Annual</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_Monthly10</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_ChangePolicy_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_Rewrite_FullTerm_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_Account_CheckforDuplicates</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_Account_ModifyPerson</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_Account_CreateNewCompanyAccount</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_Account_WithdrawAccount</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_Account_OrganizationModify</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_Account_CreateNewPersonAccount</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_Account_SearchPerson</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_Account_Summary</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_CancelPolicy_02</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_CancelPolicy_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_RenewPolicy_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Suite" class="panel">
+        <div panel-name="chronological-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.Test.GW_BillingCenter_Test1</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">BillingTest</span>
+              <div class="chronological-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">driver_ObjReference_Initiate</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">AUT_PA_PC_Rewrite_RemainingOfTerm_01</span>
+                <span class="method-start">15 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">AUT_PA_PC_Rewrite_NewTerm_01</span>
+                <span class="method-start">309521 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">driver_ObjReference_Garbage</span>
+                <span class="method-start">696064 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

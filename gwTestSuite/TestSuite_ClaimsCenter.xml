@@ -14,7 +14,7 @@
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
 				<methods>
-					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
+					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
 					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
 					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
@@ -23,10 +23,12 @@
 
 					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_Contacts" />
+					<include
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_DuplicateContactsVerify" />
 					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_NewExposure_MedicalPayments" />
 					<exclude
-						name="AUT_PA_CC_FNOL_VerifiedPolicy_AddingRecovery" />
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_AddingReserve" />
 					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_ManualAdjusterCheck_Create" />
 					<exclude

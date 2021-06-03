@@ -33,46 +33,8 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 				driver = oDriver.getDriver();
 			}
 
-			/*
-			 * PolicyCenter
-			 */
 			GW_CM_PC_BC_CC_Login loginScreen = new GW_CM_PC_BC_CC_Login(driver, oExtentTest);
-			/*
-			 * GW_CM_PC_BC_CC_TabNavigation navigate = new
-			 * GW_CM_PC_BC_CC_TabNavigation(driver, oExtentTest);
-			 * 
-			 * PolicyCenter_Account account = new PolicyCenter_Account(driver,
-			 * oExtentTest); PolicyCenter_AccountSummary accountSummary = new
-			 * PolicyCenter_AccountSummary(driver, oExtentTest);
-			 * PolicyCenter_PolicySummary policySummary = new
-			 * PolicyCenter_PolicySummary(driver, oExtentTest);
-			 * PolicyCenter_Resuables policycenter = new
-			 * PolicyCenter_Resuables(driver, oExtentTest);
-			 * PolicyCenter_SubmissionBound submissionbound = new
-			 * PolicyCenter_SubmissionBound(driver, oExtentTest);
-			 * 
-			 * Personal Auto
-			 * 
-			 * PersonalAuto_Reusable personalauto = new
-			 * PersonalAuto_Reusable(driver, oExtentTest);
-			 * PersonalAuto_Qualification qualification = new
-			 * PersonalAuto_Qualification(driver, oExtentTest);
-			 * PersonalAuto_PolicyInfo policyinfo = new
-			 * PersonalAuto_PolicyInfo(driver, oExtentTest);
-			 * PersonalAuto_Drivers padriver = new PersonalAuto_Drivers(driver,
-			 * oExtentTest); PersonalAuto_Vehicles pavehicle = new
-			 * PersonalAuto_Vehicles(driver, oExtentTest);
-			 * PersonalAuto_Coverages coverages = new
-			 * PersonalAuto_Coverages(driver, oExtentTest);
-			 * PersonalAuto_RiskAnalysis riskanalysis = new
-			 * PersonalAuto_RiskAnalysis(driver, oExtentTest);
-			 * PersonalAuto_PolicyReview policyreview = new
-			 * PersonalAuto_PolicyReview(driver, oExtentTest);
-			 * PersonalAuto_Quote quote = new PersonalAuto_Quote(driver,
-			 * oExtentTest); PersonalAuto_Forms forms = new
-			 * PersonalAuto_Forms(driver, oExtentTest); PersonalAuto_Payments
-			 * payments = new PersonalAuto_Payments(driver, oExtentTest);
-			 */
+
 			/*
 			 * lhm_TestCase_Table_Data =
 			 * oDB.getData_MSExcel_WorkSheet_Fillo("Login", strTestCaseName);
@@ -128,58 +90,42 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 			 */
 			StrBROWSER     = System.getProperty("BROWSER");
 			StrENVIRONMENT = System.getProperty("ENVIRONMENT");
-			StrINTERFACE   = System.getProperty("INTERFACE");
 			gwAPPLICATION  = System.getProperty("gwAPPLICATION");
 			gwCOUNTRY      = System.getProperty("gwCOUNTRY");
 			gwSTATE        = System.getProperty("gwSTATE");
+			StrINTERFACE   = System.getProperty("INTERFACE");
 
-			System.out.println("System.getProperty gwbrowser = " + StrBROWSER);
-			System.out.println("System.getProperty gwenv = " + StrENVIRONMENT);
-			System.out.println("System.getProperty gwApplication = " + gwAPPLICATION);
+			String ptestoutput = pUserdir + "\\test-output\\" + gwAPPLICATION + "\\";
+			pTestDataFilePath             = pUserdir + "\\testdata\\" + gwAPPLICATION + ".xlsx";
+			pScreenshots                  = ptestoutput + "Screenshots\\";
+			pExtentReport_indexFile       = ptestoutput + "extentreports\\index.html";
+			pExtentReport_APPLICATIONFile = ptestoutput + "extentreports\\" + gwAPPLICATION + ".html";
+			pExtentReport_TodayFile       = ptestoutput + "extentreports\\" + "ExtentReport_" + gwAPPLICATION + "_" + strCurrentDate_ddMMMMyyyy + ".html";
 
 			switch (gwAPPLICATION) {
 				case "PersonalAuto" :
 					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-					pTestDataFilePath = pUserdir + "\\testdata\\PC_PersonalAuto.xlsx";
-					pScreenshots = pUserdir + "\\test-output\\Screenshots\\PersonalAuto\\";
-					pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\PersonalAuto\\index.html";
-					pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\PersonalAuto\\ExtentReport_" + strCurrentDate_ddMMMMyyyy + ".html";
 					break;
 				case "BillingCenter" :
 					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BillingCenter");
-					pTestDataFilePath = pUserdir + "\\testdata\\BillingCenter.xlsx";
-					pScreenshots = pUserdir + "\\test-output\\Screenshots\\BillingCenter\\";
-					pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\BillingCenter\\index.html";
-					pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\BillingCenter\\ExtentReport_" + strCurrentDate_ddMMMMyyyy + ".html";
 					break;
 				case "PolicyCenter" :
 					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-					pTestDataFilePath = pUserdir + "\\testdata\\PolicyCenter.xlsx";
-					pScreenshots = pUserdir + "\\test-output\\Screenshots\\PolicyCenter\\";
-					pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\PolicyCenter\\index.html";
-					pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\PolicyCenter\\ExtentReport_" + strCurrentDate_ddMMMMyyyy + ".html";
 					break;
 				case "ClaimsCenter" :
 					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ClaimsCenter");
-					pTestDataFilePath = pUserdir + "\\testdata\\ClaimsCenter.xlsx";
-					pScreenshots = pUserdir + "\\test-output\\Screenshots\\ClaimsCenter\\";
-					pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\ClaimsCenter\\index.html";
-					pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\ClaimsCenter\\ExtentReport_" + strCurrentDate_ddMMMMyyyy + ".html";
 					break;
 				case "ContactManagement" :
 					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
-					pTestDataFilePath = pUserdir + "\\testdata\\ContactManagement.xlsx";
-					pScreenshots = pUserdir + "\\test-output\\Screenshots\\ContactManagement\\";
-					pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\ContactManagement\\index.html";
-					pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\ContactManagement\\ExtentReport_" + strCurrentDate_ddMMMMyyyy + ".html";
 					break;
 				case "RESTapi" :
-					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-					pTestDataFilePath = pUserdir + "\\testdata\\RESTful.xlsx";
-					pScreenshots = pUserdir + "\\test-output\\Screenshots\\RESTful\\";
-					pExtentReport_indexFile = pUserdir + "\\test-output\\extentreports\\RESTful\\index.html";
-					pExtentReport_TodayFile = pUserdir + "\\test-output\\extentreports\\RESTful\\ExtentReport_" + strCurrentDate_ddMMMMyyyy + ".html";
+					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
 					break;
+				case "Mobile" :
+					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
+					break;
+				default :
+					throw new IOException("No support for gwAPPLICATION : " + gwAPPLICATION);
 			}
 			oExtentReports = Selenium_Reporting.getExtentReports();
 
@@ -195,8 +141,9 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 
 			oExtentReports.flush();
 
+			FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_APPLICATIONFile), true);
 			FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_TodayFile), true);
-			new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", pExtentReport_indexFile).start();
+			new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", pExtentReport_TodayFile).start();
 		} catch (Exception e) {
 			e.printStackTrace();
 

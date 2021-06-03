@@ -178,14 +178,23 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		GuidewireAutomate_Validation("Policy Details", PI_PolicyDetails, "equals", "Policy Details");
 
 		GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_PD_TermType"));
-		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
-		GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
+		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearsendKeysRobotTAB", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
 		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
 		GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
-		/*
-		 * GuidewireAutomate_Validation("Rate AsOf Date", PI_PD_RateAsOfDate,
-		 * "equals", lhm_TestCase_Table_Data.get("PI_PD_RateAsOfDate"));
-		 */
+		GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	public static void policyDetails_fetch() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+
+		GuidewireAutomate_Validation("Policy Details", PI_PolicyDetails, "equals", "Policy Details");
+
+		GuidewireAutomate_Validation("Effective Date", PI_PD_EffectiveDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
+		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
+		GuidewireAutomate_Validation("Written Date", PI_PD_WrittenDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

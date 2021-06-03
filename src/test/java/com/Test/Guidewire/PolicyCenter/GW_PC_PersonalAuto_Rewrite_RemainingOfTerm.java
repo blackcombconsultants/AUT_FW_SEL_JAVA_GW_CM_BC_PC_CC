@@ -15,9 +15,9 @@ import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 
 public class GW_PC_PersonalAuto_Rewrite_RemainingOfTerm extends GW_GetDriver {
 
@@ -43,7 +43,7 @@ public class GW_PC_PersonalAuto_Rewrite_RemainingOfTerm extends GW_GetDriver {
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_PolicyInfo.primaryNamedInsured();
 		PersonalAuto_PolicyInfo.pi_OfficialID();
-		PersonalAuto_PolicyInfo.policyDetails();
+		PersonalAuto_PolicyInfo.policyDetails_fetch();
 		PersonalAuto_PolicyInfo.affinityGroup();
 		PersonalAuto_PolicyInfo.producerOfRecord();
 		PersonalAuto_PolicyInfo.underWritingCompany();
