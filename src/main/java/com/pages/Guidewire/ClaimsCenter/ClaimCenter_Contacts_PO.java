@@ -29,4 +29,11 @@ public interface ClaimCenter_Contacts_PO {
   * Tax Info
   */
  final By NC_V_TI_TaxID=By.xpath("//input[contains(@name,'ContactBasicsDV-V_EIN')]");
+ 
+ /*
+  * DuplicateContactFound
+  */
+ 
+ final By DuplicateContactFound_Header=By.xpath("//div[@id='DuplicateContactPopup-ttlBar']//div[@class='gw-TitleBar--title']");
+ final By DuplicateContactFound_ErrorMessage=By.xpath("//div[@id='DuplicateContactPopup-matchMessage']//div[@class='gw-VerbatimWidget--inner']");
 }

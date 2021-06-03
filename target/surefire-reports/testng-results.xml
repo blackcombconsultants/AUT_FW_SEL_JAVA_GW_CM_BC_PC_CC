@@ -1,17 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="62" total="64" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="45314" started-at="2021-04-01T12:15:58Z" finished-at="2021-04-01T12:16:43Z">
+  <suite started-at="2021-06-03T11:21:06Z" name="TestSuite_PersonalAuto" finished-at="2021-06-03T11:32:42Z" duration-ms="696150">
     <groups>
     </groups>
-    <test name="Test" duration-ms="45314" started-at="2021-04-01T12:15:58Z" finished-at="2021-04-01T12:16:43Z">
-      <class name="com.Test.GW_BillingCenter_Test1">
-        <test-method status="PASS" signature="BillingTest()[pri:0, instance:com.Test.GW_BillingCenter_Test1@f2f2cc1]" name="BillingTest" duration-ms="45165" started-at="2021-04-01T17:45:58Z" finished-at="2021-04-01T17:46:43Z">
+    <test started-at="2021-06-03T11:21:06Z" name="PersonalAuto PolicyCenter Regression" finished-at="2021-06-03T11:32:42Z" duration-ms="696150">
+      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm">
+        <test-method signature="AUT_PA_PC_Rewrite_RemainingOfTerm_01()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm@1c7696c6]" started-at="2021-06-03T16:51:06Z" name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" finished-at="2021-06-03T16:56:15Z" duration-ms="309339" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')] (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.getText_Element(SeleniumWebDriver_Commands.java:703)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:483)
+	at com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo.policyDetails_fetch(PersonalAuto_PolicyInfo.java:196)
+	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm.AUT_PA_PC_Rewrite_RemainingOfTerm_01(GW_PC_PersonalAuto_Rewrite_RemainingOfTerm.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')]"}
+  (Session info: chrome=90.0.4430.212)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'JMD', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55971}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 64fd2e482c5fdd51d372579dd6d85488
+*** Element info: {Using=xpath, value=//div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BillingTest -->
-      </class> <!-- com.Test.GW_BillingCenter_Test1 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- AUT_PA_PC_Rewrite_RemainingOfTerm_01 -->
+      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm -->
+      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
+        <test-method signature="AUT_PA_PC_Rewrite_NewTerm_01()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm@60099951]" started-at="2021-06-03T16:56:15Z" name="AUT_PA_PC_Rewrite_NewTerm_01" finished-at="2021-06-03T17:02:42Z" duration-ms="386417" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for text ('Rewrite New Term (Bound)') to be present in element found by By.xpath: //div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'JMD', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56394}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c34a05cb7bae957076bef7f500e7345a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text ('Rewrite New Term (Bound)') to be present in element found by By.xpath: //div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'JMD', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56394}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c34a05cb7bae957076bef7f500e7345a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:469)
+	at com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables.clickButton(PolicyCenter_Resuables.java:128)
+	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm.AUT_PA_PC_Rewrite_NewTerm_01(GW_PC_PersonalAuto_Rewrite_NewTerm.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AUT_PA_PC_Rewrite_NewTerm_01 -->
+      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm -->
+      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
+        <test-method is-config="true" signature="driver_ObjReference_Initiate()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission@6574a52c]" started-at="2021-06-03T16:51:06Z" name="driver_ObjReference_Initiate" finished-at="2021-06-03T16:51:06Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driver_ObjReference_Initiate -->
+        <test-method is-config="true" signature="driver_ObjReference_Garbage()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission@6574a52c]" started-at="2021-06-03T17:02:42Z" name="driver_ObjReference_Garbage" finished-at="2021-06-03T17:02:42Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driver_ObjReference_Garbage -->
+      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission -->
+    </test> <!-- PersonalAuto PolicyCenter Regression -->
+  </suite> <!-- TestSuite_PersonalAuto -->
 </testng-results>

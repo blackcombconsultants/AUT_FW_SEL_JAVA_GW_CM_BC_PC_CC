@@ -79,7 +79,7 @@ public interface ClaimCenter_Resuables_PO {
 	/*
 	 * Injury Incident Overview
 	 */
-	final By Injury_Incident_Overview=By.xpath("//div[contains(@id,'Injury_IncidentMenuIcon')]//div[@class='gw-action--expand-button']");
+	final By Injury_Incident_Overview=By.xpath("//div[contains(@id,'Injury_IncidentMenuIcon')]//div[@role='button']");
 	final By IIO_NewIncident=By.xpath("//div[contains(@id,'NewIncidentMenuItem')]//div[@class='gw-label']");
 	final By II_LossParty=By.xpath("//select[contains(@name,'InjuryIncidentInputSet-LossParty')]");
 
@@ -89,7 +89,7 @@ public interface ClaimCenter_Resuables_PO {
 
 	final By ER_CostType=By.xpath("//select[contains(@name,'CostType')]");
 	final By ER_CostCategory=By.xpath("//select[contains(@name,'CostCategory')]");
-	final By ER_NewAvailableReserves=By.xpath("//input[contains(@name,'EditableReservesLV-1-NewAmount')]");
+	final By ER_NewAvailableReserves=By.xpath("//input[contains(@name,'NewAmount')]");
 	final By ER_Save=By.xpath("//div[contains(@id,'Update')]//div[@role='button']");
 
 	/*

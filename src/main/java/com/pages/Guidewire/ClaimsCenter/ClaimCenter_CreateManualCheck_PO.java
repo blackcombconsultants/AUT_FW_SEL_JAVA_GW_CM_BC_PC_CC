@@ -26,6 +26,10 @@ public interface ClaimCenter_CreateManualCheck_PO {
 	 */
    final By PD_ReserveLine=By.xpath("//select[contains(@name,'ReserveLineInputSet-ReserveLine')]");
    final By PD_PaymentType=By.xpath("//select[contains(@name,'Payment_PaymentType')]");
+   final By PD_CostType=By.xpath("//select[contains(@name,'ReserveLineInputSet-CostType')]");
+   final By PD_CostCategory=By.xpath("//select[contains(@name,'ReserveLineInputSet-CostCategory')]");
+
+
    /*
     * LineItems
     */

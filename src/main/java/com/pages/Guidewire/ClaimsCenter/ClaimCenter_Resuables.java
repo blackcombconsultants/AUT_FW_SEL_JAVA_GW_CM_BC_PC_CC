@@ -1,5 +1,7 @@
 package com.pages.Guidewire.ClaimsCenter;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -7,6 +9,7 @@ import org.openqa.selenium.WebDriverException;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements ClaimCenter_Resuables_PO {
 
@@ -33,14 +36,30 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 			break;
 		}
 	} 
+	
+	
+	public static String infoBar(String strLabel) throws Throwable {
+		String strInfobar = null;
 
+		switch (strLabel) {
+			case "InsuredName" :
+				strInfobar = getText_Element(insuredName);
+				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues","InsuredName", strInfobar);
+				break;
+			default :
+				throw new IOException("No support for Label : " + strLabel);
+		}
+		oExtentTest.log(Status.INFO, " Fetched from Info Bar => " + strLabel + " = " + strInfobar);
+		return strInfobar;
+	}
 	
 	public static void NewClaim_AutoFirstandFinal() throws Throwable
 	{
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AutoFirstandFinal",
 				strTestCaseName);
 		
-		String insuredName=driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
+		String insured=ClaimCenter_Resuables.infoBar("InsuredName");
+		//String insuredName=driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
 				
 		
 		GuidewireAutomate_Validation("Screen Header",AutoFirstandFinal_Header, "equals", "Step 2 of 2: Auto First and Final");
@@ -49,10 +68,10 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		By  WhoreportedClaim= By.xpath("//span[@class='gw-label--inner' and text()='"+strDynamicXpath+"']//parent::label[@class='gw-RangeRadioValueWidget--label']//input[contains(@id,'FirstFinalReportedAgencyRadioButton')]");
 		
 		GuidewireAutomate("WhoreportedClaim_Insured", WhoreportedClaim, "click", "NA");
-     	GuidewireAutomate("Name", AFF_Name, "selectByVisibleText", insuredName);
+     	GuidewireAutomate("Name", AFF_Name, "selectByVisibleText", insured);
      	
 		GuidewireAutomate("Loss Description", AFF_Damage_LossDescription, "clearANDsendKeys",  lhm_TestCase_Table_Data.get("LossDescription"));
-     	GuidewireAutomate("Claimant Name", AFF_Claimant_Name, "selectByVisibleText", insuredName);
+     	GuidewireAutomate("Claimant Name", AFF_Claimant_Name, "selectByVisibleText", insured);
      	GuidewireAutomate("Location", Location, "selectByVisibleText", lhm_TestCase_Table_Data.get("Location"));
      	GuidewireAutomate("State", State, "selectByVisibleText",  lhm_TestCase_Table_Data.get("State"));
      	 try {
@@ -65,7 +84,7 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 
  			}
      	repairShop();
-     	GuidewireAutomate("Financials Name", AFF_Financials_Name, "selectByVisibleText", insuredName);
+     	GuidewireAutomate("Financials Name", AFF_Financials_Name, "selectByVisibleText", insured);
      	try{
      		GuidewireAutomate("Financials PayeeType", AFF_Financials_PayeeType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PayeeType"));
      	}
