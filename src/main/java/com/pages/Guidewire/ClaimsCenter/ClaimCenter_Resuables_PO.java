@@ -8,7 +8,7 @@ public interface ClaimCenter_Resuables_PO {
 			"//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']");
 	final By  Finish=By.xpath("//div[contains(@id,'Finish')]//div[@role='button']");
 	final By OK=By.xpath("//div[contains(@id,'NewInjuryIncidentScreen-Update')]//div[@role='button']");
-	final By Update=By.xpath("//div[contains(@id,'Update')]");
+	final By Update=By.xpath("//div[contains(@id,'UpdateButton')]//div[@role='button']//div[@class='gw-label']");
 
 
 	final By insuredName=By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']");
@@ -79,7 +79,7 @@ public interface ClaimCenter_Resuables_PO {
 	/*
 	 * Injury Incident Overview
 	 */
-	final By Injury_Incident_Overview=By.xpath("//div[contains(@id,'Injury_IncidentMenuIcon')]//div[@role='button']");
+	final By Injury_Incident_Overview=By.xpath("//div[contains(@id,'Injury_IncidentMenuIcon')]//div[@class='gw-action--expand-button']");
 	final By IIO_NewIncident=By.xpath("//div[contains(@id,'NewIncidentMenuItem')]//div[@class='gw-label']");
 	final By II_LossParty=By.xpath("//select[contains(@name,'InjuryIncidentInputSet-LossParty')]");
 
@@ -98,5 +98,12 @@ public interface ClaimCenter_Resuables_PO {
 	final By SelectPolicy=By.xpath("//div[contains(@id,'SelectPolicyButton')]//div[@role='button']");
 	final By SP_PolicyNumber=By.xpath("//input[contains(@name,'PolicyNumber')]");
 	final By  SP_Search=By.xpath("//div[contains(@id,'SearchLinksInputSet-Search')]");
-	final By SP_Select=By.xpath("//div[contains(@id,'PolicySearchResultLV-0-_Select')]");		
+	final By SP_Select=By.xpath("//div[contains(@id,'PolicySearchResultLV-0-_Select')]");
+	/*
+	 * DuplicateClaims
+	 */
+	final By DuplicateClaims_Header=By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By DuplicateClaims_ErrorMsg=By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
+	
+	
 }
