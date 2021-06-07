@@ -402,10 +402,20 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 	public static void button_Verify() throws Throwable {
 		// Validating Risk Analysis screen
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Risk Analysis");
+		GuidewireAutomate_Validation("New Note", RA_UWA_NewNote, "equals", "New Note");
 
 		GuidewireAutomate_Validation("Add UWIssue", RA_AddUWIssue_Button, "isDisplayed", "true");
 		GuidewireAutomate_Validation("Add Contingency", RA_AddContingency_Button, "isDisplayed", "true");
 		GuidewireAutomate_Validation("Request Approval", RA_RequestApproval_Button, "isDisplayed", "true");
+
+	}
+
+	public static void issuesthatblockIssuance() throws Throwable {
+		// Validating Risk Analysis screen
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Issues that block Issuance");
+		GuidewireAutomate_Validation("UW Issues that block issuance", IBA_UWIssuesthatblockissuance, "equals", "UW Issues that block issuance");
+
+		GuidewireAutomate_Validation("Add UWIssue", RA_AddUWIssue_Button, "isDisplayed", "true");
 
 	}
 }

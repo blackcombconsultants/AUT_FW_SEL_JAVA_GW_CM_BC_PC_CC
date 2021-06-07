@@ -87,6 +87,10 @@ public class GW_PC_PersonalAuto_Rewrite_NewTerm extends GW_GetDriver {
 		PersonalAuto_Payments.paymentSchedule();
 		PolicyCenter_Resuables.clickButton("Issue Policy for Rewrite New Term");
 
+		PersonalAuto_RiskAnalysis.issuesthatblockIssuance();
+		PersonalAuto_RiskAnalysis.approveUWIssues();
+		PersonalAuto_RiskAnalysis.riskApprovalDetails();
+
 		strJob           = PolicyCenter_Resuables.infoBar("Job");
 		strLOB           = PolicyCenter_Resuables.infoBar("LOB");
 		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
