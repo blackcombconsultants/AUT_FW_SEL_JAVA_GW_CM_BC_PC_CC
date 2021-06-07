@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="63" total="64" passed="0" failed="1" skipped="0">
+<testng-results ignored="62" total="64" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-04T08:44:52Z" name="TestSuite_PersonalAuto" finished-at="2021-06-04T08:52:57Z" duration-ms="485024">
+  <suite started-at="2021-06-07T10:25:32Z" name="TestSuite_PersonalAuto" finished-at="2021-06-07T10:30:17Z" duration-ms="285115">
     <groups>
     </groups>
-    <test started-at="2021-06-04T08:44:52Z" name="PersonalAuto PolicyCenter Regression" finished-at="2021-06-04T08:52:57Z" duration-ms="485024">
-      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
-        <test-method signature="AUT_PA_PC_Rewrite_NewTerm_01()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm@1c7696c6]" started-at="2021-06-04T14:14:52Z" name="AUT_PA_PC_Rewrite_NewTerm_01" finished-at="2021-06-04T14:22:56Z" duration-ms="484558" status="FAIL">
+    <test started-at="2021-06-07T10:25:32Z" name="PersonalAuto PolicyCenter Regression" finished-at="2021-06-07T10:30:17Z" duration-ms="285115">
+      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
+        <test-method signature="AUT_PA_PC_Account_CreateNewPersonAccount()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation@1c7696c6]" started-at="2021-06-07T15:55:32Z" name="AUT_PA_PC_Account_CreateNewPersonAccount" finished-at="2021-06-07T15:56:37Z" duration-ms="65448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AUT_PA_PC_Account_CreateNewPersonAccount -->
+      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation -->
+      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
+        <test-method is-config="true" signature="driver_ObjReference_Initiate()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission@6574a52c]" started-at="2021-06-07T15:55:32Z" name="driver_ObjReference_Initiate" finished-at="2021-06-07T15:55:32Z" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driver_ObjReference_Initiate -->
+        <test-method signature="AUT_PA_PC_NewSubmission_BindOption_IssuePolicy()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission@6574a52c]" started-at="2021-06-07T15:56:37Z" name="AUT_PA_PC_NewSubmission_BindOption_IssuePolicy" finished-at="2021-06-07T16:00:17Z" duration-ms="219219" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next'] (tried for 7 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for text ('New Note') to be present in element found by By.xpath: //div[contains(@class,'gw-boldLabel') and text()='New Note'] (tried for 20 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next'] (tried for 7 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text ('New Note') to be present in element found by By.xpath: //div[contains(@class,'gw-boldLabel') and text()='New Note'] (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.getElement(SeleniumWebDriver_Commands.java:56)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate(SeleniumWebDriver_Commands.java:148)
-	at com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables.clickButton(PolicyCenter_Resuables.java:55)
-	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm.AUT_PA_PC_Rewrite_NewTerm_01(GW_PC_PersonalAuto_Rewrite_NewTerm.java:72)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:469)
+	at com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis.button_Verify(PersonalAuto_RiskAnalysis.java:405)
+	at com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable.submissionProcess(PersonalAuto_Reusable.java:339)
+	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission.AUT_PA_PC_NewSubmission_BindOption_IssuePolicy(GW_PC_PersonalAuto_Submission.java:429)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -33,15 +43,15 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']"}
-  (Session info: chrome=90.0.4430.212)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'gw-boldLabel') and text()='New Note']"}
+  (Session info: chrome=91.0.4472.77)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'JMD', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+System info: host: 'JMD', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50111}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: fa9b79942d579bdc84e7eda0271d2d0f
-*** Element info: {Using=xpath, value=//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63791}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 125c16838e7a2abbda6dbeba2190f804
+*** Element info: {Using=xpath, value=//div[contains(@class,'gw-boldLabel') and text()='New Note']}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -63,8 +73,8 @@ Session ID: fa9b79942d579bdc84e7eda0271d2d0f
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
 	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:382)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:378)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 17 more
 ]]>
@@ -72,14 +82,8 @@ Session ID: fa9b79942d579bdc84e7eda0271d2d0f
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AUT_PA_PC_Rewrite_NewTerm_01 -->
-      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm -->
-      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
-        <test-method is-config="true" signature="driver_ObjReference_Initiate()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission@6574a52c]" started-at="2021-06-04T14:14:52Z" name="driver_ObjReference_Initiate" finished-at="2021-06-04T14:14:52Z" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driver_ObjReference_Initiate -->
-        <test-method is-config="true" signature="driver_ObjReference_Garbage()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission@6574a52c]" started-at="2021-06-04T14:22:57Z" name="driver_ObjReference_Garbage" finished-at="2021-06-04T14:22:57Z" duration-ms="0" status="PASS">
+        </test-method> <!-- AUT_PA_PC_NewSubmission_BindOption_IssuePolicy -->
+        <test-method is-config="true" signature="driver_ObjReference_Garbage()[pri:0, instance:com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission@6574a52c]" started-at="2021-06-07T16:00:17Z" name="driver_ObjReference_Garbage" finished-at="2021-06-07T16:00:17Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driver_ObjReference_Garbage -->
