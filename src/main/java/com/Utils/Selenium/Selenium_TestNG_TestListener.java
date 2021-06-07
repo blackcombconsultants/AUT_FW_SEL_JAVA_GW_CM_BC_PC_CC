@@ -97,7 +97,7 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 
 			String ptestoutput = pUserdir + "\\test-output\\" + gwAPPLICATION + "\\";
 			pTestDataFilePath             = pUserdir + "\\testdata\\" + gwAPPLICATION + ".xlsx";
-			pScreenshots                  = ptestoutput + "Screenshots\\";
+			pScreenshots                  = pUserdir + "\\test-output\\" + "Screenshots\\";
 			pExtentReport_indexFile       = ptestoutput + "extentreports\\index.html";
 			pExtentReport_APPLICATIONFile = ptestoutput + "extentreports\\" + gwAPPLICATION + ".html";
 			pExtentReport_TodayFile       = ptestoutput + "extentreports\\" + "ExtentReport_" + gwAPPLICATION + "_" + strCurrentDate_ddMMMMyyyy + ".html";

@@ -14,35 +14,35 @@
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
 				<methods>
-					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
-					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
-					<exclude
+					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
+					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
+					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_QuickClaimAuto" />
 
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_Contacts" />
 					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_DuplicateContactsVerify" />
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_NewExposure_MedicalPayments" />
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_AddingReserve" />
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_ManualAdjusterCheck_Create" />
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_Recovery_CreateRecovery" />
 				</methods>
 			</class>
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_UnverifiedPolicy">
 				<methods>
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto" />
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
-					<exclude
+					<include
 						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_QuickClaimAuto" />
 
 				</methods>

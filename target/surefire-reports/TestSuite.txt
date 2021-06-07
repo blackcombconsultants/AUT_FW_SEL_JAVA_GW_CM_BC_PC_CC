@@ -1,24 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 487.405 sec <<< FAILURE!
-AUT_PA_PC_Rewrite_NewTerm_01(com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm)  Time elapsed: 484.586 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next'] (tried for 7 second(s) with 500 milliseconds interval)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 287.3 sec <<< FAILURE!
+AUT_PA_PC_NewSubmission_BindOption_IssuePolicy(com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission)  Time elapsed: 219.229 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text ('New Note') to be present in element found by By.xpath: //div[contains(@class,'gw-boldLabel') and text()='New Note'] (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.getElement(SeleniumWebDriver_Commands.java:56)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate(SeleniumWebDriver_Commands.java:148)
-	at com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables.clickButton(PolicyCenter_Resuables.java:55)
-	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm.AUT_PA_PC_Rewrite_NewTerm_01(GW_PC_PersonalAuto_Rewrite_NewTerm.java:72)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']"}
-  (Session info: chrome=90.0.4430.212)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:469)
+	at com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis.button_Verify(PersonalAuto_RiskAnalysis.java:405)
+	at com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable.submissionProcess(PersonalAuto_Reusable.java:339)
+	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission.AUT_PA_PC_NewSubmission_BindOption_IssuePolicy(GW_PC_PersonalAuto_Submission.java:429)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'gw-boldLabel') and text()='New Note']"}
+  (Session info: chrome=91.0.4472.77)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'JMD', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+System info: host: 'JMD', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50111}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: fa9b79942d579bdc84e7eda0271d2d0f
-*** Element info: {Using=xpath, value=//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63791}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 125c16838e7a2abbda6dbeba2190f804
+*** Element info: {Using=xpath, value=//div[contains(@class,'gw-boldLabel') and text()='New Note']}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -40,7 +40,7 @@ Session ID: fa9b79942d579bdc84e7eda0271d2d0f
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
 	at com.sun.proxy.$Proxy7.findElement(Unknown Source)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:382)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:378)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 17 more
