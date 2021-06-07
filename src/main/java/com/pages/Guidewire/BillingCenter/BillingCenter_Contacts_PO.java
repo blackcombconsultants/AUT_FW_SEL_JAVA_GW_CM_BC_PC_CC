@@ -8,7 +8,7 @@ public interface BillingCenter_Contacts_PO {
    
 	
 	final By Contacts_CI_Type=By.xpath("//div[contains(@id,'AccountContactDetailDV-Type')]//div[@class='gw-value-readonly-wrapper']");
-    final By Contacts_CI_Name=By.xpath("//div[contains(@id,'AccountContactDetailDV-NameInputSet-GlobalContactNameInputSet-Name')]//div[@class='gw-value-readonly-wrapper']");
+    final By Contacts_CI_Name=By.xpath("//div[contains(@id,'GlobalPersonNameInputSet-NameSummary')]//div[@class='gw-value-readonly-wrapper']");
 	final By Contacts_CI_Email=By.xpath("//div[contains(@id,'AccountContactDetailDV-Email')]//div[@class='gw-value-readonly-wrapper']");
 
 	final By Contats_CI_Address1=By.xpath("//div[contains(@id,'GlobalAddressInputSet-AddressLine1')]//input[@type='text']");

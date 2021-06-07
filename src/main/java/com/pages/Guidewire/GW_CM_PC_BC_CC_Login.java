@@ -46,7 +46,7 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 	public static void logout_BillingCenter() throws Throwable {
 		GuidewireAutomate("Setting", GW_Setting_Link, "click", "Null");
 		GuidewireAutomate("Logout", GW_Logout_Link, "click", "Null");
-		GuidewireAutomate_Handle("alertaccept", "NA");
+		//GuidewireAutomate_Handle("alertaccept", "NA");
 
 		oExtentTest.log(Status.PASS, "Logout is succesful");
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
