@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,11 +103,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestSuite_PersonalAuto" title="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm" class="method navigator-link" hash-for-method="AUT_PA_PC_Rewrite_NewTerm_01">AUT_PA_PC_Rewrite_NewTerm_01</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TestSuite_PersonalAuto" title="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm" class="method navigator-link" hash-for-method="AUT_PA_PC_Rewrite_RemainingOfTerm_01">AUT_PA_PC_Rewrite_RemainingOfTerm_01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-TestSuite_PersonalAuto -->
@@ -133,56 +128,25 @@
                   <a name="AUT_PA_PC_Rewrite_NewTerm_01">
                   </a> <!-- AUT_PA_PC_Rewrite_NewTerm_01 -->
                   <span class="method-name">AUT_PA_PC_Rewrite_NewTerm_01</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;Rewrite New Term (Bound)&apos;) to be present in element found by By.xpath: //div[contains(@id,&apos;InfoBar-JobLabel&apos;)]//div[@class=&apos;gw-label&apos;] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;JMD&apos;, ip: &apos;192.168.8.100&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
-Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56394}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c34a05cb7bae957076bef7f500e7345a
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id=&apos;gw-center-title-toolbar&apos;]//div[contains(@class,&apos;gw-ToolbarButtonWidget&apos;)]/div[@role=&apos;button&apos;]//div[@class=&apos;gw-label&apos; and text()=&apos;Next&apos;] (tried for 7 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:469)
-	at com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables.clickButton(PolicyCenter_Resuables.java:128)
-	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm.AUT_PA_PC_Rewrite_NewTerm_01(GW_PC_PersonalAuto_Rewrite_NewTerm.java:88)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.getElement(SeleniumWebDriver_Commands.java:56)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate(SeleniumWebDriver_Commands.java:148)
+	at com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables.clickButton(PolicyCenter_Resuables.java:55)
+	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm.AUT_PA_PC_Rewrite_NewTerm_01(GW_PC_PersonalAuto_Rewrite_NewTerm.java:72)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 10 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestSuite_PersonalAuto-class-failed -->
-          <div class="suite-TestSuite_PersonalAuto-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="AUT_PA_PC_Rewrite_RemainingOfTerm_01">
-                  </a> <!-- AUT_PA_PC_Rewrite_RemainingOfTerm_01 -->
-                  <span class="method-name">AUT_PA_PC_Rewrite_RemainingOfTerm_01</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@id,&apos;PolicyInfoInputSet-ExpirationDate&apos;)]//div[contains(@class,&apos;gw-value-readonly-wrapper&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.getText_Element(SeleniumWebDriver_Commands.java:703)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate_Validation(SeleniumWebDriver_Commands.java:483)
-	at com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo.policyDetails_fetch(PersonalAuto_PolicyInfo.java:196)
-	at com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm.AUT_PA_PC_Rewrite_RemainingOfTerm_01(GW_PC_PersonalAuto_Rewrite_RemainingOfTerm.java:46)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@id,&apos;PolicyInfoInputSet-ExpirationDate&apos;)]//div[contains(@class,&apos;gw-value-readonly-wrapper&apos;)]&quot;}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;gw-center-title-toolbar&apos;]//div[contains(@class,&apos;gw-ToolbarButtonWidget&apos;)]/div[@role=&apos;button&apos;]//div[@class=&apos;gw-label&apos; and text()=&apos;Next&apos;]&quot;}
   (Session info: chrome=90.0.4430.212)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;JMD&apos;, ip: &apos;192.168.8.100&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55971}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 64fd2e482c5fdd51d372579dd6d85488
-*** Element info: {Using=xpath, value=//div[contains(@id,&apos;PolicyInfoInputSet-ExpirationDate&apos;)]//div[contains(@class,&apos;gw-value-readonly-wrapper&apos;)]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50111}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fa9b79942d579bdc84e7eda0271d2d0f
+*** Element info: {Using=xpath, value=//div[@id=&apos;gw-center-title-toolbar&apos;]//div[contains(@class,&apos;gw-ToolbarButtonWidget&apos;)]/div[@role=&apos;button&apos;]//div[@class=&apos;gw-label&apos; and text()=&apos;Next&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -305,7 +269,7 @@ Session ID: 64fd2e482c5fdd51d372579dd6d85488
       &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm --&gt;
       &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;AUT_PA_PC_Rewrite_RemainingOfTerm_01&quot;/&gt;
+          &lt;exclude name=&quot;AUT_PA_PC_Rewrite_RemainingOfTerm_01&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm --&gt;
       &lt;class name=&quot;com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm&quot;&gt;
@@ -352,20 +316,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'AUT_PA_PC_Rewrite_NewTerm_01')
 data.setCell(0, 2, 'com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm')
-data.setCell(0, 3, 386417);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'AUT_PA_PC_Rewrite_RemainingOfTerm_01')
-data.setCell(1, 2, 'com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm')
-data.setCell(1, 3, 309339);
+data.setCell(0, 3, 484558);
 window.suiteTableData['TestSuite_PersonalAuto']= { tableData: data, tableDiv: 'times-div-TestSuite_PersonalAuto'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 minutes</span>
+              <span class="suite-total-time">Total running time: 8 minutes</span>
               <div id="times-div-TestSuite_PersonalAuto">
               </div> <!-- times-div-TestSuite_PersonalAuto -->
             </div> <!-- times-div -->
@@ -380,13 +340,29 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-TestSuite_PersonalAuto" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">62 ignored methods</span>
+            <span class="header-content">63 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy</span>
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">AUT_PA_PC_ReinstatePolicy_01</span>
+                <span class="ignored-method-name">AUT_PA_PC_Rewrite_RemainingOfTerm_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_RenewPolicy_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_CancelPolicy_02</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_CancelPolicy_01</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -419,9 +395,9 @@ return data;
                 <br/>
                 <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_F</span>
                 <br/>
-                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Check</span>
-                <br/>
                 <span class="ignored-method-name">AUT_PA_PC_NewSubmission_PA_CreateVehicle</span>
+                <br/>
+                <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_UpFrontPayment_Check</span>
                 <br/>
                 <span class="ignored-method-name">AUT_PA_PC_NewSubmission_Pay_PaymentSchedule_A</span>
                 <br/>
@@ -492,20 +468,6 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">AUT_PA_PC_ChangePolicy_01</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">AUT_PA_PC_Rewrite_FullTerm_01</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
               <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">AUT_PA_PC_Account_CheckforDuplicates</span>
@@ -527,18 +489,23 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy</span>
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">AUT_PA_PC_CancelPolicy_02</span>
-                <br/>
-                <span class="ignored-method-name">AUT_PA_PC_CancelPolicy_01</span>
+                <span class="ignored-method-name">AUT_PA_PC_Rewrite_FullTerm_01</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy</span>
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">AUT_PA_PC_RenewPolicy_01</span>
+                <span class="ignored-method-name">AUT_PA_PC_ReinstatePolicy_01</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_PA_PC_ChangePolicy_01</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -557,28 +524,19 @@ return data;
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">AUT_PA_PC_Rewrite_RemainingOfTerm_01</span>
-                <span class="method-start">15 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">AUT_PA_PC_Rewrite_NewTerm_01</span>
-                <span class="method-start">309521 ms</span>
+                <span class="method-start">29 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">driver_ObjReference_Garbage</span>
-                <span class="method-start">696064 ms</span>
+                <span class="method-start">484839 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

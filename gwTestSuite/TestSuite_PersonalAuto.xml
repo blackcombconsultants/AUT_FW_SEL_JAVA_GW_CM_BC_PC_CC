@@ -143,7 +143,7 @@
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm">
 				<methods>
-					<include name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" />
+					<exclude name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" />
 				</methods>
 			</class>	<!-- class -->
 			<class

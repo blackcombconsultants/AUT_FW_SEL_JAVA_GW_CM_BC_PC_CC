@@ -18,11 +18,6 @@
           <include name="AUT_PA_PC_Rewrite_NewTerm_01"/>
         </methods>
       </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm -->
-      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm">
-        <methods>
-          <include name="AUT_PA_PC_Rewrite_RemainingOfTerm_01"/>
-        </methods>
-      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm -->
     </classes>
   </test> <!-- PersonalAuto PolicyCenter Regression(failed) -->
 </suite> <!-- Failed suite [TestSuite_PersonalAuto] -->

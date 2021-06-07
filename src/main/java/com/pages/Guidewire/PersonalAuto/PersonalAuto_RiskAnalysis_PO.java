@@ -191,54 +191,9 @@ public interface PersonalAuto_RiskAnalysis_PO {
 
 	final By RA_PL_Status = By.xpath(
 			"//tr[contains(@id,'PriorPolicyLV') and contains(@class,'gw-standard-row')]/td[contains(@id,'TotalLosses_Cell') and contains(@class,'gw-CellWidget')]//div[contains(@id,'TotalLosses') and contains(@class,'gw-editable')]//input[contains(@name,'TotalLosses')]");
-
 	/*
-	 * Scenarios
-	 * 
-	 * 
-	 * void addUWIssue() throws Throwable;
-	 * 
-	 * void approveUWIssues() throws Throwable;
-	 * 
-	 * void riskApprovalDetails() throws Throwable;
-	 * 
-	 * void rejectUWIssues() throws Throwable;
-	 * 
-	 * void reopenUWIssues() throws Throwable;
-	 * 
-	 * void addUWIssue_MandatoryValidation() throws Throwable;
-	 * 
-	 * void addUWIssue_CancelValidation() throws Throwable;
-	 * 
-	 * void addUWContingency() throws Throwable;
-	 * 
-	 * void approveContingency() throws Throwable;
-	 * 
-	 * void rejectContingency() throws Throwable;
-	 * 
-	 * void reopenContingency() throws Throwable;
-	 * 
-	 * void priorPolicies_Add() throws Throwable;
-	 * 
-	 * void priorPolicies_Edit() throws Throwable;
-	 * 
-	 * void priorPolicies_Remove() throws Throwable;
-	 * 
-	 * void RA_Claims_Search() throws Throwable;
-	 * 
-	 * void priorLosses_Add() throws Throwable;
-	 * 
-	 * void priorLosses_Edit() throws Throwable;
-	 * 
-	 * void priorLosses_Remove() throws Throwable;
-	 * 
-	 * void RA_MVR_Search_Validate() throws Throwable;
-	 * 
-	 * void RA_LockForReview() throws Throwable;
-	 * 
-	 * void releaseLock() throws Throwable;
-	 * 
-	 * void requestApproval() throws Throwable;
+	 * Issues that block issuance
 	 */
+	final By IBA_UWIssuesthatblockissuance = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='UW Issues that block issuance']");
 
 }
