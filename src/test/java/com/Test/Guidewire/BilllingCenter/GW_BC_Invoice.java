@@ -33,13 +33,12 @@ public class GW_BC_Invoice extends GW_GetDriver {
 		GW_CM_PC_BC_CC_TabNavigation.bcMenuNavigation("Payments");
 		BillingCenter_Resuables.Payments();
 		GW_CM_PC_BC_CC_TabNavigation.bcMenuNavigation("Invoices");
-		BillingCenter_Invoices.Invoices_InvoiceInformation_Edit();
-		BillingCenter_Invoices.Invoices_InvoiceItems();
-		BillingCenter_PolicySummary.PolicySummary_Overview();
+		BillingCenter_Invoices.Invoices_InvoiceInformation_Verify();
+	  // BillingCenter_Invoices.Invoices_InvoiceInformation_Edit();
+	  // BillingCenter_Invoices.Invoices_InvoiceItems();
+       //BillingCenter_PolicySummary.PolicySummary_Overview();
 
-		// GW_CM_PC_BC_CC_TabNavigation.bcMenuNavigation("Details");
-		// BillingCenter_PolicyDetails.PD_PolicyBasics_Verify();
-		// BillingCenter_PolicyDetails.PD_Charges_Verify();
+		
 		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
 
 	}

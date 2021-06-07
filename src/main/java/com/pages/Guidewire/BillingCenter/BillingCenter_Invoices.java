@@ -21,9 +21,9 @@ public class BillingCenter_Invoices extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Invoices",
 				strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", Invoices_Header, "equals","Invoices");
-		GuidewireAutomate_Validation("Due Date", Invoices_IInfo_DueDate, "",lhm_TestCase_Table_Data.get("TD_DueDate"));
-		GuidewireAutomate_Validation("Status", Invoices_IInfo_Status, "", lhm_TestCase_Table_Data.get("TD_Status"));
-		GuidewireAutomate_Validation("Status AdHoc", Invoices_IInfo_Status_AdHoc, "", lhm_TestCase_Table_Data.get("TD_AdHoc"));
+		//GuidewireAutomate_Validation("Due Date", Invoices_IInfo_DueDate, "",lhm_TestCase_Table_Data.get("TD_DueDate"));
+		GuidewireAutomate_Validation("Status", Invoices_IInfo_Status, "equals", lhm_TestCase_Table_Data.get("TD_Status"));
+		GuidewireAutomate_Validation("Status AdHoc", Invoices_IInfo_Status_AdHoc, "equals", lhm_TestCase_Table_Data.get("TD_AdHoc"));
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
