@@ -41,7 +41,7 @@ public class ClaimCenter_Contacts extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("State", NC_V_PA_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("State"));
 
 		String TaxID = lhm_TestCase_Table_Data.get("TaxID");
-		if (TaxID.equalsIgnoreCase("345-34-349")) {
+		if (TaxID.equalsIgnoreCase("345-34-300")) {
 			String NewTaxId = TaxID + getRandomNumeric(1);
 			GuidewireAutomate("Comments", NC_V_TI_TaxID, "clearANDsendKeys", NewTaxId);
 		} else {
