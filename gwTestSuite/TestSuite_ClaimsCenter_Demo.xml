@@ -14,14 +14,14 @@
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
 				<methods>
-					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
+					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_ManualAdjusterCheck_Create" />
 				</methods>
 			</class>
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_UnverifiedPolicy">
 				<methods>
 					<include
-						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto" />
+						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
 				</methods>
 			</class>
 		</classes>
