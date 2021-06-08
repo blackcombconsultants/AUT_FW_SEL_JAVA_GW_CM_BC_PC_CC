@@ -2,6 +2,7 @@ package com.pages.Guidewire;
 
 import java.io.IOException;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
@@ -846,10 +847,9 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				GuidewireAutomate("Claims Tab", TabCC_Claim_dd, "click", "Null");
 				GuidewireAutomate("New Claim", TabCC_Claim_NewClaim, "click", "Null");
 				break;
-			case "Claim Search":
+			case "Claim Search" :
 				String strClaimNumber = null;
-				lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("searchValues",
-						strTestCaseName);
+				lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("searchValues", strTestCaseName);
 
 				strClaimNumber = lhm_TestCase_Table_Data.get("TD_ClaimNumber");
 				GuidewireAutomate("Claims Tab", TabCC_Claim_dd, "click", "Null");
@@ -978,35 +978,28 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				GuidewireAutomate("Actions", Menu_Actions, "click", "");
 				GuidewireAutomate("Request", MenuCC_Claim_Actions_NewActivity_Request, "click", "");
 				break;
-			
-			case "Parties Involved Contacts":
-				try
-				{
+
+			case "Parties Involved Contacts" :
+				try {
 					GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
-				}
-				 catch (WebDriverException e)
-				{
+				} catch (StaleElementReferenceException e) {
 					GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
- 
 				}
 				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved_Contacts, "click", "");
- 
+
 				break;
-			case "Medical Payments":
+			case "Medical Payments" :
 				try {
 					GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
-				} catch (WebDriverException e) {
+				} catch (StaleElementReferenceException e) {
 					GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
-
 				}
-				GuidewireAutomate("Choose by Coverage", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage, "moveToElement",
-						"");
-				GuidewireAutomate("Policy Level Coverage",
-						MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage_PolicyLevelCoverage, "moveToElement", "");
+				GuidewireAutomate("Choose by Coverage", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage, "moveToElement", "");
+				GuidewireAutomate("Policy Level Coverage", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage_PolicyLevelCoverage, "moveToElement", "");
 
 				break;
-				
-			case "Manual Check":
+
+			case "Manual Check" :
 				try {
 					GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
 				} catch (WebDriverException e) {
@@ -1016,11 +1009,11 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				GuidewireAutomate("Other", MenuCC_Claim_Actions_NewTransaction_Other, "moveToElement", "");
 				GuidewireAutomate("Manual Check", MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck, "click", "");
 				break;
-			case "Policy General":
+			case "Policy General" :
 				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_Policy, "click", "");
 				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_Policy_General, "click", "");
 				break;
-	
+
 			case "Warning" :
 				GuidewireAutomate("Actions", Menu_Actions, "click", "");
 				GuidewireAutomate("Warning", MenuCC_Claim_Actions_NewActivity_Warning, "click", "");
