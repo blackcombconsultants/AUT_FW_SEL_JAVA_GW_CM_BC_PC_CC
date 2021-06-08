@@ -12,6 +12,7 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	 */
 
 	final By Menu_ActionsBC = By.xpath("//div[@id='gw-west-panel--top-section']/div[contains(@id,'MenuActions')]");
+	final By Menu_ActionsCC = By.xpath("//div[contains(@id,'ClaimMenuActions')]/div[@role='button']");
 	final By Menu_Actions   = By.xpath("//div[contains(@id,'MenuActions')]/div[@role='button']/div[2]");
 
 	/*
@@ -486,10 +487,10 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	/*
 	 * New Transaction
 	 */
-	final By MenuCC_Claim_Actions_NewTransaction_Reserve = By.xpath("//div[contains(@id,'ClaimMenuActions_NewTransaction_ReserveSet')]//div[@class='gw-label']");
-	final By MenuCC_Claim_Actions_NewTransaction_Check   = By.xpath("//div[contains(@id,'ClaimMenuActions_NewTransaction_CheckSet')]//div[@class='gw-label']");
-	final By MenuCC_Claim_Actions_NewTransaction_Other   = By.xpath("//div[@id='Claim-ClaimMenuActions-ClaimMenuActions_NewTransaction-ClaimMenuActions_NewOtherTrans']");
-	final By MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck=By.xpath("//div[contains(@id,'NewTransaction_Check')]//div[text()='Manual Check']");
+	final By MenuCC_Claim_Actions_NewTransaction_Reserve           = By.xpath("//div[contains(@id,'ClaimMenuActions_NewTransaction_ReserveSet')]//div[@class='gw-label']");
+	final By MenuCC_Claim_Actions_NewTransaction_Check             = By.xpath("//div[contains(@id,'ClaimMenuActions_NewTransaction_CheckSet')]//div[@class='gw-label']");
+	final By MenuCC_Claim_Actions_NewTransaction_Other             = By.xpath("//div[@id='Claim-ClaimMenuActions-ClaimMenuActions_NewTransaction-ClaimMenuActions_NewOtherTrans']");
+	final By MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck = By.xpath("//div[contains(@id,'NewTransaction_Check')]//div[text()='Manual Check']");
 
 	/*
 	 * New Document
@@ -509,9 +510,9 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	/*
 	 * New Exposure
 	 */
-	final By MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType = By.xpath("//div[contains(@id,'NewExposureMenuItemSet_ByCoverageType')]//div[@class='gw-label' and text()='Choose by Coverage Type']");
-	final By MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage     = By.xpath("//div[contains(@id,'NewExposureMenuItemSet_ByCoverage')]//div[@class='gw-label' and text()='Choose by Coverage']");
-	final By MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage_PolicyLevelCoverage=By.xpath("//div[contains(@id,'NewExposureMenuItemSet_ByCoverage')]//div[@class='gw-label' and text()='Policy Level Coverage']");
+	final By MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType                 = By.xpath("//div[contains(@id,'NewExposureMenuItemSet_ByCoverageType')]//div[@class='gw-label' and text()='Choose by Coverage Type']");
+	final By MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage                     = By.xpath("//div[contains(@id,'NewExposureMenuItemSet_ByCoverage')]//div[@class='gw-label' and text()='Choose by Coverage']");
+	final By MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage_PolicyLevelCoverage = By.xpath("//div[contains(@id,'NewExposureMenuItemSet_ByCoverage')]//div[@class='gw-label' and text()='Policy Level Coverage']");
 
 	/*
 	 * Claim Actions
@@ -538,7 +539,7 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	final By MenuCC_Claim_LossDetails_SpecialInvestigationDetails = By.xpath("//div[contains(@id,'ClaimLossDetailsGroup_SIDetails')]//div[@class='gw-label' and text()='Special I']");
 	final By MenuCC_Claim_Exposures                               = By.xpath("//div[contains(@id,'Claim_ClaimExposures')]//div[@class='gw-label gw-hasIcon' and text()='Exposures']");
 	final By MenuCC_Claim_Reinsurance                             = By.xpath("//div[contains(@id,'Claim_ReinsuranceSummary')]//div[@class='gw-label gw-hasIcon' and text()='Reinsurance']");
-	final By MenuCC_Claim_PartiesInvolved                         = By.xpath("//div[contains(@id,'Claim_ClaimPartiesGroup')]//div[@class='gw-label gw-hasIcon' and text()='Parties Involved']");
+	final By MenuCC_Claim_PartiesInvolved                         = By.xpath("//div[contains(@id,'ClaimPartiesGroup_ClaimContacts')]//div[@class='gw-label gw-hasIcon' and text()='Parties Involved']");
 	final By MenuCC_Claim_PartiesInvolved_Contacts                = By.xpath("//div[contains(@id,'ClaimPartiesGroup_ClaimContacts')]/div[@role='menuitem']");
 	final By MenuCC_Claim_PartiesInvolved_Users                   = By.xpath("//div[contains(@id,'Claim_ClaimPartiesGroup')]//div[@class='gw-label gw-hasIcon' and text()='Parties Involved']");
 	final By MenuCC_Claim_Policy                                  = By.xpath("//div[contains(@id,'Claim_ClaimPolicyGroup')]//div[@class='gw-label gw-hasIcon' and text()='Policy']");
