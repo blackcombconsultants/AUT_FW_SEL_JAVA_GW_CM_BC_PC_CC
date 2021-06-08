@@ -17,13 +17,13 @@
 					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
 				</methods>
 			</class>
-			<!-- <class
+			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_UnverifiedPolicy">
 				<methods>
 					<include
-						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
+						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto" />
 				</methods>
-			</class> -->
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
