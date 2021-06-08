@@ -980,8 +980,17 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				break;
 			
 			case "Parties Involved Contacts":
-				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
+				try
+				{
+					GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
+				}
+				 catch (WebDriverException e)
+				{
+					GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
+ 
+				}
 				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved_Contacts, "click", "");
+ 
 				break;
 			case "Medical Payments":
 				try {

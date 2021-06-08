@@ -39,8 +39,12 @@ public class ClaimCenter_CreateManualCheck extends SeleniumWebDriver_Commands im
 		GuidewireAutomate("LineItems Add", PD_LineItems_Add, "clickAndwait", "NA");
 		GuidewireAutomate("LineItem Category", PD_LineItem_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("LineItemCategory"));
 		GuidewireAutomate("LineItem Amount", PD_LineItem_Amount, "clearANDsendKeys", lhm_TestCase_Table_Data.get("LineItemAmount"));
-
-	}
+		
+		GuidewireAutomate("PD_CheckBox", PD_CheckBox, "clickAndwait", "");
+		GuidewireAutomate("PD_CheckBox", PD_CheckBox, "clickAndwait", "");
+		
+		GuidewireAutomate("PD_Remove", PD_Remove, "click", "");
+}
 	public static void Setcheckinstructions() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("manualCheck", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", Setcheckinstructions_Header, "equals", "Step 3 of 3: Set check instructions");

@@ -28,7 +28,7 @@ public interface ClaimCenter_CreateManualCheck_PO {
    final By PD_PaymentType=By.xpath("//select[contains(@name,'Payment_PaymentType')]");
    final By PD_CostType=By.xpath("//select[contains(@name,'ReserveLineInputSet-CostType')]");
    final By PD_CostCategory=By.xpath("//select[contains(@name,'ReserveLineInputSet-CostCategory')]");
-
+   
 
    /*
     * LineItems
@@ -37,7 +37,8 @@ public interface ClaimCenter_CreateManualCheck_PO {
    final By PD_LineItems_Add=By.xpath("//div[contains(@id,'EditablePaymentLineItemsLV_tb-Add')]//div[@role='button']");
    final By PD_LineItem_Category=By.xpath("//select[contains(@name,'EditablePaymentLineItemsLV-0-LineCategory')]");
    final By PD_LineItem_Amount=By.xpath("//input[contains(@name,'EditablePaymentLineItemsLV-0-Amount')]");
-
+   final By PD_CheckBox=By.xpath("//div[contains(@id,'NewPaymentDetailDV-EditablePaymentLineItemsLV-1-_Checkbox')]/input[contains(@name,'EditablePaymentLineItemsLV-1-_Checkbox')]");
+   final By PD_Remove=By.xpath("//div[contains(@id,'EditablePaymentLineItemsLV_tb-Remove')]/div[@role='button']");
    /*
     * Setcheckinstructions 
     */
