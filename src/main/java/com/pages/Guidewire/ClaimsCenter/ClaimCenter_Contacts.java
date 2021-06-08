@@ -40,13 +40,8 @@ public class ClaimCenter_Contacts extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Address1", NC_V_PA_Address1, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Address1"));
 		GuidewireAutomate("State", NC_V_PA_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("State"));
 
-		String TaxID = lhm_TestCase_Table_Data.get("TaxID");
-		if (TaxID.equalsIgnoreCase("345-34-300")) {
-			String NewTaxId = TaxID + getRandomNumeric(1);
-			GuidewireAutomate("Comments", NC_V_TI_TaxID, "clearANDsendKeys", NewTaxId);
-		} else {
-			GuidewireAutomate("Comments", NC_V_TI_TaxID, "clearANDsendKeys", TaxID);
-		}
+		GuidewireAutomate("Comments", NC_V_TI_TaxID, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TaxID"));
+	
 
 		GuidewireAutomate("Update", NC_V_Update, "click", "NA");
 	}
@@ -54,6 +49,7 @@ public class ClaimCenter_Contacts extends SeleniumWebDriver_Commands implements 
 	public static void NewContact_DuplicateContactFound_Verify() throws Throwable {
 		GuidewireAutomate_Validation("Screen Header", DuplicateContactFound_Header, "equals", "Duplicate Contact Found");
 		GuidewireAutomate_Validation("Error Message", DuplicateContactFound_ErrorMessage, "contains", "Contact Manager contains entries that matches your new contact");
+		GuidewireAutomate("Cancel", ClaimCenter_Resuables_PO.Cancel, "click", "NA");
 
 	}
 
