@@ -43,45 +43,42 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 	public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
-		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("Claim Search", "");
 
+		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
+		ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_BasicInformation.basicInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_AddClaimInformation.addClaimInfo();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.services();
+		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.saveandAssign();
+		ClaimCenter_Resuables.clickButton("Finish");
+		ClaimCenter_Resuables.newClaimSaved();
 
-		/*
-		 * GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("New Claim", "NA");
-		 * ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
-		 * ClaimCenter_Resuables.clickButton("Next");
-		 * ClaimCenter_BasicInformation.basicInfo();
-		 * ClaimCenter_Resuables.clickButton("Next");
-		 * ClaimCenter_AddClaimInformation.addClaimInfo();
-		 * ClaimCenter_Resuables.clickButton("Next"); ClaimCenter_Resuables.services();
-		 * ClaimCenter_Resuables.clickButton("Next");
-		 * ClaimCenter_Resuables.saveandAssign();
-		 * ClaimCenter_Resuables.clickButton("Finish");
-		 * ClaimCenter_Resuables.newClaimSaved();
-		 * 
-		 * // --->Assigning Claim
-		 * 
-		 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Assign Claim");
-		 * ClaimCenter_Resuables.assignClaim();
-		 * 
-		 * // ---->Adding new contact
-		 * 
-		 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Parties Involved Contacts");
-		 * ClaimCenter_Contacts.New_Contact();
-		 * ClaimCenter_Contacts.NewContact_DuplicateContactFound_Verify();
-		 * ClaimCenter_Resuables.clickButton("Cancel");
-		 * 
-		 * // ---->Adding new exposure
-		 * 
-		 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Medical Payments");
-		 * ClaimCenter_Resuables.newExposure();
-		 * ClaimCenter_Resuables.clickButton("Update");
-		 * 
-		 * // ------>Adding Reserve
-		 * 
-		 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Reserve");
-		 * ClaimCenter_Resuables.addingReserve();
-		 */
+		// --->Assigning Claim
+
+		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Assign Claim");
+		ClaimCenter_Resuables.assignClaim();
+
+		// ---->Adding new contact
+
+		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Parties Involved Contacts");
+		ClaimCenter_Contacts.New_Contact();
+		ClaimCenter_Contacts.NewContact_DuplicateContactFound_Verify();
+		ClaimCenter_Resuables.clickButton("Cancel");
+
+		// ---->Adding new exposure
+
+		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Medical Payments");
+		ClaimCenter_Resuables.newExposure();
+		ClaimCenter_Resuables.clickButton("Update");
+
+		// ------>Adding Reserve
+
+		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Reserve");
+		ClaimCenter_Resuables.addingReserve();
 
 		// ----->Adding manual check
 
