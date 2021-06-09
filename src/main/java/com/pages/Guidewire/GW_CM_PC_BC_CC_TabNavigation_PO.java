@@ -539,7 +539,7 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	final By MenuCC_Claim_LossDetails_SpecialInvestigationDetails = By.xpath("//div[contains(@id,'ClaimLossDetailsGroup_SIDetails')]//div[@class='gw-label' and text()='Special I']");
 	final By MenuCC_Claim_Exposures                               = By.xpath("//div[contains(@id,'Claim_ClaimExposures')]//div[@class='gw-label gw-hasIcon' and text()='Exposures']");
 	final By MenuCC_Claim_Reinsurance                             = By.xpath("//div[contains(@id,'Claim_ReinsuranceSummary')]//div[@class='gw-label gw-hasIcon' and text()='Reinsurance']");
-	final By MenuCC_Claim_PartiesInvolved                         = By.xpath("//div[contains(@id,'ClaimPartiesGroup_ClaimContacts')]//div[@class='gw-label gw-hasIcon' and text()='Parties Involved']");
+	final By MenuCC_Claim_PartiesInvolved                         = By.xpath("//div[contains(@id,'ClaimPartiesGroup')]//div[@class='gw-label gw-hasIcon' and text()='Parties Involved']");
 	final By MenuCC_Claim_PartiesInvolved_Contacts                = By.xpath("//div[contains(@id,'ClaimPartiesGroup_ClaimContacts')]/div[@role='menuitem']");
 	final By MenuCC_Claim_PartiesInvolved_Users                   = By.xpath("//div[contains(@id,'Claim_ClaimPartiesGroup')]//div[@class='gw-label gw-hasIcon' and text()='Parties Involved']");
 	final By MenuCC_Claim_Policy                                  = By.xpath("//div[contains(@id,'Claim_ClaimPolicyGroup')]//div[@class='gw-label gw-hasIcon' and text()='Policy']");
