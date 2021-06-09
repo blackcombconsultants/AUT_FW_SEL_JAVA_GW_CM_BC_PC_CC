@@ -1,7 +1,3 @@
-/*
- * getcss
- */
-
 package com.Utils.Selenium;
 
 import java.awt.AWTException;
