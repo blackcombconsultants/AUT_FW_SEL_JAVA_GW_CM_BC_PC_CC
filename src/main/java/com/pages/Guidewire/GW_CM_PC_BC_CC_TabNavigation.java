@@ -2,9 +2,7 @@ package com.pages.Guidewire;
 
 import java.io.IOException;
 
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -899,113 +897,98 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 		 */
 		switch (Menu) {
 			case "Statistics" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Statistics", MenuCC_Desktop_Actions_Statistics, "click", "");
 				break;
 			case "Preferences" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Preferences", MenuCC_Desktop_Actions_Preferences, "click", "");
 				break;
 			case "VacationStatus" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("VacationStatus", MenuCC_Desktop_Actions_VacationStatus, "click", "");
 				break;
 			case "New Note" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("New Note", MenuCC_Claim_Actions_NewNote, "click", "");
 				break;
 			case "New Email" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("New Email", MenuCC_Claim_Actions_New_Email, "click", "");
 				break;
 			case "New Matter" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("New Matter", MenuCC_Claim_Actions_New_Matter, "click", "");
 				break;
 			case "New Evaluation" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("New Evaluation", MenuCC_Claim_Actions_New_Evaluation, "click", "");
 				break;
 			case "New Negotiation" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("New Negotiation", MenuCC_Claim_Actions_New_Negotiation, "click", "");
 				break;
 			case "New Service" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("New Service", MenuCC_Claim_Actions_New_Service, "click", "");
 				break;
 			case "Reserve" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Reserve", MenuCC_Claim_Actions_NewTransaction_Reserve, "click", "");
 				break;
 			case "Check" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Reserve", MenuCC_Claim_Actions_NewTransaction_Check, "click", "");
 				break;
 			case "Other" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Other", MenuCC_Claim_Actions_NewTransaction_Other, "click", "");
 				break;
 			case "Create from a template" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Create from a template", MenuCC_Claim_Actions_NewDocument_Createfromatemplate, "click", "");
 				break;
 			case "Upload Documents" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Upload Documents", MenuCC_Claim_Actions_NewDocument_UploadDocuments, "click", "");
 				break;
 			case "Indicate existence of a document" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Indicate existence of a document", MenuCC_Claim_Actions_NewDocument_Indicateexistenceofadocument, "click", "");
 				break;
 			case "Correspondence" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Correspondence", MenuCC_Claim_Actions_NewActivity_Correspondence, "click", "");
 				break;
 			case "Interview" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Interview", MenuCC_Claim_Actions_NewActivity_Interview, "click", "");
 				break;
 			case "New Mail" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("New Mail", MenuCC_Claim_Actions_NewActivity_NewMail, "click", "");
 				break;
 			case "Reminder" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Reminder", MenuCC_Claim_Actions_NewActivity_Reminder, "click", "");
 				break;
 			case "Request" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Request", MenuCC_Claim_Actions_NewActivity_Request, "click", "");
 				break;
-
 			case "Parties Involved Contacts" :
-				try {
-					GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
-				} catch (StaleElementReferenceException e) {
-					GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
-				}
+				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved, "click", "");
 				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved_Contacts, "click", "");
-
 				break;
 			case "Medical Payments" :
-				try {
-					GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
-				} catch (StaleElementReferenceException e) {
-					GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
-				}
+				GuidewireAutomate("Actions", Menu_ActionsCC, "clickAndwait", "");
 				GuidewireAutomate("Choose by Coverage", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage, "moveToElement", "");
 				GuidewireAutomate("Policy Level Coverage", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage_PolicyLevelCoverage, "moveToElement", "");
 
 				break;
 
 			case "Manual Check" :
-				try {
-					GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
-				} catch (WebDriverException e) {
-					GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "");
-
-				}
+				GuidewireAutomate("Actions", Menu_ActionsCC, "clickAndwait", "");
 				GuidewireAutomate("Other", MenuCC_Claim_Actions_NewTransaction_Other, "moveToElement", "");
 				GuidewireAutomate("Manual Check", MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck, "click", "");
 				break;
@@ -1015,43 +998,43 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				break;
 
 			case "Warning" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Warning", MenuCC_Claim_Actions_NewActivity_Warning, "click", "");
 				break;
 			case "Choose by Coverage Type" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Choose by Coverage Type", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType, "click", "");
 				break;
 			case "Choose by Coverage" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Choose by Coverage", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverage, "click", "");
 				break;
 			case "Assign Claim" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Assign Claim", MenuCC_Claim_Actions_ClaimActions_AssignClaim, "click", "");
 				break;
 			case "Close Claim" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Close Claim", MenuCC_Claim_Actions_ClaimActions_CloseClaim, "click", "");
 				break;
 			case "Print Claim" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Print Claim", MenuCC_Claim_Actions_ClaimActions_PrintClaim, "click", "");
 				break;
 			case "Sync Status" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Sync Status", MenuCC_Claim_Actions_ClaimActions_SyncStatus, "click", "");
 				break;
 			case "Validate Claim Only" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Validate Claim Only", MenuCC_Claim_Actions_ClaimActions_ValidateClaimOnly, "click", "");
 				break;
 			case "Validate Claim Exposures" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Validate Claim Exposures", MenuCC_Claim_Actions_ClaimActions_ValidateClaimExposures, "click", "");
 				break;
 			case "Validate Policy" :
-				GuidewireAutomate("Actions", Menu_Actions, "click", "");
+				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Validate Policy", MenuCC_Claim_Actions_ClaimActions_ValidatePolicy, "click", "");
 				break;
 			/*
