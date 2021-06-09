@@ -145,7 +145,11 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 			Actions oActions = new Actions(driver);
 
 			// Get the Element.
-			oWebElement = getElement(Locator);
+			try {
+				oWebElement = getElement(Locator);
+			} catch (StaleElementReferenceException e) {
+				oWebElement = getElement(Locator);
+			}
 
 			switch (command) {
 				case "alertaccept" :
@@ -262,10 +266,6 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 					oWebDriverWait = new WebDriverWait(driver, 20);
 
 					new Select(oWebElement).selectByVisibleText(strValue);
-
-					driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-					driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-					oWebDriverWait = new WebDriverWait(driver, 5);
 
 					LogMsg = ElementName + "  Selected = " + strValue;
 					break;

@@ -67,13 +67,12 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Parties Involved Contacts");
 		ClaimCenter_Contacts.New_Contact();
 		ClaimCenter_Contacts.NewContact_DuplicateContactFound_Verify();
-		ClaimCenter_Resuables.clickButton("Cancel");
+		ClaimCenter_Resuables.clickButton("Update");
 
 		// ---->Adding new exposure
 
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Medical Payments");
 		ClaimCenter_Resuables.newExposure();
-		ClaimCenter_Resuables.clickButton("Update");
 
 		// ------>Adding Reserve
 
