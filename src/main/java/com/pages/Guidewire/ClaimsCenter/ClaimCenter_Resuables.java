@@ -3,6 +3,7 @@ package com.pages.Guidewire.ClaimsCenter;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
@@ -30,6 +31,15 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		case "Update":
 			GuidewireAutomate("Update", Update, "clickAndwait", "");
 			break;
+		case "Cancel":
+			try {
+			GuidewireAutomate("Cancel", Cancel, "clickAndwait", "");
+			}
+			catch(StaleElementReferenceException e) {
+			GuidewireAutomate("Cancel", Cancel, "clickAndwait", "");
+
+			}
+			break;	
 
 		default:
 			break;
