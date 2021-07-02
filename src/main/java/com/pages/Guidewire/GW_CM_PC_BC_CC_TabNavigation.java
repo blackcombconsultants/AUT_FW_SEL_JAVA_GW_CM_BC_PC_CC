@@ -992,18 +992,14 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				GuidewireAutomate("Other", MenuCC_Claim_Actions_NewTransaction_Other, "moveToElement", "");
 				GuidewireAutomate("Manual Check", MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck, "click", "");
 				break;
-			case "Policy General" :
-				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_Policy, "click", "");
-				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_Policy_General, "click", "");
-				break;
-
+			
 			case "Warning" :
 				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Warning", MenuCC_Claim_Actions_NewActivity_Warning, "click", "");
 				break;
 			case "Choose by Coverage Type" :
 				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
-				GuidewireAutomate("Choose by Coverage Type", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType, "click", "");
+				GuidewireAutomate("Choose by Coverage Type", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType, "moveToElement", "");
 				break;
 			case "Choose by Coverage" :
 				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
@@ -1079,7 +1075,101 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 			case "Parties Involved Users" :
 				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_PartiesInvolved_Users, "click", "");
 				break;
-			/*
+			case "Policy" :
+				GuidewireAutomate("Policy", MenuCC_Claim_Policy, "click", "");
+				break;
+
+			case "Policy " :
+				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_Policy, "click", "");
+				break;
+
+			case "Policy General" :
+				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_Policy, "click", "");
+				GuidewireAutomate("PartiesInvolved", MenuCC_Claim_Policy_General, "click", "");
+				break;
+
+
+			case "Policy Vehicles" :
+				GuidewireAutomate("Policy", MenuCC_Claim_Policy, "click", "");
+                GuidewireAutomate("Policy Vehicles", MenuCC_Claim_Policy_Vehicle, "click", "");
+				break;
+
+			case "Policy Endorsements" :
+				GuidewireAutomate("Policy", MenuCC_Claim_Policy, "click", "");
+                GuidewireAutomate("Policy Endorsements", MenuCC_Claim_Policy_Endorsements, "click", "");
+				break;
+				
+			case "Policy Aggregate Limits" :
+				GuidewireAutomate("Policy", MenuCC_Claim_Policy, "click", "");
+                GuidewireAutomate("Policy Aggregate Limits", MenuCC_Claim_Policy_AggregateLimits, "click", "");
+				break;
+				
+				
+				
+			case "Financials" :
+				GuidewireAutomate("Financials", MenuCC_Claim_Financials, "click", "");
+				break;
+
+			case "Financials Summary" :
+				GuidewireAutomate("Financials", MenuCC_Claim_Financials, "click", "");
+				GuidewireAutomate("Financials Summary", MenuCC_Claim_Financials_Summary, "click", "");
+				break;
+
+
+			case "Financials Transactions" :
+				GuidewireAutomate("Financials", MenuCC_Claim_Financials, "click", "");
+                GuidewireAutomate("Financials Transactions", MenuCC_Claim_Financials_Transactions, "click", "");
+				break;
+
+			case "Financials Check" :
+				GuidewireAutomate("Financials", MenuCC_Claim_Financials, "click", "");
+                GuidewireAutomate("Financials Check", MenuCC_Claim_Financials_Checks, "click", "");
+				break;
+				
+			case "Notes" :
+				GuidewireAutomate("Notes", MenuCC_Claim_Notes, "click", "");
+				break;
+				
+			case "Documents" :
+				GuidewireAutomate("Documents", MenuCC_Claim_Documents, "click", "");
+				break;
+		
+			case "Plan of Action" :
+				GuidewireAutomate("Plan of Action", MenuCC_Claim_PlanofAction, "click", "");
+				break;
+				
+			case "Evaluations" :
+				GuidewireAutomate("Plan of Action", MenuCC_Claim_PlanofAction, "click", "");
+                GuidewireAutomate("Evaluations", MenuCC_Claim_PlanofAction_Evaluations, "click", "");
+				break;
+				
+			case "Negotiations" :
+				GuidewireAutomate("Plan of Action", MenuCC_Claim_PlanofAction, "click", "");
+                GuidewireAutomate("Financials Check", MenuCC_Claim_PlanofAction_Negotiations, "click", "");
+				break;
+				
+			case "Services" :
+				GuidewireAutomate("Services", MenuCC_Claim_Services, "click", "");
+				break;
+				
+			case "Litigation" :
+				GuidewireAutomate("Litigation", MenuCC_Claim_Litigation, "click", "");
+				break;
+				
+			case "History" :
+				GuidewireAutomate("History", MenuCC_Claim_History, "click", "");
+				break;
+				
+			case "FNOL Snapshot" :
+				GuidewireAutomate("FNOL Snapshot", MenuCC_Claim_FNOLSnapshot, "click", "");
+				break;
+				
+			case "Calendar" :
+				GuidewireAutomate("Calendar", MenuCC_Claim_Calendar, "click", "");
+				break;
+				
+				
+		    /*
 			 * remaining casess to be added
 			 * 
 			 */

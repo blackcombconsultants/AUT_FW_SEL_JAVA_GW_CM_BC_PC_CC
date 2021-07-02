@@ -22,6 +22,7 @@ public class GW_CC_FNOL_UnverifiedPolicy extends GW_GetDriver {
 		ClaimCenter_Resuables.clickButton("Update"); //
 		ClaimCenter_Resuables.clickButton("Update"); //
 		ClaimCenter_Resuables.clickButton("Next"); //
+		
 		ClaimCenter_BasicInformation.basicInfo(); //
 		ClaimCenter_Resuables.clickButton("Next"); //
 		ClaimCenter_AddClaimInformation.addClaimInfo(); //

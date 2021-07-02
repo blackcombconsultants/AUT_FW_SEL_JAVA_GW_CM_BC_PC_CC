@@ -29,7 +29,7 @@ public class ClaimCenter_CreateManualCheck extends SeleniumWebDriver_Commands im
 		GuidewireAutomate("Reserve Line", PD_ReserveLine, "selectByVisibleText", lhm_TestCase_Table_Data.get("ReserveLine"));
 
 		GuidewireAutomate("CostType", PD_CostType, "selectByVisibleText", lhm_TestCase_Table_Data.get("CostType"));
-		GuidewireAutomate("CostCategory", PD_CostCategory, "selectByVisibleText", lhm_TestCase_Table_Data.get("CostCategory"));
+		GuidewireAutomate("CostCategory", PD_CostCategory, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostCategory"));
 
 		GuidewireAutomate("Payment Type", PD_PaymentType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PaymentType"));
 

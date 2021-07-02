@@ -56,7 +56,7 @@ public class ClaimCenter_SearchPolicy extends SeleniumWebDriver_Commands impleme
 
 		By TypeOfClaim = By.xpath("//span[@class='gw-label--inner' and text()='" + strDynamicXpath + "']/preceding-sibling::span[@class='gw-radio-wrapper']//input[contains(@name,'ClaimLossType')]");
 
-		if (strDynamicXpath.equalsIgnoreCase("Auto")) {
+		if (strDynamicXpath.equalsIgnoreCase("Auto")) {	
 			GuidewireAutomate("TypeOfClaim", TypeOfClaim, "click", "NA");
 			GuidewireAutomate("Auto_AutoFirstandFinal", CUP_TypeofClaim_Auto_AutoFirstandFinal, "click", "NA");
 			try {
