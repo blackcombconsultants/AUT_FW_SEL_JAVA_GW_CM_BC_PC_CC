@@ -491,6 +491,7 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	final By MenuCC_Claim_Actions_NewTransaction_Check             = By.xpath("//div[contains(@id,'ClaimMenuActions_NewTransaction_CheckSet')]//div[@class='gw-label']");
 	final By MenuCC_Claim_Actions_NewTransaction_Other             = By.xpath("//div[@id='Claim-ClaimMenuActions-ClaimMenuActions_NewTransaction-ClaimMenuActions_NewOtherTrans']");
 	final By MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck = By.xpath("//div[contains(@id,'NewTransaction_Check')]//div[text()='Manual Check']");
+	final By MenuCC_Claim_Actions_NewTransaction_Other_Recovery = By.xpath("//div[contains(@id,'NewTransaction_RecoverySet')]//div[text()='Recovery']");
 
 	/*
 	 * New Document

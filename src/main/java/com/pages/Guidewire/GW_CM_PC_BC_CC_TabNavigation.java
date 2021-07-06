@@ -948,6 +948,8 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Create from a template", MenuCC_Claim_Actions_NewDocument_Createfromatemplate, "click", "");
 				break;
+			
+			
 			case "Upload Documents" :
 				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Upload Documents", MenuCC_Claim_Actions_NewDocument_UploadDocuments, "click", "");
@@ -992,7 +994,11 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				GuidewireAutomate("Other", MenuCC_Claim_Actions_NewTransaction_Other, "moveToElement", "");
 				GuidewireAutomate("Manual Check", MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck, "click", "");
 				break;
-			
+			case "Recovery" :
+				GuidewireAutomate("Actions", Menu_ActionsCC, "clickAndwait", "");
+				GuidewireAutomate("Other", MenuCC_Claim_Actions_NewTransaction_Other, "moveToElement", "");
+				GuidewireAutomate("Recovery", MenuCC_Claim_Actions_NewTransaction_Other_Recovery, "click", "");
+				break;
 			case "Warning" :
 				GuidewireAutomate("Actions", Menu_ActionsCC, "click", "");
 				GuidewireAutomate("Warning", MenuCC_Claim_Actions_NewActivity_Warning, "click", "");

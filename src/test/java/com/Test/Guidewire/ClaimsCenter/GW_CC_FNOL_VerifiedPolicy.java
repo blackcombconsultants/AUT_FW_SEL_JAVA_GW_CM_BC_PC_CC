@@ -34,49 +34,50 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 
 	}
 
-	@Test
-	public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto() throws Throwable {
-
-		// ------>Login to CliamCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
-
-		// ------>Creating New Claim
-		ClaimCenter_Resuables.submissionProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
-
-		// --->Assigning Claim
-
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Assign Claim");
-		ClaimCenter_Resuables.assignClaim();
-
-		// ---->Adding new contact
-
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Parties Involved Contacts");
-		ClaimCenter_Contacts.New_Contact();
-		ClaimCenter_Contacts.NewContact_DuplicateContactFound_Verify();
-		ClaimCenter_Resuables.clickButton("Update");
-
-		// ---->Adding new exposure
-
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Medical Payments");
-		ClaimCenter_Resuables.newExposure();
-
-		// ------>Adding Reserve
-
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Reserve");
-		ClaimCenter_Resuables.addingReserve();
-
-		// ----->Adding manual check
-
-		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Manual Check");
-		ClaimCenter_CreateManualCheck.Enterpayeeinformation();
-		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_CreateManualCheck.Enterpaymentinformation();
-		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_CreateManualCheck.Setcheckinstructions();
-		ClaimCenter_Resuables.clickButton("Finish");
-
-	}
-
+	/*
+	 * @Test public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto() throws
+	 * Throwable {
+	 * 
+	 * // ------>Login to CliamCenter GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+	 * 
+	 * // ------>Creating New Claim
+	 * ClaimCenter_Resuables.submissionProcess("New Claim",
+	 * "VerifiedPolicy_NewclaimAuto");
+	 * 
+	 * // --->Assigning Claim
+	 * 
+	 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Assign Claim");
+	 * ClaimCenter_Resuables.assignClaim();
+	 * 
+	 * // ---->Adding new contact
+	 * 
+	 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Parties Involved Contacts");
+	 * ClaimCenter_Contacts.New_Contact();
+	 * ClaimCenter_Contacts.NewContact_DuplicateContactFound_Verify();
+	 * ClaimCenter_Resuables.clickButton("Update");
+	 * 
+	 * // ---->Adding new exposure
+	 * 
+	 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Medical Payments");
+	 * ClaimCenter_Resuables.newExposure();
+	 * 
+	 * // ------>Adding Reserve
+	 * 
+	 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Reserve");
+	 * ClaimCenter_Resuables.addingReserve();
+	 * 
+	 * // ----->Adding manual check
+	 * 
+	 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Manual Check");
+	 * ClaimCenter_CreateManualCheck.Enterpayeeinformation();
+	 * ClaimCenter_Resuables.clickButton("Next");
+	 * ClaimCenter_CreateManualCheck.Enterpaymentinformation();
+	 * ClaimCenter_Resuables.clickButton("Next");
+	 * ClaimCenter_CreateManualCheck.Setcheckinstructions();
+	 * ClaimCenter_Resuables.clickButton("Finish");
+	 * 
+	 * }
+	 */
 	@Test
 	public void AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_AutoFirstandFinal() throws Throwable {
 
@@ -149,7 +150,6 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		// ---->Adding new exposure
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Medical Payments");
 		ClaimCenter_Resuables.newExposure();
-		ClaimCenter_Resuables.clickButton("Update");
 
 	}
 
@@ -169,7 +169,6 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 
 	@Test
 	public void AUT_PA_CC_FNOL_VerifiedPolicy_ManualAdjusterCheck_Create() throws Throwable {
-
 		// ------>Login to CliamCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
 
@@ -183,8 +182,8 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		ClaimCenter_Resuables.clickButton("Next");
 		ClaimCenter_CreateManualCheck.Enterpaymentinformation();
 		ClaimCenter_Resuables.clickButton("Next");
+		ClaimCenter_Resuables.clickButton("Next");
 		ClaimCenter_CreateManualCheck.Setcheckinstructions();
-		ClaimCenter_Resuables.clickButton("Finish");
 
 	}
 
@@ -205,6 +204,23 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 
 	@Test
 	public void AUT_PA_CC_FNOL_VerifiedPolicy_UploadDocuments() throws Throwable {
+
+		// ------>Login to CliamCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
+
+		// ------>Creating New Claim
+		ClaimCenter_Resuables.submissionProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+
+		// ----->Adding Documents
+		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Upload Documents");
+		ClaimCenter_UploadDocuments.UploadDocuments();
+		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Documents");
+		ClaimCenter_UploadDocuments.verifyDocument();
+
+	}
+
+	@Test
+	public void AUT_PA_CC_FNOL_VerifiedPolicy_UploadDocuments1() throws Throwable {
 
 		// ------>Login to CliamCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter();
@@ -320,6 +336,7 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		ClaimCenter_CreateManualCheck.Setcheckinstructions();
 		ClaimCenter_Resuables.clickButton("Finish");
 
+		// ------>ClosingClaim with check and validating error message
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Close Claim");
 		ClaimCenter_CloseClaim.CloseClaim();
 		ClaimCenter_CloseClaim.ValidationResults("WithCheckPayment");

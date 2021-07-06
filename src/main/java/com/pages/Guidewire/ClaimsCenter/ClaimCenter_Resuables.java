@@ -34,10 +34,10 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		switch (ButtonName) {
 
 		case "Next":
-			GuidewireAutomate("Next", Next, "click", "");
+			GuidewireAutomate("Next", Next, "clickAndwait", "");
 			break;
 		case "Finish":
-			GuidewireAutomate("Finish", Finish, "clickAndwait", "");
+			GuidewireAutomate("Finish", Finish_Button, "clickAndwait", "");
 			break;
 		case "Update":
 			GuidewireAutomate("Update", Update_Button, "clickAndwait", "");
@@ -263,6 +263,8 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate("Loss Party", II_LossParty, "selectByVisibleText", lhm_TestCase_Table_Data.get("LossParty"));
 		GuidewireAutomate("Ok", OK, "clickAndwait", "NA");
 		GuidewireAutomate("Update", ExposureUpdate_Button, "clickAndwait", "NA");
+		GuidewireAutomate_Validation("Screen Header", Exposure_Header, "equals", "Exposures");
+
 
 	}
 
