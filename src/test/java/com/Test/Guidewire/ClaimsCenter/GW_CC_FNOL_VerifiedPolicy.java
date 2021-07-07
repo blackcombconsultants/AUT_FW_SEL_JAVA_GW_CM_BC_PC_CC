@@ -334,7 +334,7 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		ClaimCenter_CreateManualCheck.Enterpaymentinformation();
 		ClaimCenter_Resuables.clickButton("Next");
 		ClaimCenter_CreateManualCheck.Setcheckinstructions();
-		ClaimCenter_Resuables.clickButton("Finish");
+		
 
 		// ------>ClosingClaim with check and validating error message
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Close Claim");
