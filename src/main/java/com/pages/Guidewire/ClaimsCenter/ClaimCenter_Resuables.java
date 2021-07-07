@@ -10,6 +10,18 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Qualification;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
 public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements ClaimCenter_Resuables_PO {
 
@@ -21,21 +33,21 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 	public static void clickButton(String ButtonName) throws Throwable {
 		switch (ButtonName) {
 
-			case "Next" :
-				GuidewireAutomate("Next", Next, "click", "");
-				break;
-			case "Finish" :
-				GuidewireAutomate("Finish", Finish, "clickAndwait", "");
-				break;
-			case "Update" :
-				GuidewireAutomate("Update", Update, "clickAndwait", "");
-				break;
-			case "Cancel" :
-				GuidewireAutomate("Cancel", Cancel_Button, "clickAndwait", "");
-				break;
+		case "Next":
+			GuidewireAutomate("Next", Next, "clickAndwait", "");
+			break;
+		case "Finish":
+			GuidewireAutomate("Finish", Finish_Button, "clickAndwait", "");
+			break;
+		case "Update":
+			GuidewireAutomate("Update", Update_Button, "clickAndwait", "");
+			break;
+		case "Cancel":
+			GuidewireAutomate("Cancel", Cancel_Button, "clickAndwait", "");
+			break;
 
-			default :
-				throw new IOException("No support for Button : " + ButtonName);
+		default:
+			throw new IOException("No support for Button : " + ButtonName);
 		}
 	}
 
@@ -43,61 +55,92 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		String strInfobar = null;
 
 		switch (strLabel) {
-			case "InsuredName" :
-				strInfobar = getText_Element(insuredName);
-				Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "InsuredName", strInfobar);
-				break;
-			default :
-				throw new IOException("No support for Label : " + strLabel);
+		case "InsuredName":
+			strInfobar = getText_Element(insuredName);
+			Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "InsuredName", strInfobar);
+			break;
+		default:
+			throw new IOException("No support for Label : " + strLabel);
 		}
 		oExtentTest.log(Status.INFO, " Fetched from Info Bar => " + strLabel + " = " + strInfobar);
 		return strInfobar;
 	}
 
+	public static void submissionProcess(String Account, String Job) throws Throwable {
+
+		String strEditLock;
+
+		switch (Account) {
+		case "New Claim":
+			GuidewireAutomate("Claims Tab", TabCC_Claim_dd, "click", "Null");
+			GuidewireAutomate("New Claim", TabCC_Claim_NewClaim, "click", "Null");
+			break;
+
+		default:
+			throw new IOException("No support for Account : " + Account);
+		}
+
+		switch (Job) {
+		case "VerifiedPolicy_NewclaimAuto":
+			ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+			ClaimCenter_Resuables.clickButton("Next");
+			ClaimCenter_BasicInformation.basicInfo();
+			ClaimCenter_Resuables.clickButton("Next");
+			ClaimCenter_AddClaimInformation.addClaimInfo();
+			ClaimCenter_Resuables.clickButton("Next");
+			ClaimCenter_Resuables.services();
+			ClaimCenter_Resuables.clickButton("Next");
+			ClaimCenter_Resuables.saveandAssign();
+			ClaimCenter_Resuables.clickButton("Finish");
+			ClaimCenter_Resuables.newClaimSaved();
+
+			break;
+		}
+	}
+
 	public static void NewClaim_AutoFirstandFinal() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AutoFirstandFinal", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AutoFirstandFinal",
+				strTestCaseName);
 
 		String insured = ClaimCenter_Resuables.infoBar("InsuredName");
-		// String
-		// insuredName=driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label
-		// gw-infoValue']")).getText();
 
-		GuidewireAutomate_Validation("Screen Header", AutoFirstandFinal_Header, "equals", "Step 2 of 2: Auto First and Final");
+		GuidewireAutomate_Validation("Screen Header", AutoFirstandFinal_Header, "equals",
+				"Step 2 of 2: Auto First and Final");
 
-		String strDynamicXpath  = lhm_TestCase_Table_Data.get("WhoreportedClaim");
-		By     WhoreportedClaim = By.xpath("//span[@class='gw-label--inner' and text()='" + strDynamicXpath + "']//parent::label[@class='gw-RangeRadioValueWidget--label']//input[contains(@id,'FirstFinalReportedAgencyRadioButton')]");
+		String strDynamicXpath = lhm_TestCase_Table_Data.get("WhoreportedClaim");
+		By WhoreportedClaim = By.xpath("//span[@class='gw-label--inner' and text()='" + strDynamicXpath
+				+ "']//parent::label[@class='gw-RangeRadioValueWidget--label']//input[contains(@id,'FirstFinalReportedAgencyRadioButton')]");
 
 		GuidewireAutomate("WhoreportedClaim_Insured", WhoreportedClaim, "click", "NA");
 		GuidewireAutomate("Name", AFF_Name, "selectByVisibleText", insured);
 
-		GuidewireAutomate("Loss Description", AFF_Damage_LossDescription, "clearANDsendKeys", lhm_TestCase_Table_Data.get("LossDescription"));
+		GuidewireAutomate("Loss Description", AFF_Damage_LossDescription, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("LossDescription"));
 		GuidewireAutomate("Claimant Name", AFF_Claimant_Name, "selectByVisibleText", insured);
 		GuidewireAutomate("Location", Location, "selectByVisibleText", lhm_TestCase_Table_Data.get("Location"));
 		GuidewireAutomate("State", State, "selectByVisibleText", lhm_TestCase_Table_Data.get("State"));
-		try {
-			GuidewireAutomate("Repair", AFF_Repair, "click", "NA");
-		} catch (WebDriverException e) {
-			Thread.sleep(2000);
-			GuidewireAutomate("Repair", AFF_Repair, "click", "NA");
+		GuidewireAutomate("Repair", AFF_Repair, "click", "NA");
 
-		}
 		repairShop();
 		GuidewireAutomate("Financials Name", AFF_Financials_Name, "selectByVisibleText", insured);
-		try {
-			GuidewireAutomate("Financials PayeeType", AFF_Financials_PayeeType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PayeeType"));
-		} catch (WebDriverException e) {
-			GuidewireAutomate("Financials PayeeType", AFF_Financials_PayeeType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PayeeType"));
-
-		}
-		GuidewireAutomate("Financials Amount", AFF_Financials_Amount, "clearANDsendKeys", lhm_TestCase_Table_Data.get("FinancialsAmount"));
-		GuidewireAutomate("Financials State", AFF_Financials_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("FinancialsState"));
+		GuidewireAutomate_Validation("Screen Header", AutoFirstandFinal_Header, "equals",
+				"Step 2 of 2: Auto First and Final");
+		GuidewireAutomate("Financials PayeeType", AFF_Financials_PayeeType, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("PayeeType"));
+		GuidewireAutomate("Financials Amount", AFF_Financials_Amount, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("FinancialsAmount"));
+		GuidewireAutomate("Financials State", AFF_Financials_State, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("FinancialsState"));
+		GuidewireAutomate("Finish_Button", Finish_Button, "click", "NA");
 
 	}
 
 	public static void repairShop() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AutoFirstandFinal", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AutoFirstandFinal",
+				strTestCaseName);
 		GuidewireAutomate("NewAutobodyRepairShop", AFF_NewAutobodyRepairShop, "click", "NA");
-
+		GuidewireAutomate_Validation("Screen Header", NewAutoRepairShop_Header, "equals",
+				"New Auto Repair Shop");
 		String AutoRepairShopName = lhm_TestCase_Table_Data.get("AutoRepairShopName");
 		if (AutoRepairShopName.equalsIgnoreCase("Automation")) {
 			AutoRepairShopName = getRandomAlphabetic(9);
@@ -107,38 +150,39 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		}
 
 		String TaxID = lhm_TestCase_Table_Data.get("AutoRepairShopTaxID");
-		if (TaxID.equalsIgnoreCase("345-34-353")) {
+		if (TaxID.equalsIgnoreCase("345-34-365")) {
 			String NewTaxId = TaxID + getRandomNumeric(1);
 			GuidewireAutomate("Comments", AFF_AutoRepairShop_TaxID, "clearANDsendKeys", NewTaxId);
 		} else {
 			GuidewireAutomate("Comments", AFF_AutoRepairShop_TaxID, "clearANDsendKeys", TaxID);
 		}
 
-		GuidewireAutomate("Address1", AFF_AutoRepairShop_Address1, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Address1"));
+		GuidewireAutomate("Address1", AFF_AutoRepairShop_Address1, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("Address1"));
 		GuidewireAutomate("City", AFF_AutoRepairShop_City, "clearANDsendKeys", lhm_TestCase_Table_Data.get("City"));
-		GuidewireAutomate("County", AFF_AutoRepairShop_County, "clearANDsendKeys", lhm_TestCase_Table_Data.get("County"));
-		GuidewireAutomate("State", AFF_AutoRepairShop_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("AutoRepairShop_State"));
-		GuidewireAutomate("ZIPCode", AFF_AutoRepairShop_ZIPCode, "clearANDsendKeys", lhm_TestCase_Table_Data.get("ZIPCode"));
-		try {
-			GuidewireAutomate("Update", Update, "click", "NA");
-			Thread.sleep(1000);
-			GuidewireAutomate("Update", Update, "click", "NA");
+		GuidewireAutomate("County", AFF_AutoRepairShop_County, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("County"));
+		GuidewireAutomate("State", AFF_AutoRepairShop_State, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("AutoRepairShop_State"));
+		GuidewireAutomate("ZIPCode", AFF_AutoRepairShop_ZIPCode, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("ZIPCode"));
+		GuidewireAutomate("Update", Update, "clickAndwait", "NA");
+		GuidewireAutomate("Update", Update, "clickAndwait", "NA");
 
-		} catch (WebDriverException e) {
-			GuidewireAutomate("Update", Update, "click", "NA");
-
-		}
 
 	}
 
 	public static void New_QuickClaimAuto() throws Throwable {
 
-		String insuredName = driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
+		String insuredName = driver
+				.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("QuickClaimAuto", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("QuickClaimAuto",
+				strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", QuickClaimAuto_Header, "equals", "Step 2 of 2: Quick Claim Auto");
 		GuidewireAutomate("ReportedBy_Name", QCA_ReportedBy_Name, "selectByVisibleText", insuredName);
-		GuidewireAutomate("LossCause", QCA_LossDetails_LossCause, "selectByVisibleText", lhm_TestCase_Table_Data.get("LossCause"));
+		GuidewireAutomate("LossCause", QCA_LossDetails_LossCause, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("LossCause"));
 		GuidewireAutomate("State", QCA_LossDetails_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("State"));
 		GuidewireAutomate("Location", Location, "selectByVisibleText", lhm_TestCase_Table_Data.get("Location"));
 
@@ -168,21 +212,25 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 	}
 
 	public static void saveandAssign() throws Throwable {
-		GuidewireAutomate_Validation("Screen Header", saveandassign_Header, "equals", "Step 5 of 5: Save and Assign Claim");
+		GuidewireAutomate_Validation("Screen Header", saveandassign_Header, "equals",
+				"Step 5 of 5: Save and Assign Claim");
 
 	}
 
 	public static void newClaimSaved() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newClaimSaved", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newClaimSaved",
+				strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", newClaimSaved_Header, "equals", "New Claim Saved");
 
-		String strDynamicXpath                        = lhm_TestCase_Table_Data.get("NewClaimSaved");
-		By     View_the_newly_saved_claim             = By.xpath("//div[contains(text(),'" + strDynamicXpath + "')]");
-		By     Create_another_new_claim               = By.xpath("//div[contains(text(),'" + strDynamicXpath + "')]");
-		By     Add_Reserves_to_the_newly_saved_claim  = By.xpath("//div[contains(text(),'" + strDynamicXpath);
-		By     Make_Payments_on_the_newly_saved_claim = By.xpath("//div[contains(text(),'" + strDynamicXpath);
+		String strDynamicXpath = lhm_TestCase_Table_Data.get("NewClaimSaved");
+		By View_the_newly_saved_claim = By.xpath("//div[contains(text(),'" + strDynamicXpath + "')]");
+		By Create_another_new_claim = By.xpath("//div[contains(text(),'" + strDynamicXpath + "')]");
+		By Add_Reserves_to_the_newly_saved_claim = By.xpath("//div[contains(text(),'" + strDynamicXpath + "')]");
+		By Make_Payments_on_the_newly_saved_claim = By.xpath("//div[contains(text(),'" + strDynamicXpath + "')]");
 
 		GuidewireAutomate("View the newly saved claim", View_the_newly_saved_claim, "clickAndwait", "NA");
+		GuidewireAutomate_Validation("Screen Header", Summary_Header, "equals", "Summary");
+
 	}
 
 	public static void assignClaim() throws Throwable {
@@ -194,12 +242,16 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 	}
 
 	public static void newExposure() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
+				strTestCaseName);
 
-		String insuredName = driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
+		String insuredName = driver
+				.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
 
 		String strDynamicXpath = lhm_TestCase_Table_Data.get("NewExposure");
-		By     MedicalPayments = By.xpath("//div[contains(@id,'NewExposureMenuItemSet_ByCoverage-0-item-2-item')]//div[@class='gw-label' and text()='" + strDynamicXpath + "']");
+		By MedicalPayments = By.xpath(
+				"//div[contains(@id,'NewExposureMenuItemSet_ByCoverage-0-item-2-item')]//div[@class='gw-label' and text()='"
+						+ strDynamicXpath + "']");
 
 		GuidewireAutomate("Medical Payments", MedicalPayments, "clickAndwait", "NA");
 		GuidewireAutomate_Validation("Screen Header", NewExposurMedPay_Header, "equals", "New Exposure - Med Pay");
@@ -211,6 +263,8 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate("Loss Party", II_LossParty, "selectByVisibleText", lhm_TestCase_Table_Data.get("LossParty"));
 		GuidewireAutomate("Ok", OK, "clickAndwait", "NA");
 		GuidewireAutomate("Update", ExposureUpdate_Button, "clickAndwait", "NA");
+		GuidewireAutomate_Validation("Screen Header", Exposure_Header, "equals", "Exposures");
+
 
 	}
 
@@ -219,24 +273,30 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate_Validation("Screen Header", EditReserves_Header, "equals", "Edit Reserves");
 
-		GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostType"));
-		GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostCategory"));
+		GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("CostType"));
+		GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("CostCategory"));
 
-		GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys", lhm_TestCase_Table_Data.get("NewAvailableReserves"));
+		GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("NewAvailableReserves"));
 		GuidewireAutomate("New Available Reserves", ER_Comments, "clearANDsendKeys", "Automation");
 
 		GuidewireAutomate("Save", ER_Save, "click", "NA");
 
-		GuidewireAutomate_Validation("Screen Header", FinancialsTransactions_Header, "equals", "Financials: Transactions");
+		GuidewireAutomate_Validation("Screen Header", FinancialsTransactions_Header, "equals",
+				"Financials: Transactions");
 
 	}
 
 	public static void selectPolicy() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("selectPolicy", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("selectPolicy",
+				strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", PolicyGeneral_Header, "equals", "Policy: General");
 		GuidewireAutomate("Select Policy", SelectPolicy, "click", "NA");
 		GuidewireAutomate_Validation("Screen Header", SelectPolicy_Header, "equals", "Select Policy");
-		GuidewireAutomate("Policy Number", SP_PolicyNumber, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PolicyNumber"));
+		GuidewireAutomate("Policy Number", SP_PolicyNumber, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("PolicyNumber"));
 		GuidewireAutomate("Search", SP_Search, "click", "NA");
 		GuidewireAutomate("Select", SP_Select, "click", "NA");
 
@@ -244,7 +304,8 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 
 	public static void DuplicateClaims_Verify() throws Throwable {
 		GuidewireAutomate_Validation("Screen Header", DuplicateClaims_Header, "equals", "Possible Duplicate Claims");
-		GuidewireAutomate_Validation("ErrorMsg", DuplicateClaims_ErrorMsg, "contains", "Possible duplicate claims found");
+		GuidewireAutomate_Validation("ErrorMsg", DuplicateClaims_ErrorMsg, "contains",
+				"Possible duplicate claims found");
 
 	}
 

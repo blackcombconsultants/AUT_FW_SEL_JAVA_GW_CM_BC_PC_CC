@@ -23,7 +23,7 @@ public class ClaimCenter_BasicInformation extends SeleniumWebDriver_Commands imp
 				strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");
 		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText",insuredName);
-		
+		Thread.sleep(4000);
 	}
 
 	
