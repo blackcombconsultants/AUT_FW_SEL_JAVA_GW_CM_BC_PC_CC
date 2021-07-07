@@ -150,7 +150,7 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		}
 
 		String TaxID = lhm_TestCase_Table_Data.get("AutoRepairShopTaxID");
-		if (TaxID.equalsIgnoreCase("345-34-365")) {
+		if (TaxID.equalsIgnoreCase("345-34-310")) {
 			String NewTaxId = TaxID + getRandomNumeric(1);
 			GuidewireAutomate("Comments", AFF_AutoRepairShop_TaxID, "clearANDsendKeys", NewTaxId);
 		} else {
@@ -275,6 +275,8 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait",
 				lhm_TestCase_Table_Data.get("CostType"));
+		GuidewireAutomate_Validation("Screen Header", EditReserves_Header, "equals", "Edit Reserves");
+
 		GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait",
 				lhm_TestCase_Table_Data.get("CostCategory"));
 

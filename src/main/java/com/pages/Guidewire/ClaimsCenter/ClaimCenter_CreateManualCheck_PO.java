@@ -10,7 +10,7 @@ public interface ClaimCenter_CreateManualCheck_PO {
 	final By payeeName=By.name("NormalCreateCheckWizard-CheckWizard_CheckPayeesScreen-NewCheckPayeeDV-PrimaryPayee_Name");
 	final By type=By.name("NormalCreateCheckWizard-CheckWizard_CheckPayeesScreen-NewCheckPayeeDV-PrimaryPayee_Type");
 	final By next=By.id("NormalCreateCheckWizard-Next");
-
+    
 	final By  Enterpayeeinformation_Header=By.xpath("//div[contains(@id,'CheckPayeesScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
     final By  Enterpaymentinformation_Header=By.xpath("//div[contains(@id,'CheckPaymentsScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By Setcheckinstructions_Header=By.xpath("//div[contains(@id,'CheckInstructionsScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
