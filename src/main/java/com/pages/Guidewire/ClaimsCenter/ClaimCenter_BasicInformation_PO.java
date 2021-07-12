@@ -14,7 +14,7 @@ public interface ClaimCenter_BasicInformation_PO {
 	/*
 	 * BasicInfo InvolvedVehicles
 	 */
-	final By BI_IV_CheckBox=By.xpath("//input[contains(@name,'InsuredVehicleInputGroup-_checkbox')]");
+	final By BI_IV=By.xpath("//input[contains(@name,'InsuredVehicleInputGroup-_checkbox')]");
 
 	/*
 	 * unverifiedPolicy ReportedBy

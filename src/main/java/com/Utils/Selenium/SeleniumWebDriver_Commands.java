@@ -95,6 +95,55 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		return oWebElement;
 	}
 
+	public static WebElement getElement(WebElement oWebElement) throws Throwable {
+
+		oWebElement = null;
+
+		try {
+			// Find the Element.
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+			oWebElement = driver.findElement(Locator);
+		} catch (StaleElementReferenceException e) {
+			try {
+				oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+				oWebElement = driver.findElement(Locator);
+			} catch (StaleElementReferenceException e2) {
+				oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+				oWebElement = driver.findElement(Locator);
+			}
+		}
+
+		try {
+
+			// to handle StaleElementReferenceException
+
+			// Wait for the Element.
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+
+			// Highlight the Element.
+			oJavascriptExecutor.executeScript(
+					"arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", oWebElement);
+
+			Thread.sleep(500);
+
+			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')",
+					oWebElement);
+
+			// oExtentTest.log(Status.INFO, LogMsg);
+
+		} catch (Exception e) {
+			oWebElement = null;
+
+			LogMsg = "Element not found ";
+			oExtentTest.log(Status.FAIL, LogMsg);
+			e.printStackTrace();
+			throw e;
+
+		}
+
+		return oWebElement;
+	}
+
 	public static List<WebElement> getElements(By Locator) throws Throwable {
 
 		oWebElement = null;
@@ -134,6 +183,163 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 
 		return oList_WebElement;
+
+	}
+
+	public static void GuidewireAutomate(String ElementName, WebElement oWebElement, String command, String strValue)
+			throws Throwable {
+
+		oWebElement = null;
+		LogMsg = null;
+		Action oAction;
+		oRobot = new Robot();
+
+		try {
+
+			Actions oActions = new Actions(driver);
+
+			switch (command) {
+			case "alertaccept":
+				LogMsg = command + " = " + driver.switchTo().alert().getText();
+				;
+				driver.switchTo().alert().accept();
+				break;
+			case "alertdismiss":
+				LogMsg = command + " = " + driver.switchTo().alert().getText();
+				;
+				driver.switchTo().alert().dismiss();
+				break;
+			case "keyDownF12":
+				oAction = oActions.keyDown(oWebElement, Keys.F12).build();
+				oAction.perform();
+				break;
+			case "keyUpF12":
+				oAction = oActions.keyUp(oWebElement, Keys.F12).build();
+				oAction.perform();
+				break;
+			case "ALTSHIFTP":
+				oAction = oActions.keyUp(oWebElement, Keys.F12).build();
+				oAction.perform();
+				break;
+			case "ALTSHIFTF":
+				oAction = oActions.keyUp(oWebElement, Keys.F12).build();
+				oAction.perform();
+				break;
+			case "clearsendKeysRobotTAB":
+				oWebElement.clear();
+				oWebElement.sendKeys(strValue);
+				oRobot.keyPress(KeyEvent.VK_TAB);
+				oRobot.keyRelease(KeyEvent.VK_TAB);
+				oRobot.keyPress(KeyEvent.VK_TAB);
+				oRobot.keyRelease(KeyEvent.VK_TAB);
+				LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
+				break;
+			case "clearsendKeysoActionsTAB":
+				oWebElement.clear();
+				oWebElement.sendKeys(strValue);
+				oActions.sendKeys(Keys.TAB).build().perform();
+				oActions.sendKeys(Keys.TAB).build().perform();
+				LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
+				break;
+			case "clearsendKeysoJavascriptExecutor":
+				oWebElement.clear();
+				oJavascriptExecutor.executeScript("arguments[0].value='" + strValue + "';", oWebElement);
+				LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
+
+				break;
+			case "RobotTAB":
+				oRobot.keyPress(KeyEvent.VK_TAB);
+				oRobot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+				break;
+			case "doubleClick":
+				oAction = oActions.doubleClick(oWebElement).build();
+				oAction.perform();
+				LogMsg = command + "ed Field" + ElementName;
+				break;
+			case "mouseClick":
+				oActions.click(oWebElement);
+				LogMsg = command + " ed Field" + ElementName;
+				break;
+			case "moveToElement":
+				oAction = oActions.moveToElement(oWebElement).build();
+				oAction.perform();
+				LogMsg = command + " = " + ElementName;
+				break;
+			case "clear":
+				oWebElement.clear();
+				LogMsg = command + " value in  = " + ElementName;
+				break;
+			case "click":
+				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
+				oWebElement.click();
+				LogMsg = command + "ed Field = " + ElementName;
+				break;
+			case "clickAndwait":
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
+
+				oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
+				oWebElement.click();
+
+				driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 7);
+
+				LogMsg = "Clicked = " + ElementName;
+				Thread.sleep(1000);
+				break;
+			case "close":
+				// oWebElement.close();
+				break;
+			case "sendKeys":
+				oWebElement.sendKeys(strValue);
+				LogMsg = ElementName + "  entered  = " + strValue;
+				break;
+			case "clearANDsendKeys":
+				oWebElement.clear();
+				oWebElement.sendKeys(strValue);
+				LogMsg = ElementName + "  cleard value and Entered  = " + strValue;
+				break;
+			case "selectByIndex":
+				new Select(oWebElement).selectByIndex(Integer.parseInt(strValue));
+				LogMsg = ElementName + "  Selected = " + strValue;
+				break;
+			case "selectByVisibleText":
+				new Select(oWebElement).selectByVisibleText(strValue);
+				LogMsg = ElementName + "  Selected = " + strValue;
+				break;
+			case "selectByVisibleTextAndwait":
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+				oWebDriverWait = new WebDriverWait(driver, 20);
+
+				new Select(oWebElement).selectByVisibleText(strValue);
+
+				LogMsg = ElementName + "  Selected = " + strValue;
+				break;
+			case "selectByValue":
+				new Select(oWebElement).selectByValue(strValue);
+				LogMsg = ElementName + "  Selected = " + strValue;
+				break;
+			default:
+				break;
+			}
+
+			oExtentTest.log(Status.INFO, LogMsg);
+
+			if (!command.isEmpty()) {
+				String LogMsg = "Element : " + Locator.toString() + " command : [" + command.toString() + "] Value : ["
+						+ strValue.toString() + "]";
+				System.out.println(LogMsg);
+			}
+
+		} catch (Exception e) {
+			LogMsg = ElementName + " =  [" + strValue + "]";
+			oExtentTest.log(Status.FAIL, LogMsg);
+			e.printStackTrace();
+			throw e;
+		}
 
 	}
 
@@ -721,9 +927,27 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 	}
 
+	public static String getText_Element(WebElement oWebElement) throws Throwable {
+		try {
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+			return oWebElement.getText();
+		} catch (StaleElementReferenceException e) {
+			return oWebElement.getText();
+		}
+	}
+
 	public static String getFirstSelectedOption_Element(By Locator) throws Throwable {
 		try {
 			oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
+			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
+		} catch (StaleElementReferenceException e) {
+			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
+		}
+	}
+
+	public static String getFirstSelectedOption_Element(WebElement oWebElement) throws Throwable {
+		try {
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
 			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
 		} catch (StaleElementReferenceException e) {
 			return new Select(getElement(Locator)).getFirstSelectedOption().getText().toString();
@@ -887,5 +1111,4 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 	}
 
-	
 }

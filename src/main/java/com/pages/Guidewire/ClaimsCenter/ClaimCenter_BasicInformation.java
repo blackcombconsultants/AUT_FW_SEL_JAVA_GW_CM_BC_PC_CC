@@ -22,8 +22,23 @@ public class ClaimCenter_BasicInformation extends SeleniumWebDriver_Commands
 		String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");
+		
 		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText", insuredName);
 
 	}
+	
+	public static void basicInfoAssignClaim() throws Throwable {
+
+		String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo", strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");
+		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText", insuredName);
+        GuidewireAutomate("Insred Vehicle", BI_IV, "click", " ");
+
+	}
+	
+	
+	
+	
 
 }

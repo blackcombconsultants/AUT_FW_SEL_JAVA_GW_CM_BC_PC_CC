@@ -59,41 +59,8 @@ public interface ClaimCenter_Resuables_PO {
 	final By FinancialsTransactions_Header = By.xpath(
 			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Financials: Transactions']");
 
-	/*
-	 * AutoFirstandFinal
-	 */
-	final By AFF_Name = By.xpath("//select[contains(@name,'FirstAndFinalScreenInsuredClaimant')]");
-	final By AFF_Damage_LossDescription = By.xpath("//textarea[contains(@name,'Description')]");
-	final By Location = By.xpath("//select[contains(@name,'Address_Picker')]");
-	final By State = By.xpath(
-			"//div[contains(@id,'AutoFirstAndFinalScreen-22')]//select[contains(@name,'GlobalAddressInputSet-State')]");
-	final By AFF_Claimant_Name = By.xpath("//select[contains(@name,'Claimant_Picker')]");
-	final By AFF_Repair = By
-			.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[@class='gw-action--expand-button']");
-	final By AFF_NewAutobodyRepairShop = By.xpath(
-			"//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'AutoRepairShop')]//div[@class='gw-label']");
-	final By AFF_AutoRepairShop_Name = By.xpath("//input[contains(@name,'Name')]");
-	final By AFF_AutoRepairShop_TaxID = By.xpath("//input[contains(@name,'ContactBasicsDV-V_EIN')]");
-
-	final By AFF_AutoRepairShop_Address1 = By.xpath("//input[contains(@name,'AddressLine1')]");
-	final By AFF_AutoRepairShop_City = By.xpath("//input[contains(@name,'City')]");
-	final By AFF_AutoRepairShop_County = By.xpath("//input[contains(@name,'County')]");
-	final By AFF_AutoRepairShop_State = By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
-	final By AFF_AutoRepairShop_ZIPCode = By.xpath("//input[contains(@name,'PostalCode')]");
-
-	final By AFF_Financials_Name = By.xpath("//select[contains(@name,'FNOLWizardCheckDV-Payee_Picker')]");
-	final By AFF_Financials_PayeeType = By.xpath("//select[contains(@name,'FNOLWizardCheckDV-PayeeRole')]");
-
-	final By AFF_Financials_Amount = By.xpath("//input[contains(@name,'CheckAmount')]");
-	final By AFF_Financials_State = By
-			.xpath("//div[contains(@id,'FNOLWizardCheckDV')]//select[contains(@name,'GlobalAddressInputSet-State')]");
-
-	/*
-	 * QuickClaimAuto
-	 */
-	final By QCA_ReportedBy_Name = By.xpath("//select[contains(@name,'ReportedBy_Name')]");
-	final By QCA_LossDetails_LossCause = By.xpath("//select[contains(@name,'LossCause')]");
-	final By QCA_LossDetails_State = By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
+	
+	
 	/*
 	 * services Rental
 	 */
@@ -156,5 +123,6 @@ public interface ClaimCenter_Resuables_PO {
 			.xpath("//div[contains(@id,'NewClaimDuplicatesScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By DuplicateClaims_ErrorMsg = By
 			.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
+	final By DuplicateClaims_Close=By.xpath("//div[contains(@id,'CloseButton')]");
 
 }
