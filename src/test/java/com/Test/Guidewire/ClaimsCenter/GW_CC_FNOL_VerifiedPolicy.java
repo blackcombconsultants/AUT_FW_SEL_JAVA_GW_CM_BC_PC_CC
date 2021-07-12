@@ -1,22 +1,17 @@
 package com.Test.Guidewire.ClaimsCenter;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_AddClaimInformation;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_AssignClaim;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_AutoFirstandFinal;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_BasicInformation;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_ClaimExposure;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_CloseClaim;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Contacts;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_CreateManualCheck;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_CreateRecovery;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Resuables;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_SearchPolicy;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_UploadDocuments;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Workplan;
 
@@ -54,7 +49,8 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		 * 
 		 * // ---->Adding new contact
 		 * 
-		 * GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Parties Involved Contacts");
+		 * GW_CM_PC_BC_CC_TabNavigation.
+		 * ccMenuNavigation("Parties Involved Contacts");
 		 * ClaimCenter_Contacts.New_Contact();
 		 * ClaimCenter_Contacts.NewContact_DuplicateContactFound_Verify();
 		 * ClaimCenter_Resuables.clickButton("Update");
@@ -261,7 +257,8 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		// ------>Creating New Claim
 		ClaimCenter_Resuables.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
 
-		// ------>ClosingClaim without any expsosure and validating error message
+		// ------>ClosingClaim without any expsosure and validating error
+		// message
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Close Claim");
 		ClaimCenter_CloseClaim.CloseClaim();
 		ClaimCenter_CloseClaim.ValidationResults("WithOutExpsoure");
@@ -280,7 +277,8 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		// ------>Creating New Claim
 		ClaimCenter_Resuables.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
 
-		// ------>ClosingClaim without any expsosure and validating error message
+		// ------>ClosingClaim without any expsosure and validating error
+		// message
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Close Claim");
 		ClaimCenter_CloseClaim.CloseClaim();
 		ClaimCenter_CloseClaim.ValidationResults("WithOutExpsoure");
@@ -304,7 +302,8 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		// ------>Creating New Claim
 		ClaimCenter_Resuables.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
 
-		// ------>ClosingClaim without any expsosure and validating error message
+		// ------>ClosingClaim without any expsosure and validating error
+		// message
 		GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation("Close Claim");
 		ClaimCenter_CloseClaim.CloseClaim();
 		ClaimCenter_CloseClaim.ValidationResults("WithOutExpsoure");
@@ -344,9 +343,9 @@ public class GW_CC_FNOL_VerifiedPolicy extends GW_GetDriver {
 		// ----->Clicking on Administration Tab
 		GW_CM_PC_BC_CC_TabNavigation.ccTabNavigation("Administration UsersandSecurity Groups", "");
 		// ------>Verify the groups
-		ClaimCenter_AssignClaim.AssignClaim_Prerequisite();
-		//----->Login to ClaimCenter bbaker user
-		
+		ClaimCenter_AssignClaim.LoadFactor_VacationStatus_Edit();
+		// ----->Login to ClaimCenter bbaker user
+		GW_CM_PC_BC_CC_Login.login_Guidewire_Userx("Betty");
 
 	}
 
