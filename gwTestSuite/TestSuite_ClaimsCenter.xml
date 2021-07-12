@@ -14,37 +14,46 @@
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
 				<methods>
-					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
-					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
-					<include
+					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
+					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_QuickClaimAuto" />
-
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_Contacts" />
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_PartiesInvolved_DuplicateContactsVerify" />
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_NewExposure_MedicalPayments" />
-					<include
-						name="AUT_PA_CC_FNOL_VerifiedPolicy_AddingReserve" />
-					<include
+					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_AddingReserve" />
+					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_ManualAdjusterCheck_Create" />
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_VerifiedPolicy_Recovery_CreateRecovery" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_UploadDocuments" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_UploadDocuments1" />
+					<exclude
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_ClaimsExposure" />
+					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_CloseClaim001" />
+					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_CloseClaim002" />
+					<exclude name="AUT_PA_CC_FNOL_VerifiedPolicy_CloseClaim003" />
+					<include
+						name="AUT_PA_CC_FNOL_VerifiedPolicy_AssignClaim_RoundRobin_LoadFactor100" />
 				</methods>
 			</class>
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_UnverifiedPolicy">
 				<methods>
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto" />
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_AutoFirstandFinal" />
-					<include
+					<exclude
 						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_QuickClaimAuto" />
-
+					<exclude
+						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto_SelectPolicy" />
 				</methods>
 			</class>
 		</classes>
