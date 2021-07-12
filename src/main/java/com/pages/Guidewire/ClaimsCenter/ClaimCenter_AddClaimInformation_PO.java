@@ -12,8 +12,18 @@ public interface ClaimCenter_AddClaimInformation_PO {
 	final By ADI_LossCause=By.xpath("//select[contains(@name,'LossDetailsAddressDV-Claim_LossCause')]");
 	final By ADI_location=By.xpath("//select[contains(@name,'globalAddressContainer-Address_Picker')]");
     final By  ADI_State=By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
-	final By addClaimInfo_Header=By.id("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-ttlBar");
+    final By  ADI_Address1=By.xpath("//input[contains(@name,'AddressLine1')]");
+
+    final By addClaimInfo_Header=By.id("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-ttlBar");
 	
+    /*
+	 * DuplicateClaims
+	 */
+	final By DuplicateClaims_Header = By
+			.xpath("//div[contains(@id,'NewClaimDuplicatesScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By DuplicateClaims_ErrorMsg = By
+			.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
+	final By DuplicateClaims_Close=By.xpath("//div[contains(@id,'CloseButton')]");
 	
 	final By dateOfEmployerNotified=By.name("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-DateReportedtoEmployer");
 	final By injuryDescription=By.name("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-Claim_InjuryDescription");

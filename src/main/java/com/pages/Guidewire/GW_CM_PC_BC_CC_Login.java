@@ -28,6 +28,7 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 
 	}
+	
 
 	public static void logout_Guidewire() throws Throwable {
 		GuidewireAutomate("Setting", GW_Setting_Link, "click", "Null");

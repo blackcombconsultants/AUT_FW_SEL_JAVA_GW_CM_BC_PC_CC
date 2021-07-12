@@ -835,6 +835,13 @@ public class GW_CM_PC_BC_CC_TabNavigation extends SeleniumWebDriver_Commands imp
 				GuidewireAutomate("Desktop Tab", TabCC_Desktop_dd, "click", "Null");
 				GuidewireAutomate("BulkInvoices", TabCC_Desktop_BulkInvoices, "click", "Null");
 				break;
+			
+			case "Administration UsersandSecurity Groups" :
+				GuidewireAutomate("Administration Tab", TabCC_Administration, "click", "Null");
+				GuidewireAutomate("Users and Security", TabCC_Administration_Users_and_Security, "click", "Null");
+				GuidewireAutomate("Users and Security Groups", TabCC_Administration_Users_and_Security_Groups, "click", "Null");
+
+				break;
 			/*
 			 * Claims
 			 */

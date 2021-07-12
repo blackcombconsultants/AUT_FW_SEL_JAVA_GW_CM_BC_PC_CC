@@ -66,7 +66,8 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		return strInfobar;
 	}
 
-	public static void submissionProcess(String Account, String Job) throws Throwable {
+	// ---->rename to assignClaimProcess
+	public static void assignClaimProcess(String Account, String Job) throws Throwable {
 
 		String strEditLock;
 
@@ -95,98 +96,32 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 			ClaimCenter_Resuables.newClaimSaved();
 
 			break;
+		case "VerifiedPolicy_Newclaim_Auto_AutoFirstandFinal":
+			ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+			ClaimCenter_Resuables.clickButton("Next");
+			ClaimCenter_AutoFirstandFinal.NewClaim_AutoFirstandFinal();
+			ClaimCenter_Resuables.clickButton("Finish");
+			ClaimCenter_Resuables.DuplicateClaims_Verify();
+			ClaimCenter_Resuables.clickButton("Finish");
+			ClaimCenter_Resuables.newClaimSaved();
+
+			break;
+		case "VerifiedPolicy_Newclaim_Auto_QuickClaimAuto":
+			ClaimCenter_SearchPolicy.fnol_Search_Exitsing_Policy();
+			ClaimCenter_Resuables.clickButton("Next");
+			ClaimCenter_QuickClaimAuto.New_QuickClaimAuto();
+			ClaimCenter_Resuables.clickButton("Finish");
+			ClaimCenter_Resuables.DuplicateClaims_Verify();
+			ClaimCenter_Resuables.clickButton("Finish");
+			ClaimCenter_Resuables.newClaimSaved();
+
+
+			break;
+
 		}
 	}
 
-	public static void NewClaim_AutoFirstandFinal() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AutoFirstandFinal",
-				strTestCaseName);
-
-		String insured = ClaimCenter_Resuables.infoBar("InsuredName");
-
-		GuidewireAutomate_Validation("Screen Header", AutoFirstandFinal_Header, "equals",
-				"Step 2 of 2: Auto First and Final");
-
-		String strDynamicXpath = lhm_TestCase_Table_Data.get("WhoreportedClaim");
-		By WhoreportedClaim = By.xpath("//span[@class='gw-label--inner' and text()='" + strDynamicXpath
-				+ "']//parent::label[@class='gw-RangeRadioValueWidget--label']//input[contains(@id,'FirstFinalReportedAgencyRadioButton')]");
-
-		GuidewireAutomate("WhoreportedClaim_Insured", WhoreportedClaim, "click", "NA");
-		GuidewireAutomate("Name", AFF_Name, "selectByVisibleText", insured);
-
-		GuidewireAutomate("Loss Description", AFF_Damage_LossDescription, "clearANDsendKeys",
-				lhm_TestCase_Table_Data.get("LossDescription"));
-		GuidewireAutomate("Claimant Name", AFF_Claimant_Name, "selectByVisibleText", insured);
-		GuidewireAutomate("Location", Location, "selectByVisibleText", lhm_TestCase_Table_Data.get("Location"));
-		GuidewireAutomate("State", State, "selectByVisibleText", lhm_TestCase_Table_Data.get("State"));
-		GuidewireAutomate("Repair", AFF_Repair, "click", "NA");
-
-		repairShop();
-		GuidewireAutomate("Financials Name", AFF_Financials_Name, "selectByVisibleText", insured);
-		GuidewireAutomate_Validation("Screen Header", AutoFirstandFinal_Header, "equals",
-				"Step 2 of 2: Auto First and Final");
-		GuidewireAutomate("Financials PayeeType", AFF_Financials_PayeeType, "selectByVisibleTextAndwait",
-				lhm_TestCase_Table_Data.get("PayeeType"));
-		GuidewireAutomate("Financials Amount", AFF_Financials_Amount, "clearANDsendKeys",
-				lhm_TestCase_Table_Data.get("FinancialsAmount"));
-		GuidewireAutomate("Financials State", AFF_Financials_State, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("FinancialsState"));
-		GuidewireAutomate("Finish_Button", Finish_Button, "click", "NA");
-
-	}
-
-	public static void repairShop() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AutoFirstandFinal",
-				strTestCaseName);
-		GuidewireAutomate("NewAutobodyRepairShop", AFF_NewAutobodyRepairShop, "click", "NA");
-		GuidewireAutomate_Validation("Screen Header", NewAutoRepairShop_Header, "equals",
-				"New Auto Repair Shop");
-		String AutoRepairShopName = lhm_TestCase_Table_Data.get("AutoRepairShopName");
-		if (AutoRepairShopName.equalsIgnoreCase("Automation")) {
-			AutoRepairShopName = getRandomAlphabetic(9);
-			GuidewireAutomate("AutoRepairShop_Name", AFF_AutoRepairShop_Name, "clearANDsendKeys", AutoRepairShopName);
-		} else {
-			GuidewireAutomate("AutoRepairShop_Name", AFF_AutoRepairShop_Name, "clearANDsendKeys", AutoRepairShopName);
-		}
-
-		String TaxID = lhm_TestCase_Table_Data.get("AutoRepairShopTaxID");
-		if (TaxID.equalsIgnoreCase("345-34-365")) {
-			String NewTaxId = TaxID + getRandomNumeric(1);
-			GuidewireAutomate("Comments", AFF_AutoRepairShop_TaxID, "clearANDsendKeys", NewTaxId);
-		} else {
-			GuidewireAutomate("Comments", AFF_AutoRepairShop_TaxID, "clearANDsendKeys", TaxID);
-		}
-
-		GuidewireAutomate("Address1", AFF_AutoRepairShop_Address1, "clearANDsendKeys",
-				lhm_TestCase_Table_Data.get("Address1"));
-		GuidewireAutomate("City", AFF_AutoRepairShop_City, "clearANDsendKeys", lhm_TestCase_Table_Data.get("City"));
-		GuidewireAutomate("County", AFF_AutoRepairShop_County, "clearANDsendKeys",
-				lhm_TestCase_Table_Data.get("County"));
-		GuidewireAutomate("State", AFF_AutoRepairShop_State, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("AutoRepairShop_State"));
-		GuidewireAutomate("ZIPCode", AFF_AutoRepairShop_ZIPCode, "clearANDsendKeys",
-				lhm_TestCase_Table_Data.get("ZIPCode"));
-		GuidewireAutomate("Update", Update, "clickAndwait", "NA");
-		GuidewireAutomate("Update", Update, "clickAndwait", "NA");
-
-
-	}
-
-	public static void New_QuickClaimAuto() throws Throwable {
-
-		String insuredName = driver
-				.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
-
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("QuickClaimAuto",
-				strTestCaseName);
-		GuidewireAutomate_Validation("Screen Header", QuickClaimAuto_Header, "equals", "Step 2 of 2: Quick Claim Auto");
-		GuidewireAutomate("ReportedBy_Name", QCA_ReportedBy_Name, "selectByVisibleText", insuredName);
-		GuidewireAutomate("LossCause", QCA_LossDetails_LossCause, "selectByVisibleText",
-				lhm_TestCase_Table_Data.get("LossCause"));
-		GuidewireAutomate("State", QCA_LossDetails_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("State"));
-		GuidewireAutomate("Location", Location, "selectByVisibleText", lhm_TestCase_Table_Data.get("Location"));
-
-	}
+	
 
 	public static void services() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("services", strTestCaseName);
@@ -212,6 +147,7 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 	}
 
 	public static void saveandAssign() throws Throwable {
+		// ---->Add script to Select a user 09-07-2021 dinesh
 		GuidewireAutomate_Validation("Screen Header", saveandassign_Header, "equals",
 				"Step 5 of 5: Save and Assign Claim");
 
@@ -265,7 +201,6 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate("Update", ExposureUpdate_Button, "clickAndwait", "NA");
 		GuidewireAutomate_Validation("Screen Header", Exposure_Header, "equals", "Exposures");
 
-
 	}
 
 	public static void addingReserve() throws Throwable {
@@ -275,6 +210,8 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait",
 				lhm_TestCase_Table_Data.get("CostType"));
+		GuidewireAutomate_Validation("Screen Header", EditReserves_Header, "equals", "Edit Reserves");
+
 		GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait",
 				lhm_TestCase_Table_Data.get("CostCategory"));
 
@@ -306,6 +243,7 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate_Validation("Screen Header", DuplicateClaims_Header, "equals", "Possible Duplicate Claims");
 		GuidewireAutomate_Validation("ErrorMsg", DuplicateClaims_ErrorMsg, "contains",
 				"Possible duplicate claims found");
+		GuidewireAutomate("DuplicateClaims_Close", DuplicateClaims_Close, "click", "NA");
 
 	}
 

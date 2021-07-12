@@ -9,7 +9,8 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 
-public class ClaimCenter_BasicInformation extends SeleniumWebDriver_Commands implements ClaimCenter_BasicInformation_PO {
+public class ClaimCenter_BasicInformation extends SeleniumWebDriver_Commands
+		implements ClaimCenter_BasicInformation_PO {
 	LinkedHashMap<String, String> lhm_Data;
 
 	public ClaimCenter_BasicInformation(WebDriver driver, ExtentTest oExtentTest) {
@@ -18,16 +19,26 @@ public class ClaimCenter_BasicInformation extends SeleniumWebDriver_Commands imp
 
 	public static void basicInfo() throws Throwable {
 
-		String insuredName=ClaimCenter_Resuables.infoBar("InsuredName");
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo",
-				strTestCaseName);
+		String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");
-		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText",insuredName);
-		Thread.sleep(4000);
+		
+		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText", insuredName);
+
 	}
-
 	
+	public static void basicInfoAssignClaim() throws Throwable {
 
+		String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo", strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header", basicInfo_Header, "equals", "Step 2 of 5: Basic information");
+		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText", insuredName);
+        GuidewireAutomate("Insred Vehicle", BI_IV, "click", " ");
 
+	}
+	
+	
+	
+	
 
 }

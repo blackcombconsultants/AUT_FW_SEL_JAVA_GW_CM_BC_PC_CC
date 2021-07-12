@@ -53,6 +53,6 @@ public class ClaimCenter_CreateManualCheck extends SeleniumWebDriver_Commands im
 		GuidewireAutomate_Validation("Screen Header", Setcheckinstructions_Header, "equals", "Step 3 of 3: Set check instructions");
 		GuidewireAutomate_Validation("Gross Amount", SI_GrossAmount, "fetch", lhm_TestCase_Table_Data.get("GrossAmount"));
 		GuidewireAutomate_Validation("Net Amount", SI_NetAmount, "fetch", lhm_TestCase_Table_Data.get("NetAmount"));
-		GuidewireAutomate("Finish_Button", Finish_Button, "clickAndwait", "");
+		GuidewireAutomate("Finish_Button", Finish_Button, "click", "");
 	}
 }
