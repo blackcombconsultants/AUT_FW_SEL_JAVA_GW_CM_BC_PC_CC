@@ -474,7 +474,7 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	final By TabCC_Claim_NewClaim           = By.xpath("//div[@id='TabBar-ClaimTab-ClaimTab_FNOLWizard']//div[@class='gw-label']");
 	final By TabCC_Claim_ClaimNumber        = By.xpath("//input[@name='TabBar-ClaimTab-ClaimTab_FindClaim']");
 	final By TabCC_Claim_ClaimNumber_Search = By.xpath("//div[@id='TabBar-ClaimTab-ClaimTab_FindClaim_Button']//span");
-
+    
 	/*
 	 * New
 	 */
@@ -491,6 +491,7 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	final By MenuCC_Claim_Actions_NewTransaction_Check             = By.xpath("//div[contains(@id,'ClaimMenuActions_NewTransaction_CheckSet')]//div[@class='gw-label']");
 	final By MenuCC_Claim_Actions_NewTransaction_Other             = By.xpath("//div[@id='Claim-ClaimMenuActions-ClaimMenuActions_NewTransaction-ClaimMenuActions_NewOtherTrans']");
 	final By MenuCC_Claim_Actions_NewTransaction_Other_ManualCheck = By.xpath("//div[contains(@id,'NewTransaction_Check')]//div[text()='Manual Check']");
+	final By MenuCC_Claim_Actions_NewTransaction_Other_Recovery = By.xpath("//div[contains(@id,'NewTransaction_RecoverySet')]//div[text()='Recovery']");
 
 	/*
 	 * New Document
@@ -593,7 +594,10 @@ public interface GW_CM_PC_BC_CC_TabNavigation_PO {
 	/*
 	 * AdministrationTab Tab - SubMenu
 	 */
-	final By TabCC_Administration_Users_and_Security = By.xpath("//div[@id='TabBar-AdminTab-Admin_UsersAndSecurity']/div[@class='gw-action--expand-button']");
+	final By TabCC_Administration=By.xpath("//div[@id='TabBar-AdminTab']/div[@role='tab']");
+	final By TabCC_Administration_Users_and_Security = By.xpath("//div[@id='Admin-MenuLinks-Admin_UsersAndSecurity']//div[@class='gw-action--expand-button']");
+	final By TabCC_Administration_Users_and_Security_Groups = By.xpath("//div[@id='Admin-MenuLinks-Admin_UsersAndSecurity']//div[contains(@id,'AdminGroupSearchPage')]");
+
 	final By TabCC_Administration_Business_Settings  = By.xpath("//div[@id='TabBar-AdminTab-Admin_BusinessSettings']/div[@class='gw-action--expand-button']");
 	final By TabCC_Administration_Monitoring         = By.xpath("//div[@id='TabBar-AdminTab-Admin_Monitoring']/div[@class='gw-action--expand-button']");
 	final By TabCC_Administration_Utilities          = By.xpath("//div[@id='TabBar-AdminTab-Admin_Utilities']/div[@class='gw-action--expand-button']");

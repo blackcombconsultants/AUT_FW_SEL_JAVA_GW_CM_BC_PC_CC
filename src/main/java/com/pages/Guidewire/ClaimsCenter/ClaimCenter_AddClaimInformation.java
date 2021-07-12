@@ -23,11 +23,17 @@ public class ClaimCenter_AddClaimInformation extends SeleniumWebDriver_Commands 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("addClaimInfo",
 				strTestCaseName);
 		GuidewireAutomate_Validation("addClaimInfoScreen", addClaimInfo_Header, "equals", "Step 3 of 5: Add claim information");
-		GuidewireAutomate("description", ADI_WhatHappened, "sendKeys",lhm_TestCase_Table_Data.get("WhatHappened"));
+		GuidewireAutomate("WhatHappened", ADI_WhatHappened, "clearANDsendKeys",lhm_TestCase_Table_Data.get("WhatHappened"));
 		GuidewireAutomate("losscause", ADI_LossCause, "selectByVisibleText",lhm_TestCase_Table_Data.get("LossCause"));
 		GuidewireAutomate("location", ADI_location, "selectByVisibleText",lhm_TestCase_Table_Data.get("Location"));
-		GuidewireAutomate("State", ADI_State, "selectByVisibleText",lhm_TestCase_Table_Data.get("State"));
+		GuidewireAutomate("Address1", ADI_Address1, "clearANDsendKeys",lhm_TestCase_Table_Data.get("Address1"));
+        GuidewireAutomate("State", ADI_State, "selectByVisibleText",lhm_TestCase_Table_Data.get("State"));
+        GuidewireAutomate_Validation("Screen Header", DuplicateClaims_Header, "equals", "Possible Duplicate Claims");
+		GuidewireAutomate_Validation("ErrorMsg", DuplicateClaims_ErrorMsg, "contains",
+				"Possible duplicate claims found");
+		GuidewireAutomate("DuplicateClaims_Close", DuplicateClaims_Close, "click", "NA");
 
+		//_---->Add the address1 script 09-07-2021 dinesh
 	}
 	
 

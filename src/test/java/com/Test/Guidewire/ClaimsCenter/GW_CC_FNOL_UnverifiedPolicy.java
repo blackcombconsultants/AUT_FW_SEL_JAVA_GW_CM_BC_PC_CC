@@ -6,7 +6,9 @@ import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_AddClaimInformation;
+import com.pages.Guidewire.ClaimsCenter.ClaimCenter_AutoFirstandFinal;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_BasicInformation;
+import com.pages.Guidewire.ClaimsCenter.ClaimCenter_QuickClaimAuto;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Resuables;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_SearchPolicy;
 
@@ -22,6 +24,7 @@ public class GW_CC_FNOL_UnverifiedPolicy extends GW_GetDriver {
 		ClaimCenter_Resuables.clickButton("Update"); //
 		ClaimCenter_Resuables.clickButton("Update"); //
 		ClaimCenter_Resuables.clickButton("Next"); //
+		
 		ClaimCenter_BasicInformation.basicInfo(); //
 		ClaimCenter_Resuables.clickButton("Next"); //
 		ClaimCenter_AddClaimInformation.addClaimInfo(); //
@@ -70,7 +73,7 @@ public class GW_CC_FNOL_UnverifiedPolicy extends GW_GetDriver {
 		ClaimCenter_SearchPolicy.fnol_Search_UnverifiedPolicy();
 		ClaimCenter_Resuables.clickButton("Update");
 		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_Resuables.NewClaim_AutoFirstandFinal();
+		ClaimCenter_AutoFirstandFinal.NewClaim_AutoFirstandFinal();
 		ClaimCenter_Resuables.clickButton("Finish");
 		ClaimCenter_Resuables.DuplicateClaims_Verify();
 		ClaimCenter_Resuables.clickButton("Finish");
@@ -88,7 +91,7 @@ public class GW_CC_FNOL_UnverifiedPolicy extends GW_GetDriver {
 
 		ClaimCenter_Resuables.clickButton("Update");
 		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_Resuables.New_QuickClaimAuto();
+		ClaimCenter_QuickClaimAuto.New_QuickClaimAuto();
 		ClaimCenter_Resuables.clickButton("Finish");
 		ClaimCenter_Resuables.DuplicateClaims_Verify();
 		ClaimCenter_Resuables.clickButton("Finish");

@@ -25,9 +25,10 @@ public class ClaimCenter_SearchPolicy extends SeleniumWebDriver_Commands impleme
 		// ------> Verifying the page -
 		GuidewireAutomate_Validation("Screen Header", SP_Header, "contains", "Search or Create Policy");
 		GuidewireAutomate("Policy Number", SP_FP_PolicyNumber, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PolicyNumber"));
+		//----->Verify Policy should be retrieved and displayed.
 		GuidewireAutomate("Search", SP_FP_Search, "click", "");
 		GuidewireAutomate("LossDate", SP_FP_LossDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("LossDate"));
-
+ 
 		String strDynamicXpath = lhm_TestCase_Table_Data.get("TypeofClaim");
 		By     TypeOfClaim     = By.xpath("//span[@class='gw-label--inner' and text()='" + strDynamicXpath + "']/preceding-sibling::span[@class='gw-radio-wrapper']//input[contains(@name,'ClaimMode')]");
 
@@ -56,7 +57,7 @@ public class ClaimCenter_SearchPolicy extends SeleniumWebDriver_Commands impleme
 
 		By TypeOfClaim = By.xpath("//span[@class='gw-label--inner' and text()='" + strDynamicXpath + "']/preceding-sibling::span[@class='gw-radio-wrapper']//input[contains(@name,'ClaimLossType')]");
 
-		if (strDynamicXpath.equalsIgnoreCase("Auto")) {
+		if (strDynamicXpath.equalsIgnoreCase("Auto")) {	
 			GuidewireAutomate("TypeOfClaim", TypeOfClaim, "click", "NA");
 			GuidewireAutomate("Auto_AutoFirstandFinal", CUP_TypeofClaim_Auto_AutoFirstandFinal, "click", "NA");
 			try {

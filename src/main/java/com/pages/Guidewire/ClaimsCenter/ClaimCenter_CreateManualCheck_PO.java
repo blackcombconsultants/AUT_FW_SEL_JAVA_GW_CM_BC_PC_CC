@@ -10,7 +10,7 @@ public interface ClaimCenter_CreateManualCheck_PO {
 	final By payeeName=By.name("NormalCreateCheckWizard-CheckWizard_CheckPayeesScreen-NewCheckPayeeDV-PrimaryPayee_Name");
 	final By type=By.name("NormalCreateCheckWizard-CheckWizard_CheckPayeesScreen-NewCheckPayeeDV-PrimaryPayee_Type");
 	final By next=By.id("NormalCreateCheckWizard-Next");
-
+    
 	final By  Enterpayeeinformation_Header=By.xpath("//div[contains(@id,'CheckPayeesScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
     final By  Enterpaymentinformation_Header=By.xpath("//div[contains(@id,'CheckPaymentsScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By Setcheckinstructions_Header=By.xpath("//div[contains(@id,'CheckInstructionsScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
@@ -38,6 +38,8 @@ public interface ClaimCenter_CreateManualCheck_PO {
    final By PD_LineItem_Category=By.xpath("//select[contains(@name,'EditablePaymentLineItemsLV-0-LineCategory')]");
    final By PD_LineItem_Amount=By.xpath("//input[contains(@name,'EditablePaymentLineItemsLV-0-Amount')]");
    final By PD_CheckBox=By.xpath("//div[contains(@id,'NewPaymentDetailDV-EditablePaymentLineItemsLV-1-_Checkbox')]/input[contains(@name,'EditablePaymentLineItemsLV-1-_Checkbox')]");
+  final By Finish_Button = By.xpath("//div[contains(@id,'Finish')]//div[@role='button']");
+
    final By PD_Remove=By.xpath("//div[contains(@id,'EditablePaymentLineItemsLV_tb-Remove')]/div[@role='button']");
    /*
     * Setcheckinstructions 
