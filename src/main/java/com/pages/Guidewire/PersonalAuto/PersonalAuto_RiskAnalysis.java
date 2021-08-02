@@ -59,10 +59,10 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 
 		GuidewireAutomate("ViewIssuesBlocking", RA_UI_ViewIssuesBlocking, "selectByVisibleText", lhm_TestCase_Table_Data.get("RA_UI_ViewIssuesBlocking"));
 
-		strShortDescription = lhm_TestCase_Table_Data.get("RA_AUI_CNUI_ShortDescription");
+		strShortDescription = lhm_TestCase_Table_Data.get("RA_AUI_CNUI_ShortDescription").trim();
 
-		By RA_UI_Select = By.xpath(
-				"//div[contains(@id,'ShortDescription_button') and text()='" + strShortDescription.trim() + "']/ancestor::td[contains(@id,'ShortDescription_Cell')]/preceding-sibling::td[contains(@class,'gw-impl-cell--CB')]//input[@type='checkbox']");
+		By RA_UI_Select = By
+				.xpath("//div[contains(@id,'ShortDescription_button') and text()='" + strShortDescription + "']/ancestor::td[contains(@id,'ShortDescription_Cell')]/preceding-sibling::td[contains(@class,'gw-impl-cell--CB')]//input[@type='checkbox']");
 		GuidewireAutomate(strShortDescription, RA_UI_Select, "click", strShortDescription);
 
 		By RA_UI_Name = By.xpath("//td[contains(@id,'ShortDescription_Cell')]//div[contains(@id,'ShortDescription_button') and text()='" + strShortDescription + "']");
@@ -141,7 +141,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
 
 		// Validating Risk Approval Details screen
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Approval Details");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.RiskApprovalDetails_Header, "equals", "Risk Approval Details");
 
 		GuidewireAutomate_Validation("New Approval", RAD_NewApproval, "equals", "New Approval");
 

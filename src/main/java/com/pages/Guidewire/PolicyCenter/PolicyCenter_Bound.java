@@ -24,14 +24,14 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 		By     Go_to_the_submission_manager_for_this_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
 		By     Submit_an_application_for_a_different_account = By.xpath("//div[contains(text(),'" + strDynamicXpath);
 		By     Go_To_Your_Desktop                            = By.xpath("//div[contains(text(),'" + strDynamicXpath);
-		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "NA");
+		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "click");
 
 	}
 
 	// ------>clicking on view_your_SubmissionIt will go to Quote Screen
 	public static void viewYourSubmission() throws Throwable {
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
-		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "NA");
+		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "click");
 
 	}
 
@@ -40,14 +40,14 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void policyChangeBound_ViewYourPolicy() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Change Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 
@@ -55,63 +55,63 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void Reinstatement_ViewYourPolicy() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Reinstatement Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void Reinstatement_ViewYourrenewal() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Renewing");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourrenewal, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourrenewal, "clickAndwait", "click");
 
 	}
 	public static void RenewalRenewing_ViewYourPolicy() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Renewing");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void RewriteFullTermBound_ViewYourPolicy() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Rewrite Full Term Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void RewriteNewTermBound_ViewYourPolicy() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Rewrite New Term Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void RewriteRemainderofTermBound_ViewYourPolicy() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Rewrite Remainder of Term Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void RewriteFullTermBound_ReviewChanges() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
 
-		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
 	public static void RewriteFullTermBound_goToYourDesktop() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
 
-		GuidewireAutomate("View your Policy", GoToYourDesktop, "clickAndwait", "NA");
+		GuidewireAutomate("View your Policy", GoToYourDesktop, "clickAndwait", "click");
 
 	}
 	// ------>clicking on submission manager

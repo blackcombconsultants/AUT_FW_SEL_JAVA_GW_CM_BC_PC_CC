@@ -40,7 +40,9 @@ public interface PolicyCenter_Resuables_PO {
 	final By Vehicles_Header                = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicles']");
 	final By PACoverages_Header             = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='PA Coverages']");
 	final By RiskAnalysis_Header            = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Risk Analysis']");
+	final By RiskApprovalDetails_Header     = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Risk Approval Details']");
 	final By IssuesthatblockIssuance_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Issues that block Issuance']");
+	final By PolicyReview_Header            = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Policy Review']");
 	final By Quote_Header                   = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Quote']");
 	final By Payment_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Payment']");
 	final By Forms_Header                   = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Forms']");
@@ -76,7 +78,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By BindOptions_Button                      = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]/div[@role='button']");
 	final By BindOptions_BindOnly_Button             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-BindOnly')]/div[@role='menuitem']");
 	final By Bindoptions_IssuePolicy_Button          = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-BindAndIssue')]/div[@role='menuitem']");
-	final By Rewrite_IssuePolicy_Button              = By.xpath("//div[contains(@id,'BindRewrite')]");
+	final By Rewrite_IssuePolicy_Button              = By.xpath("//div[contains(@id,'BindRewrite')]/div[@role='button']");
 	final By CloseOptions_Button                     = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'CloseOptions')]/div[@role='button']");
 	final By CloseOptions_WithdrawTransaction_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'CloseOptions-WithdrawJob')]/div[@role='menuitem']");
 	final By CloseOptions_Decline_Button             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'CloseOptions-Decline')]/div[@role='menuitem']");

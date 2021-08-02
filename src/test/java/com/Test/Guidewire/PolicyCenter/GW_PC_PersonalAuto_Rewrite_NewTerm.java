@@ -91,6 +91,8 @@ public class GW_PC_PersonalAuto_Rewrite_NewTerm extends GW_GetDriver {
 		PersonalAuto_RiskAnalysis.approveUWIssues();
 		PersonalAuto_RiskAnalysis.riskApprovalDetails();
 		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_PolicyReview.clickTab_PolicyReview("Differences");
+		PersonalAuto_PolicyReview.clickTab_PolicyReview("Policy Review");
 
 		PolicyCenter_Resuables.clickButton("Issue Policy for Rewrite New Term Bound");
 
