@@ -30,7 +30,7 @@ public class Test_ClaimActions_AssignClaim_Groups extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 		// ----->Login to ClaimCenter bbaker user
-		GW_CM_PC_BC_CC_Login.login_Guidewire_Userx("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 		// ------>Creating New Claim
 		CC_NewClaimWizard.assignClaimProcess("New Claim", "AssignClaimAuto");
 

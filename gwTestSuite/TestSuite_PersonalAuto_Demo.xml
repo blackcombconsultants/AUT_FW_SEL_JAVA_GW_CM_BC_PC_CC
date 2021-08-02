@@ -13,6 +13,13 @@
 		name="PersonalAuto PolicyCenter Regression">
 		<classes>
 			<class
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
+				<methods>
+					<include
+						name="AUT_PA_PC_NewSubmission_PI_EffectiveDate_BackDated" />
+				</methods>
+			</class>	<!-- class -->
+			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
 				<methods>
 					<include name="AUT_PA_PC_Rewrite_NewTerm_01" />
