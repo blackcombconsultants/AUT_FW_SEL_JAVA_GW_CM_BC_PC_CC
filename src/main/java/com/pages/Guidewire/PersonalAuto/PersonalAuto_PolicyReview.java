@@ -17,6 +17,8 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 
 	public static void clickTab_PolicyReview(String Tabname) throws Throwable {
 
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PolicyReview_Header, "equals", "Policy Review");
+
 		if (Tabname.equalsIgnoreCase("Differences")) {
 			GuidewireAutomate("Search", Tab_Differences, "clickAndwait", "click");
 		} else if (Tabname.equalsIgnoreCase("Policy Review")) {
@@ -31,7 +33,7 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyReview", strTestCaseName);
 
 		// Validating Risk Analysis screen
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Review");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PolicyReview_Header, "equals", "Policy Review");
 
 		GuidewireAutomate_Validation("Primary Named Insured", PR_PrimaryNamedInsured, "equals", strAccountName);
 		GuidewireAutomate_Validation("County", PR_County, "equals", lhm_TestCase_Table_Data.get("PR_County"));

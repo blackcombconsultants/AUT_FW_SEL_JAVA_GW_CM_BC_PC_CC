@@ -96,7 +96,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "click");
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				InfoBar_Jobstatus = By.xpath(DynamicXpath_InfoBar_Jobstatus.replace("Jobstatus", "Policy Change (Bound)"));
-				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Policy Change (Bound)");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "equals", "Policy Change (Bound)");
 				break;
 			case "Schedule Cancellation" :
 				GuidewireAutomate("Schedule Cancellation", BindOptions_ScheduleCancellation_Button, "clickAndwait", "click");
@@ -106,7 +106,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate("Cancel Now", Bindoptions_CancelNow_Button, "clickAndwait", "click");
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				InfoBar_Jobstatus = By.xpath(DynamicXpath_InfoBar_Jobstatus.replace("Jobstatus", "Cancellation (Bound)"));
-				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Cancellation (Bound)");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "equals", "Cancellation (Bound)");
 				break;
 			case "Renew" :
 				GuidewireAutomate("Renew", BindOptions_ScheduleCancellation_Button, "clickAndwait", "click");
@@ -130,12 +130,14 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 			case "Issue Policy for Rewrite New Term" :
 				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "click");
 				GuidewireAutomate_Handle("alertaccept", "NA");
-				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Rewrite New Term (Quoted)");
+				InfoBar_Jobstatus = By.xpath(DynamicXpath_InfoBar_Jobstatus.replace("Jobstatus", "Rewrite New Term (Quoted)"));
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "equals", "Rewrite New Term (Quoted)");
 				break;
 			case "Issue Policy for Rewrite New Term Bound" :
 				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "click");
 				GuidewireAutomate_Handle("alertaccept", "NA");
-				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Rewrite New Term (Bound)");
+				InfoBar_Jobstatus = By.xpath(DynamicXpath_InfoBar_Jobstatus.replace("Jobstatus", "Rewrite New Term (Bound)"));
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "equals", "Rewrite New Term (Bound)");
 				break;
 			case "Issue Policy for Rewrite Remainder of Term" :
 				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "click");
