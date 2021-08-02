@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Forms;
@@ -20,9 +20,9 @@ import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 
 public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 
@@ -47,7 +47,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -155,7 +155,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -263,7 +263,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -371,7 +371,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -479,7 +479,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -587,7 +587,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -695,7 +695,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -803,7 +803,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -908,11 +908,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_49_PI_EffectiveDate_FutureDated() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -999,7 +999,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1104,11 +1104,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_55_PI_Negative_EffectiveDate() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1192,11 +1192,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_58_PA_Driver_Add_ExistingDriver() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1339,11 +1339,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_64_PA_Driver_MVRReportDetails() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1435,7 +1435,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1584,7 +1584,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1692,7 +1692,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1800,7 +1800,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -1908,7 +1908,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2016,7 +2016,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2124,7 +2124,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2232,7 +2232,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2340,7 +2340,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2448,7 +2448,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2553,11 +2553,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_100_RiskAnalysis_AddUWIssue() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2649,7 +2649,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2757,7 +2757,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2862,11 +2862,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_109_RiskAnalysis_PriorLosses_Add() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -2955,11 +2955,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_112_PolicyReview_InsuredDetais() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3048,11 +3048,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_115_PA_Quote() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3141,11 +3141,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_118_Pay_BillingMethod_ListBill() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3240,7 +3240,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3348,7 +3348,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3453,11 +3453,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_127_Pay_PaymentSchedule_B() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3546,11 +3546,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_130_Pay_PaymentSchedule_E() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3639,11 +3639,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_133_Pay_PaymentSchedule_Monthly2() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3732,11 +3732,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_136_Pay_FixInvoice_BillDute() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3826,11 +3826,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_139_Pay_PayUsing_CreditCard() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -3922,11 +3922,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_142_Pay_UpFrontPayment_Cash() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4018,7 +4018,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4126,7 +4126,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4234,7 +4234,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4342,7 +4342,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4450,7 +4450,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4558,7 +4558,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4666,7 +4666,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4771,11 +4771,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_8_Single_QuickQuote_DefaultEffectiveDate_Modify() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Edit();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4883,7 +4883,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -4991,7 +4991,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5099,7 +5099,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5204,11 +5204,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_20_Single_FullApplication_DefaultEffectiveDate_Modify() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Edit();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5292,11 +5292,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_23_Offering_StandardProgram() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5388,7 +5388,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5496,7 +5496,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5604,7 +5604,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5712,7 +5712,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5817,11 +5817,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_48_PI_EffectiveDate_BackDated() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -5910,11 +5910,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_51_PI_WrittenDate_FutureDated() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6003,11 +6003,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_54_PI_UnderwritingCompany() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6099,7 +6099,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6305,7 +6305,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6410,11 +6410,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_69_PA_CreateVehicle() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6502,7 +6502,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6610,7 +6610,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6718,7 +6718,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6826,7 +6826,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -6934,7 +6934,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7042,7 +7042,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7150,7 +7150,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7258,7 +7258,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7366,7 +7366,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7471,11 +7471,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_99_PA_RiskAnalysis_ApproveUWIssue() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7569,11 +7569,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_102_RiskAnalysis_AddContingency() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7665,11 +7665,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_105_RiskAnalysis_PriorPolicies_Add() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7760,7 +7760,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7868,7 +7868,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -7973,11 +7973,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_114_Quote_InsuredDetais() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8065,11 +8065,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_117_Pay_BillingMethod_DirectBill() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8162,7 +8162,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8270,7 +8270,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8375,11 +8375,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_126_Pay_PaymentSchedule_A() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8467,11 +8467,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_129_Pay_PaymentSchedule_D() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8559,11 +8559,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_132_Pay_PaymentSchedule_Monthly() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8651,11 +8651,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_135_Pay_PaymentSchedule_EveryOtherWeek() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8743,11 +8743,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_138_Pay_PayUsing_ACH_EFT() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8837,11 +8837,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_141_Pay_UpFrontPayment_Check() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -8932,7 +8932,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9040,7 +9040,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9148,7 +9148,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9256,7 +9256,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9364,7 +9364,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9472,7 +9472,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9579,7 +9579,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9686,7 +9686,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9793,7 +9793,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -9900,7 +9900,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10005,11 +10005,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_19_Single_FullApplication_DefaultBaseState_Modify() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Edit();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10095,11 +10095,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_22_Offering_PremiumProgram() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10188,11 +10188,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_34_PI_QuoteNeeded_FutureDate() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10278,7 +10278,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10385,7 +10385,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10492,7 +10492,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10597,11 +10597,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_47_PI_TermType_Annual() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10685,11 +10685,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_50_PI_WrittenDate_BackDated() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10775,7 +10775,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -10882,7 +10882,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11086,7 +11086,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11194,7 +11194,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11301,7 +11301,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11408,7 +11408,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11515,7 +11515,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11622,7 +11622,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11725,7 +11725,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11832,7 +11832,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -11939,7 +11939,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12044,11 +12044,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_89_PA_AdditionalCoverages_AllVehicles_Remove() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12139,7 +12139,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12246,7 +12246,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12353,7 +12353,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12460,7 +12460,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12567,7 +12567,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12674,7 +12674,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12781,7 +12781,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12886,11 +12886,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_113_PA_PolicyReview() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -12981,7 +12981,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13088,7 +13088,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13195,7 +13195,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13302,7 +13302,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13407,11 +13407,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_128_Pay_PaymentSchedule_C() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13500,11 +13500,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_131_Pay_PaymentSchedule_F() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13593,11 +13593,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_134_Pay_PaymentSchedule_Monthly3() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13688,7 +13688,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13793,11 +13793,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_140_Pay_UpFrontPayment_HeldByAgent() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13886,11 +13886,11 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 	public void AUT_PA_PC_NewSubmission_143_Pay_UpFrontPayment_Electronic() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -13981,7 +13981,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -14088,7 +14088,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -14195,7 +14195,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -14302,7 +14302,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -14409,7 +14409,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
@@ -14516,7 +14516,7 @@ public class GW_PC_PersonalAuto_Submission_backup extends GW_GetDriver {
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB

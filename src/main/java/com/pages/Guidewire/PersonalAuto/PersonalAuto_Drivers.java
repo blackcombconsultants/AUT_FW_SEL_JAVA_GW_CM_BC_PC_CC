@@ -83,15 +83,18 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 	public static void driver_Edit_ExistingDriver() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Drivers_Header, "equals", "Drivers");
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
 
 	public static void driver_ContatDetails(String TestingType) throws Throwable {
+
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
-		GuidewireAutomate("Contat Details Tab", DR_Tab_ContatDetails, "click", "NA");
+		GuidewireAutomate("Contat Details Tab", DR_Tab_ContatDetails, "click", "click");
+
 		String LicenseNumber = lhm_TestCase_Table_Data.get("DR_CD_LicenseNumber");
 		switch (TestingType) {
 			case "VERIFY" :
@@ -165,7 +168,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 	public static void driver_Roles(String TestingType) throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
-		GuidewireAutomate("Roles Tab", DR_Tab_Roles, "click", "NA");
+		GuidewireAutomate("Roles Tab", DR_Tab_Roles, "click", "click");
 
 		GuidewireAutomate_Validation("Primary Named Insured", DR_R_PrimaryNamedInsured, "equals", "Primary Named Insured");
 
@@ -204,7 +207,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("drivers", strTestCaseName);
 
-		GuidewireAutomate("Addresses Tab", DR_Tab_Addresses, "click", "NA");
+		GuidewireAutomate("Addresses Tab", DR_Tab_Addresses, "click", "click");
 
 		GuidewireAutomate_Validation("This is currently the policy address", DR_A_CurrentlyPolicyAddress, "equals", "This is currently the policy address");
 

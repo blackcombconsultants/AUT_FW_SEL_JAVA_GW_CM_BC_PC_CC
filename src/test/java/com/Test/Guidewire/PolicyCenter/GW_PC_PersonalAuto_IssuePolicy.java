@@ -1,31 +1,31 @@
-	package com.Test.Guidewire.PolicyCenter;
+package com.Test.Guidewire.PolicyCenter;
 
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Forms;
-import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Payments;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyReview;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Qualification;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
 public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 
 	/*
-	 * Testcase = Full Quote Issue Policy Author = Arun Date Created = 27/04/21 LOB
-	 * = Personal Auto Parameter testData
+	 * Testcase = Full Quote Issue Policy Author = Arun Date Created = 27/04/21
+	 * LOB = Personal Auto Parameter testData
 	 * 
 	 */
 
@@ -34,14 +34,15 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 		PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
-		PolicyCenter_AccountSummary.detail_Verify(); 
-		
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
-		PolicyCenter_Resuables.newSubmissions_Verify();
-		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select LOB
+		PolicyCenter_AccountSummary.detail_Verify();
 
-		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
-		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
+		PolicyCenter_Resuables.newSubmissions_Verify();
+		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
+																		// LOB
+
+		strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+		strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
 		strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
 
 		PolicyCenter_Resuables.offering();
@@ -83,7 +84,7 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		PersonalAuto_RiskAnalysis.riskApprovalDetails(); //
 		PersonalAuto_RiskAnalysis.addUWContingency(); //
 		PersonalAuto_RiskAnalysis.priorPolicies_Add(); //
-		//PersonalAuto_RiskAnalysis.priorLosses_Add();
+		// PersonalAuto_RiskAnalysis.priorLosses_Add();
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_PolicyReview.policyDetails();
@@ -98,10 +99,10 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		PersonalAuto_Quote.policyPremium_Garage1();
 		PersonalAuto_Quote.policyPremium_Vehicle1();
 		PersonalAuto_Quote.policyPremium_PremiumSubtotalandTaxes();
-		strJob = PolicyCenter_Resuables.infoBar("Job");
-		strLOB = PolicyCenter_Resuables.infoBar("LOB");
+		strJob           = PolicyCenter_Resuables.infoBar("Job");
+		strLOB           = PolicyCenter_Resuables.infoBar("LOB");
 		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
-		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+		strUnderwriter   = PolicyCenter_Resuables.infoBar("Underwriter");
 		String strEditLock = PolicyCenter_Resuables.infoBar("EditLock");
 
 		PolicyCenter_Resuables.clickButton("Release Lock");
@@ -125,8 +126,8 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		PolicyCenter_Resuables.clickButton("Issue Policy");
 
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
-		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+		strPolicyNumber  = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		strUnderwriter   = PolicyCenter_Resuables.infoBar("Underwriter");
 
 		PolicyCenter_Bound.ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
@@ -137,8 +138,8 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 	}
 
 	/*
-	 * Testcase = Full Quote - Edit the Policy during Issuance Author = Arun Date
-	 * Created = 27/04/21 LOB = Personal Auto Parameter testData
+	 * Testcase = Full Quote - Edit the Policy during Issuance Author = Arun
+	 * Date Created = 27/04/21 LOB = Personal Auto Parameter testData
 	 * 
 	 */
 
@@ -147,14 +148,15 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 		PolicyCenter_Resuables.pcTabNavigation_Policy_Search();
-		PolicyCenter_PolicySummary.detail_Verify(); 
-		
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Change Policy");
-		PolicyCenter_Resuables.newSubmissions_Verify();
-		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select LOB
+		PolicyCenter_PolicySummary.detail_Verify();
 
-		strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
-		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+		Tab_Menu_Navigation.pcMenuNavigation("Change Policy");
+		PolicyCenter_Resuables.newSubmissions_Verify();
+		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
+																		// LOB
+
+		strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+		strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
 		strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
 
 		PolicyCenter_Resuables.offering();
@@ -196,7 +198,7 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		PersonalAuto_RiskAnalysis.riskApprovalDetails(); //
 		PersonalAuto_RiskAnalysis.addUWContingency(); //
 		PersonalAuto_RiskAnalysis.priorPolicies_Add(); //
-		//PersonalAuto_RiskAnalysis.priorLosses_Add();
+		// PersonalAuto_RiskAnalysis.priorLosses_Add();
 
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_PolicyReview.policyDetails();
@@ -211,10 +213,10 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		PersonalAuto_Quote.policyPremium_Garage1();
 		PersonalAuto_Quote.policyPremium_Vehicle1();
 		PersonalAuto_Quote.policyPremium_PremiumSubtotalandTaxes();
-		strJob = PolicyCenter_Resuables.infoBar("Job");
-		strLOB = PolicyCenter_Resuables.infoBar("LOB");
+		strJob           = PolicyCenter_Resuables.infoBar("Job");
+		strLOB           = PolicyCenter_Resuables.infoBar("LOB");
 		strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
-		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+		strUnderwriter   = PolicyCenter_Resuables.infoBar("Underwriter");
 		String strEditLock = PolicyCenter_Resuables.infoBar("EditLock");
 
 		PolicyCenter_Resuables.clickButton("Release Lock");
@@ -238,8 +240,8 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 		PolicyCenter_Resuables.clickButton("Issue Policy");
 
 		strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
-		strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+		strPolicyNumber  = PolicyCenter_Resuables.infoBar("PolicyNumber");
+		strUnderwriter   = PolicyCenter_Resuables.infoBar("Underwriter");
 
 		PolicyCenter_Bound.ViewYourPolicy();
 		PolicyCenter_PolicySummary.detail_Verify();
@@ -250,13 +252,12 @@ public class GW_PC_PersonalAuto_IssuePolicy extends GW_GetDriver {
 	}
 
 	/*
-	 * Testcase = Full Quote Issuance withdraw Submission Author = Arun Date Created
-	 * = 26/04/21 LOB = Personal Auto Parameter testData
+	 * Testcase = Full Quote Issuance withdraw Submission Author = Arun Date
+	 * Created = 26/04/21 LOB = Personal Auto Parameter testData
 	 * 
 	 */
 	@Test
 	public void AUT_PA_PC_Issuance_1_WithdrawTransaction() throws Throwable {
 
-	
 	}
 }

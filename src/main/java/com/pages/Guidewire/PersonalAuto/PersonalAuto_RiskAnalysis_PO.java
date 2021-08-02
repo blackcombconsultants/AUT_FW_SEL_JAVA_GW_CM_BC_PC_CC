@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 
 public interface PersonalAuto_RiskAnalysis_PO {
 
-	final By RiskAnalysis_Header = By.xpath("//div[@class='gw-TitleBar--title' and text()='Risk Analysis']");
-
 	final By RA_OK_Button     = By.xpath("//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='OK']");
 	final By RA_Cancel_Button = By.xpath("//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='Cance']");
 
@@ -195,5 +193,7 @@ public interface PersonalAuto_RiskAnalysis_PO {
 	 * Issues that block issuance
 	 */
 	final By IBA_UWIssuesthatblockissuance = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='UW Issues that block issuance']");
+	final By IBA_UWI_IssueName             = By.xpath("//div[contains(@id,'ShortDescriptionAndSize_Input')]//div[contains(@class,'gw-ValueWidget')]");
+	final By IBA_Details_Button            = By.xpath("//div[contains(@id,'DetailsButton')]/div[@role='button']");
 
 }

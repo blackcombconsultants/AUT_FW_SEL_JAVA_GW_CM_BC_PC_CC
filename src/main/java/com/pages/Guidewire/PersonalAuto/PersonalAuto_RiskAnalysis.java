@@ -26,7 +26,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
 
 		// Validating Risk Analysis screen
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Risk Analysis");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
 
 		GuidewireAutomate("Add UW Issue", RA_AddUWIssue_Button, "clickAndwait", "NA");
 
@@ -50,16 +50,19 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		/*
 		 * UWIssues Tab
 		 */
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
+
 		GuidewireAutomate("UWIssues Tab", RA_Tab_UWIssues, "clickAndwait", "NA");
 
-		GuidewireAutomate_Validation("Blocking Issuance", RA_UI_BlockingIssuance, "equals", "Blocking Issuance");
+		// GuidewireAutomate_Validation("Blocking Issuance",
+		// RA_UI_BlockingIssuance, "equals", "Blocking Issuance");
 
 		GuidewireAutomate("ViewIssuesBlocking", RA_UI_ViewIssuesBlocking, "selectByVisibleText", lhm_TestCase_Table_Data.get("RA_UI_ViewIssuesBlocking"));
 
 		strShortDescription = lhm_TestCase_Table_Data.get("RA_AUI_CNUI_ShortDescription");
 
-		By RA_UI_Select = By
-				.xpath("//div[contains(@id,'ShortDescription_button') and text()='" + strShortDescription + "']/ancestor::td[contains(@id,'ShortDescription_Cell')]/preceding-sibling::td[contains(@class,'gw-impl-cell--CB')]//input[@type='checkbox']");
+		By RA_UI_Select = By.xpath(
+				"//div[contains(@id,'ShortDescription_button') and text()='" + strShortDescription.trim() + "']/ancestor::td[contains(@id,'ShortDescription_Cell')]/preceding-sibling::td[contains(@class,'gw-impl-cell--CB')]//input[@type='checkbox']");
 		GuidewireAutomate(strShortDescription, RA_UI_Select, "click", strShortDescription);
 
 		By RA_UI_Name = By.xpath("//td[contains(@id,'ShortDescription_Cell')]//div[contains(@id,'ShortDescription_button') and text()='" + strShortDescription + "']");
@@ -79,6 +82,8 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		/*
 		 * UWIssues Tab
 		 */
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
+
 		GuidewireAutomate("UWIssues Tab", RA_Tab_UWIssues, "click", "NA");
 		GuidewireAutomate_Validation("Blocking Issuance", RA_UI_BlockingIssuance, "equals", "Blocking Issuance");
 
@@ -107,6 +112,8 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		/*
 		 * UWIssues Tab
 		 */
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
+
 		GuidewireAutomate("UWIssues Tab", RA_Tab_UWIssues, "click", "NA");
 		GuidewireAutomate_Validation("Blocking Issuance", RA_UI_BlockingIssuance, "equals", "Blocking Issuance");
 
@@ -134,7 +141,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
 
 		// Validating Risk Approval Details screen
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Risk Approval Details");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Approval Details");
 
 		GuidewireAutomate_Validation("New Approval", RAD_NewApproval, "equals", "New Approval");
 
@@ -179,7 +186,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
 
-		GuidewireAutomate_Validation("Risk Analysis", RiskAnalysis_Header, "equals", "Risk Analysis");
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
 		GuidewireAutomate("Add Contingency", RA_AddContingency_Button, "click", "NA");
 
 		GuidewireAutomate_Validation("New Contingency", RA_AC_NewContingency, "equals", "New Contingency");
@@ -222,7 +229,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 	}
 
 	public static void RA_LockForReview() throws Throwable {
-		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables.Screen_Header, "equals", "Risk Analysis");
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
 
 		GuidewireAutomate("Release Lock", RA_RequestApproval_Button, "click", "NA");
 
@@ -232,7 +239,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
 		// Enter only short and long description values and click on OK
-		GuidewireAutomate_Validation("Risk Analysis", RiskAnalysis_Header, "equals", "Risk Analysis");
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
 		GuidewireAutomate("Add UW Issue", RA_AddUWIssue_Button, "click", "NA");
 
 		GuidewireAutomate("Create an UW Issue", RA_OK_Button, "click", "NA");
@@ -272,6 +279,8 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 		/*
 		 * UWIssues Tab
 		 */
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
+
 		GuidewireAutomate("Prior Policies Tab", RA_Tab_PriorPolicies, "click", "NA");
 
 		GuidewireAutomate_Validation("Prior Policies", RA_PP_PriorPolicies, "equals", "Prior Policies");
@@ -292,6 +301,10 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 	}
 
 	public static void priorPolicies_Edit() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
+
+		GuidewireAutomate_Validation("Risk Analysis", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
 
 		GuidewireAutomate("Prior Policies Tab", RA_Tab_PriorPolicies, "click", "NA");
 
@@ -374,7 +387,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 	public static void releaseLock() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("riskAnalysis", strTestCaseName);
 
-		GuidewireAutomate_Validation("UW Activity", PolicyCenter_Resuables.Screen_Header, "equals", "UW Activity");
+		GuidewireAutomate_Validation("UW Activity", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "UW Activity");
 
 		GuidewireAutomate_Validation("Subject", RA_UWA_Subject, "valueEquals", lhm_TestCase_Table_Data.get("RA_UWA_Subject"));
 
@@ -401,7 +414,7 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 
 	public static void button_Verify() throws Throwable {
 		// Validating Risk Analysis screen
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Risk Analysis");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
 
 		GuidewireAutomate_Validation("Add UWIssue", RA_AddUWIssue_Button, "isDisplayed", "true");
 		GuidewireAutomate_Validation("Add Contingency", RA_AddContingency_Button, "isDisplayed", "true");
@@ -410,11 +423,14 @@ public class PersonalAuto_RiskAnalysis extends SeleniumWebDriver_Commands implem
 	}
 
 	public static void issuesthatblockIssuance() throws Throwable {
+
 		// Validating Risk Analysis screen
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Issues that block Issuance");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.IssuesthatblockIssuance_Header, "equals", "Issues that block Issuance");
 		GuidewireAutomate_Validation("UW Issues that block issuance", IBA_UWIssuesthatblockissuance, "equals", "UW Issues that block issuance");
 
-		GuidewireAutomate_Validation("Add UWIssue", RA_AddUWIssue_Button, "isDisplayed", "true");
+		GuidewireAutomate_Validation("New period end date", IBA_UWI_IssueName, "equals", "New period end date does not match end date of previous period.");
+
+		GuidewireAutomate("Details", IBA_Details_Button, "click", "click");
 
 	}
 }

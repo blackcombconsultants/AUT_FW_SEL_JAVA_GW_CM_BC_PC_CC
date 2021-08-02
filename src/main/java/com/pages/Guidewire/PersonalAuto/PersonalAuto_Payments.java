@@ -156,7 +156,7 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 		// By PA_PS_Total = By.xpath("//div[text()='" + strDynamicXpath +
 		// "']/ancestor::td[contains(@class,'gw-CellWidget')]/following-sibling::td['Total'=substring(@id,197,string-length(@id))]//div[@class='gw-value']/div/div[1]");
 
-		GuidewireAutomate("Payment Plan = " + strDynamicXpath, PA_PS_PaymentPlan, "clickAndwait", "");
+		GuidewireAutomate("Payment Plan = " + strDynamicXpath, PA_PS_PaymentPlan, "clickAndwait", "click");
 		GuidewireAutomate_Validation("Down Payment", PA_PS_DownPayment, "fetch", lhm_TestCase_Table_Data.get("PA_PS_DownPayment"));
 		GuidewireAutomate_Validation("Installment", PA_PS_Installment, "fetch", lhm_TestCase_Table_Data.get("PA_PS_Installment"));
 		GuidewireAutomate_Validation("Total", PA_PS_Total, "fetch", lhm_TestCase_Table_Data.get("PA_PS_Total"));
@@ -190,7 +190,7 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 
 		GuidewireAutomate_Validation("Up-front Payment", PA_UpFrontPayment, "equals", "Up-front Payment");
 
-		GuidewireAutomate("PayUsing Add", PA_B_IO_PayUsing_Add, "clickAndwait", "NA");
+		GuidewireAutomate("PayUsing Add", PA_B_IO_PayUsing_Add, "clickAndwait", "click");
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Demo Payment System");
 
@@ -218,7 +218,7 @@ public class PersonalAuto_Payments extends SeleniumWebDriver_Commands implements
 		// lhm_TestCase_Table_Data.get("DPS_BA_ZIPCode"));
 		GuidewireAutomate("Notes", DPS_BA_Notes, "sendKeys", lhm_TestCase_Table_Data.get("DPS_BA_Notes"));
 
-		GuidewireAutomate("OK", PolicyCenter_Resuables.OK_Button, "clickAndwait", "");
+		GuidewireAutomate("OK", PolicyCenter_Resuables.OK_Button, "clickAndwait", "click");
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

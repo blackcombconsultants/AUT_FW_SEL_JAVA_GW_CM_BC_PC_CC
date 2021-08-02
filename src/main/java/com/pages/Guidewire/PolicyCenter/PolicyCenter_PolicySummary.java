@@ -12,18 +12,24 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 	}
 
 	public static void detail_Verify() throws Throwable {
-		
+
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PolicySummary_Header, "contains", "Policy Summary");
 
 		GuidewireAutomate_Validation("Details", PS_Details, "equals", "Details");
 
 		GuidewireAutomate_Validation("Policy Number", PS_D_PolicyNumber, "equals", strPolicyNumber);
-		GuidewireAutomate_Validation("Product", PS_D_Product, "equals", strLOB);
-		//GuidewireAutomate_Validation("Offering", PS_D_Offering, "contains", "Program");
-		GuidewireAutomate_Validation("Primary Named Insured", PS_D_PrimaryNamedInsured, "equals", strAccountName);
-		GuidewireAutomate_Validation("Underwriter", PS_D_Underwriter, "equals", strUnderwriter);
-		//GuidewireAutomate_Validation("Effective Date", PS_D_EffectiveDate, "equals", strEffectiveDate);
-		//GuidewireAutomate_Validation("Expiration Date", PS_D_ExpirationDate, "equals", strUnderwriter);
+		// GuidewireAutomate_Validation("Product", PS_D_Product, "equals",
+		// strLOB);
+		// GuidewireAutomate_Validation("Offering", PS_D_Offering, "contains",
+		// "Program");
+		// GuidewireAutomate_Validation("Primary Named Insured",
+		// PS_D_PrimaryNamedInsured, "equals", strAccountName);
+		// GuidewireAutomate_Validation("Underwriter", PS_D_Underwriter,
+		// "equals", strUnderwriter);
+		// GuidewireAutomate_Validation("Effective Date", PS_D_EffectiveDate,
+		// "equals", strEffectiveDate);
+		// GuidewireAutomate_Validation("Expiration Date", PS_D_ExpirationDate,
+		// "equals", strUnderwriter);
 
 	}
 
@@ -125,14 +131,14 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 	public static void new_Transaction(String type) throws Throwable {
 
 		switch (type) {
-		case "Issue Policy":
-			break;
+			case "Issue Policy" :
+				break;
 
-		case "Cancel Policy":
-			break;
+			case "Cancel Policy" :
+				break;
 
-		default:
-			break;
+			default :
+				break;
 		}
 	}
 

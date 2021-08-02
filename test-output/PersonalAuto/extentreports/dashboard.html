@@ -54,7 +54,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Jul 7, 2021 05:32:07 PM</span>
+                    <span class="badge badge-primary">Aug 2, 2021 10:22:37 AM</span>
                 </a>
             </li>
         </ul>
@@ -71,6 +71,14 @@
         </a>
       </li>
             <li class="nav-item dropdown">
+        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
+          <span class="icon-holder">
+            <i class="fa fa-bug"></i>
+          </span>
+          <span class="title">Exception</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
         <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
           <span class="icon-holder">
             <i class="fa fa-bar-chart"></i>
@@ -96,11 +104,11 @@
 	                                        </div>
 	                                    </div>
 	                                    <div class="card-footer">
-	                                    	<div><small data-tooltip='100%'>
-	                                    		<b>1</b> tests passed
+	                                    	<div><small data-tooltip='0%'>
+	                                    		<b>0</b> tests passed
                                     		</small></div>
 	                                    	<div>
-	                                    		<small data-tooltip='0%'><b>0</b> tests failed, 
+	                                    		<small data-tooltip='100%'><b>1</b> tests failed, 
 	                                    		<b data-tooltip='0%'>0</b> others
 	                                    		</small>
                                     		</div>
@@ -118,7 +126,7 @@
 													<h2 class="font-size-28 font-weight-light">1</h2>
 													<span class="text-semibold text-success font-size-15">
 													<i class="ti-arrow-up font-size-11"></i> 
-														<span>100.00%</span>
+														<span>.00%</span>
 													</span>
 												</div>
 												<div class="align-self-end">
@@ -134,7 +142,7 @@
 	                                        <div class="media justify-content-between">
 												<div>
 													<p class="">Start</p>
-													<h6 class="font-weight-light">Jul 7, 2021 05:32:07 PM</h6>
+													<h6 class="font-weight-light">Aug 2, 2021 10:22:37 AM</h6>
 													<span class="text-semibold text-success font-size-15">
 												</div>
 												<div class="align-self-end">
@@ -150,7 +158,7 @@
 	                                        <div class="media justify-content-between">
 												<div>
 													<p class="">Duration</p>
-													<h6 class="font-weight-light">0h 4m 23s+561ms</h6>
+													<h6 class="font-weight-light">0h 5m 36s+478ms</h6>
 													<span class="text-semibold font-size-15">
 												</div>
 												<div class="align-self-end">
@@ -212,13 +220,13 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -243,7 +251,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "AUT_PA_PC_NewSubmission_BindOption_IssuePolicy":263.338
+			        "AUT_PA_PC_Rewrite_NewTerm_01":336.015
 			};
 		</script>
 <script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/js/script.js"></script>

@@ -12,6 +12,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By InfoBar_ReinstatementNumber = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Reinstatement ')]");
 	final By InfoBar_RewriteNumber       = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Rewrite ')]");
 	final By InfoBar_Job                 = By.xpath("//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label']");
+	final By InfoBar_Job_SubmissionBound = By.xpath("//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label' and text()='Submission (Bound)']");
 	final By InfoBar_ReinstatementJob    = By.xpath("//div[contains(@id,'InfoBar-ReinstatementLabel')]//div[@class='gw-label']");
 	final By InfoBar_RewriteJob          = By.xpath("//div[contains(@id,'InfoBar-RewriteLabel')]//div[@class='gw-label']");
 	final By InfoBar_Workflow            = By.xpath("//div[contains(@id,'InfoBar-Workflow')]//div[@class='gw-label gw-infoValue']");
@@ -29,15 +30,21 @@ public interface PolicyCenter_Resuables_PO {
 	 */
 	final By Producer_Header = By.xpath("//div[contains(@id,'title-toolbar')]//div[text()='Producer']");
 
-	final By Screen_Header        = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
-	final By CreateAccount_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Create account']");
-	final By Organizations_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Organizations']");
-	final By Offerings_Header     = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Offerings']");
-	final By Qualification_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Qualification']");
-	final By Quote_Header         = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Quote']");
-	final By Payment_Header       = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Payment']");
-	final By Forms_Header         = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Forms']");
-	final By PolicySummary_Header = By.xpath("//div[@id='PolicyFile_Summary-ttlBar']//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Policy Summary')]");
+	final By Screen_Header                  = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
+	final By EnterAccountInformation_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Enter Account Information']");
+	final By CreateAccount_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Create account']");
+	final By Organizations_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Organizations']");
+	final By Offerings_Header               = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Offerings']");
+	final By Qualification_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Qualification']");
+	final By Drivers_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Drivers']");
+	final By Vehicles_Header                = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicles']");
+	final By PACoverages_Header             = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='PA Coverages']");
+	final By RiskAnalysis_Header            = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Risk Analysis']");
+	final By IssuesthatblockIssuance_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Issues that block Issuance']");
+	final By Quote_Header                   = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Quote']");
+	final By Payment_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Payment']");
+	final By Forms_Header                   = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Forms']");
+	final By PolicySummary_Header           = By.xpath("//div[@id='PolicyFile_Summary-ttlBar']//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Policy Summary')]");
 
 	final By Error_Header         = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-subGroupLabel gw-text']");
 	final By Error_Message        = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']");
@@ -109,6 +116,7 @@ public interface PolicyCenter_Resuables_PO {
 	/*
 	 * Start Cancellation For Policy
 	 */
+	final By StartCancellationForPolicy_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Start Cancellation For Policy')]");
 
 	final By SCFP_Source                    = By.xpath("//select[@name='StartCancellation-StartCancellationScreen-CancelPolicyDV-Source']");
 	final By SCFP_Reason                    = By.xpath("//select[@name='StartCancellation-StartCancellationScreen-CancelPolicyDV-Reason']");
@@ -116,12 +124,15 @@ public interface PolicyCenter_Resuables_PO {
 	final By SCFP_RefundMethod              = By.xpath("//div[contains(@id,'CancelPolicyDV-CalcMethod')]//div[@class='gw-label' and text()='Flat']");
 	final By SCFP_CancellationEffectiveDate = By.xpath("//div[contains(@id,'CancelPolicyDV-CancelDate')]//input[@class='gw-min-visible gw-DateValueWidget--dateInput']");
 	final By StartCancellation_Button       = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Start Cancellation']");
-	final By SCFP_PolicyNumber              = By.xpath("//div[contains(@id,'SummaryDV-PolicyNumber')]//div[@class='gw-value-readonly-wrapper']");
-	final By SCFP_PrimaryNamedInsured       = By.xpath("//div[contains(@id,'Quote_SummaryDV-Insured')]//div[@class='gw-value-readonly-wrapper']");
-	final By SCFP_Address                   = By.xpath("//div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']");
-	final By SCFP_County                    = By.xpath("//div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']");
-	final By SCFP_AddressType               = By.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType') and contains(@class,'gw-ValueWidget')]//div[@class='gw-label']");
-	final By SCFP_AddressDescription        = By.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressDescription')]//div[@class='gw-value-readonly-wrapper']");
+
+	final By Confirmation_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Confirmation']");
+
+	final By SCFP_PolicyNumber        = By.xpath("//div[contains(@id,'SummaryDV-PolicyNumber')]//div[@class='gw-value-readonly-wrapper']");
+	final By SCFP_PrimaryNamedInsured = By.xpath("//div[contains(@id,'Quote_SummaryDV-Insured')]//div[@class='gw-value-readonly-wrapper']");
+	final By SCFP_Address             = By.xpath("//div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']");
+	final By SCFP_County              = By.xpath("//div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']");
+	final By SCFP_AddressType         = By.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType') and contains(@class,'gw-ValueWidget')]//div[@class='gw-label']");
+	final By SCFP_AddressDescription  = By.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressDescription')]//div[@class='gw-value-readonly-wrapper']");
 
 	final By BindOptions_ScheduleCancellation_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-SubmitCancellation')]/div[@role='menuitem']");
 	final By Bindoptions_CancelNow_Button            = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-CancelNow')]/div[@role='menuitem']");
@@ -147,8 +158,8 @@ public interface PolicyCenter_Resuables_PO {
 	/*
 	 * Start Policy Change
 	 */
+	final By SPC_ScreenHeader = By.xpath("//div[@id='StartPolicyChange-StartPolicyChangeScreen-ttlBar']//div[text()='Start Policy Change']");
 
-	final By SPC_ScreenHeader  = By.xpath("//div[@id='StartPolicyChange-StartPolicyChangeScreen-ttlBar']//div[text()='Start Policy Change']");
 	final By SPC_EffectiveDate = By.xpath("//div[contains(@id,'ReinstatementDate')]//div[@class='gw-value-readonly-wrapper']");
 	final By SPC_Description   = By.xpath("//textarea[contains(@name,'ReinstatePolicyDV-ReasonDescription')]");
 

@@ -3,18 +3,18 @@
 <suite thread-count="2" parallel="methods"
 	name="ClaimsCenter TestSuite">
 
-
 	<listeners>
 		<listener
 			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
-	<test thread-count="1" parallel="methods" name="ClaimsCenter Smoke Test">
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Smoke Test">
 		<classes>
-			<class
-				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
+			<class name="com.Test.Guidewire.ClaimsCenter.Test_NewDocument">
 				<methods>
-					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto" />
+					<include
+						name="AUT_PA_CC_CreateFromaTemplate_DocumentTemplate_AcrobatSample" />
 				</methods>
 			</class>
 		</classes>
