@@ -4,14 +4,14 @@ import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Payments;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Quote;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Reusable;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 
 public class GW_PC_PersonalAuto_ReinstatePolicy extends GW_GetDriver {
 
@@ -21,7 +21,7 @@ public class GW_PC_PersonalAuto_ReinstatePolicy extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 		PersonalAuto_Reusable.cancellationProcess();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Reinstate Policy");
+		Tab_Menu_Navigation.pcMenuNavigation("Reinstate Policy");
 		PolicyCenter_Resuables.startReinstatement_PolicyDetails();
 		PolicyCenter_Resuables.startReinstatement_AffinityGroup();
 		PolicyCenter_Resuables.clickButton("Next");

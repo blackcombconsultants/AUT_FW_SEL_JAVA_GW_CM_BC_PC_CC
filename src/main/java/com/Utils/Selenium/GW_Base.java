@@ -52,6 +52,8 @@ public class GW_Base {
 	public static String gstr_Userhome = System.getProperty("user.home");
 
 	public static String pConfigproperties = pUserdir + "/src/main/resources/Config.Properties";
+	public static String pUploads          = pUserdir + "/src/test/resources/Uploads/";
+	public static String pDownloads        = pUserdir + "/src/test/resources/Downloads/";
 
 	public static String pScreenshots;
 	public static String pExtentReport_TodayFile;

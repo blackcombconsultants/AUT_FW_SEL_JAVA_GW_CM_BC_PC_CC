@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Forms;
@@ -27,7 +27,7 @@ public class GW_PC_PersonalAuto_RenewPolicy extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 		PersonalAuto_Reusable.submissionProcess("New Account", "Issue Policy");
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Renew Policy");
+		Tab_Menu_Navigation.pcMenuNavigation("Renew Policy");
 
 		PersonalAuto_Reusable.paMenuNavigation("Policy Info");
 		PolicyCenter_Resuables.clickButton("Edit Policy Transaction");

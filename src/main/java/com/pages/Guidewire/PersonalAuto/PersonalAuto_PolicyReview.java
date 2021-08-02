@@ -18,9 +18,9 @@ public class PersonalAuto_PolicyReview extends SeleniumWebDriver_Commands implem
 	public static void clickTab_PolicyReview(String Tabname) throws Throwable {
 
 		if (Tabname.equalsIgnoreCase("Differences")) {
-			GuidewireAutomate("Search", Tab_Differences, "clickAndwait", "");
+			GuidewireAutomate("Search", Tab_Differences, "clickAndwait", "click");
 		} else if (Tabname.equalsIgnoreCase("Policy Review")) {
-			GuidewireAutomate("Search", Tab_PolicyReview, "clickAndwait", "");
+			GuidewireAutomate("Search", Tab_PolicyReview, "clickAndwait", "click");
 		}
 
 	}

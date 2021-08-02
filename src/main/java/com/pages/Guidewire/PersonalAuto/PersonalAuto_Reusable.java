@@ -8,12 +8,12 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements PersonalAuto_Reusable_PO {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
@@ -22,34 +22,34 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 	}
 
 	public static void newSubmission_SelectLOB_PersonalAuto() throws Throwable {
-		GuidewireAutomate("LOB PersonalAuto", LOB_PersonalAuto, "click", "");
+		GuidewireAutomate("LOB PersonalAuto", LOB_PersonalAuto, "clickAndwait", "click");
 	}
 
 	public static void paMenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 			case "Offering" :
-				GuidewireAutomate("Offering", SW_Offering, "clickAndwait", "");
+				GuidewireAutomate("Offering", SW_Offering, "clickAndwait", "click");
 				break;
 			case "Qualification" :
-				GuidewireAutomate("Qualification", SW_PreQualification, "clickAndwait", "");
+				GuidewireAutomate("Qualification", SW_PreQualification, "clickAndwait", "click");
 				break;
 			case "Policy Info" :
-				GuidewireAutomate("Policy Info", SW_PA_PolicyInfo, "clickAndwait", "");
+				GuidewireAutomate("Policy Info", SW_PA_PolicyInfo, "clickAndwait", "click");
 				break;
 			case "Drivers" :
-				GuidewireAutomate("Drivers", SW_PA_Drivers, "clickAndwait", "");
+				GuidewireAutomate("Drivers", SW_PA_Drivers, "clickAndwait", "click");
 				break;
 			case "Vehicles" :
-				GuidewireAutomate("Vehicles", SW_PA_Vehicles, "clickAndwait", "");
+				GuidewireAutomate("Vehicles", SW_PA_Vehicles, "clickAndwait", "click");
 				break;
 			case "PACoverages" :
-				GuidewireAutomate("PACoverages", SW_PA_PACoverages, "clickAndwait", "");
+				GuidewireAutomate("PACoverages", SW_PA_PACoverages, "clickAndwait", "click");
 				break;
 			default :
-				break;
+				throw new IOException("No support for Menu : " + Menu);
 		}
 		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-		oExtentTest.log(Status.INFO, "Navigation to " + Menu + " is succesful");
+		oExtentTest.log(Status.INFO, "Navigation to Personal Auto Menu = " + Menu + " is Succesful");
 	}
 
 	public String getRandomVIN(String vingenerator) throws Throwable {
@@ -80,7 +80,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 		switch (Account) {
 			case "New Account" :
-				GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+				Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 				PolicyCenter_Account.createPersonAccount();
 				PolicyCenter_AccountSummary.detail_Verify();
 
@@ -101,7 +101,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 		switch (Job) {
 			case "Save Draft" :
 
-				GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 				PolicyCenter_Resuables.newSubmissions_Verify();
 				PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																				// LOB
@@ -157,7 +157,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 			case "Quote" :
 
-				GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 				PolicyCenter_Resuables.newSubmissions_Verify();
 				PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																				// LOB
@@ -219,7 +219,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 			case "Bind Only" :
 
-				GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 				PolicyCenter_Resuables.newSubmissions_Verify();
 				PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																				// LOB
@@ -300,7 +300,7 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 			case "Issue Policy" :
 
-				GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 				PolicyCenter_Resuables.newSubmissions_Verify();
 				PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																				// LOB
@@ -390,7 +390,10 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 
 	public static void cancellationProcess() throws Throwable {
 		PersonalAuto_Reusable.submissionProcess("New Account", "Issue Policy");
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Cancel Policy");
+		// PolicyCenter_Resuables.pcTabNavigation_Policy_Search();
+		PolicyCenter_PolicySummary.detail_Verify();
+
+		Tab_Menu_Navigation.pcMenuNavigation("Cancel Policy");
 		PolicyCenter_Resuables.startCancellationForPolicy();
 		PolicyCenter_Resuables.Confirmation();
 		PolicyCenter_Resuables.clickButton("Bind Options");

@@ -13,61 +13,11 @@
 		name="PersonalAuto PolicyCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
-				<methods>
-					<exclude name="AUT_PA_PC_Account_CreateNewPersonAccount" />
-				</methods>
-			</class>
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
-				<methods>
-					<include
-						name="AUT_PA_PC_NewSubmission_BindOption_IssuePolicy" />
-				</methods>
-			</class>	<!-- class -->
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ChangePolicy">
-				<methods>
-					<exclude name="AUT_PA_PC_ChangePolicy_01" />
-				</methods>
-			</class>	<!-- class -->
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_RenewPolicy">
-				<methods>
-					<exclude name="AUT_PA_PC_RenewPolicy_01" />
-				</methods>
-			</class>	<!-- class -->
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_CancelPolicy">
-				<methods>
-					<exclude name="AUT_PA_PC_CancelPolicy_01" />
-				</methods>
-			</class>	<!-- class -->
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_ReinstatePolicy">
-				<methods>
-					<exclude name="AUT_PA_PC_ReinstatePolicy_01" />
-				</methods>
-			</class>	<!-- class -->
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_FullTerm">
-				<methods>
-					<exclude name="AUT_PA_PC_Rewrite_FullTerm_01" />
-				</methods>
-			</class>	<!-- class -->
-			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_RemainingOfTerm">
-				<methods>
-					<exclude name="AUT_PA_PC_Rewrite_RemainingOfTerm_01" />
-				</methods>
-			</class>	<!-- class -->
-			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
 				<methods>
-					<exclude name="AUT_PA_PC_Rewrite_NewTerm_01" />
+					<include name="AUT_PA_PC_Rewrite_NewTerm_01" />
 				</methods>
 			</class>	<!-- class -->
-
 		</classes>	<!-- classes -->
 	</test> <!-- Test -->
 

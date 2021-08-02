@@ -14,7 +14,10 @@ public interface ClaimCenter_Resuables_PO {
 	final By ExposureUpdate_Button = By.xpath("//div[contains(@id,'NewExposure-NewExposureScreen-Update')]//div[@role='button']");
 	final By Cancel_Button         = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Cancel']");
 
-	final By insuredName = By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']");
+	final By PolicyNumber = By.xpath("//div[contains(@id,'PolicyNumber')]//div[@class='gw-label gw-infoValue']");
+	final By InsuredName  = By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']");
+	final By LostDate     = By.xpath("//div[contains(@id,'LossDate')]//div[@class='gw-label gw-infoValue']");
+	final By Adjuster     = By.xpath("//div[contains(@id,'Adjuster')]//div[@class='gw-label gw-infoValue']");
 
 	/*
 	 * Claims Tab
@@ -30,18 +33,18 @@ public interface ClaimCenter_Resuables_PO {
 	 */
 
 	final By Screen_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
-	final By AutoFirstandFinal_Header      = By.xpath("//div[contains(@id,'AutoFirstAndFinalScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By NewAutoRepairShop_Header      = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
+	final By AutoFirstandFinal_Header      = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Auto First and Final']");
+	final By NewPerson_Header              = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='New Person']");
+	final By EditReserves_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Edit Reserves']");
+	final By NewAutoRepairShop_Header      = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='New Auto Repair Shop']");
 	final By QuickClaimAuto_Header         = By.xpath("//div[contains(@id,'NewQuickClaimScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By services_Header               = By.xpath("//div[contains(@id,'ServicesScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By saveandassign_Header          = By.xpath("//div[contains(@id,'AssignSaveScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By newClaimSaved_Header          = By.xpath("//div[contains(@id,'NewClaimSavedScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By EditReserves_Header           = By.xpath("//div[contains(@id,'NewReserveSetScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By PolicyGeneral_Header          = By.xpath("//div[contains(@id,'ClaimPolicyGeneralScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By SelectPolicy_Header           = By.xpath("//div[contains(@id,'ClaimPolicySelectPolicyScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By Summary_Header                = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Summary']");
 	final By Assign_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Assign']");
 	final By FinancialsTransactions_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Financials: Transactions']");
+	final By DuplicateClaims_Header        = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Duplicate Claims']");
+	final By SP_Header                     = By.xpath("//div[@id='FNOLWizard-FNOLWizard_FindPolicyScreen-ttlBar']//div[@class='gw-TitleBar--title']");
 
 	/*
 	 * services Rental
@@ -91,7 +94,6 @@ public interface ClaimCenter_Resuables_PO {
 	/*
 	 * DuplicateClaims
 	 */
-	final By DuplicateClaims_Header   = By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By DuplicateClaims_ErrorMsg = By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
 	final By DuplicateClaims_Close    = By.xpath("//div[contains(@id,'CloseButton')]");
 

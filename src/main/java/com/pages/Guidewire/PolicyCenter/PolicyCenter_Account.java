@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 
 public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements PolicyCenter_Account_PO {
 
@@ -27,7 +27,7 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 
 	public static void organizations(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable {
 
-		GuidewireAutomate("OrganizationSearch", CA_SP_OrganizationSearch_Button, "click", "");
+		GuidewireAutomate("OrganizationSearch", CA_SP_OrganizationSearch_Button, "click", "click");
 
 		GuidewireAutomate_Validation("Organization Name", PolicyCenter_Resuables.Organizations_Header, "equals", "Organizations");
 
@@ -47,18 +47,22 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		 */ // GuidewireAutomate_Validation("Producer Status", ProducerStatus,
 			// "equals",
 		// "Active");
-		GuidewireAutomate("Producer Tier", OS_ProducerTier, "", lhm_TestCase_Table_Data.get("OS_ProducerTier"));
+		GuidewireAutomate("Producer Tier", OS_ProducerTier, "sendKeys", lhm_TestCase_Table_Data.get("OS_ProducerTier"));
 		GuidewireAutomate("Producer Code", OS_ProducerCode, "sendKeys", lhm_TestCase_Table_Data.get("OS_ProducerCode"));
-		GuidewireAutomate("Policy", OS_Policy, "", lhm_TestCase_Table_Data.get("OS_Policy"));
-		GuidewireAutomate("Account", OS_Account, "", lhm_TestCase_Table_Data.get("OS_Account"));
+		GuidewireAutomate("Policy", OS_Policy, "sendKeys", lhm_TestCase_Table_Data.get("OS_Policy"));
+		GuidewireAutomate("Account", OS_Account, "sendKeys", lhm_TestCase_Table_Data.get("OS_Account"));
 
-		GuidewireAutomate("Search_Button", PolicyCenter_Resuables.Search_Button, "click", lhm_TestCase_Table_Data.get("Search_Button"));
-		GuidewireAutomate("Reset_Button", PolicyCenter_Resuables.Reset_Button, "", lhm_TestCase_Table_Data.get("Reset_Button"));
+		GuidewireAutomate("Search Button", PolicyCenter_Resuables.Search_Button, "click", lhm_TestCase_Table_Data.get("Search_Button"));
+
+		// GuidewireAutomate("Reset Button",
+		// PolicyCenter_Resuables.Reset_Button, "click",
+		// lhm_TestCase_Table_Data.get("Reset_Button"));
+
 	}
 
 	public static void industryCodeSearch(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable {
 
-		GuidewireAutomate("Search", IndustryCode_Search_Button, "click", "");
+		GuidewireAutomate("Search", IndustryCode_Search_Button, "click", "click");
 
 		GuidewireAutomate_Validation("Industry Code Search", PolicyCenter_Resuables.Screen_Header, "equals", "Industry Code Search");
 
@@ -66,7 +70,9 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Classification", IS_Classification, "sendKeys", lhm_TestCase_Table_Data.get("IS_Classification"));
 
 		GuidewireAutomate("Search_Button", PolicyCenter_Resuables.Search_Button, "click", lhm_TestCase_Table_Data.get("Search_Button"));
-		GuidewireAutomate("Reset_Button", PolicyCenter_Resuables.Reset_Button, "", lhm_TestCase_Table_Data.get("Reset_Button"));
+		// GuidewireAutomate("Reset_Button",
+		// PolicyCenter_Resuables.Reset_Button, "",
+		// lhm_TestCase_Table_Data.get("Reset_Button"));
 	}
 
 	public static void producer(LinkedHashMap<String, String> lhm_TestCase_Table_Data) throws Throwable {
@@ -89,8 +95,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("ZipCode", GW_ZipCode, "", lhm_TestCase_Table_Data.get("GW_ZipCode"));
 		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
 
-		GuidewireAutomate("Search_Button", PolicyCenter_Resuables_PO.Search_Button, "click", "");
-		GuidewireAutomate("Reset_Button", PolicyCenter_Resuables_PO.Reset_Button, "", "");
+		GuidewireAutomate("Search_Button", PolicyCenter_Resuables_PO.Search_Button, "click", "click");
+		GuidewireAutomate("Reset_Button", PolicyCenter_Resuables_PO.Reset_Button, "click", "");
 	}
 
 	/*
@@ -100,6 +106,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 	 */
 
 	public static void createPersonAccount() throws Throwable {
+
+		GuidewireAutomate_Validation("Enter Account Information", PolicyCenter_Resuables_PO.EnterAccountInformation_Header, "equals", "Enter Account Information");
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("createAccount", strTestCaseName);
 
@@ -136,7 +144,6 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		/*
 		 * Search
 		 */
-		GuidewireAutomate_Validation("Enter Account Information", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Enter Account Information");
 		GuidewireAutomate("First Name", SA_FirstName, "sendKeys", strFirstName);
 		GuidewireAutomate("Last Name", SA_LastName, "sendKeys", strLastName);
 
@@ -144,8 +151,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("First Name Exact Match", SA_FirstNameExactMatch, "click", lhm_TestCase_Table_Data.get("SA_FirstNameExactMatch"));
 		GuidewireAutomate("Last Name Exact Match", SA_LastNameExactMatch, "click", lhm_TestCase_Table_Data.get("SA_LastNameExactMatch"));
 
-		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
-		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
+		GuidewireAutomate("Country", GW_Country, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("GW_Country"));
+		GuidewireAutomate("State", GW_State, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("GW_State"));
 		/*
 		 * GuidewireAutomate("City", GW_City, "",
 		 * lhm_TestCase_Table_Data.get("GW_City")); GuidewireAutomate("County",
@@ -153,7 +160,9 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		 * GuidewireAutomate("ZipCode", GW_ZipCode, "",
 		 * lhm_TestCase_Table_Data.get("GW_ZIPCode"));
 		 * 
-		 */ PolicyCenter_Resuables.clickButton("Search");
+		 */
+
+		PolicyCenter_Resuables.clickButton("Search");
 
 		/*
 		 * CreateNewAccount_Button
@@ -166,8 +175,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		 */
 		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables_PO.Error_Message, "equals", "The search returned zero results.");
 
-		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "click", "");
-		GuidewireAutomate("CNA_Person_Button", SA_CNA_Person_Button, "click", "");
+		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "clickAndwait", "Click");
+		GuidewireAutomate("Person", SA_CNA_Person_Button, "clickAndwait", "Click");
 
 		/*
 		 * Create account
@@ -179,14 +188,14 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate_Validation("First Name", SA_FirstName, "valueEquals", strFirstName);
 		GuidewireAutomate_Validation("Last Name", SA_LastName, "valueEquals", strLastName);
 
-		GuidewireAutomate("homephone", CA_HomePhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_HomePhone"));
-		GuidewireAutomate("workphone", CA_WorkPhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_WorkPhone"));
-		GuidewireAutomate("mobilephone", CA_MobilePhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_MobilePhone"));
-		GuidewireAutomate("faxphone", CA_FaxPhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_FaxPhone"));
+		GuidewireAutomate("HomePhone", CA_HomePhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_HomePhone"));
+		GuidewireAutomate("WorkPhone", CA_WorkPhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_WorkPhone"));
+		GuidewireAutomate("MobilePhone", CA_MobilePhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_MobilePhone"));
+		GuidewireAutomate("FaxPhone", CA_FaxPhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_FaxPhone"));
 		GuidewireAutomate("primaryphone", CA_PrimaryPhone, "selectByVisibleText", lhm_TestCase_Table_Data.get("CA_PrimaryPhone"));
 
-		GuidewireAutomate("primaryEmail", CA_PrimaryEmail, "sendKeys", strPrimaryEmail);
-		GuidewireAutomate("secondaryEmail", CA_SecondaryEmail, "", lhm_TestCase_Table_Data.get("CA_SecondaryEmail"));
+		GuidewireAutomate("Primary Email", CA_PrimaryEmail, "sendKeys", strPrimaryEmail);
+		GuidewireAutomate("Secondary Email", CA_SecondaryEmail, "sendKeys", lhm_TestCase_Table_Data.get("CA_SecondaryEmail"));
 
 		/*
 		 * Address
@@ -194,16 +203,15 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate_Validation("Address", CA_Address, "equals", "Address");
 
 		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
-		GuidewireAutomate("Address1", CA_A_Address1, "sendKeys", strAddress1);
-		GuidewireAutomate("address2", CA_A_Address2, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address2"));
-		GuidewireAutomate("address3", CA_A_Address3, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address3"));
-		GuidewireAutomate("City", GW_City, "", lhm_TestCase_Table_Data.get("GW_City"));
-		GuidewireAutomate("County", GW_County, "", lhm_TestCase_Table_Data.get("GW_County"));
-		GuidewireAutomate("ZipCode", GW_ZipCode, "", lhm_TestCase_Table_Data.get("GW_ZipCode"));
 		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
+		GuidewireAutomate("Address1", CA_A_Address1, "sendKeys", strAddress1);
+		GuidewireAutomate("Address2", CA_A_Address2, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address2"));
+		GuidewireAutomate("Address3", CA_A_Address3, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address3"));
+		GuidewireAutomate_Validation("City", GW_City, "valueEquals", lhm_TestCase_Table_Data.get("GW_City"));
+		GuidewireAutomate_Validation("County", GW_County, "valueEquals", lhm_TestCase_Table_Data.get("GW_County"));
+		GuidewireAutomate_Validation("ZipCode", GW_ZipCode, "valueEquals", lhm_TestCase_Table_Data.get("GW_ZipCode"));
 
 		GuidewireAutomate("addresstype", CA_A_Addresstype, "selectByVisibleText", lhm_TestCase_Table_Data.get("CA_AddressType"));
-
 		GuidewireAutomate("description", CA_A_Description, "sendKeys", strFirstName + " " + strLastName + "Likes to ");
 
 		/*
@@ -222,8 +230,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		select_SearchResult(Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("organizations", strTestCaseName));
 
 		GuidewireAutomate_waitForElement(PolicyCenter_Resuables.Update_Button, "visibilityOf", "");
-		GuidewireAutomate("Update_Button", PolicyCenter_Resuables.Update_Button, "click", "");
-		GuidewireAutomate_Validation("Account Summary", GW_CM_PC_BC_CC_TabNavigation.AccountSummary_Name, "contains", strAccountNickname);
+		GuidewireAutomate("Update Button", PolicyCenter_Resuables.Update_Button, "click", "click");
+		GuidewireAutomate_Validation("Account Summary", Tab_Menu_Navigation.AccountSummary_Name, "contains", strAccountNickname);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -303,8 +311,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		 */
 		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables.Error_Message, "equals", "The search returned zero results.");
 
-		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "click", "");
-		GuidewireAutomate("CNA_Person_Button", SA_CNA_Company_Button, "click", "");
+		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "click", "click");
+		GuidewireAutomate("Company Button", SA_CNA_Company_Button, "click", "click");
 
 		/*
 		 * Create account
@@ -363,8 +371,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate_waitForElement(PolicyCenter_Resuables_PO.Update_Button, "visibilityOf", "");
 		GuidewireAutomate_Validation("ProducerCode", CA_SP_ProducerCode, "equals", lhm_TestCase_Table_Data.get("CA_SP_ProducerCode"));
 
-		GuidewireAutomate("Update_Button", PolicyCenter_Resuables_PO.Update_Button, "click", "");
-		GuidewireAutomate_Validation("Account Summary", GW_CM_PC_BC_CC_TabNavigation.AccountSummary_Name, "contains", strAccountNickname);
+		GuidewireAutomate("Update_Button", PolicyCenter_Resuables_PO.Update_Button, "click", "click");
+		GuidewireAutomate_Validation("Account Summary", Tab_Menu_Navigation.AccountSummary_Name, "contains", strAccountNickname);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
 public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implements PersonalAuto_Coverages_PO {
@@ -21,10 +22,8 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen_Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "PA Coverages");
-
-		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "");
-
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PACoverages_Header, "equals", "PA Coverages");
+		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "click");
 		GuidewireAutomate_Validation("Coverages applied to all vehicles", PAC_CT_CoveragesAppliedtoAllVehicles, "contains", "Coverages applied to all vehicles");
 
 		/*
@@ -33,7 +32,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		String strPAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage = lhm_TestCase_Table_Data.get("PAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage");
 		if (strPAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage.equalsIgnoreCase("Verify")) {
 			GuidewireAutomate_Validation("Liability - Bodily Injury and Property Damage", PAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage, "isDisabled", lhm_TestCase_Table_Data.get("PAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage"));
-			GuidewireAutomate("Auto Liability Package", PAC_CT_CATAV_LBIPD_AutoLiabilityPackage, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PAC_CT_CATAV_LBIPD_AutoLiabilityPackage"));
+			GuidewireAutomate_Validation("Auto Liability Package", PAC_CT_CATAV_LBIPD_AutoLiabilityPackage, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PAC_CT_CATAV_LBIPD_AutoLiabilityPackage"));
 		} else if (strPAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage.equalsIgnoreCase("Edit")) {
 			GuidewireAutomate_Validation("Liability - Bodily Injury and Property Damage", PAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage, "isDisabled", lhm_TestCase_Table_Data.get("PAC_CT_CATAV_Liability_BodilyInjuryPropertyDamage"));
 			GuidewireAutomate("Auto Liability Package", PAC_CT_CATAV_LBIPD_AutoLiabilityPackage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_CT_CATAV_LBIPD_AutoLiabilityPackage"));
@@ -88,9 +87,8 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate_Validation("Screen_Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "PA Coverages");
-
-		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PACoverages_Header, "equals", "PA Coverages");
+		GuidewireAutomate("Coverages tab", PACoverages_CoveragesTab, "click", "click");
 
 		GuidewireAutomate_Validation("Coverages applied per vehicle in", PAC_CT_CoveragesAppliedPerVehicleIn, "contains", "Coverages applied per vehicle in");
 
@@ -121,75 +119,113 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 
 	public static void additionalcoveragesAppliedtoallVehiclesIn() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+		try {
 
-		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "clickAndwait", "");
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate_Validation("Coverages applied to all vehicles", PAC_ACT_CoveragesAppliedtoAllVehicles, "contains", "Coverages applied to all vehicles");
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PACoverages_Header, "equals", "PA Coverages");
 
-		/*
-		 * Rental Car Loss of Use
-		 */
-		String strPAC_ACT_CATAV_RentalCarLossOfUse = lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse");
-		if (strPAC_ACT_CATAV_RentalCarLossOfUse.equalsIgnoreCase("Add")) {
-			GuidewireAutomate("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "clickAndwait", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse"));
-			GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse"));
-			GuidewireAutomate("Rental Car Loss of Use Limit", PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit"));
-		} else if (strPAC_ACT_CATAV_RentalCarLossOfUse.equalsIgnoreCase("Verify")) {
-			GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse"));
-			GuidewireAutomate_Validation("Rental Car Loss of Use Limit", PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit"));
-		} else if (strPAC_ACT_CATAV_RentalCarLossOfUse.equalsIgnoreCase("Modify")) {
-			GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse"));
-			GuidewireAutomate("Rental Car Loss of Use Limit", PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit"));
-		} else if (strPAC_ACT_CATAV_RentalCarLossOfUse.equalsIgnoreCase("Remove")) {
-			GuidewireAutomate("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "clickAndwait", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse"));
-			GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isNotSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse"));
-		} else {
-			throw new InterruptedIOException("Rental Car Loss of Use - No supported Type = " + strPAC_ACT_CATAV_RentalCarLossOfUse);
+			GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "clickAndwait", "click");
+			getStaleElement("Coverages applied to all vehicles", PAC_ACT_CoveragesAppliedtoAllVehicles);
+			GuidewireAutomate_Validation("Coverages applied to all vehicles", PAC_ACT_CoveragesAppliedtoAllVehicles, "contains", "Coverages applied to all vehicles");
+
+			/*
+			 * Rental Car Loss of Use
+			 */
+			String strPAC_ACT_CATAV_RentalCarLossOfUse = lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RentalCarLossOfUse");
+
+			switch (strPAC_ACT_CATAV_RentalCarLossOfUse) {
+				case "Add" :
+					GuidewireAutomate("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "clickAndwait", strPAC_ACT_CATAV_RentalCarLossOfUse);
+					getStaleElement("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse);
+					GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isSelected", strPAC_ACT_CATAV_RentalCarLossOfUse);
+					GuidewireAutomate("Rental Car Loss of Use Limit", PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit"));
+					break;
+				case "Verify" :
+					GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isSelected", strPAC_ACT_CATAV_RentalCarLossOfUse);
+					GuidewireAutomate_Validation("Rental Car Loss of Use Limit", PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit"));
+					break;
+				case "Modify" :
+					GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isSelected", strPAC_ACT_CATAV_RentalCarLossOfUse);
+					GuidewireAutomate("Rental Car Loss of Use Limit", PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CATAV_RCL_RentalCarLossOfUseLimit"));
+					break;
+				case "Remove" :
+					GuidewireAutomate("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "clickAndwait", strPAC_ACT_CATAV_RentalCarLossOfUse);
+					GuidewireAutomate_Validation("Rental Car Loss of Use", PAC_ACT_CATAV_RentalCarLossOfUse, "isNotSelected", strPAC_ACT_CATAV_RentalCarLossOfUse);
+					break;
+
+				default :
+					throw new InterruptedIOException("Rental Car Loss of Use - No supported Type = " + strPAC_ACT_CATAV_RentalCarLossOfUse);
+			}
+
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
+
+			oExtentTest.log(Status.PASS, "additionalcoveragesAppliedtoallVehiclesIn is succcesful");
+
+		} catch (Exception e) {
+			oExtentTest.log(Status.FAIL, "additionalcoveragesAppliedtoallVehiclesIn is not succcesful");
+			e.printStackTrace();
+			throw e;
 		}
 
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
 	}
 
 	public static void additionalcoveragesAppliedperVehiclesIn() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
+		try {
 
-		GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "click", "");
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate_Validation("Coverages applied per vehicle in", PAC_ACT_CoveragesAppliedPerVehicleIn, "contains", "Coverages applied per vehicle in");
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PACoverages_Header, "equals", "PA Coverages");
 
-		/*
-		 * Electronic Equipment
-		 */
-		String strPAC_ACT_CAPV_ElectronicEquipment = lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment");
-		if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Add")) {
-			GuidewireAutomate("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "clickAndwait", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment"));
-			GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment"));
-			GuidewireAutomate("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
-		} else if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Verify")) {
-			GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment"));
-			GuidewireAutomate_Validation("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
-		} else if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Modify")) {
-			GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment"));
-			GuidewireAutomate("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
-		} else if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Remove")) {
-			GuidewireAutomate("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "clickAndwait", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment"));
-			GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isNotSelected", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment"));
-		} else {
-			throw new InterruptedIOException("Electronic Equipment - No supported Type = " + strPAC_ACT_CAPV_ElectronicEquipment);
+			GuidewireAutomate("Additional Coverages tab", PACoverages_AdditionalCoveragesTab, "clickAndwait", "click");
+
+			getStaleElement("Coverages applied per vehicle in", PAC_ACT_CoveragesAppliedPerVehicleIn);
+			GuidewireAutomate_Validation("Coverages applied per vehicle in", PAC_ACT_CoveragesAppliedPerVehicleIn, "contains", "Coverages applied per vehicle in");
+
+			/*
+			 * Electronic Equipment
+			 */
+			String strPAC_ACT_CAPV_ElectronicEquipment = lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment");
+			if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Add")) {
+				GuidewireAutomate("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "clickAndwait", strPAC_ACT_CAPV_ElectronicEquipment);
+				getStaleElement("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment);
+				GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isSelected", strPAC_ACT_CAPV_ElectronicEquipment);
+				GuidewireAutomate("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
+			} else if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Verify")) {
+				GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isSelected", strPAC_ACT_CAPV_ElectronicEquipment);
+				GuidewireAutomate_Validation("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
+			} else if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Modify")) {
+				GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isSelected", strPAC_ACT_CAPV_ElectronicEquipment);
+				GuidewireAutomate("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
+			} else if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Remove")) {
+				GuidewireAutomate("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "clickAndwait", strPAC_ACT_CAPV_ElectronicEquipment);
+				GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isNotSelected", strPAC_ACT_CAPV_ElectronicEquipment);
+			} else {
+				throw new InterruptedIOException("Electronic Equipment - No supported Type = " + strPAC_ACT_CAPV_ElectronicEquipment);
+			}
+
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
+
+			oExtentTest.log(Status.PASS, "additional applied per vehicle in is succcesful");
+
+		} catch (Exception e) {
+			oExtentTest.log(Status.FAIL, "additional applied per vehicle in is not succcesful");
+			e.printStackTrace();
+			throw e;
 		}
 
-		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-		lhm_TestCase_Table_Data.clear();
 	}
 
 	public static void exclusionsAndConditions() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("paCoverages", strTestCaseName);
 
-		GuidewireAutomate("ExclusionsAndConditionsCardTab", PACoverages_ExclusionsAndConditionsCardTab, "click", "");
-		GuidewireAutomate("AddExclusionCondition", PAC_ECT_AddExclusionCondition, "click", "");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PACoverages_Header, "equals", "PA Coverages");
+		GuidewireAutomate("ExclusionsAndConditionsCardTab", PACoverages_ExclusionsAndConditionsCardTab, "click", "click");
+
+		GuidewireAutomate("AddExclusionCondition", PAC_ECT_AddExclusionCondition, "click", "click");
 
 		SearchAddExclusionorCondition();
 
@@ -204,12 +240,12 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 		GuidewireAutomate("Category", PAC_ECT_SEC_PAL_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ECT_SEC_PAL_Category"));
 		GuidewireAutomate("Keyword", PAC_ECT_SEC_PAL_Keyword, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PAC_ECT_SEC_PAL_Keyword"));
 		// ----->clicking on search button
-		GuidewireAutomate("Type_ExclusionandCondition", PAC_ECT_SEC_PAL_Type_ExclusionandCondition, "click", "");
-		GuidewireAutomate("SearchButton", PAC_ECT_SEC_PAL_SearchButton, "click", "");
+		GuidewireAutomate("Type_ExclusionandCondition", PAC_ECT_SEC_PAL_Type_ExclusionandCondition, "click", "click");
+		GuidewireAutomate("SearchButton", PAC_ECT_SEC_PAL_SearchButton, "click", "click");
 		// ------>clicking on Coverage Checkbox
-		GuidewireAutomate("Coverage Checkbox", PAC_ECT_SEC_PAL_SearchResult_Select, "click", "");
+		GuidewireAutomate("Coverage Checkbox", PAC_ECT_SEC_PAL_SearchResult_Select, "click", "click");
 		// ----->clicking on Add Selected Exclusions And Conditions button
-		GuidewireAutomate("Add Selected Exclusions And Conditions button", PAC_ECT_SEC_PAL_AddSelectedExclusionsAndConditions_button, "click", "");
+		GuidewireAutomate("Add Selected Exclusions And Conditions button", PAC_ECT_SEC_PAL_AddSelectedExclusionsAndConditions_button, "click", "click");
 	}
 
 }

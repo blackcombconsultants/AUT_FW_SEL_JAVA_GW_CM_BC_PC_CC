@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Forms;
@@ -27,7 +27,7 @@ public class GW_PC_PersonalAuto_Rewrite_NewTerm extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 		PersonalAuto_Reusable.cancellationProcess();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("Rewrite New Term");
+		Tab_Menu_Navigation.pcMenuNavigation("Rewrite New Term");
 
 		strJob              = PolicyCenter_Resuables.infoBar("Job");
 		strLOB              = PolicyCenter_Resuables.infoBar("LOB");
@@ -90,6 +90,9 @@ public class GW_PC_PersonalAuto_Rewrite_NewTerm extends GW_GetDriver {
 		PersonalAuto_RiskAnalysis.issuesthatblockIssuance();
 		PersonalAuto_RiskAnalysis.approveUWIssues();
 		PersonalAuto_RiskAnalysis.riskApprovalDetails();
+		PolicyCenter_Resuables.clickButton("Next");
+
+		PolicyCenter_Resuables.clickButton("Issue Policy for Rewrite New Term Bound");
 
 		strJob           = PolicyCenter_Resuables.infoBar("Job");
 		strLOB           = PolicyCenter_Resuables.infoBar("LOB");

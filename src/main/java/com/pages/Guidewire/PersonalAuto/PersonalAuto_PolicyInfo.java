@@ -178,9 +178,10 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 		GuidewireAutomate_Validation("Policy Details", PI_PolicyDetails, "equals", "Policy Details");
 
 		GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_PD_TermType"));
-		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearsendKeysRobotTAB", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
-		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
+		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearsendKeysTABTAB", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
 		GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
+		getStaleElement("Expiration Date", PI_PD_ExpirationDate);
+		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
 		GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);

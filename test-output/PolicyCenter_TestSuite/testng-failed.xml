@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [PolicyCenter_TestSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.Utils.Selenium.Selenium_TestNG_TestListener"/>
+  </listeners>
+  <test parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern">
+        <methods>
+          <include name="AUT_ActivityPatternDetail_Validate_3pointcontactEmployee"/>
+          <include name="AUT_ActivityPatterns_Validate_Page1"/>
+        </methods>
+      </class> <!-- com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [PolicyCenter_TestSuite] -->

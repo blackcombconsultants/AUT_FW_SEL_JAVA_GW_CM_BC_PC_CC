@@ -11,7 +11,7 @@ import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 
 public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implements BillingCenter_Resuables_PO {
 
@@ -193,7 +193,7 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 
 		strAccountNumber = lhm_TestCase_Table_Data.get("AccountNumber");
 
-		GW_CM_PC_BC_CC_TabNavigation.bcTabNavigation("Acct Search", strAccountNumber);
+		Tab_Menu_Navigation.bcTabNavigation("Acct Search", strAccountNumber);
 		GuidewireAutomate_Validation("Screen Header", BillingCenter_AccountSummary_PO.AS_Header, "equals", "Account Summary");
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -205,7 +205,7 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 
 		strSubmissionNumber = lhm_TestCase_Table_Data.get("SubmissionNumber");
 
-		GW_CM_PC_BC_CC_TabNavigation.bcTabNavigation("Sub Search", strSubmissionNumber);
+		Tab_Menu_Navigation.bcTabNavigation("Sub Search", strSubmissionNumber);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -217,7 +217,7 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 
 		strPolicyNumber = lhm_TestCase_Table_Data.get("PolicyNumber");
 
-		GW_CM_PC_BC_CC_TabNavigation.bcTabNavigation("Policy Search", strPolicyNumber);
+		Tab_Menu_Navigation.bcTabNavigation("Policy Search", strPolicyNumber);
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -472,7 +472,7 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 	@Override
 	public void bc_AccountSummary_Invoices() throws Throwable {
 		lhm_Data = getDataFromSheet_Fillo("Invoice", "InvoiceValues1");
-		GW_CM_PC_BC_CC_TabNavigation.bcMenuNavigation("Invoice");
+		Tab_Menu_Navigation.bcMenuNavigation("Invoice");
 		// Assert.assertEquals(getSize_ElementsList(InvoiceDetails),
 		// Integer.parseInt(lhm_Data.get("TD_InoiveEMI")));
 		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));

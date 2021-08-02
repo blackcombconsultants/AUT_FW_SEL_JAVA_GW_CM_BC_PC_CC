@@ -87,4 +87,19 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 
 	}
 
+	public static void login_ClaimsCenter_User(String strTestCaseName) throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
+
+		GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
+		GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
+		// GuidewireAutomate("Password", Password, "sendKeys", new
+		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
+		GuidewireAutomate("Login", GW_Login_Button, "click", lhm_TestCase_Table_Data.get("GW_Login_Button"));
+
+		oExtentTest.log(Status.PASS, "Login succesful");
+		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
+
+	}
+
 }

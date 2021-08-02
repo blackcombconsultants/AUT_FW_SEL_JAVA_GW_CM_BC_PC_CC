@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-PolicyCenter_TestSuite" class="navigator-link">
+              <span class="suite-name border-failed">PolicyCenter_TestSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-PolicyCenter_TestSuite" class="navigator-link ">
+                    <span>C:\Users\labor\git\blackcomb\gwTestSuite\TestSuite_ClaimsCenter_ActivityPatterns.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-PolicyCenter_TestSuite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-PolicyCenter_TestSuite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-PolicyCenter_TestSuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-PolicyCenter_TestSuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-PolicyCenter_TestSuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-PolicyCenter_TestSuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-PolicyCenter_TestSuite" class="hide-methods failed suite-PolicyCenter_TestSuite"> (hide)</a> <!-- hide-methods failed suite-PolicyCenter_TestSuite -->
+                      <a href="#" panel-name="suite-PolicyCenter_TestSuite" class="show-methods failed suite-PolicyCenter_TestSuite"> (show)</a> <!-- show-methods failed suite-PolicyCenter_TestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-PolicyCenter_TestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PolicyCenter_TestSuite" title="com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern" class="method navigator-link" hash-for-method="AUT_ActivityPatternDetail_Validate_3pointcontactEmployee">AUT_ActivityPatternDetail_Validate_3pointcontactEmployee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-PolicyCenter_TestSuite" title="com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern" class="method navigator-link" hash-for-method="AUT_ActivityPatterns_Validate_Page1">AUT_ActivityPatterns_Validate_Page1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-PolicyCenter_TestSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-PolicyCenter_TestSuite" class="panel PolicyCenter_TestSuite">
+          <div class="suite-PolicyCenter_TestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AUT_ActivityPatternDetail_Validate_3pointcontactEmployee">
+                  </a> <!-- AUT_ActivityPatternDetail_Validate_3pointcontactEmployee -->
+                  <span class="method-name">AUT_ActivityPatternDetail_Validate_3pointcontactEmployee</span>
+                  <div class="stack-trace">com.codoid.products.exception.FilloException: Workbook is not found - C:\Users\labor\git\blackcomb\testdata\null.xlsx
+	at com.codoid.products.fillo.Fillo.getConnection(Fillo.java:46)
+	at com.Utils.Selenium.Selenium_Utils_DataBase.getConnection(Selenium_Utils_DataBase.java:26)
+	at com.Utils.Selenium.Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo(Selenium_Utils_DataBase.java:109)
+	at com.pages.Guidewire.GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User(GW_CM_PC_BC_CC_Login.java:92)
+	at com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern.AUT_ActivityPatternDetail_Validate_3pointcontactEmployee(Test_BusinessSettings_ActivityPattern.java:399)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AUT_ActivityPatterns_Validate_Page1">
+                  </a> <!-- AUT_ActivityPatterns_Validate_Page1 -->
+                  <span class="method-name">AUT_ActivityPatterns_Validate_Page1</span>
+                  <div class="stack-trace">com.codoid.products.exception.FilloException: Workbook is not found - C:\Users\labor\git\blackcomb\testdata\null.xlsx
+	at com.codoid.products.fillo.Fillo.getConnection(Fillo.java:46)
+	at com.Utils.Selenium.Selenium_Utils_DataBase.getConnection(Selenium_Utils_DataBase.java:26)
+	at com.Utils.Selenium.Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo(Selenium_Utils_DataBase.java:109)
+	at com.pages.Guidewire.GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User(GW_CM_PC_BC_CC_Login.java:92)
+	at com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern.AUT_ActivityPatterns_Validate_Page1(Test_BusinessSettings_ActivityPattern.java:21)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-PolicyCenter_TestSuite-class-failed -->
+        </div> <!-- panel PolicyCenter_TestSuite -->
+        <div panel-name="test-xml-PolicyCenter_TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\labor\git\blackcomb\gwTestSuite\TestSuite_ClaimsCenter_ActivityPatterns.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;PolicyCenter_TestSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.Utils.Selenium.Selenium_TestNG_TestListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;AUT_ActivityPatterns_Validate_Page1&quot;/&gt;
+          &lt;include name=&quot;AUT_ActivityPatternDetail_Validate_3pointcontactEmployee&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatterns_Validate_Page2&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatterns_Validate_Page3&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatterns_Validate_Page4&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatterns_Validate_Page5&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatterns_Validate_Page6&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatterns_Validate_Page7&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatterns_Validate_Page8&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_3pointcontactEmployer&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_3pointcontactMedicalProvider&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_30daydiary&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_60daydiary&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_90daydiary&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Additionallivingexpensesrequired&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ArbitrationDate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Assignnursetocase&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_CheckDenied&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Checkonmedicalclearanceforlightdutywork&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Checkwithemployerabouttemplightdutywork&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ClosedFileReview&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ConsultAccountregardingfatality&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ContactUnderwriterregardingincorrectclasscode&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_CreateRecoveryemailbill1&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_CreateRecoveryemailbill2&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_DecisionDateReview&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Determinecompensability&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Determineifopportunityforrecovery&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_FileEmployersFirstNotice&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Followupwithvendorpastexpectedquotecompletiondate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Followupwithvendorpastexpectedservicecompletiondate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Followupwithvendorworknotacceptedintimelymanner&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Generalreminderdiary&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_GetEmployeesNoticeofInjury&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_GetastatementfromHealthandSafetyDept&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getastatementfromwitness&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getaccidentsceneinspected&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getclaimantmedicalreports&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getindependentmedicalexamination&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getinitialmedicalreport&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getlistofdamageditems&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getpolicereport&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getpropertyinspected&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getquoteforrepairsreplacement&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_GetsignedVoluntaryAgreement&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getvehicleinspected&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Getwagestatementandtaxstatus&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_HearingDate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ISOmatchesfound&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Independentappraisal&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Initial30dayfilereview&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Invoicenotautoapproved&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Invoicenotautopaid&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Legalreview&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Makeinitialcontactwithclaimant&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Makeinitialcontactwithinsured&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Makesettlementoffer&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_MediationDate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_MetropolitanReportAvailable&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_MetropolitanReportDeferred&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_MetropolitanReportHeld&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_MetropolitanReportInquiryFailed&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_MetropolitanReportRequestFailed&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_NoMetropolitanReportAvailable&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Notifyaccountexpectedcostabovethreshold&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Notifyreinsurer&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Pendingcreaterejected&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Pendingupdaterejected&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_PerformanceReview&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Produceclaimstrategynarrative&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_PutthirdpartyonnoticeofSubrogationInterest&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_RecoverVehicle&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_RecoveryDenied&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Recurringpaymentstreamending&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReinsuranceCoverageRetrievalFailed&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_RetrieveClaimCompleted&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewAssignment&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewClaimforReinsurance&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewReinsuranceRecoverableandCededReserves&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewallSpecialHandlinginstructions&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewandapprovebulkinvoice&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewandapprovenewpayment&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewandapprovenewrecovery&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewandapprovenewrecoveryreservechange&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewandapprovequoteforrepairsreplacement&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewandapprovereservechange&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewclaimforsubrogationClaimhasbeenreopened&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewcoverageinquestion&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewdenialdecisionwithAccountManager&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewforCatastrophe&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewmatterrelatedSpecialHandlinginstructions&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewnegotiationstrategywithAccount&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewnewbillreceived&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewnewmail&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewrejectedrequest&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ReviewsubrogationrecoveryfinancialsAsupplementalpaymentwascreated&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Reviewvendorquote&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_SIUreferral&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_SalvageVehicle&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Sendclaimacknowledgementletter&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Sendletterconfirmingclosureofexposure&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Sendreservationofrightsletter&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_SpecialInvestigationClaimEscalation&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_SpecialInvestigationClaimReview&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Subrogationstatutedeadlineapproaching&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_TrialDate&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Unabletoclosetheclaimortheexposure&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Unabletoissueastoppayment&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Unabletoissueastoppaymentonbulkcheck&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Unabletovoidthebulkcheck&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Unabletovoidthecheck&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_ValidationandprocessingofBulkInvoiceItemsfailed&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Vendoraskedquestion&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Vendorcanceledworkinstructnewvendor&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Vendorcompletedwork&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Vendordeclinedworkinstructnewvendor&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Vendorworkdelayed&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Verifycoverage&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Verifycoveragedetermineifopportunityforrecovery&quot;/&gt;
+          &lt;exclude name=&quot;AUT_ActivityPatternDetail_Validate_Visitclaimantandassessbacktoworkstatus&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- PolicyCenter_TestSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-PolicyCenter_TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for PolicyCenter_TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-PolicyCenter_TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for PolicyCenter_TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-PolicyCenter_TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for PolicyCenter_TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_PolicyCenter_TestSuite');
+function tableData_PolicyCenter_TestSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(2);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'AUT_ActivityPatterns_Validate_Page1')
+data.setCell(0, 2, 'com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern')
+data.setCell(0, 3, 36);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'AUT_ActivityPatternDetail_Validate_3pointcontactEmployee')
+data.setCell(1, 2, 'com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern')
+data.setCell(1, 3, 1);
+window.suiteTableData['PolicyCenter_TestSuite']= { tableData: data, tableDiv: 'times-div-PolicyCenter_TestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 37 ms</span>
+              <div id="times-div-PolicyCenter_TestSuite">
+              </div> <!-- times-div-PolicyCenter_TestSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-PolicyCenter_TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for PolicyCenter_TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-PolicyCenter_TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">118 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_TrialDate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Vendorworkdelayed</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_GetastatementfromHealthandSafetyDept</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Visitclaimantandassessbacktoworkstatus</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_MediationDate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_MetropolitanReportRequestFailed</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Vendoraskedquestion</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ContactUnderwriterregardingincorrectclasscode</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Checkwithemployerabouttemplightdutywork</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Invoicenotautopaid</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Assignnursetocase</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getclaimantmedicalreports</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_SpecialInvestigationClaimEscalation</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_3pointcontactMedicalProvider</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ValidationandprocessingofBulkInvoiceItemsfailed</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewandapprovenewrecoveryreservechange</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Determinecompensability</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_RetrieveClaimCompleted</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewnewmail</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Invoicenotautoapproved</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Makesettlementoffer</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_SpecialInvestigationClaimReview</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewandapprovenewpayment</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewnewbillreceived</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_DecisionDateReview</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Unabletovoidthecheck</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_SIUreferral</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewandapprovereservechange</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Generalreminderdiary</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_CreateRecoveryemailbill2</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getinitialmedicalreport</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Vendorcompletedwork</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_CreateRecoveryemailbill1</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_RecoveryDenied</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ClosedFileReview</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_MetropolitanReportInquiryFailed</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewClaimforReinsurance</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewforCatastrophe</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Additionallivingexpensesrequired</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Checkonmedicalclearanceforlightdutywork</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getwagestatementandtaxstatus</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Produceclaimstrategynarrative</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_SalvageVehicle</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Legalreview</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_60daydiary</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReinsuranceCoverageRetrievalFailed</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getlistofdamageditems</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Unabletoclosetheclaimortheexposure</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_HearingDate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatterns_Validate_Page6</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_GetsignedVoluntaryAgreement</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatterns_Validate_Page8</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatterns_Validate_Page7</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatterns_Validate_Page2</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatterns_Validate_Page4</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatterns_Validate_Page3</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatterns_Validate_Page5</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Sendclaimacknowledgementletter</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewsubrogationrecoveryfinancialsAsupplementalpaymentwascreated</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_NoMetropolitanReportAvailable</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ISOmatchesfound</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewclaimforsubrogationClaimhasbeenreopened</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_CheckDenied</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Makeinitialcontactwithclaimant</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Sendreservationofrightsletter</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewrejectedrequest</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Notifyaccountexpectedcostabovethreshold</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_90daydiary</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Unabletoissueastoppayment</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Followupwithvendorworknotacceptedintimelymanner</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_PerformanceReview</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Unabletovoidthebulkcheck</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Unabletoissueastoppaymentonbulkcheck</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewcoverageinquestion</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewandapprovequoteforrepairsreplacement</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Pendingupdaterejected</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Initial30dayfilereview</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Verifycoverage</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewandapprovenewrecovery</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Vendorcanceledworkinstructnewvendor</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_MetropolitanReportDeferred</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_RecoverVehicle</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Vendordeclinedworkinstructnewvendor</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getquoteforrepairsreplacement</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ConsultAccountregardingfatality</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_MetropolitanReportHeld</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getindependentmedicalexamination</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Followupwithvendorpastexpectedquotecompletiondate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewnegotiationstrategywithAccount</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewmatterrelatedSpecialHandlinginstructions</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Makeinitialcontactwithinsured</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Notifyreinsurer</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_30daydiary</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_MetropolitanReportAvailable</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_GetEmployeesNoticeofInjury</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Subrogationstatutedeadlineapproaching</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Recurringpaymentstreamending</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewAssignment</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Followupwithvendorpastexpectedservicecompletiondate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Determineifopportunityforrecovery</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewvendorquote</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewReinsuranceRecoverableandCededReserves</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ArbitrationDate</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Pendingcreaterejected</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getaccidentsceneinspected</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getvehicleinspected</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_PutthirdpartyonnoticeofSubrogationInterest</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_3pointcontactEmployer</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewdenialdecisionwithAccountManager</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getpropertyinspected</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Sendletterconfirmingclosureofexposure</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getpolicereport</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Getastatementfromwitness</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_ReviewallSpecialHandlinginstructions</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Verifycoveragedetermineifopportunityforrecovery</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Reviewandapprovebulkinvoice</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_Independentappraisal</span>
+                <br/>
+                <span class="ignored-method-name">AUT_ActivityPatternDetail_Validate_FileEmployersFirstNotice</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-PolicyCenter_TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Test.Guidewire.ClaimsCenter.Test_BusinessSettings_ActivityPattern</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">AUT_ActivityPatterns_Validate_Page1</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">AUT_ActivityPatternDetail_Validate_3pointcontactEmployee</span>
+                <span class="method-start">49 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

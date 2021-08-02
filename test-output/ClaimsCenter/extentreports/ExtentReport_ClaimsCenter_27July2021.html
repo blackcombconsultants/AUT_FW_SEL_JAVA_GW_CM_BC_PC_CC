@@ -1,0 +1,546 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Automation Report</title>
+    <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/css/style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head><script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="test-view -report standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">ClaimsCenter</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">Jul 27, 2021 11:59:32 PM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+                                    <li class="user-profile dropdown dropdown-animated scale-left">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-exclamation-circle"></i>
+                                        </a>
+                                        <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+                                            
+	                                        <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
+	                                        
+	                                        
+	                                        
+	                                        
+	                                        <div class="dropdown-divider"></div>
+                                            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+                                    <li class="test-item"  status="fail" test-id="1"
+                                            author=""
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar fail-bg">
+                                            <i class="fa fa-times text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">AUT_ActivityPatterns_Validate_Page2</p> 
+                                                <p class="duration text-sm">0h 1m 37s+709ms</p> 
+                                                <span class="datetime">23:59:32 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-fail">AUT_ActivityPatterns_Validate_Page2</h5>
+                                                        <span class='badge badge-success'>07.27.2021 23:59:32</span>
+                                                        <span class='badge badge-danger'>07.28.2021 00:01:09</span>
+                                                        <span class='badge badge-default'>0h 1m 37s+709ms</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:34 PM</td>
+				<td>
+						Appliaction Launched  http://ec2-3-6-92-216.ap-south-1.compute.amazonaws.com:8080/ClaimCenter.do
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:36 PM</td>
+				<td>
+						Username input  = [su]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:37 PM</td>
+				<td>
+						Password input  = [gw]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:38 PM</td>
+				<td>
+						clicked Field = Login
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:38 PM</td>
+				<td>
+						Login succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:39 PM</td>
+				<td>
+						clicked Field = Administration Tab
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:39 PM</td>
+				<td>
+						Navigation to ClaimsCenter Tab : Administration is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:40 PM</td>
+				<td>
+						clicked Field = Business_Settings
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:41 PM</td>
+				<td>
+						clicked Field = ActivityPatterns
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:41 PM</td>
+				<td>
+						Navigation to ClaimsCenter Menu : Activity Patterns is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:42 PM</td>
+				<td>
+						Screen Header => Actual = [Activity Patterns] equals Expected = [Activity Patterns]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:59:43 PM</td>
+				<td>
+						Page2  cleared value and input  = [2] And pressed ENTER
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:43 PM</td>
+				<td>
+						Page2 => Actual = [2] valueEqualsAssert Expected = [2]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:43 PM</td>
+				<td>
+						Navigated to Page No : Page2
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:44 PM</td>
+				<td>
+						Screen Header => Actual = [Activity Patterns] equals Expected = [Activity Patterns]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:44 PM</td>
+				<td>
+						Subject column => Actual = [Subject] equals Expected = [Subject]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:45 PM</td>
+				<td>
+						Class column => Actual = [Class] equals Expected = [Class]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:46 PM</td>
+				<td>
+						Category column => Actual = [Category] equals Expected = [Category]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:46 PM</td>
+				<td>
+						Type column => Actual = [Type] equals Expected = [Type]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:47 PM</td>
+				<td>
+						Priority column => Actual = [Priority] equals Expected = [Priority]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:48 PM</td>
+				<td>
+						Mandatory column => Actual = [Mandatory] equals Expected = [Mandatory]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:48 PM</td>
+				<td>
+						Automated column => Actual = [Automated] equals Expected = [Automated]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:48 PM</td>
+				<td>
+						The Above columns are listed in the following order
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:59:50 PM</td>
+				<td>
+						Activity Pattern screen is not sorted with Subject
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:59:59 PM</td>
+				<td>
+						Activity Pattern Rows per Page, Actual = [15] Equals Expected=[15]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:12 AM</td>
+				<td>
+						Subject=>Actual = [3-point contact - Employee] Equals Expected = [Create Recovery email bill1]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Request]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Urgent] Equals Expected = [Normal]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [Yes] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:16 AM</td>
+				<td>
+						Subject=>Actual = [3-point contact - Employer] Equals Expected = [Create Recovery email bill2]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Request]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Urgent] Equals Expected = [Normal]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [Yes] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:20 AM</td>
+				<td>
+						Subject=>Actual = [3-point contact - Medical Provider] Equals Expected = [Decision Date Review]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Reminder]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Urgent] Equals Expected = [Normal]<br />Mandatory=>Actual = [Yes] Equals Expected = [No]<br />Automated=>Actual = [Yes] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:24 AM</td>
+				<td>
+						Subject=>Actual = [30 day diary] Equals Expected = [Determine compensability]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Reminder]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [High]<br />Mandatory=>Actual = [Yes] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [Yes]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:28 AM</td>
+				<td>
+						Subject=>Actual = [60 day diary] Equals Expected = [Determine if opportunity for recovery]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Reminder]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [Normal]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:32 AM</td>
+				<td>
+						Subject=>Actual = [90 day diary] Equals Expected = [File Employer's First Notice]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Correspondence]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [High]<br />Mandatory=>Actual = [Yes] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:37 AM</td>
+				<td>
+						Subject=>Actual = [Additional living expenses required] Equals Expected = [Follow up with vendor - past expected quote completion date]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Request] Equals Expected = [Warning]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [High]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [Yes]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:41 AM</td>
+				<td>
+						Subject=>Actual = [Arbitration Date] Equals Expected = [Follow up with vendor - past expected service completion date]<br />Class=>Actual = [Event] Equals Expected = [Task]<br />Category=>Actual = [Litigation] Equals Expected = [Warning]<br />Type=>Actual = [Litigation] Equals Expected = [General]<br />Priority=>Actual = [Urgent] Equals Expected = [High]<br />Mandatory=>Actual = [No] Equals Expected = [Yes]<br />Automated=>Actual = [Yes] Equals Expected = [Yes]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:45 AM</td>
+				<td>
+						Subject=>Actual = [Assign nurse to case] Equals Expected = [Follow up with vendor - work not accepted in timely manner]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Warning]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [High]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [Yes]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:49 AM</td>
+				<td>
+						Subject=>Actual = [Check Denied] Equals Expected = [General reminder (diary)]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Request] Equals Expected = [Reminder]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [Normal]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [Yes] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:53 AM</td>
+				<td>
+						Subject=>Actual = [Check on medical clearance for light duty work] Equals Expected = [Get Employee's Notice of Injury]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Request]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [High]<br />Mandatory=>Actual = [Yes] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:00:57 AM</td>
+				<td>
+						Subject=>Actual = [Check with employer about temp light duty work] Equals Expected = [Get a statement from Health and Safety Dept]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Reminder]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [Urgent]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:01:01 AM</td>
+				<td>
+						Subject=>Actual = [Closed File Review] Equals Expected = [Get a statement from witness]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Reminder] Equals Expected = [Interview]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Low] Equals Expected = [Normal]<br />Mandatory=>Actual = [No] Equals Expected = [Yes]<br />Automated=>Actual = [No] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:01:05 AM</td>
+				<td>
+						Subject=>Actual = [Consult Account regarding fatality] Equals Expected = [Get accident scene inspected]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Handling Instructions] Equals Expected = [Request]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [High] Equals Expected = [Normal]<br />Mandatory=>Actual = [No] Equals Expected = [Yes]<br />Automated=>Actual = [Yes] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:01:09 AM</td>
+				<td>
+						Subject=>Actual = [Contact Underwriter regarding incorrect class code] Equals Expected = [Get claimant medical reports]<br />Class=>Actual = [Task] Equals Expected = [Task]<br />Category=>Actual = [Request] Equals Expected = [Request]<br />Type=>Actual = [General] Equals Expected = [General]<br />Priority=>Actual = [Normal] Equals Expected = [Normal]<br />Mandatory=>Actual = [No] Equals Expected = [No]<br />Automated=>Actual = [No] Equals Expected = [No]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:01:09 AM</td>
+				<td>
+						Validate Activity Patterns Page2 is Completed
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:01:09 AM</td>
+				<td>
+						<span class='badge white-text green'>AUT_ActivityPatterns_Validate_Page2 Test Case PASSED</span>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\27July2021 235938.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">27July2021 235938.jpeg</span>
+					<span class="file-size"> 39,799Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\27July2021 235938.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">27July2021 235938.jpeg</span>
+					<span class="file-size"> 39,799Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\27July2021 235939.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">27July2021 235939.jpeg</span>
+					<span class="file-size"> 153,820Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\27July2021 235939.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">27July2021 235939.jpeg</span>
+					<span class="file-size"> 153,820Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\27July2021 235941.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">27July2021 235941.jpeg</span>
+					<span class="file-size"> 87,596Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\27July2021 235941.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">27July2021 235941.jpeg</span>
+					<span class="file-size"> 87,596Kb</span>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/js/script.js"></script>
+</body>
+</html>

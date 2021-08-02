@@ -1,0 +1,684 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Automation Report</title>
+    <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/css/style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head><script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="test-view -report standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">ClaimsCenter</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">Jul 19, 2021 09:59:57 AM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
+          <span class="icon-holder">
+            <i class="fa fa-bug"></i>
+          </span>
+          <span class="title">Exception</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+                                    <li class="user-profile dropdown dropdown-animated scale-left">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-exclamation-circle"></i>
+                                        </a>
+                                        <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+                                            
+	                                        <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
+	                                        
+	                                        
+	                                        
+	                                        
+	                                        <div class="dropdown-divider"></div>
+                                            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+                                    <li class="test-item"  status="fail" test-id="1"
+                                            author=""
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar fail-bg">
+                                            <i class="fa fa-times text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">TC002_RoundRobin_User_LoadFactoris100_VacationStatusisAtwork</p> 
+                                                <p class="duration text-sm">0h 1m 7s+302ms</p> 
+                                                <span class="datetime">09:59:57 AM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-fail">TC002_RoundRobin_User_LoadFactoris100_VacationStatusisAtwork</h5>
+                                                        <span class='badge badge-success'>07.19.2021 09:59:57</span>
+                                                        <span class='badge badge-danger'>07.19.2021 10:01:04</span>
+                                                        <span class='badge badge-default'>0h 1m 7s+302ms</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:00:00 AM</td>
+				<td>
+						Appliaction Launched  http://ec2-3-6-92-216.ap-south-1.compute.amazonaws.com:8080/ClaimCenter.do
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:03 AM</td>
+				<td>
+						Username  entered  = su
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:03 AM</td>
+				<td>
+						Password  entered  = gw
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:04 AM</td>
+				<td>
+						clicked Field = Login
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:00:04 AM</td>
+				<td>
+						Login succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:05 AM</td>
+				<td>
+						clicked Field = Administration Tab
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:05 AM</td>
+				<td>
+						Navigation to Administration is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:07 AM</td>
+				<td>
+						clicked Field = Users and Security
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:07 AM</td>
+				<td>
+						clicked Field = Users and Security Groups
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:07 AM</td>
+				<td>
+						Navigation to Groups is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:00:08 AM</td>
+				<td>
+						Screen Header => Actual = [Groups] equals Expected = [Groups]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:09 AM</td>
+				<td>
+						Groups Name  cleard value and Entered  = Auto1 - TeamB
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:10 AM</td>
+				<td>
+						Clicked = Groups Search
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:12 AM</td>
+				<td>
+						Clicked = Groups Name = Auto1 - TeamB
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:00:12 AM</td>
+				<td>
+						Group = [Auto1 - TeamB] search is Successful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:00:13 AM</td>
+				<td>
+						Screen Header => Actual = [Auto1 - TeamB] equals Expected = [Auto1 - TeamB]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:13 AM</td>
+				<td>
+						clicked Field = Profile Tab
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:25 AM</td>
+				<td>
+						UsersName = [Betty Baker] | LoadFactor = [100] | VacationStatus = [At work]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:27 AM</td>
+				<td>
+						UsersName = [Heidi Johnson] | LoadFactor = [100] | VacationStatus = [At work]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:28 AM</td>
+				<td>
+						UsersName = [Terence Mazzon] | LoadFactor = [100] | VacationStatus = [At work]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:30 AM</td>
+				<td>
+						UsersName = [Isabel Numin] | LoadFactor = [100] | VacationStatus = [At work]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:31 AM</td>
+				<td>
+						UsersName = [Carlos Oppley] | LoadFactor = [100] | VacationStatus = [At work]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:33 AM</td>
+				<td>
+						UsersName = [Rick Ralston] | LoadFactor = [100] | VacationStatus = [At work]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:34 AM</td>
+				<td>
+						clicked Field = Edit_Button
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:39 AM</td>
+				<td>
+						User_LoadFactor_Verify => Load Factor for = [Betty Baker] Actual [100] Expected []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:39 AM</td>
+				<td>
+						Load Factor Edit is started for : Betty Baker
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:39 AM</td>
+				<td>
+						clicked Field = User Checkbox
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:40 AM</td>
+				<td>
+						Load Factor for Betty Baker  cleard value and Entered  =
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:41 AM</td>
+				<td>
+						User_LoadFactor_Verify => Load Factor for = [Heidi Johnson] Actual [100] Expected []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:41 AM</td>
+				<td>
+						Load Factor Edit is started for : Heidi Johnson
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:42 AM</td>
+				<td>
+						clicked Field = User Checkbox
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:42 AM</td>
+				<td>
+						Load Factor for Heidi Johnson  cleard value and Entered  =
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:44 AM</td>
+				<td>
+						User_LoadFactor_Verify => Load Factor for = [Terence Mazzon] Actual [100] Expected []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:44 AM</td>
+				<td>
+						Load Factor Edit is started for : Terence Mazzon
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:44 AM</td>
+				<td>
+						clicked Field = User Checkbox
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:45 AM</td>
+				<td>
+						Load Factor for Terence Mazzon  cleard value and Entered  =
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:46 AM</td>
+				<td>
+						User_LoadFactor_Verify => Load Factor for = [Isabel Numin] Actual [100] Expected []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:46 AM</td>
+				<td>
+						Load Factor Edit is started for : Isabel Numin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:47 AM</td>
+				<td>
+						clicked Field = User Checkbox
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:47 AM</td>
+				<td>
+						Load Factor for Isabel Numin  cleard value and Entered  =
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:49 AM</td>
+				<td>
+						User_LoadFactor_Verify => Load Factor for = [Carlos Oppley] Actual [100] Expected []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:49 AM</td>
+				<td>
+						Load Factor Edit is started for : Carlos Oppley
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:49 AM</td>
+				<td>
+						clicked Field = User Checkbox
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:50 AM</td>
+				<td>
+						Load Factor for Carlos Oppley  cleard value and Entered  =
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:51 AM</td>
+				<td>
+						User_LoadFactor_Verify => Load Factor for = [Rick Ralston] Actual [100] Expected []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:51 AM</td>
+				<td>
+						Load Factor Edit is started for : Rick Ralston
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:52 AM</td>
+				<td>
+						clicked Field = User Checkbox
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:52 AM</td>
+				<td>
+						Load Factor for Rick Ralston  cleard value and Entered  =
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:00:52 AM</td>
+				<td>
+						Load Factor is [] for all users
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:57 AM</td>
+				<td>
+						User_VacationStatus_Verify => VacationStatus for = [Betty Baker] Actual [At work] Expected []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:00:57 AM</td>
+				<td>
+						VacationStatus Edit is started for : Betty Baker
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:01:04 AM</td>
+				<td>
+						Vacation Status for  Betty Baker =  []
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:01:04 AM</td>
+				<td>
+						<span class='badge white-text red'>TC002_RoundRobin_User_LoadFactoris100_VacationStatusisAtwork Test Case Failed</span>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>10:01:04 AM</td>
+				<td>
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'JMD', ip: '192.168.0.118', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate(SeleniumWebDriver_Commands.java:446)
+	at com.pages.Guidewire.ClaimsCenter.ClaimCenter_AssignClaim.User_VacationStatus_Edit(ClaimCenter_AssignClaim.java:230)
+	at com.pages.Guidewire.ClaimsCenter.ClaimCenter_AssignClaim.groupName_AllUsers_VacationStatus_Edit(ClaimCenter_AssignClaim.java:291)
+	at com.pages.Guidewire.ClaimsCenter.ClaimCenter_AssignClaim.groupName_AllUsers_Edit_LoadFactorTo100_VacationStatusToAtwork(ClaimCenter_AssignClaim.java:306)
+	at com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy.TC002_RoundRobin_User_LoadFactoris100_VacationStatusisAtwork(GW_CC_FNOL_VerifiedPolicy.java:407)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</textarea>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100004.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100004.jpeg</span>
+					<span class="file-size"> 39,813Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100004.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100004.jpeg</span>
+					<span class="file-size"> 39,813Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100005.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100005.jpeg</span>
+					<span class="file-size"> 154,123Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100005.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100005.jpeg</span>
+					<span class="file-size"> 154,123Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100007.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100007.jpeg</span>
+					<span class="file-size"> 83,231Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100007.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100007.jpeg</span>
+					<span class="file-size"> 83,231Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100104.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100104.jpeg</span>
+					<span class="file-size"> 112,796Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\19July2021 100104.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">19July2021 100104.jpeg</span>
+					<span class="file-size"> 112,796Kb</span>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/js/script.js"></script>
+</body>
+</html>

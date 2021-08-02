@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Coverages;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Drivers;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo;
@@ -18,9 +18,9 @@ import com.pages.Guidewire.PersonalAuto.PersonalAuto_RiskAnalysis;
 import com.pages.Guidewire.PersonalAuto.PersonalAuto_Vehicles;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 
 public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 
@@ -72,11 +72,11 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcTabNavigation("New Account", "NA");
+		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		GW_CM_PC_BC_CC_TabNavigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Edit();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB
