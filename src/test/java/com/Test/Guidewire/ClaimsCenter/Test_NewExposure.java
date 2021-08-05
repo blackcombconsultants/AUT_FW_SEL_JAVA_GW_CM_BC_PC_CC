@@ -18,7 +18,7 @@ public class Test_NewExposure extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ------->Checking ChoosebyCoverageType_Exposure
 		Tab_Menu_Navigation.ccMenuNavigation("Choose by Coverage Type");
@@ -43,7 +43,7 @@ public class Test_NewExposure extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 		// ---->Adding new exposure
 		Tab_Menu_Navigation.ccMenuNavigation("Medical Payments");
 		ClaimCenter_Resuables.newExposure();

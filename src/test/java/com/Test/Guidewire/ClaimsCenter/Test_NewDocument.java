@@ -65,7 +65,7 @@ public class Test_NewDocument extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -82,7 +82,7 @@ public class Test_NewDocument extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");

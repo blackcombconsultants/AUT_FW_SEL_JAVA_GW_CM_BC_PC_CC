@@ -20,7 +20,7 @@ public class Test_ClaimActions_CloseClaim extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ------>ClosingClaim without any expsosure and validating error
 		// message
@@ -40,7 +40,7 @@ public class Test_ClaimActions_CloseClaim extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ------>ClosingClaim without any expsosure and validating error
 		// message
@@ -65,7 +65,7 @@ public class Test_ClaimActions_CloseClaim extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ------>ClosingClaim without any expsosure and validating error
 		// message

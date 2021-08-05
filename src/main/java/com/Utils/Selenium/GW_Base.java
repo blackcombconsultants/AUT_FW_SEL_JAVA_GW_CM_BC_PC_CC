@@ -93,9 +93,11 @@ public class GW_Base {
 	public static String strAccountName;
 	public static String strAccountNumber;
 	public static String strSubmissionNumber;
-	public static String strPolicyNumber;
 	public static String strUnderwriter;
 	public static String strAmount;
 	public static String strFetchValue;
+
+	public static String strPolicyNumber;
+	public static String strClaimsNumber;
 
 }

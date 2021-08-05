@@ -17,7 +17,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -37,7 +37,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -56,7 +56,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -75,7 +75,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -94,7 +94,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -113,7 +113,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -132,7 +132,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -151,7 +151,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -170,7 +170,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -189,7 +189,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -208,7 +208,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -227,7 +227,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -246,7 +246,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -265,7 +265,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -284,7 +284,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -303,7 +303,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -322,7 +322,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");
@@ -341,7 +341,7 @@ public class GW_CC_UploadDocument {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "VerifiedPolicy_NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding Documents
 		Tab_Menu_Navigation.ccMenuNavigation("Upload Documents");

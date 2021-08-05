@@ -142,7 +142,14 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 			case "Issue Policy for Rewrite Remainder of Term" :
 				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "click");
 				GuidewireAutomate_Handle("alertaccept", "NA");
-				GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Rewrite Remainder of Term (Bound)");
+				InfoBar_Jobstatus = By.xpath(DynamicXpath_InfoBar_Jobstatus.replace("Jobstatus", "Rewrite Remainder of Term (Quoted)"));
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "equals", "Rewrite Remainder of Term (Quoted)");
+				break;
+			case "Issue Policy for Rewrite Remainder of Term Bound" :
+				GuidewireAutomate("Issue Policy", Rewrite_IssuePolicy_Button, "clickAndwait", "click");
+				GuidewireAutomate_Handle("alertaccept", "NA");
+				InfoBar_Jobstatus = By.xpath(DynamicXpath_InfoBar_Jobstatus.replace("Jobstatus", "Rewrite Remainder of Term (Bound)"));
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "equals", "Rewrite Remainder of Term (Bound)");
 				break;
 			case "Close Options" :
 				GuidewireAutomate("Close Options", CloseOptions_Button, "clickAndwait", "click");
