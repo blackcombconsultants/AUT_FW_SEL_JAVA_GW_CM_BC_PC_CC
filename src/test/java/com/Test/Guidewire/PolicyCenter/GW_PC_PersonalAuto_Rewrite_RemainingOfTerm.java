@@ -43,7 +43,7 @@ public class GW_PC_PersonalAuto_Rewrite_RemainingOfTerm extends GW_GetDriver {
 		PolicyCenter_Resuables.clickButton("Next");
 		PersonalAuto_PolicyInfo.primaryNamedInsured();
 		PersonalAuto_PolicyInfo.pi_OfficialID();
-		PersonalAuto_PolicyInfo.policyDetails_fetch();
+		PersonalAuto_PolicyInfo.policyDetails_Rewrite();
 		PersonalAuto_PolicyInfo.affinityGroup();
 		PersonalAuto_PolicyInfo.producerOfRecord();
 		PersonalAuto_PolicyInfo.underWritingCompany();
@@ -86,6 +86,15 @@ public class GW_PC_PersonalAuto_Rewrite_RemainingOfTerm extends GW_GetDriver {
 		PersonalAuto_Payments.billing();
 		PersonalAuto_Payments.paymentSchedule();
 		PolicyCenter_Resuables.clickButton("Issue Policy for Rewrite Remainder of Term");
+
+		PersonalAuto_RiskAnalysis.issuesthatblockIssuance();
+		PersonalAuto_RiskAnalysis.approveUWIssues();
+		PersonalAuto_RiskAnalysis.riskApprovalDetails();
+		PolicyCenter_Resuables.clickButton("Next");
+		PersonalAuto_PolicyReview.clickTab_PolicyReview("Differences");
+		PersonalAuto_PolicyReview.clickTab_PolicyReview("Policy Review");
+
+		PolicyCenter_Resuables.clickButton("Issue Policy for Rewrite Remainder of Term Bound");
 
 		strJob           = PolicyCenter_Resuables.infoBar("Job");
 		strLOB           = PolicyCenter_Resuables.infoBar("LOB");

@@ -32,7 +32,7 @@ public class Test_ClaimActions_AssignClaim_Groups extends GW_GetDriver {
 		// ----->Login to ClaimCenter bbaker user
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "AssignClaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		strPolicyNumber = ClaimCenter_Resuables.infoBar("PolicyNumber");
 		strInsuredName  = ClaimCenter_Resuables.infoBar("InsuredName");
@@ -46,7 +46,7 @@ public class Test_ClaimActions_AssignClaim_Groups extends GW_GetDriver {
 			Tab_Menu_Navigation.ccTabNavigation("Desktop", "");
 			Thread.sleep(3000);
 			// ------>Creating New Claim
-			CC_NewClaimWizard.assignClaimProcess("New Claim", "AssignClaimAuto");
+			CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 		}
 
 	}

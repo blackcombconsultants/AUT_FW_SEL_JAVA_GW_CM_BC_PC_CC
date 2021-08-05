@@ -190,7 +190,7 @@ public class PersonalAuto_Coverages extends SeleniumWebDriver_Commands implement
 			String strPAC_ACT_CAPV_ElectronicEquipment = lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_ElectronicEquipment");
 			if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Add")) {
 				GuidewireAutomate("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "clickAndwait", strPAC_ACT_CAPV_ElectronicEquipment);
-				getStaleElement("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment);
+				getStaleElement("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit);
 				GuidewireAutomate_Validation("Electronic Equipment", PAC_ACT_CAPV_ElectronicEquipment, "isSelected", strPAC_ACT_CAPV_ElectronicEquipment);
 				GuidewireAutomate("Increased Limit", PAC_ACT_CAPV_EE_IncreasedLimit, "selectByVisibleText", lhm_TestCase_Table_Data.get("PAC_ACT_CAPV_EE_IncreasedLimit"));
 			} else if (strPAC_ACT_CAPV_ElectronicEquipment.equalsIgnoreCase("Verify")) {

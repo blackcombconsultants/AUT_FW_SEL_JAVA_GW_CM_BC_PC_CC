@@ -6,7 +6,6 @@ import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.ClaimsCenter.CC_NewClaimWizard;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Resuables;
 
 public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriver {
 
@@ -16,11 +15,11 @@ public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriv
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// --->Assigning Claim
 		Tab_Menu_Navigation.ccMenuNavigation("Assign Claim");
-		ClaimCenter_Resuables.assignClaim();
+		CC_NewClaimWizard.assignClaim();
 
 	}
 
@@ -32,7 +31,7 @@ public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriv
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		/*
 		 * // --->Assigning Claim
@@ -77,7 +76,7 @@ public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriv
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim Auto_AutoFirstandFinal
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "Newclaim_Auto_AutoFirstandFinal");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAutoFirstandFinal");
 
 	}
 
@@ -87,7 +86,7 @@ public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriv
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim Auto_QuickClaimAuto
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "Newclaim_Auto_QuickClaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyQuickClaimAuto");
 
 	}
 
