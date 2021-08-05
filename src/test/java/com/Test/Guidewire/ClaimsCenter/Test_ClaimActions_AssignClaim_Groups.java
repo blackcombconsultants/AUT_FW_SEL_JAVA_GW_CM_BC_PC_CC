@@ -16,7 +16,7 @@ public class Test_ClaimActions_AssignClaim_Groups extends GW_GetDriver {
 	String strAdjuster    = null;
 
 	@Test
-	public void AUT_PA_CC_FNOL_VerifiedPolicy_AssignClaim_RoundRobin_LoadFactor100() throws Throwable
+	public void AssignClaim_Groups_LoadFactor100() throws Throwable
 
 	{
 
@@ -52,7 +52,7 @@ public class Test_ClaimActions_AssignClaim_Groups extends GW_GetDriver {
 	}
 
 	@Test
-	public void AUT_PA_CC_FNOL_VerifiedPolicy_AssignClaim_RoundRobin_LoadFactor50() throws Throwable {
+	public void AssignClaim_Groups_LoadFactor50() throws Throwable {
 		// ------>Login to CliamCenter super user
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 		// ----->Clicking on Administration Tab
@@ -62,7 +62,7 @@ public class Test_ClaimActions_AssignClaim_Groups extends GW_GetDriver {
 	}
 
 	@Test
-	public void AUT_PA_CC_FNOL_VerifiedPolicy_AssignClaim_RoundRobin_LoadFactorToZero() throws Throwable {
+	public void AssignClaim_Groups_LoadFactor0() throws Throwable {
 		// ------>Login to CliamCenter super user
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 		// ----->Clicking on Administration Tab
@@ -100,7 +100,7 @@ public class Test_ClaimActions_AssignClaim_Groups extends GW_GetDriver {
 	}
 
 	@Test
-	public void TC003PersonaAutoRoundRobin_LoadFactor100UserVacationStatusasOnVacationInactive() throws Throwable {
+	public void AssignClaim_Groups_LoadFactor100_VacationStatusOnVacationInactive() throws Throwable {
 		// ------>Login to CliamCenter super user
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 		// ----->Clicking on Administration Tab

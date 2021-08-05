@@ -14,7 +14,7 @@
 			<class name="com.Test.Guidewire.ClaimsCenter.Test_NewDocument">
 				<methods>
 					<include
-						name="AUT_PA_CC_CreateFromaTemplate_DocumentTemplate_AcrobatSample" />
+						name="AUT_NewDocument_CreateFromaTemplate_AcrobatSample" />
 				</methods>
 			</class>
 		</classes>
