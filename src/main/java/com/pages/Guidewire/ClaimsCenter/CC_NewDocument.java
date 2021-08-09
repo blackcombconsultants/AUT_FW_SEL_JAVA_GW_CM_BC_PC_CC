@@ -66,9 +66,13 @@ public class CC_NewDocument extends SeleniumWebDriver_Commands {
 
 	private static By NewDocument_Update = By.xpath("//div[contains(@id,'NewDocumentFromTemplate_CustomUpdate')]");
 
+	/*
+	 * 
+	 */
 	public static void addCreateTemplate() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Documents", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Documents");
+
 		GuidewireAutomate_Validation("Screen Header", NewDocument_Header, "equals", "New Document");
 		GuidewireAutomate("Search", NewDocument_DocumentTemplate_Search, "click", "click");
 		// GuidewireAutomate("Type", NewDocument_Type,
@@ -93,7 +97,7 @@ public class CC_NewDocument extends SeleniumWebDriver_Commands {
 				break;
 			case "KY" :
 				GuidewireAutomate("Select KY Sample Template", NewDocument_Select_KYSample, "moveToElement", "click");
-				GuidewireAutomate(" Select KY SampleTemplate", NewDocument_Select_KYSample, "clickAndwait", "click");
+				GuidewireAutomate("Select KY SampleTemplate", NewDocument_Select_KYSample, "clickAndwait", "click");
 				break;
 			default :
 				throw new IOException("No support for Template : " + StrTemplate);
@@ -106,65 +110,66 @@ public class CC_NewDocument extends SeleniumWebDriver_Commands {
 
 	public static void UploadDocuments() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Documents", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Documents");
+
 		GuidewireAutomate_Validation("UploadDocumentsr", UploadDocuments, "equals", "Upload Documents");
-		GuidewireAutomate("AddFiles1", UploadDocuments_AddFiles1, "click", "null");
+		GuidewireAutomate("AddFiles1", UploadDocuments_AddFiles1, "click", "click");
 		String strFileType = lhm_TestCase_Table_Data.get("FileType");
 
 		switch (strFileType) {
 			case "txt" :
-				fileUpload("\\Upload\\LetterReceived.txt");
+				fileUpload(pUploads + "LetterReceived.txt");
 				break;
 			case "pdf" :
-				fileUpload("\\Upload\\GuidewireClaimCenter.pdf");
+				fileUpload(pUploads + "GuidewireClaimCenter.pdf");
 				break;
 			case "bmp" :
-				fileUpload("\\Upload\\sample_BitmapImage.bmp");
+				fileUpload(pUploads + "sample_BitmapImage.bmp");
 				break;
 			case "csv" :
-				fileUpload("\\Upload\\sample_CSV.csv");
+				fileUpload(pUploads + "sample_CSV.csv");
 				break;
 			case "gif" :
-				fileUpload("\\Upload\\sample_GIF.gif");
+				fileUpload(pUploads + "sample_GIF.gif");
 				break;
 			case "html" :
-				fileUpload("\\Upload\\sample_HTML.html");
+				fileUpload(pUploads + "sample_HTML.html");
 				break;
 			case "jpeg" :
-				fileUpload("\\Upload\\sample_JPEG.jpeg");
+				fileUpload(pUploads + "sample_JPEG.jpeg");
 				break;
 			case "mp4" :
-				fileUpload("\\Upload\\sample_MPEG.mp4");
+				fileUpload(pUploads + "sample_MPEG.mp4");
 				break;
 			case "OpenXMLspreadsheet" :
-				fileUpload("\\Upload\\sample_OpenXMLspreadsheet.xlsx");
+				fileUpload(pUploads + "sample_OpenXMLspreadsheet.xlsx");
 				break;
 			case "png" :
-				fileUpload("\\Upload\\sample_PNG.png");
+				fileUpload(pUploads + "sample_PNG.png");
 				break;
 			case "OpenXMLpresentation" :
-				fileUpload("\\Upload\\sample_PowerPoint.pptx");
+				fileUpload(pUploads + "sample_PowerPoint.pptx");
 				break;
 			case "QuickTimeVideo" :
-				fileUpload("\\Upload\\sample_quicktimevideo.mov");
+				fileUpload(pUploads + "sample_quicktimevideo.mov");
 				break;
 			case "TiffImage" :
-				fileUpload("\\Upload\\sample_TiffImage.tiff");
+				fileUpload(pUploads + "sample_TiffImage.tiff");
 				break;
 			case "XML" :
-				fileUpload("\\Upload\\sample_XML.xml");
+				fileUpload(pUploads + "sample_XML.xml");
 				break;
 			case "MicrosoftAudio" :
-				fileUpload("\\Upload\\sample1_MicrosoftAudio.wma");
+				fileUpload(pUploads + "sample1_MicrosoftAudio.wma");
 				break;
 			case "OCTETStream" :
-				fileUpload("\\Upload\\SampleOCTETStream");
+				fileUpload(pUploads + "SampleOCTETStream");
 				break;
 			case "WaveAudio" :
-				fileUpload("\\Upload\\sampleWaveAudioFile.wav");
+				fileUpload(pUploads + "sampleWaveAudioFile.wav");
 				break;
 			case "WordDocument" :
-				fileUpload("\\Upload\\SampleWordDocument.docx");
+				fileUpload(pUploads + "SampleWordDocument.docx");
 				break;
 			default :
 				throw new IOException("No support for FileType : " + strFileType);
@@ -174,33 +179,35 @@ public class CC_NewDocument extends SeleniumWebDriver_Commands {
 		GuidewireAutomate("Status", UploadDocuments_Status, "sendKeys", lhm_TestCase_Table_Data.get("Status"));
 		GuidewireAutomate("DocumentType", UploadDocuments_DocumentType, "sendKeys", lhm_TestCase_Table_Data.get("DocumentType"));
 
-		GuidewireAutomate("Update", UploadDocuments_Update, "click", "null");
+		GuidewireAutomate("Update", UploadDocuments_Update, "click", "click");
 
 	}
 
-	public static void fileUpload(String value) throws AWTException {
+	public static void fileUpload(String strfilepath) throws AWTException {
 
-		ClipboardOwner  owner           = null;
-		Robot           robot           = new Robot();
-		StringSelection stringSelection = new StringSelection(pUserdir + value);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, owner);
-		robot.setAutoDelay(2000);
+		ClipboardOwner  oClipboardOwner  = null;
+		Robot           oRobot           = new Robot();
+		StringSelection oStringSelection = new StringSelection(strfilepath);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(oStringSelection, oClipboardOwner);
+		oRobot.setAutoDelay(2000);
 
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
+		oRobot.keyPress(KeyEvent.VK_CONTROL);
+		oRobot.keyPress(KeyEvent.VK_V);
 
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
+		oRobot.keyRelease(KeyEvent.VK_CONTROL);
+		oRobot.keyRelease(KeyEvent.VK_V);
 
-		robot.setAutoDelay(2000);
+		oRobot.setAutoDelay(2000);
 
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		oRobot.keyPress(KeyEvent.VK_ENTER);
+		oRobot.keyRelease(KeyEvent.VK_ENTER);
 
 	}
 
 	public static void verifyDocument() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Documents", strTestCaseName);
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Documents");
+
 		GuidewireAutomate_Validation("Documents Header", Documents_Header, "equals", "Documents");
 		GuidewireAutomate_Validation("Documents Name", Documents_Name, "equals", lhm_TestCase_Table_Data.get("DocumentsName"));
 		GuidewireAutomate_Validation("Documents Type", Documents_Type, "equals", lhm_TestCase_Table_Data.get("DocumentType"));
@@ -208,24 +215,18 @@ public class CC_NewDocument extends SeleniumWebDriver_Commands {
 	}
 
 	public static void verifyPdfDocument(String value) throws Throwable {
+
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		String projectPath = System.getProperty("user.dir");
+		driver.get(pUserdir + value);
 
-		driver.get(projectPath + value);
-
-		String currentUrl = driver.getCurrentUrl();
-
-		/* String pp=System.getProperty("user.dir"); */
-
-		URL url = new URL(currentUrl);
-
-		InputStream         is        = url.openStream();
-		BufferedInputStream fileparse = new BufferedInputStream(is);
-		PDDocument          document  = null;
-		document = PDDocument.load(fileparse);
-		String pdfContent = new PDFTextStripper().getText(document);
-		System.out.println(pdfContent);
+		String              strCurrentUrl = driver.getCurrentUrl();
+		URL                 oURL          = new URL(strCurrentUrl);
+		InputStream         oIS           = oURL.openStream();
+		BufferedInputStream oBIS          = new BufferedInputStream(oIS);
+		PDDocument          oPDDocument   = PDDocument.load(oBIS);
+		String              strPDFText    = new PDFTextStripper().getText(oPDDocument);
+		System.out.println(strPDFText);
 	}
 
 }

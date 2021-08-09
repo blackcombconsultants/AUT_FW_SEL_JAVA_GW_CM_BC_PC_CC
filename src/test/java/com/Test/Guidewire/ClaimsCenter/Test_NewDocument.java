@@ -20,6 +20,8 @@ public class Test_NewDocument extends GW_GetDriver {
 		Tab_Menu_Navigation.ccMenuNavigation("Create from a template");
 		CC_NewDocument.addCreateTemplate();
 
+		// ----->Logout ClaimCenter
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -32,6 +34,8 @@ public class Test_NewDocument extends GW_GetDriver {
 		Tab_Menu_Navigation.ccMenuNavigation("Create from a template");
 		CC_NewDocument.addCreateTemplate();
 
+		// ----->Logout ClaimCenter
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -44,6 +48,8 @@ public class Test_NewDocument extends GW_GetDriver {
 		Tab_Menu_Navigation.ccMenuNavigation("Create from a template");
 		CC_NewDocument.addCreateTemplate();
 
+		// ----->Logout ClaimCenter
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -56,6 +62,8 @@ public class Test_NewDocument extends GW_GetDriver {
 		Tab_Menu_Navigation.ccMenuNavigation("Create from a template");
 		CC_NewDocument.addCreateTemplate();
 
+		// ----->Logout ClaimCenter
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 	@Test
 	public void AUT_NewDocument_CreateFromaTemplate_UploadDocuments() throws Throwable {

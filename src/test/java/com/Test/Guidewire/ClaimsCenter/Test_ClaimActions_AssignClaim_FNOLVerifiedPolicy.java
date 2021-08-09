@@ -20,6 +20,7 @@ public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriv
 		// --->Assigning Claim
 		Tab_Menu_Navigation.ccMenuNavigation("Assign Claim");
 		CC_NewClaimWizard.assignClaim();
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -44,6 +45,7 @@ public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriv
 
 		// ------>Creating New Claim Auto_AutoFirstandFinal
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAutoFirstandFinal");
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -54,6 +56,7 @@ public class Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy extends GW_GetDriv
 
 		// ------>Creating New Claim Auto_QuickClaimAuto
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyQuickClaimAuto");
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 

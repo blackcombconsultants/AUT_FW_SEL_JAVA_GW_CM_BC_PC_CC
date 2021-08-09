@@ -1,8 +1,9 @@
 package com.pages.Guidewire.ClaimsCenter;
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
@@ -25,7 +26,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 		try {
 
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asFindPolicy", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asFindPolicy");
 
 			strPolicyNumber = null;
 			strPolicyNumber = lhm_TestCase_Table_Data.get("SCP_PolicyNumber");
@@ -60,7 +61,8 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_SearchorCreatePolicy_FindPolicy_NewClaim() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asFindPolicy", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asFindPolicy");
+
 		String strSCP_NC_TypeofClaim = lhm_TestCase_Table_Data.get("SCP_TypeOfClaim");
 
 		try {
@@ -88,7 +90,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 		 * <All fields should be added> <20-july-2021> <Akula Srikanh>
 		 */
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asFindPolicy", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asFindPolicy");
 
 		GuidewireAutomate_Validation("Claims History", SCP_ClaimsHistory, "equals", "Claims History");
 
@@ -98,7 +100,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 		try {
 
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asBasicInfo", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asBasicInfo");
 
 			String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
 
@@ -178,9 +180,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 		try {
 
-			// _---->Add the address1 script 09-07-2021 dinesh
-
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asAddClaimInfo", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asAddClaimInfo");
 
 			GuidewireAutomate_Validation("Screen Header", AddClaimInformation_Header, "equals", "Step 3 of 5: Add claim information");
 
@@ -217,7 +217,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_Auto_AddClaimInformation_VehiclesPeopleProperty() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asAddClaimInfo", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asAddClaimInfo");
 
 		GuidewireAutomate_Validation("Section", ACI_VehiclesPeopleProperty, "equals", "Vehicles, People, & Property");
 
@@ -229,7 +229,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_Auto_AddClaimInformation_Vehicles() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asAddClaimInfo", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asAddClaimInfo");
 
 		GuidewireAutomate_Validation("Section", ACI_VehiclesPeopleProperty, "equals", "Vehicles, People, & Property");
 		GuidewireAutomate_Validation("Add Vehicle", ACI_AddVehicle, "isDisplayed", lhm_TestCase_Table_Data.get("ACI_AddVehicle"));
@@ -238,7 +238,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_Auto_AddClaimInformation_People() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asAddClaimInfo", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asAddClaimInfo");
 
 		GuidewireAutomate_Validation("Section", ACI_VehiclesPeopleProperty, "equals", "Vehicles, People, & Property");
 		GuidewireAutomate_Validation("Add Pedestrian", ACI_AddPedestrian, "isDisplayed", lhm_TestCase_Table_Data.get("ACI_AddPedestrian"));
@@ -247,7 +247,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_Auto_AddClaimInformation_Property() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asAddClaimInfo", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asAddClaimInfo");
 
 		GuidewireAutomate_Validation("Section", ACI_VehiclesPeopleProperty, "equals", "Vehicles, People, & Property");
 		GuidewireAutomate_Validation("Add Property Damage", ACI_AddPropertyDamage, "isDisplayed", lhm_TestCase_Table_Data.get("ACI_AddPropertyDamage"));
@@ -256,7 +256,8 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_Services() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asServices", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asServices");
+
 		GuidewireAutomate_Validation("Screen Header", Services_Header, "equals", "Step 4 of 5: Services");
 		GuidewireAutomate_Validation("Section", Services_InvolvedVehicles, "equals", "Involved Vehicles");
 
@@ -285,14 +286,15 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 	}
 
 	public static void ncw_SaveAndAssignClaim() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("asSaveAndAssignClaim", strTestCaseName);
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asSaveAndAssignClaim");
 
 		// ---->Add script to Select a user 09-07-2021 dinesh
 		GuidewireAutomate_Validation("Screen Header", SaveAndAssignClaim_Header, "equals", "Step 5 of 5: Save and Assign Claim");
 		GuidewireAutomate_Validation("Section", SAC_Assignment, "equals", "Assignment");
 
 		GuidewireAutomate("CommonAssign", SAC_A_CommonAssign, "click", "click");
-		GuidewireAutomate("Assign claim and all exposures to", SAC_A_AssignclaimExposuresto, "selectByVisibleText", lhm_TestCase_Table_Data.get("SAC_A_AssignclaimExposuresto"));
+		GuidewireAutomate_Validation("Assign claim and all exposures to", SAC_A_AssignclaimExposuresto, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("SAC_A_AssignclaimExposuresto"));
 
 	}
 
@@ -308,10 +310,36 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 		strClaims_AssignedGroup = getText_Element(NCS_AssignedGroup).replace("Assigned Group: ", "");
 		strClaims_AssignedUser  = getText_Element(NCS_AssignedUser).replace("Assigned User: ", "");
 
-		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("searchValues", "ClaimsNumber", strClaimsNumber);
-		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("asSaveAndAssignClaim", "ClaimsNumber", strClaimsNumber);
-		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("asSaveAndAssignClaim", "AssignedGroup", strClaims_AssignedGroup);
-		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Fillo("asSaveAndAssignClaim", "AssignedToUser", strClaims_AssignedUser);
+		Selenium_Utils_DataBase.UpdateData_ClaimsCenter("searchValues", "ClaimsNumber", strClaimsNumber);
+		Selenium_Utils_DataBase.UpdateData_ClaimsCenter("asSaveAndAssignClaim", "ClaimsNumber", strClaimsNumber);
+		Selenium_Utils_DataBase.UpdateData_ClaimsCenter("asSaveAndAssignClaim", "AssignedGroup", strClaims_AssignedGroup);
+		Selenium_Utils_DataBase.UpdateData_ClaimsCenter("asSaveAndAssignClaim", "AssignedToUser", strClaims_AssignedUser);
+
+	}
+
+	public static void ncw_ClaimAssign_RoundRobin() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
+
+		String            currentUserAssign = "Terence Mazzon";
+		ArrayList<String> rrExpectedUsers   = new ArrayList<String>();
+
+		String[] aExpectedUsers = {"Betty Baker", "Heidi Johnson", "Terence Mazzon", "Isabel Numin", "Carlos Oppley", "Rick Ralston"};
+
+		for (int intUser = 0; intUser < aExpectedUsers.length; intUser++) {
+
+			// ------>Creating New Claim
+			CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+			GuidewireAutomate_Validation("Screen Header", NewClaimSaved_Header, "equals", "New Claim Saved");
+
+			String strActual_AssignedUser = getText_Element(NCS_AssignedUser).replace("Assigned User: ", "");
+			if (strActual_AssignedUser.equals(aExpectedUsers[intUser])) {
+				oExtentTest.log(Status.PASS, "ClaimAssign To User " + aExpectedUsers[intUser]);
+			} else {
+				oExtentTest.log(Status.FAIL, "ClaimAssign To User " + strActual_AssignedUser);
+			}
+		}
 
 	}
 
@@ -332,11 +360,12 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_SearchorCreatePolicy_CreateUnverifiedPolicy() throws Throwable {
 
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("ncwStep1");
+
 		strPolicyNumber = null;
 		strPolicyNumber = lhm_TestCase_Table_Data.get("SCP_PolicyNumber");
 		String strTypeOfClaim = lhm_TestCase_Table_Data.get("SCP_TypeOfClaim");
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("ncwStep1", strTestCaseName);
 		// ------> Verifying the page -
 		GuidewireAutomate_Validation("Screen Header", NCW_SearchorCreatePolicy_Header, "equals", "Step 1 of 5: Search or Create Policy");
 
@@ -354,7 +383,8 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void selectPolicy() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("selectPolicy", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("selectPolicy");
+
 		GuidewireAutomate_Validation("Screen Header", PolicyGeneral_Header, "equals", "Policy: General");
 		GuidewireAutomate("Select Policy", SelectPolicy, "click", "click");
 		GuidewireAutomate_Validation("Screen Header", SelectPolicy_Header, "equals", "Select Policy");
@@ -367,7 +397,6 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 	public static void basicInfo() throws Throwable {
 
 		String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo", strTestCaseName);
 
 		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText", insuredName);
 
@@ -375,18 +404,20 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void basicInfoAssignClaim() throws Throwable {
 
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("basicInfo");
+
 		String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("basicInfo", strTestCaseName);
+
 		GuidewireAutomate("Name", BI_RB_Name, "selectByVisibleText", insuredName);
 
 	}
 
 	public static void ncw_CreateUnverifiedPolicy_BasicInformation() throws Throwable {
 
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("CUPstep1");
+
 		strPolicyNumber = null;
 		strPolicyNumber = lhm_TestCase_Table_Data.get("SCP_PolicyNumber");
-
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CUPstep1", strTestCaseName);
 
 		GuidewireAutomate_Validation("Basic Information", CUP_BasicInformation, "equals", "Basic Information");
 
@@ -402,7 +433,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 	public static void ncw_CreateUnverifiedPolicy_Insured_Search() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CUPstep1", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("CUPstep1");
 
 		GuidewireAutomate("Insured Select", CUP_Insured_SelectMenu_Button, "click", "click");
 		GuidewireAutomate("Search", CUP_Insured_Menu_Search, "clickAndwait", "click");
@@ -415,7 +446,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 	}
 	public static void ncw_CreateUnverifiedPolicy_Insured_NewPerson() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CUPstep1", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("CUPstep1");
 
 		GuidewireAutomate("Insured Select", CUP_Insured_SelectMenu_Button, "click", "click");
 		GuidewireAutomate("New Person", CUP_Insured_Menu_NewPerson, "click", "click");
@@ -424,33 +455,25 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 		GuidewireAutomate_Validation("Section", PolicyCenter_Resuables_PO.Screen_Header, "equals", "This contact is not linked to the Address Book");
 
 		GuidewireAutomate_Validation("Section", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Person");
+
 		GuidewireAutomate("LastName", NP_P_LastName, "clearANDsendKeys", lhm_TestCase_Table_Data.get("LastName"));
 		GuidewireAutomate("TaxID", NP_P_TaxID, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TaxID"));
 
 	}
 
 	public static void fnol_Search_UnverifiedPolicy_AddVehicle() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("SearchPolicy", strTestCaseName);
 
-		try {
-			GuidewireAutomate("AddVehicle", CUP_ANV_AddVehicle, "click", "click");
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("SearchPolicy");
 
-		} catch (WebDriverException e) {
-			GuidewireAutomate("AddVehicle", CUP_ANV_AddVehicle, "click", "click");
-
-		}
+		GuidewireAutomate("AddVehicle", CUP_ANV_AddVehicle, "click", "click");
 
 		GuidewireAutomate_Validation("Screen Header", SP_NewVehicle, "equals", "New Vehicle");
 		GuidewireAutomate("Make", CUP_ANV_Make, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Make"));
 		GuidewireAutomate("Model", CUP_ANV_Model, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Model"));
 		GuidewireAutomate("Year", CUP_ANV_Year, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Year"));
 
-		try {
-			GuidewireAutomate("AddCoverages", CUP_ANV_AddCoverages, "click", "click");
-		} catch (WebDriverException e) {
-			GuidewireAutomate("AddCoverages", CUP_ANV_AddCoverages, "click", "click");
+		GuidewireAutomate("AddCoverages", CUP_ANV_AddCoverages, "click", "click");
 
-		}
 		GuidewireAutomate("CoverageType", CUP_ANV_CoverageType, "selectByVisibleText", lhm_TestCase_Table_Data.get("CoverageType"));
 		GuidewireAutomate("ExposureLimit", CUP_ANV_ExposureLimit, "clearANDsendKeys", lhm_TestCase_Table_Data.get("ExposureLimit"));
 		GuidewireAutomate("IncidentLimit", CUP_ANV_IncidentLimit, "clearANDsendKeys", lhm_TestCase_Table_Data.get("IncidentLimit"));
@@ -582,7 +605,6 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 				ClaimCenter_Resuables.clickButton("Finish");
 				ClaimCenter_Resuables.clickButton("Finish");
 				ncw_newClaimSaved();
-				ncw_ViewtheNewlySavedClaim();
 				break;
 
 			case "VerifiedPolicyAutoFirstandFinal" :

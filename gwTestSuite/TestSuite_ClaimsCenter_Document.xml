@@ -15,36 +15,36 @@
 				<methods>
 					<include
 						name="AUT_NewDocument_CreateFromaTemplate_AcrobatSample" />
-					<exclude
+					<include
 						name="AUT_NewDocument_CreateFromaTemplate_ExcelSample" />
-					<exclude
+					<include
 						name="AUT_NewDocument_CreateFromaTemplate_GosuCSVSample" />
-					<exclude
+					<include
 						name="AUT_NewDocument_CreateFromaTemplate_KYNoFaultApp1FCCI" />
 
-					<exclude name="AUT_NewDocument_UploadDocument_Txt" />
-					<exclude name="AUT_NewDocument_UploadDocument_PDF" />
-					<exclude name="AUT_NewDocument_UploadDocument_BitmapImage" />
-					<exclude
+					<include name="AUT_NewDocument_UploadDocument_Txt" />
+					<include name="AUT_NewDocument_UploadDocument_PDF" />
+					<include name="AUT_NewDocument_UploadDocument_BitmapImage" />
+					<include
 						name="AUT_NewDocument_UploadDocument_MicrosoftExcelWorksheet" />
-					<exclude name="AUT_NewDocument_UploadDocument_GIFImage" />
-					<exclude name="AUT_NewDocument_UploadDocument_HTML" />
-					<exclude name="AUT_NewDocument_UploadDocument_JPEGImage" />
-					<exclude name="AUT_NewDocument_UploadDocument_MPEGVideo" />
-					<exclude
+					<include name="AUT_NewDocument_UploadDocument_GIFImage" />
+					<include name="AUT_NewDocument_UploadDocument_HTML" />
+					<include name="AUT_NewDocument_UploadDocument_JPEGImage" />
+					<include name="AUT_NewDocument_UploadDocument_MPEGVideo" />
+					<include
 						name="AUT_NewDocument_UploadDocument_OpenXMLspreadsheet" />
-					<exclude name="AUT_NewDocument_UploadDocument_PNGImage" />
-					<exclude
+					<include name="AUT_NewDocument_UploadDocument_PNGImage" />
+					<include
 						name="AUT_NewDocument_UploadDocument_OpenXMLpresentation" />
-					<exclude
+					<include
 						name="AUT_NewDocument_UploadDocument_QuickTimeVideo" />
-					<exclude name="AUT_NewDocument_UploadDocument_TiffImage" />
-					<exclude name="AUT_NewDocument_UploadDocument_XML" />
-					<exclude
+					<include name="AUT_NewDocument_UploadDocument_TiffImage" />
+					<include name="AUT_NewDocument_UploadDocument_XML" />
+					<include
 						name="AUT_NewDocument_UploadDocument_MicrosoftAudio" />
-					<exclude name="AUT_NewDocument_UploadDocument_OCTETStream" />
-					<exclude name="AUT_NewDocument_UploadDocument_WaveAudio" />
-					<exclude name="AUT_NewDocument_UploadDocument_WordDocument" />
+					<include name="AUT_NewDocument_UploadDocument_OCTETStream" />
+					<include name="AUT_NewDocument_UploadDocument_WaveAudio" />
+					<include name="AUT_NewDocument_UploadDocument_WordDocument" />
 
 				</methods>
 			</class>
