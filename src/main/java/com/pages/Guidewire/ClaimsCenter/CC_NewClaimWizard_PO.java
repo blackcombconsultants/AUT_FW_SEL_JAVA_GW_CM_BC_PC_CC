@@ -17,18 +17,18 @@ public interface CC_NewClaimWizard_PO {
 	/*
 	 * CC_NCW_Step1of5_SearchorCreatePolicy
 	 */
-	final By NCW_SearchorCreatePolicy_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Step 1 of 5: Search or Create Policy']");
+	final By NCW_SearchorCreatePolicy_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Search or Create Policy')]");
 
 	final By SP_NewVehicle = By.xpath("//div[contains(@id,'NewPolicyVehicleScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 
 	// Find Policy
 	final By SCP_FindPolicy = By.xpath("//span[text()='Find Policy']/preceding-sibling::span[@class='gw-radio-wrapper']/input[contains(@name,'FNOLWizard_FindPolicyScreen')]");
 
-	final By SCP_FP_PolicyNumber     = By.xpath("//input[contains(@name,'FNOLWizardFindPolicyPanelSet-policyNumber')]");
-	final By SCP_FP_FirstName        = By.xpath("//input[contains(@name,'FNOLWizardFindPolicyPanelSet-FirstName')]");
-	final By SCP_FP_LastName         = By.xpath("//input[contains(@name,'FNOLWizardFindPolicyPanelSet-LastName')]");
-	final By SCP_FP_OrganizationName = By.xpath("//input[contains(@name,'FNOLWizardFindPolicyPanelSet-Name')]");
-	final By SCP_FP_PolicyType       = By.xpath("//select[contains(@name,'FNOLWizardFindPolicyPanelSet-PolicyType')]");
+	final By SCP_FP_PolicyNumber     = By.xpath("//input[contains(@name,'policyNumber')]");
+	final By SCP_FP_FirstName        = By.xpath("//input[contains(@name,'FirstName')]");
+	final By SCP_FP_LastName         = By.xpath("//input[contains(@name,'LastName')]");
+	final By SCP_FP_OrganizationName = By.xpath("//input[contains(@name,'GlobalContactNameInputSet-Name')]");
+	final By SCP_FP_PolicyType       = By.xpath("//select[contains(@name,'PolicyType')]");
 	final By SCP_FP_LossDate         = By.xpath("//input[contains(@name,'FNOLWizardFindPolicyPanelSet-date')]");
 
 	final By SCP_FP_SSN     = By.xpath("//input[contains(@name,'FNOLWizard_PolicySearchInputSet-ssn')]");
@@ -42,7 +42,7 @@ public interface CC_NewClaimWizard_PO {
 
 	// Policy Results
 	final By SCP_FP_PR_Policy         = By.xpath("//div[contains(@id,'PolicyResultLV-0-PolicyNumber_button')]");
-	final By SCP_FP_PR_Insured        = By.xpath("//div[contains(@name,'PolicyResultLV-0-Insured')]");
+	final By SCP_FP_PR_Insured        = By.xpath("//div[contains(@id,'PolicyResultLV-0-Insured')]");
 	final By SCP_FP_PR_EffectiveDate  = By.xpath("//div[contains(@id,'PolicyResultLV-0-Effective')]");
 	final By SCP_FP_PR_ExpirationDate = By.xpath("//div[contains(@id,'PolicyResultLV-0-Expiration')]");
 	final By SCP_FP_PR_Type           = By.xpath("//div[contains(@id,'PolicyResultLV-0-Type')]");
@@ -275,12 +275,6 @@ public interface CC_NewClaimWizard_PO {
 	final By CUP_ANV_ExposureLimit = By.xpath("//input[contains(@name,'ExposureLimit')]");
 	final By CUP_ANV_IncidentLimit = By.xpath("//input[contains(@name,'IncidentLimit')]");
 
-	/*
-	 * DuplicateClaims
-	 */
-	final By DuplicateClaims_PossibleDuplicateClaims = By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
-	final By DuplicateClaims_Close                   = By.xpath("//div[contains(@id,'CloseButton')]");
-
 	final By dateOfEmployerNotified = By.name("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-DateReportedtoEmployer");
 	final By injuryDescription      = By.name("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-Claim_InjuryDescription");
 	final By injury                 = By.id("FNOLWizard-FullWizardStepSet-FNOLWizard_NewLossDetailsScreen-InjurySeverity_DeathReport_0");
@@ -303,15 +297,10 @@ public interface CC_NewClaimWizard_PO {
 	/*
 	 * DuplicateClaims
 	 */
-	final By DuplicateClaims_ErrorMsg = By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
-	final By PolicyGeneral_Header     = By.xpath("//div[contains(@id,'NewClaimSavedScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By SelectPolicy_Header      = By.xpath("//div[contains(@id,'NewClaimSavedScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-
-	final By Assign_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Assign']");
-	final By FinancialsTransactions_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Financials: Transactions']");
-	final By DuplicateClaims_Header        = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Duplicate Claims']");
-	final By SP_Header                     = By.xpath("//div[@id='FNOLWizard-FNOLWizard_FindPolicyScreen-ttlBar']//div[@class='gw-TitleBar--title']");
-
+	final By DuplicateClaims_Header            = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Duplicate Claims']");
+	final By DC_PossibleDuplicateClaims_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Possible Duplicate Claims']");
+	final By DC_Possibleduplicateclaimsfound   = By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
+	final By DC_Close                          = By.xpath("//div[contains(@id,'CloseButton')]");
 	/*
 	 * services Rental
 	 */
@@ -336,5 +325,12 @@ public interface CC_NewClaimWizard_PO {
 	final By QCA_LossDetails_LossCause = By.xpath("//select[contains(@name,'LossCause')]");
 	final By QCA_LossDetails_State     = By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
 	final By QCA_Location              = By.xpath("//select[contains(@name,'Address_Picker')]");
+
+	final By PolicyGeneral_Header          = By.xpath("//div[contains(@id,'NewClaimSavedScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By SelectPolicy_Header           = By.xpath("//div[contains(@id,'NewClaimSavedScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By Assign_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Assign']");
+	final By FinancialsTransactions_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Financials: Transactions']");
+	final By SP_Header                     = By.xpath("//div[@id='FNOLWizard-FNOLWizard_FindPolicyScreen-ttlBar']//div[@class='gw-TitleBar--title']");
+	final By Summary_Header                = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Summary']");
 
 }
