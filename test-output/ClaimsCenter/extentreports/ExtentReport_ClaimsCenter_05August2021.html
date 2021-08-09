@@ -1,0 +1,903 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Automation Report</title>
+    <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/css/style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head><script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="test-view -report standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">ClaimsCenter</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">Aug 5, 2021 10:05:40 PM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+                                    <li class="user-profile dropdown dropdown-animated scale-left">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-exclamation-circle"></i>
+                                        </a>
+                                        <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+                                            <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+	                                        
+	                                        
+	                                        
+	                                        
+	                                        
+	                                        <div class="dropdown-divider"></div>
+                                            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+                                    <li class="test-item"  status="pass" test-id="1"
+                                            author=""
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar pass-bg">
+                                            <i class="fa fa-check text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">AUT_NewDocument_CreateFromaTemplate_AcrobatSample</p> 
+                                                <p class="duration text-sm">0h 1m 32s+712ms</p> 
+                                                <span class="datetime">22:05:40 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-pass">AUT_NewDocument_CreateFromaTemplate_AcrobatSample</h5>
+                                                        <span class='badge badge-success'>08.05.2021 22:05:40</span>
+                                                        <span class='badge badge-danger'>08.05.2021 22:07:13</span>
+                                                        <span class='badge badge-default'>0h 1m 32s+712ms</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:05:43 PM</td>
+				<td>
+						Appliaction Launched  http://ec2-3-6-92-216.ap-south-1.compute.amazonaws.com:8080/ClaimCenter.do
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:47 PM</td>
+				<td>
+						Username input  = [su]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:47 PM</td>
+				<td>
+						Password input  = [gw]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:48 PM</td>
+				<td>
+						clicked Field = Login
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:05:48 PM</td>
+				<td>
+						Login succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:49 PM</td>
+				<td>
+						clicked Field = Claims Tab
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:50 PM</td>
+				<td>
+						clicked Field = New Claim
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:50 PM</td>
+				<td>
+						Navigation to ClaimsCenter Tab : New Claim is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:05:52 PM</td>
+				<td>
+						Screen Header => Actual = [Step 1: Search or Create Policy] contains Expected = [Search or Create Policy]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:53 PM</td>
+				<td>
+						clicked Field = Find Policy
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:53 PM</td>
+				<td>
+						Policy Number  cleared value And input  = [4505358398]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:56 PM</td>
+				<td>
+						Policy Type  Selected = Personal Auto
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:05:57 PM</td>
+				<td>
+						clicked Field = Search
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:05:58 PM</td>
+				<td>
+						Policy => Actual = [4505358398] equals Expected = [4505358398]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:05:59 PM</td>
+				<td>
+						Insured => Actual = [Akash Gowda] equals Expected = [Akash Gowda]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:05:59 PM</td>
+				<td>
+						Type => Actual = [Personal Auto] equals Expected = [Personal Auto]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:05:59 PM</td>
+				<td>
+						Search PolicyNumber = [4505358398] is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:01 PM</td>
+				<td>
+						New Claim => Actual = [New Claim] equals Expected = [New Claim]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:02 PM</td>
+				<td>
+						LossDate  cleared value And input  = [08/05/2021]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:03 PM</td>
+				<td>
+						clicked Field = TypeofClaim = Auto
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:03 PM</td>
+				<td>
+						New Claim Type = [Auto] selection is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:04 PM</td>
+				<td>
+						Claims History => Actual = [Claims History] equals Expected = [Claims History]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:05 PM</td>
+				<td>
+						Clicked = Next
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:10 PM</td>
+				<td>
+						Fetched from Info Bar => InsuredName = Akash Gowda
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:10 PM</td>
+				<td>
+						Screen Header => Actual = [Step 2 of 5: Basic information] equals Expected = [Step 2 of 5: Basic information]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:11 PM</td>
+				<td>
+						Section => Actual = [Reported By] equals Expected = [Reported By]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:12 PM</td>
+				<td>
+						How Reported  Selected = Internet
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:13 PM</td>
+				<td>
+						Name  Selected = Akash Gowda
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:14 PM</td>
+				<td>
+						Relation to Insured  Selected = Self/Insured
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:15 PM</td>
+				<td>
+						Date of Notice  cleared value And input  = [08/05/2021]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:15 PM</td>
+				<td>
+						Section => Actual = [Verify Date of Birth] equals Expected = [Verify Date of Birth]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:16 PM</td>
+				<td>
+						Date of Birth => Actual = [04/03/2002] equals Expected = [04/03/2002]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:17 PM</td>
+				<td>
+						Section => Actual = [Confirm Contact Info] equals Expected = [Confirm Contact Info]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:17 PM</td>
+				<td>
+						Address => Actual = [Green road USA, Anchorage, AK 99501] equals Expected = [Green road USA, Anchorage, AK 99501]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:18 PM</td>
+				<td>
+						Mobile  cleared value And input  = [201-555-2003]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:19 PM</td>
+				<td>
+						Primary Phone  Selected = Mobile
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:20 PM</td>
+				<td>
+						Email  cleared value And input  = [aksahg@blackcomb.com]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:20 PM</td>
+				<td>
+						Section => Actual = [Insured] equals Expected = [Insured]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:21 PM</td>
+				<td>
+						Name => Actual = [Akash Gowda] equals Expected = [Akash Gowda]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:22 PM</td>
+				<td>
+						Address => Actual = [Green road USA, Anchorage, AK 99501] equals Expected = [Green road USA, Anchorage, AK 99501]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:22 PM</td>
+				<td>
+						Primary Phone => Actual = [201-555-2003] equals Expected = [201-555-2003]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:23 PM</td>
+				<td>
+						Section => Actual = [Main Contact] equals Expected = [Main Contact]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:24 PM</td>
+				<td>
+						clicked Field = Same Person
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:25 PM</td>
+				<td>
+						Section => Actual = [Involved Vehicle(s)] equals Expected = [Involved Vehicle(s)]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:25 PM</td>
+				<td>
+						clicked Field = Select = 2001 Mazda MPV
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:25 PM</td>
+				<td>
+						Basic Information is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:26 PM</td>
+				<td>
+						Clicked = Next
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:27 PM</td>
+				<td>
+						Screen Header => Actual = [Possible Duplicate Claims] equals Expected = [Possible Duplicate Claims]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:28 PM</td>
+				<td>
+						Possible duplicate claims => Actual = [Possible duplicate claims found. Please examine the possible duplicates listed below.] contains Expected = [Possible duplicate claims found]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:28 PM</td>
+				<td>
+						clicked Field = Close
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:30 PM</td>
+				<td>
+						Screen Header => Actual = [Step 3 of 5: Add claim information] equals Expected = [Step 3 of 5: Add claim information]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:30 PM</td>
+				<td>
+						What Happened  cleared value And input  = [Automation ]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:31 PM</td>
+				<td>
+						Loss Cause  Selected = Collision with motor vehicle
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:32 PM</td>
+				<td>
+						Location  Selected = New...
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:33 PM</td>
+				<td>
+						Country  Selected = United States
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:34 PM</td>
+				<td>
+						State  Selected = Alaska
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:36 PM</td>
+				<td>
+						County => Actual = [Anchorage] valueEquals Expected = [Anchorage]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:37 PM</td>
+				<td>
+						Location Description  cleared value And input  = [Automation Location]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:38 PM</td>
+				<td>
+						Jurisdiction  Selected = Alaska
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:38 PM</td>
+				<td>
+						Section => Actual = [Vehicles, People, & Property] equals Expected = [Vehicles, People, & Property]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:39 PM</td>
+				<td>
+						Section => Actual = [At the Scene] equals Expected = [At the Scene]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:40 PM</td>
+				<td>
+						Section => Actual = [Categorization] equals Expected = [Categorization]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:40 PM</td>
+				<td>
+						Add claim Information is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:41 PM</td>
+				<td>
+						Section => Actual = [Vehicles, People, & Property] equals Expected = [Vehicles, People, & Property]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:42 PM</td>
+				<td>
+						Clicked = Next
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:43 PM</td>
+				<td>
+						Screen Header => Actual = [Step 4 of 5: Services] equals Expected = [Step 4 of 5: Services]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:43 PM</td>
+				<td>
+						Section => Actual = [Involved Vehicles] equals Expected = [Involved Vehicles]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:44 PM</td>
+				<td>
+						Vehicle Name => Actual = [isDisplayed] isDisplayed Expected = [isDisplayed]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:45 PM</td>
+				<td>
+						Clicked = Next
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:46 PM</td>
+				<td>
+						Screen Header => Actual = [Step 5 of 5: Save and Assign Claim] equals Expected = [Step 5 of 5: Save and Assign Claim]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:46 PM</td>
+				<td>
+						Section => Actual = [Assignment] equals Expected = [Assignment]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:47 PM</td>
+				<td>
+						clicked Field = CommonAssign
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:48 PM</td>
+				<td>
+						Assign claim and all exposures to  Selected = Use automated assignment
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:48 PM</td>
+				<td>
+						Clicked = Finish
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:06:49 PM</td>
+				<td>
+						Clicked = Finish
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:51 PM</td>
+				<td>
+						Screen Header => Actual = [New Claim Saved] equals Expected = [New Claim Saved]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:52 PM</td>
+				<td>
+						Claim Saved => Actual = [Claim 000-00-003481 has been successfully saved.] contains Expected = [has been successfully saved]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:06:59 PM</td>
+				<td>
+						Screen Header => Actual = [New Claim Saved] equals Expected = [New Claim Saved]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:00 PM</td>
+				<td>
+						clicked Field = ViewtheNewlySavedClaim
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:07:01 PM</td>
+				<td>
+						Screen Header => Actual = [Summary] equals Expected = [Summary]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:02 PM</td>
+				<td>
+						clicked Field = Actions
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:03 PM</td>
+				<td>
+						clicked Field = Create from a template
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:07:03 PM</td>
+				<td>
+						Navigation to ClaimsCenter Menu : Create from a template is succesful
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:07:04 PM</td>
+				<td>
+						Screen Header => Actual = [New Document] equals Expected = [New Document]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:05 PM</td>
+				<td>
+						clicked Field = Search
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:07 PM</td>
+				<td>
+						LineOfBusiness  Selected = Personal Auto Line
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:07 PM</td>
+				<td>
+						Jurisdiction  Selected = California
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:08 PM</td>
+				<td>
+						Clicked = NewDocument Search
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:09 PM</td>
+				<td>
+						moveToElement = Select Acrobat Sample Template
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:10 PM</td>
+				<td>
+						Clicked = Select Acrobat Sample Template
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:11 PM</td>
+				<td>
+						Clicked = createDocument
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>10:07:13 PM</td>
+				<td>
+						clicked Field = Update
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>10:07:13 PM</td>
+				<td>
+						<span class='badge white-text green'>AUT_NewDocument_CreateFromaTemplate_AcrobatSample Test Case PASSED</span>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\05August2021 220548.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">05August2021 220548.jpeg</span>
+					<span class="file-size"> 39,832Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\05August2021 220548.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">05August2021 220548.jpeg</span>
+					<span class="file-size"> 39,832Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\05August2021 220550.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">05August2021 220550.jpeg</span>
+					<span class="file-size"> 158,565Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\05August2021 220550.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">05August2021 220550.jpeg</span>
+					<span class="file-size"> 158,565Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\05August2021 220703.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">05August2021 220703.jpeg</span>
+					<span class="file-size"> 140,696Kb</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\05August2021 220703.jpeg" data-featherlight="image">
+				<div class="file-icon">
+					<i class="fa fa-file-image-o"></i> 
+				</div>
+				<div class="file-info">
+					<span class="file-name">05August2021 220703.jpeg</span>
+					<span class="file-size"> 140,696Kb</span>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/js/script.js"></script>
+</body>
+</html>

@@ -39,7 +39,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 		try {
 
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("groups", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
 
 			strGroupName = lhm_TestCase_Table_Data.get("GroupName");
 
@@ -52,7 +52,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 			GuidewireAutomate("Groups Name = " + strGroupName, GR_SR_Name, "clickAndwait", "NA");
 
 		} catch (Exception e) {
-			oExtentTest.log(Status.FAIL, "Group = [" + strGroupName + " search is UnSuccessful");
+			oExtentTest.log(Status.FAIL, "Group = [" + strGroupName + "] search is UnSuccessful");
 			e.printStackTrace();
 		}
 
@@ -75,8 +75,9 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 			/*
 			 * Group name
 			 */
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("groups", strTestCaseName);
-			strGroupName            = lhm_TestCase_Table_Data.get("GroupName");
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
+
+			strGroupName = lhm_TestCase_Table_Data.get("GroupName");
 
 			GuidewireAutomate_Validation("Screen Header", ClaimCenter_Resuables_PO.Screen_Header, "equals", strGroupName);
 
@@ -96,7 +97,9 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 				oExtentTest.log(Status.INFO, "UsersName = [" + strCurrentUser_Name + "] | LoadFactor = [" + strCurrentUser_LoadFactor + "] | VacationStatus = [" + strCurrentUser_VacationStatus + "]");
 			}
+
 		} catch (Exception e) {
+			oExtentTest.log(Status.FAIL, "Group = [" + strGroupName + "] Profile Tab is UnSuccessful");
 			e.printStackTrace();
 			throw e;
 		}
@@ -110,7 +113,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 			/*
 			 * Group name
 			 */
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("groups", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
 			strGroupName            = lhm_TestCase_Table_Data.get("GroupName");
 
 			GuidewireAutomate_Validation("Screen Header", ClaimCenter_Resuables_PO.Screen_Header, "equals", strGroupName);
@@ -137,10 +140,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 		try {
 
-			/*
-			 * Group name
-			 */
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("groups", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
 			strGroupName            = lhm_TestCase_Table_Data.get("GroupName");
 			String strRN_Region1 = lhm_TestCase_Table_Data.get("RN_Region1");
 			String strRN_Region2 = lhm_TestCase_Table_Data.get("RN_Region2");
@@ -257,6 +257,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 	}
 
 	public static void groupName_AllUsers_LoadFactor_Edit() throws Throwable {
+
 		strCurrentUser_Name = null;
 		String strGN_AllUsers_LoadFactor = lhm_TestCase_Table_Data.get("GN_AllUsers_LoadFactor");
 
@@ -292,30 +293,30 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 	}
 
-	public static void groupName_AllUsers_Edit_LoadFactor_VacationStatus() throws Throwable {
-
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("groups", strTestCaseName);
-
-		GuidewireAutomate("Edit_Button", Edit_Button, "click", " ");
-
-		groupName_AllUsers_LoadFactor_Edit();
-		groupName_AllUsers_VacationStatus_Edit();
-
-		GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", " ");
-
-	}
-
 	public static void groupName_User_Edit() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("groups", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
 		String strEditUser = lhm_TestCase_Table_Data.get("EditUser");
 
-		GuidewireAutomate("Edit_Button", Edit_Button, "click", " ");
+		GuidewireAutomate("Edit_Button", Edit_Button, "click", "click");
 
 		User_LoadFactor_Edit(strEditUser, strEditUser);
 		User_VacationStatus_Edit(strEditUser, strEditUser);
 
-		GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", " ");
+		GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", "click");
+
+	}
+
+	public static void groupName_AllUsers_Edit_LoadFactor_VacationStatus() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
+
+		GuidewireAutomate("Edit_Button", Edit_Button, "click", "click");
+
+		groupName_AllUsers_LoadFactor_Edit();
+		groupName_AllUsers_VacationStatus_Edit();
+
+		GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", "click");
 
 	}
 
@@ -333,7 +334,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 			if (strCurrentUser_Name.equalsIgnoreCase("Heidi Johnson")) {
 				By Groups_GroupName_CheckBox = By.xpath("//input[contains(@name,'GroupUsersLV-" + RowNo + "-_Checkbox')]");
-				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", " ");
+				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", "click");
 
 				By LoadFactor_Edit = By.xpath("//input[contains(@name,'GroupUsersLV-" + RowNo + "-LoadFactor')]");
 				GuidewireAutomate("Load Factor for" + strCurrentUser_Name, LoadFactor_Edit, "clearANDsendKeys", "50");
@@ -344,7 +345,8 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 	}
 
 	public static void LoadFactor_VacationStatus_EditZero() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AssignClaim", strTestCaseName);
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
 
 		String                  strGroupName                  = lhm_TestCase_Table_Data.get("GroupName");
 		String                  strCurrentUser_Name           = null;
@@ -406,12 +408,12 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 		}
 
 		if (bEditUser) {
-			GuidewireAutomate("Edit_Button", Edit_Button, "click", " ");
+			GuidewireAutomate("Edit_Button", Edit_Button, "click", "click");
 
 			// LoadFactor_Edit(lhmLoadFactor);
 			// VacationStatus_Edit(lhmVacationStatus);
 			ChangeLoadfactortoZero();
-			GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", " ");
+			GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", "click");
 			oListWebElement_Users          = getElements(Groups_GroupName_Users);
 			oListWebElement_loadFactor     = getElements(Groups_GroupName_LoadFactor);
 			oListWebElement_vacationStatus = getElements(Groups_GroupName_VacationStatus);
@@ -445,7 +447,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 			if (strCurrentUser_Name.equalsIgnoreCase("Heidi Johnson")) {
 				By Groups_GroupName_CheckBox = By.xpath("//input[contains(@name,'GroupUsersLV-" + RowNo + "-_Checkbox')]");
-				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", " ");
+				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", "click");
 
 				By LoadFactor_Edit = By.xpath("//input[contains(@name,'GroupUsersLV-" + RowNo + "-LoadFactor')]");
 				GuidewireAutomate("Load Factor for" + strCurrentUser_Name, LoadFactor_Edit, "clearANDsendKeys", "0");
@@ -456,7 +458,8 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 	}
 
 	public static void LoadFactor_VacationStatus_OnVacationandAssignBackUpUser() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AssignClaim", strTestCaseName);
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
 
 		String                  strGroupName                  = lhm_TestCase_Table_Data.get("GroupName");
 		String                  strCurrentUser_Name           = null;
@@ -517,13 +520,13 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 		}
 
 		if (bEditUser) {
-			GuidewireAutomate("Edit_Button", Edit_Button, "click", " ");
+			GuidewireAutomate("Edit_Button", Edit_Button, "click", "click");
 
 			// LoadFactor_Edit(lhmLoadFactor);
 			// VacationStatus_Edit(lhmVacationStatus);
 			Group_BackupUser();
 			GuidewireAutomate_Validation("Screen Header", ClaimCenter_Resuables_PO.Screen_Header, "equals", "Auto1 - TeamB");
-			GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", " ");
+			GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", "click");
 			oListWebElement_Users          = getElements(Groups_GroupName_Users);
 			oListWebElement_loadFactor     = getElements(Groups_GroupName_LoadFactor);
 			oListWebElement_vacationStatus = getElements(Groups_GroupName_VacationStatus);
@@ -558,7 +561,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 			if (strCurrentUser_Name.equalsIgnoreCase("Heidi Johnson")) {
 				By Groups_GroupName_CheckBox = By.xpath("//input[contains(@name,'GroupUsersLV-" + RowNo + "-_Checkbox')]");
-				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", " ");
+				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", "click");
 
 				By VacationStatus = By.xpath("//select[contains(@name,'GroupUsersLV-" + RowNo + "-VacationStatus')]");
 				GuidewireAutomate("VacationStatus for" + strCurrentUser_Name, VacationStatus, "selectByVisibleText", "On vacation");
@@ -588,13 +591,14 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 		GuidewireAutomate_Validation("Screen Header", G_GN_U_Edit_BackUpUser_SearchUser_Header, "contains", "Search Users");
 		GuidewireAutomate("SearchUser FirstName", G_GN_U_Edit_BackUpUser_SearchUser_FirstName, "clearANDsendKeys", "Andy");
 		GuidewireAutomate("SearchUser LastName", G_GN_U_Edit_BackUpUser_SearchUser_LastName, "clearANDsendKeys", "Applegate");
-		GuidewireAutomate("Search", G_GN_U_Edit_BackUpUser_SearchUser_Search, "clickAndwait", " ");
-		GuidewireAutomate("Select", G_GN_U_Edit_BackUpUser_SearchUser_Select, "clickAndwait", " ");
+		GuidewireAutomate("Search", G_GN_U_Edit_BackUpUser_SearchUser_Search, "clickAndwait", "click");
+		GuidewireAutomate("Select", G_GN_U_Edit_BackUpUser_SearchUser_Select, "clickAndwait", "click");
 
 	}
 
 	public static void LoadFactor_VacationStatus_OnVacationInActive() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AssignClaim", strTestCaseName);
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("groups");
 
 		String                  strGroupName                  = lhm_TestCase_Table_Data.get("GroupName");
 		String                  strCurrentUser_Name           = null;
@@ -655,12 +659,12 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 		}
 
 		if (bEditUser) {
-			GuidewireAutomate("Edit_Button", Edit_Button, "click", " ");
+			GuidewireAutomate("Edit_Button", Edit_Button, "click", "click");
 
 			// LoadFactor_Edit(lhmLoadFactor);
 			// VacationStatus_Edit(lhmVacationStatus);
 			ChangeVacationStatusInactive();
-			GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", " ");
+			GuidewireAutomate("Update_Button", Update_Button, "clickAndwait", "click");
 			oListWebElement_Users          = getElements(Groups_GroupName_Users);
 			oListWebElement_loadFactor     = getElements(Groups_GroupName_LoadFactor);
 			oListWebElement_vacationStatus = getElements(Groups_GroupName_VacationStatus);
@@ -695,7 +699,7 @@ public class CC_Admininstration_Groups extends SeleniumWebDriver_Commands implem
 
 			if (strCurrentUser_Name.equalsIgnoreCase("Heidi Johnson")) {
 				By Groups_GroupName_CheckBox = By.xpath("//input[contains(@name,'GroupUsersLV-" + RowNo + "-_Checkbox')]");
-				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", " ");
+				GuidewireAutomate("GroupName User Select", Groups_GroupName_CheckBox, "click", "click");
 
 				By VacationStatus = By.xpath("//select[contains(@name,'GroupUsersLV-" + RowNo + "-VacationStatus')]");
 				GuidewireAutomate("VacationStatus for" + strCurrentUser_Name, VacationStatus, "selectByVisibleText", "On vacation (Inactive)");
