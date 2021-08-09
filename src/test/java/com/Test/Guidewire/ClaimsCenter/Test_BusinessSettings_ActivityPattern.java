@@ -7,14 +7,13 @@ import com.Utils.Selenium.GW_GetDriver;
 import com.aventstack.extentreports.Status;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.Tab_Menu_Navigation;
-import com.pages.Guidewire.ClaimsCenter.BusinessSettings_ActivityPatternDetail;
 import com.pages.Guidewire.ClaimsCenter.BusinessSettings_ActivityPatterns;
 public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 	@AfterMethod
 
 	public void logoutTemp() throws Throwable {
-		// GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -414,7 +413,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -437,7 +436,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -460,7 +459,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -478,7 +477,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -498,7 +497,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -517,7 +516,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -537,7 +536,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -557,7 +556,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -577,7 +576,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -597,7 +596,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -617,7 +616,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -637,7 +636,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -657,7 +656,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -677,7 +676,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -697,7 +696,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 1 of Activity Patterns is displayed
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -718,7 +717,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -739,7 +738,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -760,7 +759,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -780,7 +779,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -801,7 +800,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -822,7 +821,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -842,7 +841,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -863,7 +862,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -884,7 +883,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -904,7 +903,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -924,7 +923,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -945,7 +944,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 
 	}
 
@@ -966,7 +965,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -985,7 +984,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1005,7 +1004,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 2 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 2 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	// Page 3 of Activity Patterns is displayed
@@ -1025,7 +1024,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1045,7 +1044,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1065,7 +1064,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1085,7 +1084,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1105,7 +1104,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1125,7 +1124,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1145,7 +1144,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1165,7 +1164,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1185,7 +1184,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1205,7 +1204,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1225,7 +1224,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1245,7 +1244,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1265,7 +1264,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1284,7 +1283,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1304,7 +1303,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 3 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 3 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	// Page 4 of Activity Patterns is displayed
@@ -1324,7 +1323,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1344,7 +1343,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page4  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1364,7 +1363,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page  4of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1384,7 +1383,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1404,7 +1403,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 1 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1424,7 +1423,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1443,7 +1442,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4 of Activity Patterns is displayed");
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1463,7 +1462,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1483,7 +1482,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1503,7 +1502,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1523,7 +1522,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page4  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1543,7 +1542,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1563,7 +1562,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page4  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1583,7 +1582,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1603,7 +1602,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 4 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 4  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	// Page 5 Activity pattern displayed
@@ -1624,7 +1623,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1644,7 +1643,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1664,7 +1663,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1684,7 +1683,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1704,7 +1703,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1724,7 +1723,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1744,7 +1743,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1764,7 +1763,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1784,7 +1783,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1804,7 +1803,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1824,7 +1823,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1844,7 +1843,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1864,7 +1863,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1884,7 +1883,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1904,7 +1903,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 5 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 5  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	// Page 6 Activity Pattern
@@ -1925,7 +1924,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1945,7 +1944,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1965,7 +1964,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -1985,7 +1984,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2005,7 +2004,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2025,7 +2024,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2045,7 +2044,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2065,7 +2064,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2085,7 +2084,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2105,7 +2104,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2125,7 +2124,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2145,7 +2144,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2165,7 +2164,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2185,7 +2184,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2205,7 +2204,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 6 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 6  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	// Page 7 Activity Pattern
@@ -2226,7 +2225,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2246,7 +2245,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2266,7 +2265,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2286,7 +2285,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7 of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2306,7 +2305,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2325,7 +2324,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2344,7 +2343,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2363,7 +2362,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2382,7 +2381,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2401,7 +2400,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	// -------------------------------------------------------------------
@@ -2421,7 +2420,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2440,7 +2439,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2459,7 +2458,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2478,7 +2477,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2497,7 +2496,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------------
@@ -2517,7 +2516,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 8 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 8  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2536,7 +2535,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 8 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 8  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2555,7 +2554,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 8 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 8  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2574,7 +2573,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 8 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 8  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2593,7 +2592,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 8 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 8  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2612,7 +2611,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 8 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 8  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 	@Test
@@ -2631,7 +2630,7 @@ public class Test_BusinessSettings_ActivityPattern extends GW_GetDriver {
 		// Page 7 of Activity Patterns is displayed
 		oExtentTest.log(Status.PASS, "Page 7  of Activity Patterns is displayed");
 
-		BusinessSettings_ActivityPatternDetail.VerifyActivityPatterns();
+		BusinessSettings_ActivityPatterns.VerifyActivityPatterns();
 	}
 
 }

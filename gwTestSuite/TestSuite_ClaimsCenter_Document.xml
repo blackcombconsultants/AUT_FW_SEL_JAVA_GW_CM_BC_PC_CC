@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="ClaimsCenter TestSuite">
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Smoke Test">
+		<classes>
+			<class name="com.Test.Guidewire.ClaimsCenter.Test_NewDocument">
+				<methods>
+					<include
+						name="AUT_NewDocument_CreateFromaTemplate_AcrobatSample" />
+					<include
+						name="AUT_NewDocument_CreateFromaTemplate_ExcelSample" />
+					<include
+						name="AUT_NewDocument_CreateFromaTemplate_GosuCSVSample" />
+					<include
+						name="AUT_NewDocument_CreateFromaTemplate_KYNoFaultApp1FCCI" />
+
+					<include name="AUT_NewDocument_UploadDocument_Txt" />
+					<include name="AUT_NewDocument_UploadDocument_PDF" />
+					<include name="AUT_NewDocument_UploadDocument_BitmapImage" />
+					<include
+						name="AUT_NewDocument_UploadDocument_MicrosoftExcelWorksheet" />
+					<include name="AUT_NewDocument_UploadDocument_GIFImage" />
+					<include name="AUT_NewDocument_UploadDocument_HTML" />
+					<include name="AUT_NewDocument_UploadDocument_JPEGImage" />
+					<include name="AUT_NewDocument_UploadDocument_MPEGVideo" />
+					<include
+						name="AUT_NewDocument_UploadDocument_OpenXMLspreadsheet" />
+					<include name="AUT_NewDocument_UploadDocument_PNGImage" />
+					<include
+						name="AUT_NewDocument_UploadDocument_OpenXMLpresentation" />
+					<include
+						name="AUT_NewDocument_UploadDocument_QuickTimeVideo" />
+					<include name="AUT_NewDocument_UploadDocument_TiffImage" />
+					<include name="AUT_NewDocument_UploadDocument_XML" />
+					<include
+						name="AUT_NewDocument_UploadDocument_MicrosoftAudio" />
+					<include name="AUT_NewDocument_UploadDocument_OCTETStream" />
+					<include name="AUT_NewDocument_UploadDocument_WaveAudio" />
+					<include name="AUT_NewDocument_UploadDocument_WordDocument" />
+
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
