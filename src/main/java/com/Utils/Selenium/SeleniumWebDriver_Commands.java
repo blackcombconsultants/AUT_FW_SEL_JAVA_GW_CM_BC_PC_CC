@@ -676,6 +676,15 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 						strActual = getFirstSelectedOption_Element(Locator);
 						bValidation = strActual.equalsIgnoreCase(strExpected);
 						break;
+					case "getOptionsEquals" :
+						strActual = getOptions_Element(Locator);
+						bValidation = strActual.equalsIgnoreCase(strExpected);
+						break;
+					case "getOptionscontains" :
+						strActual = getOptions_Element(Locator);
+						bValidation = strActual.contains(strExpected);
+						break;
+
 					case "valueEquals" :
 						strActual = getAttribute_Element(Locator, "value");
 						bValidation = strActual.equalsIgnoreCase(strExpected);
@@ -917,7 +926,23 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 	}
 
 	public static String getOptions_Element(By Locator) throws Throwable {
-		return new Select(getElement(Locator)).getOptions().toString();
+		String alloptions = null;
+		try {
+			oWebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(Locator));
+			Select           oSelectWebElement          = new Select(getElement(Locator));
+			List<WebElement> oListWebElement_getOptions = oSelectWebElement.getOptions();
+			for (WebElement oWebElementOption : oListWebElement_getOptions) {
+				alloptions = alloptions + "," + oWebElementOption.getText();
+			}
+		} catch (StaleElementReferenceException e) {
+			Select           oSelectWebElement          = new Select(getElement(Locator));
+			List<WebElement> oListWebElement_getOptions = oSelectWebElement.getOptions();
+			for (WebElement oWebElementOption : oListWebElement_getOptions) {
+				alloptions = alloptions + "," + oWebElementOption.getText();
+			}
+		}
+		return alloptions;
+
 	}
 
 	public static String getAttribute_Element(By Locator, String Attribute) throws Throwable {

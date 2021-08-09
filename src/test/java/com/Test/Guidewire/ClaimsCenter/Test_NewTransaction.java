@@ -19,7 +19,7 @@ public class Test_NewTransaction extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 		// ------>Adding Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 		ClaimCenter_Resuables.addingReserve();
@@ -37,7 +37,7 @@ public class Test_NewTransaction extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding manual check
 
@@ -57,7 +57,7 @@ public class Test_NewTransaction extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 		// ------->Recovery
 
 		Tab_Menu_Navigation.ccMenuNavigation("Recovery");

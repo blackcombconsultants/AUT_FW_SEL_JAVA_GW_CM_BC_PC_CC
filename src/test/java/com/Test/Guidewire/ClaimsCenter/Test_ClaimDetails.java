@@ -17,7 +17,7 @@ public class Test_ClaimDetails extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ---->Adding new contact
 		Tab_Menu_Navigation.ccMenuNavigation("Parties Involved Contacts");
@@ -31,7 +31,7 @@ public class Test_ClaimDetails extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
-		CC_NewClaimWizard.assignClaimProcess("New Claim", "NewclaimAuto");
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ---->Adding new contact
 		Tab_Menu_Navigation.ccMenuNavigation("Parties Involved Contacts");

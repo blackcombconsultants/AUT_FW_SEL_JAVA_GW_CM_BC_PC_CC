@@ -32,24 +32,15 @@ public interface ClaimCenter_Resuables_PO {
 	 * Headers
 	 */
 
-	final By Screen_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
-	final By AutoFirstandFinal_Header      = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Auto First and Final']");
-	final By NewPerson_Header              = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='New Person']");
-	final By EditReserves_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Edit Reserves']");
-	final By NewAutoRepairShop_Header      = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='New Auto Repair Shop']");
-	final By QuickClaimAuto_Header         = By.xpath("//div[contains(@id,'NewQuickClaimScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By PolicyGeneral_Header          = By.xpath("//div[contains(@id,'ClaimPolicyGeneralScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By SelectPolicy_Header           = By.xpath("//div[contains(@id,'ClaimPolicySelectPolicyScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
-	final By Summary_Header                = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Summary']");
-	final By Assign_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Assign']");
-	final By FinancialsTransactions_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Financials: Transactions']");
-	final By DuplicateClaims_Header        = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Duplicate Claims']");
-	final By SP_Header                     = By.xpath("//div[@id='FNOLWizard-FNOLWizard_FindPolicyScreen-ttlBar']//div[@class='gw-TitleBar--title']");
-
-	/*
-	 * services Rental
-	 */
-	final By Assign_Button = By.xpath("//div[contains(@id,'AssignmentPopupScreen_ButtonButton')]//div[@role='button']");
+	final By Screen_Header            = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
+	final By AutoFirstandFinal_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Auto First and Final']");
+	final By NewPerson_Header         = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='New Person']");
+	final By EditReserves_Header      = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Edit Reserves']");
+	final By NewAutoRepairShop_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='New Auto Repair Shop']");
+	final By QuickClaimAuto_Header    = By.xpath("//div[contains(@id,'NewQuickClaimScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By PolicyGeneral_Header     = By.xpath("//div[contains(@id,'ClaimPolicyGeneralScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By SelectPolicy_Header      = By.xpath("//div[contains(@id,'ClaimPolicySelectPolicyScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By Summary_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Summary']");
 
 	final By SR_RentalBeginDate = By.xpath("//input[contains(@name,'RentalInputGroup-RentalBeginDate')]");
 	final By SR_RentalEndDate   = By.xpath("//input[contains(@name,'RentalInputGroup-RentalEndDate')]");
@@ -83,18 +74,5 @@ public interface ClaimCenter_Resuables_PO {
 	final By ER_NewAvailableReserves = By.xpath("//tr[contains(@id,'EditableReservesLV-0-1')]//td[contains(@id,'NewAmount_Cell')]//input[contains(@name,'NewAmount')]");
 	final By ER_Comments             = By.xpath("//tr[contains(@id,'EditableReservesLV-0-1')]//td[contains(@id,'Comments_Cell')]//input[contains(@name,'Comments')]");
 	final By ER_Save                 = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Save']");
-
-	/*
-	 * Select Policy
-	 */
-	final By SelectPolicy    = By.xpath("//div[contains(@id,'SelectPolicyButton')]//div[@role='button']");
-	final By SP_PolicyNumber = By.xpath("//input[contains(@name,'PolicyNumber')]");
-	final By SP_Search       = By.xpath("//div[contains(@id,'SearchLinksInputSet-Search')]");
-	final By SP_Select       = By.xpath("//div[contains(@id,'PolicySearchResultLV-0-_Select')]");
-	/*
-	 * DuplicateClaims
-	 */
-	final By DuplicateClaims_ErrorMsg = By.xpath("//div[contains(@id,'NewClaimDuplicatesScreen')]//div[@class='gw-VerbatimWidget--inner']");
-	final By DuplicateClaims_Close    = By.xpath("//div[contains(@id,'CloseButton')]");
 
 }

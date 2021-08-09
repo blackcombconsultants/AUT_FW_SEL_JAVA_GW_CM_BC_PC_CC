@@ -175,7 +175,7 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 	public static void policyDetails() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
 
-		GuidewireAutomate_Validation("Policy Details", PI_PolicyDetails, "equals", "Policy Details");
+		GuidewireAutomate_Validation("Section", PI_PolicyDetails, "equals", "Policy Details");
 
 		GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_PD_TermType"));
 		GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearsendKeysTABTAB", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
@@ -191,11 +191,27 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 	public static void policyDetails_fetch() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
 
-		GuidewireAutomate_Validation("Policy Details", PI_PolicyDetails, "equals", "Policy Details");
+		GuidewireAutomate_Validation("Section", PI_PolicyDetails, "equals", "Policy Details");
 
-		GuidewireAutomate_Validation("Effective Date", PI_PD_EffectiveDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
+		GuidewireAutomate_Validation("Effective Date", PI_PD_EffectiveDate, "fetchValue", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
 		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
+		GuidewireAutomate_Validation("Written Date", PI_PD_WrittenDate, "fetchValue", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
+
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
+	public static void policyDetails_Rewrite() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
+
+		GuidewireAutomate_Validation("Section", PI_PolicyDetails, "equals", "Policy Details");
+
+		GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_PD_TermType"));
+		GuidewireAutomate_Validation("Term Number", PI_PD_TermNumber, "equals", "2");
+		GuidewireAutomate_Validation("Effective Date", PI_PD_EffectiveDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
 		GuidewireAutomate_Validation("Written Date", PI_PD_WrittenDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
+		GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "fetch", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -204,7 +220,7 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 	public static void affinityGroup() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
 
-		GuidewireAutomate_Validation("Affinity Group", PI_AffinityGroup, "equals", "Affinity Group");
+		GuidewireAutomate_Validation("Section", PI_AffinityGroup, "equals", "Affinity Group");
 
 		GuidewireAutomate("AffinityGroup_Name", PI_AG_Name, "sendKeys", lhm_TestCase_Table_Data.get("PI_AG_Name"));
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
@@ -214,7 +230,7 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 	public static void producerOfRecord() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
 
-		GuidewireAutomate_Validation("Producer of Record", PI_ProducerofRecord, "equals", "Producer of Record");
+		GuidewireAutomate_Validation("Section", PI_ProducerofRecord, "equals", "Producer of Record");
 
 		GuidewireAutomate_Validation("Organization", PI_PR_Organization, "valueEquals", lhm_TestCase_Table_Data.get("PI_PR_Organization"));
 		GuidewireAutomate_Validation("ProducerCode", PI_PR_ProducerCode, "FirstSelectedOptionEquals", lhm_TestCase_Table_Data.get("PI_PR_ProducerCode"));
@@ -225,7 +241,7 @@ public class PersonalAuto_PolicyInfo extends SeleniumWebDriver_Commands implemen
 	public static void underWritingCompany() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo", strTestCaseName);
 
-		GuidewireAutomate_Validation("Underwriting Companies", PI_UnderwritingCompanies, "equals", "Underwriting Companies");
+		GuidewireAutomate_Validation("Section", PI_UnderwritingCompanies, "equals", "Underwriting Companies");
 
 		GuidewireAutomate("UC Name", PI_UC_Name, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_UC_Name"));
 

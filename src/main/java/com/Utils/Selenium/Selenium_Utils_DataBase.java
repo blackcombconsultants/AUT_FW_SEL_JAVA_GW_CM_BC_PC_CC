@@ -151,4 +151,23 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 		}
 
 	}
+
+	public static LinkedHashMap<String, String> getData_ClaimsCenter(String strTable) throws Throwable {
+
+		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
+		oConnection = getConnection("Fillo", pTestDataFile_ClaimsCenter);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static void UpdateData_ClaimsCenter(String strTable, String strcolumn, String strValue) throws Throwable {
+
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
+		System.out.println(strUpdateQuery);
+		oConnection = getConnection("Fillo", pTestDataFile_ClaimsCenter);
+		oConnection.executeUpdate(strUpdateQuery);
+		oConnection.close();
+
+	}
+
 }
