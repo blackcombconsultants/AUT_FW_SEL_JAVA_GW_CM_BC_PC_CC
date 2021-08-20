@@ -1,5 +1,6 @@
 package com.pages.Guidewire.ClaimsCenter;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -11,6 +12,47 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 	public ClaimCenter_ClaimExposure(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
+
+	private static By Exposure_Header = By.xpath(
+			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Exposures')]");
+	private static By Exposure_Vehicle = By
+			.xpath("//div[contains(@id,'ExposuresLV-0-Type')]//div[@class='gw-RangeValue']");
+	private static By FirstPartyVehicle_Header = By.xpath(
+			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'1st Party Vehicle')]");
+
+	private static By Edit_Button = By.xpath("//div[contains(@id,'Edit')]//div[@role='button']");
+
+	private static By EditIncident_IncidentOverview = By
+			.xpath("//div[contains(@id,'VehicleDamageDV-7') and @role='group']//div[text()='Incident Overview']");
+	private static By IncidentOverview_button = By
+			.xpath("//div[contains(@id,'Incident-Vehicle_IncidentMenuIcon')]//div[@class='gw-action--expand-button']");
+
+	private static By IncidentOverview_EditIncident = By.xpath(
+			"//div[@class='gw-action--inner gw-hasDivider']//div[@class='gw-label' and text()='Edit Incident Details...']");
+	private static By VehicleIncident_Header = By.xpath(
+			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Vehicle Incident')]");
+
+	private static By DriverofInvolvedVehicle = By
+			.xpath("//div[contains(@id,'VehicleIncidentDV-3')]//div[@class='gw-label gw-boldLabel']");
+
+	private static By Drivername = By.xpath("//select[contains(@name,'Driver_Picker')]");
+	private static By RelationToInsured = By.xpath("//select[contains(@name,'RelationToInsured')]");
+	private static By Damage_Description = By
+			.xpath("//div[contains(@id,'Description_Input')]//div[@class='gw-label gw-boldLabel']");
+	private static By Damage_Text = By.xpath(
+			"//div[contains(@id,'VehicleIncidentDV-Description')]//textarea[contains(@name,'VehicleIncidentDV-Description')]");
+	private static By Details = By.xpath("//div[contains(@id,'VehicleIncidentDV-10')]");
+	private static By Details_lossoccured = By.xpath("//select[contains(@name,'LossOccured')]");
+
+	private static By Ok_Button = By.xpath("//div[contains(@id,'Update')]//div[@role='button']");
+	private static By Update_Button = By
+			.xpath("//div[contains(@id,'ExposureDetailScreen-Update')]//div[@role='button']");
+	private static By FirstPartyVehicle_Header2 = By.xpath(
+			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'1st Party Vehicle')]");
+	private static By Validation_Header = By.xpath(
+			"//div[@class='gw-action--inner gw-hasDivider']//div[@class='gw-label' and text()='Validation Results']");
+	private static By NO_Error = By.xpath("//div[@class='gw-message']");
+	private static By Clear_Button = By.xpath("//div[contains(@id,'ClearButton')]//div[@role='button']");
 
 	public static void ChoosebyCoverageType_Exposure(String value) throws Throwable {
 		switch (value) {
@@ -98,7 +140,7 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 					"Element is Displayed");
 			GuidewireAutomate_Validation("PIPWashington", ChoosebyCoverageType_P_PIPWashington, "isDisplayed",
 					"Element is Displayed");
-			
+
 			break;
 
 		case "R":
@@ -132,29 +174,89 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 		}
 
 	}
-	
-	public static void ChoosebyCoverage_Collison() throws Throwable
-	{
+
+	public static void ChoosebyCoverage_Collison() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
 				strTestCaseName);
 		GuidewireAutomate("CBC_Vehicle", CBC_Vehicle, "moveToElement", " ");
 		GuidewireAutomate("CBC_Vehicle", CBC_Vehicle_Collision, "click", " ");
 		GuidewireAutomate_Validation("Screen Header", CBC_Vehicle_Header, "equals", "New Exposure - Vehicle");
-        String insuredName=ClaimCenter_Resuables.infoBar("InsuredName");
+		String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
 		GuidewireAutomate("Claimant", CBC_V_C_Claimant, "selectByVisibleText", insuredName);
 		GuidewireAutomate("CBC_Vehicle", CBC_V_C_IncidentOverviewVehicle, "clickAndwait", " ");
 		GuidewireAutomate("CBC_Vehicle", CBC_V_C_IncidentOverviewEditIncidentDetails, "clickAndwait", " ");
 		GuidewireAutomate_Validation("Screen Header", CBC_VehicleIncident_Header, "equals", "Vehicle Incident");
-		GuidewireAutomate("DamageDescription", CBC_VehicleIncident_DamageDescription, "clearANDsendKeys", lhm_TestCase_Table_Data.get("DamageDescription"));
-		GuidewireAutomate("LossOccurred", CBC_VehicleIncident_LossOccurred, "selectByVisibleText", lhm_TestCase_Table_Data.get("LossOccurred"));
+		GuidewireAutomate("DamageDescription", CBC_VehicleIncident_DamageDescription, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("DamageDescription"));
+		GuidewireAutomate("LossOccurred", CBC_VehicleIncident_LossOccurred, "selectByVisibleText",
+				lhm_TestCase_Table_Data.get("LossOccurred"));
 		GuidewireAutomate("DriverName", CBC_VehicleIncident_DriverName, "selectByVisibleText", insuredName);
 		GuidewireAutomate("Ok", Ok, "click", " ");
 		GuidewireAutomate_Validation("Screen Header", CBC_Vehicle_Header, "equals", "New Exposure - Vehicle");
-        GuidewireAutomate("Update_Button", Update_Button, "click", " ");
-	    GuidewireAutomate_Validation("Expsoure_Header", Expsoure_Header, "equals", "Exposures");
+		GuidewireAutomate("Update_Button", Update_Button, "click", " ");
+		GuidewireAutomate_Validation("Expsoure_Header", Expsoure_Header, "equals", "Exposures");
 
 	}
-	
-	
+
+	public static void Validateclaimexposure() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Validateclaimexposure",
+				strTestCaseName);
+
+		try {
+			GuidewireAutomate_Validation("ScreenHeader", Exposure_Header, "equals", "Exposures");
+
+			GuidewireAutomate("Exposure Vehicle", Exposure_Vehicle, "clickAndwait", "click");
+
+			GuidewireAutomate_Validation("FirstPartyVehicle", FirstPartyVehicle_Header, "contains",
+					"(1) 1st Party Vehicle");
+			GuidewireAutomate("Edit", Edit_Button, "clickAndwait", "click");
+			Thread.sleep(2000);
+			GuidewireAutomate("Section", EditIncident_IncidentOverview, "moveToElement", "Incident Overview");
+			GuidewireAutomate_Validation("Section", EditIncident_IncidentOverview, "contains", "Incident Overview");
+
+			GuidewireAutomate("IncidentOverviewbutton", IncidentOverview_button, "clickAndwait", "click");
+			GuidewireAutomate("IncidentOverview_EditIncident", IncidentOverview_EditIncident, "clickAndwait", "click");
+
+			GuidewireAutomate_Validation("ScreenHeader", VehicleIncident_Header, "contains", "Vehicle Incident");
+
+			GuidewireAutomate("Section", DriverofInvolvedVehicle, "moveToElement", "Driver of InvolvedVehicle");
+			GuidewireAutomate_Validation("Section", DriverofInvolvedVehicle, "equals", "Driver of Involved Vehicle");
+
+			GuidewireAutomate("Drivername", Drivername, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("Drivername"));
+			GuidewireAutomate_Validation("RelationToInsured", RelationToInsured, "contains", "Self/Insured");
+
+			GuidewireAutomate("Section", Damage_Description, "moveToElement", " Damage Description");
+			GuidewireAutomate_Validation("Section", Damage_Description, "contains", "Damage Description");
+
+			GuidewireAutomate("Damage Value", Damage_Text, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("Damage_Value"));
+
+			GuidewireAutomate("Section", Details, "moveToElement", "Details");
+			GuidewireAutomate_Validation("Section", Details, "contains", "Details");
+
+			GuidewireAutomate("Details_lossoccured", Details_lossoccured, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("Details_lossoccured"));
+			GuidewireAutomate("Ok", Ok_Button, "clickAndwait", "click");
+
+			GuidewireAutomate("Update", Update_Button, "clickAndwait", "click");
+			GuidewireAutomate_Validation("FirstPartyVehicle", FirstPartyVehicle_Header2, "contains",
+					"(1) 1st Party Vehicle");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+	}
+
+	public static void ValidationResults() throws Throwable {
+
+		GuidewireAutomate_Validation("Validation Header", Validation_Header, "equals", "Validation Results");
+		GuidewireAutomate_Validation("No Validation Error", NO_Error, "equals", "No Validation errors.");
+		GuidewireAutomate("Clear", Clear_Button, "clickAndwait", "click");
+		Thread.sleep(2000);
+
+	}
 
 }
