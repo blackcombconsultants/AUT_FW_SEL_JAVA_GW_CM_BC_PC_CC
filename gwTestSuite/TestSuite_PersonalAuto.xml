@@ -15,13 +15,13 @@
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_AccountCreation">
 				<methods>
-					<exclude name="AUT_PA_PC_Account_CreateNewPersonAccount" />
+					<exclude name="AUT_PA_PC_Account_CreateNewCompanyAccount" />
 				</methods>
 			</class>
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
 				<methods>
-					<exclude
+					<include
 						name="AUT_PA_PC_NewSubmission_NewAccount_NewSubmission" />
 					<exclude
 						name="AUT_PA_PC_NewSubmission_SearchAccount_NewSubmission" />
@@ -149,7 +149,7 @@
 			<class
 				name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Rewrite_NewTerm">
 				<methods>
-					<include name="AUT_PA_PC_Rewrite_NewTerm_01" />
+					<exclude name="AUT_PA_PC_Rewrite_NewTerm_01" />
 				</methods>
 			</class>	<!-- class -->
 

@@ -9,7 +9,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
 
 public class GW_PC_AccountCreation extends GW_GetDriver {
 
-	@Test(enabled = false)
+	@Test
 	public void AUT_PA_PC_Account_CreateNewCompanyAccount() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -19,7 +19,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void AUT_PA_PC_Account_CreateNewPersonAccount() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter();
@@ -36,6 +36,7 @@ public class GW_PC_AccountCreation extends GW_GetDriver {
 		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.searchPerson();
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
+		 
 
 	}
 
