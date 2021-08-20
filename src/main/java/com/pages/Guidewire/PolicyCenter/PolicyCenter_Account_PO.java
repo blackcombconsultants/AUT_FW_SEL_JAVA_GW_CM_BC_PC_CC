@@ -8,7 +8,7 @@ public interface PolicyCenter_Account_PO {
 	 * search account information
 	 */
 
-	final By SA_CompanyName = By.xpath("//div[text()='Company Name']/following-sibling::div//input");
+	final By SA_CompanyName = By.xpath("//input[contains(@name,'GlobalContactNameInputSet-Name')]");
 	final By SA_CompanyNameExactMatch = By.xpath(
 			"//div[text()='Company name is an exact match']/following-sibling::div//input[@type='checkbox' and contains(@name,'CompanyNameExact')]");
 
@@ -68,7 +68,7 @@ public interface PolicyCenter_Account_PO {
 	final By CA_A_Addresstype = By.xpath("//select[contains(@name,'AddressType')]");
 	final By CA_A_Description = By.xpath("//input[contains(@name,'AddressDescription')]");
 
-	final By CA_OrganizationType = By.xpath("//select[contains(@name,'PrimaryLanguage')]");
+	final By CA_OrganizationType = By.xpath("//select[contains(@name,'CreateAccountDV-OrgType')]");
 	final By CA_DescriptionofBusiness = By.xpath("//input[contains(@name,'Nickname')]");
 
 	/*
