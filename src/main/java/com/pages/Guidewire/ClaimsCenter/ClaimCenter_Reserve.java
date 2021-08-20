@@ -386,7 +386,7 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 			GuidewireAutomate_Validation("Warnings Title", EditReserve_ValidationResults_Warning, "equals",
 					"Warnings:");
 			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
-					"Gross incurred on exposure (2) 1st Party Vehicle - PGNUtwMRX Automation ($2,500.00)')]");
+					"Gross incurred on exposure (2) 1st Party Vehicle - PGNUtwMRX Automation ($2,500.00)");
 
 			String strChoosebyCoverage_Vehicle = lhm_TestCase_Table_Data.get("BI_IV_Select");
 
@@ -394,7 +394,32 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 					"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs')]//div[@class='gw-message' and contains(text(),'Gross incurred for "
 							+ strChoosebyCoverage_Vehicle + "')]");
 			GuidewireAutomate_Validation("Warnings Second", ValidationResults_Warning_Second, "contains",
-					"Gross incurred for "+strChoosebyCoverage_Vehicle+" ($2,500.00)')]\");\n" + "");
+					"Gross incurred for " + strChoosebyCoverage_Vehicle + " ($2,500.00)");
+			GuidewireAutomate("Clear", ValidationResults_ClearButton, "clickAndwait", "clickAndwait");
+			GuidewireAutomate("Save", Reserve_Save, "clickAndwait", "NA");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
+
+	public static void EditReserves_ValidationResultsElectronicEquipment() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asBasicInfo");
+			String strChoosebyCoverage_Vehicle = lhm_TestCase_Table_Data.get("BI_IV_Select");
+
+			GuidewireAutomate_Validation("ValidationResults Header", EditReserve_ValidationResults, "equals",
+					"Validation Results");
+			GuidewireAutomate_Validation("Warnings Title", EditReserve_ValidationResults_Warning, "equals",
+					"Warnings:");
+
+			By ValidationResults_Warning_First = By.xpath(
+					"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs')]//div[@class='gw-message' and contains(text(),'Gross incurred for "
+							+ strChoosebyCoverage_Vehicle + "')]");
+			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
+					"Gross incurred for 2000 Honda Civic");
+
 			GuidewireAutomate("Clear", ValidationResults_ClearButton, "clickAndwait", "clickAndwait");
 			GuidewireAutomate("Save", Reserve_Save, "clickAndwait", "NA");
 
@@ -493,7 +518,7 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 			int rowNum = Integer.parseInt(lhm_TestCase_Table_Data.get("rowNum"));
 			int lastrowNum = Integer.parseInt(lhm_TestCase_Table_Data.get("LastRow"));
 
-			for (int i = rowNum; i <=lastrowNum; i++) {
+			for (int i = rowNum; i <= lastrowNum; i++) {
 				By FinancialsTransactions_CreateDate = By.xpath(
 						"//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-" + i + "-CreateDate')]");
 				By FinancialsTransactions_Amount = By.xpath(
@@ -558,7 +583,7 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 
 				if (i == 14) {
 					GuidewireAutomate("NextPage", FinancialTranscations_NextPage, "clickAndwait", "Click");
-					Thread.sleep(2000);
+					Thread.sleep(3000);
 					break;
 				}
 
@@ -572,9 +597,11 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 	public static void FinancialTransaction_NextPageValidation() throws Throwable {
 		GuidewireAutomate_Validation("FinancialsTransactions Header", FinancialTranscations_Header, "equals",
 				"Financials: Transactions");
+		int lastrowNum = Integer.parseInt(lhm_TestCase_Table_Data.get("LastRow"));
 
-		for (int i = 0; i < 1; i++) {
-			int lastrownum = 14;
+		int lastrownum = 14;
+
+		for (int i = 0; i < lastrowNum - 14; i++) {
 			lastrownum++;
 			By FinancialsTransactions_CreateDate = By.xpath(
 					"//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-" + i + "-CreateDate')]");

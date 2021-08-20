@@ -53,11 +53,35 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 					"Validation errors were found in an object of type ReserveSet that was auto-created by rules:");
 			String strChoosebyCoverage_Vehicle = lhm_TestCase_Table_Data.get("BI_IV_Select");
 
-			By ValidationResults_Warning_Second = By.xpath(
-					"//div[contains(@id,'WebMessageWorksheetScreen')]//div[contains(text(),'Gross incurred for "+strChoosebyCoverage_Vehicle+"')]");
+			By ValidationResults_Warning_Second = By
+					.xpath("//div[contains(@id,'WebMessageWorksheetScreen')]//div[contains(text(),'Gross incurred for "
+							+ strChoosebyCoverage_Vehicle + "')]");
 
 			GuidewireAutomate_Validation("Warnings Second", ValidationResults_Warning_Second, "contains",
 					"Validation errors were found in an object of type ReserveSet that was auto-created by rules:");
+			GuidewireAutomate("Clear Button", ValidationResults_ClearButton, "clickAndwait", "clickAndwait");
+			GuidewireAutomate("Update Button", NewExposureUpdateButton, "clickAndwait", "clickAndwait");
+			GuidewireAutomate_Validation("Exposure Header", ExposureHeader, "equals", "Exposures");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
+
+	public static void ValidationResults_ElectronicEquipment() throws Throwable {
+
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asBasicInfo");
+			String strChoosebyCoverage_Vehicle = lhm_TestCase_Table_Data.get("BI_IV_Select");
+
+			GuidewireAutomate_Validation("ValidationResults Header", ValidationResults_Header, "equals",
+					"Validation Results");
+			GuidewireAutomate_Validation("Warnings Title", ValidationResults_WarningTitle, "equals", "Warnings:");
+			By ValidationResults_Warning_First = By
+					.xpath("//div[contains(@id,'WebMessageWorksheetScreen')]//div[contains(text(),'Gross incurred for "+strChoosebyCoverage_Vehicle+"')]");
+			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
+					"Validation errors were found in an object of type ReserveSet that was auto-created by rules:");
+
 			GuidewireAutomate("Clear Button", ValidationResults_ClearButton, "clickAndwait", "clickAndwait");
 			GuidewireAutomate("Update Button", NewExposureUpdateButton, "clickAndwait", "clickAndwait");
 			GuidewireAutomate_Validation("Exposure Header", ExposureHeader, "equals", "Exposures");
