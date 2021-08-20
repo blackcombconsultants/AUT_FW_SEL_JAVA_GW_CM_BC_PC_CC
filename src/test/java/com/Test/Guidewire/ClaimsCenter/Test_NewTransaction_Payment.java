@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.Tab_Menu_Navigation;
+import com.pages.Guidewire.ClaimsCenter.CC_ChooseCoverage;
 import com.pages.Guidewire.ClaimsCenter.CC_NewClaimWizard;
 import com.pages.Guidewire.ClaimsCenter.CC_NewTransaction_Check;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_ClaimExposure;
@@ -60,3883 +61,4337 @@ public class Test_NewTransaction_Payment {
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Autobody() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
 
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Autoparts() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
 
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Glass() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
 
-	
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Rental() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Salvage() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Settlement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Towing() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Vehicleappraisal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
 
-	
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Autobody() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Autoparts() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Glass() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-			}
-	
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Rental() throws Throwable {
-	
-	// login to ClaimCenter
-			GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-			// ----->Assign Claim
-			CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-			// ----->Click on Action-Reserve
-			Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-			// ---> Verify whether a default reserve is created
-			ClaimCenter_Reserve.verify_DefaultReserve();
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-			ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-			ClaimCenter_Reserve.EditReserves_Save();
-			// verifying financial transaction //
-			// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-			Thread.sleep(2000);
-			Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-			ClaimCenter_ClaimExposure.Validateclaimexposure();
-			Thread.sleep(2000);
-			Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-			ClaimCenter_ClaimExposure.ValidationResults();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-			// ----->Click on Action-Check
-			Tab_Menu_Navigation.ccMenuNavigation("Check");
-			CC_NewTransaction_Check.Enterpayeeinformation();
-			CC_NewTransaction_Check.Enterpaymentinformation();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-			// CC_NewTransaction_Check.Button();
-			CC_NewTransaction_Check.Setcheckinstructions();
-			Tab_Menu_Navigation.ccMenuNavigation("Check");
-			CC_NewTransaction_Check.Enterpayeeinformation();
-			CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-			// CC_NewTransaction_Check.Button();
-			CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Settlement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Towing() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ClaimCost_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 
 	}
-	
- 
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseAO_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseAO_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseAO_Salvage() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseAO_Vehicleappraisal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseAO_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseDCC_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseDCC_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Collision_ExpenseDCC_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Autobody() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Autoparts() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Glass() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Rental() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Salvage() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Settlement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Towing() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Vehicleappraisal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_UnspecifiedCostType_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Autobody() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Autoparts() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Glass() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Rental() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Settlement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Towing() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ClaimCost_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
-	
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseAO_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseAO_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseAO_Salvage() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseAO_Vehicleappraisal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseAO_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
-	public void AUT_Payment_CollisiAUT_Payment_Comprehensive_ExpenseDCC_UnspecifiedCostCategoryon_ClaimCost_Reimbursement() throws Throwable {
+	public void AUT_Payment_CollisiAUT_Payment_Comprehensive_ExpenseDCC_UnspecifiedCostCategoryon_ClaimCost_Reimbursement()
+			throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseDCC_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseDCC_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_Comprehensive_ExpenseDCC_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_UnspecifiedCostType_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_UnspecifiedCostType_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_UnspecifiedCostType_Rental() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ClaimCost_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ClaimCost_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ClaimCost_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ClaimCost_Rental() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ExpenseAO_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_RentalReimbursement_ExpenseDCC_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->
+		// RentalReimbursement
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage RentalReimbursement");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.ValidationResults();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_UnspecifiedCostType_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_UnspecifiedCostType_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_UnspecifiedCostType_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_UnspecifiedCostType_Towing() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ClaimCost_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ClaimCost_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ClaimCost_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ClaimCost_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ClaimCost_Towing() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ExpenseAO_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_TowingandLabor_ExpenseDCC_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage -> Vehicle ->TowingandLabor
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage TowingAndLabor");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure TowingandLabor
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Autobody() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Autoparts() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Glass() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Other() throws Throwable {
@@ -3945,6 +4400,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3978,6 +4447,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Reimbursement() throws Throwable {
@@ -3986,6 +4456,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4019,6 +4503,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Rental() throws Throwable {
@@ -4027,6 +4512,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4060,6 +4559,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Salvage() throws Throwable {
@@ -4068,6 +4568,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4101,6 +4615,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Settlement() throws Throwable {
@@ -4109,6 +4624,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4142,6 +4671,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Towing() throws Throwable {
@@ -4150,6 +4680,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4183,6 +4727,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Vehicleappraisal() throws Throwable {
@@ -4191,6 +4736,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4224,6 +4783,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Vehicleinspection() throws Throwable {
@@ -4232,6 +4792,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4265,6 +4839,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_UnspecifiedCostCategory() throws Throwable {
@@ -4273,6 +4848,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4306,6 +4895,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Autobody() throws Throwable {
@@ -4314,6 +4904,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4347,6 +4951,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Autoparts() throws Throwable {
@@ -4355,6 +4960,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4388,6 +5007,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Glass() throws Throwable {
@@ -4396,6 +5016,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4429,6 +5063,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Labor() throws Throwable {
@@ -4437,6 +5072,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4470,6 +5119,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Legal() throws Throwable {
@@ -4478,6 +5128,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4511,6 +5175,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Other() throws Throwable {
@@ -4519,6 +5184,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4552,6 +5231,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Reimbursement() throws Throwable {
@@ -4560,6 +5240,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4593,6 +5287,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Rental() throws Throwable {
@@ -4601,6 +5296,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4634,6 +5343,7 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Settlement() throws Throwable {
@@ -4642,6 +5352,20 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4675,129 +5399,175 @@ public class Test_NewTransaction_Payment {
 		// CC_NewTransaction_Check.Button();
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Towing() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ClaimCost_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.AllClaimant();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		CC_ChooseCoverage.Exposures_Validation();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+
 	@Test
 
 	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Legal() throws Throwable {
@@ -4806,7 +5576,1935 @@ public class Test_NewTransaction_Payment {
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Other() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Salvage() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Vehicleappraisal() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_Collision_CAUT_Payment_CollisionLimitedCoverage_ExpenseDCC_LegallaimCost_Reimbursement()
+			throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_Vehicleinspection() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Collision Limited Coverage
+
+		Tab_Menu_Navigation.ccMenuNavigation("Collision Limited Coverage");
+
+		// Adding NewExposure Collision Limited Coverage
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_CaseManagement() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_DeathBenefits() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Labor() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Legal() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment__DeathDisabilityBenefit_UnspecifiedCostType_LostWages() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_ColliAUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Othersion_ClaimCost_Reimbursement()
+			throws Throwable {
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Reimbursement() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Salvage() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Settlement() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Vehicleappraisal() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Vehicleinspection() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_UnspecifiedCostCategory() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Deathbenefits() throws Throwable {
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Labor() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Legal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_LostWages() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Other() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Reimbursement() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Settlement() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Vehicleinspection() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_CaseManagement() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Legal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Other() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Salvage() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Vehicleappraisal() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Vehicleinspection() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Legal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Other() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+
+	@Test
+	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Vehicleinspection() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4841,1602 +7539,3726 @@ public class Test_NewTransaction_Payment {
 		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
 
-	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Other() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Autoparts() throws Throwable {
 
-	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Salvage() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Labor() throws Throwable {
 
-	public void AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Vehicleappraisal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Legal() throws Throwable {
 
-	public void AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Other() throws Throwable {
 
-	public void AUT_Payment_Collision_CAUT_Payment_CollisionLimitedCoverage_ExpenseDCC_LegallaimCost_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Reimbursement() throws Throwable {
 
-	public void AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Salvage() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Settlement() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_CaseManagement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Vehicleappraisal() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_DeathBenefits() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_UnspecifiedCostType_Vehicleinspection() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Labor() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_UnspecifiedCostCategory() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Legal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_Autoparts() throws Throwable {
 
-	public void AUT_Payment__DeathDisabilityBenefit_UnspecifiedCostType_LostWages() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_Labor() throws Throwable {
 
-	public void AUT_Payment_ColliAUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Othersion_ClaimCost_Reimbursement() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AAUT_Payment_ElectronicEquipment_ClaimCost_Legal() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Reimbursement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_Other() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Salvage() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_Reimbursement() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Settlement() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_Salvage() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Vehicleappraisal() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_Settlement() throws Throwable {
 
-	public void AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Vehicleinspection() throws Throwable {
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_UnspecifiedCostCategory() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ClaimCost_Vehicleinspection() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
+	public void AUT_Payment_ElectronicEquipment_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
 
-	public void  AUT_Payment_DeathDisabilityBenefit_ClaimCost_Deathbenefits() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Labor() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseAO_Legal() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-	}
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-	@Test
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Legal() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
-
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
-
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
-
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
-
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
-
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_LostWages() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseAO_Other() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Other() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseAO_Salvage() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Reimbursement() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseAO_Vehicleappraisal() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Settlement() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ClaimCost_Vehicleinspection() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseDCC_Legal() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseDCC_Other() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_CaseManagement() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_ElectronicEquipment_ExpenseDCC_Vehicleinspection() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Legal() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-	}
-	
-	@Test
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Other() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
-
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
-
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
-
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
-
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
-
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Salvage() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Autobody() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Vehicleappraisal() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Autoparts() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Vehicleinspection() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_DeathBenefits() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_EmergencyServices() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Legal() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Glass() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-	}
-	
-	@Test
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Other() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
 
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
-
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
-
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
-
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
-
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
 	@Test
-	public void AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Vehicleinspection() throws Throwable {
-		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Labor() throws Throwable {
 
 		// login to ClaimCenter
-				GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-				// ----->Assign Claim
-				CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
-				// ----->Click on Action-Reserve
-				Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-				// ---> Verify whether a default reserve is created
-				ClaimCenter_Reserve.verify_DefaultReserve();
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
 
-				ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		CC_ChooseCoverage.NewExposureValidation();
 
-				ClaimCenter_Reserve.EditReserves_Save();
-				// verifying financial transaction //
-				// CC_NewTransaction_Check.FinancialsTransactions();
+		CC_ChooseCoverage.AllClaimant();
 
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("Exposures");
-				ClaimCenter_ClaimExposure.Validateclaimexposure();
-				Thread.sleep(2000);
-				Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
-				ClaimCenter_ClaimExposure.ValidationResults();
+		CC_ChooseCoverage.VehicleEditIncident();
 
-				// ----->Click on Action-Check
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
-				Tab_Menu_Navigation.ccMenuNavigation("Check");
-				CC_NewTransaction_Check.Enterpayeeinformation();
-				CC_NewTransaction_Check.Enterpaymentinformation();
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
 
-				// CC_NewTransaction_Check.Button();
-				CC_NewTransaction_Check.Setcheckinstructions();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Legal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
 	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_LifetimeBenefits() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_LostWages() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Medical() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Other() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Reimbursement() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Rental() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Salvage() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Settlement() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Towing() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Vehicleappraisal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Vehicleinspection() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_AutoBody() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Autoparts() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_DeathBenefits() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_EmergencyServices() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Glass() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Labor() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Legal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_LifetimeBenefits() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_LostWages() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Medical() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Other() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Reimbursement() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Rental() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Settlement() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Towing() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ClaimCost_Vehicleinspection() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseAO_UnspecifiedCostCategory() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Legal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Other() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Salvage() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Vehicleappraisal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Vehicleinspection() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_UnspecifiedCostCategory() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Legal() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Other() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+	@Test
+	public void AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Vehicleinspection() throws Throwable {
+
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		/// Click on "Actions" -> Choose by Coverage ->Vehicle---->Liability Bodily Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// verifying financial transaction //
+		// CC_NewTransaction_Check.FinancialsTransactions();
+
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("Exposures");
+		ClaimCenter_ClaimExposure.Validateclaimexposure();
+		Thread.sleep(2000);
+		Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+		ClaimCenter_ClaimExposure.ValidationResults();
+
+		// ----->Click on Action-Check
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+		Tab_Menu_Navigation.ccMenuNavigation("Check");
+		CC_NewTransaction_Check.Enterpayeeinformation();
+		CC_NewTransaction_Check.Enterpaymentinformation();
+
+		// CC_NewTransaction_Check.Button();
+		CC_NewTransaction_Check.Setcheckinstructions();
+	}
+}

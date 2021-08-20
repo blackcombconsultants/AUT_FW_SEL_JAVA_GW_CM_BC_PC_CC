@@ -16,6 +16,7 @@ public class Test_NewTransaction_Reserve {
 	public void AUT_CollisionReserves_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		Thread.sleep(10000);
 
 		// ----->Assign Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
@@ -31,8 +32,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.EditReserves_Save();
 
 		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
-
+		// ---->Verify Financials Transactions
 		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+
 	}
 
 	@Test
@@ -52,11 +55,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
 		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
 
 		ClaimCenter_Reserve.FinancialsTransactions_Verification();
-		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
 	}
 
 	@Test
@@ -76,7 +78,7 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
 		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
 		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
@@ -99,7 +101,7 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
 		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
 		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
@@ -123,6 +125,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
 
 	}
 
@@ -130,6 +136,9 @@ public class Test_NewTransaction_Reserve {
 	public void AUT_ComprehensiveCovearge_ClaimCost() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -141,6 +150,9 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.EditReserves_Save();
 
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 	}
 
 	@Test
@@ -161,6 +173,9 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.EditReserves_Save();
 
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 	}
 
 	@Test
@@ -180,6 +195,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
 	}
 
@@ -216,11 +235,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.EditReserves_Save();
 
 		ClaimCenter_Reserve.EditReserves_ValidationResults();
-
+		// ---->Verify Financials Transactions
 		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
 
 		ClaimCenter_Reserve.FinancialsTransactions_Verification();
-		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
 	}
 
 	@Test
@@ -255,7 +273,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.EditReserves_Save();
 
 		ClaimCenter_Reserve.EditReserves_ValidationResults();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
 
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 	}
 
 	@Test
@@ -290,6 +311,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.EditReserves_Save();
 
 		ClaimCenter_Reserve.EditReserves_ValidationResults();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
 	}
 
@@ -325,6 +350,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.EditReserves_Save();
 
 		ClaimCenter_Reserve.EditReserves_ValidationResults();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
 	}
 	// --------------------------------------------------------------------------------------------------------->
@@ -360,6 +389,9 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.EditReserves_Save();
 
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 	}
 
 	@Test
@@ -393,6 +425,9 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.EditReserves_Save();
 
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 	}
 
 	@Test
@@ -425,6 +460,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 	}
 
 	@Test
@@ -457,6 +496,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
 	}
 	// --------------------------------------------------------------------------------------------------------------------->
@@ -491,7 +534,7 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
 		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
 		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
@@ -527,7 +570,9 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 	}
 
 	@Test
@@ -560,6 +605,9 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
 	}
 
@@ -593,6 +641,9 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
 	}
 // -------------------------------------------------------------------------------------------------------------------->
@@ -602,8 +653,284 @@ public class Test_NewTransaction_Reserve {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+		ClaimCenter_Reserve.EditReserves_Save();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+	}
+
+	@Test
+	public void AUT_DeathDisabilityBenefit_ClaimCost() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+	}
+
+	@Test
+	public void AUT_DeathDisabilityBenefit_ExpenseAO() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+	}
+
+	@Test
+	public void AUT_DeathDisabilityBenefit_ExpenseDCC() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage Type->Death and Disability Benefit
+		Tab_Menu_Navigation.ccMenuNavigation("Death and Disability Benefit");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
+
+		CC_ChooseCoverage.Exposures_Validation();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+	}
+
+//-----------------------------------------------------------------------------------------------------------------	
+
+	@Test
+	public void AUT_ElectronicEquipment_UnspecifiedCostType() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+		CC_ChooseCoverage.ValidationResults_ElectronicEquipment();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_ValidationResultsElectronicEquipment();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+	}
+
+	@Test
+	public void AUT_ElectronicEquipment_ClaimCost() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+		CC_ChooseCoverage.ValidationResults_ElectronicEquipment();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_ValidationResultsElectronicEquipment();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+	}
+
+	@Test
+	public void AUT_ElectronicEquipment_ExpenseAO() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+		// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleEditIncident();
+		CC_ChooseCoverage.ValidationResults_ElectronicEquipment();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_ValidationResultsElectronicEquipment();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+	}
+
+	@Test
+	public void AUT_ElectronicEquipment_ExpenseDCC() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ->Vehicle---->Electronic Equipment
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage ElectronicEquipment");
+		CC_ChooseCoverage.NewExposureValidation();
+		CC_ChooseCoverage.AllClaimant();
+		CC_ChooseCoverage.VehicleEditIncident();
+		CC_ChooseCoverage.ValidationResults_ElectronicEquipment();
+
+		// ----->Click on Action-Reserve
+		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
+
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.verify_DefaultReserve();
+
+		ClaimCenter_Reserve.VerifyCostType_CostCategory();
+
+		ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_ValidationResultsElectronicEquipment();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+	}
+
+//-------------------------------------------------------------------------------------------------------------
+
+	@Test
+	public void AUT_LiabilityBodilyInjury_UnspecifiedCostType() throws Throwable {
+		// login to ClaimCenter
+		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Bodily
+		// Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -618,176 +945,22 @@ public class Test_NewTransaction_Reserve {
 	}
 
 	@Test
-	public void AUT_DeathDisabilityBenefit_ClaimCost() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-	@Test
-	public void AUT_DeathDisabilityBenefit_ExpenseAO() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-	@Test
-	public void AUT_DeathDisabilityBenefit_ExpenseDCC() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-//-----------------------------------------------------------------------------------------------------------------	
-
-	@Test
-	public void AUT_ElectronicEquipment_UnspecifiedCostType() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-	@Test
-	public void AUT_ElectronicEquipment_ClaimCost() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-	@Test
-	public void AUT_ElectronicEquipment_ExpenseAO() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-	@Test
-	public void AUT_ElectronicEquipment_ExpenseDCC() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-//-------------------------------------------------------------------------------------------------------------
-
-	@Test
-	public void AUT_LiabilityBodilyInjury_UnspecifiedCostType() throws Throwable {
-		// login to ClaimCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
-
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
-
-		// ----->Click on Action-Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-
-		// ---> Verify whether a default reserve is created
-		ClaimCenter_Reserve.verify_DefaultReserve();
-
-		ClaimCenter_Reserve.VerifyCostType_CostCategory();
-
-		// ClaimCenter_Reserve.EditReserves_Save();
-
-	}
-
-	@Test
 	public void AUT_LiabilityBodilyInjury_ClaimCost() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Bodily
+		// Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -797,7 +970,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -806,8 +979,18 @@ public class Test_NewTransaction_Reserve {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Bodily
+		// Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -817,7 +1000,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -826,8 +1009,18 @@ public class Test_NewTransaction_Reserve {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Bodily
+		// Injury
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Bodily Injury");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.InjuryNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -837,7 +1030,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -847,8 +1040,18 @@ public class Test_NewTransaction_Reserve {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Property
+		// Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Property Damage");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.PropertyNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -858,7 +1061,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -867,8 +1070,18 @@ public class Test_NewTransaction_Reserve {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Property
+		// Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Property Damage");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.PropertyNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -878,7 +1091,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -887,8 +1100,18 @@ public class Test_NewTransaction_Reserve {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Property
+		// Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Property Damage");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.PropertyNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -898,7 +1121,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -907,8 +1130,18 @@ public class Test_NewTransaction_Reserve {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
+
+		// Click on "Actions" -> Choose by Coverage ---->Liability Property
+		// Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Property Damage");
+
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.PropertyNewIncident();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -918,8 +1151,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
-
+		ClaimCenter_Reserve.EditReserves_Save();
 	}
 //---------------------------------------------------------------------------------------------------------
 //Execution pending
@@ -928,10 +1160,17 @@ public class Test_NewTransaction_Reserve {
 	public void AUT_LiabilityVehicle_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// Click on "Actions" -> Choose by Coverage ---->Liability Vehicle Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Vehicle Damage");
 
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleNewIncident();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -940,7 +1179,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -948,10 +1187,17 @@ public class Test_NewTransaction_Reserve {
 	public void AUT_LiabilityVehicle_ClaimCost() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// Click on "Actions" -> Choose by Coverage ---->Liability Vehicle Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Vehicle Damage");
 
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleNewIncident();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -960,18 +1206,24 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
-
+		ClaimCenter_Reserve.EditReserves_Save();
 	}
 
 	@Test
 	public void AUT_LiabilityVehicle_ExpenseAO() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// Click on "Actions" -> Choose by Coverage ---->Liability Vehicle Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Vehicle Damage");
 
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleNewIncident();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -980,7 +1232,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 
@@ -988,10 +1240,17 @@ public class Test_NewTransaction_Reserve {
 	public void AUT_LiabilityVehicle_ExpenseDCC() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
+		// ----->Assign Claim
+		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
-		// ----->Search for Claim
-		Tab_Menu_Navigation.ccTabNavigation("Claim Search", "");
+		// Click on "Actions" -> Choose by Coverage ---->Liability Vehicle Damage
+		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Liability Vehicle Damage");
 
+		CC_ChooseCoverage.NewExposureValidation();
+
+		CC_ChooseCoverage.AllClaimant();
+
+		CC_ChooseCoverage.VehicleNewIncident();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1000,7 +1259,7 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
-		// ClaimCenter_Reserve.EditReserves_Save();
+		ClaimCenter_Reserve.EditReserves_Save();
 
 	}
 

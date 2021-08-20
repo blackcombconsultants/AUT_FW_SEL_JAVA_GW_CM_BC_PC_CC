@@ -168,7 +168,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		oRobot  = new Robot();
 
 		try {
-			if (!strValue.isBlank()) {
+			if (!strValue.isEmpty()) {
 
 				switch (command) {
 					case "keyDownF12" :
@@ -324,7 +324,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 
 			oWebElement = getElement(Locator);
 
-			if (!strValue.isBlank()) {
+			if (!strValue.isEmpty()) {
 
 				switch (command) {
 					case "keyDownF12" :
@@ -941,7 +941,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				alloptions = alloptions + "," + oWebElementOption.getText();
 			}
 		}
-		return alloptions;
+		return alloptions.replace("null,","");
 
 	}
 
