@@ -28,7 +28,7 @@ public interface ClaimCenter_Reserve_PO {
 	final By EditReserve_ValidationResults_Warning = By
 			.xpath("//div[contains(@id,'WebMessageWorksheetScreen')]//div[text()='Warnings:']");
 	final By ValidationResults_Warning_First = By.xpath(
-			"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs-0-0')]//div[@class='gw-message' and contains(text(),'Gross incurred on exposure (2) 1st Party Vehicle - PGNUtwMRX Automation ($2,500.00)')]");
+			"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs-0-0')]//div[@class='gw-message' and contains(text(),'Gross incurred on exposure (2) 1st Party Vehicle - PGNUtwMRX Automation')]");
 	final By ValidationResults_Warning_Second = By.xpath(
 			"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs-0-1')]//div[@class='gw-message' and contains(text(),'Gross incurred for 2002 Acura RL ($2,500.00)')]");
 
@@ -40,5 +40,5 @@ public interface ClaimCenter_Reserve_PO {
 	final By FinancialTranscations_RowCount = By.xpath("//table[@class='gw-ListViewWidget--table gw-table']/tbody/tr");
 	final By FinancialTranscations_Header = By.xpath(
 			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Financials: Transactions')]");
-   final By FinancialTranscations_NextPage=By.xpath("//div[contains(@id,'TransactionsLV-_ListPaging-next')]");
+	final By FinancialTranscations_NextPage = By.xpath("//div[contains(@id,'TransactionsLV-_ListPaging-next')]");
 }
