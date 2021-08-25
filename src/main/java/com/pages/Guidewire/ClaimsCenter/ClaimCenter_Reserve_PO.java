@@ -19,6 +19,7 @@ public interface ClaimCenter_Reserve_PO {
 	final By Reserve_Save = By
 			.xpath("//div[contains(@id,'NewReserveSet-NewReserveSetScreen-Update')]/div[@role='button']");
 
+	final By EditReserve_Header=By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Edit Reserves')]");
 	// div[contains(@id,'NewReserveSetScreen-Remove')]/div[@role='button']
 
 	// Validation Results

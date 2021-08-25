@@ -25,7 +25,9 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 	}
 
 	public static void verify_DefaultReserve() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Reserve", strTestCaseName);
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Reserve");
+
 		// List<WebElement> ActivityPatterns = getElements(rowCount);
 		int rowNum = Integer.parseInt(lhm_TestCase_Table_Data.get("rowNum"));
 
@@ -650,4 +652,88 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 			}
 		}
 	}
+
+	public static void SetCostType_VerifyCostCategory() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Payment");
+		int i = Integer.parseInt(lhm_TestCase_Table_Data.get("DefaultRow"));
+
+		By EditReserves_CheckBox = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-_Checkbox')]");
+		By reserve_Exposure = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
+		By reserve_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+		By reserve_CostType = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
+		By reserve_CostCategory = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostCategory')]");
+		By Reserve_NewAvailableReserves = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-NewAmount')]");
+		By Reserve_Comments = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
+
+		GuidewireAutomate("EditReserves_CheckBox", EditReserves_CheckBox, "clickAndwait", "Click");
+		GuidewireAutomate("Exposure", reserve_Exposure, "selectByVisibleText", lhm_TestCase_Table_Data.get("Exposure"));
+		GuidewireAutomate_Validation("Coverage", reserve_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage"));
+		GuidewireAutomate_Validation("Verify CostType", reserve_CostType, "getOptionscontains",
+				lhm_TestCase_Table_Data.get("CostTypeValues"));
+
+		oExtentTest.log(Status.PASS, "The below list is displayed in the same order for Cost Type field " + "["
+				+ lhm_TestCase_Table_Data.get("CostTypeValues") + "]");
+
+		GuidewireAutomate("CostType", reserve_CostType, "selectByVisibleText", lhm_TestCase_Table_Data.get("CostType"));
+
+		GuidewireAutomate_Validation("Verify CostCategory", reserve_CostCategory, "getOptionscontains",
+				lhm_TestCase_Table_Data.get("CostCategoryValues"));
+
+		GuidewireAutomate("CostCategory", reserve_CostCategory, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("CostCategory"));
+
+		GuidewireAutomate("NewAvailableReserves", Reserve_NewAvailableReserves, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("NewAvailableReserves"));
+		GuidewireAutomate("Comment", Reserve_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Comment"));
+		GuidewireAutomate("Save", Reserve_Save, "clickAndwait", "NA");
+
+	}
+
+	public static void Verify_DefaultReserve_EachCostType_CostCategory() throws Throwable {
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Payment");
+
+		// List<WebElement> ActivityPatterns = getElements(rowCount);
+		int rowNum = Integer.parseInt(lhm_TestCase_Table_Data.get("DefaultRow"));
+
+		GuidewireAutomate_Validation("Screen Header", EditReserve_Header, "equals", "Edit Reserves");
+		for (int i = 0; i < rowNum; i++) {
+
+			By reserve_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+			By reserve_CostType = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostType')]");
+			By reserve_CostCategory = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostCategory')]");
+			By reserve_CurrentlyAvailable = By
+					.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-AvailableReserves')]");
+			// Default Reserve Verifying
+			oExtentTest.log(Status.INFO,
+					"Verifying Row= [" + (i + 1) + "] the defualt Reserve is Created for Coverage ="
+							+ lhm_TestCase_Table_Data.get("DR_Coverage" + (i + 1)) + " and CostTye="
+							+ lhm_TestCase_Table_Data.get("DR_CostType" + (i + 1)));
+
+			GuidewireAutomate_Validation("Reserve Coverage", reserve_Coverage, "equals",
+					lhm_TestCase_Table_Data.get("DR_Coverage" + (i + 1)));
+			GuidewireAutomate_Validation("Reserve CostType", reserve_CostType, "equals",
+					lhm_TestCase_Table_Data.get("DR_CostType" + (i + 1)));
+			GuidewireAutomate_Validation("Reserve CostCategory", reserve_CostCategory, "equals",
+					lhm_TestCase_Table_Data.get("DR_CostCategory" + (i + 1)));
+			GuidewireAutomate_Validation("Reserve CurrentlyAvailable", reserve_CurrentlyAvailable, "equals",
+					lhm_TestCase_Table_Data.get("DR_CurrentlyAvailable" + (i + 1)));
+
+		}
+	}
+
+	public static void AddingReserve_EachCostCategory() throws Throwable {
+		// ---> Verify whether a default reserve is created
+		ClaimCenter_Reserve.Verify_DefaultReserve_EachCostType_CostCategory();
+
+		// Set "Cost Type" as "Unspecified Cost Type" and verify whether the
+		// "CostCategory" is displayed with the below list and in the same order.
+		ClaimCenter_Reserve.SetCostType_VerifyCostCategory();
+
+		// verifying financial transaction-> Reserve should be created successfully.
+		CC_NewTransaction_Check.FinancialsTransactions_VerificationForDefaultReserve();
+
+		CC_NewTransaction_Check.FinancialsTransactions_Verification();
+	}
+
 }

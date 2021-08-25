@@ -24,7 +24,7 @@ public class ClaimCenter_Resuables extends SeleniumWebDriver_Commands implements
 				GuidewireAutomate("Next", Next, "clickAndwait", "click");
 				break;
 			case "Finish" :
-				GuidewireAutomate("Finish", Finish_Button, "clickAndwait", "click");
+				GuidewireAutomate("Finish", Finish, "clickAndwait", "click");
 				break;
 			case "Update" :
 				GuidewireAutomate("Update", Update_Button, "clickAndwait", "click");
