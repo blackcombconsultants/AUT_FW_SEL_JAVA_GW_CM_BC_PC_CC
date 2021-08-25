@@ -932,6 +932,8 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -941,6 +943,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -962,6 +969,8 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -971,6 +980,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -992,6 +1006,8 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1001,6 +1017,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1022,6 +1042,8 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1031,6 +1053,10 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1052,7 +1078,7 @@ public class Test_NewTransaction_Reserve {
 		CC_ChooseCoverage.AllClaimant();
 
 		CC_ChooseCoverage.PropertyNewIncident();
-
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1062,6 +1088,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1080,8 +1111,10 @@ public class Test_NewTransaction_Reserve {
 		CC_ChooseCoverage.NewExposureValidation();
 
 		CC_ChooseCoverage.AllClaimant();
-
+		// ------>property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -1092,6 +1125,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1110,8 +1149,10 @@ public class Test_NewTransaction_Reserve {
 		CC_ChooseCoverage.NewExposureValidation();
 
 		CC_ChooseCoverage.AllClaimant();
-
+		// ------>property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -1122,6 +1163,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1141,7 +1189,10 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.AllClaimant();
 
+		// ------>property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -1152,9 +1203,17 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
+
 	}
 //---------------------------------------------------------------------------------------------------------
-//Execution pending
+
 
 	@Test
 	public void AUT_LiabilityVehicle_UnspecifiedCostType() throws Throwable {
@@ -1170,7 +1229,10 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.AllClaimant();
 
+		// ------>vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1180,6 +1242,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1197,7 +1265,10 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.AllClaimant();
 
+		// ------>vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1207,6 +1278,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1223,7 +1300,10 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.AllClaimant();
 
+		// ------>vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1233,6 +1313,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1250,7 +1335,10 @@ public class Test_NewTransaction_Reserve {
 
 		CC_ChooseCoverage.AllClaimant();
 
+		// ------>vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1260,7 +1348,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 //----------------------------------------------------------------------------------------------------------------
@@ -1285,7 +1377,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1295,6 +1388,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1318,7 +1416,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1328,6 +1427,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1351,7 +1455,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1361,6 +1466,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1384,7 +1494,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1394,9 +1505,14 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_MexicoCovPD_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -1417,7 +1533,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1427,6 +1544,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1450,7 +1572,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1460,7 +1583,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1483,7 +1610,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1493,7 +1621,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1516,7 +1648,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1526,9 +1659,14 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+//---------------------------------------------------------------------------------------------------------------------------
+	
 	@Test
 	public void AUT_MexicoCovVehicleDamage_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -1549,7 +1687,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1559,7 +1698,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1582,7 +1725,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1592,6 +1736,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1615,7 +1764,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1625,7 +1775,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1648,7 +1802,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle New Incident
 		CC_ChooseCoverage.VehicleNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1658,9 +1813,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_MexicoCovGenDamages_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -1681,7 +1840,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Click on update
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1691,6 +1851,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1714,7 +1879,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Click on update
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1724,7 +1890,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1747,7 +1917,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Click on update
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1757,7 +1928,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1780,7 +1955,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Click on update
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1790,9 +1966,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_MedicalPayments_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -1813,7 +1993,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1823,7 +2004,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1846,7 +2031,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1856,7 +2042,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1879,7 +2069,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1889,7 +2080,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -1912,7 +2107,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1922,9 +2118,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPArkansas_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -1945,6 +2145,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1954,6 +2157,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -1977,6 +2187,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -1986,6 +2199,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2009,6 +2229,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2018,6 +2241,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2041,6 +2271,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2051,8 +2284,15 @@ public class Test_NewTransaction_Reserve {
 
 		ClaimCenter_Reserve.EditReserves_Save();
 
-	}
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
+
+	}
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPDelaware_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2073,6 +2313,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2082,6 +2325,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2105,6 +2354,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2114,7 +2366,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -2137,6 +2394,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2146,6 +2406,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2169,6 +2435,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2178,9 +2447,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPDistrictofColumbia_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2201,6 +2476,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2210,6 +2488,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2233,6 +2517,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2242,6 +2529,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2265,6 +2558,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2274,6 +2570,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2297,6 +2599,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2306,9 +2611,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPFlorida_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2329,6 +2640,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2338,6 +2652,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2361,6 +2681,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2370,6 +2693,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2393,6 +2722,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2402,6 +2734,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2425,6 +2763,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2434,9 +2775,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPHawaii_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2457,6 +2804,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2466,6 +2816,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2489,6 +2845,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2498,6 +2857,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2521,6 +2886,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2530,6 +2898,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2553,6 +2927,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2562,9 +2939,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPKansas_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2585,6 +2968,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2594,6 +2980,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2617,6 +3009,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2626,7 +3021,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -2641,6 +3041,7 @@ public class Test_NewTransaction_Reserve {
 		Tab_Menu_Navigation.ccMenuNavigation("PIP Kansas");
 
 		// ------> Validate New Exposure Header and Exposure Title
+		// ------> Validate New Exposure Header and Exposure Title
 		CC_ChooseCoverage.NewExposureValidation();
 
 		// ------> Select Claimant
@@ -2648,6 +3049,9 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
+
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
@@ -2658,6 +3062,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2681,6 +3091,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2690,9 +3103,14 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPKentucky_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2713,6 +3131,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2722,6 +3143,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2745,6 +3172,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2754,6 +3184,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2777,6 +3213,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2786,6 +3225,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2809,6 +3254,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2818,9 +3266,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPMaryland_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2841,6 +3295,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2850,6 +3307,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2873,6 +3336,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2882,6 +3348,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2905,6 +3377,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2914,6 +3389,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -2937,6 +3418,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2946,9 +3430,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPMassachusetts_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -2969,6 +3459,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -2978,7 +3471,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -3001,6 +3499,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3010,6 +3511,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3033,6 +3540,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3042,7 +3552,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -3065,6 +3580,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3074,9 +3592,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPMichigans_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3097,6 +3621,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3106,11 +3633,17 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
 	@Test
-	public void AUT_PIPMichigans_ClaimCost() throws Throwable {
+	public void AUT_PIPMichigan_ClaimCost() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
@@ -3129,6 +3662,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3138,11 +3674,17 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
 	@Test
-	public void AUT_PIPMichigans_ExpenseAO() throws Throwable {
+	public void AUT_PIPMichigan_ExpenseAO() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
@@ -3161,6 +3703,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3170,11 +3715,17 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
 	@Test
-	public void AUT_PIPMichigans_ExpenseDCC() throws Throwable {
+	public void AUT_PIPMichigan_ExpenseDCC() throws Throwable {
 		// login to ClaimCenter
 		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("BettyBaker");
 
@@ -3193,6 +3744,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3202,9 +3756,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPMinnesota_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3225,6 +3785,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3234,6 +3797,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3257,6 +3826,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3266,6 +3838,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3289,6 +3867,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3298,6 +3879,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3321,6 +3908,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3330,9 +3920,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPNewJersey_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3353,6 +3949,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3362,6 +3961,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3385,6 +3990,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3394,6 +4002,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3417,6 +4031,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3426,6 +4043,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3449,6 +4072,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3458,9 +4084,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPNewYork_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3481,6 +4113,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3490,6 +4125,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3513,6 +4154,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3522,6 +4166,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3545,6 +4195,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3554,6 +4207,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3577,6 +4236,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3586,9 +4248,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPNorthDakota_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3609,6 +4277,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3618,6 +4289,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3641,6 +4318,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3650,6 +4330,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3673,6 +4359,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3682,6 +4371,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3705,6 +4400,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3714,9 +4412,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPOregon_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3737,6 +4441,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3746,6 +4453,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3769,6 +4482,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3778,6 +4494,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3801,6 +4523,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3810,6 +4535,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3833,6 +4564,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3842,9 +4576,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPPennsylvania_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3865,6 +4605,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3874,6 +4617,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3897,6 +4646,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3906,6 +4658,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3929,6 +4687,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3938,6 +4699,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -3961,6 +4728,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -3970,9 +4740,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPTexas_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -3993,6 +4769,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4002,6 +4781,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4025,6 +4810,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4034,6 +4822,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4057,6 +4851,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4066,6 +4863,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4089,6 +4892,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4098,9 +4904,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPUtah_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -4121,6 +4933,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4130,6 +4945,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4153,6 +4974,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4162,6 +4986,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4185,6 +5015,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4194,6 +5027,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4217,6 +5056,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4226,9 +5068,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PIPWashington_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -4249,6 +5097,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4258,6 +5109,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4281,6 +5138,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4290,6 +5150,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4313,6 +5179,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4322,6 +5191,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4345,6 +5220,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4354,9 +5232,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_PropertyProtectionInsurance_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -4378,6 +5262,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4387,6 +5274,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4411,6 +5304,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4420,6 +5316,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4444,6 +5346,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4453,6 +5358,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -4477,6 +5388,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Property New Incident
 		CC_ChooseCoverage.PropertyNewIncident();
 
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4486,9 +5400,15 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_RentalCarLossofUse_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -4508,7 +5428,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Add Location
 		CC_ChooseCoverage.Location();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4518,7 +5439,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4540,7 +5465,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Add Location
 		CC_ChooseCoverage.Location();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4550,7 +5476,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4572,7 +5502,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Add Location
 		CC_ChooseCoverage.Location();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4582,7 +5513,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4604,7 +5539,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Add Location
 		CC_ChooseCoverage.Location();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4614,9 +5550,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_TapeDiscMedia_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -4636,7 +5576,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Update Button
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4646,7 +5587,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4668,7 +5613,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Update Button
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4678,7 +5624,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4700,7 +5650,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Update Button
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4710,7 +5661,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4732,7 +5687,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Update Button
 		CC_ChooseCoverage.UpdateButton();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4742,9 +5698,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_TowingandLabor_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -4764,7 +5724,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4774,7 +5735,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4796,7 +5761,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4806,7 +5772,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4828,7 +5798,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4838,7 +5809,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4860,7 +5835,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4870,9 +5846,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_UnderinsuredMotoristBodilyInjury_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -4893,7 +5873,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4903,7 +5884,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4926,7 +5911,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4936,7 +5922,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4959,7 +5950,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -4969,7 +5961,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -4992,7 +5988,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5002,9 +5999,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -5025,7 +6026,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5035,7 +6037,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -5058,7 +6065,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5068,7 +6076,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -5091,7 +6105,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5101,7 +6116,11 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
 
 	@Test
@@ -5124,7 +6143,8 @@ public class Test_NewTransaction_Reserve {
 
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
-
+		// ------>Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5134,9 +6154,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
-
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -5158,6 +6182,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5167,6 +6194,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -5191,6 +6224,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5200,6 +6236,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -5224,6 +6266,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5233,6 +6278,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -5247,7 +6298,6 @@ public class Test_NewTransaction_Reserve {
 		// -----> Choose by Coverage ---->Policy Level coverage---> Uninsured Motorist
 		// Bodily Injury
 		Tab_Menu_Navigation.ccMenuNavigation("ChoosebyCoverage Uninsured Motorist Bodily Injury");
-		;
 
 		// ------> Validate New Exposure Header and Exposure Title
 		CC_ChooseCoverage.NewExposureValidation();
@@ -5258,6 +6308,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Injury New Incident
 		CC_ChooseCoverage.InjuryNewIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5267,9 +6320,14 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
 
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-
+	//---------------------------------------------------------------------------------------------------------------------------
 	@Test
 	public void AUT_UninsuredMotoristPropertyDamage_UnspecifiedCostType() throws Throwable {
 		// login to ClaimCenter
@@ -5291,6 +6349,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5300,6 +6361,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -5324,6 +6392,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5333,6 +6404,13 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+		ClaimCenter_Reserve.FinancialTransaction_NextPageValidation();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -5358,6 +6436,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5367,6 +6448,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
@@ -5391,6 +6478,9 @@ public class Test_NewTransaction_Reserve {
 		// ------>Vehicle Edit Incident
 		CC_ChooseCoverage.VehicleEditIncident();
 
+		// Exposures Validation
+		CC_ChooseCoverage.Exposures_Validation();
+
 		// ----->Click on Action-Reserve
 		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
 
@@ -5400,6 +6490,12 @@ public class Test_NewTransaction_Reserve {
 		ClaimCenter_Reserve.VerifyCostType_CostCategory();
 
 		ClaimCenter_Reserve.EditReserves_Save();
+		// ---->Verify Financials Transactions
+		ClaimCenter_Reserve.FinancialsTransactions_VerificationForDefaultReserve();
+		ClaimCenter_Reserve.FinancialsTransactions_Verification();
+
+		// -----> logout Claim Center
+		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 
 	}
 
