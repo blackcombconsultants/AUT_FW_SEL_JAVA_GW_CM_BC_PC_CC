@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 
 public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implements ClaimCenter_ClaimExposure_PO {
 
@@ -43,6 +44,10 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 			"//div[contains(@id,'VehicleIncidentDV-Description')]//textarea[contains(@name,'VehicleIncidentDV-Description')]");
 	private static By Details = By.xpath("//div[contains(@id,'VehicleIncidentDV-10')]");
 	private static By Details_lossoccured = By.xpath("//select[contains(@name,'LossOccured')]");
+	private static By UptoExposures = By.xpath("//div[@id='ExposureDetail-ExposureDetail_UpLink']");
+	private static By ExposureHeader = By.xpath(
+			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Exposures']");
+	// div[@id='ExposureDetail-ExposureDetail_Up Link']
 
 	private static By Ok_Button = By.xpath("//div[contains(@id,'Update')]//div[@role='button']");
 	private static By Update_Button = By
@@ -51,6 +56,10 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'1st Party Vehicle')]");
 	private static By Validation_Header = By.xpath(
 			"//div[@class='gw-action--inner gw-hasDivider']//div[@class='gw-label' and text()='Validation Results']");
+
+	private static By Error_Msg = By.xpath(
+			"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs')]//div[contains(text(),'Vehicle incident description must not be empty')]");
+
 	private static By NO_Error = By.xpath("//div[@class='gw-message']");
 	private static By Clear_Button = By.xpath("//div[contains(@id,'ClearButton')]//div[@role='button']");
 
@@ -200,13 +209,10 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 
 	public static void Validateclaimexposure() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Validateclaimexposure",
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
 				strTestCaseName);
 
 		try {
-			GuidewireAutomate_Validation("ScreenHeader", Exposure_Header, "equals", "Exposures");
-
-			GuidewireAutomate("Exposure Vehicle", Exposure_Vehicle, "clickAndwait", "click");
 
 			GuidewireAutomate_Validation("FirstPartyVehicle", FirstPartyVehicle_Header, "contains",
 					"(1) 1st Party Vehicle");
@@ -224,25 +230,28 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 			GuidewireAutomate_Validation("Section", DriverofInvolvedVehicle, "equals", "Driver of Involved Vehicle");
 
 			GuidewireAutomate("Drivername", Drivername, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("Drivername"));
+					lhm_TestCase_Table_Data.get("DriverName"));
 			GuidewireAutomate_Validation("RelationToInsured", RelationToInsured, "contains", "Self/Insured");
 
 			GuidewireAutomate("Section", Damage_Description, "moveToElement", " Damage Description");
 			GuidewireAutomate_Validation("Section", Damage_Description, "contains", "Damage Description");
 
 			GuidewireAutomate("Damage Value", Damage_Text, "clearANDsendKeys",
-					lhm_TestCase_Table_Data.get("Damage_Value"));
+					lhm_TestCase_Table_Data.get("DamageDescription"));
 
 			GuidewireAutomate("Section", Details, "moveToElement", "Details");
 			GuidewireAutomate_Validation("Section", Details, "contains", "Details");
 
 			GuidewireAutomate("Details_lossoccured", Details_lossoccured, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("Details_lossoccured"));
+					lhm_TestCase_Table_Data.get("LossOccurred"));
 			GuidewireAutomate("Ok", Ok_Button, "clickAndwait", "click");
 
 			GuidewireAutomate("Update", Update_Button, "clickAndwait", "click");
-			GuidewireAutomate_Validation("FirstPartyVehicle", FirstPartyVehicle_Header2, "contains",
-					"(1) 1st Party Vehicle");
+
+			GuidewireAutomate("UptoExposures", UptoExposures, "clickAndwait", "click");
+
+			GuidewireAutomate_Validation("Screen Header", ExposureHeader, "equals", "Exposures");
+
 		} catch (Exception e) {
 
 			e.printStackTrace();
@@ -250,10 +259,34 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 		}
 	}
 
-	public static void ValidationResults() throws Throwable {
+	public static void AddingExposure(String Exposure) throws Throwable {
+		switch (Exposure) {
+		case "Collision":
+
+			ClaimCenter_ClaimExposure.ValidationResults_VehicleIncidentDescription();
+			ClaimCenter_ClaimExposure.Validateclaimexposure();
+			Thread.sleep(2000);
+			Tab_Menu_Navigation.ccMenuNavigation("ValidateClaimExposures AbilityToPay");
+			ClaimCenter_ClaimExposure.ValidationResults_NoValidationErrors();
+			break;
+
+		}
+	}
+
+	public static void ValidationResults_NoValidationErrors() throws Throwable {
 
 		GuidewireAutomate_Validation("Validation Header", Validation_Header, "equals", "Validation Results");
 		GuidewireAutomate_Validation("No Validation Error", NO_Error, "equals", "No Validation errors.");
+		GuidewireAutomate("Clear", Clear_Button, "clickAndwait", "click");
+		Thread.sleep(2000);
+
+	}
+
+	public static void ValidationResults_VehicleIncidentDescription() throws Throwable {
+		GuidewireAutomate_Validation("Validation Header", Validation_Header, "equals", "Validation Results");
+		GuidewireAutomate_Validation("Error Msg", Error_Msg, "equals",
+				"Vehicle incident description must not be empty");
+		GuidewireAutomate("Error Msg", Error_Msg, "clickAndwait", "click");
 		GuidewireAutomate("Clear", Clear_Button, "clickAndwait", "click");
 		Thread.sleep(2000);
 
