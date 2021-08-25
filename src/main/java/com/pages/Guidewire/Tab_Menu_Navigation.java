@@ -1694,6 +1694,8 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 					"moveToElement", "moveToElement");
 			GuidewireAutomate("Choose by CoverageType P", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P,
 					"moveToElement", "moveToElement");
+			GuidewireAutomate("PIP Utah", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PIPUtah,
+					"moveToElement", "moveToElement");
 			GuidewireAutomate("PIP Utah", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PIPUtah, "click",
 					"click");
 			break;
@@ -1703,6 +1705,10 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 					"moveToElement", "moveToElement");
 			GuidewireAutomate("Choose by CoverageType P", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P,
 					"moveToElement", "moveToElement");
+			GuidewireAutomate("PIP Utah", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PIPUtah,
+					"moveToElement", "moveToElement");
+			GuidewireAutomate("PIP Washington", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PIPWashington,
+					"moveToElement", "moveToElement");
 			GuidewireAutomate("PIP Washington", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PIPWashington,
 					"click", "click");
 			break;
@@ -1711,6 +1717,10 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 			GuidewireAutomate("Choose by CoverageType", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType,
 					"moveToElement", "moveToElement");
 			GuidewireAutomate("Choose by CoverageType P", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P,
+					"moveToElement", "moveToElement");
+			GuidewireAutomate("PIP Utah", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PIPUtah,
+					"moveToElement", "moveToElement");
+			GuidewireAutomate("PIP Washington", MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PIPWashington,
 					"moveToElement", "moveToElement");
 			GuidewireAutomate("Property Protection Insurance",
 					MenuCC_Claim_Actions_NewExposure_ChoosebyCoverageType_P_PropertyProtectionInsurance, "click",

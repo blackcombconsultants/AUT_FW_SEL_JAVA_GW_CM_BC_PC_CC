@@ -78,7 +78,8 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 					"Validation Results");
 			GuidewireAutomate_Validation("Warnings Title", ValidationResults_WarningTitle, "equals", "Warnings:");
 			By ValidationResults_Warning_First = By
-					.xpath("//div[contains(@id,'WebMessageWorksheetScreen')]//div[contains(text(),'Gross incurred for "+strChoosebyCoverage_Vehicle+"')]");
+					.xpath("//div[contains(@id,'WebMessageWorksheetScreen')]//div[contains(text(),'Gross incurred for "
+							+ strChoosebyCoverage_Vehicle + "')]");
 			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
 					"Validation errors were found in an object of type ReserveSet that was auto-created by rules:");
 
@@ -241,9 +242,16 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 			GuidewireAutomate_Validation("Property Title", NewPropertyIncident_PropertyTitle, "equals", "Property");
 			GuidewireAutomate("Property Owner", NewPropertyIncident_Owner, "selectByVisibleText",
 					lhm_TestCase_Table_Data.get("ClaimantName"));
-			GuidewireAutomate("Property Name", NewPropertyIncident_PropertyName, "selectByVisibleText", "New...");
-			GuidewireAutomate("State", NewPropertyIncident_PropertyName, "selectByVisibleText",
+			GuidewireAutomate("Property Name", NewPropertyIncident_PropertyName, "selectByVisibleTextAndwait",
+					"New...");
+			getStaleElement("Country", NewPropertyIncident_Country);
+
+			GuidewireAutomate("Country", NewPropertyIncident_Country, "selectByVisibleTextAndwait", "United States");
+
+			GuidewireAutomate("State", NewPropertyIncident_State, "selectByVisibleTextAndwait",
 					lhm_TestCase_Table_Data.get("StateName"));
+
+			GuidewireAutomate("Address", NewPropertyIncident_Address, "clearANDsendKeys", "123 valley Main road");
 			GuidewireAutomate("Ok Button", Incident_OkButton, "clickAndwait", "clickAndwait");
 			GuidewireAutomate("Update Button", NewExposureUpdateButton, "clickAndwait", "clickAndwait");
 

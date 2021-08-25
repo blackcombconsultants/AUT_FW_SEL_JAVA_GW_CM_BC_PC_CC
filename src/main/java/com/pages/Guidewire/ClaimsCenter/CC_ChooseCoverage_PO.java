@@ -99,7 +99,8 @@ public interface CC_ChooseCoverage_PO {
 	final By NewPropertyIncident_State = By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
 	final By NewPropertyIncident_OkButton = By
 			.xpath("//div[contains(@id,'NewFixedPropertyIncidentScreen-Update')]//div[@role='button']");
-
+	final By NewPropertyIncident_Address = By.xpath("//input[contains(@name,'AddressLine1')]");
+	final By NewPropertyIncident_Country = By.xpath("//select[contains(@name,'GlobalAddressInputSet-Country')]");
 	// New Vehicle Incident
 	final By NewVehicleIncident_Header = By
 			.xpath("//div[contains(@id,'IncidentScreen')]//div[@class='gw-TitleBar--title']");
