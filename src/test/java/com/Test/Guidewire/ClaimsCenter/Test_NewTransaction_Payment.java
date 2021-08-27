@@ -29,7 +29,7 @@ public class Test_NewTransaction_Payment {
 		// ---> Verify whether a default reserve is created
 		// Set "Cost Type" as "Unspecified Cost Type" and verify whether the
 		// CostCategory" is displayed with the below list and in the same order.
-		// verifying financial transaction-> Reserve should be created successfully.
+		// verifying financial transaction-> Reserve should be created successfully
 		ClaimCenter_Reserve.AddingReserve_EachCostCategory();
 
 		// Click on "Actions" -> Under "Claim Actions" -> Click on "Validate Claim +
