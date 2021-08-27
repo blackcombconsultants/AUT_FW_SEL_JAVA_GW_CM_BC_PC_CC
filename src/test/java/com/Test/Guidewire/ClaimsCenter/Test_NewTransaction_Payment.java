@@ -13,6 +13,7 @@ import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Reserve;
 import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Resuables;
 
 public class Test_NewTransaction_Payment {
+
 	@Test
 
 	public void AUT_Payment_Collision_UnspecifiedCostType_UnspecifiedCostCategory() throws Throwable {
