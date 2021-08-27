@@ -767,7 +767,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 					LogMsg = ElementName + " => Fetched value = [" + strActual + "]";
 
 				} else {
-					LogMsg = ElementName + " => Actual = [" + strActual + "] " + strValidation + " Expected = [" + strExpected + "]";
+					LogMsg = ElementName + " => Actual = [" + strActual + "] <" + strValidation + "> Expected = [" + strExpected + "]";
 				}
 
 				System.out.println(LogMsg);
@@ -941,7 +941,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				alloptions = alloptions + "," + oWebElementOption.getText();
 			}
 		}
-		return alloptions.replace("null,","");
+		return alloptions.replace("null,", "");
 
 	}
 
