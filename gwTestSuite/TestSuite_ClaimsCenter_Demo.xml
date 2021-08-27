@@ -11,10 +11,10 @@
 	<test thread-count="1" parallel="methods"
 		name="ClaimsCenter Smoke Test">
 		<classes>
-			<class name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Reserve">
+			<class name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Payment">
 				<methods>
 					<include
-						name="AUT_CollisionReserves_ExpenseDCC" />
+						name="AUT_Payment_Collision_ExpenseAO_Salvage" />
 				</methods>
 			</class>
 		</classes>
