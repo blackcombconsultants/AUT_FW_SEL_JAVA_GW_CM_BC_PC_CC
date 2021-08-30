@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="ClaimsCenter Reserve">
+
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Reserve Regression Test">
+		<classes>
+			<class
+				name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Reserve">
+				<methods>
+					<include name="AUT_CollisionReserves_UnspecifiedCostType" />
+					<include name="AUT_CollisionReserves_ClaimCostType" />
+					<include name="AUT_CollisionReserves_ExpenseAO" />
+					<include name="AUT_CollisionReserves_ExpenseDCC" />
+					
+					<include
+						name="AUT_ComprehensiveCoverage_UnspecifiedCostType" />
+					<include name="AUT_ComprehensiveCovearge_ClaimCost" />
+					<include name="AUT_ComprehensiveCovearge_ExpenseAO" />
+					<include name="AUT_ComprehensiveCovearge_ExpenseDCC" />
+					
+					<include
+						name="AUT_RentalReimbursementCovearge_UnspecifiedCostType" />
+					<include name="AUT_RentalReimbursementCovearge_ClaimCost" />
+					<include name="AUT_RentalReimbursementCovearge_ExpenseAO" />
+					<include name="AUT_RentalReimbursementCovearge_ExpenseDCC" />
+					<include
+						name="AUT_TowingandLaborCoverage_UnspecifiedCostType" />
+					<include name="AUT_TowingandLaborCoverage_ClaimCost" />
+					<include name="AUT_TowingandLaborCoverage_ExpenseAO" />
+					<include name="AUT_TowingandLaborCoverage_ExpenseDCC" />
+					
+					<include
+						name="AUT_CollisionLimitedCoverage_UnspecifiedCostType" />
+					<include name="AUT_CollisionLimitedCoverage_ClaimCost" />
+					<include name="AUT_CollisionLimitedCoverage_ExpenseAO" />
+					<include name="AUT_CollisionLimitedCoverage_ExpenseDCC" />
+
+					<include
+						name="AUT_DeathDisabilityBenefit_UnspecifiedCostType" />
+					<include name="AUT_DeathDisabilityBenefit_ClaimCost" />
+					<include name="AUT_DeathDisabilityBenefit_ExpenseAO" />
+					<include name="AUT_DeathDisabilityBenefit_ExpenseDCC" />
+
+					<include name="AUT_ElectronicEquipment_UnspecifiedCostType" />
+					<include name="AUT_ElectronicEquipment_ClaimCost" />
+					<include name="AUT_ElectronicEquipment_ExpenseAO" />
+					<include name="AUT_ElectronicEquipment_ExpenseDCC" />
+
+					<include
+						name="AUT_LiabilityBodilyInjury_UnspecifiedCostType" />
+					<include name="AUT_LiabilityBodilyInjury_ClaimCost" />
+					<include name="AUT_LiabilityBodilyInjury_ExpenseAO" />
+					<include name="AUT_LiabilityBodilyInjury_ExpenseDCC" />
+
+					<include
+						name="AUT_LiabilityPropertyDamage_UnspecifiedCostType" />
+					<include name="AUT_LiabilityPropertyDamage_ClaimCost" />
+					<include name="AUT_LiabilityPropertyDamage_ExpenseAO" />
+					<include name="AUT_LiabilityPropertyDamage_ExpenseDCC" />
+
+					<include name="AUT_LiabilityVehicle_UnspecifiedCostType" />
+					<include name="AUT_LiabilityVehicle_ClaimCost" />
+					<include name="AUT_LiabilityVehicle_ExpenseAO" />
+					<include name="AUT_LiabilityVehicle_ExpenseDCC" />
+
+					<include name="AUT_MexicoCovBI_UnspecifiedCostType" />
+					<include name="AUT_MexicoCovBI_ClaimCost" />
+					<include name="AUT_MexicoCovBI_ExpenseAO" />
+					<include name="AUT_MexicoCovBI_ExpenseDCC" />
+
+					<include name="AUT_MexicoCovPD_UnspecifiedCostType" />
+					<include name="AUT_MexicoCovPD_ClaimCost" />
+					<include name="AUT_MexicoCovPD_ExpenseAO" />
+					<include name="AUT_MexicoCovPD_ExpenseDCC" />
+
+					<include
+						name="AUT_MexicoCovVehicleDamage_UnspecifiedCostType" />
+					<include name="AUT_MexicoCovVehicleDamage_ClaimCost" />
+					<include name="AUT_MexicoCovVehicleDamage_ExpenseAO" />
+					<include name="AUT_MexicoCovVehicleDamage_ExpenseDCC" />
+
+					<include name="AUT_MexicoCovGenDamages_UnspecifiedCostType" />
+					<include name="AUT_MexicoCovGenDamages_ClaimCost" />
+					<include name="AUT_MexicoCovGenDamages_ExpenseAO" />
+					<include name="AUT_MexicoCovGenDamages_ExpenseDCC" />
+
+					<include name="AUT_MedicalPayments_UnspecifiedCostType" />
+					<include name="AUT_MedicalPayments_ClaimCost" />
+					<include name="AUT_MedicalPayments_ExpenseAO" />
+					<include name="AUT_MedicalPayments_ExpenseDCC" />
+
+					<include name="AUT_PIPArkansas_UnspecifiedCostType" />
+					<include name="AUT_PIPArkansas_ClaimCost" />
+					<include name="AUT_PIPArkansas_ExpenseAO" />
+					<include name="AUT_PIPArkansas_ExpenseDCC" />
+
+					<include name="AUT_PIPDelaware_UnspecifiedCostType" />
+					<include name="AUT_PIPDelware_ClaimCost" />
+					<include name="AUT_PIPDelware_ExpenseAO" />
+					<include name="AUT_PIPDelware_ExpenseDCC" />
+
+					<include
+						name="AUT_PIPDistrictofColumbia_UnspecifiedCostType" />
+					<include name="AUT_PIPDistrictofColumbia_ClaimCost" />
+					<include name="AUT_PIPDistrictofColumbia_ExpenseAO" />
+					<include name="AUT_PIPDistrictofColumbia_ExpenseDCC" />
+
+					<include name="AUT_PIPFlorida_UnspecifiedCostType" />
+					<include name="AUT_PIPFlorida_ClaimCost" />
+					<include name="AUT_PIPFlorida_ExpenseAO" />
+					<include name="AUT_PIPFlorida_ExpenseDCC" />
+
+					<include name="AUT_PIPHawaii_UnspecifiedCostType" />
+					<include name="AUT_PIPHawaii_ClaimCost" />
+					<include name="AUT_PIPHawaii_ExpenseAO" />
+					<include name="AUT_PIPHawaii_ExpenseDCC" />
+
+					<include name="AUT_PIPKansas_UnspecifiedCostType" />
+					<include name="AUT_PIPKansas_ClaimCost" />
+					<include name="AUT_PIPKansas_ExpenseAO" />
+					<include name="AUT_PIPKansas_ExpenseDCC" />
+
+					<include name="AUT_PIPKentucky_UnspecifiedCostType" />
+					<include name="AUT_PIPKentucky_ClaimCost" />
+					<include name="AUT_PIPKentucky_ExpenseAO" />
+					<include name="AUT_PIPKentucky_ExpenseDCC" />
+
+					<include name="AUT_PIPMaryland_UnspecifiedCostType" />
+					<include name="AUT_PIPMaryland_ClaimCost" />
+					<include name="AUT_PIPMaryland_ExpenseAO" />
+					<include name="AUT_PIPMaryland_ExpenseDCC" />
+
+					<include name="AUT_PIPMassachusetts_UnspecifiedCostType" />
+					<include name="AUT_PIPMassachusetts_ClaimCost" />
+					<include name="AUT_PIPMassachusetts_ExpenseAO" />
+					<include name="AUT_PIPMassachusetts_ExpenseDCC" />
+
+					<include name="AUT_PIPMichigans_UnspecifiedCostType" />
+					<include name="AUT_PIPMichigan_ClaimCost" />
+					<include name="AUT_PIPMichigan_ExpenseAO" />
+					<include name="AUT_PIPMichigan_ExpenseDCC" />
+
+					<include name="AUT_PIPMinnesota_UnspecifiedCostType" />
+					<include name="AUT_PIPMinnesota_ClaimCost" />
+					<include name="AUT_PIPMinnesota_ExpenseAO" />
+					<include name="AUT_PIPMinnesota_ExpenseDCC" />
+
+					<include name="AUT_PIPNewJersey_UnspecifiedCostType" />
+					<include name="AUT_PIPNewJersey_ClaimCost" />
+					<include name="AUT_PIPNewJersey_ExpenseAO" />
+					<include name="AUT_PIPNewJersey_ExpenseDCC" />
+
+					<include name="AUT_PIPNewYork_UnspecifiedCostType" />
+					<include name="AUT_PIPNewYork_ClaimCost" />
+					<include name="AUT_PIPNewYork_ExpenseAO" />
+					<include name="AUT_PIPNewYork_ExpenseDCC" />
+
+					<include name="AUT_PIPNorthDakota_UnspecifiedCostType" />
+					<include name="AUT_PIPNorthDakota_ClaimCost" />
+					<include name="AUT_PIPNorthDakota_ExpenseAO" />
+					<include name="AUT_PIPNorthDakota_ExpenseDCC" />
+
+					<include name="AUT_PIPOregon_UnspecifiedCostType" />
+					<include name="AUT_PIPOregon_ClaimCost" />
+					<include name="AUT_PIPOregon_ExpenseAO" />
+					<include name="AUT_PIPOregon_ExpenseDCC" />
+
+					<include name="AUT_PIPPennsylvania_UnspecifiedCostType" />
+					<include name="AUT_PIPPennsylvania_ClaimCost" />
+					<include name="AUT_PIPPennsylvania_ExpenseAO" />
+					<include name="AUT_PIPPennsylvania_ExpenseDCC" />
+
+					<include name="AUT_PIPTexas_UnspecifiedCostType" />
+					<include name="AUT_PIPTexas_ClaimCost" />
+					<include name="AUT_PIPTexas_ExpenseAO" />
+					<include name="AUT_PIPTexas_ExpenseDCC" />
+
+					<include name="AUT_PIPUtah_UnspecifiedCostType" />
+					<include name="AUT_PIPUtah_ClaimCost" />
+					<include name="AUT_PIPUtah_ExpenseAO" />
+					<include name="AUT_PIPUtah_ExpenseDCC" />
+
+					<include name="AUT_PIPWashington_UnspecifiedCostType" />
+					<include name="AUT_PIPWashington_ClaimCost" />
+					<include name="AUT_PIPWashington_ExpenseAO" />
+					<include name="AUT_PIPWashington_ExpenseDCC" />
+					
+					<include
+						name="AUT_PropertyProtectionInsurance_UnspecifiedCostType" />
+					<include name="AUT_PropertyProtectionInsurance_ClaimCost" />
+					<include name="AUT_PropertyProtectionInsurance_ExpenseAO" />
+					<include name="AUT_PropertyProtectionInsurance_ExpenseDCC" />
+
+					<include name="AUT_RentalCarLossofUse_UnspecifiedCostType" />
+					<include name="AUT_RentalCarLossofUse_ClaimCost" />
+					<include name="AUT_RentalCarLossofUse_ExpenseAO" />
+					<include name="AUT_RentalCarLossofUse_ExpenseDCC" />
+
+					<include name="AUT_TapeDiscMedia_UnspecifiedCostType" />
+					<include name="AUT_TapeDiscMedia_ClaimCost" />
+					<include name="AUT_TapeDiscMedia_ExpenseAO" />
+					<include name="AUT_TapeDiscMedia_ExpenseDCC" />
+
+					<include name="AUT_TowingandLabor_UnspecifiedCostType" />
+					<include name="AUT_TowingandLabor_ClaimCost" />
+					<include name="AUT_TowingandLabor_ExpenseAO" />
+					<include name="AUT_TowingandLabor_ExpenseDCC" />
+					
+					<include
+						name="AUT_UnderinsuredMotoristBodilyInjury_UnspecifiedCostType" />
+					<include
+						name="AUT_UnderinsuredMotoristBodilyInjury_ClaimCost" />
+					<include
+						name="AUT_UnderinsuredMotoristBodilyInjury_ExpenseAO" />
+					<include
+						name="AUT_UnderinsuredMotoristBodilyInjury_ExpenseDCC" />
+
+					<include
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType" />
+					<include
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost" />
+					<include
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseAO" />
+					<include
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseDCC" />
+
+					<include
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType" />
+					<include name="AUT_UninsuredMotoristBodilyInjury_ClaimCost" />
+					<include name="AUT_UninsuredMotoristBodilyInjury_ExpenseAO" />
+					<include
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseDCC" />
+
+					<include
+						name="AUT_UninsuredMotoristPropertyDamage_UnspecifiedCostType" />
+					<include
+						name="AUT_UninsuredMotoristPropertyDamage_ClaimCost" />
+					<include
+						name="AUT_UninsuredMotoristPropertyDamage_ExpenseAO" />
+					<include
+						name="AUT_UninsuredMotoristPropertyDamage_ExpenseDCC" />
+
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
