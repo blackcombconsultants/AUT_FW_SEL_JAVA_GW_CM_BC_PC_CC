@@ -16,10 +16,13 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 	}
 
 	public static void Enterpayeeinformation() throws Throwable {
-		String insuredName = driver.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
+		String insuredName = driver
+				.findElement(By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-label gw-infoValue']")).getText();
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check", strTestCaseName);
-			GuidewireAutomate_Validation("Screen Header", Enterpayeeinformation_Header, "equals", "Step 1 of 3: Enter payee information");
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check",
+					strTestCaseName);
+			GuidewireAutomate_Validation("Screen Header", Enterpayeeinformation_Header, "equals",
+					"Step 1 of 3: Enter payee information");
 			GuidewireAutomate_Validation("Primary Payee", PrimaryPayee, "equals", "Primary Payee");
 
 			GuidewireAutomate("Name", CD_PrimaryPayee_Namee, "selectByVisibleText", insuredName);
@@ -33,21 +36,27 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 	}
 
 	public static void Enterpaymentinformation() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check",
+				strTestCaseName);
 
 		try {
-			GuidewireAutomate_Validation("Screen Header", Enterpaymentinformation_Header, "equals", "Step 2 of 3: Enter payment information");
-			GuidewireAutomate("Reserve Line", PD_ReserveLine, "selectByVisibleText", lhm_TestCase_Table_Data.get("ReserveLine"));
+			GuidewireAutomate_Validation("Screen Header", Enterpaymentinformation_Header, "equals",
+					"Step 2 of 3: Enter payment information");
+			GuidewireAutomate("Reserve Line", PD_ReserveLine, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("ReserveLine"));
 			GuidewireAutomate_Validation("Coverage", PD_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage"));
 
 			// Category field below Line Items should be defaulted to <none>.
-			GuidewireAutomate_Validation("LineItem Category", PD_LineItem_Category, "FirstSelectedOptionEquals", "<none>");
+			GuidewireAutomate_Validation("LineItem Category", PD_LineItem_Category, "FirstSelectedOptionEquals",
+					"<none>");
 
 			// Verify whether the below list is displayed in the Category field.
-			GuidewireAutomate_Validation("LineItem Category", PD_LineItem_Category, "getOptionscontains", lhm_TestCase_Table_Data.get("LineItems_Category"));
+			GuidewireAutomate_Validation("LineItem Category", PD_LineItem_Category, "getOptionscontains",
+					lhm_TestCase_Table_Data.get("LineItems_Category"));
 
 			Thread.sleep(2000);
-			GuidewireAutomate("Payment Type", PD_PaymentType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PaymentType"));
+			GuidewireAutomate("Payment Type", PD_PaymentType, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("PaymentType"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
@@ -96,7 +105,8 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 	public static void ValidationResults_ClaimCost() throws Throwable {
 		try {
 			GuidewireAutomate_Validation("Validation Header", Validation_Header, "equals", "Validation Results");
-			GuidewireAutomate_Validation("Validation Error", Error_Msg, "contains", "There is $500.00 unapplied deductible for");
+			GuidewireAutomate_Validation("Validation Error", Error_Msg, "contains",
+					"There is $500.00 unapplied deductible for");
 			GuidewireAutomate("Clear", Clear_Button, "clickAndwait", "click");
 			// oExtentTest.log(Status.PASS, "");
 
@@ -111,8 +121,10 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 		try {
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("NewTransaction_Check");
 
-			GuidewireAutomate("LineItem Category", PD_LineItem_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("LineItemCategory_1"));
-			GuidewireAutomate("LineItem Category", PD_LineItem_Amount, "clearANDsendKeys", lhm_TestCase_Table_Data.get("LineItem_Amount_1"));
+			GuidewireAutomate("LineItem Category", PD_LineItem_Category, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("LineItemCategory_1"));
+			GuidewireAutomate("LineItem Category", PD_LineItem_Amount, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("LineItem_Amount_1"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
@@ -124,8 +136,10 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 	public static void AddItem_Others() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("NewTransaction_Check");
 		try {
-			GuidewireAutomate("LineItem Category", PD_LineItem_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("LineItemCategory_2"));
-			GuidewireAutomate("LineItem Category", PD_LineItem_Amount, "clearANDsendKeys", lhm_TestCase_Table_Data.get("LineItem_Amount_2"));
+			GuidewireAutomate("LineItem Category", PD_LineItem_Category, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("LineItemCategory_2"));
+			GuidewireAutomate("LineItem Category", PD_LineItem_Amount, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("LineItem_Amount_2"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
@@ -136,12 +150,16 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 
 	public static void Setcheckinstructions() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check",
+				strTestCaseName);
 		try {
-			GuidewireAutomate_Validation("Screen Header", Setcheckinstructions_Header, "equals", "Step 3 of 3: Set check instructions");
+			GuidewireAutomate_Validation("Screen Header", Setcheckinstructions_Header, "equals",
+					"Step 3 of 3: Set check instructions");
 
-			GuidewireAutomate_Validation("PayToTheOrderOf", SCI_PayToTheOrderOf, "equals", lhm_TestCase_Table_Data.get("PayToTheOrderOf"));
-			GuidewireAutomate_Validation("Mailing Address", SCI_MailingAddress, "equals", lhm_TestCase_Table_Data.get("MailingAddress"));
+			GuidewireAutomate_Validation("PayToTheOrderOf", SCI_PayToTheOrderOf, "equals",
+					lhm_TestCase_Table_Data.get("PayToTheOrderOf"));
+			GuidewireAutomate_Validation("Mailing Address", SCI_MailingAddress, "equals",
+					lhm_TestCase_Table_Data.get("MailingAddress"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
@@ -153,12 +171,16 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 	public static void Check_ValidationResults_RentalReimbursement() throws Throwable {
 
 		try {
-			GuidewireAutomate_Validation("ValidationResults Header", ValidationResults_Header, "equals", "Validation Results");
+			GuidewireAutomate_Validation("ValidationResults Header", ValidationResults_Header, "equals",
+					"Validation Results");
 			GuidewireAutomate_Validation("Warnings Title", ValidationResults_Warnings_Header, "equals", "Warnings:");
 			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
-					"This check would cause gross incurred on exposure (2) 1st Party Vehicle - PGNUtwMRX Automation ($2,500.00) to exceed the exposure limit of $25.00. Do you still want to continue? Rule:TXV01000");
+					"This check would cause gross incurred on exposure");
 			GuidewireAutomate_Validation("Warnings Second", ValidationResults_Warning_Second, "contains",
-					"This check would cause gross incurred on coverage 2000 Honda Civic ($2,500.00) to exceed the incident limit of $750.00. Do you still want to continue? Rule:TXV03000");
+					"This check would cause gross incurred on coverage");
+
+			GuidewireAutomate("Clear", Clear_Button, "clickAndwait", "click");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
