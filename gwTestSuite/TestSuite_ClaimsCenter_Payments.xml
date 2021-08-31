@@ -8,7 +8,8 @@
 			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
 	</listeners>
 
-	<test thread-count="1" parallel="methods" name="ClaimsCenter Payment Regression Test">
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Payment Regression Test">
 		<classes>
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Payment">
@@ -18,140 +19,309 @@
 					<include
 						name="AUT_Payment_Collision_UnspecifiedCostType_Autobody" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Autoparts"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Autoparts" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Glass"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Glass" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Legal"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Legal" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Other"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Other" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Reimbursement"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Reimbursement" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Rental"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Rental" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Salvage"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Salvage" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Settlement"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Settlement" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Towing"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Towing" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Vehicleappraisal"/>
+						name="AUT_Payment_Collision_UnspecifiedCostType_Vehicleappraisal" />
 					<include
-						name="AUT_Payment_Collision_UnspecifiedCostType_Vehicleinspection"/>
-						
+						name="AUT_Payment_Collision_UnspecifiedCostType_Vehicleinspection" />
+
 					<include
-						name="AUT_Payment_Collision_ClaimCost_UnspecifiedCostCategory"/>
+						name="AUT_Payment_Collision_ClaimCost_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_Collision_ClaimCost_Autoparts" />
+					<include name="AUT_Payment_Collision_ClaimCost_Glass" />
+					<include name="AUT_Payment_Collision_ClaimCost_Labor" />
+					<include name="AUT_Payment_Collision_ClaimCost_Legal" />
+					<include name="AUT_Payment_Collision_ClaimCost_Other" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Autoparts"/>
+						name="AUT_Payment_Collision_ClaimCost_Reimbursement" />
+					<include name="AUT_Payment_Collision_ClaimCost_Rental" />
+					<include name="AUT_Payment_Collision_ClaimCost_Settlement" />
+					<include name="AUT_Payment_Collision_ClaimCost_Towing" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Glass"/>
+						name="AUT_Payment_Collision_ClaimCost_Vehicleinspection" />
+
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Labor"/>
+						name="AUT_Payment_Collision_ExpenseAO_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_Collision_ExpenseAO_Legal" />
+					<include name="AUT_Payment_Collision_ExpenseAO_Other" />
+					<include name="AUT_Payment_Collision_ExpenseAO_Salvage" />
+					<include name="AUT_Payment_Collision_ExpenseAO_Vehicleappraisal" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Legal"/>
+						name="AUT_Payment_Collision_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_Collision_ExpenseDCC_Legal" />
+					<include name="AUT_Payment_Collision_ExpenseDCC_Other" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Other"/>
+						name="AUT_Payment_Collision_ExpenseDCC_Vehicleinspection" />
+
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Reimbursement"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_UnspecifiedCostCategory" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Rental" />
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Autobody" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Settlement" />
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Autoparts" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Towing"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Glass" />
 					<include
-						name="AUT_Payment_Collision_ClaimCost_Vehicleinspection"/>
-						
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Labor" />
 					<include
-						name="AUT_Payment_Collision_ExpenseAO_UnspecifiedCostCategory"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Legal" />
 					<include
-						name="AUT_Payment_Collision_ExpenseAO_Legal"/>
-					<include
-						name="AUT_Payment_Collision_ExpenseAO_Other"/>
-					<include
-						name="AUT_Payment_Collision_ExpenseAO_Salvage"/>
-					<include
-						name="AUT_Payment_Collision_ExpenseAO_Vehicleappraisal"/>
-					<include
-						name="AUT_Payment_Collision_ExpenseDCC_UnspecifiedCostCategory"/>
-					<include
-						name="AUT_Payment_Collision_ExpenseDCC_Legal"/>
-					<include
-						name="AUT_Payment_Collision_ExpenseDCC_Other"/>
-					<include
-						name="AUT_Payment_Collision_ExpenseDCC_Vehicleinspection"/>
-						
-					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_UnspecifiedCostCategory"/>
-					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Autobody"/>
-					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Autoparts"/>
-					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Glass"/>
-					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Labor"/>
-					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Legal"/>
-					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Other"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Other" />
 					<include
 						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Reimbursement" />
 					<include
 						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Rental" />
 					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Salvage"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Salvage" />
 					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Settlement"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Settlement" />
 					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Towing"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Towing" />
 					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Vehicleappraisal"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Vehicleappraisal" />
 					<include
-						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Vehicleinspection"/>
+						name="AUT_Payment_Comprehensive_UnspecifiedCostType_Vehicleinspection" />
+
+					<include
+						name="AUT_Payment_Comprehensive_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_Comprehensive_ClaimCost_Autoparts" />
+					<include name="AUT_Payment_Comprehensive_ClaimCost_Glass" />
+					<include name="AUT_Payment_Comprehensive_ClaimCost_Labor" />
+					<include name="AUT_Payment_Comprehensive_ClaimCost_Legal" />
+					<include name="AUT_Payment_Comprehensive_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_Comprehensive_ClaimCost_Reimbursement" />
+					<include name="AUT_Payment_Comprehensive_ClaimCost_Rental" />
+					<include
+						name="AUT_Payment_Comprehensive_ClaimCost_Settlement" />
+					<include name="AUT_Payment_Comprehensive_ClaimCost_Towing" />
+					<include
+						name="AUT_Payment_Comprehensive_ClaimCost_Vehicleinspection" />
+
+					<include
+						name="AUT_Payment_Comprehensive_ExpenseAO_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_Comprehensive_ExpenseAO_Legal" />
+					<include name="AUT_Payment_Comprehensive_ExpenseAO_Other" />
+					<include name="AUT_Payment_Comprehensive_ExpenseAO_Salvage" />
+					<include
+						name="AUT_Payment_Comprehensive_ExpenseAO_Vehicleappraisal" />
+					<include
+						name="AUT_Payment_Comprehensive_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_Comprehensive_ExpenseDCC_Legal" />
+					<include name="AUT_Payment_Comprehensive_ExpenseDCC_Other" />
+					<include
+						name="AUT_Payment_Comprehensive_ExpenseDCC_Vehicleinspection" />
+
+					<include
+						name="AUT_Payment_RentalReimbursement_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_RentalReimbursement_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_RentalReimbursement_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_RentalReimbursement_UnspecifiedCostType_Rental" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ClaimCost_Reimbursement" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ClaimCost_Rental" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ExpenseAO_Other" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ExpenseDCC_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_RentalReimbursement_ExpenseDCC_Other" />
+
+
+					<include
+						name="AUT_Payment_TowingandLabor_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_TowingandLabor_UnspecifiedCostType_Labor" />
+					<include
+						name="AUT_Payment_TowingandLabor_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_TowingandLabor_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_TowingandLabor_UnspecifiedCostType_Towing" />
+					<include
+						name="AUT_Payment_TowingandLabor_ClaimCost_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_TowingandLabor_ClaimCost_Labor" />
+					<include name="AUT_Payment_TowingandLabor_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_TowingandLabor_ClaimCost_Reimbursement" />
+					<include name="AUT_Payment_TowingandLabor_ClaimCost_Towing" />
+					<include
+						name="AUT_Payment_TowingandLabor_ExpenseAO_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_TowingandLabor_ExpenseAO_Other" />
+					<include
+						name="AUT_Payment_TowingandLabor_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_TowingandLabor_ExpenseDCC_Other" />
+
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Autobody" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Autoparts" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Glass" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Labor" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Legal" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Rental" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Salvage" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Settlement" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Towing" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Vehicleappraisal" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_UnspecifiedCostType_Vehicleinspection" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Autoparts" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Glass" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Labor" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Legal" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Reimbursement" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Rental" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Settlement" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Towing" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ClaimCost_Vehicleinspection" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Legal" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Other" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Salvage" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseAO_Vehicleappraisal" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_Legal" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_Other" />
+					<include
+						name="AUT_Payment_CollisionLimitedCoverage_ExpenseDCC_Vehicleinspection" />
+
+
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_CaseManagement" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_DeathBenefits" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Labor" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Legal" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_LostWages" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Salvage" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Settlement" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Vehicleappraisal" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_UnspecifiedCostType_Vehicleinspection" />
+
+
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_Deathbenefits" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_Labor" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_Legal" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_LostWages" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_Reimbursement" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_Settlement" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ClaimCost_Vehicleinspection" />
+
+
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseAO_CaseManagement" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Legal" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Other" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Salvage" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Vehicleappraisal" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseAO_Vehicleinspection" />
+
+
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Legal" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Other" />
+					<include
+						name="AUT_Payment_DeathDisabilityBenefit_ExpenseDCC_Vehicleinspection" />
 						
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_UnspecifiedCostCategory"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Autoparts"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Glass"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Labor"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Legal"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Other"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Reimbursement"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Rental"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Settlement"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Towing"/>
-					<include
-						name="AUT_Payment_Comprehensive_ClaimCost_Vehicleinspection"/>
-						
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseAO_UnspecifiedCostCategory"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseAO_Legal"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseAO_Other"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseAO_Salvage"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseAO_Vehicleappraisal"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseDCC_UnspecifiedCostCategory"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseDCC_Legal"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseDCC_Other"/>
-					<include
-						name="AUT_Payment_Comprehensive_ExpenseDCC_Vehicleinspection"/>
+					
+
 				</methods>
 			</class>
 		</classes>
