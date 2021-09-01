@@ -170,21 +170,50 @@ public interface CC_NewClaimWizard_PO {
 	 */
 	final By AutoFirstandFinal_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Step 2 of 2: Auto First and Final']");
 
+	final By AFF_Insured_Name = By.xpath("//select[contains(@name,'FirstAndFinalScreenInsuredClaimant')]");
+
 	// Damage
+	final By AFF_Damage                 = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Damage']");
 	final By AFF_Damage_LossDescription = By.xpath("//textarea[contains(@name,'Description')]");
 
 	// Claimant
-	final By AFF_Name                  = By.xpath("//select[contains(@name,'FirstAndFinalScreenInsuredClaimant')]");
-	final By AFF_Claimant_Name         = By.xpath("//select[contains(@name,'Claimant_Picker')]");
-	final By AFF_Repair                = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[@class='gw-action--expand-button']");
-	final By AFF_NewAutobodyRepairShop = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'AutoRepairShop')]//div[@class='gw-label']");
+	final By AFF_Claimant     = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Claimant']");
+	final By AFF_ClaimantName = By.xpath("//select[contains(@name,'Claimant_Picker')]");
+	final By AFF_ClaimantType = By.xpath("//select[contains(@name,'Claimant_Type')]");
 
-	final By Location = By.xpath("//select[contains(@name,'Address_Picker')]");
-	final By State    = By.xpath("//div[contains(@id,'AutoFirstAndFinalScreen-22')]//select[contains(@name,'GlobalAddressInputSet-State')]");
+	final By AFF_Location = By.xpath("//select[contains(@name,'globalAddressContainer-Address_Picker')]");
+	final By AFF_Country  = By.xpath("//select[contains(@name,'GlobalAddressInputSet-Country')]");
+	final By AFF_State    = By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
+	final By AFF_Address1 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine-1')]");
+	final By AFF_Address2 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine2')]");
+	final By AFF_Address3 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine3')]");
 
-	final By AFF_AutoRepairShop_Name  = By.xpath("//input[contains(@name,'Name')]");
-	final By AFF_AutoRepairShop_TaxID = By.xpath("//input[contains(@name,'ContactBasicsDV-V_EIN')]");
+	// Repair
+	final By AFF_Repair                           = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Repair']");
+	final By AFF_Repair_RepairShop                = By.xpath("//select[contains(@name,'RepairShop_Picker')]");
+	final By AFF_RepairShop_TypeButton            = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[@class='gw-action--expand-button']");
+	final By AFF_RepairShop_NewAutobodyRepairShop = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'NewContactPickerMenuItemSet_AutoRepairShop')]//div[@class='gw-label']");
+	final By AFF_RepairShop_NewVendor_Company     = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'NewContactPickerMenuItemSet_CompanyVendor')]//div[@class='gw-label']");
+	final By AFF_RepairShop_NewVendor_Person      = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'NewContactPickerMenuItemSet_PersonVendor')]//div[@class='gw-label']");
+	final By AFF_RepairShop_Search                = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'MenuItem_Search')]//div[@class='gw-label']");
+	final By AFF_RepairShop_ViewContactDetails    = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'MenuItem_ViewDetails')]//div[@class='gw-label']");
 
+	/*
+	 * Search Address Book For Vendors
+	 */
+	final By SearchAddressBookForVendors_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Search Address Book For Vendors']");
+	final By SABFV_Type                         = By.xpath("//select[contains(@name,'ContactSubtype')]");
+	final By SABFV_Name                         = By.xpath("//input[contains(@name,'GlobalContactNameInputSet-Name')]");
+	final By SABFV_Search                       = By.xpath(" //div[contains(@id,'SearchLinksInputSet-Search')]");
+
+	final By NewAutoRepairShop_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='New Auto Repair Shop']");
+	final By NARS_Tab_Basics          = By.xpath("//div[contains(@id,'ContactBasicsCardTab')]/div[@role='tab']");
+	final By NARS_Tab_Addresses       = By.xpath("//div[contains(@id,'ContactAddressesCardTab')]/div[@role='tab']");
+	final By NARS_Tab_RelaedContacts  = By.xpath("//div[contains(@id,'ContactRelatedContactsCardTab')]/div[@role='tab']");
+	final By NARS_Tab_Reviews         = By.xpath("//div[contains(@id,'AddressBookContactReviewCardTab')]/div[@role='tab']");
+
+	final By AFF_AutoRepairShop_Name     = By.xpath("//input[contains(@name,'Name')]");
+	final By AFF_AutoRepairShop_TaxID    = By.xpath("//input[contains(@name,'ContactBasicsDV-V_EIN')]");
 	final By AFF_AutoRepairShop_Address1 = By.xpath("//input[contains(@name,'AddressLine1')]");
 	final By AFF_AutoRepairShop_City     = By.xpath("//input[contains(@name,'City')]");
 	final By AFF_AutoRepairShop_County   = By.xpath("//input[contains(@name,'County')]");
@@ -305,17 +334,6 @@ public interface CC_NewClaimWizard_PO {
 	 * services Rental
 	 */
 	final By Assign_Button = By.xpath("//div[contains(@id,'AssignmentPopupScreen_ButtonButton')]//div[@role='button']");
-
-	final By NewAutoRepairShop_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
-
-	/*
-	 * SearchRepairShop
-	 */
-	final By SearchRepairShop         = By.xpath("//div[contains(@id,'RepairShop_PickerMenuIcon')]//div[contains(@id,'MenuItem_Search')]//div[@class='gw-label']");
-	final By SearchAddressBook_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
-	final By SearchAddressBook_Type   = By.xpath("//select[contains(@name,'ContactSubtype')]");
-	final By SearchAddressBook_Name   = By.xpath("//input[contains(@name,'GlobalContactNameInputSet-Name')]");
-	final By SearchAddressBook_Search = By.xpath(" //div[contains(@id,'SearchLinksInputSet-Search')]");
 
 	final By QuickClaimAuto_Header = By.xpath("//div[contains(@id,'NewQuickClaimScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	/*

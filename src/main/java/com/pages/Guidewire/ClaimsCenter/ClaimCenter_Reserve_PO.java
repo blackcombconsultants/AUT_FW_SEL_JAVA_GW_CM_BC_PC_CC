@@ -25,7 +25,7 @@ public interface ClaimCenter_Reserve_PO {
 	final By EditReserve_ValidationResults         = By.xpath("//div[contains(@id,'wsTabBar')]//div[@class='gw-label' and text()='Validation Results']");
 	final By EditReserve_ValidationResults_Warning = By.xpath("//div[contains(@id,'WebMessageWorksheetScreen')]//div[text()='Warnings:']");
 	final By ValidationResults_Warning_First       = By.xpath("//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs-0-0')]//div[@class='gw-message' and contains(text(),'Gross incurred on exposure (2) 1st Party Vehicle - PGNUtwMRX Automation')]");
-	final By ValidationResults_Warning_Second      = By.xpath("//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs-0-1')]//div[@class='gw-message' and contains(text(),'Gross incurred for 2002 Acura RL ($2,500.00)')]");
+	final By ValidationResults_Warning_Second      = By.xpath("//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs-0-1')]//div[@class='gw-message' and contains(text(),'Gross incurred for')]");
 
 	final By ValidationResults_ClearButton = By.xpath("//div[contains(@id,'WebMessageWorksheet_ClearButton')]//div[@role='button']");
 

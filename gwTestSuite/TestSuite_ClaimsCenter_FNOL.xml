@@ -12,7 +12,7 @@
 	<test thread-count="1" parallel="methods" name="Test">
 		<classes>
 			<class
-				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
+				name="com.Test.Guidewire.ClaimsCenter.Test_ClaimActions_AssignClaim_FNOLVerifiedPolicy">
 				<methods>
 					<include name="AUT_PA_CC_FNOL_VerifiedPolicy_Assignclaim" />
 					<include
@@ -44,7 +44,7 @@
 				</methods>
 			</class>
 			<class
-				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_UnverifiedPolicy">
+				name="com.Test.Guidewire.ClaimsCenter.Test_ClaimActions_AssignClaim_FNOLUnverifiedPolicy">
 				<methods>
 					<include
 						name="AUT_PA_CC_FNOL_UnverifiedPolicy_Newclaim_Auto" />

@@ -15,106 +15,110 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 	}
 
 	public static void login_Guidewire() throws Throwable {
+		try {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
 
-		GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
-		GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
-		// GuidewireAutomate("Password", Password, "sendKeys", new
-		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
-		GuidewireAutomate("Login", GW_Login_Button, "click", lhm_TestCase_Table_Data.get("GW_Login_Button"));
+			GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
+			GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
+			// GuidewireAutomate("Password", Password, "sendKeys", new
+			// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
+			oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_Robot_createScreenCapture(driver));
 
-		oExtentTest.log(Status.PASS, "Login succesful");
-		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
+			GuidewireAutomate("Login", GW_Login_Button, "clickAndwait", "click");
+
+			oExtentTest.log(Status.PASS, "Login succesful");
+			oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_Robot_createScreenCapture(driver));
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
+
+	public static void login_Guidewire_User(String strUser) throws Throwable {
+		try {
+
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strUser);
+
+			GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
+			GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
+			// GuidewireAutomate("Password", Password, "sendKeys", new
+			// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
+			oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_Robot_createScreenCapture(driver));
+
+			GuidewireAutomate("Login", GW_Login_Button, "clickAndwait", "click");
+
+			oExtentTest.log(Status.PASS, "Login succesful");
+			oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_Robot_createScreenCapture(driver));
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
 
 	}
 
 	public static void logout_Guidewire() throws Throwable {
-		GuidewireAutomate("Setting", GW_Setting_Link, "click", "click");
-		GuidewireAutomate("Logout", GW_Logout_Link, "click", "click");
+		try {
 
-		oExtentTest.log(Status.PASS, "Logout is succesful");
-		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
+			GuidewireAutomate("Setting", GW_Setting_Link, "clickAndwait", "click");
+			GuidewireAutomate("Logout", GW_Logout_Link, "clickAndwait", "click");
 
-	}
+			oExtentTest.log(Status.PASS, "Logout is succesful");
+			oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_Robot_createScreenCapture(driver));
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
 
-	public static void login_BillingCenter() throws Throwable {
-		login_Guidewire();
-
-	}
-
-	public static void logout_BillingCenter() throws Throwable {
-		GuidewireAutomate("Setting", GW_Setting_Link, "click", "click");
-		GuidewireAutomate("Logout", GW_Logout_Link, "click", "click");
-		// GuidewireAutomate_Handle("alertaccept", "NA");
-
-		oExtentTest.log(Status.PASS, "Logout is succesful");
-		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 	}
 
 	public static void login_PolicyCenter() throws Throwable {
 		login_Guidewire();
+	}
 
+	public static void login_PolicyCenter_User(String strUser) throws Throwable {
+		login_Guidewire_User(strUser);
 	}
 
 	public static void logout_PolicyCenter() throws Throwable {
 		logout_Guidewire();
+	}
 
+	public static void login_BillingCenter() throws Throwable {
+		login_Guidewire();
+	}
+
+	public static void login_BillingCenter_User(String strUser) throws Throwable {
+		login_Guidewire_User(strUser);
+	}
+
+	public static void logout_BillingCenter() throws Throwable {
+		logout_Guidewire();
 	}
 
 	public static void login_ClaimsCenter() throws Throwable {
 		login_Guidewire();
+	}
 
+	public static void login_ClaimsCenter_User(String strUser) throws Throwable {
+		login_Guidewire_User(strUser);
 	}
 
 	public static void logout_ClaimsCenter() throws Throwable {
 		logout_Guidewire();
-
 	}
 
-	public static void login_Guidewire_User(String strTestCaseName) throws Throwable {
-
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
-
-		GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
-		GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
-		// GuidewireAutomate("Password", Password, "sendKeys", new
-		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
-		GuidewireAutomate("Login", GW_Login_Button, "click", lhm_TestCase_Table_Data.get("GW_Login_Button"));
-
-		oExtentTest.log(Status.PASS, "Login succesful");
-		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
-
+	public static void login_ContactManagement() throws Throwable {
+		login_Guidewire();
 	}
 
-	public static void login_ClaimsCenter_User(String strTestCaseName) throws Throwable {
-
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
-
-		GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
-		GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
-		// GuidewireAutomate("Password", Password, "sendKeys", new
-		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
-		GuidewireAutomate("Login", GW_Login_Button, "click", lhm_TestCase_Table_Data.get("GW_Login_Button"));
-
-		oExtentTest.log(Status.PASS, "Login succesful");
-		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
-
+	public static void login_ContactManagement_User(String strUser) throws Throwable {
+		login_Guidewire_User(strUser);
 	}
 
-	public static void login_PolicyCenter_User(String strTestCaseName) throws Throwable {
-
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("login", strTestCaseName);
-
-		GuidewireAutomate("Username", GW_Username, "sendKeys", lhm_TestCase_Table_Data.get("GW_Username"));
-		GuidewireAutomate("Password", GW_Password, "sendKeys", lhm_TestCase_Table_Data.get("GW_Password"));
-		// GuidewireAutomate("Password", Password, "sendKeys", new
-		// String(Base64.getEncoder().encode(lhm_Data.get("TD_Password").getBytes())));
-		GuidewireAutomate("Login", GW_Login_Button, "click", lhm_TestCase_Table_Data.get("GW_Login_Button"));
-
-		oExtentTest.log(Status.PASS, "Login succesful");
-		oExtentTest.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
-
+	public static void logout_ContactManagement() throws Throwable {
+		logout_Guidewire();
 	}
 
 }
