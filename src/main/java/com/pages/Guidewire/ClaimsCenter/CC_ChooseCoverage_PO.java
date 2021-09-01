@@ -71,6 +71,13 @@ public interface CC_ChooseCoverage_PO {
 	final By NewInjuryIncident_OkButton = By
 			.xpath("//div[contains(@id,'NewInjuryIncidentScreen-Update')]//div[@role='button']");
 
+	final By NewInjuryIncident_AddButton = By.xpath(
+			"//div[contains(@id,'InjuryIncidentInputSet-EditableBodyPartDetailsLV_tb-Add')]//div[@role='button']");
+
+	final By NewInjuryIncident_AreaOfBody = By.xpath("//select[contains(@name,'PrimaryBodyPart')]");
+	final By NewInjuryIncident_BodyPart = By.xpath("//select[contains(@name,'DetailedBodyPart')]");
+	final By NewInjuryIncident_PPDPercenrage = By.xpath("//input[contains(@name,'PermamentImpairmentPercentage')]");
+
 	// New Exposure Page for Edit Property
 	final By PropertyEdit_ClaimantTitle = By.xpath(
 			"//div[contains(@id,'NewExposureDV-NewClaimPropertyDamageDV-4') and @role='group']//div[text()='Claimant']");

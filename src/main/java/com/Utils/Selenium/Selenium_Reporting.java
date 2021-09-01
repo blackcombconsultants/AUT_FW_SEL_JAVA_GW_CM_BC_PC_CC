@@ -8,9 +8,11 @@ public class Selenium_Reporting extends GW_Base {
 
 	public static ExtentReports getExtentReports() {
 
-		oExtentSparkReporter = new ExtentSparkReporter(pExtentReport_indexFile);
-		oExtentSparkReporter.config().setDocumentTitle("Automation Report");
-		oExtentSparkReporter.config().setReportName(gwAPPLICATION);
+		/*
+		 * oExtentSparkReporter = new ExtentSparkReporter(pExtentReport_indexFile);
+		 * oExtentSparkReporter.config().setDocumentTitle("Automation Report");
+		 * oExtentSparkReporter.config().setReportName(gwAPPLICATION);
+		 */
 		// oExtentSparkReporter.config().setTheme(Theme.DARK);
 
 		oExtentHtmlReporter = new ExtentHtmlReporter(pExtentReport_indexFile);
@@ -21,7 +23,7 @@ public class Selenium_Reporting extends GW_Base {
 		// oExtentReports = new ExtentReports(pesrName,true);
 		oExtentReports = new ExtentReports();
 
-		oExtentReports.attachReporter(oExtentSparkReporter);
+		oExtentReports.attachReporter(oExtentHtmlReporter);
 		oExtentReports.setSystemInfo("Executed on OS: ", gstr_OSname);
 		oExtentReports.setSystemInfo("Executed by User: ", gstr_Username);
 		oExtentReports.setSystemInfo("Hostname: ", gstr_Hostname);

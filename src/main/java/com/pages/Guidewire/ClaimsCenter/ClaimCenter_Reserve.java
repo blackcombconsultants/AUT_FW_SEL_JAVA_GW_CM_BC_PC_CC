@@ -67,17 +67,22 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 
 		for (int i = 0; i < intRow_DefaultReserve; i++) {
 
-			By ER_Coverage           = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
-			By ER_CostType           = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostType')]");
-			By ER_CostCategory       = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostCategory')]");
-			By ER_CurrentlyAvailable = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-AvailableReserves')]");
+			By ER_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+			By ER_CostType = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostType')]");
+			By ER_CostCategory = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostCategory')]");
+			By ER_CurrentlyAvailable = By
+					.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-AvailableReserves')]");
 
 			oExtentTest.log(Status.INFO, "Verifying DefaultReserve Row = [" + (i + 1) + "]");
 
-			GuidewireAutomate_Validation("Coverage", ER_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage" + i));
-			GuidewireAutomate_Validation("CostType", ER_CostType, "equals", lhm_TestCase_Table_Data.get("CostType" + i));
-			GuidewireAutomate_Validation("CostCategory", ER_CostCategory, "equals", lhm_TestCase_Table_Data.get("CostCategory" + i));
-			GuidewireAutomate_Validation("Reserve Currently Available", ER_CurrentlyAvailable, "equals", lhm_TestCase_Table_Data.get("CurrentlyAvailable" + i));
+			GuidewireAutomate_Validation("Coverage", ER_Coverage, "equals",
+					lhm_TestCase_Table_Data.get("Coverage" + i));
+			GuidewireAutomate_Validation("CostType", ER_CostType, "equals",
+					lhm_TestCase_Table_Data.get("CostType" + i));
+			GuidewireAutomate_Validation("CostCategory", ER_CostCategory, "equals",
+					lhm_TestCase_Table_Data.get("CostCategory" + i));
+			GuidewireAutomate_Validation("Reserve Currently Available", ER_CurrentlyAvailable, "equals",
+					lhm_TestCase_Table_Data.get("CurrentlyAvailable" + i));
 
 		}
 
@@ -94,17 +99,22 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 
 		for (int i = 0; i < DR_EndRowNo; i++) {
 
-			By reserve_Coverage           = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
-			By reserve_CostType           = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostType')]");
-			By reserve_CostCategory       = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostCategory')]");
-			By reserve_CurrentlyAvailable = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-AvailableReserves')]");
+			By reserve_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+			By reserve_CostType = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostType')]");
+			By reserve_CostCategory = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostCategory')]");
+			By reserve_CurrentlyAvailable = By
+					.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-AvailableReserves')]");
 
 			oExtentTest.log(Status.INFO, "Verifying DefaultReserve Row = [" + (i + 1) + "]");
 
-			GuidewireAutomate_Validation("Reserve Coverage", reserve_Coverage, "equals", lhm_TestCase_Table_Data.get("DR_Coverage" + (i + 1)));
-			GuidewireAutomate_Validation("Reserve CostType", reserve_CostType, "equals", lhm_TestCase_Table_Data.get("DR_CostType" + (i + 1)));
-			GuidewireAutomate_Validation("Reserve CostCategory", reserve_CostCategory, "equals", lhm_TestCase_Table_Data.get("DR_CostCategory" + (i + 1)));
-			GuidewireAutomate_Validation("Reserve CurrentlyAvailable", reserve_CurrentlyAvailable, "equals", lhm_TestCase_Table_Data.get("DR_CurrentlyAvailable" + (i + 1)));
+			GuidewireAutomate_Validation("Reserve Coverage", reserve_Coverage, "equals",
+					lhm_TestCase_Table_Data.get("DR_Coverage" + (i + 1)));
+			GuidewireAutomate_Validation("Reserve CostType", reserve_CostType, "equals",
+					lhm_TestCase_Table_Data.get("DR_CostType" + (i + 1)));
+			GuidewireAutomate_Validation("Reserve CostCategory", reserve_CostCategory, "equals",
+					lhm_TestCase_Table_Data.get("DR_CostCategory" + (i + 1)));
+			GuidewireAutomate_Validation("Reserve CurrentlyAvailable", reserve_CurrentlyAvailable, "equals",
+					lhm_TestCase_Table_Data.get("DR_CurrentlyAvailable" + (i + 1)));
 
 		}
 	}
@@ -119,17 +129,22 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 
 		for (int i = 0; i < DR_EndRowNo; i++) {
 
-			By ER_Coverage           = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
-			By ER_CostType           = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostType')]");
-			By ER_CostCategory       = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostCategory')]");
-			By ER_CurrentlyAvailable = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-AvailableReserves')]");
+			By ER_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+			By ER_CostType = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostType')]");
+			By ER_CostCategory = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-CostCategory')]");
+			By ER_CurrentlyAvailable = By
+					.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-AvailableReserves')]");
 
 			oExtentTest.log(Status.INFO, "Verifying DefaultReserve Row = [" + (i + 1) + "]");
 
-			GuidewireAutomate_Validation("Coverage", ER_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage" + i));
-			GuidewireAutomate_Validation("CostType", ER_CostType, "equals", lhm_TestCase_Table_Data.get("CostType" + i));
-			GuidewireAutomate_Validation("CostCategory", ER_CostCategory, "equals", lhm_TestCase_Table_Data.get("CostCategory" + i));
-			GuidewireAutomate_Validation("Reserve Currently Available", ER_CurrentlyAvailable, "equals", lhm_TestCase_Table_Data.get("CurrentlyAvailable" + i));
+			GuidewireAutomate_Validation("Coverage", ER_Coverage, "equals",
+					lhm_TestCase_Table_Data.get("Coverage" + i));
+			GuidewireAutomate_Validation("CostType", ER_CostType, "equals",
+					lhm_TestCase_Table_Data.get("CostType" + i));
+			GuidewireAutomate_Validation("CostCategory", ER_CostCategory, "equals",
+					lhm_TestCase_Table_Data.get("CostCategory" + i));
+			GuidewireAutomate_Validation("Reserve Currently Available", ER_CurrentlyAvailable, "equals",
+					lhm_TestCase_Table_Data.get("CurrentlyAvailable" + i));
 
 		}
 
@@ -140,34 +155,41 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 	{
 
 		int StartRowNo = Integer.parseInt(lhm_TestCase_Table_Data.get("rowNum"));
-		int EndRowNo   = Integer.parseInt(lhm_TestCase_Table_Data.get("getOptionsSize"));
+		int EndRowNo = Integer.parseInt(lhm_TestCase_Table_Data.get("getOptionsSize"));
 
 		for (int i = StartRowNo; i <= EndRowNo; i++) {
-			By ER_CheckBox             = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-_Checkbox')]");
-			By ER_Exposure             = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
-			By ER_Coverage             = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
-			By ER_CostType             = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
-			By ER_CostCategory         = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostCategory')]");
+			By ER_CheckBox = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-_Checkbox')]");
+			By ER_Exposure = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
+			By ER_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+			By ER_CostType = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
+			By ER_CostCategory = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostCategory')]");
 			By ER_NewAvailableReserves = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-NewAmount')]");
-			By ER_Comments             = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
+			By ER_Comments = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
 
 			if (i > StartRowNo) {
 				try {
+					Thread.sleep(2000);
 					GuidewireAutomate("Add", Reserve_Add, "clickAndwait", "Click");
 				} catch (ElementClickInterceptedException e) {
 					GuidewireAutomate("Add", Reserve_Add, "clickAndwait", "click");
 				}
 			}
-
+			Thread.sleep(2000);
 			GuidewireAutomate("CheckBox", ER_CheckBox, "clickAndwait", "click");
-			GuidewireAutomate("Exposure", ER_Exposure, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("Exposure"));
+			GuidewireAutomate("Exposure", ER_Exposure, "selectByVisibleTextAndwait",
+					lhm_TestCase_Table_Data.get("Exposure"));
 			GuidewireAutomate_Validation("Coverage", ER_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage"));
-			GuidewireAutomate_Validation("Cost Type Values", ER_CostType, "getOptionscontains", lhm_TestCase_Table_Data.get("CostTypeValues"));
-			GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostType"));
+			GuidewireAutomate_Validation("Cost Type Values", ER_CostType, "getOptionscontains",
+					lhm_TestCase_Table_Data.get("CostTypeValues"));
+			GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait",
+					lhm_TestCase_Table_Data.get("CostType"));
 			getStaleElement("Cost Category", ER_CostCategory);
-			GuidewireAutomate_Validation("Cost Category Values", ER_CostCategory, "getOptionscontains", lhm_TestCase_Table_Data.get("CostCategoryValuesrowNum" + i));
-			GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostCategoryDropDownValue" + i));
-			GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys", lhm_TestCase_Table_Data.get("NewAvailableReserves"));
+			GuidewireAutomate_Validation("Cost Category Values", ER_CostCategory, "getOptionscontains",
+					lhm_TestCase_Table_Data.get("CostCategoryValuesrowNum" + i));
+			GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait",
+					lhm_TestCase_Table_Data.get("CostCategoryDropDownValue" + i));
+			GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("NewAvailableReserves"));
 			GuidewireAutomate("Comments", ER_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Comment"));
 
 			if (i == EndRowNo) {
@@ -182,16 +204,16 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 	{
 
 		int StartRowNo = Integer.parseInt(lhm_TestCase_Table_Data.get("rowNum"));
-		int EndRowNo   = Integer.parseInt(lhm_TestCase_Table_Data.get("getOptionsSize"));
+		int EndRowNo = Integer.parseInt(lhm_TestCase_Table_Data.get("getOptionsSize"));
 
 		for (int i = StartRowNo; i <= EndRowNo; i++) {
-			By ER_CheckBox             = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-_Checkbox')]");
-			By ER_Exposure             = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
-			By ER_Coverage             = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
-			By ER_CostType             = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
-			By ER_CostCategory         = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostCategory')]");
+			By ER_CheckBox = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-_Checkbox')]");
+			By ER_Exposure = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
+			By ER_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+			By ER_CostType = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
+			By ER_CostCategory = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostCategory')]");
 			By ER_NewAvailableReserves = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-NewAmount')]");
-			By ER_Comments             = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
+			By ER_Comments = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
 
 			if (i > StartRowNo) {
 				try {
@@ -202,14 +224,20 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 			}
 
 			GuidewireAutomate("CheckBox", ER_CheckBox, "clickAndwait", "click");
-			GuidewireAutomate("Exposure", ER_Exposure, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("Exposure"));
+			GuidewireAutomate("Exposure", ER_Exposure, "selectByVisibleTextAndwait",
+					lhm_TestCase_Table_Data.get("Exposure"));
 			GuidewireAutomate_Validation("Coverage", ER_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage"));
-			GuidewireAutomate_Validation("Cost Type Values", ER_CostType, "getOptionscontains", lhm_TestCase_Table_Data.get("CostTypeValues"));
-			GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostType"));
+			GuidewireAutomate_Validation("Cost Type Values", ER_CostType, "getOptionscontains",
+					lhm_TestCase_Table_Data.get("CostTypeValues"));
+			GuidewireAutomate("Cost Type", ER_CostType, "selectByVisibleTextAndwait",
+					lhm_TestCase_Table_Data.get("CostType"));
 			getStaleElement("Cost Category", ER_CostCategory);
-			GuidewireAutomate_Validation("Cost Category Values", ER_CostCategory, "getOptionscontains", lhm_TestCase_Table_Data.get("CostCategoryValuesrowNum" + i));
-			GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostCategoryDropDownValue" + i));
-			GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys", lhm_TestCase_Table_Data.get("NewAvailableReserves"));
+			GuidewireAutomate_Validation("Cost Category Values", ER_CostCategory, "getOptionscontains",
+					lhm_TestCase_Table_Data.get("CostCategoryValuesrowNum" + i));
+			GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait",
+					lhm_TestCase_Table_Data.get("CostCategoryDropDownValue" + i));
+			GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("NewAvailableReserves"));
 			GuidewireAutomate("Comments", ER_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Comment"));
 
 			if (i == EndRowNo) {
@@ -223,24 +251,29 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Payment");
 		int i = Integer.parseInt(lhm_TestCase_Table_Data.get("DefaultRow"));
 
-		By ER_CheckBox             = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-_Checkbox')]");
-		By ER_Exposure             = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
-		By ER_Coverage             = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
-		By ER_CostType             = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
-		By ER_CostCategory         = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostCategory')]");
+		By ER_CheckBox = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-_Checkbox')]");
+		By ER_Exposure = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
+		By ER_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
+		By ER_CostType = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
+		By ER_CostCategory = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostCategory')]");
 		By ER_NewAvailableReserves = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-NewAmount')]");
-		By ER_Comments             = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
+		By ER_Comments = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
 
 		GuidewireAutomate("CheckBox", ER_CheckBox, "clickAndwait", "click");
 		GuidewireAutomate("Exposure", ER_Exposure, "selectByVisibleText", lhm_TestCase_Table_Data.get("Exposure"));
 		GuidewireAutomate_Validation("Coverage", ER_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage"));
-		GuidewireAutomate_Validation("Cost Type Values", ER_CostType, "getOptionscontains", lhm_TestCase_Table_Data.get("CostTypeValues"));
-		oExtentTest.log(Status.PASS, "The below list is displayed in the same order for Cost Type field " + "[" + lhm_TestCase_Table_Data.get("CostTypeValues") + "]");
+		GuidewireAutomate_Validation("Cost Type Values", ER_CostType, "getOptionscontains",
+				lhm_TestCase_Table_Data.get("CostTypeValues"));
+		oExtentTest.log(Status.PASS, "The below list is displayed in the same order for Cost Type field " + "["
+				+ lhm_TestCase_Table_Data.get("CostTypeValues") + "]");
 		GuidewireAutomate("CostType", ER_CostType, "selectByVisibleText", lhm_TestCase_Table_Data.get("CostType"));
 		getStaleElement("Cost Category", ER_CostCategory);
-		GuidewireAutomate_Validation("Cost Category Values", ER_CostCategory, "getOptionscontains", lhm_TestCase_Table_Data.get("CostCategoryValues"));
-		GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostCategory"));
-		GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys", lhm_TestCase_Table_Data.get("NewAvailableReserves"));
+		GuidewireAutomate_Validation("Cost Category Values", ER_CostCategory, "getOptionscontains",
+				lhm_TestCase_Table_Data.get("CostCategoryValues"));
+		GuidewireAutomate("Cost Category", ER_CostCategory, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("CostCategory"));
+		GuidewireAutomate("New Available Reserves", ER_NewAvailableReserves, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("NewAvailableReserves"));
 		GuidewireAutomate("Comments", ER_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Comment"));
 
 		GuidewireAutomate("Save", Reserve_Save, "clickAndwait", "click");
@@ -251,28 +284,34 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 		By reserve_Exposure = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-Exposure')]");
 		By reserve_Coverage = By.xpath("//div[contains(@id,'EditableReservesLV-" + i + "-Coverage')]");
 		By reserve_CostType = By.xpath("//select[contains(@name,'EditableReservesLV-" + i + "-CostType')]");
-		GuidewireAutomate("Exposure", reserve_Exposure, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("Exposure"));
+		GuidewireAutomate("Exposure", reserve_Exposure, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("Exposure"));
 		GuidewireAutomate_Validation("Coverage", reserve_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage"));
-		GuidewireAutomate("CostType", reserve_CostType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CostType"));
+		GuidewireAutomate("CostType", reserve_CostType, "selectByVisibleTextAndwait",
+				lhm_TestCase_Table_Data.get("CostType"));
 	}
 
 	public static void AddNewAvailableReserves_Comment(int i) throws Throwable {
 		By Reserve_NewAvailableReserves = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-NewAmount')]");
-		By Reserve_Comments             = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
-		GuidewireAutomate("NewAvailableReserves", Reserve_NewAvailableReserves, "clearANDsendKeys", lhm_TestCase_Table_Data.get("NewAvailableReserves"));
+		By Reserve_Comments = By.xpath("//input[contains(@name,'EditableReservesLV-" + i + "-Comments')]");
+		GuidewireAutomate("NewAvailableReserves", Reserve_NewAvailableReserves, "clearANDsendKeys",
+				lhm_TestCase_Table_Data.get("NewAvailableReserves"));
 		GuidewireAutomate("Comment", Reserve_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Comment"));
 	}
 
 	public static void EditReserves_Save() throws Throwable {
 	}
+
 	public static void EditReserves_Save1() throws Throwable {
 		int WebElementCostCategory = Integer.parseInt(lhm_TestCase_Table_Data.get("getOptionsSize"));
-		int lastrow                = Integer.parseInt(lhm_TestCase_Table_Data.get("LastRow"));
+		int lastrow = Integer.parseInt(lhm_TestCase_Table_Data.get("LastRow"));
 
 		if (WebElementCostCategory == lastrow) {
-			int getOptionsSize       = WebElementCostCategory + 1;
-			By  reserve_CostCategory = By.xpath("//select[contains(@name,'EditableReservesLV-" + getOptionsSize + "-CostCategory')]");
-			By  reserve_CheckBox     = By.xpath("//input[contains(@name,'EditableReservesLV-" + getOptionsSize + "-_Checkbox')]");
+			int getOptionsSize = WebElementCostCategory + 1;
+			By reserve_CostCategory = By
+					.xpath("//select[contains(@name,'EditableReservesLV-" + getOptionsSize + "-CostCategory')]");
+			By reserve_CheckBox = By
+					.xpath("//input[contains(@name,'EditableReservesLV-" + getOptionsSize + "-_Checkbox')]");
 
 			GuidewireAutomate("CheckBox", reserve_CheckBox, "clickAndwait", "click");
 
@@ -290,10 +329,14 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 		try {
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asBasicInfo");
 
-			GuidewireAutomate_Validation("ValidationResults Header", EditReserve_ValidationResults, "equals", "Validation Results");
-			GuidewireAutomate_Validation("Warnings Title", EditReserve_ValidationResults_Warning, "equals", "Warnings:");
-			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains", "Gross incurred on exposure");
-			GuidewireAutomate_Validation("Warnings Second", ValidationResults_Warning_Second, "contains", "Gross incurred for");
+			GuidewireAutomate_Validation("ValidationResults Header", EditReserve_ValidationResults, "equals",
+					"Validation Results");
+			GuidewireAutomate_Validation("Warnings Title", EditReserve_ValidationResults_Warning, "equals",
+					"Warnings:");
+			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
+					"Gross incurred on exposure");
+			GuidewireAutomate_Validation("Warnings Second", ValidationResults_Warning_Second, "contains",
+					"Gross incurred for");
 			GuidewireAutomate("Clear", ValidationResults_ClearButton, "clickAndwait", "click");
 			GuidewireAutomate("Save", Reserve_Save, "clickAndwait", "click");
 
@@ -308,11 +351,16 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asBasicInfo");
 			String strChoosebyCoverage_Vehicle = lhm_TestCase_Table_Data.get("BI_IV_Select");
 
-			GuidewireAutomate_Validation("ValidationResults Header", EditReserve_ValidationResults, "equals", "Validation Results");
-			GuidewireAutomate_Validation("Warnings Title", EditReserve_ValidationResults_Warning, "equals", "Warnings:");
+			GuidewireAutomate_Validation("ValidationResults Header", EditReserve_ValidationResults, "equals",
+					"Validation Results");
+			GuidewireAutomate_Validation("Warnings Title", EditReserve_ValidationResults_Warning, "equals",
+					"Warnings:");
 
-			By ValidationResults_Warning_First = By.xpath("//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs')]//div[@class='gw-message' and contains(text(),'Gross incurred for " + strChoosebyCoverage_Vehicle + "')]");
-			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains", "Gross incurred for 2000 Honda Civic");
+			By ValidationResults_Warning_First = By.xpath(
+					"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs')]//div[@class='gw-message' and contains(text(),'Gross incurred for "
+							+ strChoosebyCoverage_Vehicle + "')]");
+			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
+					"Gross incurred for 2000 Honda Civic");
 
 			GuidewireAutomate("Clear", ValidationResults_ClearButton, "clickAndwait", "click");
 			GuidewireAutomate("Save", Reserve_Save, "clickAndwait", "click");
