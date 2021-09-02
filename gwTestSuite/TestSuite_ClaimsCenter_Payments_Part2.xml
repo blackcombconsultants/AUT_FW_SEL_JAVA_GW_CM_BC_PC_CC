@@ -1,0 +1,184 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="ClaimsCenter TestSuite">
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Payment Regression Test">
+		<classes>
+
+			<class
+				name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Payment_Part2">
+				<methods>
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Rental" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Salvage" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Towing" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Vehicleappraisal" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Vehicleinspection" />
+
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_AutoBody" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Autoparts" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_DeathBenefits" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_EmergencyServices" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Glass" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Labor" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Legal" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_LifetimeBenefits" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_LostWages" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Medical" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Other" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Rental" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Towing" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Vehicleinspection" />
+
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Legal" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Other" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Salvage" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Vehicleappraisal" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Vehicleinspection" />
+
+
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Other" />
+					<exclude
+						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Vehicleinspection" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Autobody" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Autoparts" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_DeathBenefits" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_EmergencyServices" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Glass" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Labor" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Legal" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_LifetimeBenefits" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_LostWages" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Medical" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Rental" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Salvage" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Towing" />
+
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Vehicleappraisal" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Vehicleinspection" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_AutoBody" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Autoparts" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_DeathBenefits" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_EmergencyServices" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Glass" />
+
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Labor" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Legal" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_LifetimeBenefits" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_LostWages" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Medical" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Other" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Rental" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Towing" />
+
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Vehicleinspection" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Legal" />
+
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Salvage" />
+					<include
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Vehicleappraisal" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Vehicleinspection" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseDCC_Other" />
+					<exclude
+						name="AUT_Payment_LiabilityPropertyDamage_ExpenseDCC_Vehicleinspection" />
+
+				</methods>
+			</class> <!-- class -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
