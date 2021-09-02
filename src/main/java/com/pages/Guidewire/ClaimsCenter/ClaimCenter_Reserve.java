@@ -59,6 +59,19 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 		CC_Financials.FT_Item_Verify();
 	}
 
+	public static void AddingReserve_EachCostCategory_Electronic() throws Throwable {
+		// Verify whether a default reserve is created
+		EditReserves_DefaultReserve_Payment();
+		// Set "Cost Type" as "Unspecified Cost Type" and verify whether the
+		// "CostCategory" is displayed with the below list and in the same order.
+		EditReserves_Add_Item();
+        //error msg for Electronic
+		ClaimCenter_Reserve.EditReserves_ValidationResultsElectronicEquipment();
+		// verifying financial transaction-> Reserve should be created successfully.
+		CC_Financials.FT_DefaultReserve_Verify_Payment();
+		CC_Financials.FT_Item_Verify();
+	}
+
 	public static void verify_DefaultReserve() throws Throwable {
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Reserve");
@@ -360,7 +373,7 @@ public class ClaimCenter_Reserve extends SeleniumWebDriver_Commands implements C
 					"//div[contains(@id,'WebMessageWorksheetScreen-grpMsgs')]//div[@class='gw-message' and contains(text(),'Gross incurred for "
 							+ strChoosebyCoverage_Vehicle + "')]");
 			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_First, "contains",
-					"Gross incurred for 2000 Honda Civic");
+					"Gross incurred for");
 
 			GuidewireAutomate("Clear", ValidationResults_ClearButton, "clickAndwait", "click");
 			GuidewireAutomate("Save", Reserve_Save, "clickAndwait", "click");

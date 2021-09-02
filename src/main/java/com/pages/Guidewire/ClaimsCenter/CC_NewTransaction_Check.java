@@ -187,4 +187,21 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 
 		}
 	}
+
+	public static void Check_ValidationResults_ElectronicEquipment() throws Throwable {
+
+		try {
+			GuidewireAutomate_Validation("ValidationResults Header", ValidationResults_Header, "equals",
+					"Validation Results");
+			GuidewireAutomate_Validation("Warnings Title", ValidationResults_Warnings_Header, "equals", "Warnings:");
+			GuidewireAutomate_Validation("Warnings First", ValidationResults_Warning_Second, "contains",
+					"This check would cause gross incurred on coverage");
+			GuidewireAutomate("Clear", Clear_Button, "clickAndwait", "click");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+
+		}
+	}
 }
