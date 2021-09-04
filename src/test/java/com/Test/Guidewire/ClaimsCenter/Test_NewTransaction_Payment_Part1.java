@@ -8492,5 +8492,5 @@ public class Test_NewTransaction_Payment_Part1 {
 		// -----> logout Claim Center
 		GW_CM_PC_BC_CC_Login.logout_ClaimsCenter();
 	}
-	
+	//------------------------------------------------------------------------------------------------------
 }
