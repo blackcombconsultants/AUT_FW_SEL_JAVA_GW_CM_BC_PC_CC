@@ -280,6 +280,13 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 			CC_ChooseCoverage.VehicleEditIncident();
 			CC_ChooseCoverage.Exposures_Validation();
 			break;
+		case "VehicleNewIncident":
+			// Adding NewExposure TowingandLabor
+			CC_ChooseCoverage.NewExposureValidation();
+			CC_ChooseCoverage.AllClaimant();
+			CC_ChooseCoverage.VehicleNewIncident();
+			CC_ChooseCoverage.Exposures_Validation();
+			break;
 		case "VehicleEditIncident_Electronic":
 			// Adding NewExposure
 			CC_ChooseCoverage.NewExposureValidation();
@@ -295,10 +302,15 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 			CC_ChooseCoverage.Exposures_Validation();
 			break;
 		case "PropertyNewIncident":
-			// Adding NewExposure TowingandLabor
 			CC_ChooseCoverage.NewExposureValidation();
 			CC_ChooseCoverage.AllClaimant();
 			CC_ChooseCoverage.PropertyNewIncident();
+			CC_ChooseCoverage.Exposures_Validation();
+			break;
+		case "AddingExposureDescription":
+			// Adding NewExposure
+			CC_ChooseCoverage.AllClaimant();
+			CC_ChooseCoverage.AddDescription();
 			CC_ChooseCoverage.Exposures_Validation();
 			break;
 		}

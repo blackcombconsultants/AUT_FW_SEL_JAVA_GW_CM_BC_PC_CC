@@ -18,7 +18,7 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 
 		// Add code to verify (Loss Party,Primary Coverage)
 		try {
-			GuidewireAutomate_Validation("Screen Header", NewExposureHeader, "contains", "New Exposure");
+	   		GuidewireAutomate_Validation("Screen Header", NewExposureHeader, "contains", "New Exposure");
 			GuidewireAutomate_Validation("Section", ExposureTitle, "equals", "Exposure");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -100,6 +100,21 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 			GuidewireAutomate_Validation("Claimant Title", EditIncidentClaimantTitle, "equals", "Claimant");
 			GuidewireAutomate("Select Claimant", EditIncidentClaimant, "selectByVisibleText",
 					lhm_TestCase_Table_Data.get("ClaimantName"));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
+
+	public static void AddDescription() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
+				strTestCaseName);
+		try {
+
+			GuidewireAutomate("Damage Description", DamageDescription_Exposure, "clearANDsendKeys",
+					lhm_TestCase_Table_Data.get("DamageDescription"));
+			GuidewireAutomate("Update Button", NewExposureUpdateButton, "clickAndwait", "click");
 
 		} catch (Exception e) {
 			e.printStackTrace();
