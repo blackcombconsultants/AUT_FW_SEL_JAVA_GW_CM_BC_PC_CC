@@ -46,6 +46,10 @@ public interface CC_ChooseCoverage_PO {
 			.xpath("//div[contains(@id,'VehIncidentDetailDV-VehicleIncidentDV')]//div[text()='Damage Description']");
 	final By DamageDescription = By.xpath(
 			"//div[contains(@id,'VehicleIncidentDV-Description')]//textarea[contains(@name,'VehicleIncidentDV-Description')]");
+	// exposure
+	final By DamageDescription_Exposure = By.xpath(
+			"//div[contains(@id,'Description')]//textarea[contains(@name,'Description')]");
+	
 	final By DetailsTitle = By
 			.xpath("//div[contains(@id,'VehIncidentDetailDV-VehicleIncidentDV')]//div[text()='Details']");
 	final By DetailsLossOccurred = By.xpath("//select[contains(@name,'VehicleIncidentDV-LossOccured')]");

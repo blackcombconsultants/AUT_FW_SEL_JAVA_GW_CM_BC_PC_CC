@@ -1,0 +1,95 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="ClaimsCenter TestSuite">
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Payment Regression Test">
+		<classes>
+
+			<class
+				name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Payment_Part3">
+				<methods>
+					<exclude
+						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseAO_Salvage" />
+					<exclude
+						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseAO_Vehicleappraisal" />
+
+					<exclude
+						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseDCC_Other" />
+					<exclude
+						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseDCC_Vehicleinspection" />
+
+
+					<exclude
+						name="AUT_MexicoCovGenDamages_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_MexicoCovGenDamages_UnspecifiedCostType_Labor" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Legal" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Salvage" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Towing" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Vehicleappraisal" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_UnspecifiedCostType_Vehicleinspection" />
+
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_Labor" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_Legal" />
+					<include
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_Other" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_Towing" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ClaimCost_Vehicleinspection" />
+
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseAO_Legal" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseAO_Other" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseAO_Salvage" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseAO_Vehicleappraisal" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseAO_Vehicleinspection" />
+
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseDCC_UnspecifiedCostCategory" />
+					<include
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseDCC_Other" />
+					<exclude
+						name="AUT_MexicoCovGenDamagesDamages_ExpenseDCC_Vehicleinspection" />
+				</methods>
+			</class> <!-- class -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
