@@ -14,172 +14,172 @@
 			<class
 				name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Payment_Part2">
 				<methods>
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Rental" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Salvage" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Towing" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_UnspecifiedCostType_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_AutoBody" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Autoparts" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_DeathBenefits" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_EmergencyServices" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Glass" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Labor" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_LifetimeBenefits" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_LostWages" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Medical" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Rental" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Towing" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ClaimCost_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Salvage" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseAO_Vehicleinspection" />
 
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityBodilyInjury_ExpenseDCC_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Autobody" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Autoparts" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_DeathBenefits" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_EmergencyServices" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Glass" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Labor" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_LifetimeBenefits" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_LostWages" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Medical" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Rental" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Salvage" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Towing" />
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_UnspecifiedCostType_Vehicleinspection" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_AutoBody" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Autoparts" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_DeathBenefits" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_EmergencyServices" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Glass" />
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Labor" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_LifetimeBenefits" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_LostWages" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Medical" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Rental" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Towing" />
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ClaimCost_Vehicleinspection" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Salvage" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseAO_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseDCC_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseDCC_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseDCC_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_LiabilityPropertyDamage_ExpenseDCC_Vehicleinspection" />
 
 					<include
@@ -276,207 +276,207 @@
 					<include
 						name="AUT_Payment_LiabilityVehicle_ExpenseDCC_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Labor" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Salvage" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Towing" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_UnspecifiedCostCategory" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Labor" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Legal" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Other" />
-					<exclude
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Labor" />
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Legal" />
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Other" />
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_Settlement" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Towing" />
-					<exclude
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Towing" />
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseAO_UnspecifiedCostCategory" />
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseAO_Legal" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Legal" />
 
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseAO_Other" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Other" />
 
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseAO_Salvage" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Salvage" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseAO_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseAO_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseDCC_UnspecifiedCostCategory" />
 
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseDCC_Legal" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseDCC_Legal" />
 
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseDCC_Other" />
-					<exclude
+					<include name="AUT_Payment_MexicoCovBI_ExpenseDCC_Other" />
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseDCC_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_MexicoCovPD_UnspecifiedCostType_UnspecifiedCostCategory" />
-					<exclude name="AUT_MexicoCovPD_UnspecifiedCostType_Labor" />
-					<exclude name="AUT_MexicoCovPD_UnspecifiedCostType_Legal" />
-					<exclude name="AUT_MexicoCovPD_UnspecifiedCostType_Other" />
-					<exclude
+					<include name="AUT_MexicoCovPD_UnspecifiedCostType_Labor" />
+					<include name="AUT_MexicoCovPD_UnspecifiedCostType_Legal" />
+					<include name="AUT_MexicoCovPD_UnspecifiedCostType_Other" />
+					<include
 						name="AUT_MexicoCovPD_UnspecifiedCostType_Reimbursement" />
-					<exclude name="AUT_MexicoCovPD_UnspecifiedCostType_Salvage" />
-					<exclude
+					<include name="AUT_MexicoCovPD_UnspecifiedCostType_Salvage" />
+					<include
 						name="AUT_MexicoCovPD_UnspecifiedCostType_Settlement" />
-					<exclude name="AUT_MexicoCovPD_UnspecifiedCostType_Towing" />
-					<exclude
+					<include name="AUT_MexicoCovPD_UnspecifiedCostType_Towing" />
+					<include
 						name="AUT_MexicoCovPD_UnspecifiedCostType_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_MexicoCovPD_UnspecifiedCostType_Vehicleinspection" />
 
 
 
-					<exclude
+					<include
 						name="AUT_MexicoCovPD_ClaimCost_UnspecifiedCostCategory" />
-					<exclude name="AUT_MexicoCovPD_ClaimCost_Labor" />
-					<exclude name="AUT_MexicoCovPD_ClaimCost_Legal" />
-					<exclude name="AUT_MexicoCovPD_ClaimCost_Other" />
-					<exclude name="AUT_MexicoCovPD_ClaimCost_Reimbursement" />
-					<exclude name="AUT_MexicoCovPD_ClaimCost_Settlement" />
-					<exclude name="AUT_MexicoCovPD_ClaimCost_Towing" />
-					<exclude name="AUT_MexicoCovPD_ClaimCost_Vehicleinspection" />
+					<include name="AUT_MexicoCovPD_ClaimCost_Labor" />
+					<include name="AUT_MexicoCovPD_ClaimCost_Legal" />
+					<include name="AUT_MexicoCovPD_ClaimCost_Other" />
+					<include name="AUT_MexicoCovPD_ClaimCost_Reimbursement" />
+					<include name="AUT_MexicoCovPD_ClaimCost_Settlement" />
+					<include name="AUT_MexicoCovPD_ClaimCost_Towing" />
+					<include name="AUT_MexicoCovPD_ClaimCost_Vehicleinspection" />
 
 
-					<exclude
+					<include
 						name="AUT_MexicoCovPD_ExpenseAO_UnspecifiedCostCategory" />
-					<exclude name="AUT_MexicoCovPD_ExpenseAO_Legal" />
-					<exclude name="AUT_MexicoCovPD_ExpenseAO_Other" />
-					<exclude name="AUT_MexicoCovPD_ExpenseAO_Salvage" />
-					<exclude name="AUT_MexicoCovPD_ExpenseAO_Vehicleappraisal" />
-					<exclude name="AUT_MexicoCovPD_ExpenseAO_Vehicleinspection" />
+					<include name="AUT_MexicoCovPD_ExpenseAO_Legal" />
+					<include name="AUT_MexicoCovPD_ExpenseAO_Other" />
+					<include name="AUT_MexicoCovPD_ExpenseAO_Salvage" />
+					<include name="AUT_MexicoCovPD_ExpenseAO_Vehicleappraisal" />
+					<include name="AUT_MexicoCovPD_ExpenseAO_Vehicleinspection" />
 
 
-					<exclude
+					<include
 						name="AUT_MexicoCovPD_ExpenseDCC_UnspecifiedCostCategory" />
-					<exclude name="AUT_MexicoCovPD_ExpenseDCC_Legal" />
-					<exclude name="AUT_MexicoCovPD_ExpenseDCC_Other" />
-					<exclude
+					<include name="AUT_MexicoCovPD_ExpenseDCC_Legal" />
+					<include name="AUT_MexicoCovPD_ExpenseDCC_Other" />
+					<include
 						name="AUT_MexicoCovPD_ExpenseDCC_Vehicleinspection" />
 
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Labor" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Salvage" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Towing" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_UnspecifiedCostCategory" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Labor" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Legal" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Other" />
-					<exclude
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Labor" />
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Legal" />
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Other" />
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_Settlement" />
-					<exclude name="AUT_Payment_MexicoCovBI_ClaimCost_Towing" />
-					<exclude
+					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Towing" />
+					<include
 						name="AUT_Payment_MexicoCovBI_ClaimCost_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseAO_UnspecifiedCostCategory" />
 
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseAO_Legal" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Legal" />
 
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseAO_Other" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Other" />
 
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseAO_Salvage" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Salvage" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseAO_Vehicleappraisal" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseAO_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseDCC_UnspecifiedCostCategory" />
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseDCC_Legal" />
-					<exclude name="AUT_Payment_MexicoCovBI_ExpenseDCC_Other" />
-					<exclude
+					<include name="AUT_Payment_MexicoCovBI_ExpenseDCC_Legal" />
+					<include name="AUT_Payment_MexicoCovBI_ExpenseDCC_Other" />
+					<include
 						name="AUT_Payment_MexicoCovBI_ExpenseDCC_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Labor" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Salvage" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Towing" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Vehicleappraisal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_Labor" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_Other" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_Reimbursement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_Settlement" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_Towing" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ClaimCost_Vehicleinspection" />
 
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseAO_UnspecifiedCostCategory" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseAO_Legal" />
-					<exclude
+					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_ExpenseAO_Other" />
 
 				</methods>

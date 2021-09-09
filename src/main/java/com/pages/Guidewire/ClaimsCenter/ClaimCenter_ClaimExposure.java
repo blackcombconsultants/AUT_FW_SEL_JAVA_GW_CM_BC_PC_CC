@@ -27,7 +27,7 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 			.xpath("//div[contains(@id,'VehicleDamageDV-7') and @role='group']//div[text()='Incident Overview']");
 	private static By IncidentOverview_button = By
 			.xpath("//div[contains(@id,'Incident-Vehicle_IncidentMenuIcon')]//div[@class='gw-action--expand-button']");
-
+	private static By NewIncident_Description = By.xpath("//div[contains(@id,'Description_Input')]");
 	private static By IncidentOverview_EditIncident = By.xpath(
 			"//div[@class='gw-action--inner gw-hasDivider']//div[@class='gw-label' and text()='Edit Incident Details...']");
 	private static By VehicleIncident_Header = By.xpath(
@@ -218,6 +218,9 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 					"(1) 1st Party Vehicle");
 			GuidewireAutomate("Edit", Edit_Button, "clickAndwait", "click");
 			Thread.sleep(2000);
+			GuidewireAutomate("NewIncident_Description", NewIncident_Description, "moveToElement",
+					"NewIncident_Description");
+			GuidewireAutomate_Validation("Description", NewIncident_Description, "equals", "Description");
 
 			GuidewireAutomate("Section", EditIncident_IncidentOverview, "moveToElement", "Incident Overview");
 			GuidewireAutomate_Validation("Section", EditIncident_IncidentOverview, "contains", "Incident Overview");
@@ -243,8 +246,8 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 					lhm_TestCase_Table_Data.get("LossOccurred"));
 
 			GuidewireAutomate("Ok", Ok_Button, "clickAndwait", "click");
-
 			GuidewireAutomate("Update", Update_Button, "clickAndwait", "click");
+			Thread.sleep(2000);
 
 			GuidewireAutomate("UptoExposures", UptoExposures, "clickAndwait", "click");
 
@@ -311,6 +314,13 @@ public class ClaimCenter_ClaimExposure extends SeleniumWebDriver_Commands implem
 			// Adding NewExposure
 			CC_ChooseCoverage.AllClaimant();
 			CC_ChooseCoverage.AddDescription();
+			CC_ChooseCoverage.Exposures_Validation();
+			break;
+		case "InjuryNewIncident_PIP":
+			// Adding NewExposure
+			CC_ChooseCoverage.NewExposureValidation();
+			CC_ChooseCoverage.PIPClaimant();
+			CC_ChooseCoverage.InjuryNewIncident();
 			CC_ChooseCoverage.Exposures_Validation();
 			break;
 		}
