@@ -47,9 +47,9 @@ public interface CC_ChooseCoverage_PO {
 	final By DamageDescription = By.xpath(
 			"//div[contains(@id,'VehicleIncidentDV-Description')]//textarea[contains(@name,'VehicleIncidentDV-Description')]");
 	// exposure
-	final By DamageDescription_Exposure = By.xpath(
-			"//div[contains(@id,'Description')]//textarea[contains(@name,'Description')]");
-	
+	final By DamageDescription_Exposure = By
+			.xpath("//div[contains(@id,'Description')]//textarea[contains(@name,'Description')]");
+
 	final By DetailsTitle = By
 			.xpath("//div[contains(@id,'VehIncidentDetailDV-VehicleIncidentDV')]//div[text()='Details']");
 	final By DetailsLossOccurred = By.xpath("//select[contains(@name,'VehicleIncidentDV-LossOccured')]");
@@ -57,7 +57,7 @@ public interface CC_ChooseCoverage_PO {
 	final By EditIncident_OkButton = By.xpath("//div[contains(@id,'IncidentScreen-Update')]//div[@role='button']");
 
 	// New Exposure Page for New Incident Injury
-
+	final By NewIncident_Description = By.xpath("//div[contains(@id,'BIDamageInputSet-Incident_Description_Input')]");
 	final By NewIncident_InjuryIncidentOverviewTitle = By
 			.xpath("//div[contains(@id,'NewExposureDV')]//div[text()='Injury Incident Overview']");
 	final By NewIncident_InjuryEditButton = By
