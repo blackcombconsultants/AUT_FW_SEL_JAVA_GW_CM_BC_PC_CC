@@ -18,7 +18,7 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 
 		// Add code to verify (Loss Party,Primary Coverage)
 		try {
-	   		GuidewireAutomate_Validation("Screen Header", NewExposureHeader, "contains", "New Exposure");
+			GuidewireAutomate_Validation("Screen Header", NewExposureHeader, "contains", "New Exposure");
 			GuidewireAutomate_Validation("Section", ExposureTitle, "equals", "Exposure");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -216,6 +216,11 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
 				strTestCaseName);
 		try {
+
+			GuidewireAutomate("NewIncident_Description", NewIncident_Description, "moveToElement",
+					"NewIncident_Description");
+			GuidewireAutomate_Validation("Description", NewIncident_Description, "equals", "Description");
+
 			GuidewireAutomate_Validation("Injury Incident Overview", NewIncident_InjuryIncidentOverviewTitle, "equals",
 					"Injury Incident Overview");
 			GuidewireAutomate("EditIncident Button", NewIncident_InjuryEditButton, "clickAndwait", "click");
@@ -243,6 +248,10 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
 				strTestCaseName);
 		try {
+			GuidewireAutomate("NewIncident_Description", NewIncident_Description, "moveToElement",
+					"NewIncident_Description");
+			GuidewireAutomate_Validation("Description", NewIncident_Description, "equals", "Description");
+
 			GuidewireAutomate_Validation("Injury Incident Overview", NewIncident_InjuryIncidentOverviewTitle, "equals",
 					"Injury Incident Overview");
 			GuidewireAutomate("EditIncident Button", NewIncident_InjuryEditButton, "clickAndwait", "click");

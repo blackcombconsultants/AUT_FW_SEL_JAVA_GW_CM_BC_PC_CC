@@ -1,0 +1,244 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="ClaimsCenter TestSuite">
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Payment Regression Test">
+		<classes>
+
+			<class
+				name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Payment_Part4">
+				<methods>
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Lostwages" />
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Medical" />
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_PIPKentucky_UnspecifiedCostType_Vocational" />
+					<include
+						name="AUT_Payment_PIPKentucky_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPKentucky_ClaimCost_Burialexpenses" />
+					<include
+						name="AUT_Payment_PIPKentucky_ClaimCost_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPKentucky_ClaimCost_Emergencyservices" />
+					<include name="AUT_Payment_PIPKentucky_ClaimCost_Lostwages" />
+					<include name="AUT_Payment_PIPKentucky_ClaimCost_Medical" />
+					<include name="AUT_Payment_PIPKentucky_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_PIPKentucky_ClaimCost_Reimbursement" />
+					<include
+						name="AUT_Payment_PIPKentucky_ClaimCost_Vocational" />
+					<include
+						name="AUT_Payment_PIPKentucky_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPKentucky_ExpenseAO_Casemanagement" />
+					<include name="AUT_Payment_PIPKentucky_ExpenseAO_Other" />
+					<include
+						name="AUT_Payment_PIPKentucky_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_PIPKentucky_ExpenseDCC_Other" />
+
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_Lostwages" />
+					<include name="AUT_PIPMaryland_UnspecifiedCostType_Medical" />
+					<include name="AUT_PIPMaryland_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_PIPMaryland_UnspecifiedCostType_Vocational" />
+
+
+					<include
+						name="AUT_PIPMaryland_ClaimCost_UnspecifiedCostCategory" />
+					<include name="AUT_PIPMaryland_ClaimCost_Burialexpenses" />
+					<include name="AUT_PIPMaryland_ClaimCost_Deathbenefits" />
+					<include name="AUT_PIPMaryland_ClaimCost_Emergencyservices" />
+					<include name="AUT_PIPMaryland_ClaimCost_Lostwages" />
+
+					<include name="AUT_PIPMaryland_ClaimCost_Medical" />
+					<include name="AUT_PIPMaryland_ClaimCost_Other" />
+					<include name="AUT_PIPMaryland_ClaimCost_Reimbursement" />
+					<include name="AUT_PIPMaryland_ClaimCost_Vocational" />
+
+
+
+					<include
+						name="AUT_PIPMaryland_ExpenseAO_UnspecifiedCostCategory" />
+					<include name="AUT_PIPMaryland_ExpenseAO_Casemanagement" />
+					<include name="AUT_PIPMaryland_ExpenseAO_Other" />
+
+					<include
+						name="AUT_PIPMaryland_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_PIPMaryland_ExpenseDCC_Other" />
+
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Lostwages" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Medical" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_PIPMassachusetts_UnspecifiedCostType_Vocational" />
+
+					<include
+						name="AUT_PIPMassachusetts_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPMassachusetts_ClaimCost_Burialexpenses" />
+					<include
+						name="AUT_PIPMassachusetts_ClaimCost_Deathbenefits" />
+
+					<include
+						name="AUT_PIPMassachusetts_ClaimCost_Emergencyservices" />
+					<include name="AUT_PIPMassachusetts_ClaimCost_Lostwages" />
+					<include name="AUT_PIPMassachusetts_ClaimCost_Medical" />
+					<include name="AUT_PIPMassachusetts_ClaimCost_Other" />
+
+					<include
+						name="AUT_PIPMassachusetts_ClaimCost_Reimbursement" />
+					<include name="AUT_PIPMassachusetts_ClaimCost_Vocational" />
+
+					<include
+						name="AUT_PIPMassachusetts_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPMassachusetts_ExpenseAO_Casemanagement" />
+					<include name="AUT_PIPMassachusetts_ExpenseAO_Other" />
+					<include
+						name="AUT_PIPMassachusetts_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_PIPMassachusetts_ExpenseDCC_Other" />
+
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Lostwages" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Medical" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_PIPMichigans_UnspecifiedCostType_Vocational" />
+
+					<include
+						name="AUT_Payment_PIPMichigans_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPMichigans_ClaimCost_Burialexpenses" />
+					<include
+						name="AUT_Payment_PIPMichigans_ClaimCost_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPMichigans_ClaimCost_Emergencyservices" />
+					<include
+						name="AUT_Payment_PIPMichigans_ClaimCost_Lostwages" />
+					<include name="AUT_Payment_PIPMichigans_ClaimCost_Medical" />
+					<include name="AUT_Payment_PIPMichigans_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_PIPMichigans_ClaimCost_Reimbursement" />
+					<include
+						name="AUT_Payment_PIPMichigans_ClaimCost_Vocational" />
+
+					<include
+						name="AUT_Payment_PIPMichigans_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPMichigans_ExpenseAO_Casemanagement" />
+					<include name="AUT_Payment_PIPMichigans_ExpenseAO_Other" />
+
+					<include
+						name="AUT_Payment_PIPMichigans_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_PIPMichigans_ExpenseDCC_Other" />
+
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Lostwages" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Medical" />
+					<include name="AUT_PIPMinnesotas_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_PIPMinnesotas_UnspecifiedCostType_Vocational" />
+
+
+					<include
+						name="AUT_PIPMinnesotas_ClaimCost_UnspecifiedCostCategory" />
+					<include name="AUT_PIPMinnesotas_ClaimCost_Burialexpenses" />
+					<include name="AUT_PIPMinnesotas_ClaimCost_Deathbenefits" />
+					<include
+						name="AUT_PIPMinnesotas_ClaimCost_Emergencyservices" />
+					<include name="AUT_PIPMinnesotas_ClaimCost_Lostwages" />
+
+					<include name="AUT_PIPMinnesotas_ClaimCost_Medical" />
+					<include name="AUT_PIPMinnesotas_ClaimCost_Other" />
+					<include name="AUT_PIPMinnesotas_ClaimCost_Reimbursement" />
+					<include name="AUT_PIPMinnesotas_ClaimCost_Vocational" />
+
+
+
+					<include
+						name="AUT_PIPMinnesotas_ExpenseAO_UnspecifiedCostCategory" />
+					<include name="AUT_PIPMinnesotas_ExpenseAO_Casemanagement" />
+					<include name="AUT_PIPMinnesotas_ExpenseAO_Other" />
+
+					<include
+						name="AUT_PIPMinnesotas_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_PIPMinnesotas_ExpenseDCC_Other" />
+
+				</methods>
+			</class> <!-- class -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
