@@ -1,0 +1,619 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods"
+	name="ClaimsCenter TestSuite">
+
+	<listeners>
+		<listener
+			class-name="com.Utils.Selenium.Selenium_TestNG_TestListener" />
+	</listeners>
+
+	<test thread-count="1" parallel="methods"
+		name="ClaimsCenter Payment Regression Test">
+		<classes>
+
+			<class
+				name="com.Test.Guidewire.ClaimsCenter.Test_NewTransaction_Payment_Part5">
+				<methods>
+
+					<exclude
+						name="AUT_PIPOregons_ClaimCost_UnspecifiedCostCategory" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Burialexpenses" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Deathbenefits" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Emergencyservices" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Lostwages" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Medical" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Other" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Reimbursement" />
+					<exclude name="AUT_PIPOregons_ClaimCost_Vocational" />
+					<exclude
+						name="AUT_PIPOregons_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude name="AUT_PIPOregons_ExpenseAO_Casemanagement" />
+					<exclude name="AUT_PIPOregons_ExpenseAO_Other" />
+					<exclude
+						name="AUT_PIPOregons_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude name="AUT_PIPOregons_ExpenseDCC_Other" />
+
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Burialexpenses" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Casemanagement" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Emergencyservices" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Lostwages" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Medical" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_UnspecifiedCostType_Vocational" />
+
+
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Burialexpenses" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Emergencyservices" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Lostwages" />
+
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Medical" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Other" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ClaimCost_Vocational" />
+
+
+
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ExpenseAO_Casemanagement" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ExpenseAO_Other" />
+
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPPennsylvanias_ExpenseDCC_Other" />
+
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Burialexpenses" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Casemanagement" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Emergencyservices" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Lostwages" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Medical" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_Payment_PIPTexas_UnspecifiedCostType_Vocational" />
+
+
+					<exclude
+						name="AUT_Payment_PIPTexas_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPTexas_ClaimCost_Burialexpenses" />
+					<exclude
+						name="AUT_Payment_PIPTexas_ClaimCost_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPTexas_ClaimCost_Emergencyservices" />
+					<exclude name="AUT_Payment_PIPTexas_ClaimCost_Lostwages" />
+
+					<exclude name="AUT_Payment_PIPTexas_ClaimCost_Medical" />
+					<exclude name="AUT_Payment_PIPTexas_ClaimCost_Other" />
+					<exclude
+						name="AUT_Payment_PIPTexas_ClaimCost_Reimbursement" />
+					<exclude name="AUT_Payment_PIPTexas_ClaimCost_Vocational" />
+
+
+
+					<exclude
+						name="AUT_Payment_PIPTexas_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPTexas_ExpenseAO_Casemanagement" />
+					<exclude name="AUT_Payment_PIPTexas_ExpenseAO_Other" />
+
+					<exclude
+						name="AUT_Payment_PIPTexas_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude name="AUT_Payment_PIPTexas_ExpenseDCC_Other" />
+
+
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Burialexpenses" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Casemanagement" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Emergencyservices" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Lostwages" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Medical" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_Payment_PIPUtah_UnspecifiedCostType_Vocational" />
+
+					<exclude
+						name="AUT_Payment_PIPUtah_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPUtah_ClaimCost_Burialexpenses" />
+					<exclude name="AUT_Payment_PIPUtah_ClaimCost_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPUtah_ClaimCost_Emergencyservices" />
+					<exclude name="AUT_Payment_PIPUtah_ClaimCost_Lostwages" />
+					<exclude name="AUT_Payment_PIPUtah_ClaimCost_Medical" />
+					<exclude name="AUT_Payment_PIPUtah_ClaimCost_Other" />
+					<exclude name="AUT_Payment_PIPUtah_ClaimCost_Reimbursement" />
+					<exclude name="AUT_Payment_PIPUtah_ClaimCost_Vocational" />
+
+					<exclude
+						name="AUT_Payment_PIPUtah_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPUtah_ExpenseAO_Casemanagement" />
+					<exclude name="AUT_Payment_PIPUtah_ExpenseAO_Other" />
+
+					<exclude
+						name="AUT_Payment_PIPUtah_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude name="AUT_Payment_PIPUtah_ExpenseDCC_Other" />
+
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Burialexpenses" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Casemanagement" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Emergencyservices" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Lostwages" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Medical" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_Payment_PIPWashington_UnspecifiedCostType_Vocational" />
+
+					<exclude
+						name="AUT_Payment_PIPWashington_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPWashington_ClaimCost_Burialexpenses" />
+					<exclude
+						name="AUT_Payment_PIPWashington_ClaimCost_Deathbenefits" />
+					<exclude
+						name="AUT_Payment_PIPWashington_ClaimCost_Emergencyservices" />
+					<exclude
+						name="AUT_Payment_PIPWashington_ClaimCost_Lostwages" />
+					<exclude name="AUT_Payment_PIPWashington_ClaimCost_Medical" />
+					<exclude name="AUT_Payment_PIPWashington_ClaimCost_Other" />
+					<exclude
+						name="AUT_Payment_PIPWashington_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_Payment_PIPWashington_ClaimCost_Vocational" />
+
+					<exclude
+						name="AUT_Payment_PIPWashington_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_PIPWashington_ExpenseAO_Casemanagement" />
+					<exclude name="AUT_Payment_PIPWashington_ExpenseAO_Other" />
+
+					<exclude
+						name="AUT_Payment_PIPWashington_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude name="AUT_Payment_PIPWashington_ExpenseDCC_Other" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_UnspecifiedCostType_UnspecifiedCostCategory" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_PropertyProtectionInsurance_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_PropertyProtectionInsurance_UnspecifiedCostType_Salvage" />
+					<exclude
+						name="AUT_PropertyProtectionInsurance_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_PropertyProtectionInsurance_UnspecifiedCostType_Vehicleappraisal" />
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ClaimCost_UnspecifiedCostCategory" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ClaimCost_Other" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ClaimCost_Reimbursement" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ClaimCost_Settlement" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ExpenseAO_UnspecifiedCostCategory" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ExpenseAO_Other" />
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ExpenseAO_Salvage" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ExpenseAO_Vehicleappraisal" />
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ExpenseDCC_UnspecifiedCostCategory" />
+
+					<exclude
+						name="AUT_PropertyProtectionInsurance_ExpenseDCC_Other" />
+
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilyInjury_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Burialexpenses" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Deathbenefits" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Emergencyservices" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Lifetimebenefits" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Lostwages" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Medical" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Mileagereimbusment" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_UnspecifiedCostType_Vocational" />
+
+
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Burialexpenses" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Deathbenefits" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Emergencyservices" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Lifetimebenefits" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Lostwages" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Medical" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Mileagereimbusment" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Other" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Vocational" />
+
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ExpenseAO_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ExpenseAO_Mileagereimbusment" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ExpenseAO_Other" />
+
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ExpenseDCC_Other" />
+
+
+
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_AutoBody" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_AutoParts" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Glass" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Labor" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Mileagereimbusment" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Rental" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Salvage" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Supplementalearnings" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Towing" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_VehicleAppraisal" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_UnspecifiedCostType_Vehicleinspection" />
+
+
+
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Autoparts" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Glass" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Labor" />
+					<exclude
+						name="AUT_UnderinsuredMotorist_BodilInjury_ClaimCost_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Mileagereimbusment" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Other" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Rental" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Supplementalearnings" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Towing" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ClaimCost_Vehicleinspection" />
+
+
+
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseAO_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseAO_Mileagereimbusment" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseAO_Other" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseAO_Salvage" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseAO_Vehicleappraisal" />
+
+
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseDCC_Other" />
+					<exclude
+						name="AUT_UnderinsuredMotoristPropertyDamage_ExpenseDCC_Vehicleinspection" />
+
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Burialexpenses" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Deathbenefits" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Emergencyservices" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Legal" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Lifetimebenefits" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Lostwages" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Medical" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Mileagereimbusment" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_UnspecifiedCostType_Vocational" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Burialexpenses" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Deathbenefits" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Emergencyservices" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Legal" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Lifetimebenefits" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Lostwages" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Medical" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Mileagereimbusment" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Other" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ClaimCost_Vocational" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseAO_Legal" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseAO_Mileagereimbusment" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseAO_Other" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_UninsuredMotoristBodilyInjury_ExpenseDCC_Other" />
+
+
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Autobody" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_AutoParts" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Glass" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Labor" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Legal" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_MileageReimbursement" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Rental" />
+
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Salvage" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_SupplementalEarnings" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_Towing" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_VehicleAppraisal" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_UnspecifiedCostType_VehicleInspection" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_AutoParts" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Glass" />
+
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Labor" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Legal" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_MileageReimbursement" />
+
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Other" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Reimbursement" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Rental" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_SupplementalEarnings" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_Towing" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ClaimCost_VehicleInspection" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseAO_Legal" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseAO_MileageReimbursement" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseAO_Other" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseAO_Salvage" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseAO_VehicleAppraisal" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseDCC_Legal" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseDCC_Other" />
+					<exclude
+						name="AUT_Payment_UninsuredMotoristPropertyDamage_ExpenseDCC_VehicleInspection" />
+
+
+					<exclude
+						name="AUT_TapeDiscMedia_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<exclude name="AUT_TapeDiscMedia_UnspecifiedCostType_Other" />
+					<exclude
+						name="AUT_TapeDiscMedia_UnspecifiedCostType_Reimbursement" />
+					<exclude
+						name="AUT_TapeDiscMedia_UnspecifiedCostType_Settlement" />
+					<exclude
+						name="AUT_TapeDiscMedia_UnspecifiedCostType_Vehicleinspection" />
+					<exclude
+						name="AUT_TapeDiscMedia_ClaimCost_UnspecifiedCostCategory" />
+					<exclude name="AUT_TapeDiscMedia_ClaimCost_Other" />
+					<exclude name="AUT_TapeDiscMedia_ClaimCost_Reimbursement" />
+					<exclude name="AUT_TapeDiscMedia_ClaimCost_Settlement" />
+					<exclude
+						name="AUT_TapeDiscMedia_ClaimCost_Vehicleinspection" />
+					<exclude
+						name="AUT_TapeDiscMedia_ExpenseAO_UnspecifiedCostCategory" />
+					<exclude name="AUT_TapeDiscMedia_ExpenseA0_Other" />
+					<exclude
+						name="AUT_TapeDiscMedia_ExpenseA0_Vehicleinspection" />
+					<include
+						name="AUT_TapeDiscMedia_ExpenseDCC_UnspecifiedCostCategory" />
+					<exclude name="AUT_TapeDiscMedia_ExpenseDCC_Other" />
+					<exclude
+						name="AUT_TapeDiscMedia_ExpenseDCC_Vehicleinspection" />
+
+
+				</methods>
+			</class> <!-- class -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
