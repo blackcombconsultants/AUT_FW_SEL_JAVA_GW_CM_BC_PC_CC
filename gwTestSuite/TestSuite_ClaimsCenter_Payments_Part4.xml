@@ -237,6 +237,162 @@
 						name="AUT_PIPMinnesotas_ExpenseDCC_UnspecifiedCostCategory" />
 					<include name="AUT_PIPMinnesotas_ExpenseDCC_Other" />
 
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Lostwages" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Medical" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_PIPNewJersey_UnspecifiedCostType_Vocational" />
+
+					<include
+						name="AUT_Payment_PIPNewJersey_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPNewJersey_ClaimCost_Burialexpenses" />
+					<include
+						name="AUT_Payment_PIPNewJersey_ClaimCost_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPNewJersey_ClaimCost_Emergencyservices" />
+					<include
+						name="AUT_Payment_PIPNewJersey_ClaimCost_Lostwages" />
+					<include name="AUT_Payment_PIPNewJersey_ClaimCost_Medical" />
+					<include name="AUT_Payment_PIPNewJersey_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_PIPNewJersey_ClaimCost_Reimbursement" />
+					<include
+						name="AUT_Payment_PIPNewJersey_ClaimCost_Vocational" />
+
+					<include
+						name="AUT_Payment_PIPNewJersey_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPNewJersey_ExpenseAO_Casemanagement" />
+					<include name="AUT_Payment_PIPNewJersey_ExpenseAO_Other" />
+
+					<include
+						name="AUT_Payment_PIPNewJersey_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_PIPNewJersey_ExpenseDCC_Other" />
+
+
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Lostwages" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Medical" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_Payment_PIPNewYork_UnspecifiedCostType_Vocational" />
+
+					<include
+						name="AUT_Payment_PIPNewYork_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPNewYork_ClaimCost_Burialexpenses" />
+					<include
+						name="AUT_Payment_PIPNewYork_ClaimCost_Deathbenefits" />
+					<include
+						name="AUT_Payment_PIPNewYork_ClaimCost_Emergencyservices" />
+					<include name="AUT_Payment_PIPNewYork_ClaimCost_Lostwages" />
+					<include name="AUT_Payment_PIPNewYork_ClaimCost_Medical" />
+					<include name="AUT_Payment_PIPNewYork_ClaimCost_Other" />
+					<include
+						name="AUT_Payment_PIPNewYork_ClaimCost_Reimbursement" />
+					<include name="AUT_Payment_PIPNewYork_ClaimCost_Vocational" />
+
+					<include
+						name="AUT_Payment_PIPNewYork_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_Payment_PIPNewYork_ExpenseAO_Casemanagement" />
+					<include name="AUT_Payment_PIPNewYork_ExpenseAO_Other" />
+
+					<include
+						name="AUT_Payment_PIPNewYork_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_Payment_PIPNewYork_ExpenseDCC_Other" />
+
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Lostwages" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Medical" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_PIPNorthDakotas_UnspecifiedCostType_Vocational" />
+					<include
+						name="AUT_PIPNorthDakotas_ClaimCost_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPNorthDakotas_ClaimCost_Burialexpenses" />
+					<include name="AUT_PIPNorthDakotas_ClaimCost_Deathbenefits" />
+					<include
+						name="AUT_PIPNorthDakotas_ClaimCost_Emergencyservices" />
+					<include name="AUT_PIPNorthDakotas_ClaimCost_Lostwages" />
+					<include name="AUT_PIPNorthDakotas_ClaimCost_Medical" />
+					<include name="AUT_PIPNorthDakotas_ClaimCost_Other" />
+					<include name="AUT_PIPNorthDakotas_ClaimCost_Reimbursement" />
+					<include name="AUT_PIPNorthDakotas_ClaimCost_Vocational" />
+					<include
+						name="AUT_PIPNorthDakotas_ExpenseAO_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPNorthDakotas_ExpenseAO_Casemanagement" />
+					<include name="AUT_PIPNorthDakotas_ExpenseAO_Other" />
+					<include
+						name="AUT_PIPNorthDakotas_ExpenseDCC_UnspecifiedCostCategory" />
+					<include name="AUT_PIPNorthDakotas_ExpenseDCC_Other" />
+
+
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_UnspecifiedCostCategory" />
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_Burialexpenses" />
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_Casemanagement" />
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_Deathbenefits" />
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_Emergencyservices" />
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_Lostwages" />
+					<include name="AUT_PIPOregons_UnspecifiedCostType_Medical" />
+					<include name="AUT_PIPOregons_UnspecifiedCostType_Other" />
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_Reimbursement" />
+					<include
+						name="AUT_PIPOregons_UnspecifiedCostType_Vocational" />
+
 				</methods>
 			</class> <!-- class -->
 		</classes>
