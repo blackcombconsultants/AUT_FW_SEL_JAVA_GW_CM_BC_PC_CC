@@ -378,61 +378,6 @@
 						name="AUT_MexicoCovPD_ExpenseDCC_Vehicleinspection" />
 
 
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_UnspecifiedCostCategory" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Labor" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Legal" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Other" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Reimbursement" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Salvage" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Settlement" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Towing" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Vehicleappraisal" />
-					<include
-						name="AUT_Payment_MexicoCovBI_UnspecifiedCostType_Vehicleinspection" />
-
-					<include
-						name="AUT_Payment_MexicoCovBI_ClaimCost_UnspecifiedCostCategory" />
-					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Labor" />
-					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Legal" />
-					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Other" />
-					<include
-						name="AUT_Payment_MexicoCovBI_ClaimCost_Reimbursement" />
-					<include
-						name="AUT_Payment_MexicoCovBI_ClaimCost_Settlement" />
-					<include name="AUT_Payment_MexicoCovBI_ClaimCost_Towing" />
-					<include
-						name="AUT_Payment_MexicoCovBI_ClaimCost_Vehicleinspection" />
-
-					<include
-						name="AUT_Payment_MexicoCovBI_ExpenseAO_UnspecifiedCostCategory" />
-
-					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Legal" />
-
-					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Other" />
-
-					<include name="AUT_Payment_MexicoCovBI_ExpenseAO_Salvage" />
-
-					<include
-						name="AUT_Payment_MexicoCovBI_ExpenseAO_Vehicleappraisal" />
-
-					<include
-						name="AUT_Payment_MexicoCovBI_ExpenseAO_Vehicleinspection" />
-
-					<include
-						name="AUT_Payment_MexicoCovBI_ExpenseDCC_UnspecifiedCostCategory" />
-					<include name="AUT_Payment_MexicoCovBI_ExpenseDCC_Legal" />
-					<include name="AUT_Payment_MexicoCovBI_ExpenseDCC_Other" />
-					<include
-						name="AUT_Payment_MexicoCovBI_ExpenseDCC_Vehicleinspection" />
 
 					<include
 						name="AUT_Payment_MexicoCovVehicleDamage_UnspecifiedCostType_UnspecifiedCostCategory" />

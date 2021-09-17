@@ -140,6 +140,10 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
 				strTestCaseName);
 		try {
+			GuidewireAutomate("NewIncident_Description", NewIncident_Description, "moveToElement",
+					"NewIncident_Description");
+			GuidewireAutomate_Validation("Description", NewIncident_Description, "equals", "Description");
+			
 			GuidewireAutomate_Validation("IncidentOverview Title", EditIncident_IncidentOverviewTitle, "equals",
 					"Incident Overview");
 			GuidewireAutomate("NewIncident Button", EditIncident_VehicleEditButton, "clickAndwait", "click");
@@ -182,6 +186,12 @@ public class CC_ChooseCoverage extends SeleniumWebDriver_Commands implements CC_
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("newExposure",
 				strTestCaseName);
 		try {
+
+			GuidewireAutomate("NewIncident_Description", NewIncident_Description, "moveToElement",
+					"NewIncident_Description");
+			GuidewireAutomate_Validation("Description", NewIncident_Description, "equals", "Description");
+
+			
 			GuidewireAutomate_Validation("IncidentOverview Title", EditIncident_IncidentOverviewTitle, "equals",
 					"Incident Overview");
 			GuidewireAutomate("Edit Incident Button", EditIncident_VehicleEditButton, "clickAndwait", "click");
