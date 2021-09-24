@@ -25,6 +25,10 @@ public class PersonalAuto_Reusable extends SeleniumWebDriver_Commands implements
 		GuidewireAutomate("LOB PersonalAuto", LOB_PersonalAuto, "clickAndwait", "click");
 	}
 
+	public static void newSubmission_SelectLOB_GeneralLiability() throws Throwable {
+		GuidewireAutomate("LOB GeneralLiability", LOB_GeneralLiability, "clickAndwait", "click");
+	}
+	
 	public static void paMenuNavigation(String Menu) throws Throwable {
 		switch (Menu) {
 			case "Offering" :

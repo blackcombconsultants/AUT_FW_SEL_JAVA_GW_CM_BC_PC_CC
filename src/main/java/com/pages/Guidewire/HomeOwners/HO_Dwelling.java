@@ -9,22 +9,23 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
-public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
+public class HO_Dwelling extends SeleniumWebDriver_Commands {
 
-	public HomeOwners_Dwelling(WebDriver driver, ExtentTest oExtentTest) {
+	public HO_Dwelling(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 
 	}
 
 	private static By Dwelling_Header = By.xpath("//div[contains(@id,'HOPDwellingScreen-ttlBar')]");
 	private static By Dwelling_General = By.xpath("//div[contains(@id,'HOPDwellingInputSet-0')]");
-	private static By Dwelling_Location = By.xpath("//div[contains(@id,'HOPDwellingInputSet-Location_Input')]//select[contains(@name,'HOPDwellingDetailsDV-HOPDwellingInputSet-Location')]");
+	private static By Dwelling_Location = By.xpath(
+			"//div[contains(@id,'HOPDwellingInputSet-Location_Input')]//select[contains(@name,'HOPDwellingDetailsDV-HOPDwellingInputSet-Location')]");
 	private static By Dwelling_General_Button = By.xpath("//div[contains(@id,'LocationMenuIcon')]");
 	private static By Dwelling_LocationTo_NewLocation = By.xpath("//div[contains(@id,'NewDwellingLocation')]");
 	private static By Dwelling_LocationTo_EditLocation = By.xpath("//div[contains(@id,'EditDwellingLocation')]");
 
 	private static By Dwelling_General_AutoFillCodes = By.xpath("//div[contains(@id,'AutofillLink')]");
-	private static By Dwelling_TerritoryCodeforHomeownersLine = By.xpath("//input[contains(@name,'TerritoryCode')]");
+	private static By Dwelling_TerritoryCodefordwellingLine = By.xpath("//input[contains(@name,'TerritoryCode')]");
 	private static By Dwelling_LocationType = By.xpath("//select[contains(@name,'LocationType')]");
 	private static By Dwelling_ResidenceType = By.xpath("//select[contains(@name,'ResidenceType')]");
 	private static By Dwelling_EstimatedReplacementCost = By.xpath("//input[contains(@name,'ReplacementCost')]");
@@ -77,9 +78,14 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	private static By Dwelling_AnimalAdd = By
 			.xpath("//div[contains(@id,'HOPDwellingAnimalsInputSet-Add')]//div[@role='button']");
 	/*
-	 * AdditionalInterestsandInsureds
+	 * AdditionalInterestsandInsuredsTab
 	 ****/
-	private static By Dwelling_AdditionalInterestsandInsureds_Header = By
+	private static By Dwelling_AdditionalInterestsandInsuredsTab = By
+			.xpath("//div[contains(@id,'AdditionalInterestCardTab')]");
+	/****
+	 * AdditionalInterestsandInsureds
+	 */
+	private static By Dwelling_AdditionalInterests_Header = By
 			.xpath("//div[contains(@id,'HOPDwellingAdditionalInterestDetailsDV-1')]");
 	private static By AdditionalInterestsandInsureds_Add_Button = By.xpath(
 			"//div[contains(@id,'AdditionalInterestLV_tb-AddContactsButton')]//div[@class='gw-label'and text()='Add']");
@@ -109,30 +115,27 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	public static void DwellingDetails() throws Throwable {
 
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling",
 					strTestCaseName);
 
 			GuidewireAutomate_Validation("Screen Header", Dwelling_Header, "equals", "Dwelling");
-			GuidewireAutomate_Validation("Dwelling General", Dwelling_General, "equals", "DwellingGeneral");
-			GuidewireAutomate("Dwelling Location", Dwelling_Location, "selectByVisibleText",
-					lhm_TestCase_Table_Data.get("DwellingLocation"));
-			GuidewireAutomate_Validation("Territory Code for Homeowners Line", Dwelling_TerritoryCodeforHomeownersLine,
-					"valueEquals", lhm_TestCase_Table_Data.get("TerritoryCodeforHomeownersLine"));
+
+			GuidewireAutomate_Validation("Dwelling General", Dwelling_General, "equals", "General");
+			
+			GuidewireAutomate("Dwelling Location", Dwelling_Location, "selectByIndex","0");
+			
+			GuidewireAutomate_Validation("Territory Code for dwelling Line", Dwelling_TerritoryCodefordwellingLine,
+					"valueEquals", lhm_TestCase_Table_Data.get("TerritoryCode"));
+
 			GuidewireAutomate("Dwelling LocationType", Dwelling_LocationType, "sendKeys",
 					lhm_TestCase_Table_Data.get("Dwelling_LocationType"));
+
 			GuidewireAutomate("Dwelling ResidenceType", Dwelling_ResidenceType, "sendKeys",
 					lhm_TestCase_Table_Data.get("Dwelling_ResidenceType"));
-			GuidewireAutomate("Dwelling EstimatedReplacementCost ", Dwelling_EstimatedReplacementCost, "sendKeys",
-					lhm_TestCase_Table_Data.get("Dwelling_EstimatedReplacementCost"));
-			GuidewireAutomate("Dwelling NumberOfUnitsBetweenFirewall", Dwelling_NumberOfUnitsBetweenFirewall,
-					"sendKeys", lhm_TestCase_Table_Data.get("Dwelling_NumberOfUnitsBetweenFirewall"));
-			GuidewireAutomate("DwellingNumberofInsuredUnits", Dwelling_NumberofInsuredUnits, "sendKeys",
-					lhm_TestCase_Table_Data.get("Dwelling_NumberofInsuredUnits"));
+
 			lhm_TestCase_Table_Data.clear();
 
-			oExtentTest.log(Status.PASS, "Search PolicyNumber = [" + strPolicyNumber + "] is succesful");
 		} catch (Exception e) {
-			oExtentTest.log(Status.FAIL, "Search PolicyNumber = [" + strPolicyNumber + "] is Unsuccesful");
 			e.printStackTrace();
 			throw e;
 		}
@@ -141,8 +144,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 
 	public static void Dwelling_LocationTo_NewLocation() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("homeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 		try {
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
@@ -154,8 +156,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 
 	public static void Dwelling_LocationTo_EditLocation() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("homeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 		try {
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
@@ -168,8 +169,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void Ho_Occupancy() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("homeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		GuidewireAutomate_Validation("Occupancy ", Dwelling_Occupancy_Header, "equals", "Occupancy ");
 
@@ -187,26 +187,16 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 		}
 	}
 
-	public static void Ho_Protection() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("homeOwners",
-				strTestCaseName);
-
-		GuidewireAutomate_Validation("Protection ", Dwelling_Protection_Header, "equals", "Protection ");
-
-		GuidewireAutomate("Dwelling BurgerAlarm ", Dwelling_BurgerAlarm, "sendKeys",
-				lhm_TestCase_Table_Data.get("Dwelling_BurgerAlarm"));
-		GuidewireAutomate("Dwelling DistanceToFireHydrant ", Dwelling_DistanceToFireHydrant, "sendKeys",
-				lhm_TestCase_Table_Data.get("Dwelling_DistanceToFireHydrant"));
-		GuidewireAutomate("Dwelling DistanceToFireStation ", Dwelling_DistanceToFireStation, "sendKeys",
-				lhm_TestCase_Table_Data.get("Dwelling_DistanceToFireStation"));
-		GuidewireAutomate("Dwelling ProtectionClass ", Dwelling_ProtectionClass, "sendKeys",
-				lhm_TestCase_Table_Data.get("Dwelling_ProtectionClass"));
-		GuidewireAutomate("Dwelling FireAlarm  ", Dwelling_FireAlarm, "sendKeys",
-				lhm_TestCase_Table_Data.get("Dwelling_FireAlarm"));
-		GuidewireAutomate("Dwelling_NumberOfFireExtinguishers ", Dwelling_NumberOfFireExtinguishers, "sendKeys",
-				lhm_TestCase_Table_Data.get(""));
-
+	public static void DW_Protection() throws Throwable {
 		try {
+
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling",
+					strTestCaseName);
+
+			GuidewireAutomate_Validation("Protection ", Dwelling_Protection_Header, "equals", "Protection");
+
+			GuidewireAutomate("Dwelling ProtectionClass ", Dwelling_ProtectionClass, "selectByVisibleText",
+					lhm_TestCase_Table_Data.get("Dwelling_ProtectionClass"));
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
@@ -218,8 +208,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void Ho_SwimmingPool() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("homeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		GuidewireAutomate_Validation("SwimmingPool", Dwelling_SwimmingPool_Header, "equals", "SwimmingPool ");
 
@@ -241,8 +230,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void Ho_Hazard() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("homeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		GuidewireAutomate_Validation("Hazard", Dwelling_Hazard, "equals", " Hazard");
 
@@ -260,8 +248,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void Ho_Animal() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("homeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		GuidewireAutomate_Validation("Hazard", Dwelling_Animal, "equals", " Hazard");
 
@@ -278,14 +265,52 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 		}
 	}
 
+	public static void AdditionalInterestsAndInsuredTab() throws Throwable {
+
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling",
+					strTestCaseName);
+
+			GuidewireAutomate("AdditionalInterestsandInsureds", Dwelling_AdditionalInterestsandInsuredsTab,
+					"clickAndwait", "click");
+
+			lhm_TestCase_Table_Data.clear();
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
+
 	public static void AdditionalInterests() throws Throwable {
 
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling",
 					strTestCaseName);
 
-			GuidewireAutomate_Validation("Screen Header", Dwelling_AdditionalInterestsandInsureds_Header, "equals",
-					"Dwelling_AdditionalInterestsandInsureds");
+			GuidewireAutomate_Validation("Screen Header", Dwelling_AdditionalInterests_Header, "equals",
+					"Additional Interests");
+
+			lhm_TestCase_Table_Data.clear();
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
+
+	public static void AdditionalInsured() throws Throwable {
+
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling",
+					strTestCaseName);
+
+			GuidewireAutomate_Validation("Screen Header", Dwelling_AdditionalInsured_Header, "equals",
+					"Additional Insureds");
 
 			lhm_TestCase_Table_Data.clear();
 
@@ -298,8 +323,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInterestNewCompany() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -313,8 +337,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInterestNewPerson() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -328,8 +351,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInterestFromAddressBook() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -343,8 +365,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInterestOtherContacts() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -358,8 +379,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInsureds() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -373,8 +393,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInsuredsNewCompany() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -388,8 +407,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInsuredsNewPerson() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -403,8 +421,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInsuredsFromAdress() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
@@ -418,8 +435,7 @@ public class HomeOwners_Dwelling extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AdditionalInsuredsOtherContacts() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("HomeOwners",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("dwelling", strTestCaseName);
 
 		try {
 
