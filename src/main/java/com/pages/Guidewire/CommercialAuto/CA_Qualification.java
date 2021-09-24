@@ -9,9 +9,9 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
-public class CommerialAuto_Qualification extends SeleniumWebDriver_Commands {
+public class CA_Qualification extends SeleniumWebDriver_Commands {
 
-	public CommerialAuto_Qualification(WebDriver driver, ExtentTest oExtentTest) {
+	public CA_Qualification(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
 
@@ -99,39 +99,47 @@ public class CommerialAuto_Qualification extends SeleniumWebDriver_Commands {
 			GuidewireAutomate("Are any vehicles used by family members?", QU_Are_Any_Vehicles_Used_By_Family_Members,
 					"click", lhm_TestCase_Table_Data.get("QU_AreAnyVehiclesUsedBy"));
 
-			GuidewireAutomate("Do operations involve transporting hazardous material?",
-					QU_Do_Operations_Involve_Transporting_Hazardous_Material, "click",
-					lhm_TestCase_Table_Data.get("QU_DoOperationsInvolveTransporting"));
-
-			GuidewireAutomate("Does applicant have any hold harmless agreements?",
-					QU_Does_Applicant_HaveAny_Hold_Harmless_Agreements, "click",
-					lhm_TestCase_Table_Data.get("QU_DoesApplicantHaveAnyHold"));
-
-			GuidewireAutomate("Any vehicles leased to others?", QU_Any_Vehicles_Leased_To_Others, "click",
-					lhm_TestCase_Table_Data.get("QU_AnyVehiclesLeasedToOthers"));
-
-			GuidewireAutomate("Did applicant obtain MVR verifications?", QU_Did_Applicant_Obtain_MVR_Verifications,
-					"click", lhm_TestCase_Table_Data.get("QU_DidApplicantObtainMVR"));
-
-			GuidewireAutomate("Any drivers with convictions for moving traffic violations?",
-					QU_Any_Drivers_With_Convictions_For_Moving_Traffic_Violations, "click",
-					lhm_TestCase_Table_Data.get("QU_AnyDriversWithConvictions"));
-
-			GuidewireAutomate("Are ICC, PUC or other filings required?", QU_Are_ICC_PUC_Or_Other_Filings_Required,
-					"click", lhm_TestCase_Table_Data.get("QU_AreICCPUCOrOtherFilings"));
-
-			GuidewireAutomate("Does the applicant own any vehicles?", QU_Does_The_Applicant_Own_Any_Vehicles, "click",
-					lhm_TestCase_Table_Data.get("QU_DoesTheApplicantOwnAnyVehicles"));
-
-			GuidewireAutomate("Does applicant do spraying or pruning?", QU_Does_Applicant_Do_Spraying_Or_Pruning,
-					"click", lhm_TestCase_Table_Data.get("QU_DoesApplicantDoSpraying"));
-
-			GuidewireAutomate("Any vehicle maintenance program in operation?",
-					QU_Any_Vehicle_Maintenance_Program_In_Operation, "click",
-					lhm_TestCase_Table_Data.get("QU_AnyVehicleMaintenanceProgram"));
-
-			GuidewireAutomate("Are any drivers not covered by work comp?", QU_Are_Any_Drivers_Not_Covered_By_Work_Comp,
-					"click", lhm_TestCase_Table_Data.get("QU_AreAnyDriversNotCovered"));
+			/*
+			 * GuidewireAutomate("Do operations involve transporting hazardous material?",
+			 * QU_Do_Operations_Involve_Transporting_Hazardous_Material, "click",
+			 * lhm_TestCase_Table_Data.get("QU_DoOperationsInvolveTransporting"));
+			 * 
+			 * GuidewireAutomate("Does applicant have any hold harmless agreements?",
+			 * QU_Does_Applicant_HaveAny_Hold_Harmless_Agreements, "click",
+			 * lhm_TestCase_Table_Data.get("QU_DoesApplicantHaveAnyHold"));
+			 * 
+			 * GuidewireAutomate("Any vehicles leased to others?",
+			 * QU_Any_Vehicles_Leased_To_Others, "click",
+			 * lhm_TestCase_Table_Data.get("QU_AnyVehiclesLeasedToOthers"));
+			 * 
+			 * GuidewireAutomate("Did applicant obtain MVR verifications?",
+			 * QU_Did_Applicant_Obtain_MVR_Verifications, "click",
+			 * lhm_TestCase_Table_Data.get("QU_DidApplicantObtainMVR"));
+			 * 
+			 * GuidewireAutomate("Any drivers with convictions for moving traffic violations?"
+			 * , QU_Any_Drivers_With_Convictions_For_Moving_Traffic_Violations, "click",
+			 * lhm_TestCase_Table_Data.get("QU_AnyDriversWithConvictions"));
+			 * 
+			 * GuidewireAutomate("Are ICC, PUC or other filings required?",
+			 * QU_Are_ICC_PUC_Or_Other_Filings_Required, "click",
+			 * lhm_TestCase_Table_Data.get("QU_AreICCPUCOrOtherFilings"));
+			 * 
+			 * GuidewireAutomate("Does the applicant own any vehicles?",
+			 * QU_Does_The_Applicant_Own_Any_Vehicles, "click",
+			 * lhm_TestCase_Table_Data.get("QU_DoesTheApplicantOwnAnyVehicles"));
+			 * 
+			 * GuidewireAutomate("Does applicant do spraying or pruning?",
+			 * QU_Does_Applicant_Do_Spraying_Or_Pruning, "click",
+			 * lhm_TestCase_Table_Data.get("QU_DoesApplicantDoSpraying"));
+			 * 
+			 * GuidewireAutomate("Any vehicle maintenance program in operation?",
+			 * QU_Any_Vehicle_Maintenance_Program_In_Operation, "click",
+			 * lhm_TestCase_Table_Data.get("QU_AnyVehicleMaintenanceProgram"));
+			 * 
+			 * GuidewireAutomate("Are any drivers not covered by work comp?",
+			 * QU_Are_Any_Drivers_Not_Covered_By_Work_Comp, "click",
+			 * lhm_TestCase_Table_Data.get("QU_AreAnyDriversNotCovered"));
+			 */
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
