@@ -9,22 +9,23 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
-public class HomeOwners_Qualifications extends SeleniumWebDriver_Commands {
+public class HO_Qualifications extends SeleniumWebDriver_Commands {
 
 	
 
-	public HomeOwners_Qualifications(WebDriver driver, ExtentTest oExtentTest) {
+	public HO_Qualifications(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 		// TODO Auto-generated constructor stub
 	}
    private static By QU_Qualification_PolicyType=By.xpath("//select[contains(@name,'HOPCoveragePartType')]");
+  
    private static By QU_Qualification_CoverageForm=By.xpath("//select[contains(@name,'HOPCoverageForm')]");
 	private static By QU_PA_PreQualification = By
 			.xpath("//div[contains(@class,'gw-boldLabel') and text()='HOP Pre-Qualification']");
 
 	
 	private static By QU_Do_you_have_a_dog= By
-			.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_1')]]");
+			.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_1')]");
 	private static By QU_Is_this_property_vacant = By
 			.xpath("//input[contains(@id,'QuestionSetLV-1-QuestionModalInput-BooleanRadioInput_1')]");
 	private static By QU_Who_occupies_this_dwelling = By
@@ -44,26 +45,27 @@ public class HomeOwners_Qualifications extends SeleniumWebDriver_Commands {
 					"Qualification");
 			GuidewireAutomate("PolicyType", QU_Qualification_PolicyType ,
 					"selectByVisibleText", lhm_TestCase_Table_Data.get("PolicyType"));
+			 Thread.sleep(2000);
 			GuidewireAutomate("CoverageForm", QU_Qualification_CoverageForm ,
-					"selectByVisibleText", lhm_TestCase_Table_Data.get("CoverageForm"));
+					"selectByVisibleText",lhm_TestCase_Table_Data.get("CoverageForm"));
 			
-			GuidewireAutomate_Validation("PA Pre-Qualification", QU_PA_PreQualification, "equals",
-					"PA Pre-Qualification");
-			GuidewireAutomate("Do you have a dog", QU_Do_you_have_a_dog ,
-					"selectByVisibleText", lhm_TestCase_Table_Data.get("Doyouhaveadog"));
+			GuidewireAutomate_Validation("HOP Pre-Qualification", QU_PA_PreQualification, "equals",
+					"HOP Pre-Qualification");
+			GuidewireAutomate("Do you have a dog", QU_Do_you_have_a_dog ,"click", lhm_TestCase_Table_Data.get("DoYouHaveaDog"));
 			GuidewireAutomate("Is this property vacant", QU_Is_this_property_vacant ,
-					"selectByVisibleText", lhm_TestCase_Table_Data.get("Isthispropertyvacant"));
+					"click", lhm_TestCase_Table_Data.get("ProperyVacant"));
 			GuidewireAutomate("Who occupies this dwelling",QU_Who_occupies_this_dwelling ,
-					"selectByVisibleText", lhm_TestCase_Table_Data.get("Whooccupiesthisdwelling"));
+					"selectByVisibleText", lhm_TestCase_Table_Data.get("WhoOccupiesThisDwelling"));
+			 Thread.sleep(2000);
 			GuidewireAutomate("Do you occupy this dwelling full time",QU_Do_you_occupy_this_dwelling_full_time ,
-					"selectByVisibleText", lhm_TestCase_Table_Data.get("Doyouoccupythisdwellingfulltime"));
+					"click", lhm_TestCase_Table_Data.get("DwellingFullTime"));
 			GuidewireAutomate(" Do you have a swimming pool",  QU_Do_you_have_a_swimming_pool,
-					"selectByVisibleText", lhm_TestCase_Table_Data.get(" Doyouhaveaswimmingpool"));
+					"click", lhm_TestCase_Table_Data.get("SwimmingPool"));
 			lhm_TestCase_Table_Data.clear();
 
-			oExtentTest.log(Status.PASS, "Search PolicyNumber = [" + strPolicyNumber + "] is succesful");
+			//oExtentTest.log(Status.PASS, "Search PolicyNumber = [" + strPolicyNumber + "] is succesful");
 		} catch (Exception e) {
-			oExtentTest.log(Status.FAIL, "Search PolicyNumber = [" + strPolicyNumber + "] is Unsuccesful");
+			//oExtentTest.log(Status.FAIL, "Search PolicyNumber = [" + strPolicyNumber + "] is Unsuccesful");
 			e.printStackTrace();
 			throw e;
 		}
