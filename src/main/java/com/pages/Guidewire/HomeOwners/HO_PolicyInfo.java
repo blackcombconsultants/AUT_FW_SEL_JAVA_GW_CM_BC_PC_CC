@@ -6,11 +6,12 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
+import com.pages.Guidewire.PersonalAuto.PersonalAuto_PolicyInfo_PO;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 
-public class HomeOwners_PolicyInfo extends SeleniumWebDriver_Commands{
+public class HO_PolicyInfo extends SeleniumWebDriver_Commands{
 
-	public HomeOwners_PolicyInfo(WebDriver driver, ExtentTest oExtentTest) {
+	public HO_PolicyInfo(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 
 	}

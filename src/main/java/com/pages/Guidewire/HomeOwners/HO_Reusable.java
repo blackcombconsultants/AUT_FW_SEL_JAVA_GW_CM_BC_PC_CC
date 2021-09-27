@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
 import com.aventstack.extentreports.ExtentTest;
 
-public class HomeOwners_Reusable  extends SeleniumWebDriver_Commands  {
+public class HO_Reusable  extends SeleniumWebDriver_Commands  {
 
-	public HomeOwners_Reusable(WebDriver driver, ExtentTest oExtentTest) {
+	public HO_Reusable(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 		
 	}
@@ -28,7 +28,7 @@ public class HomeOwners_Reusable  extends SeleniumWebDriver_Commands  {
 	private static By SW_Payment           = By.xpath("//div[@id='SubmissionWizard-BillingInfo']/div[@role='menuitem']");
     
 	
-    public static void newSubmission_SelectLOB_PersonalAuto() throws Throwable {
+    public static void newSubmission_SelectLOB_HomeOwners() throws Throwable {
 		GuidewireAutomate("LOB HomeOwners", LOB_HomeOwners, "clickAndwait", "click");
 	}
 

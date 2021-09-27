@@ -109,6 +109,12 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 				case "PC_CommercialAuto" :
 					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
 					break;
+				case "PC_GeneralLiability" :
+					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+					break;
+				case "PC_HomeOwner" :
+	                url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+	                break;
 				case "BillingCenter" :
 					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BillingCenter");
 					break;
