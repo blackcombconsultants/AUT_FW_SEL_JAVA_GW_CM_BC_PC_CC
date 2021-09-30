@@ -35,6 +35,32 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 
 	}
 
+	public static void PrimaryPayee_AddJointPayees() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("locations",
+					strTestCaseName);
+			GuidewireAutomate_Validation("Name", CD_PrimaryPayee_Namee, "FirstSelectedOptionEquals",
+					lhm_TestCase_Table_Data.get("CD_PrimaryPayee_Namee"));
+			GuidewireAutomate_Validation("Type", PrimaryPayee_Type, "FirstSelectedOptionEquals",
+					lhm_TestCase_Table_Data.get("PrimaryPayee_Type"));
+			GuidewireAutomate("AddJointPayees", AddJointPayees, "clickAndwait", "click");
+			GuidewireAutomate("JointPayees", JointPayees, "selectByVisibleText", lhm_TestCase_Table_Data.get("JointPayees"));
+			
+		} catch (Exception e) {
+
+		}
+	}
+	
+	public static void PaymentMethod() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("locations",
+					strTestCaseName);
+			
+		} catch (Exception e) {
+
+		}
+	}
+
 	public static void Enterpaymentinformation() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check",
 				strTestCaseName);
