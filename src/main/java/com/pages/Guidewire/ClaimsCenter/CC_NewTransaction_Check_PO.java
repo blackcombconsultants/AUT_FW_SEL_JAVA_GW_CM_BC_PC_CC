@@ -21,6 +21,15 @@ public interface CC_NewTransaction_Check_PO {
 	 */
 
 	final By CD_PrimaryPayee_Namee = By.xpath("//select[contains(@name,'PrimaryPayee_Name')]");
+	final By PrimaryPayee_Type=By.xpath("//select[contains(@name,'PrimaryPayee_Type')]");
+	final By AddJointPayees=By.xpath("//div[contains(@id,'AddJointPayees')]//div[@role='button']");
+	final By JointPayees=By.xpath("//select[contains(@name,'NewCheckPayeeDVPayeesLV-1-PayeeName')]");
+	
+	//Payment method
+	final By PM_Check=By.xpath("//input[contains(@id,'QuickCheckBasicsDV-PaymentMethod_0')]");
+	final By PM_Electronicfundstransfer=By.xpath("//input[contains(@id,'QuickCheckBasicsDV-PaymentMethod_1')]");
+	final By PM_CheckDelivery=By.xpath("//select[contains(@name,'Check_DeliveryMethod')]");
+	
 	final By CD_CheckIssuance_CheckNumber = By.xpath("//input[contains(@name,'CheckNumber')]");
 
 	/*

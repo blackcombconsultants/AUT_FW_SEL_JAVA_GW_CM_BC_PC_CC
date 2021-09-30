@@ -889,7 +889,12 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Actions", Menu_ActionsCC, "clickAndwait", "click");
 				GuidewireAutomate("VacationStatus", MenuCC_Desktop_Actions_VacationStatus, "clickAndwait", "click");
 				break;
-
+			
+			
+			case "Bulk Invoices" :
+				GuidewireAutomate("BulkInvoices", MenuCC_Desktop_BulkInvoices, "clickAndwait", "click");
+				break;
+				
 			// New
 			case "New Note" :
 				GuidewireAutomate("Actions", Menu_ActionsCC, "clickAndwait", "click");

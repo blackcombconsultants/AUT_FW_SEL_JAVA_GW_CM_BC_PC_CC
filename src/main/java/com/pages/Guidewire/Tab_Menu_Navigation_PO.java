@@ -641,7 +641,8 @@ public interface Tab_Menu_Navigation_PO {
 			.xpath("//div[@id='Desktop-DesktopMenuActions-DesktopMenuActions_Preferences']//div[@class='gw-label']");
 	final By MenuCC_Desktop_Actions_VacationStatus = By
 			.xpath("//div[@id='Desktop-DesktopMenuActions-DesktopMenuActions_UserVacation']//div[@class='gw-label']");
-
+	final By MenuCC_Desktop_BulkInvoices = By
+			.xpath("//div[@id='Desktop-MenuLinks-Desktop_BulkPay']");
 	/*
 	 * Claims Tab
 	 */

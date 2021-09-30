@@ -2,6 +2,7 @@ package com.pages.Guidewire.CommercialAuto;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -14,12 +15,35 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
-public class CommercialAuto_Reusable extends SeleniumWebDriver_Commands implements CommercialAuto_Reusable_PO {
+public class CA_Reusable extends SeleniumWebDriver_Commands {
 
-	public CommercialAuto_Reusable(WebDriver driver, ExtentTest oExtentTest) {
+	public CA_Reusable(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 
-	}
+	}   
+	private static By LOB_CommercialAuto = By.xpath("//div[text()='Commercial Auto']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
+
+	private static By SW_Offering          = By.xpath("//div[@id='SubmissionWizard-Offering']/div[@role='menuitem']");
+	private static By SW_PreQualification  = By.xpath("//div[@id='SubmissionWizard-PreQualification']/div[@role='menuitem']");
+	private static By SW_CA_PolicyContract = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup']/div[@role='menuitem']");
+	private static By SW_CA_PolicyInfo     = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-PolicyInfo']/div[@role='menuitem']");
+	private static By SW_CA_CommercialAutoLine = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-baLineStep']/div[@role='menuitem']");
+	private static By SW_CA_Locations = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-Locations']/div[@role='menuitem']");
+	private static By SW_CA_Vehicles       = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-BusinessVehicles']/div[@role='menuitem']");
+	private static By SW_CA_StateInfo = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-StateInfo']/div[@role='menuitem']");
+	private static By SW_CA_Drivers        = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-BADrivers']/div[@role='menuitem']");
+	private static By SW_CA_CoveredVehicles = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-CoveredAutoSymbols']/div[@role='menuitem']");
+	private static By SW_CA_Modifiers = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-Modifiers']/div[@role='menuitem']");
+	private static By SW_CA_RiskAnalysis      = By.xpath("//div[@id='SubmissionWizard-RiskAnalysis']/div[@role='menuitem']");
+	private static By SW_CA_PolicyReview      = By.xpath("//div[@id='SubmissionWizard-PolicyReview']/div[@role='menuitem']");
+	private static By SW_CA_Quote             = By.xpath("//div[@id='SubmissionWizard-ViewQuote']/div[@role='menuitem']");
+	private static By SW_CA_Forms             = By.xpath("//div[@id='SubmissionWizard-Forms']/div[@role='menuitem']");
+	private static By SW_CA_Payment           = By.xpath("//div[@id='SubmissionWizard-BillingInfo']/div[@role='menuitem']");
+	
+	//Validation Error
+	private static By ValidationErrorHeader = By.xpath("//div[contains(@id,'wsTabBar-wsTab')]//div[@role='menuitem']");
+	private static By ClearButton = By.xpath("//div[contains(@id,'ClearButton')]//div[@role='button']");
+	
 
 	public static void newSubmission_SelectLOB_CommercialAuto() throws Throwable {
 		GuidewireAutomate("LOB CommerciallAuto", LOB_CommercialAuto, "clickAndwait", "click");
@@ -86,36 +110,20 @@ public class CommercialAuto_Reusable extends SeleniumWebDriver_Commands implemen
 		}
 		
 	}
-
-	public String getRandomVIN(String vingenerator) throws Throwable {
-		
+	public static void CaValidationError() throws Throwable{
 		try {
-
-			String StrVIN = "sadasd";
-
-			switch (vingenerator) {
-			case "vingenerator":
-				url = "https://vingenerator.org/";
-				break;
-			case "randomvin":
-				url = "https://randomvin.com/";
-				break;
-
-			default:
-				driver_ThirdPartyTool = getDriver();
-				driver_ThirdPartyTool.navigate().to("https://vingenerator.org/");
-			}
-
-			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-			lhm_TestCase_Table_Data.clear();
-
-			return StrVIN;
-		} catch (Exception e) {
-
+			GuidewireAutomate_Validation("Validation Error Header", ValidationErrorHeader, "equals", "Validation Results");
+			GuidewireAutomate("Clear Button", ClearButton, "clickAndwait", "clickAndwait");
+			
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 			throw e;
+		
+		
 		}
 		
 	}
+
 
 }
