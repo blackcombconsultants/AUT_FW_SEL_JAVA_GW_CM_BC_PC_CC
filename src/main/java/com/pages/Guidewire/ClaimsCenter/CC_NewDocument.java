@@ -73,6 +73,23 @@ public class CC_NewDocument extends SeleniumWebDriver_Commands {
 
 	private static By NewDocument_Update = By.xpath("//div[contains(@id,'NewDocumentFromTemplate_CustomUpdate')]");
 
+	private static By DocumentsHeader = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
+	private static By FilterDocumentsHeader = By.xpath("//div[contains(@id,'Claim_DocumentsScreen')]//div[@role='heading' and text()='Filter Documents']");
+	private static By RelatedTo = By.xpath("//select[contains(@name,'ClaimDocumentSearchDV-RelatedTo')]");
+	private static By Section = By.xpath("//select[contains(@name,'ClaimDocumentSearchDV-Section')]");
+	private static By SearchButton = By.xpath("//div[contains(@id,'SearchLinksInputSet-Search')]");
+	private static By SelectButton = By.xpath("//div[contains(@id,'PickExistingDocumentsLV-0-_Select')]//div[@role='button']");
+	private static By DocumentName = By.xpath("//div[contains(@id,'PickExistingDocumentsLV-0-Name')]//div[@class='gw-value-readonly-wrapper']");
+	private static By DocumentRelatedTo = By.xpath("//div[contains(@id,'PickExistingDocumentsLV-0-RelatedTo')]//div[@class='gw-value-readonly-wrapper']");
+	private static By DocumentType = By.xpath("//div[contains(@id,'PickExistingDocumentsLV-0-Type')]//div[@class='gw-label']");
+	private static By DocumentStatus = By.xpath("//div[contains(@id,'PickExistingDocumentsLV-0-Status')]//div[@class='gw-label']");
+	private static By DocumentAuthor = By.xpath("//div[contains(@id,'PickExistingDocumentsLV-0-Author')]//div[@class='gw-value-readonly-wrapper']");
+	private static By DocumentUploaded = By.xpath("//div[contains(@id,'PickExistingDocumentsLV-0-DateModified')]//div[@class='gw-value-readonly-wrapper']");
+
+	
+	
+	
+	
 	/*
 	 * 
 	 */
@@ -234,6 +251,32 @@ public class CC_NewDocument extends SeleniumWebDriver_Commands {
 		GuidewireAutomate_Validation("Documents Status", Documents_Status, "equals",
 				lhm_TestCase_Table_Data.get("Status"));
 	}
+	
+	
+	public static void SelectDocuments() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Documents",
+					strTestCaseName);
+		
+			GuidewireAutomate_Validation("Documents Header", DocumentsHeader, "equals","Documents");
+			GuidewireAutomate_Validation("Filter Documents Header", FilterDocumentsHeader, "equals","Filter Documents");
+			GuidewireAutomate_Validation("Document Name", DocumentName, "equals",lhm_TestCase_Table_Data.get("DocumentsName"));
+			GuidewireAutomate_Validation("Document Related To", DocumentRelatedTo, "equals",lhm_TestCase_Table_Data.get("DocumentRelatedTo"));
+			GuidewireAutomate_Validation("Document Type", DocumentType, "equals",lhm_TestCase_Table_Data.get("DocumentType"));
+			GuidewireAutomate_Validation("Document Status", DocumentStatus, "equals",lhm_TestCase_Table_Data.get("Status"));
+			GuidewireAutomate_Validation("Document Author", DocumentAuthor, "equals",lhm_TestCase_Table_Data.get("Author"));
+			GuidewireAutomate_Validation("Document Uploaded", DocumentUploaded, "contains",lhm_TestCase_Table_Data.get("Uploaded"));
+			
+			GuidewireAutomate("Select Button", SelectButton, "clickAndwait", "clickAndwait");
+	
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	
+	
 
 	public static void verifyPdfDocument(String value) throws Throwable {
 
