@@ -39,10 +39,10 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 				GuidewireAutomate("Cancel", Cancel_Button, "clickAndwait", "");
 				break;
 			case "Back" :
-				GuidewireAutomate("Back", Back_Button, "clickAndwait", "");
+				GuidewireAutomate("Back", Back_Button, "clickAndwait", "clickAndwait");
 				break;
 			case "Next" :
-				GuidewireAutomate("Next", Next_Button, "clickAndwait", "");
+				GuidewireAutomate("Next", Next_Button, "clickAndwait", "clickAndwait");
 				break;
 			case "Release Lock" :
 				GuidewireAutomate("Release Lock", ReleaseLock_Button, "clickAndwait", "");

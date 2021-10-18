@@ -21,30 +21,39 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 		try {
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check",
 					strTestCaseName);
-			GuidewireAutomate_Validation("Screen Header", Enterpayeeinformation_Header, "equals",
+			GuidewireAutomate_Validation("Screen Header", Screen_Header, "equals",
 					"Step 1 of 3: Enter payee information");
 			GuidewireAutomate_Validation("Primary Payee", PrimaryPayee, "equals", "Primary Payee");
 
 			GuidewireAutomate("Name", CD_PrimaryPayee_Namee, "selectByVisibleText", insuredName);
 			GuidewireAutomate("Next Button", Next_Button, "clickAndwait", "click");
+			
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
 
 		}
 
-	}
-
+	}	
+	
 	public static void PrimaryPayee_AddJointPayees() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("locations",
-					strTestCaseName);
-			GuidewireAutomate_Validation("Name", CD_PrimaryPayee_Namee, "FirstSelectedOptionEquals",
-					lhm_TestCase_Table_Data.get("CD_PrimaryPayee_Namee"));
-			GuidewireAutomate_Validation("Type", PrimaryPayee_Type, "FirstSelectedOptionEquals",
-					lhm_TestCase_Table_Data.get("PrimaryPayee_Type"));
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("EnterCheckBasics",strTestCaseName);
+			
+
+			GuidewireAutomate_Validation("Verify Primary Payee Name", CD_PrimaryPayee_Namee, "getOptionscontains",lhm_TestCase_Table_Data.get("PrimaryPayeeNameDropDown"));
+			GuidewireAutomate("Primary Payee Name Select", CD_PrimaryPayee_Namee, "selectByVisibleText", lhm_TestCase_Table_Data.get("PrimaryPayeeNameSelect"));
+			GuidewireAutomate_Validation("Verify Primary Payee Type", PrimaryPayee_Type, "getOptionscontains",lhm_TestCase_Table_Data.get("PrimaryPayeeTypeDropDown"));
+			GuidewireAutomate("Primary Payee Type Select", PrimaryPayee_Type, "selectByVisibleText", lhm_TestCase_Table_Data.get("PrimaryPayeeTypeSelect"));
+			
 			GuidewireAutomate("AddJointPayees", AddJointPayees, "clickAndwait", "click");
-			GuidewireAutomate("JointPayees", JointPayees, "selectByVisibleText", lhm_TestCase_Table_Data.get("JointPayees"));
+			
+			GuidewireAutomate_Validation("Joint Payees", JointPayees, "getOptionscontains", lhm_TestCase_Table_Data.get("JointPayees"));
+			GuidewireAutomate_Validation("Verify Joint Payees Type", JointPayeesType, "getOptionscontains", lhm_TestCase_Table_Data.get("JointPayeesType"));
+			GuidewireAutomate("Joint Payees Select", JointPayees, "selectByVisibleText", lhm_TestCase_Table_Data.get("JointPayeesSelect"));
+			
 			
 		} catch (Exception e) {
 
@@ -53,20 +62,92 @@ public class CC_NewTransaction_Check extends SeleniumWebDriver_Commands implemen
 	
 	public static void PaymentMethod() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("locations",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("EnterCheckBasics",strTestCaseName);
 			
+			GuidewireAutomate_Validation("Payment Method Section", PM_MethodSection, "equals","Payment Method");
+			GuidewireAutomate("Payment Method Check", PM_Check, "clickAndwait", "clickAndwait");
+			GuidewireAutomate("Pay To The Order Of", PM_PayToTheOrderOf, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PayToTheOrderOf"));
+			GuidewireAutomate_Validation("Mail To Section", PM_MailToSection, "equals","Mail To");
+			GuidewireAutomate_Validation("Verify Check Delivery", PM_CheckDelivery, "getOptionscontains",lhm_TestCase_Table_Data.get("CheckDeliveryDropDown"));
+			GuidewireAutomate("Check Delivery", PM_CheckDelivery, "selectByVisibleText", lhm_TestCase_Table_Data.get("CheckDelivery"));
+			GuidewireAutomate("Recipient", PM_Recipient, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Recipient"));
+			GuidewireAutomate_Validation("Mailing Address", PM_MailingAddress, "equals", lhm_TestCase_Table_Data.get("MailingAddress"));
+					
 		} catch (Exception e) {
 
+			e.printStackTrace();
+			throw e;
+		}
+	}	
+
+	public static void TaxReporting() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("EnterCheckBasics",strTestCaseName);
+			
+			GuidewireAutomate_Validation("Tax Reporting Section", TaxReportingSection, "equals","Tax Reporting");
+			GuidewireAutomate_Validation("Verify Report As", ReportAs, "getOptionscontains",lhm_TestCase_Table_Data.get("ReportAsDropDown"));
+			GuidewireAutomate("Report As", ReportAs, "selectByVisibleText", lhm_TestCase_Table_Data.get("ReportAs"));
+									
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
 		}
 	}
+	public static void Payment() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("EnterCheckBasics",strTestCaseName);
+			
+			
+			GuidewireAutomate_Validation("Verify Reserve Line", PD_ReserveLine, "getOptionscontains",lhm_TestCase_Table_Data.get("ReserveLineDropDown"));
+			GuidewireAutomate("Reserve Line", PD_ReserveLine, "selectByVisibleText", lhm_TestCase_Table_Data.get("ReserveLine"));
+			GuidewireAutomate_Validation("Coverage", PD_Coverage, "equals", lhm_TestCase_Table_Data.get("Coverage"));
+			GuidewireAutomate_Validation("Verify Payment Type", PD_PaymentType, "getOptionscontains",lhm_TestCase_Table_Data.get("PaymentTypeDropDown"));
+			GuidewireAutomate("Payment Type", PD_PaymentType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PaymentType"));
+			GuidewireAutomate_Validation("Available Reserves", PD_AvailableReserves, "equals", lhm_TestCase_Table_Data.get("AvailableReserves"));
+			GuidewireAutomate("Comments", PD_Comments, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Comments"));
+			GuidewireAutomate_Validation("Verify Line Items Category", PD_LineItemsCategory, "getOptionscontains",lhm_TestCase_Table_Data.get("LineItemsCategoryDropDown"));
+			GuidewireAutomate("Line Items Add Item Button", PD_LineItemsAdditemButton, "clickAndwait", "clickAndwait");
+			Thread.sleep(2000);
+			GuidewireAutomate("Line Items Category Check Box", PD_LineItemsCategoryCheckBox, "clickAndwait", "clickAndwait");
+			GuidewireAutomate("Line Items Remove Button", PD_LineItemsRemoveButton, "clickAndwait", "clickAndwait");
+			Thread.sleep(2000);
+			GuidewireAutomate("Select Line Items Category", PD_LineItemsCategory, "selectByVisibleText", lhm_TestCase_Table_Data.get("LineItemsCategory"));
+			GuidewireAutomate("Amount", PD_LineItemsAmount, "clearANDsendKeys", lhm_TestCase_Table_Data.get("LineItemsAmount"));
+			
+									
+		} catch (Exception e) {
 
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	
+	public static void FinancialsChecks() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("FinancialsChecks",
+					strTestCaseName);
+		
+			GuidewireAutomate_Validation("Financials: Checks Header", FinancialsChecksHeader, "equals","Financials: Checks");
+			GuidewireAutomate_Validation("PayTo", PayTo, "equals",lhm_TestCase_Table_Data.get("PayTo"));
+			GuidewireAutomate_Validation("Gross Amount", GrossAmount, "equals",lhm_TestCase_Table_Data.get("GrossAmount"));
+			GuidewireAutomate_Validation("Scheduled Send Date", ScheduledSendDate, "equals",lhm_TestCase_Table_Data.get("ScheduledSendDate"));
+			GuidewireAutomate_Validation("Status", Status, "equals",lhm_TestCase_Table_Data.get("Status"));
+			
+	
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	
 	public static void Enterpaymentinformation() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NewTransaction_Check",
 				strTestCaseName);
 
 		try {
-			GuidewireAutomate_Validation("Screen Header", Enterpaymentinformation_Header, "equals",
+			GuidewireAutomate_Validation("Screen Header", Screen_Header, "equals",
 					"Step 2 of 3: Enter payment information");
 			GuidewireAutomate("Reserve Line", PD_ReserveLine, "selectByVisibleText",
 					lhm_TestCase_Table_Data.get("ReserveLine"));

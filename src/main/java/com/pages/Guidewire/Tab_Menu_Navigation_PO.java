@@ -343,6 +343,7 @@ public interface Tab_Menu_Navigation_PO {
 			"AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_Payments-AccountDetailMenuActions_NewDirectBillPayment");
 	final By MenuBC_Account_Actions_NewTransaction = By
 			.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewTransaction");
+	final By MenuBC_Account_Actions_NewTransaction_Disbursement = By.xpath("//div[contains(@id,'NewTransaction-AccountDetailMenuActions_Disbursement')]//div[@role='menuitem']");
 	final By MenuBC_Account_Actions_TransferPolicies = By
 			.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_TransferPolicies");
 	final By MenuBC_Account_Actions_NewNote = By
