@@ -496,12 +496,17 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				break;
 			case "New Direct Bill Payment" :
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
-				GuidewireAutomate("New Payment", MenuBC_Account_Actions_NewPayment, "moveToElement", "");
+				GuidewireAutomate("New Payment", MenuBC_Account_Actions_NewPayment, "moveToElement", "moveToElement");
 				GuidewireAutomate("New Payment", MenuBC_Account_Actions_NewPayment_NewDirectBillPayment, "clickAndwait", "click");
 				break;
 			case "New Transaction" :
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("New Transaction", MenuBC_Account_Actions_NewTransaction, "clickAndwait", "click");
+				break;
+			case "New Transaction Disbursement" :
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("New Transaction", MenuBC_Account_Actions_NewTransaction, "moveToElement", "moveToElement");
+				GuidewireAutomate("Disbursement", MenuBC_Account_Actions_NewTransaction_Disbursement, "clickAndwait", "click");
 				break;
 			case "Transfer Policies " :
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
@@ -541,7 +546,7 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("New Email", MenuBC_Account_Charges, "clickAndwait", "click");
 				break;
 			case "Disbursements" :
-				GuidewireAutomate("New Email", MenuBC_Account_Disbursements, "clickAndwait", "click");
+				GuidewireAutomate("Disbursements", MenuBC_Account_Disbursements, "clickAndwait", "click");
 				break;
 			case "Transactions" :
 				GuidewireAutomate("New Email", MenuBC_Account_Transactions, "clickAndwait", "click");
@@ -1674,6 +1679,7 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				break;
 			case "Financials Summary" :
 				GuidewireAutomate("Financials", MenuCC_Claim_Financials, "clickAndwait", "click");
+				Thread.sleep(2000);
 				GuidewireAutomate("Summary", MenuCC_Claim_Financials_Summary, "clickAndwait", "click");
 				break;
 			case "Financials Transactions" :
@@ -1694,11 +1700,13 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Plan of Action", MenuCC_Claim_PlanofAction, "clickAndwait", "click");
 				break;
 			case "PlanofAction Evaluations" :
-				GuidewireAutomate("Plan of Action", MenuCC_Claim_PlanofAction, "click", "");
+				GuidewireAutomate("Plan of Action", MenuCC_Claim_PlanofAction, "clickAndwait", "clickAndwait");
+				Thread.sleep(2000);
 				GuidewireAutomate("Evaluations", MenuCC_Claim_PlanofAction_Evaluations, "clickAndwait", "click");
 				break;
 			case "PlanofAction Negotiations" :
 				GuidewireAutomate("Plan of Action", MenuCC_Claim_PlanofAction, "clickAndwait", "click");
+				Thread.sleep(2000);
 				GuidewireAutomate("Negotiations", MenuCC_Claim_PlanofAction_Negotiations, "clickAndwait", "click");
 				break;
 			case "Services" :
