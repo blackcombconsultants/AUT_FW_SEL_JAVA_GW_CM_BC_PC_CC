@@ -1,8 +1,10 @@
 package com.Test.Guidewire.PolicyCenter;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
+import com.Utils.Selenium.JiraPolicy;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.Tab_Menu_Navigation;
 import com.pages.Guidewire.InlineMarine.IM_AccountsReceivable;
@@ -22,13 +24,17 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
-public class GW_PC_InlineMarine_Submission extends GW_GetDriver {
+import junit.framework.Assert;
 
+public class GW_PC_InlineMarine_Submission extends GW_GetDriver {
+	
+	@JiraPolicy(logTicketReady = true)
 	@Test
 	public void AUT_IM_PC_NewSubmission_NewAccount_NewSubmission() throws Throwable {
 		// Login
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter_User("SuperUser");
-
+		
+		
 		// Create person Account
 		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
 		PolicyCenter_Account.createPersonAccount();
@@ -109,4 +115,5 @@ public class GW_PC_InlineMarine_Submission extends GW_GetDriver {
 
 	}
 
+	
 }
