@@ -25,7 +25,7 @@ public interface BillingCenter_AccountSummary_PO {
 	 */
 	final By AS_Financials_NextInvoiceDue=By.xpath("//div[contains(@id,'NextInvoiceDue_button')]");
 	final By AS_Financials_LastPaymentReceived=By.xpath("//div[contains(@id,'LastPaymentReceived_button')]");
-	final By AS_Financials_DefaultUnapplied=By.xpath("//div[@id='AccountSummary-AccountSummaryScreen-AccountUnappliedAmount']//div[@class='gw-value-readonly-wrapper']");
+	final By AS_Financials_DefaultUnapplied=By.xpath("//div[contains(@id,'TotalUnappliedAmount_button')]");
 	final By AS_Financials_PayoffAmount = By.xpath("//div[@id='AccountSummary-AccountSummaryScreen-PayoffAmount']//div[@class='gw-value-readonly-wrapper']");
 	final By AS_Financials_PlannedInvoices=By.xpath("//div[@id='AccountSummary-AccountSummaryScreen-NumPlannedInvoices_button']");
 
