@@ -73,6 +73,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		oWebElement = null;
 
 		try {
+			Thread.sleep(500);
 			oWebElement = driver.findElement(Locator);
 			oWebElement = driver.findElement(Locator);
 		} catch (StaleElementReferenceException e) {

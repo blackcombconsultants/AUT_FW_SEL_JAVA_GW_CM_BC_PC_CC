@@ -170,4 +170,43 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 	}
 
+
+	public static LinkedHashMap<String, String> getData_BillingCenter(String strTable) throws Throwable {
+
+		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
+		oConnection = getConnection("Fillo", pTestDataFile_BillingCenter);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static void UpdateData_BillingCenter(String strTable, String strcolumn, String strValue) throws Throwable {
+
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
+		System.out.println(strUpdateQuery);
+		oConnection = getConnection("Fillo", pTestDataFile_BillingCenter);
+		oConnection.executeUpdate(strUpdateQuery);
+		oConnection.close();
+		
+	}
+
+
+	public static LinkedHashMap<String, String> getData_PersonalAuto(String strTable) throws Throwable {
+
+		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
+		oConnection = getConnection("Fillo", pTestDataFile_PersonalAuto);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static void UpdateData_PersonalAuto(String strTable, String strcolumn, String strValue) throws Throwable {
+
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
+		System.out.println(strUpdateQuery);
+		oConnection = getConnection("Fillo", pTestDataFile_PersonalAuto);
+		oConnection.executeUpdate(strUpdateQuery);
+		oConnection.close();
+		
+	}
+
+
 }

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="methods" name="Failed suite [TestSuite_PersonalAuto]" guice-stage="DEVELOPMENT" verbose="0">
-  <parameter name="GW_Application" value="PersonalAuto"/>
+<suite thread-count="2" parallel="methods" name="Failed suite [BillingCenter_TestSuite]" guice-stage="DEVELOPMENT" verbose="0">
   <listeners>
     <listener class-name="com.Utils.Selenium.Selenium_TestNG_TestListener"/>
   </listeners>
-  <test parallel="methods" name="PersonalAuto PolicyCenter Regression(failed)">
+  <test parallel="methods" name="PersonalAuto BilllingCenter Regression(failed)">
     <classes>
-      <class name="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission">
+      <class name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice">
         <methods>
-          <include name="driver_ObjReference_Garbage"/>
-          <include name="driver_ObjReference_Initiate"/>
-          <include name="AUT_PA_PC_NewSubmission_BindOption_IssuePolicy"/>
+          <include name="AUT_PA_BC_Invoice_01"/>
         </methods>
-      </class> <!-- com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission -->
+      </class> <!-- com.Test.Guidewire.BilllingCenter.GW_BC_Invoice -->
     </classes>
-  </test> <!-- PersonalAuto PolicyCenter Regression(failed) -->
-</suite> <!-- Failed suite [TestSuite_PersonalAuto] -->
+  </test> <!-- PersonalAuto BilllingCenter Regression(failed) -->
+</suite> <!-- Failed suite [BillingCenter_TestSuite] -->

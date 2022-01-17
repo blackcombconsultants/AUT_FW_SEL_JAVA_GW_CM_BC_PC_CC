@@ -176,6 +176,7 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables_PO.Error_Message, "equals", "The search returned zero results.");
 
 		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "clickAndwait", "Click");
+		getStaleElement("Person", SA_CNA_Person_Button);
 		GuidewireAutomate("Person", SA_CNA_Person_Button, "clickAndwait", "Click");
 
 		/*
@@ -207,9 +208,9 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Address1", CA_A_Address1, "sendKeys", strAddress1);
 		GuidewireAutomate("Address2", CA_A_Address2, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address2"));
 		GuidewireAutomate("Address3", CA_A_Address3, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address3"));
-		GuidewireAutomate("City", GW_City, "sendKeys", lhm_TestCase_Table_Data.get("GW_City"));
-		GuidewireAutomate("County", GW_County, "sendKeys", lhm_TestCase_Table_Data.get("GW_County"));
-		GuidewireAutomate("ZipCode", GW_ZipCode, "sendKeys", lhm_TestCase_Table_Data.get("GW_ZipCode"));
+		//GuidewireAutomate("City", GW_City, "sendKeys", lhm_TestCase_Table_Data.get("GW_City"));
+		//GuidewireAutomate("County", GW_County, "sendKeys", lhm_TestCase_Table_Data.get("GW_County"));
+		//GuidewireAutomate("ZipCode", GW_ZipCode, "sendKeys", lhm_TestCase_Table_Data.get("GW_ZipCode"));
 
 		GuidewireAutomate("addresstype", CA_A_Addresstype, "selectByVisibleText", lhm_TestCase_Table_Data.get("CA_AddressType"));
 		GuidewireAutomate("description", CA_A_Description, "sendKeys", strFirstName + " " + strLastName + "Likes to ");
