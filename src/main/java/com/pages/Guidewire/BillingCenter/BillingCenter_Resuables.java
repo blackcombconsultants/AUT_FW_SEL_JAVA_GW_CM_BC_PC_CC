@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -417,9 +419,15 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 		GuidewireAutomate_Validation("Screen Header", DBP_Header, "equals", "Direct Bill Payment");
 		GuidewireAutomate("Amount", DBP_Amount, "sendKeys", lhm_TestCase_Table_Data.get("TD_Amount"));
 		GuidewireAutomate("Payment Instrument", DBP_PaymentInstrument, "selectByVisibleText", "Cash");
-
-		GuidewireAutomate("Execute Without Distribution", DBP_ExecuteWithoutDistribution, "clickAndwait", "");
-		GuidewireAutomate("Execute Without Distribution", DBP_ExecuteWithoutDistribution, "click", "");
+		GuidewireAutomate("Amount", DBP_Description, "sendKeys","Automation");
+		//Code to click by using Action Class
+		WebElement dbp_button=getElement(DBP_ExecuteWithoutDistribution);
+		Actions build=new Actions(driver);
+		build.moveToElement(dbp_button).click(dbp_button);
+		build.perform();
+		
+		//GuidewireAutomate("Execute Without Distribution", DBP_ExecuteWithoutDistribution, "clickAndwait", "");
+		//GuidewireAutomate("Execute Without Distribution", DBP_ExecuteWithoutDistribution, "click", "");
 
 	}
 
