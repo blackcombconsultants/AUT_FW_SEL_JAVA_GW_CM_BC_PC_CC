@@ -2,6 +2,7 @@ package com.pages.Guidewire.PolicyCenter;
 
 import java.util.LinkedHashMap;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -174,8 +175,11 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		 * 
 		 */
 		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables_PO.Error_Message, "equals", "The search returned zero results.");
+		getStaleElement("Create New Account", SA_CreateNewAccount_Button);
+		By create=By.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton']");
+		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "mouseClick", "Click");
+		GuidewireAutomate("Create New Account", create, "clickAndwait", "Click");
 
-		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "clickAndwait", "Click");
 		getStaleElement("Person", SA_CNA_Person_Button);
 		GuidewireAutomate("Person", SA_CNA_Person_Button, "clickAndwait", "Click");
 

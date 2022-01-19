@@ -30,10 +30,10 @@ public interface PolicyCenter_Account_PO {
 	/*
 	 * NewAccount
 	 */
-	final By SA_CreateNewAccount_Button = By.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton']");
+	final By SA_CreateNewAccount_Button = By.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton']/div[@role='button']/div[@class='gw-label' and contains(text(),'Cre')]");
 	final By SA_CNA_Person_Button = By
-			.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Person']");
-	final By SA_CNA_Company_Button = By.xpath("//div[text()='Company']");
+			.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Person']//div[@class='gw-label' and text()='Person']");
+	final By SA_CNA_Company_Button = By.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Company']//div[@class='gw-label' and text()='Company']");
 	final By SA_CNA_FromAddressBook_Button = By.xpath("//div[text()='From Address Book']");
 
 	/*
