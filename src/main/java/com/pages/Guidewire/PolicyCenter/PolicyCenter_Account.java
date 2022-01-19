@@ -137,7 +137,7 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		if (strPrimaryEmail.contentEquals("Random")) {
 			strPrimaryEmail = strFirstName + "." + strLastName + "@blackcombconsultants.com";
 		}
-		strOfficialID = lhm_TestCase_Table_Data.get("CA_OfficialID");
+		  strOfficialID = lhm_TestCase_Table_Data.get("CA_OfficialID");
 		if (strOfficialID.contentEquals("Random")) {
 			strOfficialID = "999-11-" + getRandomNumeric(4);
 		}
@@ -165,16 +165,11 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 
 		PolicyCenter_Resuables.clickButton("Search");
 
+		//GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables_PO.Error_Message, "equals", "The search returned zero results.");
+
 		/*
 		 * CreateNewAccount_Button
 		 */
-		/*
-		 * Assert.assertEquals(gettext_SearchAccountResultsMessage(),
-		 * "Information for the current page:\n" +
-		 * "The search returned zero results.");
-		 * 
-		 */
-		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables_PO.Error_Message, "equals", "The search returned zero results.");
 		getStaleElement("Create New Account", SA_CreateNewAccount_Button);
 		By create=By.xpath("//div[@id='NewAccount-NewAccountScreen-NewAccountButton']");
 		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "mouseClick", "Click");
