@@ -23,7 +23,7 @@ private static By PhysicalDamageRatesSection = By.xpath("//div[contains(@id,'rat
 public static void Modifiers() throws Throwable {
 	
 	try {
-		
+		getStaleElement("Modifiers Header", ModifiersHeader);
 		GuidewireAutomate_Validation("Modifiers Header", ModifiersHeader, "equals", "Modifiers");
 		GuidewireAutomate_Validation("Rating Inputs Header", RatingInputsHeader, "equals", "Rating Inputs");
 		

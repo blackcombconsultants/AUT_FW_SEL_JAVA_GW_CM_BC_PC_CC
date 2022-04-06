@@ -44,7 +44,10 @@ public class BO_PolicyReview extends SeleniumWebDriver_Commands {
 			"//div[contains(@id,'PolicyLineSummaryPanelSet')]//div[@class='gw-TitleBar--title' and text()='Policy Details']");
 	private static By PR_PolicyType = By.xpath("//div[contains(@id,'HOPCoveragePartType')]//div[@class='gw-value']");
 	private static By PR_CoverageForm = By.xpath("//div[contains(@id,'HOPCoverageForm')]//div[@class='gw-value']");
-	
+	private static By PolicyChangeElement = By.xpath("//div[contains(@id,'DiffTreePanelLV-value2Header_inner')]//div[@class='gw-label']");
+
+
+
 	public static void PR_PrimaryInsured() throws Throwable {
 
 		try {
@@ -89,5 +92,21 @@ public class BO_PolicyReview extends SeleniumWebDriver_Commands {
 		}
 	}
 
+	/*
+Owner : Rahul Dixit
+Date  : 29-March-2022
+ */
+	public static void Verify_PolicyChange() throws Throwable {
+
+		try {
+
+			GuidewireAutomate_Validation("Policy Change Element", PolicyChangeElement, "contains", "Policy Change");
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+	}
 	
 }

@@ -34,7 +34,7 @@ public class PersonalAuto_Drivers extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Drivers");
 
 		GuidewireAutomate("Add", DR_DriversDetails_Add_Button, "click", lhm_TestCase_Table_Data.get("DR_Add"));
-		GuidewireAutomate("Existing Driver", DR_DriversDetails_Add_ExistingDriver, "moveToElement", lhm_TestCase_Table_Data.get("DR_Add"));
+		GuidewireAutomate("Existing Driver", DR_DriversDetails_Add_ExistingDriver, "moveToElement", lhm_TestCase_Table_Data.get("DR_Add_DD_Name"));
 
 		/*
 		 * // Hande Dynamic Element - Click Existing driver if

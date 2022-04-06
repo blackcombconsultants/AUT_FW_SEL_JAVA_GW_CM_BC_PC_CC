@@ -30,15 +30,49 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 
 	// ------>clicking on view_your_SubmissionIt will go to Quote Screen
 	public static void viewYourSubmission() throws Throwable {
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
 		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "click");
 
 	}
 
+	/*
+	name:shanta
+	Date:31/03/2022
+	 */
+	// ------>clicking on view_your_SubmissionIt will go to Quote Screen
+	public static void viewYourSubmissionDeclined() throws Throwable {
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Declined");
+		GuidewireAutomate("View your Submission", SB_ViewYourSubmission, "clickAndwait", "click");
+
+	}
+
+
 	// ------>clicking on View_your_Policy It will go to Summary Screen
 	public static void ViewYourPolicy() throws Throwable {
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+		//GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Submission Bound");
+	}
+	/*
+     Name:shanta
+     Date:01/04/2022
+      */
+	public static void ViewYourPolicy_RenewalNonrenewing() throws Throwable {
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Non-renewing");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
+
+	}
+	/*
+	Name:shanta
+	Date:31/03/2022
+	 */
+	public static void RenewalBound_ViewYourPolicy() throws Throwable {
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Bound");
 
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
@@ -53,13 +87,23 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 
 	public static void Cancellation_ViewYourPolicy() throws Throwable {
 
+		//GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Change Bound");
+
+		//GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
+
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Cancellation Bound");
 
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
-	public static void Reinstatement_ViewYourPolicy() throws Throwable {
+	public static void Cancellation_Scheduled_ViewYourPolicy() throws Throwable {
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header1);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header1, "contains", "Cancellation Scheduled");
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
+	}
 
+	public static void Reinstatement_ViewYourPolicy() throws Throwable {
+        getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Reinstatement Bound");
 
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
@@ -72,9 +116,34 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 		GuidewireAutomate("View your Policy", SB_ViewYourrenewal, "clickAndwait", "click");
 
 	}
+
+	public static void Renewal_ViewYourrenewal() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Renewing");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourrenewal, "clickAndwait", "click");
+
+	}
+
+	public static void Renewal_ViewTheUnboundRenewal() throws Throwable{
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Change Bound");
+		GuidewireAutomate("ViewRenewal",PB_ViewUnboundRenewal,"clickAndwait","click");
+        GuidewireAutomate("closeButton",CloseOption,"clickAndwait","click");
+	}
 	public static void RenewalRenewing_ViewYourPolicy() throws Throwable {
 
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Renewing");
+
+		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
+
+	}
+	/*
+	*Name:shanta
+	* Date:31/03/2022
+	 */
+	public static void RenewalNonRenewing_ViewYourPolicy() throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Non-renewing");
 
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
@@ -166,5 +235,19 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 		// TODO Auto-generated method stub
 
 	}
+
+	/*
+Owner: Rahul Dixit
+Description: Unbound link at the end policy change
+ */
+	public static void policyChangeBound_PolicyChange() throws Throwable {
+		getStaleElement("PolicyCenter_Resuables_PO.Screen_Header",PolicyCenter_Resuables_PO.Screen_Header);
+		GuidewireAutomate_waitForElement(PolicyCenter_Resuables_PO.Screen_Header,"visibilityOfElementLocated","");
+		GuidewireAutomate_waitForElement(PolicyCenter_Resuables_PO.Screen_Header,"visibilityOfElementLocated","");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Change Bound");
+		GuidewireAutomate("View your Policy", SB_ViewChangePolicyLink, "clickAndwait", "click");
+
+	}
+
 
 }

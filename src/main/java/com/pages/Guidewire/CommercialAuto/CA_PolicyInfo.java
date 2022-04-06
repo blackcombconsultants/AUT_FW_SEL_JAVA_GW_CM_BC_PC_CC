@@ -33,6 +33,16 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 	private static By PrimaryNamedInsured_AddressType                               = By.xpath("//div[contains(@id,'AddressType') and contains(@class,'gw-ValueWidget')]//div[contains(@class,'gw-label')]");
 	private static By PrimaryNamedInsured_AddressDescription                        = By.xpath("//div[contains(@id,'AddressDescription') and contains(@class,'gw-ValueWidget')]//div[contains(@class,'gw-value-readonly-wrapper')]");
 
+	static By NewPrimaryNamedInsured = By.xpath("//div[contains(@id,'ContactDetailScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	static By PI_AddNewPerson = By.xpath("//div[contains(@id,'PolicyContactRoleNameInputSet-0')]");
+	static By PI_Firstname = By.xpath("//input[contains(@name,'GlobalPersonNameInputSet-FirstName')]");
+	static By PI_Lastname = By.xpath("//input[contains(@name,'GlobalPersonNameInputSet-LastName')]");
+	static By PI_Address_1 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine1')]");
+	static By PI_StateName = By.xpath("//select[contains(@Name,'globalAddressContainer-GlobalAddressInputSet-State')]");
+	static By PI_AddressType = By.xpath("//select[contains(@name,'PolicyContactDetailsDV-AddressType')]");
+
+
+
 	/*
 	 * Official IDs
 	 */
@@ -140,6 +150,19 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 	public static void primaryNamedInsured_ChangeTo_NewPerson() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
 				strTestCaseName);
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
+		GuidewireAutomate("ChangeTo",PrimaryNamedInsured_ChangeTo_Button, "clickAndwait", "clickAndwait");
+		GuidewireAutomate("NewPerson",PrimaryNamedInsured_ChangeTo_NewPerson,"clickAndwait","click");
+		GuidewireAutomate_Validation("Screen Header",NewPrimaryNamedInsured, "equals", "New Primary Named Insured");
+		GuidewireAutomate_Validation("PersonName",PI_AddNewPerson,"equals", "Person");
+		GuidewireAutomate("FirstName",PI_Firstname, "sendKeys", lhm_TestCase_Table_Data.get("PI_FirstName"));
+		GuidewireAutomate("LastName",PI_Lastname, "sendKeys", lhm_TestCase_Table_Data.get("PI_LastName"));
+		GuidewireAutomate("Address1",PI_Address_1, "sendKeys", lhm_TestCase_Table_Data.get("PI_Address_1"));
+		getStaleElement("State",PI_StateName);
+		GuidewireAutomate("State",PI_StateName, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_StateName"));
+		GuidewireAutomate("AddressType",PI_AddressType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_AddressType"));
+
 
 		try {
 

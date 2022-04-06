@@ -24,17 +24,12 @@ public class Test_Payment extends GW_GetDriver {
 		Tab_Menu_Navigation.bcMenuNavigation("Invoice Streams");
 		BillingCenter_NonPayment.NonPayment_InvoicesStream();
 		BillingCenter_Payments.RobotKey();
-		Thread.sleep(2000);
-
 		BillingCenter_NonPayment.ReturnToBillingCenter();
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
-
 		Tab_Menu_Navigation.bcMenuNavigation("New Direct Bill Payment");
 		BillingCenter_Payments.DirectBillPayments();
-		Thread.sleep(2000);
 		Tab_Menu_Navigation.bcMenuNavigation("Payments");
 		BillingCenter_Payments.Payments();
-
 		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
 
 	}

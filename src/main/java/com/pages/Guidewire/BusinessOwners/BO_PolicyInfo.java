@@ -100,6 +100,18 @@ public class BO_PolicyInfo  extends SeleniumWebDriver_Commands {
 
 	private static By PI_UC_Name = By.xpath("//select[contains(@name,'UWCompanyInputSet-UWCompany')]");
 
+
+	private static By PA_ExpandButton = By.xpath("//div[contains(@id,'-ChangePolicyAddressButtonMenuIcon')]//div[@class='gw-action--expand-button']");
+	private static By PA_NewAddress = By.xpath("//div[contains(@id,'AddAddressMenuItem')]//div[@role='menuitem']");
+	private static By AD_Address1 = By.xpath("//input[contains(@name,'globalAddressContainer-GlobalAddressInputSet-AddressLine1')]");
+	private static By AD_State = By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
+	private static By AD_AddressType = By.xpath("//select[contains(@name,'PolicyAddressInputSet-AddressType')]");
+	private static By AD_OKButton = By.xpath("//div[contains(@id,'EditPolicyAddressPopup-Update')]//div[@role='button']");
+
+
+
+
+
 	public static void dateQuoteNeeded() throws Throwable {
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("policyInfo",
@@ -135,11 +147,11 @@ public class BO_PolicyInfo  extends SeleniumWebDriver_Commands {
 
 			GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "equals",
 					lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
-			/*
-			 * GuidewireAutomate_Validation("Policy Address",
-			 * PrimaryNamedInsured_PolicyAddress, "contains",
-			 * lhm_TestCase_Table_Data.get("PrimaryNI_PolicyAddress"));
-			 */
+
+			 GuidewireAutomate_Validation("Policy Address",
+			  PrimaryNamedInsured_PolicyAddress, "contains",
+			  lhm_TestCase_Table_Data.get("PrimaryNI_PolicyAddress"));
+
 			GuidewireAutomate_Validation("County", PrimaryNamedInsured_County, "equals",
 					lhm_TestCase_Table_Data.get("PrimaryNI_County"));
 			GuidewireAutomate_Validation("Address Type", PrimaryNamedInsured_AddressType, "equals",
@@ -560,4 +572,48 @@ public class BO_PolicyInfo  extends SeleniumWebDriver_Commands {
 
 	}
 
+	/*
+Owner : Rahul Dixit
+Date  : 29-March-2022
+ */
+	public static void PolicyAddress_ChangeTo_NewAddress() throws Throwable {
+
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("createAccount",
+					strTestCaseName);
+
+			//Header
+
+			GuidewireAutomate("PA_ExpandButton",PA_ExpandButton,"clickAndwait","clickAndwait");
+			GuidewireAutomate("PA_NewAddress",PA_NewAddress,"clickAndwait","clickAndwait");
+			//Header
+			GuidewireAutomate("AD_Address1",AD_Address1,"clearANDsendKeys",	lhm_TestCase_Table_Data.get("CA_Address1"));
+			GuidewireAutomate("AD_State",AD_State,"selectByVisibleText",lhm_TestCase_Table_Data.get("GW_State"));
+			GuidewireAutomate("AD_AddressType",AD_AddressType,"selectByVisibleText",lhm_TestCase_Table_Data.get("CA_AddressType"));
+			//Submit
+			GuidewireAutomate("AD_OKButton",AD_OKButton,"clickAndwait","clickAndwait");
+			//Header
+
+
+
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	public static void VerifyAddress() throws Throwable {
+
+		try {
+
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
 }

@@ -60,7 +60,7 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 
 	public static void logout_Guidewire() throws Throwable {
 		try {
-
+            getStaleElement("Setting", GW_Setting_Link);
 			GuidewireAutomate("Setting", GW_Setting_Link, "clickAndwait", "click");
 			GuidewireAutomate("Logout", GW_Logout_Link, "clickAndwait", "click");
 

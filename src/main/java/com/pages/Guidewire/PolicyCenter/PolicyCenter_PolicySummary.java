@@ -1,5 +1,8 @@
 package com.pages.Guidewire.PolicyCenter;
 
+import com.Utils.Selenium.Selenium_Utils_DataBase;
+import com.pages.Guidewire.Tab_Menu_Navigation;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
@@ -47,10 +50,34 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 		GuidewireAutomate_Validation("Current Activities", PS_CurrentActivities, "equals", "Current Activities");
 
 	}
-
+  /*
+  Name:shanta
+  Date:29/03/2022
+   */
 	public static void openPolicyTransactions() throws Throwable {
+		getStaleElement("Open Policy Transactions", PS_OpenPolicyTransactions);
 		GuidewireAutomate_Validation("Open Policy Transactions", PS_OpenPolicyTransactions, "equals", "Open Policy Transactions");
+        GuidewireAutomate_Validation("type",PS_TransactionsType,"equals","Submission");
+		GuidewireAutomate_Validation("Status",Ps_TransactionStatus,"equals","Non-renewing");
 
+	}
+	/*
+  Name:shanta
+  Date:31/03/2022
+   */
+	public static void openPolicyTransactions_RenewalWorkflow() throws Throwable {
+		GuidewireAutomate_Validation("Open Policy Transactions", PS_OpenPolicyTransactions, "equals", "Open Policy Transactions");
+		GuidewireAutomate_Validation("type",PS_Renewal_TransactionsType,"equals","Renewal");
+		GuidewireAutomate_Validation("Status",Ps_Renewal_TransactionStatus,"equals","Renewing");
+
+	}
+   /*
+  Name:shanta
+  Date:31/03/2022
+   */
+	public static void openPolicyTransaction_ClickPolicyLink() throws Throwable{
+		GuidewireAutomate_Validation("Open Policy Transactions", PS_OpenPolicyTransactions, "equals", "Open Policy Transactions");
+		GuidewireAutomate("ClickPolicyLink",PS_PolicyLink,"clickAndwait","click");
 	}
 
 	public static void claims() throws Throwable {
@@ -59,9 +86,24 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 	}
 
 	public static void completedPolicyTransactions() throws Throwable {
+		getStaleElement("Completed Policy Transactions", PS_CompletedPolicyTransactions);
 		GuidewireAutomate_Validation("Completed Policy Transactions", PS_CompletedPolicyTransactions, "equals", "Completed Policy Transactions");
-
+		GuidewireAutomate_Validation("TransactionsType",PS_TransactionsType,"equals","Cancellation");
 	}
+
+	/*
+	Name:shanta
+	date:04/04/2022
+	 */
+	public static void completedPolicyTransactions_reinstatePremium() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicySummary",
+				strTestCaseName);
+		getStaleElement("Completed Policy Transactions", PS_CompletedPolicyTransactions);
+		GuidewireAutomate_Validation("Completed Policy Transactions", PS_CompletedPolicyTransactions, "equals", "Completed Policy Transactions");
+		GuidewireAutomate_Validation("TransactionsType",PS_TransactionsType,"equals",lhm_TestCase_Table_Data.get("PS_TransactionsType"));
+		GuidewireAutomate_Validation("Premiumcost",PS_PremiumCost,"equals",lhm_TestCase_Table_Data.get("PS_PremiumCost"));
+	}
+
 
 	public static void notes() throws Throwable {
 		GuidewireAutomate_Validation("Notes", PS_Notes, "equals", "Notes");
@@ -89,6 +131,12 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 	}
 
 	public static void tools_Billing() throws Throwable {
+		getStaleElement("Billing", Tools_Billing);
+		GuidewireAutomate("Billing", Tools_Billing, "clickAndwait", "click");
+		GuidewireAutomate_Validation("Screen Header", Billing_Name, "equals", "Billing");
+		GuidewireAutomate("View Account Billing Status", ViewBillingStatus, "clickAndwait", "click");
+        GuidewireAutomate_Validation("In Good Standing",BillingStatus, "equals", "In Good Standing" );
+		//GuidewireAutomate("PolicyNumber",PolicyNumber,"clickAndwait","click");
 
 	}
 
@@ -139,6 +187,81 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 
 			default :
 				break;
+		}
+	}
+
+	/*
+Owner: Rahul Dixit
+Date: 23-March-2022
+ */
+	public static void OpenPolicyTransaction_ClickPolicyLink() throws Throwable {
+
+		try {
+			String Result = getText_Element(PS_OPT_DataDisplay);
+			if (Result.contains("Renewal")) {
+
+				GuidewireAutomate_Validation("Open Policy Transactions", PS_OpenPolicyTransactions, "equals", "Open Policy Transactions");
+				GuidewireAutomate_Validation("Data Row", PS_OPT_DataDisplay, "contains", "Renewal");
+				GuidewireAutomate("Policy Number", PS_OPT_PolicyNumber, "clickAndwait", "clickAndwait");
+				PolicyCenter_Resuables.clickButton("Edit Policy Transaction");
+				Thread.sleep(2000);
+				PolicyCenter_Resuables.clickButton("Non Renew");
+			}
+
+		} catch (NoSuchElementException e) {
+			String Result2 = getText_Element(NodataDisplay);
+
+			if (Result2.contains("No data")) {
+
+				Tab_Menu_Navigation.pcMenuNavigation("Renew Policy");
+				Thread.sleep(4000);
+				PolicyCenter_Resuables.clickButton("Next");
+				PolicyCenter_Resuables.clickButton("Edit Policy Transaction");
+				Thread.sleep(2000);
+				PolicyCenter_Resuables.clickButton("Non Renew");
+				e.printStackTrace();
+			}
+		}
+	}
+
+		/*
+	Owner: Rahul Dixit
+	Date: 28-March-2022
+	 */
+
+	public static void VerifyOpenPolicyTransactionDetails() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicySummary",
+					strTestCaseName);
+
+			GuidewireAutomate_Validation("Complete Policy Transaction Header", CPT_Header, "equals", "Completed Policy Transactions");
+			getStaleElement("Type",OPT_Type);
+			GuidewireAutomate_Validation("Type",OPT_Type,"equals",lhm_TestCase_Table_Data.get("Type"));
+			GuidewireAutomate_Validation("Status",OPT_Status,"equals",lhm_TestCase_Table_Data.get("Status"));
+
+		}catch (Exception e){
+
+			e.printStackTrace();
+			throw e;
+		}
+	}
+
+		/*
+	Owner: Rahul Dixit
+	Date: 24-March-2022
+	 */
+
+	public static void VerifyPremiumInCompletePolicytransaction() throws Throwable {
+		try {
+
+			GuidewireAutomate_Validation("Complete Policy Transaction Header", CPT_Header, "equals", "Completed Policy Transactions");
+			getStaleElement("CPT_Premium",CPT_Premium);
+			GuidewireAutomate_Validation("CPT_Premium", CPT_Premium, "equals", "($459.00)");
+
+		}catch (Exception e){
+
+			e.printStackTrace();
+			throw e;
 		}
 	}
 

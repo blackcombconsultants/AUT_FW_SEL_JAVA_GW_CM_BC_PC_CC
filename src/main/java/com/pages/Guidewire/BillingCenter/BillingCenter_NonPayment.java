@@ -137,18 +137,12 @@ public class BillingCenter_NonPayment extends SeleniumWebDriver_Commands {
 			}
 			public static void ReturnToBillingCenter() throws Throwable {
 
-
-
-			try {
-
-
-
+		try {
+			getStaleElement("Action Run", Action);
 			GuidewireAutomate("Action Run", Action, "clickAndwait", "clickAndwait");
 			GuidewireAutomate("Return To Billing Center", Action_ReturnBillingCenter, "clickAndwait", "clickAndwait");
 
-
-
-			} catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
 

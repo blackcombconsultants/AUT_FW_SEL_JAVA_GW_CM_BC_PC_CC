@@ -76,7 +76,7 @@ public class GW_PC_PersonalAuto_Submission extends GW_GetDriver {
 		PolicyCenter_Account.createPersonAccount();
 		PolicyCenter_AccountSummary.detail_Verify();
 
-		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
+		Tab_Menu_Navigation.pcMenuNavigation("New Submission Desktop");
 		PolicyCenter_Resuables.newSubmissions_Edit();
 		PersonalAuto_Reusable.newSubmission_SelectLOB_PersonalAuto(); // select
 																		// LOB

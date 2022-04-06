@@ -337,10 +337,10 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("Address1", CA_A_Address1, "sendKeys", strAddress1);
 		GuidewireAutomate("address2", CA_A_Address2, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address2"));
 		GuidewireAutomate("address3", CA_A_Address3, "sendKeys", lhm_TestCase_Table_Data.get("CA_Address3"));
-		GuidewireAutomate("City", GW_City, "sendKeys", lhm_TestCase_Table_Data.get("GW_City"));
-		GuidewireAutomate("County", GW_County, "sendKeys", lhm_TestCase_Table_Data.get("GW_County"));
-		GuidewireAutomate("ZipCode", GW_ZipCode, "sendKeys", lhm_TestCase_Table_Data.get("GW_ZipCode"));
-		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
+		//GuidewireAutomate("City", GW_City, "sendKeys", lhm_TestCase_Table_Data.get("GW_City"));
+		//GuidewireAutomate("County", GW_County, "sendKeys", lhm_TestCase_Table_Data.get("GW_County"));
+		//GuidewireAutomate("ZipCode", GW_ZipCode, "sendKeys", lhm_TestCase_Table_Data.get("GW_ZipCode"));
+		//GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
 
 		GuidewireAutomate("addresstype", CA_A_Addresstype, "selectByVisibleText", lhm_TestCase_Table_Data.get("CA_AddressType"));
 
@@ -358,7 +358,7 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		GuidewireAutomate("accountnickname", CA_AccountNickname, "sendKeys", strAccountNickname);
 	//	GuidewireAutomate("Preferred Language", CA_PreferredLanguage, "valueEquals", lhm_TestCase_Table_Data.get("CA_PreferredLanguage"));
 
-		industryCodeSearch(Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("industryCode", strTestCaseName));
+		//industryCodeSearch(Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("industryCode", strTestCaseName));
 
 		/*
 		 * Select Producer

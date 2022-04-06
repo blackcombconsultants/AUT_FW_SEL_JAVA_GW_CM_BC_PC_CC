@@ -31,6 +31,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By Producer_Header = By.xpath("//div[contains(@id,'title-toolbar')]//div[text()='Producer']");
 
 	final By Screen_Header                  = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
+	final By Screen_Header1                  = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
 	final By EnterAccountInformation_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Enter Account Information']");
 	final By CreateAccount_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Create account']");
 	final By Organizations_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Organizations']");
@@ -68,6 +69,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By Cancel_Button                           = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Cancel']");
 	final By Back_Button                             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Back']");
 	final By Next_Button                             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']");
+	final By Edit_Button                             = By.xpath("//div[@id='PreRenewalDirectionPage-PreRenewalDirectionScreen-Edit']");
 	final By Quote_Button                            = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='uote']");
 	final By ReleaseLock_Button                      = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Quote')]/div[@role='button']");
 	final By EditPolicyTransaction_Button            = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'EditPolicy')]/div[@role='button']");
@@ -86,6 +88,8 @@ public interface PolicyCenter_Resuables_PO {
 	final By PrintQuote_Button                       = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'CreateSubmissionQuote')]/div[@role='button']");
 	final By WithdrawTransaction_Button              = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
 	final By Reinstate_Button                        = By.xpath("//div[contains(@id,'ToolbarButtonSet-Reinstate')]/div[@role='button']");
+    final By IssuePolicyButton                       = By.xpath("//div[contains(@id,'JobWizardToolbarButtonSet-BindPolicyChange')]");
+	final By NonRenew                                = By.xpath("//div[contains(@id,'SendToNonRenewal')]//div[@role='menuitem']");
 
 	/*
 	 * New Submissions
@@ -114,18 +118,21 @@ public interface PolicyCenter_Resuables_PO {
 	final By OrganizationDescription = By.xpath("//input[contains(@name,'SearchDV-Description')]");
 
 	final By Of_OfferingSelection = By.xpath("//select[contains(@name,'OfferingScreen-OfferingSelection')]");
-
+	final By AS_Edit_Button       = By.xpath("//div[contains(@id,'EditAccount')]//div[@role='menuitem']");
 	/*
 	 * Start Cancellation For Policy
 	 */
-	final By StartCancellationForPolicy_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Start Cancellation For Policy')]");
+	final By StartCancellationForPolicy_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Start Cancellation')]");
 
 	final By SCFP_Source                    = By.xpath("//select[@name='StartCancellation-StartCancellationScreen-CancelPolicyDV-Source']");
 	final By SCFP_Reason                    = By.xpath("//select[@name='StartCancellation-StartCancellationScreen-CancelPolicyDV-Reason']");
 	final By SCFP_ReasonDescription         = By.xpath("//div[contains(@id,'CancelPolicyDV-ReasonDescription')]//textarea[contains(@name,'CancelPolicyDV-ReasonDescription')]");
-	final By SCFP_RefundMethod              = By.xpath("//div[contains(@id,'CancelPolicyDV-CalcMethod')]//div[@class='gw-label' and text()='Flat']");
+	final By SCFP_RefundMethod_flatrate     = By.xpath("//div[contains(@id,'CancelPolicyDV-CalcMethod')]//div[@class='gw-label' and text()='Flat']");
+	final By SCFP_RefundMethod_prorate      = By.xpath("//div[contains(@id,'CancelPolicyDV-CalcMethod')]//div[@class='gw-label' and text()='Pro rata']");
+	final By SCFP_RefundMethod_Shortrate      = By.xpath("//div[contains(@id,'CancelPolicyDV-CalcMethod')]//div[@class='gw-label' and text()='Short rate']");
 	final By SCFP_CancellationEffectiveDate = By.xpath("//div[contains(@id,'CancelPolicyDV-CancelDate')]//input[@class='gw-min-visible gw-DateValueWidget--dateInput']");
-	final By StartCancellation_Button       = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Start Cancellation']");
+	final By SCFP_CancellationEffectiveDateIcon = By.xpath("//div[contains(@id,'CancelDate_dateIcon')]");
+	final By StartCancellation_Button       = By.xpath("//div[@id='StartCancellation-StartCancellationScreen-NewCancellation']//div[@role='button']");
 
 	final By Confirmation_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Confirmation']");
 
@@ -138,7 +145,7 @@ public interface PolicyCenter_Resuables_PO {
 
 	final By BindOptions_ScheduleCancellation_Button = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-SubmitCancellation')]/div[@role='menuitem']");
 	final By Bindoptions_CancelNow_Button            = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-CancelNow')]/div[@role='menuitem']");
-
+    final By Bindoptions_IssueNow_Button             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-IssueNow')]/div[@role='menuitem']");
 	/*
 	 * Start Reinstatement
 	 */
@@ -156,7 +163,12 @@ public interface PolicyCenter_Resuables_PO {
 	final By SR_AG_ReinstatementDate = By.xpath("//div[contains(@id,'ReinstatementDate')]//div[@class='gw-value-readonly-wrapper']");
 	final By SR_AG_ReasonCode        = By.xpath("//select[contains(@name,'ReinstatePolicyDV-ReasonCode')]");
 	final By SR_AG_ReasonDescription = By.xpath("//textarea[contains(@name,'ReinstatePolicyDV-ReasonDescription')]");
-
+//submission declined
+	final By SD_SubmissionDeclined = By.xpath("//div[contains(@id,'RejectScreen-ttlBar')]//div[@role='heading']");
+	final By SD_ReasonCode = By.xpath("//select[@name='DeclineReasonPopup-RejectScreen-RejectReasonDV-RejectReason']");
+	final By SD_ReasonText = By.xpath("//textarea[@name='DeclineReasonPopup-RejectScreen-RejectReasonDV-RejectReasonText']");
+	final By SD_DeclineButton = By.xpath("//div[contains(@id,'RejectScreen-Update')]//div[@class='gw-label']");
+	final By SD_ReasonCodeHeader = By.xpath("//div[contains(@id,'RejectReason_Input')]//div[@class='gw-label']");
 	/*
 	 * Start Policy Change
 	 */
@@ -169,5 +181,71 @@ public interface PolicyCenter_Resuables_PO {
 	 * renewal
 	 */
 	final By RDE_RenewalCode = By.xpath("//select[contains(@name,'RenewalCode')]");
+
+	/*
+	*Nonrenewal
+	 */
+	final By NonRenewReasonHeader = By.xpath("//div[@class='gw-label']  [text()='Non-Renew Reason']");
+	final By NonRenewReason = By.xpath("//select[contains(@name,'NonRenewScreen-NonRenewReason')]");
+	final By NonRenewAdditionalTextHeader = By.xpath("//div[@class='gw-label']  [text()='Non-Renew Additional Text']");
+	final By NonRenewAdditionalText = By.xpath("//textarea[contains(@name,'NonRenewScreen-NonRenewAddExpl')]");
+	final By SelectedNonRenewalExplanations = By.xpath("//div[@class='gw-ListView--UI--title']");
+	final By AddExplanation = By.xpath("//div[contains(@id,'SelectedNonRenewalExplanationsLV_tb-Add')]");
+    final By SelectNonRenewalExplanations = By.xpath("//input[contains(@name,'NonRenewalExplanationPatternsLV-1-_Checkbox')]");
+    final By AddButton = By.xpath("//div[contains(@id,'AddButton')]//div[@role='button']");
+
+	/*
+*contacts
+ */
+    final By MenuPC_Account_Contacts = By
+		.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Contacts']//div[@role='menuitem']");
+	final By AccountFileContacts = By.xpath("//div[contains(@id,'ContactsScreen-ttlBar')]//div[@role='heading']");
+	final By CreateNewContact = By.xpath("//div[contains(@id,'addContactButton')]//div[@role='button']");
+	final By NamedInsured = By.xpath("//div[contains(@id,'addContactButton-9-roleType')]//div[contains(@class,'expand-button')]");
+	final By NewCompany = By.xpath("//div[contains(@id,'addContactButton-9-roleType-0-contactType')]//div[@role='menuitem']");
+	final By NewNamedInsured = By.xpath("//div[contains(@id,'ContactDetailScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
+	final By CompanyHeader = By.xpath("//div[contains(@id,'ContactNameInputSet-0')]//div[@class='gw-label gw-boldLabel']");
+	final By CompanyName = By.xpath("//div[contains(@id,'GlobalContactNameInputSet-Name')]//input[@type='text']");
+	final By Address = By.xpath("//div[contains(@id,'LinkAddressMenuMenuIcon')]");
+	final By AccountHolder = By.xpath("//div[contains(@id,'LinkAddressMenu-0-contactDetail')]//div[contains(@class,'expand-button')]");
+	final By AccountHolderAddress = By.xpath("//div[contains(@id,'LinkAddressMenu-0-contactDetail-PrimaryAddress')]//div[@role='menuitem']");
+	final By ChangeAccountHolder = By.xpath("//div[@id='AccountFile_Contacts-AccountFile_ContactsScreen-ChangeAccountHolder']");
+	final By CompanyDetails = By.xpath("//div[contains(@id,'ChangeAccountHolderMenuItemSet-0-UnassignedContact')]");
+
+	/*
+	*changepolicy
+	 */
+	final By StartPolicyChange = By.xpath("//div[contains(@id,'StartPolicyChangeScreen-ttlBar')]//div[@class='gw-TitleBar--titles--container']");
+    final By Description = By.xpath("//input[contains(@name,'StartPolicyChangeDV-Description')]");
+	final By EffectiveDate = By.xpath("//div[contains(@id,'StartPolicyChangeDV-EffectiveDate')]//input[@type='text']");
+    final By NextButton = By.xpath("//div[contains(@id,'NewPolicyChange')]//div[@role='button']");
+
+	/*
+	Run Batch process
+	 */
+   final By PolicyRenewalStart = By.xpath("//div[contains(@id,'BatchProcessesLV-39-BatchProcess')]");
+   final By RunButton = By.xpath("//div[contains(@id,'BatchProcessesLV-39-RunBatchWithoutNotify')]");
+
+   /*
+   Return to policy center
+    */
+   final By Menu_Actions = By.xpath("//div[contains(@id,'MenuActions')]/div[@role='button']/div[2]");
+  final By ReturnToPC = By.xpath("//div[contains(@id,'ReturnToApp')]//div[@role='menuitem']");
+
+  /*
+  New Note
+   */
+  final By NewNoteTopic = By.xpath("//select[@name='NewNoteWorksheet-NewNoteScreen-NewNoteDV-Topic']");
+  final By NewNoteText = By.xpath("//textarea[@name='NewNoteWorksheet-NewNoteScreen-NewNoteDV-Text']");
+
+  /*
+  prerenewal direction
+   */
+ final By DetailsHeader = By.xpath("//div[@id='PreRenewalDirectionPage-PreRenewalDirectionScreen-7']");
+ final By DirectionDetails = By.xpath("//select[@name='PreRenewalDirectionPage-PreRenewalDirectionScreen-PreRenewalDirection']");
+ final By NonrenewalReason = By.xpath("//select[@name='PreRenewalDirectionPage-PreRenewalDirectionScreen-NonRenewReason']");
+ final By NoteHeader = By.xpath("//div[@id='PreRenewalDirectionPage-PreRenewalDirectionScreen-11']");
+ final By NoteText = By.xpath("//textarea[@name='PreRenewalDirectionPage-PreRenewalDirectionScreen-Text']");
+
 
 }

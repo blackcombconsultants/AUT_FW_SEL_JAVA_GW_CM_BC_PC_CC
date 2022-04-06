@@ -73,7 +73,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		oWebElement = null;
 
 		try {
-			Thread.sleep(500);
+			Thread.sleep(3000);
 			oWebElement = driver.findElement(Locator);
 			oWebElement = driver.findElement(Locator);
 		} catch (StaleElementReferenceException e) {
@@ -95,7 +95,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		try {
 			// Highlight the Element.
 			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", oWebElement);
-			Thread.sleep(500);
+			Thread.sleep(3000);
 			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')", oWebElement);
 		} catch (StaleElementReferenceException e) {
 			oWebElement = driver.findElement(Locator);

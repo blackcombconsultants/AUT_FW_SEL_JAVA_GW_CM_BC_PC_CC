@@ -98,9 +98,17 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				break;
 			case "Policy Search" :
 				GuidewireAutomate("Policy", TabPC_Policy_dd, "clickAndwait", "click");
-				GuidewireAutomate("Sub Number", TabPC_Policy_PolicyNumber, "sendKeys", Value);
-				GuidewireAutomate("Sub Search", TabPC_Policy_PolicyNumber_Search, "clickAndwait", "click");
+				GuidewireAutomate("Policy Number", TabPC_Policy_PolicyNumber, "sendKeys", Value);
+				getStaleElement("Policy Search", TabPC_Policy_PolicyNumber_Search);
+				GuidewireAutomate("Policy Search", TabPC_Policy_PolicyNumber_Search, "clickAndwait", "click");
 				break;
+
+			case "Policy Search By Fetching":
+				GuidewireAutomate("Policy", TabPC_Policy_dd, "clickAndwait", "click");
+				GuidewireAutomate("Policy Number", TabPC_Policy_PolicyNumber, "sendKeys", strPolicyNumber);
+				GuidewireAutomate("Policy Search", TabPC_Policy_PolicyNumber_Search, "clickAndwait", "click");
+				break;
+
 			case "New Person" :
 				GuidewireAutomate("Contacts Tab", TabPC_Contact_dd, "clickAndwait", "click");
 				GuidewireAutomate("New Contact", TabPC_Contact_NewContact, "moveToElement", "Null");
@@ -140,6 +148,12 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 			case "Team" :
 				GuidewireAutomate("AdministrationTab", TabPC_Team, "clickAndwait", "click");
 				break;
+			   /*
+				ownerName:shanta
+				date:28/03/2022
+				 */
+			case "Account":
+				GuidewireAutomate("AccountTab",Tab_Account,"clickAndwait","click");
 
 			default :
 				throw new IOException("No support for Tab : " + Tab);
@@ -201,6 +215,7 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				break;
 
 			case "New Note" :
+				getStaleElement("Actions", Menu_Actions);
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("New_Note", MenuPC_Account_Actions_Create_NewNote, "clickAndwait", "click");
 				break;
@@ -233,11 +248,16 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Merge_Account_into_this_Account", MenuPC_Account_Actions_MergeAccountIntoThisAccount, "clickAndwait", "click");
 				break;
 
+
 			case "Account File" :
 				break;
 			case "Policy File" :
 				break;
 			case "Pre Renewal Direction" :
+				getStaleElement("Actions", Menu_Actions);
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("PreRenewalDirection", PreRenewalDirection, "clickAndwait", "click");
+
 				break;
 			case "Spin-off Policy from this One" :
 				break;
@@ -248,19 +268,23 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Issue Policy", MenuPC_Actions_Policy_NewPolicyTransaction_IssuePolicy, "clickAndwait", "click");
 				break;
 			case "Change Policy" :
+				getStaleElement("Actions", Menu_Actions);
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("Change Policy", MenuPC_Actions_Policy_NewPolicyTransaction_ChangePolicy, "click", "click");
 				break;
 			case "Cancel Policy" :
+				getStaleElement("Actions", Menu_Actions);
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("Cancel Policy", MenuPC_Actions_Policy_NewPolicyTransaction_CancelPolicy, "click", "click");
 				break;
 			case "Renew Policy" :
+				getStaleElement("Actions", Menu_Actions);
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("Renew Policy", MenuPC_Actions_Policy_NewPolicyTransaction_RenewPolicy, "clickAndwait", "click");
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				break;
 			case "Reinstate Policy" :
+				getStaleElement("Actions", Menu_Actions);
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("Reinstate Policy", MenuPC_Actions_Policy_NewPolicyTransaction_ReinstatePolicy, "click", "click");
 				break;
@@ -281,7 +305,11 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 			case "EnableorDisable" :
 				break;
 			case "Copy Submission" :
-
+				getStaleElement("Actions", Menu_Actions);
+				getStaleElement("Actions", Menu_Actions);
+				getStaleElement("Actions", Menu_Actions);
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("copysubmission", MenuPC_Actions_Policy_NewPolicyTransaction_Copysubmission, "click", "click");
 				break;
 			default :
 				throw new IOException("No support for Menu : " + Menu);
@@ -348,8 +376,9 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 
 			case "Policy Search" :
 				GuidewireAutomate("Policy Tab", TabBC_Policy_dd, "clickAndwait", "click");
-				GuidewireAutomate("Account Number", TabBC_Policy_PolicyNumber, "clearANDsendKeys", Value);
-				GuidewireAutomate("AccountNumberSearch", TabBC_Policy_PolicyNumber_Search, "clickAndwait", "click");
+				getStaleElement("Policy Number",TabBC_Policy_PolicyNumber);
+				GuidewireAutomate("Policy Number", TabBC_Policy_PolicyNumber, "clearANDsendKeys", Value);
+				GuidewireAutomate("PolicyNumberSearch", TabBC_Policy_PolicyNumber_Search, "clickAndwait", "click");
 				break;
 
 			case "Producer Search" :
@@ -540,10 +569,16 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Funds Tracking", MenuBC_Account_FundsTracking, "clickAndwait", "click");
 				break;
 			case "Payments" :
+				getStaleElement("Payments", MenuBC_Account_Payments);
 				GuidewireAutomate("Payments", MenuBC_Account_Payments, "clickAndwait", "click");
 				break;
 			case "Charges" :
 				GuidewireAutomate("New Email", MenuBC_Account_Charges, "clickAndwait", "click");
+				break;
+			case "Charge Reversal" :
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("New Transaction", MenuBC_Account_Actions_NewTransaction, "moveToElement", "moveToElement");
+				GuidewireAutomate("Charge Reversal", MenuBC_Account_Actions_ChargeReversal, "clickAndwait", "click");
 				break;
 			case "Disbursements" :
 				GuidewireAutomate("Disbursements", MenuBC_Account_Disbursements, "clickAndwait", "click");

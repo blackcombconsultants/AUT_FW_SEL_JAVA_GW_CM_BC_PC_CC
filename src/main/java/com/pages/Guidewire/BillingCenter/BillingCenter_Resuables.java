@@ -35,7 +35,8 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 				GuidewireAutomate("OK", OK_Button, "clickAndwait", "");
 				break;
 			case "Update" :
-				GuidewireAutomate("Update", Update_Button, "clickAndwait", "");
+				getStaleElement("Update", Update_Button);
+				GuidewireAutomate("Update", Update_Button, "clickAndwait", "click");
 				break;
 			case "Cancel" :
 				GuidewireAutomate("Cancel", Cancel_Button, "clickAndwait", "");
@@ -44,6 +45,7 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 				GuidewireAutomate("Back", Back_Button, "clickAndwait", "clickAndwait");
 				break;
 			case "Next" :
+				getStaleElement("Next", Next_Button);
 				GuidewireAutomate("Next", Next_Button, "clickAndwait", "clickAndwait");
 				break;
 			case "Release Lock" :
@@ -102,6 +104,9 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 				break;
 			case "Withdraw Transaction1" :
 				GuidewireAutomate("Withdraw Transaction", WithdrawTransaction_Button, "clickAndwait", "");
+				break;
+			case "Finish" :
+				GuidewireAutomate("Finish", Finish, "clickAndwait", "click");
 				break;
 
 			default :
@@ -487,5 +492,50 @@ public class BillingCenter_Resuables extends SeleniumWebDriver_Commands implemen
 		oExtentTest.log(Status.INFO, "Invoices verification is succesful");
 
 	}
+
+	//Divya
+	//30/03/2022
+	public static void Tab_Bar(String Tab_Bar) throws Throwable {
+		switch (Tab_Bar) {
+			case "Desktop" :
+				GuidewireAutomate("Desktop", TabBar_Desktop, "clickAndwait", "");
+				break;
+			case "My Activities" :
+				GuidewireAutomate("My Activities", TabBar_MyActivities, "clickAndwait", "");
+				break;
+			case "My Approval Requests" :
+				GuidewireAutomate("My Approval Requests", TabBar_MyApprovalRequests, "clickAndwait", "");
+				break;
+			case "My Trouble Tickets" :
+				getStaleElement("Desktop",TabBar_Desktop);
+				GuidewireAutomate("Desktop", TabBar_Desktop, "clickAndwait", "clickAndwait");
+				getStaleElement("My Trouble Tickets",TabBar_MyTroubleTickets);
+				GuidewireAutomate("My Trouble Tickets", TabBar_MyTroubleTickets, "clickAndwait", "clickAndwait");
+				break;
+			case "My Delinquencies" :
+				GuidewireAutomate("My Delinquencies", TabBar_MyDelinquencies, "clickAndwait", "");
+				break;
+			case "Disbursements" :
+				GuidewireAutomate("Disbursements", TabBar_Disbursements, "clickAndwait", "clickAndwait");
+				break;
+			case "Suspense Payments" :
+				getStaleElement("Desktop",TabBar_Desktop);
+				GuidewireAutomate("Desktop", TabBar_Desktop, "clickAndwait", "clickAndwait");
+				GuidewireAutomate("Suspense Payments", TabBar_SuspensePayments, "clickAndwait", "clickAndwait");
+				break;
+			case "My Agency Items" :
+				GuidewireAutomate("My Agency Items", TabBar_MyAgencyItems, "clickAndwait", "");
+				break;
+			case "Held Charges" :
+				GuidewireAutomate("Held Charges", TabBar_HeldCharges, "clickAndwait", "");
+				break;
+
+			default :
+				throw new IOException("No support for Button : " + Tab_Bar);
+		}
+	}
+
+
+
 
 }

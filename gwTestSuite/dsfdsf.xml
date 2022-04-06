@@ -13,10 +13,10 @@
 		name="PersonalAuto ClaimsCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy">
+				name="com.Test.Guidewire.BilllingCenter.GW_BC_ReverseFee">
 				<methods>
 					<include
-						name="AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto_01" />
+						name="ReverseFee" />
 				</methods>
 			</class>	<!-- class -->
 

@@ -120,7 +120,7 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 			StrINTERFACE = System.getProperty("INTERFACE");
 
 			String ptestoutput = pUserdir + "\\test-output\\" + gwAPPLICATION + "\\";
-			pTestDataFilePath = pUserdir + "\\testdata\\PC_" + gwAPPLICATION + ".xlsx";
+			pTestDataFilePath = pUserdir + "\\testdata\\" + gwAPPLICATION + ".xlsx";
 			pScreenshots = pUserdir + "\\test-output\\" + "Screenshots\\";
 			pExtentReport_indexFile = ptestoutput + "extentreports\\index.html";
 			pExtentReport_APPLICATIONFile = ptestoutput + "extentreports\\" + gwAPPLICATION + ".html";
@@ -131,7 +131,7 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 			case "PersonalAuto":
 				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
 				break;
-			case "PC_CommercialAuto":
+			case "CommercialAuto":
 				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
 				break;
 			case "PC_GeneralLiability":
@@ -146,7 +146,7 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 			case "PC_CommercialProperty":
 				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
 				break;
-			case "PC_BusinessOwners":
+			case "BusinessOwners":
 				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
 				break;
 			case "BillingCenter":

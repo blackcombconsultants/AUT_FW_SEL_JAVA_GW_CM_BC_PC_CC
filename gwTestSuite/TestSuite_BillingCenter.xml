@@ -11,9 +11,9 @@
 	name="PersonalAuto BilllingCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.BilllingCenter.GW_BC_Invoice">
+				name="com.Test.Guidewire.BilllingCenter.BC_Disbursement">
 				<methods>
-					<include name="AUT_PA_BC_Invoice_01"/>
+					<include name="BC_Disbursement_Manual"/>
 				</methods>
 			</class>	<!-- class -->
 		</classes>

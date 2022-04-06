@@ -23,11 +23,19 @@ public class BillingCenter_Payments extends SeleniumWebDriver_Commands {
 
 	private static By ADirectBillPayment_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 	private static By Amount = By.xpath("//input[contains(@name,'PaymentDetailsDV-Amount')]");
-	private static By PaymentInstrument = By.xpath("//select[contains(@name,'PaymentDetailsDV-PaymentInstrument')]");
+	private static By PaymentInstrument = By.xpath("//select[contains(@name,'-PaymentInstrument')]");
 	private static By ExecuteWithoutDistribution_button = By
 			.xpath("//div[contains(@id,'ExecuteWithoutDistribution')]//div[@role='button']");
 
 	private static By Payment_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
+
+
+	private static By Amount1 = By.xpath("//input[contains(@name,'NewSuspensePaymentDV-amount')]");
+
+	private static By NewSuspensePayment_Header = By.xpath("//div[@id='NewSuspensePayment-NewSuspensePaymentScreen-0']//div[@class='gw-TitleBar--title']");
+	private static By PaymentDate = By.xpath("//input[contains(@name,'-paymentDate')]");
+	private static By NewPayment = By.xpath("//div[contains(@id,'-NewPayment')]//div[@role='button']");
+
 
 	public static void DirectBillPayments() throws Throwable {
 		try {
@@ -92,4 +100,27 @@ public class BillingCenter_Payments extends SeleniumWebDriver_Commands {
 
 
 		}
+	public static void SuspensePaymentProcess() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("payment",
+					strTestCaseName);
+
+			getStaleElement("New Payment",NewPayment);
+			GuidewireAutomate("New Payment", NewPayment, "click", "click");
+			GuidewireAutomate_Validation("New Suspense Payment", NewSuspensePayment_Header, "equals", "New Suspense Payment");
+			getStaleElement("Payment Date",PaymentDate);
+			GuidewireAutomate("Payment Date", PaymentDate,"sendKeys", lhm_TestCase_Table_Data.get("PaymentDate"));
+			GuidewireAutomate("Amount1", Amount1, "sendKeys", lhm_TestCase_Table_Data.get("Amount"));
+			//GuidewireAutomate("PaymentInstrument", PaymentInstrument, "moveToElement", "moveToElement");
+			GuidewireAutomate("PaymentInstrument", PaymentInstrument, "selectByVisibleText", lhm_TestCase_Table_Data.get("PaymentInstrument"));
+			//GuidewireAutomate_Validation(oWebDriverWait.until(ExpectedConditions.visibilityOf(getElement(PaymentDate)));
+		}catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+
+
+		}
+	}
+
+
 }

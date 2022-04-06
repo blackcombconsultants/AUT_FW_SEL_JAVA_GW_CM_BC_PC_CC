@@ -71,9 +71,9 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 				strTestCaseName);
 
 		try {
-
-			GuidewireAutomate_Validation("Screen Header", Screen_Header, "equals",
-					"Account Disbursement Wizard - Step 1 of 2");
+			getStaleElement("Screen Header", Screen_Header);
+			GuidewireAutomate_Validation("Screen Header", Screen_Header, "contains",
+					"Account Disbursement");
 			GuidewireAutomate_Validation("Account", Account, "equals", lhm_TestCase_Table_Data.get("Account"));
 			GuidewireAutomate_Validation("Account Name", AccountName, "equals",
 					lhm_TestCase_Table_Data.get("AccountName"));
@@ -99,9 +99,9 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 				strTestCaseName);
 	
 		try {
-
-			GuidewireAutomate_Validation("Screen Header", Screen_Header, "equals",
-					"Account Disbursement Wizard - Step 2 of 2");
+            getStaleElement("Screen Header", Screen_Header);
+			GuidewireAutomate_Validation("Screen Header", Screen_Header, "contains",
+					"Account Disbursement Wizard");
 			GuidewireAutomate_Validation("Account Name", Verify_AccountName, "equals",
 					lhm_TestCase_Table_Data.get("AccountName"));
 			GuidewireAutomate_Validation("Account", Verify_Account, "equals", lhm_TestCase_Table_Data.get("Account"));
@@ -133,6 +133,7 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 			switch (Status) {
 			
 			case "Approved" :
+				getStaleElement("Screen Header", Screen_Header);
 				GuidewireAutomate_Validation("Screen Header", Screen_Header, "equals", "Disbursements");
 				GuidewireAutomate_Validation("Status", DisbursementStatus, "equals", lhm_TestCase_Table_Data.get("DisbursementStatus1"));
 				break;
@@ -175,7 +176,7 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 	public static void RunBatch_Disbursement() throws Throwable {
 
 		try {
-
+             getStaleElement("Screen Header", Screen_Header);
 			GuidewireAutomate_Validation("Screen Header", Screen_Header, "equals", "Batch Process Info");
 			GuidewireAutomate("Disbursement Run", DisbursementRun, "clickAndwait", "clickAndwait");
 

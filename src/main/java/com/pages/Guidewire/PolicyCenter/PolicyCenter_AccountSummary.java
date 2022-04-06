@@ -16,7 +16,7 @@ public class PolicyCenter_AccountSummary extends SeleniumWebDriver_Commands impl
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("accountSummary",
 				strTestCaseName);
-
+        getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "contains",
 				"Account Summary");
 
@@ -31,7 +31,7 @@ public class PolicyCenter_AccountSummary extends SeleniumWebDriver_Commands impl
 		 * GuidewireAutomate_Validation("HomeAddress", AS_D_HomeAddress, "equals",
 		 * lhm_TestCase_Table_Data.get("AS_D_HomeAddress"));
 		 */
-		GuidewireAutomate_Validation("Description", AS_D_Description, "contains", strAccountName);
+		//GuidewireAutomate_Validation("Description", AS_D_Description, "contains", strAccountName);
 		GuidewireAutomate_Validation("Status", AS_D_Status, "equals", lhm_TestCase_Table_Data.get("AS_D_Status"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);

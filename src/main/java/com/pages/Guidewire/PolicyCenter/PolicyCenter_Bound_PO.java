@@ -6,9 +6,11 @@ public interface PolicyCenter_Bound_PO {
 	// ------>submission bound xpaths
 	final By SB_ViewYourSubmission                         = By.xpath("//div[contains(@id,'JobCompleteDV-ViewJob')]//div[contains(text(),'View your submission')]");
 	final By SB_ViewYourPolicy                             = By.xpath("//div[contains(@id,'JobCompleteDV-ViewPolicy')]//div[contains(text(),'View your policy')]");
+	final By SB_ViewChangePolicyLink                             = By.xpath("//div[contains(@id,'-ResolveWithFutureUnboundPeriods')]//div[@class='gw-action']");
 	final By Go_to_the_submission_manager_for_this_account = By.xpath("//div[contains(@id,'JobCompleteDV-SubmissionManager')]//div[text()='Go to the submission manager for this account']");
 	final By Submit_an_application_for_a_different_account = By.xpath("//div[contains(@id,'JobCompleteDV-SubmitAnother')]//div[text()='Submit an application for a different account']");
-
+	final By PB_ViewUnboundRenewal = By.xpath("//div[contains(@id,'ResolveWithFutureUnboundPeriods')]//div[@class='gw-action' and contains(text(),'There is a later unbound renewal')]");
+	final By CloseOption = By.xpath("//div[contains(@id,'PreemptionConflictScreen-CloseButton')]");
 	final By GoToYourDesktop    = By.xpath("//div[contains(@id,'JobCompleteDV-ReturnToDesktop')]//div[text()='Go to your desktop']");
 	final By ReviewChanges      = By.xpath("//div[contains(@id,'ReviewChanges')]//div[text()='Review Changes']");
 	final By SB_ViewYourrenewal = By.xpath("//div[contains(@id,'ViewJob')]//div[contains(text(),'View your renewal')]");

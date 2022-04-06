@@ -106,7 +106,7 @@ public class CC_NewClaimWizard extends SeleniumWebDriver_Commands implements CC_
 
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("asBasicInfo");
 
-			String insuredName = ClaimCenter_Resuables.infoBar("InsuredName");
+			//String InsuredName = ClaimCenter_Resuables.infoBar("InsuredName");
 
 			GuidewireAutomate_Validation("Screen Header", NCW_BasicInformation_Header, "equals", "Step 2 of 5: Basic information");
 

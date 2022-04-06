@@ -47,10 +47,10 @@ public class BO_Quote extends SeleniumWebDriver_Commands {
 		
 		  lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Quote", strTestCaseName);
 		 
-
+          getStaleElement("Screen Header", Quote_Header);
 		  GuidewireAutomate_Validation("Screen Header", Quote_Header, "equals", "Quote");
 			
-		  GuidewireAutomate_Validation("SubmissionNumber", QU_SubmissionNumber,"equals", strSubmissionNumber);
+		  //GuidewireAutomate_Validation("SubmissionNumber", QU_SubmissionNumber,"equals", strSubmissionNumber);
 		//GuidewireAutomate_Validation("PolicyPeriod", QU_PolicyPeriod, "contains", lhm_TestCase_Table_Data.get("QU_PolicyPeriod"));
 			 
 		  GuidewireAutomate_Validation("PrimaryNamedInsured", QU_PrimaryNamedInsured, "equals", strAccountName);
@@ -68,12 +68,15 @@ public class BO_Quote extends SeleniumWebDriver_Commands {
 	}
 
 	public static void policyPremium_PremiumSubtotalandTaxes() throws Throwable {
-		try {
-		GuidewireAutomate_Validation("TotalPremium ", QU_TotalPremium, "Contains",
-				lhm_TestCase_Table_Data.get("QU_TotalPremium"));
 
-		GuidewireAutomate_Validation("Taxes", QU_Taxes, "Contains", lhm_TestCase_Table_Data.get("QU_Taxes"));
-		GuidewireAutomate_Validation("QU_TotalCost", QU_TotalCost, "Contains",
+		try {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Quote", strTestCaseName);
+			getStaleElement("TotalPremium ", QU_TotalPremium);
+		GuidewireAutomate_Validation("TotalPremium ", QU_TotalPremium, "contains",
+				lhm_TestCase_Table_Data.get("QU_TotalPremium"));
+		getStaleElement("Taxes", QU_Taxes);
+		GuidewireAutomate_Validation("Taxes", QU_Taxes, "contains", lhm_TestCase_Table_Data.get("QU_Taxes"));
+		GuidewireAutomate_Validation("QU_TotalCost", QU_TotalCost, "contains",
 				lhm_TestCase_Table_Data.get("QU_TotalCost"));
 		}
 		catch (Exception e) {

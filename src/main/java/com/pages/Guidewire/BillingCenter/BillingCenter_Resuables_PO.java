@@ -118,7 +118,8 @@ public interface BillingCenter_Resuables_PO {
 			"//div[@id='gw-center-title-toolbar']//div[contains(@id,'CreateSubmissionQuote')]/div[@role='button']");
 	final By WithdrawTransaction_Button = By
 			.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]");
-
+	final By Finish = By
+			.xpath("//div[@id='CreateTroubleTicketWizard-Finish']");
 	/*
 	 * BillingCenter Menu Options End
 	 * -------------------------------------------------------------------------
@@ -316,5 +317,28 @@ public interface BillingCenter_Resuables_PO {
 	void bc_AccountSummary() throws Throwable;
 
 	void bc_AccountSummary_Invoices() throws Throwable;
+
+
+	//Divya
+	//30-03-2022
+	final By TabBar_Desktop = By
+			.xpath("//div[@id='TabBar-DesktopTab']//div[@class='gw-action--expand-button']");
+	final By TabBar_MyActivities = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopActivities']");
+	final By TabBar_MyApprovalRequests = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopApprovals']");
+	final By TabBar_MyTroubleTickets = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopTroubleTickets']//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabBar_MyDelinquencies = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopDelinquencies']");
+	final By TabBar_Disbursements = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopDisbursements']");
+	final By TabBar_SuspensePayments = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopSuspensePayments']");
+	final By TabBar_MyAgencyItems = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopAgencyItems']");
+	final By TabBar_HeldCharges = By
+			.xpath("//div[@id='TabBar-DesktopTab-DesktopGroup_DesktopHeldCharges']");
+
 
 }

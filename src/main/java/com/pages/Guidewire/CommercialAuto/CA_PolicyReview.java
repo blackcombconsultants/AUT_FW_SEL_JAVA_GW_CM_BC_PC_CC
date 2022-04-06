@@ -1,5 +1,6 @@
 package com.pages.Guidewire.CommercialAuto;
 
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -32,6 +33,25 @@ private static By PolicyDetailsHeader = By.xpath("//div[contains(@id,'PolicyLine
 private static By PolicyDetailsLineLevelCoverages = By.xpath("//div[contains(@id,'PolicyLineSummaryPanelSet')]//div[@class='gw-label gw-boldLabel' and text()='Line-Level Coverages']");
 private static By PolicyDetailsStartCoverage = By.xpath("//div[contains(@id,'CoverageSummaryLV-0-1-term')]//div[@class='gw-value-readonly-wrapper']");
 private static By PolicyDetailsEndCoverage = By.xpath("//div[contains(@id,'CoverageSummaryLV-0-2-term')]//div[@class='gw-value-readonly-wrapper']");
+private	static By Tab_Differences  = By.xpath("//div[contains(@id,'DiffsTab')]");
+private	static By Tab_PolicyReview = By.xpath("//div[contains(@id,'RewriteWizard_DifferencesScreen-PolicyReviewTab')]");
+
+//validate policychange in policyreview
+
+ private static By ExistingPolicyName = By.xpath("//div[contains(@id,'value1Header')]//div[@class='gw-label']");
+private static By PolicyInfo  = By.xpath("//div[contains(@id,'DiffTreePanelLV-0-item')]//div[@class='gw-value-readonly-wrapper']");
+
+	public static void clickTab_PolicyReview(String Tabname) throws Throwable {
+
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PolicyReview_Header, "equals", "Policy Review");
+
+		if (Tabname.equalsIgnoreCase("Differences")) {
+			GuidewireAutomate("Search", Tab_Differences, "clickAndwait", "click");
+		} else if (Tabname.equalsIgnoreCase("Policy Review")) {
+			GuidewireAutomate("Search", Tab_PolicyReview, "clickAndwait", "click");
+		}
+
+	}
 
 public static void PolicyReview() throws Throwable {
 	
@@ -81,6 +101,14 @@ public static void PolicyDetails() throws Throwable {
 	
 	
 	}
+}
+public static void PolicyReviewPolicyChangeValidation() throws Throwable {
+
+         GuidewireAutomate_Validation("ExistingPolicy",ExistingPolicyName,"equals","Existing Policy");
+		 GuidewireAutomate_Validation("Policyinfo",PolicyInfo,"equals","Policy Info");
+
+
+
 }
 
 	

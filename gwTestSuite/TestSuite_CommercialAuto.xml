@@ -13,9 +13,9 @@
 		name="CommercialAuto PolicyCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_CommercialAuto">
+				name="com.Test.Guidewire.PolicyCenter.GW_PC_BO_AmendBillingAndMailingAddress">
 				<methods>
-					<include name="AUT_CA_PC_NewSubmission_NewAccount_NewSubmission" />
+					<include name="VerifyAddressWithAccountScenario" />
 				</methods>
 			</class>	<!-- class -->
 		</classes>	<!-- classes -->

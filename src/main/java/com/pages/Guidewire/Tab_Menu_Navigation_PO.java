@@ -46,7 +46,7 @@ public interface Tab_Menu_Navigation_PO {
 	final By MenuPC_Desktop_Actions_Create_NewAccount = By
 			.xpath("//div[@id='Desktop-DesktopMenuActions-DesktopMenuActions_Create-DesktopMenuActions_NewAccount']");
 	final By MenuPC_Desktop_Actions_Create_NewSubmission = By.xpath(
-			"//div[@id='Desktop-DesktopMenuActions-DesktopMenuActions_Create-DesktopMenuActions_NewSubmission']");
+			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewSubmission']");
 
 	final By MenuPC_Desktop_Summary = By
 			.xpath("//div[@id='Desktop-MenuLinks-Desktop_Underwriter_MySummary']/div[1]/div[text()='Summary']");
@@ -76,13 +76,14 @@ public interface Tab_Menu_Navigation_PO {
 			.xpath("//*[@id='TabBar-AccountTab-AccountTab_AccountNumberSearchItem']/div/input");
 	final By TabPC_Account_AccountNumberSearch = By
 			.xpath("//*[@id='TabBar-AccountTab-AccountTab_AccountNumberSearchItem_Button']/span");
+	final By Tab_Account = By.xpath("//div[@id='TabBar-AccountTab']//div[@role='tab']");
 	/*
 	 * Create
 	 */
 	final By MenuPC_Actions_Create = By.xpath(
 			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create']//div[@role='menuitem']");
 	final By MenuPC_Account_Actions_Create_NewNote = By
-			.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
+			.xpath("//div[contains(@id,'PolicyFileMenuActions_NewNote')]");
 	final By MenuPC_Account_Actions_Create_NewDocument = By.xpath(
 			"//div[@id='AccountFile-AccountFileMenuActions-AccountFileMenuActions_Create-AccountFileMenuActions_NewDocument']");
 	final By MenuPC_Account_Actions_Create_NewEmail = By
@@ -99,11 +100,11 @@ public interface Tab_Menu_Navigation_PO {
 			.xpath("//div[contains(@id,'AccountFileMenuActions_RewritePolicies')]//div[@role='menuitem']");
 	final By MenuPC_Account_Actions_MergeAccountIntoThisAccount = By
 			.xpath("//div[contains(@id,'AccountFileMenuActions_MergeAccounts')]//div[@role='menuitem']");
-
+    final By PreRenewalDirection = By.xpath("//div[contains(@id,'PolicyFileMenuActions_PreRenewalDirection')]");
 	final By MenuPC_Account_Summary = By
 			.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Summary']//div[@class='gw-label']");
 	final By MenuPC_Account_Contacts = By
-			.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Contacts']//div[@class='gw-label']");
+			.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Contacts']//div[@role='menuitem']");
 	final By MenuPC_Account_Locations = By
 			.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Locations']//div[@class='gw-label']");
 	final By MenuPC_Account_Participants = By
@@ -213,6 +214,7 @@ public interface Tab_Menu_Navigation_PO {
 			.xpath("//div[contains(@id,'RewriteFullTerm')]//div[@class='gw-label']");
 	final By MenuPC_Actions_Policy_NewPolicyTransaction_RewriteRemainderOfTerm = By
 			.xpath("//div[contains(@id,'RewriteRemainderOfTerm')]//div[@class='gw-label']");
+	final By MenuPC_Actions_Policy_NewPolicyTransaction_Copysubmission = By.xpath("//div[contains(@id,'PolicyFileMenuActions_CopySubmission')]//div[@role='menuitem']");
 
 	/*
 	 * -------------------------------------------------------------------------
@@ -358,6 +360,10 @@ public interface Tab_Menu_Navigation_PO {
 			.id("AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_NewEmail");
 	final By MenuBC_Account_Actions_NewEmail_NewEmail = By.id("AccountGroup-AccountDetailMenuActions-NewEmail");
 	final By MenuBC_Account_Actions_NewEmail_NewEmailTemplete = By.id("AccountGroup-AccountDetailMenuActions-NewEmail");
+	final By MenuBC_Account_Actions_ChargeReversal = By
+			.xpath("//div[contains(@id,'AccountDetailMenuActions_ChargeReversal')]//div[@role='menuitem']");
+
+
 
 	final By MenuBC_Account_Summary = By.xpath(
 			"//div[@id='AccountGroup-MenuLinks-AccountGroup_AccountOverview-AccountOverview_AccountSummary']//div[@class='gw-label']");
@@ -404,9 +410,9 @@ public interface Tab_Menu_Navigation_PO {
 	final By TabBC_Policy = By.xpath("//div[@id='TabBar-PolicyTab']/div[@class='gw-label']");
 	final By TabBC_Policy_dd = By.xpath("//div[@id='TabBar-PoliciesTab']//div[3]");
 	final By TabBC_Policy_PolicyNumber = By
-			.xpath("//*[@id='TabBar-PolicyTab-PolicyTab_PolicyRetrievalItem']/div/input");
+			.xpath("//input[@name='TabBar-PoliciesTab-PolicyNumberSearchItem']");
 	final By TabBC_Policy_PolicyNumber_Search = By
-			.xpath("//*[@id='TabBar-PolicyTab-PolicyTab_PolicyRetrievalItem_Button']/span");
+			.xpath("//div[@id='TabBar-PoliciesTab-PolicyNumberSearchItem_Button']//span[@class='gw-icon']");
 
 	final By MenuBC_Policy_Summary = By.xpath(
 			"//div[@id='PolicyGroup-MenuLinks-PolicyGroup_PolicyOverview-AccountOverview_AccountSummary']//div[@class='gw-label']");
