@@ -1,771 +1,287 @@
 
 
-
-
-
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Automation Report</title>
-    <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
-    <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
-    <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/css/style.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Automation Report</title>
 
-</style></head><script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
-<body class="test-view -report standard">
-    <div class="app header-dark side-nav-folded">
-        <div class="layout">
-<div class="header navbar">
-    <div class="header-container">
-        <div class="nav-logo">
-          <a href="index.html">
-            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
-            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
-          </a>
-        </div>
-        <ul class="nav-left">
-          <li>
-            <a class="sidenav-fold-toggler" href="javascript:void(0);">
-              <i class="fa fa-bars"></i>
-            </a>
-            <a class="sidenav-expand-toggler" href="javascript:void(0);">
-              <i class="fa fa-bars"></i>
-            </a>
-          </li>
-          <li class="search-box">
-            <a class="search-toggle" href="javascript:void(0);">
-              <i class="search-icon fa fa-search"></i>
-              <i class="search-icon-close fa fa-close"></i>
-            </a>
-          </li>
-          <li class="search-input">
-            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
-          </li>
-        </ul>
-        <ul class="nav-right">
-          <li class="m-r-10">
-            <a href="#">
-              <span class="badge badge-primary">ClaimsCenter</span>
-            </a>
-          </li>
-            <li class="m-r-10">
-                <a href="#">
-                    <span class="badge badge-primary">Jun 8, 2021 02:08:24 PM</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div><div class="side-nav side-nav-folded">
-  <div class="side-nav-inner">
-    <ul class="side-nav-menu scrollable">
-      <li class="nav-item dropdown">
-        <a id="nav-test" class="dropdown-toggle" href="index.html">
-          <span class="icon-holder">
-            <i class="fa fa-align-left"></i>
-          </span>
-          <span class="title">Tests</span>
-        </a>
-      </li>
-            <li class="nav-item dropdown">
-        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
-          <span class="icon-holder">
-            <i class="fa fa-bug"></i>
-          </span>
-          <span class="title">Exception</span>
-        </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
-          <span class="icon-holder">
-            <i class="fa fa-bar-chart"></i>
-          </span>
-          <span class="title">Dashboard</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-            <div class="page-container">
-                <div class="main-content">
-                    <div class="test-wrapper row">
-                        <div class="test-list">
-                            <div class="test-list-tools">
-                                <ul class="tools pull-left">
-                                    <li>
-                                        <a href="">
-                                            <span class="font-size-14">Tests</span>
-                                        </a>
-                                    </li> 
-                                </ul>
-                                <ul class="tools text-right">
-                                    <li class="user-profile dropdown dropdown-animated scale-left">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <i class="fa fa-exclamation-circle"></i>
-                                        </a>
-                                        <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-                                            
-	                                        <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
-	                                        
-	                                        
-	                                        
-	                                        
-	                                        <div class="dropdown-divider"></div>
-                                            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="test-list-wrapper scrollable">
-                                <ul class="test-list-item">
-                                    <li class="test-item"  status="fail" test-id="1"
-                                            author=""
-                                            tag=""
-                                            device="">
-                                        <div class="status-avatar fail-bg">
-                                            <i class="fa fa-times text-white"></i>
-                                        </div>
-                                        <div class="open-test">
-                                            <div class="test-detail"> 
-                                                <p class="name">AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto</p> 
-                                                <p class="duration text-sm">0h 0m 57s+425ms</p> 
-                                                <span class="datetime">14:08:24 PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="test-contents d-none">
-                                            <div class="detail-head">
-                                                <div class="p-v-10 d-inline-block"> 
-                                                    <div class="info">
-                                                        <h5 class="test-status text-fail">AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto</h5>
-                                                        <span class='badge badge-success'>06.08.2021 14:08:24</span>
-                                                        <span class='badge badge-danger'>06.08.2021 14:09:21</span>
-                                                        <span class='badge badge-default'>0h 0m 57s+425ms</span>
-                                                    </div>
-                                                    <div class="m-t-10 m-l-5">
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-<div class="detail-body mt-4">                                              
-<table class="table table-sm">
-	<thead><tr>
-		<th class="status-col">Status</th>
-		<th class="timestamp-col">Timestamp</th>
-		<th class="details-col">Details</th>
-	</tr></thead>
-	<tbody>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:30 PM</td>
-				<td>
-						Appliaction Launched  http://ec2-3-6-92-216.ap-south-1.compute.amazonaws.com:8080/ClaimCenter.do
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:33 PM</td>
-				<td>
-						Username  entered  = su
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:33 PM</td>
-				<td>
-						Password  entered  = gw
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:34 PM</td>
-				<td>
-						clicked Field = Login
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:34 PM</td>
-				<td>
-						Login succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:35 PM</td>
-				<td>
-						clicked Field = Claims Tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:36 PM</td>
-				<td>
-						clicked Field = New Claim
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:36 PM</td>
-				<td>
-						Navigation to New Claim is succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:37 PM</td>
-				<td>
-						Screen Header => Actual = [Step 1: Search or Create Policy] contains Expected = [Search or Create Policy]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:38 PM</td>
-				<td>
-						Policy Number  cleard value and Entered  = 0389028146
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:38 PM</td>
-				<td>
-						clicked Field = Search
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:40 PM</td>
-				<td>
-						LossDate  cleard value and Entered  = 06/08/2021
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:40 PM</td>
-				<td>
-						clicked Field = Type of Claim
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:41 PM</td>
-				<td>
-						clicked Field = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:43 PM</td>
-				<td>
-						Fetched from Info Bar => InsuredName = YZcBFKMQA Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:43 PM</td>
-				<td>
-						Screen Header => Actual = [Step 2 of 5: Basic information] equals Expected = [Step 2 of 5: Basic information]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:44 PM</td>
-				<td>
-						Name  Selected = YZcBFKMQA Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:45 PM</td>
-				<td>
-						clicked Field = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:46 PM</td>
-				<td>
-						addClaimInfoScreen => Actual = [Step 3 of 5: Add claim information] equals Expected = [Step 3 of 5: Add claim information]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:47 PM</td>
-				<td>
-						description  entered  = Collision with bicycle
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:47 PM</td>
-				<td>
-						losscause  Selected = Collision with bicycle
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:48 PM</td>
-				<td>
-						location  Selected = New...
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:48 PM</td>
-				<td>
-						State  Selected = Alaska
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:49 PM</td>
-				<td>
-						clicked Field = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:50 PM</td>
-				<td>
-						Screen Header => Actual = [Step 4 of 5: Services] equals Expected = [Step 4 of 5: Services]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:50 PM</td>
-				<td>
-						clicked Field = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:52 PM</td>
-				<td>
-						Screen Header => Actual = [Step 5 of 5: Save and Assign Claim] equals Expected = [Step 5 of 5: Save and Assign Claim]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:53 PM</td>
-				<td>
-						Clicked = Finish
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:54 PM</td>
-				<td>
-						Screen Header => Actual = [New Claim Saved] equals Expected = [New Claim Saved]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:56 PM</td>
-				<td>
-						Clicked = View the newly saved claim
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:56 PM</td>
-				<td>
-						clicked Field = Actions
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:57 PM</td>
-				<td>
-						clicked Field = Assign Claim
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:58 PM</td>
-				<td>
-						Navigation to Assign Claim is succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:08:58 PM</td>
-				<td>
-						Screen Header => Actual = [Assign] equals Expected = [Assign]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:08:59 PM</td>
-				<td>
-						clicked Field = Assign
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>2:09:00 PM</td>
-				<td>
-						Element not found
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>2:09:00 PM</td>
-				<td>
-						PartiesInvolved =  []
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:00 PM</td>
-				<td>
-						clicked Field = PartiesInvolved
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:02 PM</td>
-				<td>
-						clicked Field = PartiesInvolved
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:02 PM</td>
-				<td>
-						Navigation to Parties Involved Contacts is succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:09:03 PM</td>
-				<td>
-						Screen Header => Actual = [Contacts] equals Expected = [Contacts]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:03 PM</td>
-				<td>
-						clicked Field = NewContact
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:04 PM</td>
-				<td>
-						moveToElement = NewContact Person
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:05 PM</td>
-				<td>
-						clicked Field = Autobody Repair Shop
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:09:06 PM</td>
-				<td>
-						Screen Header => Actual = [New Auto Repair Shop] equals Expected = [New Auto Repair Shop]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:06 PM</td>
-				<td>
-						clicked Field = Add
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:07 PM</td>
-				<td>
-						Role  Selected = Service Vendor
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:08 PM</td>
-				<td>
-						Comments  cleard value and Entered  = New Role
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:09 PM</td>
-				<td>
-						Name  cleard value and Entered  = urhTfrRUx
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:09 PM</td>
-				<td>
-						Address1  cleard value and Entered  = Address1 Alaska Home Address
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:10 PM</td>
-				<td>
-						State  Selected = Alaska
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:11 PM</td>
-				<td>
-						Comments  cleard value and Entered  = 345-34-3490
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:11 PM</td>
-				<td>
-						clicked Field = Update
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:09:13 PM</td>
-				<td>
-						Screen Header => Actual = [Duplicate Contact Found] equals Expected = [Duplicate Contact Found]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>2:09:13 PM</td>
-				<td>
-						Error Message => Actual = [Contact Manager contains entries that matches your new contact. Press "Cancel" if you wish to ignore. Press "Select" to use existing CM contact.] contains Expected = [Contact Manager contains entries that matches your new contact]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>2:09:14 PM</td>
-				<td>
-						clicked Field = Cancel
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>2:09:21 PM</td>
-				<td>
-						Actions =  []
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>2:09:21 PM</td>
-				<td>
-						<span class='badge white-text red'>AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto Test Case Failed</span>
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>2:09:21 PM</td>
-				<td>
-						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@id,'MenuActions')]/div[@role='button']/div[2] (tried for 7 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.getElement(SeleniumWebDriver_Commands.java:56)
-	at com.Utils.Selenium.SeleniumWebDriver_Commands.GuidewireAutomate(SeleniumWebDriver_Commands.java:148)
-	at com.pages.Guidewire.GW_CM_PC_BC_CC_TabNavigation.ccMenuNavigation(GW_CM_PC_BC_CC_TabNavigation.java:993)
-	at com.Test.Guidewire.ClaimsCenter.GW_CC_FNOL_VerifiedPolicy.AUT_PA_CC_FNOL_VerifiedPolicy_Newclaim_Auto(GW_CC_FNOL_VerifiedPolicy.java:74)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@id,'MenuActions')]/div[@role='button']/div[2]"}
-  (Session info: chrome=91.0.4472.77)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'JMD', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63888}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 04beca4e5d35e4a3ceb35bb69fd2ad73
-*** Element info: {Using=xpath, value=//div[contains(@id,'MenuActions')]/div[@role='button']/div[2]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at com.sun.proxy.$Proxy5.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-</textarea>
-				</td>
-			</tr>
-	</tbody>
-</table>
-</div>
-<div class="detail-foot">
-	<ul class="attachments">
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140834.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140834.jpeg</span>
-					<span class="file-size"> 39,799Kb</span>
-				</div>
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ClaimsCenter</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Mar 22, 2022 10:52:08 AM</span>
 			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140834.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
 				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140834.jpeg</span>
-					<span class="file-size"> 39,799Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140836.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140836.jpeg</span>
-					<span class="file-size"> 63,171Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140836.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140836.jpeg</span>
-					<span class="file-size"> 63,171Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140857.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140857.jpeg</span>
-					<span class="file-size"> 129,835Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140857.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140857.jpeg</span>
-					<span class="file-size"> 129,835Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140902.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140902.jpeg</span>
-					<span class="file-size"> 99,108Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140902.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140902.jpeg</span>
-					<span class="file-size"> 99,108Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140921.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140921.jpeg</span>
-					<span class="file-size"> 126,152Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\08June2021 140921.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">08June2021 140921.jpeg</span>
-					<span class="file-size"> 126,152Kb</span>
-				</div>
-			</a>
-		</li>
-	</ul>
-</div>
-                                        </div>
-                                    </li>
-                                </ul>    
-                            </div>
-                        </div>
-                        <div class="test-content scrollable">
-                            <div class="test-content-tools">
-                                <ul>
-                                    <li>
-                                        <a class="back-to-test" href="javascript:void(0)">
-                                            <i class="fa fa-arrow-left"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="test-content-detail">
-                                <div class="detail-body"></div>
-                            </div>
-                        </div>
-                    </div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
     </div>
-<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/js/script.js"></script>
-</body>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>PA_CC_FNOL_VerifiedPolicy</span>
+						<span class='test-time'>Mar 22, 2022 10:52:08 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 22, 2022 10:52:08 AM</span>
+	<span class='label end-time'>Mar 22, 2022 10:57:27 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 18s+911ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:57:27 AM</td>
+				<td class='step-details'>
+						Username =  [su]
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\CIG\test-output\Screenshots\22March2022 105727.jpeg' src='D:\CIG\test-output\Screenshots\22March2022 105727.jpeg' data-src='D:\CIG\test-output\Screenshots\22March2022 105727.jpeg'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\CIG\test-output\Screenshots\22March2022 105727.jpeg' src='D:\CIG\test-output\Screenshots\22March2022 105727.jpeg' data-src='D:\CIG\test-output\Screenshots\22March2022 105727.jpeg'></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 22, 2022 10:52:08 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 22, 2022 10:57:28 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 5m 19s+585ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Executed on OS: </td>
+								<td>Windows 10</td>
+							</tr>
+							<tr>
+								<td>Executed by User: </td>
+								<td>Shanta</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "PA_CC_FNOL_VerifiedPolicy":318.911
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
 </html>
