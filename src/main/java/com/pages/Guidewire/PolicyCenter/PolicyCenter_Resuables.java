@@ -746,8 +746,8 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("ChangePolicy", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header",StartPolicyChange,"equals","Start Policy Change");
-//		getStaleElement("EffectiveDate",EffectiveDate);
-//		GuidewireAutomate("EffectiveDate",EffectiveDate,"clearANDsendKeys",lhm_TestCase_Table_Data.get("Effective Date"));
+		getStaleElement("EffectiveDate",EffectiveDate);
+		GuidewireAutomate("EffectiveDate",EffectiveDate,"clearANDsendKeys",lhm_TestCase_Table_Data.get("Effective Date"));
 		getStaleElement("EffectiveDate",EffectiveDate);
 		GuidewireAutomate("EffectiveDate",EffectiveDate,"clearANDsendKeys",lhm_TestCase_Table_Data.get("Effective Date"));
 		getStaleElement("EffectiveDate",EffectiveDate);

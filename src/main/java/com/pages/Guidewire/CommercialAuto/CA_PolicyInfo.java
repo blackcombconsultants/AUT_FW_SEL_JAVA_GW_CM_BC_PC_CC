@@ -134,9 +134,25 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 				strTestCaseName);
 
 		try {
-			
-			GuidewireAutomate_Validation("Primary Named Insured", PrimaryNamedInsured_Name, "equals", strAccountName);
 
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+					"Policy Info");
+
+			GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals", strAccountName);
+
+			GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "equals",
+					lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
+
+			GuidewireAutomate_Validation("Policy Address",
+					PrimaryNamedInsured_PolicyAddress, "contains",
+					lhm_TestCase_Table_Data.get("PrimaryNI_PolicyAddress"));
+
+			GuidewireAutomate_Validation("County", PrimaryNamedInsured_County, "equals",
+					lhm_TestCase_Table_Data.get("PrimaryNI_County"));
+			GuidewireAutomate_Validation("Address Type", PrimaryNamedInsured_AddressType, "equals",
+					lhm_TestCase_Table_Data.get("PrimaryNI_AddressType"));
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
 			
 			
 			 
