@@ -13,9 +13,9 @@
 		name="CommercialAuto PolicyCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_CA_ApplyEndoresementToRenewal">
+				name="com.Test.Guidewire.CommercialAuto.GW_PC_CA_ReinstatePolicy">
 				<methods>
-					<include name="AUT_CA_PC_ApplyEndorsementTORenewal" />
+					<include name="AUT_CA_PC_CommercialAuto_Reinstatement" />
 				</methods>
 			</class>	<!-- class -->
 		</classes>	<!-- classes -->

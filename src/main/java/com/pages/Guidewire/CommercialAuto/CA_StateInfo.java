@@ -42,8 +42,7 @@ public class CA_StateInfo extends SeleniumWebDriver_Commands {
 
 	public static void Stateinfo() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CA_StateInfo",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CA_StateInfo");
 
 			GuidewireAutomate_Validation("State Info Header", SateInfoHeader, "equals", "State Info");
 			GuidewireAutomate_Validation("State", StateInfoState, "equals", lhm_TestCase_Table_Data.get("CA_State"));
@@ -101,8 +100,7 @@ public class CA_StateInfo extends SeleniumWebDriver_Commands {
 	
 	public static void StateinfoStateRating() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CA_StateInfo",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CA_StateInfo");
 			GuidewireAutomate_Validation("State Rating", StateRating, "equals", "State Rating");
 			GuidewireAutomate("State Rating Button", StateRating, "clickAndwait", "clickAndwait");
 			

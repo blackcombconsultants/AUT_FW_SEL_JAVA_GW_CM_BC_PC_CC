@@ -1,6 +1,5 @@
-package com.Test.Guidewire.PolicyCenter;
+package com.Test.Guidewire.InlandMarine;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
@@ -24,9 +23,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
 
-import junit.framework.Assert;
-
-public class GW_PC_InlineMarine_Submission extends GW_GetDriver {
+public class GW_PC_IM_Submission extends GW_GetDriver {
 	
 	@JiraPolicy(logTicketReady = true)
 	@Test

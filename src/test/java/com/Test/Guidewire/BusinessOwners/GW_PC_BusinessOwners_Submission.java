@@ -1,4 +1,4 @@
-package com.Test.Guidewire.PolicyCenter;
+package com.Test.Guidewire.BusinessOwners;
 
 import org.testng.annotations.Test;
 

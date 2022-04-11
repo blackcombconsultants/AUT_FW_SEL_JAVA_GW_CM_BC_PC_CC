@@ -64,7 +64,7 @@ public class CA_Quote extends SeleniumWebDriver_Commands {
 
 	public static void policyPremium_PremiumSubtotalandTaxes() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Quote", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("Quote");
 			getStaleElement("Screen Header", Quote_Header);
 			GuidewireAutomate_Validation("Screen Header", Quote_Header, "equals", "Quote");
 		    getStaleElement("TotalPremium ", QU_TotalPremium);

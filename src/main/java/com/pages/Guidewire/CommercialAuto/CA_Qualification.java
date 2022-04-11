@@ -58,8 +58,7 @@ public class CA_Qualification extends SeleniumWebDriver_Commands {
 	public static void qualification() throws Throwable {
 
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("qualification",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("qualification");
 
 			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Qualification_Header, "equals",
 					"Qualification");
