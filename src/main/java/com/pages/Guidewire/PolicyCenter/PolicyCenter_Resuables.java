@@ -655,6 +655,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 	public static void NonRenewalDataEntry() throws Throwable{
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("NonRenewalDataEntry", strTestCaseName);
+		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Non-Renewal Data Entry");
 		GuidewireAutomate_Validation("ElementHeader",NonRenewReasonHeader,"equals","Non-Renew Reason");
 		GuidewireAutomate("NonRenewReason",NonRenewReason,"selectByVisibleTextAndwait",lhm_TestCase_Table_Data.get("Non-Renew Reason"));
@@ -746,8 +747,6 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("ChangePolicy", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header",StartPolicyChange,"equals","Start Policy Change");
-		getStaleElement("EffectiveDate",EffectiveDate);
-		GuidewireAutomate("EffectiveDate",EffectiveDate,"clearANDsendKeys",lhm_TestCase_Table_Data.get("Effective Date"));
 		getStaleElement("EffectiveDate",EffectiveDate);
 		GuidewireAutomate("EffectiveDate",EffectiveDate,"clearANDsendKeys",lhm_TestCase_Table_Data.get("Effective Date"));
 		getStaleElement("EffectiveDate",EffectiveDate);

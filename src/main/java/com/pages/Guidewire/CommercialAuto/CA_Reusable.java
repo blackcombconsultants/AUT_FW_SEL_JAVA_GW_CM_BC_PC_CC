@@ -2,6 +2,8 @@ package com.pages.Guidewire.CommercialAuto;
 
 import java.io.IOException;
 
+import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
+import com.pages.Guidewire.PersonalAuto.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -115,89 +117,299 @@ public class CA_Reusable extends SeleniumWebDriver_Commands {
 	/*
 	Name:shanta
 	 */
-	public static void CA_NewSubmission(String LOB) throws Throwable {
-		try {
 
-			switch (LOB) {
-				case "CA_NewSubmission":
-					Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
-					PolicyCenter_Account.createPersonAccount();
-					PolicyCenter_AccountSummary.detail_Verify();
-					Tab_Menu_Navigation.pcMenuNavigation("New Submission");
-					PolicyCenter_Resuables.newSubmissions_Verify();
-					CA_Reusable.newSubmission_SelectLOB_CommercialAuto();// select
-					// LOB
+	public static void SubmissionProcess(String Account, String Job) throws Throwable {
 
-					strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
-					strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
-					strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
+		String strEditLock;
 
+		switch (Account) {
+			case "New Account" :
+				Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
+				PolicyCenter_Account.createPersonAccount();
+				PolicyCenter_AccountSummary.detail_Verify();
 
-					PolicyCenter_Resuables.offering();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_Qualification.qualification();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_PolicyInfo.dateQuoteNeeded();
-					CA_PolicyInfo.primaryNamedInsured();
-					CA_PolicyInfo.policyAddress();
-					CA_PolicyInfo.OfficialID();
-					CA_PolicyInfo.OrganizationType();
-					CA_PolicyInfo.policyDetails();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_CommercialAutoLine.coverages_Product();
-					CA_CommercialAutoLine.coverages_Fleet();
-					CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_Locations.Location();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_Vehicles.VehicleInformation();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_StateInfo.Stateinfo();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_Drivers.Driver();
-					CA_Drivers.DriverDetails();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_CoveredVehicles.CoveredVehicles();
-					PolicyCenter_Resuables.clickButton("Next");
-					Thread.sleep(2000);
-					CA_Modifiers.Modifiers();
-					PolicyCenter_Resuables.clickButton("Next");
-					Thread.sleep(2000);
-					CA_RiskAnalysis.RiskAnalysis();
-					PolicyCenter_Resuables.clickButton("Next");
-					CA_PolicyReview.PolicyReview();
-					CA_PolicyReview.PolicyDetails();
-					PolicyCenter_Resuables.clickButton("Quote");
-					CA_Reusable.CaValidationError();
-					CA_Reusable.caMenuNavigation("Commercial Auto Line");
-					CA_Reusable.CaValidationError();
-					PolicyCenter_Resuables.clickButton("Quote");
-					Thread.sleep(2000);
-					CA_Quote.quoteDetails();
+				break;
+			case "New Company Account" :
+				Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
+				PolicyCenter_Account.createCompanyAccount();
+				PolicyCenter_AccountSummary.detail_Verify();
 
-					PolicyCenter_Resuables.clickButton("Bind Options");
-					PolicyCenter_Resuables.clickButton("Issue Policy");
-					strJob = PolicyCenter_Resuables.infoBar("Job");
-					strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
+				break;
 
-					PolicyCenter_Bound.ViewYourPolicy();
-					PolicyCenter_PolicySummary.detail_Verify();
-					PolicyCenter_PolicySummary.account_Verify();
-					break;
-				default:
-					throw new IOException("No support for Menu : " + LOB);
-			}
-			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
-			oExtentTest.log(Status.INFO, "Navigation to Commercial Auto Menu = " + LOB + " is Succesful");
-		} catch (Exception e) {
+			case "Account Search" :
+				PolicyCenter_Resuables.pcTabNavigation_Acct_Search();
+				PolicyCenter_AccountSummary.detail_Verify();
 
-			e.printStackTrace();
-			throw e;
+				break;
+			case "Rewrite" :
+
+				break;
+
+			default :
+				throw new IOException("No support for Account : " + Account);
 		}
-			}
+
+		switch (Job) {
+			case "Save Draft" :
+
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
+				PolicyCenter_Resuables.newSubmissions_Verify();
+				CA_Reusable.newSubmission_SelectLOB_CommercialAuto();// select
+				// LOB
+
+				strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
 
 
-			public static void CaValidationError() throws Throwable {
+				PolicyCenter_Resuables.offering();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Qualification.qualification();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyInfo.dateQuoteNeeded();
+				CA_PolicyInfo.primaryNamedInsured();
+				CA_PolicyInfo.policyAddress();
+				CA_PolicyInfo.OfficialID();
+				CA_PolicyInfo.OrganizationType();
+				CA_PolicyInfo.policyDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CommercialAutoLine.coverages_Product();
+				CA_CommercialAutoLine.coverages_Fleet();
+				CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Locations.Location();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Vehicles.VehicleInformation();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_StateInfo.Stateinfo();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Drivers.Driver();
+				CA_Drivers.DriverDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CoveredVehicles.CoveredVehicles();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_Modifiers.Modifiers();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_RiskAnalysis.RiskAnalysis();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyReview.PolicyReview();
+				CA_PolicyReview.PolicyDetails();
+				PolicyCenter_Resuables.clickButton("Quote");
+				CA_Reusable.CaValidationError();
+				CA_Reusable.caMenuNavigation("Commercial Auto Line");
+				CA_Reusable.CaValidationError();
+				PolicyCenter_Resuables.clickButton("Quote");
+				Thread.sleep(2000);
+				CA_Quote.quoteDetails();
+
+				PolicyCenter_Resuables.clickButton("Save Draft");
+
+				strJob = PolicyCenter_Resuables.infoBar("Job");
+				strLOB = PolicyCenter_Resuables.infoBar("LOB");
+				strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
+				strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strUnderwriter = PolicyCenter_Resuables.infoBar("Underwriter");
+
+				break;
+
+			case "Quote" :
+
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
+				PolicyCenter_Resuables.newSubmissions_Verify();
+				CA_Reusable.newSubmission_SelectLOB_CommercialAuto();// select
+				// LOB
+
+				strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
+
+
+				PolicyCenter_Resuables.offering();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Qualification.qualification();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyInfo.dateQuoteNeeded();
+				CA_PolicyInfo.primaryNamedInsured();
+				CA_PolicyInfo.policyAddress();
+				CA_PolicyInfo.OfficialID();
+				CA_PolicyInfo.OrganizationType();
+				CA_PolicyInfo.policyDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CommercialAutoLine.coverages_Product();
+				CA_CommercialAutoLine.coverages_Fleet();
+				CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Locations.Location();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Vehicles.VehicleInformation();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_StateInfo.Stateinfo();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Drivers.Driver();
+				CA_Drivers.DriverDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CoveredVehicles.CoveredVehicles();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_Modifiers.Modifiers();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_RiskAnalysis.RiskAnalysis();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyReview.PolicyReview();
+				CA_PolicyReview.PolicyDetails();
+				PolicyCenter_Resuables.clickButton("Quote");
+				CA_Reusable.CaValidationError();
+				CA_Reusable.caMenuNavigation("Commercial Auto Line");
+				CA_Reusable.CaValidationError();
+				PolicyCenter_Resuables.clickButton("Quote");
+				Thread.sleep(2000);
+				CA_Quote.quoteDetails();
+				break;
+
+			case "Bind Only" :
+
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
+				PolicyCenter_Resuables.newSubmissions_Verify();
+				CA_Reusable.newSubmission_SelectLOB_CommercialAuto();// select
+				// LOB
+
+				strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
+
+
+				PolicyCenter_Resuables.offering();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Qualification.qualification();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyInfo.dateQuoteNeeded();
+				CA_PolicyInfo.primaryNamedInsured();
+				CA_PolicyInfo.policyAddress();
+				CA_PolicyInfo.OfficialID();
+				CA_PolicyInfo.OrganizationType();
+				CA_PolicyInfo.policyDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CommercialAutoLine.coverages_Product();
+				CA_CommercialAutoLine.coverages_Fleet();
+				CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Locations.Location();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Vehicles.VehicleInformation();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_StateInfo.Stateinfo();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Drivers.Driver();
+				CA_Drivers.DriverDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CoveredVehicles.CoveredVehicles();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_Modifiers.Modifiers();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_RiskAnalysis.RiskAnalysis();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyReview.PolicyReview();
+				CA_PolicyReview.PolicyDetails();
+				PolicyCenter_Resuables.clickButton("Quote");
+				CA_Reusable.CaValidationError();
+				CA_Reusable.caMenuNavigation("Commercial Auto Line");
+				CA_Reusable.CaValidationError();
+				PolicyCenter_Resuables.clickButton("Quote");
+				Thread.sleep(2000);
+				CA_Quote.quoteDetails();
+
+				PolicyCenter_Resuables.clickButton("Bind Options");
+				PolicyCenter_Resuables.clickButton("Bind Only");
+				strJob = PolicyCenter_Resuables.infoBar("Job");
+				strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
+
+				PolicyCenter_Bound.ViewYourPolicy();
+				PolicyCenter_PolicySummary.detail_Verify();
+				PolicyCenter_PolicySummary.account_Verify();
+				break;
+
+			case "Issue Policy" :
+
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
+				PolicyCenter_Resuables.newSubmissions_Verify();
+				CA_Reusable.newSubmission_SelectLOB_CommercialAuto();// select
+				// LOB
+
+				strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
+
+
+				PolicyCenter_Resuables.offering();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Qualification.qualification();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyInfo.dateQuoteNeeded();
+				CA_PolicyInfo.primaryNamedInsured();
+				CA_PolicyInfo.policyAddress();
+				CA_PolicyInfo.OfficialID();
+				CA_PolicyInfo.OrganizationType();
+				CA_PolicyInfo.policyDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CommercialAutoLine.coverages_Product();
+				CA_CommercialAutoLine.coverages_Fleet();
+				CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Locations.Location();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Vehicles.VehicleInformation();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_StateInfo.Stateinfo();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_Drivers.Driver();
+				CA_Drivers.DriverDetails();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_CoveredVehicles.CoveredVehicles();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_Modifiers.Modifiers();
+				PolicyCenter_Resuables.clickButton("Next");
+				Thread.sleep(2000);
+				CA_RiskAnalysis.RiskAnalysis();
+				PolicyCenter_Resuables.clickButton("Next");
+				CA_PolicyReview.PolicyReview();
+				CA_PolicyReview.PolicyDetails();
+				PolicyCenter_Resuables.clickButton("Quote");
+				CA_Reusable.CaValidationError();
+				CA_Reusable.caMenuNavigation("Commercial Auto Line");
+				CA_Reusable.CaValidationError();
+				PolicyCenter_Resuables.clickButton("Quote");
+				Thread.sleep(2000);
+				CA_Quote.quoteDetails();
+
+				PolicyCenter_Resuables.clickButton("Bind Options");
+				PolicyCenter_Resuables.clickButton("Issue Policy");
+				strJob = PolicyCenter_Resuables.infoBar("Job");
+				strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
+
+				PolicyCenter_Bound.ViewYourPolicy();
+				PolicyCenter_PolicySummary.detail_Verify();
+				PolicyCenter_PolicySummary.account_Verify();
+
+				break;
+
+			case "Rewrite" :
+
+				break;
+
+			default :
+				throw new IOException("No support for Job : " + Job);
+		}
+
+	}
+
+	public static void CaValidationError() throws Throwable {
 		try {
 			GuidewireAutomate_Validation("Validation Error Header", ValidationErrorHeader, "equals", "Validation Results");
 			GuidewireAutomate("Clear Button", ClearButton, "clickAndwait", "clickAndwait");

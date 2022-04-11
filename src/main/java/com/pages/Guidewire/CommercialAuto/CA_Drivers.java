@@ -52,8 +52,7 @@ public static void Driver() throws Throwable {
 public static void DriverDetails() throws Throwable {
 	
 	try {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CA_DriverDetails",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CA_DriverDetails");
 		
 		GuidewireAutomate_Validation("Driver Details Header", DriverDetailsHeader, "equals", "Driver Details");
 		GuidewireAutomate_Validation("Driver Information", DriverInformationSection, "equals", "Driver Information");

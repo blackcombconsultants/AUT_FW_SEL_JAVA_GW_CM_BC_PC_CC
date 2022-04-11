@@ -12,7 +12,7 @@
 		name="ClaimsCenter Smoke Test">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_BusinessOwners_Submission">
+				name="com.Test.Guidewire.BusinessOwners.GW_PC_BusinessOwners_Submission">
 				<methods>
 
 					<include
