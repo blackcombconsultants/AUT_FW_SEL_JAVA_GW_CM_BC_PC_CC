@@ -44,8 +44,7 @@ public class CA_Vehicles extends SeleniumWebDriver_Commands {
 
 	try {
 		
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CA_VehicleInformation",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CA_VehicleInformation");
 		
 		GuidewireAutomate_Validation("Vehicles Heading", VehiclesHeader, "equals", "Vehicles");
 		GuidewireAutomate("Create Vehicle Button", CreateVehicle, "clickAndwait", "clickAndwait");

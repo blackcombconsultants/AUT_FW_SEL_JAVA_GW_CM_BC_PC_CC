@@ -64,6 +64,7 @@ public class GW_Base {
 	public static String pTestDataFile_ClaimsCenter = pUserdir + "\\testdata\\ClaimsCenter.xlsx";
 	public static String pTestDataFile_BillingCenter = pUserdir + "\\testdata\\BillingCenter.xlsx";
 	public static String pTestDataFile_PersonalAuto = pUserdir + "\\testdata\\PC_PersonalAuto.xlsx";
+	public static String pTestDataFile_CommercialAuto = pUserdir + "\\testdata\\CommercialAuto.xlsx";
 	public static String pFile_TestBreakTracker     = pUserdir + "\\testdata\\TestBreakTracker.xlsx";
 
 	public static LinkedHashMap<String, String> lhm_TestCase_Data       = new LinkedHashMap<String, String>();

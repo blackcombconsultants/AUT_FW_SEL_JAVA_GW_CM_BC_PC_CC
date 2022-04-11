@@ -56,8 +56,7 @@ private static By PolicyInfo  = By.xpath("//div[contains(@id,'DiffTreePanelLV-0-
 public static void PolicyReview() throws Throwable {
 	
 	try {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicyReview",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("PolicyReview");
 		
 		GuidewireAutomate_Validation("Policy Review Header", PolicyReviewHeader, "equals", "Policy Review");
 		GuidewireAutomate_Validation("Primary Named Insured Section", PrimaryNamedInsuredSection, "equals", "Primary Named Insured");	
@@ -86,13 +85,12 @@ public static void PolicyReview() throws Throwable {
 public static void PolicyDetails() throws Throwable {
 	
 	try {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicyReview",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("PolicyReview");
 		
 		GuidewireAutomate_Validation("Policy Details Header", PolicyDetailsHeader, "equals", "Policy Details");
 		GuidewireAutomate_Validation("Line Level Coverages Section", PolicyDetailsLineLevelCoverages, "equals", "Line-Level Coverages");
-		GuidewireAutomate_Validation("Start Coverage", PolicyDetailsStartCoverage, "equals", lhm_TestCase_Table_Data.get("CA_EffectiveDate"));
-		GuidewireAutomate_Validation("End Coverage", PolicyDetailsEndCoverage, "equals", lhm_TestCase_Table_Data.get("CA_ExpirationeDate"));
+		//GuidewireAutomate_Validation("Start Coverage", PolicyDetailsStartCoverage, "equals", lhm_TestCase_Table_Data.get("CA_EffectiveDate"));
+		//GuidewireAutomate_Validation("End Coverage", PolicyDetailsEndCoverage, "equals", lhm_TestCase_Table_Data.get("CA_ExpirationeDate"));
 		
 	}
 	catch (Exception e) {

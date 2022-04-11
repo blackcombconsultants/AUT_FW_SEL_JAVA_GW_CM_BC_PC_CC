@@ -13,7 +13,7 @@
 		name="CommercialProperty PolicyCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_CommercialProperty_Submission">
+				name="com.Test.Guidewire.CommercialProperty.GW_PC_CP_Submission">
 				<methods>
 					<include name="AUT_CommercialProperty_NewSubmission" />
 				</methods>

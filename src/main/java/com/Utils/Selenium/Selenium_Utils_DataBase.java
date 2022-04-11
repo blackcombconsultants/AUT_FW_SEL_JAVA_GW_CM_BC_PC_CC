@@ -207,6 +207,22 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 		oConnection.close();
 		
 	}
+	public static LinkedHashMap<String, String> getData_CommercialAuto(String strTable) throws Throwable {
 
+		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
+		oConnection = getConnection("Fillo", pTestDataFile_CommercialAuto);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static void UpdateData_CommercialAuto(String strTable, String strcolumn, String strValue) throws Throwable {
+
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
+		System.out.println(strUpdateQuery);
+		oConnection = getConnection("Fillo", pTestDataFile_CommercialAuto);
+		oConnection.executeUpdate(strUpdateQuery);
+		oConnection.close();
+
+	}
 
 }

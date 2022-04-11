@@ -47,8 +47,7 @@ private static By LI_TerritoryCodeforGeneralLiabilityLine = By.xpath("//input[co
 
 public static void Location() throws Throwable{
 	try {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Locations",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("Locations");
 		
 		GuidewireAutomate_Validation("Location Heading", LocationsHeading, "equals", "Locations");
 		GuidewireAutomate_Validation("NonSpecificLocation", L_D_NonSpecificLocation, "equals", lhm_TestCase_Table_Data.get("L_D_NonSpecificLocation"));
@@ -73,8 +72,7 @@ public static void Location() throws Throwable{
 }
 public static void NewLocation() throws Throwable{
 	try {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Locations",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("Locations");
 		
 		GuidewireAutomate("New Location", NewLocationButton, "clickAndwait", "clickAndwait");
 		/*

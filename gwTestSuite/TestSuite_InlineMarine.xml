@@ -14,7 +14,7 @@
 		name="PersonalAuto PC NewSubmission Regression Test">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_InlineMarine_Submission">
+				name="com.Test.Guidewire.InlandMarine.GW_PC_IM_Submission">
 				<methods>
 					<include
 						name="AUT_IM_PC_NewSubmission_NewAccount_NewSubmission"/>

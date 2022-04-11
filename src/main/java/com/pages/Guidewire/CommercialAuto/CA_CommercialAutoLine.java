@@ -140,8 +140,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	public static void coverages_Product() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CommercialAutoLine",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CommercialAutoLine");
 
 			GuidewireAutomate_Validation("Screen Header", Header, "equals", "Commercial Auto Line");
 			GuidewireAutomate_Validation("Coverages Title", Coverages, "equals", "Coverages");
@@ -161,8 +160,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	public static void coverages_Fleet() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CommercialAutoLine",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CommercialAutoLine");
 			GuidewireAutomate_Validation("Fleet Section", CoveragesFleetSection, "equals", "Fleet");
 			GuidewireAutomate("Fleet", CoveragesFleet, "selectByVisibleText", lhm_TestCase_Table_Data.get("CAL_Fleet"));
 
@@ -178,8 +176,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	public static void coverages_SeasonalTrailerLiability() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CommercialAutoLine",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CommercialAutoLine");
 			
 			GuidewireAutomate_Validation("Commercial Auto Owned Liability Group Header",
 					CommercialAutoOwnedLiabilityGroup, "equals", "Commercial Auto Owned Liability Group");
@@ -227,8 +224,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	public static void coverages_HiredAutoLiability() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CommercialAutoLine",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CommercialAutoLine");
 
 			GuidewireAutomate("Hired Auto Liability", CommercialAutoHiredAutoGroup_HiredAutoLiability, "clickAndwait",
 					"clickAndwait");
@@ -247,8 +243,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	public static void coverages_HiredAutoCollision() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CommercialAutoLine",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CommercialAutoLine");
 
 			GuidewireAutomate("Hired Auto Collision", CommercialAutoHiredAutoGroup_HiredAutoCollision, "clickAndwait",
 					"clickAndwait");
@@ -268,8 +263,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	public static void coverages_HiredAutoComprehensive() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CommercialAutoLine",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CommercialAutoLine");
 
 			GuidewireAutomate("Hired Auto Comprehensive", CommercialAutoHiredAutoGroup_HiredAutoComprehensive,
 					"clickAndwait", "clickAndwait");
@@ -289,8 +283,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	public static void coverages_HiredAutoSpecifiedCausesOfLoss() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("CommercialAutoLine",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("CommercialAutoLine");
 
 			GuidewireAutomate("Hired Auto Specified Causes of Loss",
 					CommercialAutoHiredAutoGroup_HiredAutoSpecifiedCausesOfLoss, "clickAndwait", "clickAndwait");
