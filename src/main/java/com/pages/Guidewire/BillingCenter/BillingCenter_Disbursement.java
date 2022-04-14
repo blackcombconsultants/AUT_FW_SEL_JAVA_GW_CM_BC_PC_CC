@@ -67,8 +67,7 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 
 	public static void NewTransaction_Disbursement() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Disbursement",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Disbursement");
 
 		try {
 			getStaleElement("Screen Header", Screen_Header);
@@ -95,8 +94,7 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 
 	public static void Verify_Disbursement() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Disbursement",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Disbursement");
 	
 		try {
             getStaleElement("Screen Header", Screen_Header);
@@ -126,8 +124,7 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 	}
 	public static void Disbursement_Status(String Status) throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Disbursement",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Disbursement");
 	
 		try {
 			switch (Status) {
@@ -152,8 +149,7 @@ private static By Screen_Header = By.xpath("//div[@class='gw-TitleBar--title' an
 
 	}
 	public static void Disbursement_DateModify() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Disbursement",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Disbursement");
 		
 		try {
 

@@ -16,7 +16,7 @@ public class GW_BC_Invoice extends GW_GetDriver {
 	@Test
 	public void AUT_PA_BC_Invoice_01() throws Throwable {
 
-		GW_CM_PC_BC_CC_Login.login_BillingCenter();
+		BillingCenter_Resuables.login_BillingCenter_User("SuperUser");
 
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 		Tab_Menu_Navigation.bcMenuNavigation("New Direct Bill Payment");
@@ -37,7 +37,7 @@ public class GW_BC_Invoice extends GW_GetDriver {
 		// BillingCenter_Invoices.Invoices_InvoiceItems();
 		// BillingCenter_PolicySummary.PolicySummary_Overview();
 
-		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
+		BillingCenter_Resuables.logout_BillingCenter();
 
 	}
 

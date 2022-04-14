@@ -14,7 +14,7 @@ public class Test_Payment extends GW_GetDriver {
 
 	public void AUT_BC_Payment() throws Throwable {
 		// Login
-		GW_CM_PC_BC_CC_Login.login_BillingCenter();
+		BillingCenter_Resuables.login_BillingCenter_User("SuperUser");
 		// Account Search
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 		// INVOICES
@@ -30,7 +30,7 @@ public class Test_Payment extends GW_GetDriver {
 		BillingCenter_Payments.DirectBillPayments();
 		Tab_Menu_Navigation.bcMenuNavigation("Payments");
 		BillingCenter_Payments.Payments();
-		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
+		BillingCenter_Resuables.logout_BillingCenter();
 
 	}
 }

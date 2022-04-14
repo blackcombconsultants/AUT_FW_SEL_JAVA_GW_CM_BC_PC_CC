@@ -107,6 +107,8 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strPrimaryKeyValue + "'";
 		oConnection = getConnection("Fillo", pTestDataFilePath);
+
+		System.out.println(pTestDataFilePath);
 		return executeQuery(oConnection, strSelectQuery);
 
 	}
@@ -122,6 +124,13 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 	public static LinkedHashMap<String, String> getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(String pFilePath, String WorkSheet, String PrimaryKey, String DataSet) throws Throwable {
 		String strSelectQuery = "Select * from " + WorkSheet + " WHERE PrimaryKey='" + PrimaryKey + "' AND DataSet='" + DataSet + "'";
 		oConnection = getConnection("Fillo", pFilePath);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static LinkedHashMap<String, String> getData_Row_MSExcel_Fillo(String WorkSheet, String strPrimaryKey) throws Throwable {
+		String strSelectQuery = "Select * from " + WorkSheet + " WHERE PrimaryKey='" + strPrimaryKey + "'";
+		oConnection = getConnection("Fillo", pTestDataFilePath);
 		return executeQuery(oConnection, strSelectQuery);
 
 	}
@@ -175,6 +184,7 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
 		oConnection = getConnection("Fillo", pTestDataFile_BillingCenter);
+		System.out.println(pTestDataFile_BillingCenter);
 		return executeQuery(oConnection, strSelectQuery);
 
 	}
@@ -194,6 +204,14 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
 		oConnection = getConnection("Fillo", pTestDataFile_PersonalAuto);
+		return executeQuery(oConnection, strSelectQuery);
+
+	}
+
+	public static LinkedHashMap<String, String> getData_CommercialAuto(String strTable) throws Throwable {
+
+		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
+		oConnection = getConnection("Fillo", pTestDataFile_CommercialAuto);
 		return executeQuery(oConnection, strSelectQuery);
 
 	}

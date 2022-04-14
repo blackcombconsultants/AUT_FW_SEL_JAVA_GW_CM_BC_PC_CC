@@ -17,7 +17,7 @@ public class BillingCenter_Invoices extends SeleniumWebDriver_Commands implement
 	 */
 
 	public static void Invoices_InvoiceInformation_Verify() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Invoices", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Invoices");
 		GuidewireAutomate_Validation("Screen Header", Invoices_Header, "equals", "Invoices");
 		// GuidewireAutomate_Validation("Due Date", Invoices_IInfo_DueDate,
 		// "",lhm_TestCase_Table_Data.get("TD_DueDate"));
@@ -28,7 +28,7 @@ public class BillingCenter_Invoices extends SeleniumWebDriver_Commands implement
 	}
 
 	public static void Invoices_InvoiceInformation_Edit() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Invoices", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Invoices");
 
 		GuidewireAutomate("ChangeInvoiceDates", ChangeInvoiceDates, "click", "");
 		GuidewireAutomate("BillDate", Invoices_IInfo_BillDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("TD_BillDate"));
@@ -39,7 +39,7 @@ public class BillingCenter_Invoices extends SeleniumWebDriver_Commands implement
 	}
 
 	public static void Invoices_InvoiceItems() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Invoices", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Invoices");
 		GuidewireAutomate("IItems Policy", Invoices_IItems_Policy, "click", "");
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
@@ -48,7 +48,7 @@ public class BillingCenter_Invoices extends SeleniumWebDriver_Commands implement
 	//Divya
 	//30-03-2022
 	public static void Invoices_Verify() throws Throwable {
-		//lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Invoices", strTestCaseName);
+		//lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Invoices");
 		GuidewireAutomate_Validation("Screen Header", Invoices_Header, "equals", "Invoices");
 		GuidewireAutomate_Validation("Invoices_Status", Invoices_Status, "equals", "Due");
 		if (Invoices_Status.equals("Due")) {
@@ -58,8 +58,7 @@ public class BillingCenter_Invoices extends SeleniumWebDriver_Commands implement
 	}
 	public static void ChargesScreen() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Policy",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Policy");
 			GuidewireAutomate_Validation("Charges", Charges_Header, "equals", "Charges");
 			GuidewireAutomate_Validation("Date", Date, "fetchValue", lhm_TestCase_Table_Data.get("Date"));
 			GuidewireAutomate_Validation("Charge Type", ChargeType, "fetch", lhm_TestCase_Table_Data.get("TD_ChargesType")+"Reversed");
@@ -71,8 +70,7 @@ public class BillingCenter_Invoices extends SeleniumWebDriver_Commands implement
 
 	public static void ChargeReversal() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Policy",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Policy");
 			GuidewireAutomate_Validation("Charge Reversal Wizard", ChargeReversalWizard_Header, "equals", "Charge Reversal Wizard - Step 1 of 2");
 			GuidewireAutomate("Type", Type, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_ChargesType"));
 			GuidewireAutomate("Search", Search, "click", "click");

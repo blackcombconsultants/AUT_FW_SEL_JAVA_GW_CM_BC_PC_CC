@@ -52,7 +52,7 @@ public class BillingCenter_NonPayment extends SeleniumWebDriver_Commands {
 	
 	public static void NonPayment_Invoices() throws Throwable {
 		try {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("npInvoices", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("npInvoices");
 		
 		/*
 		 * GuidewireAutomate("Account button", AD_AB_AccountSearch_Button, "click",
@@ -78,7 +78,7 @@ public class BillingCenter_NonPayment extends SeleniumWebDriver_Commands {
 	
 		public static void NonPayment_InvoicesStream() throws Throwable {
 			try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("npInvoices", strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("npInvoices");
 			
 		GuidewireAutomate_Validation("Invoice Stream", InvoicesStream_Header, "equals", "Invoice Streams");
 		GuidewireAutomate_Validation("InvoicesStream InvoiceDays", InvoicesStream_InvoiceDays, "equals", "Invoice Days");

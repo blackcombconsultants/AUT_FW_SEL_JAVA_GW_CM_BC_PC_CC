@@ -63,7 +63,8 @@ public class GW_Base {
 	public static String pTestDataFilePath;
 	public static String pTestDataFile_ClaimsCenter = pUserdir + "\\testdata\\ClaimsCenter.xlsx";
 	public static String pTestDataFile_BillingCenter = pUserdir + "\\testdata\\BillingCenter.xlsx";
-	public static String pTestDataFile_PersonalAuto = pUserdir + "\\testdata\\PC_PersonalAuto.xlsx";
+	public static String pTestDataFile_PersonalAuto = pUserdir + "\\testdata\\PersonalAuto.xlsx";
+	public static String pTestDataFile_CommercialAuto = pUserdir + "\\testdata\\CommercialAuto.xlsx";
 	public static String pFile_TestBreakTracker     = pUserdir + "\\testdata\\TestBreakTracker.xlsx";
 
 	public static LinkedHashMap<String, String> lhm_TestCase_Data       = new LinkedHashMap<String, String>();
@@ -74,6 +75,10 @@ public class GW_Base {
 	public static String                        strMethodName           = null;
 
 	public static String url;
+	public static String url_PC;
+	public static String url_BC;
+	public static String url_CC;
+	public static String url_CM;
 	public static String StrBROWSER;
 	public static String StrENVIRONMENT;
 	public static String StrINTERFACE;

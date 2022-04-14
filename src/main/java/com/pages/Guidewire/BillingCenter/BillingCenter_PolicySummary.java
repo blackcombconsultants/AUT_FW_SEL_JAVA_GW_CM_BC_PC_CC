@@ -16,8 +16,7 @@ public class BillingCenter_PolicySummary extends SeleniumWebDriver_Commands impl
 	public static void PolicySummary_Overview() throws Throwable
 	{
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicySummary",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("PolicySummary");
 
 		GuidewireAutomate_Validation("Screen Header", PolicySummary_Header, "equals","Policy Summary");
 		GuidewireAutomate_Validation("Cancellation Status", PS_Overview_CancellationStatus, "equals",
@@ -34,5 +33,17 @@ public class BillingCenter_PolicySummary extends SeleniumWebDriver_Commands impl
 				lhm_TestCase_Table_Data.get("TD_PaymentPlan"));
       
 	}
+
+	public static void PolicySummary_BillingSummary_Validation() throws Throwable
+	{
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("PolicySummary");
+
+		GuidewireAutomate_Validation("Screen Header", PolicySummary_Header, "equals","Policy Summary");
+
+
+	}
+
+
 
 }

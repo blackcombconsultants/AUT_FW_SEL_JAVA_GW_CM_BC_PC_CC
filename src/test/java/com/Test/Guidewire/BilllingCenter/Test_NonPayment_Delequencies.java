@@ -15,7 +15,7 @@ public class Test_NonPayment_Delequencies extends GW_GetDriver {
 	
 	public void AUT_NonPayment_Delequency() throws Throwable {
 		// Login
-	GW_CM_PC_BC_CC_Login.login_BillingCenter();
+	BillingCenter_Resuables.login_BillingCenter_User("SuperUser");
 		// Account Search
 				BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 			//INVOICES
@@ -32,7 +32,7 @@ public class Test_NonPayment_Delequencies extends GW_GetDriver {
 				BillingCenter_NonPayment.ReturnToBillingCenter();
 				BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 				//Deliquency
-				GW_CM_PC_BC_CC_Login.logout_BillingCenter();
+				BillingCenter_Resuables.logout_BillingCenter();
 
 }
 

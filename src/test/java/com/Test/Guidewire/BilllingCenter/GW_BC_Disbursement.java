@@ -13,8 +13,8 @@ public class GW_BC_Disbursement extends GW_GetDriver {
 	
 	@Test
 	public void AUT_Disbursement_Manual() throws Throwable {
-		
-		GW_CM_PC_BC_CC_Login.login_BillingCenter();
+
+		BillingCenter_Resuables.login_BillingCenter_User("SuperUser");
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 		BillingCenter_AccountSummary.AccountSummary();
 		BillingCenter_AccountSummary.AccountSummary_Financials();
@@ -34,20 +34,15 @@ public class GW_BC_Disbursement extends GW_GetDriver {
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 		Tab_Menu_Navigation.bcMenuNavigation("Disbursements");
 		Thread.sleep(2000);
-		BillingCenter_Disbursement.Disbursement_Status("Sent");		
-		
-		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
-		
-		
-		
-		
-		
-		
+		BillingCenter_Disbursement.Disbursement_Status("Sent");
+
+		BillingCenter_Resuables.logout_BillingCenter();
+
 	}
 	@Test
 	public void AUT_Disbursement_Automatic() throws Throwable {
-		
-		GW_CM_PC_BC_CC_Login.login_BillingCenter();
+
+		BillingCenter_Resuables.login_BillingCenter_User("SuperUser");
 
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 		BillingCenter_AccountSummary.AccountSummary();
@@ -57,9 +52,9 @@ public class GW_BC_Disbursement extends GW_GetDriver {
 		BillingCenter_Disbursement.RunBatch_AutomaticDisbursement();
 		BillingCenter_Disbursement.ReturnToBillingCenter();
 		Thread.sleep(2000);
-		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
+		BillingCenter_Resuables.logout_BillingCenter();
 		Thread.sleep(2000);
-		GW_CM_PC_BC_CC_Login.login_BillingCenter();
+		BillingCenter_Resuables.logout_BillingCenter();
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 		Tab_Menu_Navigation.bcMenuNavigation("Disbursements");
 		Thread.sleep(2000);
@@ -73,9 +68,9 @@ public class GW_BC_Disbursement extends GW_GetDriver {
 		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
 		Tab_Menu_Navigation.bcMenuNavigation("Disbursements");
 		Thread.sleep(2000);
-		BillingCenter_Disbursement.Disbursement_Status("Sent");		
-		
-		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
+		BillingCenter_Disbursement.Disbursement_Status("Sent");
+
+		BillingCenter_Resuables.logout_BillingCenter();
 		
 		
 		

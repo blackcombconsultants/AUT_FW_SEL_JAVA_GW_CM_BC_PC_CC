@@ -85,17 +85,6 @@ public class GW_CM_PC_BC_CC_Login extends SeleniumWebDriver_Commands implements 
 		logout_Guidewire();
 	}
 
-	public static void login_BillingCenter() throws Throwable {
-		login_Guidewire();
-	}
-
-	public static void login_BillingCenter_User(String strUser) throws Throwable {
-		login_Guidewire_User(strUser);
-	}
-
-	public static void logout_BillingCenter() throws Throwable {
-		logout_Guidewire();
-	}
 
 	public static void login_ClaimsCenter() throws Throwable {
 		login_Guidewire();

@@ -35,12 +35,13 @@ public class BillingCenter_Payments extends SeleniumWebDriver_Commands {
 	private static By NewSuspensePayment_Header = By.xpath("//div[@id='NewSuspensePayment-NewSuspensePaymentScreen-0']//div[@class='gw-TitleBar--title']");
 	private static By PaymentDate = By.xpath("//input[contains(@name,'-paymentDate')]");
 	private static By NewPayment = By.xpath("//div[contains(@id,'-NewPayment')]//div[@role='button']");
+	private static By ActionButton = By.xpath("//div[contains(@id,'AccountDBPaymentsLV-i-ActionButton')]//div[@role='button']");
+	private static By ReversePayment = By.xpath("//table/tbody/tr[10]/td[1]//div[text()='Actions']");
 
 
 	public static void DirectBillPayments() throws Throwable {
 		try {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("payment",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("payment");
 		GuidewireAutomate_Validation("Direct Bill Payment", ADirectBillPayment_Header, "equals", "Direct Bill Payment");
 
 		GuidewireAutomate("Amount", Amount, "sendKeys", lhm_TestCase_Table_Data.get("Amount"));
@@ -59,9 +60,11 @@ public class BillingCenter_Payments extends SeleniumWebDriver_Commands {
 	}
 	public static void Payments() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("payment",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("payment");
 	GuidewireAutomate_Validation("Payments", Payment_Header, "equals", "Payments");
+	GuidewireAutomate("ActionButton", ActionButton, "click", "click");
+	GuidewireAutomate("Reverse Payment", ReversePayment, "click", "click");
+	
 	}catch (Exception e) {
 		e.printStackTrace();
 		throw e;
@@ -102,8 +105,7 @@ public class BillingCenter_Payments extends SeleniumWebDriver_Commands {
 		}
 	public static void SuspensePaymentProcess() throws Throwable {
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("payment",
-					strTestCaseName);
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("payment");
 
 			getStaleElement("New Payment",NewPayment);
 			GuidewireAutomate("New Payment", NewPayment, "click", "click");

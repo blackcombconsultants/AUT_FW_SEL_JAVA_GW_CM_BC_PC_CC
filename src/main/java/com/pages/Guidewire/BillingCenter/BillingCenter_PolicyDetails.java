@@ -15,8 +15,7 @@ public class BillingCenter_PolicyDetails extends SeleniumWebDriver_Commands impl
 	
 	public static void PD_PolicyBasics_Verify() throws Throwable
 	{
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicyDetails",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("PolicyDetails");
 		
 		GuidewireAutomate_Validation("Screen Header",PolicyDetails_Header, "equals","Policy Details");
 		
@@ -32,8 +31,7 @@ public class BillingCenter_PolicyDetails extends SeleniumWebDriver_Commands impl
 	
 	public static void PD_Charges_Verify() throws Throwable
 	{
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicyDetails",
-				strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("PolicyDetails");
 		
 		GuidewireAutomate_Validation("Premium Charges", PD_C_PremiumCharges, "equals",lhm_TestCase_Table_Data.get("TD_PremiumCharges"));
 		GuidewireAutomate_Validation("Charges Total",PD_C_Total , "equals", lhm_TestCase_Table_Data.get("TD_Total"));

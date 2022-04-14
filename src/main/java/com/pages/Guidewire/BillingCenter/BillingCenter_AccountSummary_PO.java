@@ -39,6 +39,10 @@ public interface BillingCenter_AccountSummary_PO {
 	final By AS_PolicyPeriodsTotalValue = By
 			.xpath("//table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'TotalValue_Cell')]");
 
+//Divya
+	final By PremiumCost = By
+		.xpath("//table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'TotalValue_Cell')]");
+
 
 
 }

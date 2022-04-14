@@ -14,7 +14,7 @@ public class BillingCenter_Contacts extends SeleniumWebDriver_Commands implement
 	}
 
 	public static void C_ContactInfo_Verify() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Contacts", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Contacts");
 		GuidewireAutomate_Validation("Screen Header", Contacts_Header, "equals", "Contacts");
 
 		GuidewireAutomate_Validation("CI Type", Contacts_CI_Type, "equals", lhm_TestCase_Table_Data.get("TD_Type"));
@@ -23,7 +23,7 @@ public class BillingCenter_Contacts extends SeleniumWebDriver_Commands implement
 	}
 
 	public static void C_ContactInfo_Edit() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("Contacts", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("Contacts");
 		GuidewireAutomate_Validation("Screen Header", Contacts_Header, "equals", "Contacts");
 		GuidewireAutomate("Edit Button", Contacts_EditButton, "click", "");
 

@@ -15,183 +15,191 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 
 public class Selenium_TestNG_TestListener extends GW_Base implements ITestListener {
-	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
+    Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
-	public void onTestStart(ITestResult result) {
-		System.out.println("-------------------------------------------------------------------------");
-		System.out.println("onTestStart");
-		System.out.println("-------------------------------------------------------------------------");
+    public void onTestStart(ITestResult result) {
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("onTestStart");
+        System.out.println("-------------------------------------------------------------------------");
 
-		try {
+        try {
 
-			strTestCaseName = result.getMethod().getMethodName();
-			System.out.println("strTestCaseName " + strTestCaseName);
+            strTestCaseName = result.getMethod().getMethodName();
+            System.out.println("strTestCaseName " + strTestCaseName);
 
-			oExtentTest = oExtentReports.createTest(strTestCaseName);
+            oExtentTest = oExtentReports.createTest(strTestCaseName);
 
-			if (!StrINTERFACE.equalsIgnoreCase("API")) {
-				GW_GetDriver oDriver = new GW_GetDriver();
-				driver = oDriver.getDriver();
-			}
+            if (!StrINTERFACE.equalsIgnoreCase("API")) {
+                GW_GetDriver oDriver = new GW_GetDriver();
+                driver = oDriver.getDriver();
+            }
 
-			GW_CM_PC_BC_CC_Login loginScreen = new GW_CM_PC_BC_CC_Login(driver, oExtentTest);
+            GW_CM_PC_BC_CC_Login loginScreen = new GW_CM_PC_BC_CC_Login(driver, oExtentTest);
 
-			/*
-			 * lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("Login",
-			 * strTestCaseName); lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-			 */
-		} catch (Throwable e) {
-			e.printStackTrace();
+            /*
+             * lhm_TestCase_Table_Data = oDB.getData_MSExcel_WorkSheet_Fillo("Login",
+             * strTestCaseName); lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+             */
+        } catch (Throwable e) {
+            e.printStackTrace();
 
-		}
+        }
 
-	}
+    }
 
-	public void onTestSuccess(ITestResult result) {
-		oExtentTest.log(Status.PASS,
-				MarkupHelper.createLabel(result.getMethod().getMethodName() + " Test Case PASSED", ExtentColor.GREEN));
+    public void onTestSuccess(ITestResult result) {
+        oExtentTest.log(Status.PASS,
+                MarkupHelper.createLabel(result.getMethod().getMethodName() + " Test Case PASSED", ExtentColor.GREEN));
 
-	}
+    }
 
-	public void onTestFailure(ITestResult result) {
+    public void onTestFailure(ITestResult result) {
 
-		try {
-			oExtentTest
-					.addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
+        try {
+            oExtentTest
+                    .addScreenCaptureFromPath(Selenium_Reporting_Utils.getScreenShot_addScreenCaptureFromPath(driver));
 
-			JiraPolicy jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod()
-					.getAnnotation(JiraPolicy.class);
-			boolean isTicketReady = jiraPolicy.logTicketReady();
-			if (isTicketReady) {
-				// raise jira ticket:
-				System.out.println("is ticket ready for JIRA: " + isTicketReady);
+            JiraPolicy jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod()
+                    .getAnnotation(JiraPolicy.class);
+            boolean isTicketReady = jiraPolicy.logTicketReady();
+            if (isTicketReady) {
+                // raise jira ticket:
+                System.out.println("is ticket ready for JIRA: " + isTicketReady);
 
-				JiraServiceProvider jiraSp = new JiraServiceProvider("https://ravikumar243.atlassian.net",
-						"agowda@blackcombconsultants.com", "vYsl3rt7Co3o0uqQz6TBB53D", "AT");
-				String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName()
-						+ "got failed due to some assertion or exception";
-				System.out.println("issueSummary" + issueSummary);
-				String issueDescription = result.getThrowable().getMessage() + "\n";
-				System.out.println("issueDescription" + issueDescription);
-				issueDescription.concat(ExceptionUtils.getFullStackTrace(result.getThrowable()));
+                JiraServiceProvider jiraSp = new JiraServiceProvider("https://ravikumar243.atlassian.net",
+                        "agowda@blackcombconsultants.com", "vYsl3rt7Co3o0uqQz6TBB53D", "AT");
+                String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName()
+                        + "got failed due to some assertion or exception";
+                System.out.println("issueSummary" + issueSummary);
+                String issueDescription = result.getThrowable().getMessage() + "\n";
+                System.out.println("issueDescription" + issueDescription);
+                issueDescription.concat(ExceptionUtils.getFullStackTrace(result.getThrowable()));
 
-				jiraSp.createJiraTicket("Bug", issueSummary, issueDescription, "Akash Gowda");
-			}
+                jiraSp.createJiraTicket("Bug", issueSummary, issueDescription, "Akash Gowda");
+            }
 
-			oExtentTest.log(Status.FAIL, MarkupHelper
-					.createLabel(result.getMethod().getMethodName() + " Test Case Failed", ExtentColor.RED));
-			oExtentTest.log(Status.FAIL, result.getThrowable());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+            oExtentTest.log(Status.FAIL, MarkupHelper
+                    .createLabel(result.getMethod().getMethodName() + " Test Case Failed", ExtentColor.RED));
+            oExtentTest.log(Status.FAIL, result.getThrowable());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-	}
+    }
 
-	public void onTestSkipped(ITestResult result) {
-		oExtentTest.log(Status.SKIP, MarkupHelper.createLabel(result.getMethod().getMethodName() + " Test Case skipped",
-				ExtentColor.ORANGE));
+    public void onTestSkipped(ITestResult result) {
+        oExtentTest.log(Status.SKIP, MarkupHelper.createLabel(result.getMethod().getMethodName() + " Test Case skipped",
+                ExtentColor.ORANGE));
 
-	}
+    }
 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		System.out.println("Started");
-	}
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+        System.out.println("Started");
+    }
 
-	public void onStart(ITestContext context) {
+    public void onStart(ITestContext context) {
 
-		System.out.println("-------------------------------------------------------------------------");
-		System.out.println("onStart");
-		System.out.println("-------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("onStart");
+        System.out.println("-------------------------------------------------------------------------");
 
-		try {
+        try {
 
-			Selenium_Utils_File oGetFile = new Selenium_Utils_File();
-			/*
-			 * StrBrowser = oGetFile.getValue_PropertiesFile(pConfigproperties, "Browser");
-			 * StrEnvironment = oGetFile.getValue_PropertiesFile(pConfigproperties,
-			 * "Environment"); strGW_Application =
-			 * oGetFile.getValue_PropertiesFile(pConfigproperties, "GW_Application");
-			 */
-			StrBROWSER = System.getProperty("BROWSER");
-			StrENVIRONMENT = System.getProperty("ENVIRONMENT");
-			gwAPPLICATION = System.getProperty("gwAPPLICATION");
-			gwCOUNTRY = System.getProperty("gwCOUNTRY");
-			gwSTATE = System.getProperty("gwSTATE");
-			StrINTERFACE = System.getProperty("INTERFACE");
+            Selenium_Utils_File oGetFile = new Selenium_Utils_File();
+            /*
+             * StrBrowser = oGetFile.getValue_PropertiesFile(pConfigproperties, "Browser");
+             * StrEnvironment = oGetFile.getValue_PropertiesFile(pConfigproperties,
+             * "Environment"); strGW_Application =
+             * oGetFile.getValue_PropertiesFile(pConfigproperties, "GW_Application");
+             */
+            StrBROWSER = System.getProperty("BROWSER");
+            StrENVIRONMENT = System.getProperty("ENVIRONMENT");
+            gwAPPLICATION = System.getProperty("gwAPPLICATION");
+            gwCOUNTRY = System.getProperty("gwCOUNTRY");
+            gwSTATE = System.getProperty("gwSTATE");
+            StrINTERFACE = System.getProperty("INTERFACE");
 
-			String ptestoutput = pUserdir + "\\test-output\\" + gwAPPLICATION + "\\";
-			pTestDataFilePath = pUserdir + "\\testdata\\" + gwAPPLICATION + ".xlsx";
-			pScreenshots = pUserdir + "\\test-output\\" + "Screenshots\\";
-			pExtentReport_indexFile = ptestoutput + "extentreports\\index.html";
-			pExtentReport_APPLICATIONFile = ptestoutput + "extentreports\\" + gwAPPLICATION + ".html";
-			pExtentReport_TodayFile = ptestoutput + "extentreports\\" + "ExtentReport_" + gwAPPLICATION + "_"
-					+ strCurrentDate_ddMMMMyyyy + ".html";
+            String ptestoutput = pUserdir + "\\test-output\\" + gwAPPLICATION + "\\";
+            pTestDataFilePath = pUserdir + "\\testdata\\" + gwAPPLICATION + ".xlsx";
+            pScreenshots = pUserdir + "\\test-output\\" + "Screenshots\\";
+            pExtentReport_indexFile = ptestoutput + "extentreports\\index.html";
+            pExtentReport_APPLICATIONFile = ptestoutput + "extentreports\\" + gwAPPLICATION + ".html";
+            pExtentReport_TodayFile = ptestoutput + "extentreports\\" + "ExtentReport_" + gwAPPLICATION + "_"
+                    + strCurrentDate_ddMMMMyyyy + ".html";
 
-			switch (gwAPPLICATION) {
-			case "PersonalAuto":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "CommercialAuto":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "PC_GeneralLiability":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "PC_HomeOwner":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "PC_InlandMarine":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "PC_CommercialProperty":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "BusinessOwners":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "BillingCenter":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BillingCenter");
-				break;
-			case "PolicyCenter":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-				break;
-			case "ClaimsCenter":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ClaimsCenter");
-				break;
-			case "ContactManagement":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
-				break;
-			case "RESTapi":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
-				break;
-			case "Mobile":
-				url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
-				break;
-			default:
-				throw new IOException("No support for gwAPPLICATION : " + gwAPPLICATION);
-			}
-			oExtentReports = Selenium_Reporting.getExtentReports();
+            switch (gwAPPLICATION) {
+                case "PersonalAuto":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "CommercialAuto":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "PC_GeneralLiability":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "PC_HomeOwner":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "PC_InlandMarine":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "PC_CommercialProperty":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "BusinessOwners":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "BillingCenter":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BillingCenter");
+                    break;
+                case "PolicyCenter":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+                    break;
+                case "ClaimsCenter":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ClaimsCenter");
+                    break;
+                case "ContactManagement":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
+                    break;
+                case "RESTapi":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
+                    break;
+                case "Mobile":
+                    url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
+                    break;
+                default:
+                    throw new IOException("No support for gwAPPLICATION : " + gwAPPLICATION);
+            }
 
-		} catch (Throwable e) {
-			e.printStackTrace();
+            url_PC = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
+            url_BC = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BillingCenter");
+            url_CC = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ClaimsCenter");
+            url_CM = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_ContactManagement");
 
-		}
+            //default url
+            url = url_PC;
+            oExtentReports = Selenium_Reporting.getExtentReports();
 
-	}
+        } catch (Throwable e) {
+            e.printStackTrace();
 
-	public void onFinish(ITestContext context) {
-		try {
+        }
 
-			oExtentReports.flush();
+    }
 
-			FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_APPLICATIONFile), true);
-			FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_TodayFile), true);
-			new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", pExtentReport_TodayFile).start();
-		} catch (Exception e) {
-			e.printStackTrace();
+    public void onFinish(ITestContext context) {
+        try {
 
-		}
+            oExtentReports.flush();
 
-	}
+            FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_APPLICATIONFile), true);
+            FileUtils.copyFile(new File(pExtentReport_indexFile), new File(pExtentReport_TodayFile), true);
+            new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", pExtentReport_TodayFile).start();
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+
+    }
 
 }

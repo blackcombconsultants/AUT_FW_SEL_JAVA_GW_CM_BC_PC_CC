@@ -14,7 +14,7 @@ public class BillingCenter_AccountDetails extends SeleniumWebDriver_Commands imp
 	}
 
 	public static void AD_AccountBasics_Verify() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AcctDetails", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("AcctDetails");
 
 		GuidewireAutomate_Validation("Screen Header", AD_Header, "equals", "Account Details");
 
@@ -27,7 +27,7 @@ public class BillingCenter_AccountDetails extends SeleniumWebDriver_Commands imp
 	}
 
 	public static void AD_AccountBasics_Edit() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AcctSummary", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("AcctSummary");
 		GuidewireAutomate("ServiceTier", AD_AB_ServiceTier, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_ServiceTier"));
 		GuidewireAutomate("SecurityZone", AD_AB_SecurityZone, "selectByVisibleText", lhm_TestCase_Table_Data.get("TD_SecurityZone"));
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
@@ -35,7 +35,7 @@ public class BillingCenter_AccountDetails extends SeleniumWebDriver_Commands imp
 	}
 
 	public static void AD_ContactInfo_Verify() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AcctSummary", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("AcctSummary");
 
 		GuidewireAutomate_Validation("Primary Contact", AD_CI_PrimaryContact, "equals", lhm_TestCase_Table_Data.get("TD_PrimaryContact"));
 		GuidewireAutomate_Validation("Email", AD_CI_Email, "contains", lhm_TestCase_Table_Data.get("TD_Email"));
@@ -45,7 +45,7 @@ public class BillingCenter_AccountDetails extends SeleniumWebDriver_Commands imp
 	}
 
 	public static void AD_AccountTotals_Verify() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("AcctSummary", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_BillingCenter("AcctSummary");
 
 		GuidewireAutomate_Validation("Total Unbilled", AD_AT_TotalUnbilled, "equals", lhm_TestCase_Table_Data.get("TD_TotalUnbilled"));
 
