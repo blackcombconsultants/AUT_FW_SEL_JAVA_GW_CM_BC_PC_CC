@@ -16,7 +16,8 @@ public interface PolicyCenter_AccountSummary_PO {
 			"//div[contains(@id,'AccountDetailsDetailViewTile_DV-AddressDescription')]//div[@class='gw-value-readonly-wrapper']");
 	final By AS_D_Status = By.xpath(
 			"//div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountStatus')]//div[@class='gw-value-readonly-wrapper']");
-
+	static By Screen_HeaderAddress = By.xpath("//div[contains(@id,'LinkAddressMenu_Input')]//div[@class='gw-label gw-boldLabel']");
+	static By EditAccount_Address1 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine1')]");
 	final By AS_CurrentActivities = By
 			.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Current Activities']");
 	final By AS_PolicyTerms = By

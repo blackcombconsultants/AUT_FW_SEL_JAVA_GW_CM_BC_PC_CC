@@ -40,6 +40,7 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 	static By PI_Address_1 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-AddressLine1')]");
 	static By PI_StateName = By.xpath("//select[contains(@Name,'globalAddressContainer-GlobalAddressInputSet-State')]");
 	static By PI_AddressType = By.xpath("//select[contains(@name,'PolicyContactDetailsDV-AddressType')]");
+	static By PI_WorkPhone = By.xpath("//input[contains(@name,'WorkPhone-GlobalPhoneInputSet-NationalSubscriberNumber')]");
 
 
 
@@ -132,13 +133,13 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("policyInfo");
 
 		try {
-
+            getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
 			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
 					"Policy Info");
 
 			GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals", strAccountName);
 
-			GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "equals",
+			GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "contains",
 					lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
 
 //			GuidewireAutomate_Validation("Policy Address",
@@ -171,6 +172,7 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 		GuidewireAutomate_Validation("PersonName",PI_AddNewPerson,"equals", "Person");
 		GuidewireAutomate("FirstName",PI_Firstname, "sendKeys", lhm_TestCase_Table_Data.get("PI_FirstName"));
 		GuidewireAutomate("LastName",PI_Lastname, "sendKeys", lhm_TestCase_Table_Data.get("PI_LastName"));
+		GuidewireAutomate("WorkPhone",PI_WorkPhone,"sendKeys",lhm_TestCase_Table_Data.get("PI_WorkPhone"));
 		GuidewireAutomate("Address1",PI_Address_1, "sendKeys", lhm_TestCase_Table_Data.get("PI_Address_1"));
 		getStaleElement("State",PI_StateName);
 		GuidewireAutomate("State",PI_StateName, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_StateName"));
@@ -231,13 +233,16 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 	public static void policyAddress() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("policyInfo");
 		try {
-			GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "equals",lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
-			GuidewireAutomate_Validation("Policy Address",PrimaryNamedInsured_PolicyAddress, "contains",lhm_TestCase_Table_Data.get("PI_PolicyAddress"));
-			GuidewireAutomate_Validation("County", PrimaryNamedInsured_County, "equals",lhm_TestCase_Table_Data.get("PI_County"));
-			 
-			GuidewireAutomate_Validation("Address Type", PrimaryNamedInsured_AddressType, "contains",lhm_TestCase_Table_Data.get("CA_AddressType"));
-			
-			GuidewireAutomate_Validation("Address Description",PrimaryNamedInsured_AddressDescription, "contains",lhm_TestCase_Table_Data.get("CA_AddressDescription"));
+			getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+					"Policy Info");
+			GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "contains", lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
+			GuidewireAutomate_Validation("Policy Address", PrimaryNamedInsured_PolicyAddress, "contains", lhm_TestCase_Table_Data.get("PI_PolicyAddress"));
+			GuidewireAutomate_Validation("County", PrimaryNamedInsured_County, "equals", lhm_TestCase_Table_Data.get("PI_County"));
+
+			GuidewireAutomate_Validation("Address Type", PrimaryNamedInsured_AddressType, "contains", lhm_TestCase_Table_Data.get("CA_AddressType"));
+
+			//GuidewireAutomate_Validation("Address Description",PrimaryNamedInsured_AddressDescription, "contains",lhm_TestCase_Table_Data.get("CA_AddressDescription"));
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
@@ -246,8 +251,24 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands  {
 			e.printStackTrace();
 			throw e;
 		}
-
 	}
+	//shanta
+		public static void Verify_policyAddress() throws Throwable {
+			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("policyInfo");
+
+			getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals",
+					"Policy Info");
+			GuidewireAutomate_Validation("Policy Address", PrimaryNamedInsured_PolicyAddress, "contains", lhm_TestCase_Table_Data.get("PI_PolicyAddress"));
+			GuidewireAutomate_Validation("County", PrimaryNamedInsured_County, "equals", lhm_TestCase_Table_Data.get("PI_County"));
+			GuidewireAutomate_Validation("Address Type", PrimaryNamedInsured_AddressType, "contains", lhm_TestCase_Table_Data.get("CA_AddressType"));
+
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
+		}
+
+
+
 
 	public static void policyAddress_ChangeTo_NewAddress() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_CommercialAuto("policyInfo");

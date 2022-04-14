@@ -21,12 +21,9 @@ public class GW_PC_CA_RewritePolicy extends GW_GetDriver {
     public void AUT_PC_CA_Rewrite_FullTerm() throws Throwable {
 
     }
-    @Test
-    public void AUT_PC_CA_Rewrite_MidTerm () throws Throwable {
 
-    }
     @Test
-    public void AUT_PC_CA_ReminderoftheTerm() throws Throwable {
+    public void AUT_PC_CA_ReminderOfTheTerm() throws Throwable {
 
     }
     @Test

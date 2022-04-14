@@ -56,10 +56,7 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}
-	/*
-     Name:shanta
-     Date:01/04/2022
-      */
+
 	public static void ViewYourPolicy_RenewalNonrenewing() throws Throwable {
 		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Non-renewing");
@@ -73,7 +70,6 @@ public class PolicyCenter_Bound extends SeleniumWebDriver_Commands implements Po
 	public static void RenewalBound_ViewYourPolicy() throws Throwable {
 		getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Bound");
-
 		GuidewireAutomate("View your Policy", SB_ViewYourPolicy, "clickAndwait", "click");
 
 	}

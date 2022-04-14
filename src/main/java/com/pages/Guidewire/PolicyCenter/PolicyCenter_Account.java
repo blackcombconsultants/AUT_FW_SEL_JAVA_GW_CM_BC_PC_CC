@@ -310,8 +310,8 @@ public class PolicyCenter_Account extends SeleniumWebDriver_Commands implements 
 		 * 
 		 */
 		GuidewireAutomate_Validation("The search returned zero results", PolicyCenter_Resuables.Error_Message, "equals", "The search returned zero results.");
-
-		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "click", "click");
+        getStaleElement("Create New Account", SA_CreateNewAccount_Button);
+		GuidewireAutomate("Create New Account", SA_CreateNewAccount_Button, "clickAndwait", "click");
 		GuidewireAutomate("Company Button", SA_CNA_Company_Button, "click", "click");
 
 		/*
