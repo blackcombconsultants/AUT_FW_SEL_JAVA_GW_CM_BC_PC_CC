@@ -105,6 +105,7 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 
 			case "Policy Search By Fetching":
 				GuidewireAutomate("Policy", TabPC_Policy_dd, "clickAndwait", "click");
+				getStaleElement("Policy Number", TabPC_Policy_PolicyNumber);
 				GuidewireAutomate("Policy Number", TabPC_Policy_PolicyNumber, "sendKeys", strPolicyNumber);
 				GuidewireAutomate("Policy Search", TabPC_Policy_PolicyNumber_Search, "clickAndwait", "click");
 				break;
@@ -144,6 +145,8 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("SearchTab", TabPC_Search_dd, "clickAndwait", "click");
 				GuidewireAutomate("SearchTab_Contacts", TabPC_Search_Contacts, "clickAndwait", "click");
 				break;
+
+
 
 			case "Team" :
 				GuidewireAutomate("AdministrationTab", TabPC_Team, "clickAndwait", "click");
@@ -247,7 +250,6 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("Merge_Account_into_this_Account", MenuPC_Account_Actions_MergeAccountIntoThisAccount, "clickAndwait", "click");
 				break;
-
 
 			case "Account File" :
 				break;

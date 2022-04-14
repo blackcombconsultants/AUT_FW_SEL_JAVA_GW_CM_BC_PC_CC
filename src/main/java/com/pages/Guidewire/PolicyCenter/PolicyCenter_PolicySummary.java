@@ -55,22 +55,15 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
   Date:29/03/2022
    */
 	public static void openPolicyTransactions() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicySummary",
+				strTestCaseName);
 		getStaleElement("Open Policy Transactions", PS_OpenPolicyTransactions);
 		GuidewireAutomate_Validation("Open Policy Transactions", PS_OpenPolicyTransactions, "equals", "Open Policy Transactions");
-        GuidewireAutomate_Validation("type",PS_TransactionsType,"equals","Submission");
-		GuidewireAutomate_Validation("Status",Ps_TransactionStatus,"equals","Non-renewing");
+        GuidewireAutomate_Validation("type",PS_TransactionsType,"equals",lhm_TestCase_Table_Data.get("Type"));
+		GuidewireAutomate_Validation("Status",Ps_TransactionStatus,"equals",lhm_TestCase_Table_Data.get("Status"));
 
 	}
-	/*
-  Name:shanta
-  Date:31/03/2022
-   */
-	public static void openPolicyTransactions_RenewalWorkflow() throws Throwable {
-		GuidewireAutomate_Validation("Open Policy Transactions", PS_OpenPolicyTransactions, "equals", "Open Policy Transactions");
-		GuidewireAutomate_Validation("type",PS_Renewal_TransactionsType,"equals","Renewal");
-		GuidewireAutomate_Validation("Status",Ps_Renewal_TransactionStatus,"equals","Renewing");
 
-	}
    /*
   Name:shanta
   Date:31/03/2022
@@ -86,9 +79,11 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 	}
 
 	public static void completedPolicyTransactions() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("PolicySummary",
+				strTestCaseName);
 		getStaleElement("Completed Policy Transactions", PS_CompletedPolicyTransactions);
 		GuidewireAutomate_Validation("Completed Policy Transactions", PS_CompletedPolicyTransactions, "equals", "Completed Policy Transactions");
-		GuidewireAutomate_Validation("TransactionsType",PS_TransactionsType,"equals","Cancellation");
+		GuidewireAutomate_Validation("TransactionsType",PS_TransactionsType,"equals",lhm_TestCase_Table_Data.get("Type"));
 	}
 
 	/*
@@ -100,7 +95,7 @@ public class PolicyCenter_PolicySummary extends SeleniumWebDriver_Commands imple
 				strTestCaseName);
 		getStaleElement("Completed Policy Transactions", PS_CompletedPolicyTransactions);
 		GuidewireAutomate_Validation("Completed Policy Transactions", PS_CompletedPolicyTransactions, "equals", "Completed Policy Transactions");
-		GuidewireAutomate_Validation("TransactionsType",PS_TransactionsType,"equals",lhm_TestCase_Table_Data.get("PS_TransactionsType"));
+		GuidewireAutomate_Validation("TransactionsType",PS_TransactionsType,"equals",lhm_TestCase_Table_Data.get("Type"));
 		GuidewireAutomate_Validation("Premiumcost",PS_PremiumCost,"equals",lhm_TestCase_Table_Data.get("PS_PremiumCost"));
 	}
 

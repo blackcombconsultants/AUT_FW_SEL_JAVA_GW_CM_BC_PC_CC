@@ -27,21 +27,34 @@ public class PolicyCenter_AccountSummary extends SeleniumWebDriver_Commands impl
 
 		GuidewireAutomate_Validation("AccountNo", AS_D_AccountNo, "equals", strAccountNumber);
 		GuidewireAutomate_Validation("AccountHolder", AS_D_AccountHolder, "equals", strAccountName);
-		/*
-		 * GuidewireAutomate_Validation("HomeAddress", AS_D_HomeAddress, "equals",
-		 * lhm_TestCase_Table_Data.get("AS_D_HomeAddress"));
-		 */
+
+		  GuidewireAutomate_Validation("HomeAddress", AS_D_HomeAddress, "contains",
+		  lhm_TestCase_Table_Data.get("AS_D_HomeAddress"));
+
 		//GuidewireAutomate_Validation("Description", AS_D_Description, "contains", strAccountName);
 		GuidewireAutomate_Validation("Status", AS_D_Status, "equals", lhm_TestCase_Table_Data.get("AS_D_Status"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
 	}
-
+   /*
+   shanta
+    */
 	public static void details_Edit() throws Throwable {
-		// TODO Auto-generated method stub
+		  try {
+				lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("createAccount", strTestCaseName);
+				GuidewireAutomate_Validation("Screen Header Address",Screen_HeaderAddress, "equals", "Address");
+				GuidewireAutomate("Address1",EditAccount_Address1, "clearANDsendKeys",lhm_TestCase_Table_Data.get("Address1"));
 
-	}
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw e;
+
+			}
+
+		}
+
+
 
 	public static void CurrentActivities_Verify() throws Throwable {
 		// TODO Auto-generated method stub

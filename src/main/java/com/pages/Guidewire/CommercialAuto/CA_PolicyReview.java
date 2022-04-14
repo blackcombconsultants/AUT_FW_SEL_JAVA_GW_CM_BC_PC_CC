@@ -53,6 +53,7 @@ private static By PolicyInfo  = By.xpath("//div[contains(@id,'DiffTreePanelLV-0-
 
 	}
 
+
 public static void PolicyReview() throws Throwable {
 	
 	try {
@@ -63,7 +64,7 @@ public static void PolicyReview() throws Throwable {
 		GuidewireAutomate_Validation("Primary Named Insured", PrimaryNamedInsured, "equals", strAccountName);
 		GuidewireAutomate_Validation("Policy Address",Address, "contains",lhm_TestCase_Table_Data.get("CA_Address"));
 		GuidewireAutomate_Validation("County", County, "equals", lhm_TestCase_Table_Data.get("CA_County"));
-		GuidewireAutomate_Validation("Address Type", AddressType, "equals",lhm_TestCase_Table_Data.get("CA_AddressType"));
+		//GuidewireAutomate_Validation("Address Type", AddressType, "equals",lhm_TestCase_Table_Data.get("CA_AddressType"));
 		GuidewireAutomate_Validation("DateQuoteNeeded", DateQuoteNeeded, "equals",lhm_TestCase_Table_Data.get("CA_DateQuoteNeeded"));
 		GuidewireAutomate_Validation("Product Section", ProductSection, "equals", "Product");	
 		GuidewireAutomate_Validation("Product", Product, "equals", lhm_TestCase_Table_Data.get("CA_Product"));

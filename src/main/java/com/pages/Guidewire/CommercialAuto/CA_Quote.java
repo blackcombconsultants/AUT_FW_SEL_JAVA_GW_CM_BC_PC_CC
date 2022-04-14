@@ -51,7 +51,7 @@ public class CA_Quote extends SeleniumWebDriver_Commands {
 		  GuidewireAutomate_Validation("Address",  QU_Address, "contains", lhm_TestCase_Table_Data.get("QU_Address"));
 		  GuidewireAutomate_Validation("County", QU_County, "equals", lhm_TestCase_Table_Data.get("QU_County"));		  
 		  GuidewireAutomate_Validation("Address Type", QU_AddressType, "equals",lhm_TestCase_Table_Data.get("QU_AddressType"));
-		  GuidewireAutomate_Validation("Address Description", QU_AddressDescription, "contains",lhm_TestCase_Table_Data.get("QU_AddressDescription"));
+		  //GuidewireAutomate_Validation("Address Description", QU_AddressDescription, "contains",lhm_TestCase_Table_Data.get("QU_AddressDescription"));
 
 		}
 		catch (Exception e) {

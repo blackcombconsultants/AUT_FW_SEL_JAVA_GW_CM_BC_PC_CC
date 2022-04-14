@@ -59,7 +59,7 @@ public class CA_Vehicles extends SeleniumWebDriver_Commands {
 		
 		GuidewireAutomate_Validation("Classification Information Section", VehicleDetailsClassificationInformationSection, "equals", "Classification Information");
 		GuidewireAutomate("Class", VehicleDetailsClass, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_Class"));
-		
+		getStaleElement("Ok Button", VehicleDetailsOkButton);
 		GuidewireAutomate("Ok Button", VehicleDetailsOkButton, "clickAndwait", "clickAndwait");
 		
 		GuidewireAutomate_Validation("Verify Vehicle Type", VehicleType, "equals", lhm_TestCase_Table_Data.get("CA_VehicleType"));

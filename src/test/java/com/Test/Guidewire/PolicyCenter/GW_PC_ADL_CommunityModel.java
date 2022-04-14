@@ -1,9 +1,9 @@
-package com.Test.Guidewire.CommercialAuto;
+package com.Test.Guidewire.PolicyCenter;
 
 import com.Utils.Selenium.GW_GetDriver;
 import org.testng.annotations.Test;
 
-public class ADL_CommunityModel extends GW_GetDriver {
+public class GW_PC_ADL_CommunityModel extends GW_GetDriver {
 
     @Test
     public void AUT_PC_CA_ActivitiesAndQueues() throws Throwable {

@@ -37,7 +37,8 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		return getText_Element(SearchAccountResults_Msg);
 	}
 
-	public static void clickButton(String ButtonName) throws Throwable {
+	public static void
+	clickButton(String ButtonName) throws Throwable {
 
 		String DynamicXpath_InfoBar_Jobstatus = "//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label' and text()='Jobstatus']";
 		By InfoBar_Jobstatus;
@@ -54,6 +55,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				break;
 			case "Update":
+				getStaleElement("Update", Update_Button);
 				getStaleElement("Update", Update_Button);
 				GuidewireAutomate("Update", Update_Button, "clickAndwait", "click");
 				break;
@@ -88,6 +90,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate("Quote", Quote_Button, "clickAndwait", "click");
 				break;
 			case "Save Draft":
+				getStaleElement("Save Draft", SaveDraft_Button);
 				GuidewireAutomate("Save Draft", SaveDraft_Button, "clickAndwait", "click");
 				break;
 			case "Versions":
@@ -317,16 +320,40 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
 				strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
 				strPolicyNumber     = PolicyCenter_Resuables.infoBar("PolicyNumber");
+				Thread.sleep(2000);
 				PolicyCenter_Resuables.PC_ChangePolicy();
 				PolicyCenter_Resuables.offering();
 				PolicyCenter_Resuables.clickButton("Next");
 				CA_PolicyInfo.primaryNamedInsured_ChangeTo_NewPerson();
 				PolicyCenter_Resuables.clickButton("Update");
+				PolicyCenter_Resuables.NavigateToPolicyReviewScreen();
+				PolicyCenter_Resuables.PolicyReview_Preemption();
 				PolicyCenter_Resuables.clickButton("Quote");
-				PolicyCenter_Resuables.clickButton("Back");
-				CA_PolicyReview.clickTab_PolicyReview("Differences");
+				PolicyCenter_Resuables.clickButton("IssuePolicy for ChangePolicy");
+				strJob           = PolicyCenter_Resuables.infoBar("Job");
+				strLOB           = PolicyCenter_Resuables.infoBar("LOB");
+				strEffectiveDate = PolicyCenter_Resuables.infoBar("EffectiveDate");
+				strAccountName   = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strPolicyNumber  = PolicyCenter_Resuables.infoBar("PolicyNumber");
+				strUnderwriter   = PolicyCenter_Resuables.infoBar("Underwriter");
+				break;
+
+			case "Change Policy_ChangeConflicts":
+				Tab_Menu_Navigation.pcMenuNavigation("Change Policy");
+
+				strLOB              = PolicyCenter_Resuables.infoBar("LOB");
+				strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strPolicyNumber     = PolicyCenter_Resuables.infoBar("PolicyNumber");
+				PolicyCenter_Resuables.PC_ChangePolicyPastDate();
+				PolicyCenter_Resuables.offering();
 				PolicyCenter_Resuables.clickButton("Next");
-				//CA_Quote.quoteDetails();
+				CA_PolicyInfo.primaryNamedInsured_ChangeTo_NewPerson();
+				PolicyCenter_Resuables.clickButton("Update");
+				PolicyCenter_Resuables.NavigateToPolicyReviewScreen();
+				PolicyCenter_Resuables.PolicyReview_ChangeConflicts();
+				PolicyCenter_Resuables.clickButton("Quote");
 				PolicyCenter_Resuables.clickButton("IssuePolicy for ChangePolicy");
 				strJob           = PolicyCenter_Resuables.infoBar("Job");
 				strLOB           = PolicyCenter_Resuables.infoBar("LOB");
@@ -452,6 +479,23 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		// TODO Auto-generated method stub
 
 	}
+	/*
+	shanta
+	 */
+	public static void PolicyReview_Preemption() throws Throwable {
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.PolicyReview_Header, "equals", "Policy Review");
+		GuidewireAutomate_Validation("Search", Tab_Differences, "equals", "Differences");
+        GuidewireAutomate_Validation("PolicyItem",PolicyItem,"equals","Item");
+		GuidewireAutomate_Validation("ExistingPolicy",ExistingPolicy,"equals","Existing Policy");
+		GuidewireAutomate_Validation("Preemption",Preemption,"contains","Preemptions");
+	}
+	public static void PolicyReview_ChangeConflicts() throws Throwable {
+		GuidewireAutomate("Change Conflicts",PR_ChangeConflicts,"clickAndwait","clickAndwait");
+		GuidewireAutomate("Conflicts_OverrideAll",Conflicts_OverrideAll,"clickAndwait","clickAndwait");
+		getStaleElement("Conflicts_Submit",Conflicts_Submit);
+		GuidewireAutomate("Conflicts_Submit",Conflicts_Submit,"clickAndwait","clickAndwait");
+		GuidewireAutomate_Handle("alertaccept", "NA");
+	}
 
 	public static void newSubmissions_Edit() throws Throwable {
 
@@ -477,6 +521,20 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
+
+	}
+	/*
+	shanta
+	 */
+	public static void NavigateToPolicyReviewScreen() throws Throwable {
+		try {
+			getStaleElement("Policy Review Screen",PolicyReviewScreen);
+			GuidewireAutomate("Policy Review Screen",PolicyReviewScreen,"clickAndwait","clickAndwait");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+
+		}
 
 	}
 
@@ -640,10 +698,9 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 
 	public static void renewalDataEntry() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("StartReinstatement", strTestCaseName);
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("RenewalDataEntry", strTestCaseName);
 		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Renewal Data Entry");
-
-		GuidewireAutomate("Renewal Code", RDE_RenewalCode, "selectByVisibleTextAndwait", "Renew - account consideration");
+		GuidewireAutomate("Renewal Code", RDE_RenewalCode, "selectByVisibleTextAndwait",lhm_TestCase_Table_Data.get("Renewal Code"));
 		GuidewireAutomate("ok", OK_Button, "clickAndwait", "click");
 		GuidewireAutomate_Handle("alertaccept", "NA");
 		GuidewireAutomate_Validation("Infobar Job", InfoBar_Job, "equals", "Renewal (Renewing)");
@@ -727,6 +784,8 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		getStaleElement("Account",AccountHolder);
 		GuidewireAutomate("Account", AccountHolder, "moveToElement", "AccountHolder");
 		GuidewireAutomate("Address", AccountHolderAddress, "clickAndwait", "click");
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
 	}
 
 	/*
@@ -754,12 +813,28 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		GuidewireAutomate("Desctiption",Description,"sendKeys",lhm_TestCase_Table_Data.get("Description"));
         getStaleElement("Next",NextButton);
         GuidewireAutomate("Next",NextButton,"clickAndwait","click");
-		//GuidewireAutomate_Handle("alertaccept", "NA");
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
-
-
 	}
+
+	public static void PC_ChangePolicyPastDate() throws Throwable{
+
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcel_WorkSheet_Fillo("ChangePolicy", strTestCaseName);
+		GuidewireAutomate_Validation("Screen Header",StartPolicyChange,"equals","Start Policy Change");
+		getStaleElement("EffectiveDate",EffectiveDate);
+		getStaleElement("EffectiveDate",EffectiveDate);
+		GuidewireAutomate("EffectiveDate",EffectiveDate,"clearANDsendKeys",lhm_TestCase_Table_Data.get("PolicyChange_PastDate"));
+		getStaleElement("EffectiveDate",EffectiveDate);
+		GuidewireAutomate("EffectiveDate",EffectiveDate,"clearANDsendKeys",lhm_TestCase_Table_Data.get("PolicyChange_PastDate"));
+		GuidewireAutomate("Desctiption",Description,"sendKeys",lhm_TestCase_Table_Data.get("Description"));
+		getStaleElement("Next",NextButton);
+		GuidewireAutomate("Next",NextButton,"clickAndwait","click");
+		GuidewireAutomate_Handle("alertaccept", "NA");
+		GuidewireAutomate_Validation("Out Of Sequence Error",OutOfsequenceError,"contains","out-of-sequence ");
+		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+		lhm_TestCase_Table_Data.clear();
+	}
+
 	public static void RobotKey() throws Throwable {
 
 		try {
