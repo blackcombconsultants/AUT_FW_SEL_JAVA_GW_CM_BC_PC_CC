@@ -61,7 +61,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
 		// Highlight the Element.
 		oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", oWebElement);
-		Thread.sleep(500);
+		Thread.sleep(250);
 		oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')", oWebElement);
 
 		return oWebElement;
@@ -73,35 +73,33 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		oWebElement = null;
 
 		try {
-			Thread.sleep(3000);
-			oWebElement = driver.findElement(Locator);
+			Thread.sleep(1000);
 			oWebElement = driver.findElement(Locator);
 		} catch (StaleElementReferenceException e) {
-			oWebElement = driver.findElement(Locator);
+			Thread.sleep(1000);
 			oWebElement = driver.findElement(Locator);
 		} catch (Exception e) {
-			System.out.println("getStaleElement");
+			Thread.sleep(1000);
+			oWebElement = driver.findElement(Locator);
+			System.out.println("getStaleElement driver.findElement Exception = " + e);
 		}
 
 		try {
 			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
 		} catch (StaleElementReferenceException e) {
-			oWebElement = driver.findElement(Locator);
-			oWebElement = driver.findElement(Locator);
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
 		} catch (Exception e) {
-			System.out.println("getStaleElement");
+			oWebDriverWait.until(ExpectedConditions.visibilityOf(oWebElement));
+			System.out.println("getStaleElement ExpectedConditions Exception = " + e);
 		}
 
+		// Highlight the Element.
 		try {
-			// Highlight the Element.
 			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','background: palegreen; border: 8px solid red:')", oWebElement);
-			Thread.sleep(3000);
+			Thread.sleep(250);
 			oJavascriptExecutor.executeScript("arguments[0].setAttribute('style','border: solid 2px white')", oWebElement);
-		} catch (StaleElementReferenceException e) {
-			oWebElement = driver.findElement(Locator);
-			oWebElement = driver.findElement(Locator);
 		} catch (Exception e) {
-			System.out.println("getStaleElement");
+			System.out.println("getStaleElement Highlight Exception = " + e);
 		}
 
 	}
@@ -213,7 +211,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 					case "click" :
 						oWebDriverWait.until(ExpectedConditions.elementToBeClickable(oWebElement));
 						oWebElement.click();
-						LogMsg = command + "ed Field = " + ElementName;
+						LogMsg = "Clicked = " + ElementName;
 						break;
 					case "clickAndwait" :
 						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -319,30 +317,34 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		LogMsg      = null;
 		Actions oActions = new Actions(driver);
 		oAction = null;
-		oRobot  = new Robot();
+		System.setProperty("java.awt.headless", "false");
+
+		oRobot = new Robot();
 
 		try {
 
-			oWebElement = getElement(Locator);
-
 			if (!strValue.isEmpty()) {
 
+				oWebElement = getElement(Locator);
+
 				switch (command) {
-					case "keyDownF12" :
+					case "F12" :
 						oAction = oActions.keyDown(oWebElement, Keys.F12).build();
 						oAction.perform();
 						break;
-					case "keyUpF12" :
-						oAction = oActions.keyUp(oWebElement, Keys.F12).build();
-						oAction.perform();
-						break;
 					case "ALTSHIFTP" :
-						oAction = oActions.keyUp(oWebElement, Keys.F12).build();
+						oAction = oActions.keyUp(oWebElement, Keys.ALT).build();
 						oAction.perform();
 						break;
-					case "ALTSHIFTF" :
-						oAction = oActions.keyUp(oWebElement, Keys.F12).build();
-						oAction.perform();
+					case "ALTSHIFTT" :
+						oRobot.keyPress(KeyEvent.VK_ALT);
+						oRobot.keyPress(KeyEvent.VK_SHIFT);
+						oRobot.keyPress(KeyEvent.VK_T);
+
+						// Release key Ctrl+Shift+i
+						oRobot.keyRelease(KeyEvent.VK_T);
+						oRobot.keyRelease(KeyEvent.VK_SHIFT);
+						oRobot.keyRelease(KeyEvent.VK_ALT);
 						break;
 					case "RobotTAB" :
 						oRobot.keyPress(KeyEvent.VK_TAB);
@@ -387,12 +389,12 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 						break;
 					case "sendKeys" :
 						oWebElement.sendKeys(strValue);
-						LogMsg = ElementName + " input  = [" + strValue + "]";
+						LogMsg = ElementName + " = [" + strValue + "]";
 						break;
 					case "clearANDsendKeys" :
 						oWebElement.clear();
 						oWebElement.sendKeys(strValue);
-						LogMsg = ElementName + "  cleared value And input  = [" + strValue + "]";
+						LogMsg = ElementName + " = [" + strValue + "]";
 						break;
 					case "clearsendKeysTABTAB" :
 						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -432,24 +434,22 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 						break;
 					case "selectByIndex" :
 						new Select(oWebElement).selectByIndex(Integer.parseInt(strValue));
-						LogMsg = ElementName + "  Selected = " + strValue;
+						LogMsg = ElementName + "  <Selected> = " + strValue;
 						break;
 					case "selectByVisibleText" :
 						new Select(oWebElement).selectByVisibleText(strValue);
-						LogMsg = ElementName + "  Selected = " + strValue;
+						LogMsg = ElementName + "  <Selected> = " + strValue;
 						break;
 					case "selectByVisibleTextAndwait" :
 						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 						driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 						oWebDriverWait = new WebDriverWait(driver, 20);
-
 						new Select(oWebElement).selectByVisibleText(strValue);
-
-						LogMsg = ElementName + "  Selected = " + strValue;
+						LogMsg = ElementName + "  <Selected> = " + strValue;
 						break;
 					case "selectByValue" :
 						new Select(oWebElement).selectByValue(strValue);
-						LogMsg = ElementName + "  Selected = " + strValue;
+						LogMsg = ElementName + "  <Selected> = " + strValue;
 						break;
 					default :
 						throw new IOException("No support for command : " + command);
@@ -547,6 +547,7 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				case "alertaccept" :
 					LogMsg = Handle + " = " + driver.switchTo().alert().getText();
 					driver.switchTo().alert().accept();
+					Thread.sleep(1000);
 					break;
 				case "alertdismiss" :
 					LogMsg = Handle + " = " + driver.switchTo().alert().getText();
@@ -736,12 +737,14 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 						break;
 					case "isDisplayed" :
 						strExpected = "isDisplayed";
-						bValidation = oWebDriverWait.until(ExpectedConditions.visibilityOf(getElement(Locator))) != null;
+						bValidation = getElement(Locator).isDisplayed();
 						if (bValidation) {
 							strActual = "isDisplayed";
 						} else {
 							strActual = "isNotDisplayed";
 						}
+						bValidation = strActual.equalsIgnoreCase(strExpected);
+
 						break;
 					case "numberOfWindowsToBe" :
 						bValidation = oWebDriverWait.until(ExpectedConditions.numberOfWindowsToBe(Integer.parseInt(strValidation))).booleanValue();
@@ -942,6 +945,8 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 				alloptions = alloptions + "," + oWebElementOption.getText();
 			}
 		}
+
+		System.out.println("alloptions" + alloptions);
 		return alloptions.replace("null,", "");
 
 	}
@@ -1099,6 +1104,31 @@ public class SeleniumWebDriver_Commands extends Selenium_Utils_File {
 		}
 		return intRowNumber;
 
+	}
+
+	public static void VerifyElementNotExist(String ElementName, By Locator) {
+
+		oWebElement = null;
+		try {
+			oWebElement = driver.findElement(Locator);
+		} catch (NoSuchElementException e) {
+			oExtentTest.log(Status.PASS, ElementName + " is Not Displayed");
+		}
+	}
+
+	public static boolean IsElementDisplayed(String ElementName, By Locator) {
+		oWebElement = null;
+		Boolean bDisplayed = false;
+		// System.out.println(Locator.toString());
+
+		try {
+			oWebElement = driver.findElement(Locator);
+			bDisplayed  = oWebElement.isDisplayed();
+			System.out.println(ElementName + " = IsElementDisplayed PASS");
+		} catch (NoSuchElementException e) {
+			System.out.println(ElementName + " = IsElementDisplayed FAIL");
+		}
+		return bDisplayed;
 	}
 
 }

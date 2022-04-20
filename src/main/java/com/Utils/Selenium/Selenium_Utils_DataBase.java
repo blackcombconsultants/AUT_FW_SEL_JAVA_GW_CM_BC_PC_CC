@@ -82,6 +82,21 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 	}
 
+	public void getValue_JdbcOdbcDriver(String pFilePath) throws Exception {
+		File file = new File(pFilePath);
+		Class.forName(JdbcOdbcDriver);
+		java.sql.Connection connection = DriverManager.getConnection(String.format(MicrosoftExcelDriver, file.getAbsolutePath()));
+
+		Statement stmt      = connection.createStatement();
+		ResultSet recordset = stmt.executeQuery("SELECT * FROM [Config$]");
+
+		ArrayList<String> aField = ((Recordset) recordset).getFieldNames();
+		recordset.beforeFirst();
+		for (int i = 0; i < aField.size() - 1; i++) {
+			System.out.print(((Recordset) recordset).getField(aField.get(i)) + "\t");
+		}
+	}
+
 	public static LinkedHashMap<String, String> executeQuery(Connection oConnection, String strQuery) throws Throwable {
 
 		LinkedHashMap<String, String> lhmQueryResult = new LinkedHashMap<String, String>();
@@ -103,126 +118,55 @@ public class Selenium_Utils_DataBase extends Selenium_Utils_File {
 
 	}
 
-	public static LinkedHashMap<String, String> getData_MSExcel_WorkSheet_Fillo(String strTable, String strPrimaryKeyValue) throws Throwable {
-
-		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strPrimaryKeyValue + "'";
-		oConnection = getConnection("Fillo", pTestDataFilePath);
+	/*
+	 * WorkBook_WorkSheet_DataSet
+	 */
+	public static LinkedHashMap<String, String> getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(String pWorkBook, String WorkSheet, String PrimaryKey, int SecondKey) throws Throwable {
+		String strSelectQuery = "Select * from " + WorkSheet + " WHERE PrimaryKey='" + PrimaryKey + "' AND DataSet='" + SecondKey + "'";
+		oConnection = getConnection("Fillo", pWorkBook);
 		return executeQuery(oConnection, strSelectQuery);
-
 	}
 
-	public static LinkedHashMap<String, String> getData_MSExcel_WorkBook_WorkSheet_Fillo(String pWorkBook, String WorkSheet, String PrimaryKey) throws Throwable {
+	public static void UpdateData_MSExcel_WorkSheet_Column_DataSet_Fillo(String pWorkBook, String strTable, String strColumn, String strValue, String SecondKey) throws Throwable {
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strColumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "' AND DataSet='" + SecondKey + "'";
+		System.out.println(strUpdateQuery);
+		oConnection = getConnection("Fillo", pWorkBook);
+		oConnection.executeUpdate(strUpdateQuery);
+		oConnection.close();
+	}
 
+	/*
+	 * WorkBook_WorkSheet
+	 */
+	public static LinkedHashMap<String, String> getData_MSExcel_WorkBook_WorkSheet_Fillo(String pWorkBook, String WorkSheet, String PrimaryKey) throws Throwable {
 		String strSelectQuery = "Select * from " + WorkSheet + " WHERE PrimaryKey='" + PrimaryKey + "'";
 		oConnection = getConnection("Fillo", pWorkBook);
 		return executeQuery(oConnection, strSelectQuery);
-
 	}
 
-	public static LinkedHashMap<String, String> getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(String pFilePath, String WorkSheet, String PrimaryKey, String DataSet) throws Throwable {
-		String strSelectQuery = "Select * from " + WorkSheet + " WHERE PrimaryKey='" + PrimaryKey + "' AND DataSet='" + DataSet + "'";
-		oConnection = getConnection("Fillo", pFilePath);
+	public static void UpdateData_MSExcel_WorkSheet_Column_Fillo(String pWorkBook, String strTable, String strColumn, String strValue) throws Throwable {
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strColumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
+		System.out.println(strUpdateQuery);
+		oConnection = getConnection("Fillo", pWorkBook);
+		oConnection.executeUpdate(strUpdateQuery);
+		oConnection.close();
+	}
+
+	/*
+	 * WorkSheet
+	 */
+	public static LinkedHashMap<String, String> getData_MSExcelWorkSheet_Fillo(String strTable, String strPrimaryKeyValue) throws Throwable {
+		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strPrimaryKeyValue + "'";
+		oConnection = getConnection("Fillo", pTestDataFilePath);
 		return executeQuery(oConnection, strSelectQuery);
-
 	}
 
-	public static void UpdateData_MSExcel_WorkSheet_Fillo(String strTable, String strcolumn, String strValue) throws Throwable {
-
-		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
+	public static void UpdateData_MSExcelWorkSheet_Column_Fillo(String strTable, String strColumn, String strValue) throws Throwable {
+		String strUpdateQuery = "UPDATE " + strTable + " SET " + strColumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
 		System.out.println(strUpdateQuery);
 		oConnection = getConnection("Fillo", pTestDataFilePath);
 		oConnection.executeUpdate(strUpdateQuery);
 		oConnection.close();
-
-	}
-
-	public void getValue_JdbcOdbcDriver(String pFilePath) throws Exception {
-		File file = new File(pFilePath);
-		Class.forName(JdbcOdbcDriver);
-		java.sql.Connection connection = DriverManager.getConnection(String.format(MicrosoftExcelDriver, file.getAbsolutePath()));
-
-		Statement stmt      = connection.createStatement();
-		ResultSet recordset = stmt.executeQuery("SELECT * FROM [Config$]");
-
-		ArrayList<String> aField = ((Recordset) recordset).getFieldNames();
-		recordset.beforeFirst();
-		for (int i = 0; i < aField.size() - 1; i++) {
-			System.out.print(((Recordset) recordset).getField(aField.get(i)) + "\t");
-		}
-
-	}
-
-	public static LinkedHashMap<String, String> getData_ClaimsCenter(String strTable) throws Throwable {
-
-		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
-		oConnection = getConnection("Fillo", pTestDataFile_ClaimsCenter);
-		return executeQuery(oConnection, strSelectQuery);
-
-	}
-
-	public static void UpdateData_ClaimsCenter(String strTable, String strcolumn, String strValue) throws Throwable {
-
-		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
-		System.out.println(strUpdateQuery);
-		oConnection = getConnection("Fillo", pTestDataFile_ClaimsCenter);
-		oConnection.executeUpdate(strUpdateQuery);
-		oConnection.close();
-
-	}
-
-
-	public static LinkedHashMap<String, String> getData_BillingCenter(String strTable) throws Throwable {
-
-		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
-		oConnection = getConnection("Fillo", pTestDataFile_BillingCenter);
-		return executeQuery(oConnection, strSelectQuery);
-
-	}
-
-	public static void UpdateData_BillingCenter(String strTable, String strcolumn, String strValue) throws Throwable {
-
-		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
-		System.out.println(strUpdateQuery);
-		oConnection = getConnection("Fillo", pTestDataFile_BillingCenter);
-		oConnection.executeUpdate(strUpdateQuery);
-		oConnection.close();
-		
-	}
-
-
-	public static LinkedHashMap<String, String> getData_PersonalAuto(String strTable) throws Throwable {
-
-		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
-		oConnection = getConnection("Fillo", pTestDataFile_PersonalAuto);
-		return executeQuery(oConnection, strSelectQuery);
-
-	}
-
-	public static void UpdateData_PersonalAuto(String strTable, String strcolumn, String strValue) throws Throwable {
-
-		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
-		System.out.println(strUpdateQuery);
-		oConnection = getConnection("Fillo", pTestDataFile_PersonalAuto);
-		oConnection.executeUpdate(strUpdateQuery);
-		oConnection.close();
-		
-	}
-	public static LinkedHashMap<String, String> getData_CommercialAuto(String strTable) throws Throwable {
-
-		String strSelectQuery = "Select * from " + strTable + " WHERE PrimaryKey='" + strTestCaseName + "'";
-		oConnection = getConnection("Fillo", pTestDataFile_CommercialAuto);
-		return executeQuery(oConnection, strSelectQuery);
-
-	}
-
-	public static void UpdateData_CommercialAuto(String strTable, String strcolumn, String strValue) throws Throwable {
-
-		String strUpdateQuery = "UPDATE " + strTable + " SET " + strcolumn + "='" + strValue + "' WHERE PrimaryKey='" + strTestCaseName + "'";
-		System.out.println(strUpdateQuery);
-		oConnection = getConnection("Fillo", pTestDataFile_CommercialAuto);
-		oConnection.executeUpdate(strUpdateQuery);
-		oConnection.close();
-
 	}
 
 }

@@ -26,174 +26,164 @@ public class GW_GetDriver extends Selenium_Reporting {
 		try {
 
 			switch (StrBROWSER) {
-			case "CHROME":
+				case "CHROME" :
 
-				System.out.println("-------------------------------------------------------------------------");
-				System.out.println("launching Chrome browser");
+					System.out.println("-------------------------------------------------------------------------");
+					System.out.println("launching Chrome browser in OS =" + gstr_OSname);
 
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
-					Runtime.getRuntime().exec("taskkill /F /IM chromeDriverServer.exe");
+					try {
+						Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+						Runtime.getRuntime().exec("taskkill /F /IM chromeDriverServer.exe");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+					WebDriverManager.chromedriver().setup();
+					ChromeOptions co = new ChromeOptions();
+					// co.setCapability("chrome.binary","ChromeBinary");
+					// co.setBinary("/path/to/other/chrome/binary");
+					co.addArguments("start-maximized");
+					co.addArguments("disable-infobars");
+					co.addArguments("disable-extensions");
 
-				WebDriverManager.chromedriver().setup();
-				/*
-				 * ChromeOptions co = new ChromeOptions(); co.setCapability("chrome.binary",
-				 * "ChromeBinary"); co.addArguments("disable-infobars");
-				 * co.addArguments("disable-extensions");
-				 * co.setExperimentalOption("useAutomationExtension", false); driver = new
-				 * ChromeDriver(co);
-				 */
-				driver = new ChromeDriver();
-				break;
+					// co.setExperimentalOption("useAutomationExtension", false);
+					driver = new ChromeDriver(co);
+					// driver = new ChromeDriver();
+					break;
 
-			case "IE":
+				case "IE" :
 
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
-					Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
+					try {
+						Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+						Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+					System.out.println("launching IE browser");
 
-				System.out.println("launching IE browser");
+					WebDriverManager.iedriver().setup();
 
-				WebDriverManager.iedriver().setup();
+					/*
+					 * InternetExplorerOptions ieo = new InternetExplorerOptions(); ieo.setCapability(InternetExplorerDriver.
+					 * INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true); ieo.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING,
+					 * true); ieo.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
+					 * ieo.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+					 * ieo.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+					 * ieo.setCapability(InternetExplorerDriver.NATIVE_EVENTS,false); InternetExplorerDriver driver = new InternetExplorerDriver(ieo);
+					 */
 
-				/*
-				 * InternetExplorerOptions ieo = new InternetExplorerOptions();
-				 * ieo.setCapability(InternetExplorerDriver.
-				 * INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-				 * ieo.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING, true);
-				 * ieo.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
-				 * ieo.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-				 * ieo.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
-				 * ieo.setCapability(InternetExplorerDriver.NATIVE_EVENTS,false);
-				 * InternetExplorerDriver driver = new InternetExplorerDriver(ieo);
-				 */
+					driver = new InternetExplorerDriver();
+					break;
+				case "FIREFOX" :
 
-				driver = new InternetExplorerDriver();
-				break;
-			case "FIREFOX":
+					try {
+						Runtime.getRuntime().exec("taskkill /F /IM firefox.exe");
+						Runtime.getRuntime().exec("taskkill /F /IM FirefoxDriverServer.exe");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM firefox.exe");
-					Runtime.getRuntime().exec("taskkill /F /IM FirefoxDriverServer.exe");
+					System.out.println("launching firefox browser");
 
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+					WebDriverManager.firefoxdriver().setup();
+					/*
+					 * FirefoxOptions fo = new FirefoxOptions().setProfile(new FirefoxProfile()); fo.setBinary("binary"); driver = new
+					 * FirefoxDriver(fo);
+					 */
+					driver = new FirefoxDriver();
+					break;
+				case "EDGE" :
+					try {
+						Runtime.getRuntime().exec("taskkill /F /IM msedge.exe");
+						Runtime.getRuntime().exec("taskkill /F /IM msedgeDriverServer.exe");
 
-				System.out.println("launching firefox browser");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 
-				WebDriverManager.firefoxdriver().setup();
-				/*
-				 * FirefoxOptions fo = new FirefoxOptions().setProfile(new FirefoxProfile());
-				 * fo.setBinary("binary"); driver = new FirefoxDriver(fo);
-				 */
-				driver = new FirefoxDriver();
-				break;
-			case "EDGE":
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM msedge.exe");
-					Runtime.getRuntime().exec("taskkill /F /IM msedgeDriverServer.exe");
+					System.out.println("launching EDGE browser");
 
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+					WebDriverManager.edgedriver().setup();
+					/*
+					 * EdgeOptions eo = new EdgeOptions().setProfile(new EdgeProfile()); eo.setBinary("binary"); driver = new EdgeDriver(fo);
+					 */
 
-				System.out.println("launching EDGE browser");
+					/*
+					 * ChromeOptions chromeOptions = new ChromeOptions(); chromeOptions.
+					 * setBinary("C:\\Program Files (x86)\\Microsoft\\Edge Dev\\Application\\msedge.exe" ); EdgeOptions edgeOptions = new
+					 * EdgeOptions().merge(chromeOptions); driver = new EdgeDriver(edgeOptions);
+					 */
+					driver = new EdgeDriver();
 
-				WebDriverManager.edgedriver().setup();
-				/*
-				 * EdgeOptions eo = new EdgeOptions().setProfile(new EdgeProfile());
-				 * eo.setBinary("binary"); driver = new EdgeDriver(fo);
-				 */
+					break;
 
-				/*
-				 * ChromeOptions chromeOptions = new ChromeOptions(); chromeOptions.
-				 * setBinary("C:\\Program Files (x86)\\Microsoft\\Edge Dev\\Application\\msedge.exe"
-				 * ); EdgeOptions edgeOptions = new EdgeOptions().merge(chromeOptions); driver =
-				 * new EdgeDriver(edgeOptions);
-				 */
-				driver = new EdgeDriver();
+				case "OPERA" :
 
-				break;
+					try {
+						Runtime.getRuntime().exec("taskkill /F /IM opera.exe");
+						Runtime.getRuntime().exec("taskkill /F /IM operaDriverServer.exe");
 
-			case "OPERA":
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM opera.exe");
-					Runtime.getRuntime().exec("taskkill /F /IM operaDriverServer.exe");
+					System.out.println("launching opera browser");
 
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+					WebDriverManager.operadriver().setup();
+					/*
+					 * OperaOptions oo = new OperaOptions().setProfile(new OperaProfile()); oo.setBinary("binary"); driver = new OperaDriver(oo);
+					 */
+					driver = new OperaDriver();
+					break;
+				case "MOBILE" :
 
-				System.out.println("launching opera browser");
+					DesiredCapabilities capabilities = new DesiredCapabilities();
+					capabilities.setCapability("openDeviceTimeout", 1);
 
-				WebDriverManager.operadriver().setup();
-				/*
-				 * OperaOptions oo = new OperaOptions().setProfile(new OperaProfile());
-				 * oo.setBinary("binary"); driver = new OperaDriver(oo);
-				 */
-				driver = new OperaDriver();
-				break;
-			case "MOBILE":
+					break;
+				case "HtmlUnitDriver" :
 
-				DesiredCapabilities capabilities = new DesiredCapabilities();
-				capabilities.setCapability("openDeviceTimeout", 1);
+					// HtmlUnitDriver driver = new HtmlUnitDriver();
+					break;
 
-				break;
-			case "HtmlUnitDriver":
+				case "PhantomJSDriver" :
 
-				//HtmlUnitDriver driver = new HtmlUnitDriver();
-				break;
+					/*
+					 * File file = new File( "D:/Users/asrikanth/.m2/repository/com/codeborne/phantomjsdriver/1.4.1/phantomjsdriver-1.4.1-sources.jar"
+					 * ); System.setProperty("phantomjs.binary.path",
+					 * "D:/Users/asrikanth/.m2/repository/com/codeborne/phantomjsdriver/1.4.1/phantomjsdriver-1.4.1-sources.jar" );
+					 * 
+					 * WebDriver driver = new PhantomJSDriver();
+					 */
+					break;
 
-			case "PhantomJSDriver":
+				case "HEADLESSCHROME" :
 
-				/*
-				 * File file = new File(
-				 * "D:/Users/asrikanth/.m2/repository/com/codeborne/phantomjsdriver/1.4.1/phantomjsdriver-1.4.1-sources.jar"
-				 * ); System.setProperty("phantomjs.binary.path",
-				 * "D:/Users/asrikanth/.m2/repository/com/codeborne/phantomjsdriver/1.4.1/phantomjsdriver-1.4.1-sources.jar"
-				 * );
-				 * 
-				 * WebDriver driver = new PhantomJSDriver();
-				 */
-				break;
+					System.out.println("Headless Mode");
 
-			case "HEADLESSCHROME":
+					/*
+					 * try { Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+					 * Runtime.getRuntime().exec("taskkill /F /IM chromeDriverServer.exe");
+					 * 
+					 * } catch (IOException e) { e.printStackTrace(); }
+					 */
 
-				System.out.println("Headless Mode");
+					WebDriverManager.chromedriver().setup();
 
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
-					Runtime.getRuntime().exec("taskkill /F /IM chromeDriverServer.exe");
+					// create object of chrome options
+					ChromeOptions options = new ChromeOptions();
+					// add the headless argument
+					// options.addArguments("headless");
+					options.setHeadless(true);
+					// System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
+					// pass the options parameter in the Chrome driver declaration
+					driver = new ChromeDriver(options);
+					break;
 
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				default :
 
-				WebDriverManager.chromedriver().setup();
-
-				// create object of chrome options
-				ChromeOptions options = new ChromeOptions();
-
-				// add the headless argument
-				options.addArguments("headless");
-
-				// pass the options parameter in the Chrome driver declaration
-				driver = new ChromeDriver(options);
-				break;
-
-			default:
-
-				break;
+					break;
 			}
 
 			oJavascriptExecutor = (JavascriptExecutor) driver;
@@ -204,7 +194,7 @@ public class GW_GetDriver extends Selenium_Reporting {
 			driver = efDriver;
 
 			driver.get(url);
-			oExtentTest.log(Status.PASS, "Appliaction Launched  " + url);
+			oExtentTest.log(Status.PASS, "Launched " + url);
 
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
