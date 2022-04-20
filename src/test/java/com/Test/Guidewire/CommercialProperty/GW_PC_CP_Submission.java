@@ -5,21 +5,21 @@ import org.testng.annotations.Test;
 import com.Utils.Selenium.GW_GetDriver;
 import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
 import com.pages.Guidewire.Tab_Menu_Navigation;
-import com.pages.Guidewire.CommercialProperty.CP_Blankets;
-import com.pages.Guidewire.CommercialProperty.CP_BuildingsAndLocations;
-import com.pages.Guidewire.CommercialProperty.CP_Forms;
-import com.pages.Guidewire.CommercialProperty.CP_Modifiers;
-import com.pages.Guidewire.CommercialProperty.CP_Payment;
-import com.pages.Guidewire.CommercialProperty.CP_PolicyInfo;
-import com.pages.Guidewire.CommercialProperty.CP_PolicyReview;
-import com.pages.Guidewire.CommercialProperty.CP_Quote;
-import com.pages.Guidewire.CommercialProperty.CP_Reusable;
-import com.pages.Guidewire.CommercialProperty.CP_RiskAnalysis;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Account;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_AccountSummary;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_Bound;
-import com.pages.Guidewire.PolicyCenter.PolicyCenter_PolicySummary;
+import com.pages.Guidewire.PolicyCenter.PC_Account;
+import com.pages.Guidewire.PolicyCenter.PC_AccountSummary;
+import com.pages.Guidewire.PolicyCenter.PC_Bound;
+import com.pages.Guidewire.PolicyCenter.PC_PolicySummary;
 import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_Blankets;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_BuildingsAndLocations;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_Forms;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_Modifiers;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_Payment;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_PolicyInfo;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_PolicyReview;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_Quote;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_Reusable;
+import com.pages.Guidewire.PolicyCenter.CommercialProperty.CP_RiskAnalysis;
 
 public class GW_PC_CP_Submission extends GW_GetDriver {
 	@Test
@@ -28,8 +28,8 @@ public class GW_PC_CP_Submission extends GW_GetDriver {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter_User("SuperUser");
 		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
-		PolicyCenter_Account.createPersonAccount();
-		PolicyCenter_AccountSummary.detail_Verify();
+		PC_Account.createPersonAccount();
+		PC_AccountSummary.detail_Verify();
 		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
 		PolicyCenter_Resuables.newSubmissions_Verify();
 		CP_Reusable.newSubmission_SelectLOB_CommercialProperty(); // select
@@ -106,9 +106,9 @@ public class GW_PC_CP_Submission extends GW_GetDriver {
 		strJob = PolicyCenter_Resuables.infoBar("Job");
 		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 
-		PolicyCenter_Bound.ViewYourPolicy();
-		PolicyCenter_PolicySummary.detail_Verify();
-		PolicyCenter_PolicySummary.account_Verify();
+		PC_Bound.ViewYourPolicy();
+		PC_PolicySummary.detail_Verify();
+		PC_PolicySummary.account_Verify();
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 
 	}
