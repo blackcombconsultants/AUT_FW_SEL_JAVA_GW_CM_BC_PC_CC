@@ -4,22 +4,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
-import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCenter_ClaimExposure_PO {
+public class CC_Financials extends SeleniumWebDriver_Commands {
 
-	private static By FinancialTranscations_Header   = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Financials: Transactions')]");
-	private static By FinancialTranscations_RowCount = By.xpath("//table[@class='gw-ListViewWidget--table gw-table']/tbody/tr");
-	private static By FinancialTranscations_NextPage = By.xpath("//div[contains(@id,'TransactionsLV-_ListPaging-next')]");
-
-	private static By FT_CreateDate   = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CreateDate')]");
-	private static By FT_Amount       = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-Amount')]");
-	private static By FT_Coverage     = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CoverageType')]");
-	private static By FT_CostType     = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CostType')]");
-	private static By FT_CostCategory = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CostCategory')]");
-	private static By FT_Status       = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-Status')]");
+	private static By FinancialTranscations_Header    = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Financials: Transactions')]");
+	private static By FinancialTranscations_RowCount  = By.xpath("//table[@class='gw-ListViewWidget--table gw-table']/tbody/tr");
+	private static By FinancialTranscations_NextPage  = By.xpath("//div[contains(@id,'TransactionsLV-_ListPaging-next')]");
+	private static By FinancialTranscations_Reserver1 = By.xpath("//div[contains(@id,'TransactionsLV-0-TType')]//div[@class='gw-link gw-label']");
+	private static By FT_CreateDate                   = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CreateDate')]");
+	private static By FT_Amount                       = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-Amount')]");
+	private static By FT_Coverage                     = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CoverageType')]");
+	private static By FT_CostType                     = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CostType')]");
+	private static By FT_CostCategory                 = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-CostCategory')]");
+	private static By FT_Status                       = By.xpath("//div[contains(@id,'ClaimFinancialsTransactionsScreen-TransactionsLV-2-Status')]");
 
 	// Financial Checks
 	private static By FinancialChecks_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Financials: Checks')]");
@@ -38,7 +37,7 @@ public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCe
 		// Financial Transcations
 
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Reserve");
+			lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("Reserve");
 
 			GuidewireAutomate_Validation("FinancialsTransactions Header", FinancialTranscations_Header, "equals", "Financials: Transactions");
 			int intRowNum_DefaultReserve = Integer.parseInt(lhm_TestCase_Table_Data.get("rowNum"));
@@ -94,7 +93,7 @@ public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCe
 		// Financial Transcations
 
 		try {
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Payment");
+			lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("Payment");
 
 			GuidewireAutomate_Validation("FinancialsTransactions Header", FinancialTranscations_Header, "equals", "Financials: Transactions");
 			int intRowNum_DefaultReserve = Integer.parseInt(lhm_TestCase_Table_Data.get("DefaultRow"));
@@ -148,7 +147,7 @@ public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCe
 	public static void FT_AllItems_Verify() throws Throwable {
 		try {
 
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Reserve");
+			lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("Reserve");
 
 			int rowNum     = Integer.parseInt(lhm_TestCase_Table_Data.get("rowNum"));
 			int lastrowNum = Integer.parseInt(lhm_TestCase_Table_Data.get("LastRow"));
@@ -252,7 +251,7 @@ public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCe
 	}
 
 	public static void FT_Item_Verify() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("Payment");
+		lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("Payment");
 		try {
 			int i = Integer.parseInt(lhm_TestCase_Table_Data.get("DefaultRow"));
 
@@ -304,7 +303,7 @@ public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCe
 		try {
 			GuidewireAutomate_Validation("FinancialChecks Header", FinancialChecks_Header, "equals", "Financials: Checks");
 
-			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("NewTransaction_Check");
+			lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("NewTransaction_Check");
 
 			GuidewireAutomate_Validation("FinancialChecks PayTo", FinancialChecks_PayTo_1, "equals", lhm_TestCase_Table_Data.get("PayToTheOrderOf"));
 			GuidewireAutomate_Validation("FinancialChecks Status", FinancialChecks_Status_1, "equals", lhm_TestCase_Table_Data.get("Status"));
@@ -316,7 +315,7 @@ public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCe
 	}
 
 	public static void FinancialsChecks_Verification_2() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("NewTransaction_Check");
+		lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("NewTransaction_Check");
 		try {
 			GuidewireAutomate_Validation("FinancialChecks Header", FinancialChecks_Header, "equals", "Financials: Checks");
 
@@ -328,6 +327,20 @@ public class CC_Financials extends SeleniumWebDriver_Commands implements ClaimCe
 
 		}
 
+	}
+
+	// Author:Pankaj
+	// Date:23/01/2022
+	public static void FinancialsTransactions_Reserve1() throws Throwable {
+		try {
+
+			GuidewireAutomate_Validation("Screen Header", FinancialTranscations_Header, "equals", "Financials: Transactions");
+			GuidewireAutomate("Reserve ", FinancialTranscations_Reserver1, "clickAndwait", "click");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
 	}
 
 }

@@ -3,34 +3,82 @@ package com.Test.Guidewire.BilllingCenter;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.Tab_Menu_Navigation;
-import com.pages.Guidewire.BillingCenter.BillingCenter_NonPayment;
-import com.pages.Guidewire.BillingCenter.BillingCenter_Payments;
-import com.pages.Guidewire.BillingCenter.BillingCenter_Resuables;
+import com.pages.Guidewire.BillingCenter.BC_AccountSummary;
+import com.pages.Guidewire.BillingCenter.BC_Invoices;
+import com.pages.Guidewire.BillingCenter.BC_Payments;
+import com.pages.Guidewire.BillingCenter.BC_PolicySummary;
+import com.pages.Guidewire.BillingCenter.BC_Resuables;
 
 public class Test_Payment extends GW_GetDriver {
 	@Test
 
 	public void AUT_BC_Payment() throws Throwable {
 		// Login
-		GW_CM_PC_BC_CC_Login.login_BillingCenter();
+		BC_Resuables.login_BillingCenter_User("SuperUser");
 		// Account Search
-		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
+		BC_Resuables.bcTabNavigation_Acct_Search();
 		// INVOICES
-		Tab_Menu_Navigation.bcMenuNavigation("Invoices");
-		BillingCenter_NonPayment.NonPayment_Invoices();
+		BC_Resuables.bcMenuNavigation("Invoices");
+		BC_Payments.NonPayment_Invoices();
 		// INVOICE STREAM
-		Tab_Menu_Navigation.bcMenuNavigation("Invoice Streams");
-		BillingCenter_NonPayment.NonPayment_InvoicesStream();
-		BillingCenter_Payments.RobotKey();
-		BillingCenter_NonPayment.ReturnToBillingCenter();
-		BillingCenter_Resuables.bcTabNavigation_Acct_Search();
-		Tab_Menu_Navigation.bcMenuNavigation("New Direct Bill Payment");
-		BillingCenter_Payments.DirectBillPayments();
-		Tab_Menu_Navigation.bcMenuNavigation("Payments");
-		BillingCenter_Payments.Payments();
-		GW_CM_PC_BC_CC_Login.logout_BillingCenter();
+		BC_Resuables.bcMenuNavigation("Invoice Streams");
+		BC_Payments.NonPayment_InvoicesStream();
+		BC_Resuables.RobotKey();
+		BC_Resuables.ReturnToBillingCenter();
+		BC_Resuables.bcTabNavigation_Acct_Search();
+		BC_Resuables.bcMenuNavigation("New Direct Bill Payment");
+		BC_Payments.DirectBillPayments();
+		BC_Resuables.bcMenuNavigation("Payments");
+		BC_Payments.Payments();
+		BC_Resuables.logout_BillingCenter();
 
 	}
+
+	@Test
+	public void ReversePayment() throws Throwable {
+
+		BC_Resuables.login_BillingCenter_User("SuperUser");
+
+		BC_Resuables.bcTabNavigation_Acct_Search();
+		BC_AccountSummary.AccountSummary();
+		BC_AccountSummary.AccountSummary_Financials();
+		BC_Resuables.bcMenuNavigation("New Direct Bill Payment");
+		BC_Payments.DirectBillPayment();
+		BC_Resuables.bcMenuNavigation("Payments");
+		BC_Payments.Payments();
+		BC_Resuables.logout_BillingCenter();
+
+	}
+
+	@Test
+	public void PaymentSchedule() throws Throwable {
+
+		BC_Resuables.login_BillingCenter_User("SuperUser");
+
+		BC_Resuables.bcTabNavigation_Policy_Search();
+		BC_PolicySummary.PolicySummary_Overview();
+		BC_Resuables.clickButton("Payment Schedule");
+		BC_Payments.PaymentSchedule();
+
+		BC_Resuables.logout_BillingCenter();
+
+	}
+
+	@Test
+	public void SuspensePaymentProcess() throws Throwable {
+
+		BC_Resuables.login_BillingCenter_User("SuperUser");
+
+		BC_Resuables.bcTabNavigation_Acct_Search();
+		BC_AccountSummary.AccountSummary();
+		BC_Resuables.bcMenuNavigation("Invoices");
+		BC_Invoices.Invoices_Verify();
+		BC_Resuables.bcMenuNavigation("Suspense Payments");
+		BC_Payments.SuspensePaymentProcess();
+		BC_Resuables.clickButton("Update");
+
+		BC_Resuables.logout_BillingCenter();
+
+	}
+
 }

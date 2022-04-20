@@ -135,7 +135,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By StartCancellation_Button       = By.xpath("//div[@id='StartCancellation-StartCancellationScreen-NewCancellation']//div[@role='button']");
 
 	final By Confirmation_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Confirmation']");
-
+	final By PolicyReviewScreen = By.xpath("//div[@id='PolicyChangeWizard-PolicyReview']//div[@class='gw-label']");
 	final By SCFP_PolicyNumber        = By.xpath("//div[contains(@id,'SummaryDV-PolicyNumber')]//div[@class='gw-value-readonly-wrapper']");
 	final By SCFP_PrimaryNamedInsured = By.xpath("//div[contains(@id,'Quote_SummaryDV-Insured')]//div[@class='gw-value-readonly-wrapper']");
 	final By SCFP_Address             = By.xpath("//div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']");
@@ -176,7 +176,14 @@ public interface PolicyCenter_Resuables_PO {
 
 	final By SPC_EffectiveDate = By.xpath("//div[contains(@id,'ReinstatementDate')]//div[@class='gw-value-readonly-wrapper']");
 	final By SPC_Description   = By.xpath("//textarea[contains(@name,'ReinstatePolicyDV-ReasonDescription')]");
-
+	final By Tab_Differences  = By.xpath("//div[contains(@id,'DiffsTab')]");
+	final By PolicyItem       = By.xpath("//div[contains(@id,'DiffTreePanelLV-itemHeader_inner')]");
+	final By ExistingPolicy   = By.xpath("//div[contains(@id,'DiffTreePanelLV-value1Header_inner')]");
+	final By Preemption       = By.xpath("//div[contains(@id,'DiffTreePanelLV-value2Header_inner')]");
+	final By PR_ChangeConflicts = By.xpath("//div[contains(@id,'DifferencesScreen-OOSConflictsTab')]//div[@class='gw-label']");
+	final By Conflicts_OverrideAll = By.xpath("//div[contains(@id,'ConflictTableLV_tb-OverrideAll')]//div[@role='button']");
+	final By Conflicts_Submit = By.xpath("//div[contains(@id,'OOSConflictPanelSet-ConflictTableLV-Done')]");
+	final By Tab_PolicyReview = By.xpath("//div[contains(@id,'RewriteWizard_DifferencesScreen-PolicyReviewTab')]");
 	/*
 	 * renewal
 	 */
@@ -219,7 +226,7 @@ public interface PolicyCenter_Resuables_PO {
     final By Description = By.xpath("//input[contains(@name,'StartPolicyChangeDV-Description')]");
 	final By EffectiveDate = By.xpath("//div[contains(@id,'StartPolicyChangeDV-EffectiveDate')]//input[@type='text']");
     final By NextButton = By.xpath("//div[contains(@id,'NewPolicyChange')]//div[@role='button']");
-
+	final By OutOfsequenceError = By.xpath("//div[contains(@id,'-Warning')]//div[@class='gw-PanelIteratorEntryWidget gw-styleTag--PanelRefWidget']");
 	/*
 	Run Batch process
 	 */
