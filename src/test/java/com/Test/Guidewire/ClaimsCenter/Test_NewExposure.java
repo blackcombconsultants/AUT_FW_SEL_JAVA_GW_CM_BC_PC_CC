@@ -3,11 +3,9 @@ package com.Test.Guidewire.ClaimsCenter;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.Tab_Menu_Navigation;
+import com.pages.Guidewire.ClaimsCenter.CC_Exposure;
 import com.pages.Guidewire.ClaimsCenter.CC_NewClaimWizard;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_ClaimExposure;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Resuables;
+import com.pages.Guidewire.ClaimsCenter.CC_Reusables;
 
 public class Test_NewExposure extends GW_GetDriver {
 
@@ -15,24 +13,24 @@ public class Test_NewExposure extends GW_GetDriver {
 	public void AUT_NewExposure_ChoosebyCoverageType() throws Throwable {
 
 		// ------>Login to CliamCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
+		CC_Reusables.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ------->Checking ChoosebyCoverageType_Exposure
-		Tab_Menu_Navigation.ccMenuNavigation("Choose by Coverage Type");
+		CC_Reusables.ccMenuNavigation("Choose by Coverage Type");
 
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("C");
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("D");
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("E");
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("L");
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("M");
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("P");
+		CC_Exposure.ChoosebyCoverageType_Exposure("C");
+		CC_Exposure.ChoosebyCoverageType_Exposure("D");
+		CC_Exposure.ChoosebyCoverageType_Exposure("E");
+		CC_Exposure.ChoosebyCoverageType_Exposure("L");
+		CC_Exposure.ChoosebyCoverageType_Exposure("M");
+		CC_Exposure.ChoosebyCoverageType_Exposure("P");
 
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("R");
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("T");
-		ClaimCenter_ClaimExposure.ChoosebyCoverageType_Exposure("U");
+		CC_Exposure.ChoosebyCoverageType_Exposure("R");
+		CC_Exposure.ChoosebyCoverageType_Exposure("T");
+		CC_Exposure.ChoosebyCoverageType_Exposure("U");
 
 	}
 
@@ -40,13 +38,13 @@ public class Test_NewExposure extends GW_GetDriver {
 	public void AUT_NewExposure_ChoosebyCoverage_MedicalPayments() throws Throwable {
 
 		// ------>Login to CliamCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
+		CC_Reusables.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 		// ---->Adding new exposure
-		Tab_Menu_Navigation.ccMenuNavigation("Medical Payments");
-		ClaimCenter_Resuables.newExposure();
+		CC_Reusables.ccMenuNavigation("Medical Payments");
+		CC_Exposure.newExposure();
 
 	}
 

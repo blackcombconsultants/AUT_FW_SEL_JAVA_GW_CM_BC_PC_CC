@@ -2,7 +2,6 @@ package com.Utils.Selenium;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class Selenium_Reporting extends GW_Base {
 
@@ -10,8 +9,7 @@ public class Selenium_Reporting extends GW_Base {
 
 		/*
 		 * oExtentSparkReporter = new ExtentSparkReporter(pExtentReport_indexFile);
-		 * oExtentSparkReporter.config().setDocumentTitle("Automation Report");
-		 * oExtentSparkReporter.config().setReportName(gwAPPLICATION);
+		 * oExtentSparkReporter.config().setDocumentTitle("Automation Report"); oExtentSparkReporter.config().setReportName(gwAPPLICATION);
 		 */
 		// oExtentSparkReporter.config().setTheme(Theme.DARK);
 

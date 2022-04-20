@@ -3,12 +3,11 @@ package com.Test.Guidewire.ClaimsCenter;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
-import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
-import com.pages.Guidewire.Tab_Menu_Navigation;
+import com.pages.Guidewire.ClaimsCenter.CC_CreateManualCheck;
+import com.pages.Guidewire.ClaimsCenter.CC_CreateRecovery;
 import com.pages.Guidewire.ClaimsCenter.CC_NewClaimWizard;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_CreateManualCheck;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_CreateRecovery;
-import com.pages.Guidewire.ClaimsCenter.ClaimCenter_Resuables;
+import com.pages.Guidewire.ClaimsCenter.CC_Reserve;
+import com.pages.Guidewire.ClaimsCenter.CC_Reusables;
 
 public class Test_NewTransaction extends GW_GetDriver {
 
@@ -16,13 +15,13 @@ public class Test_NewTransaction extends GW_GetDriver {
 	public void AUT_NewTransaction_Reserve() throws Throwable {
 
 		// ------>Login to CliamCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
+		CC_Reusables.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 		// ------>Adding Reserve
-		Tab_Menu_Navigation.ccMenuNavigation("Reserve");
-		ClaimCenter_Resuables.addingReserve();
+		CC_Reusables.ccMenuNavigation("Reserve");
+		CC_Reserve.addingReserve();
 
 	}
 
@@ -34,35 +33,35 @@ public class Test_NewTransaction extends GW_GetDriver {
 	@Test
 	public void AUT_NewTransaction_ManualCheck() throws Throwable {
 		// ------>Login to CliamCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
+		CC_Reusables.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 
 		// ----->Adding manual check
 
-		Tab_Menu_Navigation.ccMenuNavigation("Manual Check");
-		ClaimCenter_CreateManualCheck.Enterpayeeinformation();
-		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_CreateManualCheck.Enterpaymentinformation();
-		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_Resuables.clickButton("Next");
-		ClaimCenter_CreateManualCheck.Setcheckinstructions();
+		CC_Reusables.ccMenuNavigation("Manual Check");
+		CC_CreateManualCheck.Enterpayeeinformation();
+		CC_Reusables.clickButton("Next");
+		CC_CreateManualCheck.Enterpaymentinformation();
+		CC_Reusables.clickButton("Next");
+		CC_Reusables.clickButton("Next");
+		CC_CreateManualCheck.Setcheckinstructions();
 
 	}
 
 	@Test
 	public void AUT_NewTransaction_Recovery() throws Throwable {
 		// ------>Login to CliamCenter
-		GW_CM_PC_BC_CC_Login.login_ClaimsCenter_User("SuperUser");
+		CC_Reusables.login_ClaimsCenter_User("SuperUser");
 
 		// ------>Creating New Claim
 		CC_NewClaimWizard.assignClaimProcess("VerifiedPolicyAuto");
 		// ------->Recovery
 
-		Tab_Menu_Navigation.ccMenuNavigation("Recovery");
-		ClaimCenter_CreateRecovery.createRecovery();
-		ClaimCenter_Resuables.clickButton("Update");
+		CC_Reusables.ccMenuNavigation("Recovery");
+		CC_CreateRecovery.createRecovery();
+		CC_Reusables.clickButton("Update");
 
 	}
 

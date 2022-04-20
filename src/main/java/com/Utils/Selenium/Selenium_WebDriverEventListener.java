@@ -9,7 +9,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 public class Selenium_WebDriverEventListener extends GW_GetDriver implements WebDriverEventListener {
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
-		System.out.println("Before navigating to: '" + url + "'");
+		// System.out.println("Before navigating to: '" + url + "'");
 	}
 
 	public void afterNavigateTo(String url, WebDriver driver) {
@@ -47,7 +47,7 @@ public class Selenium_WebDriverEventListener extends GW_GetDriver implements Web
 
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
 		System.out.println("Found Element By : " + by.toString());
-		//oExtentTest.log(Status.INFO, "Working on Element By: " + element.toString());
+		// oExtentTest.log(Status.INFO, "Working on Element By: " + element.toString());
 	}
 
 	public void beforeScript(String script, WebDriver driver) {
