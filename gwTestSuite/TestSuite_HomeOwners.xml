@@ -14,7 +14,7 @@
 		name="PersonalAuto PC NewSubmission Regression Test">
 		<classes>
 			<class
-				name="com.Test.Guidewire.PolicyCenter.GW_PC_HomeOwners_Submission">
+				name="com.Test.Guidewire.HomeOwners.GW_PC_HomeOwners_Submission">
 				<methods>
 					<include
 						name="AUT_HO_PC_NewSubmission_NewAccount_NewSubmission"/>

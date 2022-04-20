@@ -11,15 +11,101 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.Utils.Selenium.SeleniumWebDriver_Commands;
-import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Commands implements BusinessSettings_ActivityPatterns_PO {
+public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Commands {
 
 	public BusinessSettings_ActivityPatterns(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
+
+	private static By ActivityPatterns_Header = By.xpath("//div[contains(@id,'ActivityPatternsTitle')]//div[@class='gw-TitleBar--title']");
+
+	// -------> Header (Subject, Class, Category, Type, Priority, Mandatory,
+	// Automated
+	private static By AP_Subject_column   = By.xpath("//div[contains(@id,'SubjectHeader')]//div[contains(@id,'SubjectHeader_inner')]");
+	private static By AP_Class_column     = By.xpath("//div[contains(@id,'ActivityClassHeader')]//div[contains(@id,'ActivityClassHeader_inner')]");
+	private static By AP_Category_column  = By.xpath("//div[contains(@id,'CategoryHeader')]//div[contains(@id,'CategoryHeader_inner')]");
+	private static By AP_Type_column      = By.xpath("//div[contains(@id,'TypeHeader')]//div[contains(@id,'TypeHeader_inner')]");
+	private static By AP_Priority_column  = By.xpath("//div[contains(@id,'PriorityHeader')]//div[contains(@id,'PriorityHeader_inner')]");
+	private static By AP_Mandatory_column = By.xpath("//div[contains(@id,'MandatoryHeader')]//div[contains(@id,'MandatoryHeader_inner')]");
+	private static By AP_Automated_column = By.xpath("//div[contains(@id,'AutomatedOnlyHeader')]//div[contains(@id,'AutomatedOnlyHeader_inner')]");
+
+	// ----->Activity Pattern Activity1
+	private static By AP_Activity1 = By.xpath("//tr[contains(@id,'ActivityPatternsLV-0-1')]");
+
+	// forActivities Columns in on Page
+	private static By AP_Subject   = By.xpath("//div[contains(@id,'Subject_button')]");
+	private static By AP_Class     = By.xpath("//td[contains(@id,'ActivityClass_Cell')]");
+	private static By AP_Category  = By.xpath("//td[contains(@id,'Category_Cell')]");
+	private static By AP_Type      = By.xpath("//td[contains(@id,'Type_Cell')]");
+	private static By AP_Priority  = By.xpath("//td[contains(@id,'Priority_Cell')]");
+	private static By AP_Mandatory = By.xpath("//td[contains(@id,'Mandatory_Cell')]");
+	private static By AP_Automated = By.xpath("//td[contains(@id,'AutomatedOnly_Cell')]");
+
+	private static By AP_PageNo   = By.xpath("//input[contains(@id,'ActivityPatternsLV-_ListPaging-input')]");
+	private static By rowCount    = By.xpath("//table/tbody/tr[contains(@id,'ActivityPatternsScreen-ActivityPatternsLV')]");
+	private static By columnCount = By.xpath("//tr[@id='ActivityPatterns-ActivityPatternsScreen-ActivityPatternsLV-4']/td");
+
+	/*------
+	  Header for Activity Patterns
+	 --- ---*/
+
+	private static By ActivityPatternDetails_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@class='gw-TitleBar--title']");
+	/*----------
+	  Activity Pattern
+	  --------*/
+
+	private static By APD_ActivityPattern = By.xpath("//div[contains(@id,'AdminActivityPatternDV-1')]//div[@class='gw-label gw-boldLabel']");
+
+	private static By APD_AP_Subject                 = By.xpath("//div[contains(@id,'AdminActivityPatternDV-Subject')]//div[@class='gw-value-readonly-wrapper']");
+	private static By APD_AP_ShortSubject            = By.xpath("//div[contains(@id,'ShortSubject')]//div[@class='gw-value']");
+	private static By APD_AP_Class                   = By.xpath("//div[contains(@id,'ActivityClass')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_Type                    = By.xpath("//div[contains(@id,'AdminActivityPatternDV-Type')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_Category                = By.xpath("//div[contains(@id,'Category')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_Code                    = By.xpath("//div[contains(@id,'Code')]//div[@class='gw-value-readonly-wrapper']");
+	private static By APD_AP_Priority                = By.xpath("//div[contains(@id,'Priority')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_Mandatory               = By.xpath("//div[contains(@id,'Mandatory')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_CalenderImportance      = By.xpath("//div[contains(@id,'Importance')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_ClaimLossType           = By.xpath("//div[contains(@id,'ClaimLossType')]//div[@class='gw-value']");
+	private static By APD_AP_AutomatedOnly           = By.xpath("//div[contains(@id,'AutomatedOnly')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_AvailableForClosedClaim = By.xpath("//div[contains(@id,'AvailableForClosedClaim')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_ExternallyOwned         = By.xpath("//div[contains(@id,'ExternallyOwned')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_DocumentTemplate        = By.xpath("//div[contains(@id,'CreateDocument')]//div[@class='gw-value']");
+	private static By APD_AP_EmailTemplate           = By.xpath("//div[contains(@id,'EmailTemplate')]//div[@class='gw-value']");
+	private static By APD_AP_Recurring               = By.xpath("//div[contains(@id,'Recurring')]//div[@class='gw-RangeValue']");
+	private static By APD_AP_Description             = By.xpath("//div[contains(@id,'Description')]//div[@class='gw-value-readonly-wrapper']");
+
+	/*-----------
+	  Activity Pattern Dates
+	  -------*/
+
+	private static By APD_ActivityPatternDates = By.xpath("//div[contains(@id,'AdminActivityPatternDV-3')]//div[@class='gw-label gw-boldLabel']");
+	// private static By APD_AP_Target =
+	// By.xpath("//div[contains(@id,'TargetDays')]//div[@class='gw-value-readonly-wrapper']");
+
+	private static By APD_APDates_Target                     = By.xpath("//div[contains(@id,'TargetDays')]//div[@class='gw-value']");
+	private static By APD_APDates_TargetHours                = By.xpath("//div[contains(@id,'TargetHours')]//div[@class='gw-value']");
+	private static By APD_APDates_TargetStartPoint           = By.xpath("//div[contains(@id,'TargetStartPoint')]//div[@class='gw-value']");
+	private static By APD_APDates_TargetIncludeTheseDays     = By.xpath("//div[contains(@id,'TargetStartPoint_Input')]/following-sibling::div[contains(@id,'TargetIncludeDays_Input')]/div[@class='gw-value']");
+	private static By APD_APDates_TargetBusinesscalendarType = By.xpath("//div[contains(@id,'TargetIncludeDays_Input')]/following-sibling::div[contains(@id,'TargetBusCalType_Input')]/div[@class='gw-value']");
+
+	private static By APD_APDates_EscalationDays                 = By.xpath("//div[contains(@id,'EscalationDays')]//div[@class='gw-value']");
+	private static By APD_APDates_EscalationHours                = By.xpath("//div[contains(@id,'EscalationHours')]//div[@class='gw-value']");
+	private static By APD_APDates_EscalationStartPoint           = By.xpath("//div[contains(@id,'EscalationStartPoint')]//div[@class='gw-value']");
+	private static By APD_APDates_EscalationIncludeTheseDays     = By.xpath("//div[contains(@id,'EscalationStartPoint_Input')]/following-sibling::div[contains(@id,'EscalationIncludeDays_Input')]/div[@class='gw-value']");
+	private static By APD_APDates_EscalationBusinesscalendarType = By.xpath("//div[contains(@id,'EscalationIncludeDays_Input')]/following-sibling::div[contains(@id,'EscalationBusCalType_Input')]/div[@class='gw-value']");
+	// private static By AP_NextButton = By.xpath("//div[@class='gw-paging--button-next
+	// gw-paging--button']");
+	private static By AP_Enter                 = By.xpath("//input[contains(@id,'ActivityPatternsLV-_ListPaging-input')]");
+	private static By NewActivityPatternButton = By.xpath("//div[contains(@id,'ActivityPatterns_NewActivityPatternButton')]//div[@role='button']");
+	private static By NewActivityPatternHeader = By.xpath("//div[contains(@id,'ActivityPatternDetailScreen-ttlBar')]//div[@role='heading']");
+	private static By NAP_Subject              = By.xpath("//input[contains(@name,'AdminActivityPatternDV-Subject')]");
+	private static By NAP_Category             = By.xpath("//select[contains(@name,'AdminActivityPatternDV-Category')]");
+	private static By NAP_Code                 = By.xpath("//input[contains(@name,'AdminActivityPatternDV-Code')]");
+	private static By NAP_CalendarImp          = By.xpath("//select[contains(@name,'AdminActivityPatternDV-Importance')]");
+	private static By NAP_AutoClose            = By.xpath("//input[contains(@id,'AllowAutoClose_Ext_1')]");
 
 	// ----------> validating Header data
 	public static void verify_ActivityPatterns_ColumnHeader() throws Throwable {
@@ -55,7 +141,7 @@ public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Command
 	// ----------> validating Sorted By Subject
 	public static void verifysortedBySubject() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("ActivityPatterns");
+		lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("ActivityPatterns");
 
 		ArrayList<String> aSubjects_Expected = new ArrayList<String>();
 		aSubjects_Expected.add(lhm_TestCase_Table_Data.get("AP_Subject0"));
@@ -81,7 +167,7 @@ public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Command
 	// ----------> validating Rows Count
 	public static void ActivityPatternsRowsCount() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("ActivityPatterns");
+		lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("ActivityPatterns");
 
 		List<WebElement> ActivityPatterns         = getElements(rowCount);
 		int              TotalRows                = ActivityPatterns.size() - 1;
@@ -151,7 +237,7 @@ public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Command
 	// ----------> validating Activities
 	public static void ActivityPatterns() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("ActivityPatterns");
+		lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("ActivityPatterns");
 
 		List<WebElement> ActivityPatterns = getElements(rowCount);
 
@@ -210,7 +296,7 @@ public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Command
 
 	public static void VerifyActivityPatterns() throws Throwable {
 
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_ClaimsCenter("ActivityPatternDetail");
+		lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("ActivityPatternDetail");
 
 		/*------
 		  Validation for Activity Patterns
@@ -220,8 +306,8 @@ public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Command
 
 		GuidewireAutomate_Validation("Screen Header", ActivityPatterns_Header, "equals", "Activity Patterns");
 
-		GuidewireAutomate("Page No ", BusinessSettings_ActivityPatterns_PO.AP_PageNo, "clearsendKeysoJavascriptExecutor", lhm_TestCase_Table_Data.get("page"));
-		GuidewireAutomate_Validation("Page No ", BusinessSettings_ActivityPatterns_PO.AP_PageNo, "valueEqualsAssert", lhm_TestCase_Table_Data.get("page"));
+		GuidewireAutomate("Page No ", AP_PageNo, "clearsendKeysoJavascriptExecutor", lhm_TestCase_Table_Data.get("page"));
+		GuidewireAutomate_Validation("Page No ", AP_PageNo, "valueEqualsAssert", lhm_TestCase_Table_Data.get("page"));
 		oExtentTest.log(Status.PASS, "Navigated to Page No : " + lhm_TestCase_Table_Data.get("page"));
 
 		// Validation for Activity Patterns subject
@@ -618,6 +704,43 @@ public class BusinessSettings_ActivityPatterns extends SeleniumWebDriver_Command
 		GuidewireAutomate_Validation("Escalation startpoint", APD_APDates_EscalationStartPoint, "equals", lhm_TestCase_Table_Data.get("Escalation_StartPoint"));
 		GuidewireAutomate_Validation("Escalation IncludeTheseDays", APD_APDates_EscalationIncludeTheseDays, "equals", lhm_TestCase_Table_Data.get("Escalation_IncludeTheseDays"));
 		GuidewireAutomate_Validation("Escalation BusinessCalendarType", APD_APDates_EscalationBusinesscalendarType, "equals", lhm_TestCase_Table_Data.get("Escalation_BusinessCalendarType"));
+
+	}
+	/*
+	 * Owner: Rahul Dixit Date; 21/01/2022
+	 */
+	public static void NewActivityPattern() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("ActivityPatterns");
+
+			GuidewireAutomate("New Activity Pattern Button", NewActivityPatternButton, "clickAndwait", "click");
+			GuidewireAutomate_Validation("Screen Header", NewActivityPatternHeader, "equals", "New Activity Pattern");
+			GuidewireAutomate("NAP_Subject", NAP_Subject, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Subject"));
+			GuidewireAutomate("NAP_Category", NAP_Category, "selectByVisibleText", lhm_TestCase_Table_Data.get("Category"));
+			GuidewireAutomate("NAP_Code", NAP_Code, "clearANDsendKeys", lhm_TestCase_Table_Data.get("Code"));
+			GuidewireAutomate("NAP_CalendarImp", NAP_CalendarImp, "selectByVisibleText", lhm_TestCase_Table_Data.get("CalendarImportance"));
+			GuidewireAutomate("NAP_AutoClose", NAP_AutoClose, "clickAndwait", "click");
+			CC_Reusables.clickButton("Update");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
+	/*
+	 * Owner: Rahul Dixit Date; 21/01/2022
+	 */
+	public static void Verify_NewActivityReviewNewClaim() throws Throwable {
+		try {
+			lhm_TestCase_Table_Data = CC_Reusables.getData_ClaimsCenter("ActivityPatterns");
+
+			GuidewireAutomate_Validation("Screen Header", NewActivityPatternHeader, "equals", "New Activity Pattern");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
 
 	}
 
