@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -29,6 +30,10 @@ public class CA_Drivers extends SeleniumWebDriver_Commands {
 	private static By VerifyDriverLastName     = By.xpath("//div[contains(@id,'LastName_button')]");
 	private static By VerifyDriverFirstName    = By.xpath("//div[contains(@id,'FirstName_button')]");
 	private static By VerifyDriverLicenseState = By.xpath("//td[contains(@id,'LicenseState_Cell')]//div[@class='gw-RangeValue']");
+
+	//Remove Driver
+	static By DriverCheckBox = By.xpath("//div[contains(@id,'BADriversScreen-BADriversLV-0-_Checkbox')]");
+	static By RemoveDriver = By.xpath("//div[contains(@id,'BADriversScreenToolbar-Remove')]//div[@role='button']");
 
 	public static void Driver() throws Throwable {
 
@@ -61,6 +66,22 @@ public class CA_Drivers extends SeleniumWebDriver_Commands {
 			GuidewireAutomate_Validation("Verify Driver FirsttName", VerifyDriverFirstName, "equals", lhm_TestCase_Table_Data.get("CA_DriverFirstName"));
 			GuidewireAutomate_Validation("Verify Driver License State", VerifyDriverLicenseState, "equals", lhm_TestCase_Table_Data.get("CA_DriverLicenseState"));
 
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+
+		}
+	}
+	/*
+	shanta
+	 */
+	public static void RemoveDriver() throws Throwable {
+
+		try {
+			GuidewireAutomate_Validation("Drivers Header", DriversHeader, "equals", "Drivers");
+			GuidewireAutomate("DriverCheckBox",DriverCheckBox,"clickAndwait","click");
+			GuidewireAutomate("RemoveDriver",RemoveDriver,"clickAndwait","click");
+			oExtentTest.log(Status.PASS, "New Driver is Removed");
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;

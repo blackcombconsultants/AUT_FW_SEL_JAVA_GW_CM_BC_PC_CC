@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -159,6 +160,24 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 	public static void primaryNamedInsured_ChangeTo_NewPerson() throws Throwable {
 
 		try {
+			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
+			getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
+			GuidewireAutomate("ChangeTo", PrimaryNamedInsured_ChangeTo_Button, "clickAndwait", "click");
+			GuidewireAutomate("NewPerson", PrimaryNamedInsured_ChangeTo_NewPerson, "clickAndwait", "click");
+			GuidewireAutomate_Validation("Screen Header", NewPrimaryNamedInsured, "equals", "New Primary Named Insured");
+			GuidewireAutomate_Validation("PersonName", PI_AddNewPerson, "equals", "Person");
+			GuidewireAutomate("FirstName", PI_Firstname, "sendKeys", lhm_TestCase_Table_Data.get("PI_FirstName"));
+			GuidewireAutomate("LastName", PI_Lastname, "sendKeys", lhm_TestCase_Table_Data.get("PI_LastName"));
+			GuidewireAutomate("WorkPhone", PI_WorkPhone, "sendKeys", lhm_TestCase_Table_Data.get("PI_WorkPhone"));
+			GuidewireAutomate("Address1", PI_Address_1,"click","click");
+			Thread.sleep(2000);
+			GuidewireAutomate("Address1", PI_Address_1, "sendKeys", lhm_TestCase_Table_Data.get("PI_Address_1"));
+			getStaleElement("State", PI_StateName);
+			GuidewireAutomate("State", PI_StateName, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_StateName"));
+			getStaleElement("AddressType", PI_AddressType);
+			GuidewireAutomate("AddressType", PI_AddressType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_AddressType"));
+
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
@@ -171,22 +190,8 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 	}
 
 	public static void primaryNamedInsured_ChangeTo_FromAddressBook() throws Throwable {
-		lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
+
 		try {
-			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
-			getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
-			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
-			GuidewireAutomate("ChangeTo", PrimaryNamedInsured_ChangeTo_Button, "clickAndwait", "click");
-			GuidewireAutomate("NewPerson", PrimaryNamedInsured_ChangeTo_NewPerson, "clickAndwait", "click");
-			GuidewireAutomate_Validation("Screen Header", NewPrimaryNamedInsured, "equals", "New Primary Named Insured");
-			GuidewireAutomate_Validation("PersonName", PI_AddNewPerson, "equals", "Person");
-			GuidewireAutomate("FirstName", PI_Firstname, "sendKeys", lhm_TestCase_Table_Data.get("PI_FirstName"));
-			GuidewireAutomate("LastName", PI_Lastname, "sendKeys", lhm_TestCase_Table_Data.get("PI_LastName"));
-			GuidewireAutomate("WorkPhone", PI_WorkPhone, "sendKeys", lhm_TestCase_Table_Data.get("PI_WorkPhone"));
-			GuidewireAutomate("Address1", PI_Address_1, "sendKeys", lhm_TestCase_Table_Data.get("PI_Address_1"));
-			getStaleElement("State", PI_StateName);
-			GuidewireAutomate("State", PI_StateName, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_StateName"));
-			GuidewireAutomate("AddressType", PI_AddressType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_AddressType"));
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
@@ -434,12 +439,12 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 
 			GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_PD_TermType"));
 			GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearsendKeysTABTAB", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
+			getStaleElement("Expiration Date", PI_PD_ExpirationDate);
 			GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
 			GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
-			getStaleElement("Expiration Date", PI_PD_ExpirationDate);
 
 			GuidewireAutomate("Base State", PI_PD_RateAsOfDateBaseState, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_BaseState"));
-			GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
+			//GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();

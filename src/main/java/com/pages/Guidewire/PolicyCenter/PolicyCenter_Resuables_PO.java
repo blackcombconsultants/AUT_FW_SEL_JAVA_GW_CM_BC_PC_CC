@@ -118,7 +118,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By OrganizationDescription = By.xpath("//input[contains(@name,'SearchDV-Description')]");
 
 	final By Of_OfferingSelection = By.xpath("//select[contains(@name,'OfferingScreen-OfferingSelection')]");
-	final By AS_Edit_Button       = By.xpath("//div[contains(@id,'EditAccount')]//div[@role='menuitem']");
+	final By AS_Edit_Button       = By.xpath("//div[contains(@id,'EditAccount')]//div[@role='button']");
 	/*
 	 * Start Cancellation For Policy
 	 */
@@ -208,8 +208,8 @@ public interface PolicyCenter_Resuables_PO {
 		.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Contacts']//div[@role='menuitem']");
 	final By AccountFileContacts = By.xpath("//div[contains(@id,'ContactsScreen-ttlBar')]//div[@role='heading']");
 	final By CreateNewContact = By.xpath("//div[contains(@id,'addContactButton')]//div[@role='button']");
-	final By NamedInsured = By.xpath("//div[contains(@id,'addContactButton-9-roleType')]//div[contains(@class,'expand-button')]");
-	final By NewCompany = By.xpath("//div[contains(@id,'addContactButton-9-roleType-0-contactType')]//div[@role='menuitem']");
+	final By NamedInsured = By.xpath("//div[contains(@id,'addContactButton-10-roleType')]//div[contains(@class,'expand-button')]");
+	final By NewCompany = By.xpath("//div[contains(@id,'addContactButton-10-roleType-0-contactType')]//div[@role='menuitem']");
 	final By NewNamedInsured = By.xpath("//div[contains(@id,'ContactDetailScreen-ttlBar')]//div[@class='gw-TitleBar--title']");
 	final By CompanyHeader = By.xpath("//div[contains(@id,'ContactNameInputSet-0')]//div[@class='gw-label gw-boldLabel']");
 	final By CompanyName = By.xpath("//div[contains(@id,'GlobalContactNameInputSet-Name')]//input[@type='text']");

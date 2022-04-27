@@ -142,7 +142,7 @@ public class PC_Account extends SeleniumWebDriver_Commands {
 
 		GuidewireAutomate("Organization Name", OS_OrganizationName, "sendKeys", lhm_TestCase_Table_Data.get("OS_OrganizationName"));
 		GuidewireAutomate("Organization Type", OS_OrganizationType, "selectByVisibleText", lhm_TestCase_Table_Data.get("OS_OrganizationType"));
-
+		getStaleElement("Country", GW_Country);
 		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
 		// GuidewireAutomate("State", GW_State, "selectByVisibleText",
 		// lhm_TestCase_Table_Data.get("GW_State"));
@@ -154,10 +154,11 @@ public class PC_Account extends SeleniumWebDriver_Commands {
 			// "equals",
 		// "Active");
 		GuidewireAutomate("Producer Tier", OS_ProducerTier, "sendKeys", lhm_TestCase_Table_Data.get("OS_ProducerTier"));
+		getStaleElement("Producer Code", OS_ProducerCode);
 		GuidewireAutomate("Producer Code", OS_ProducerCode, "sendKeys", lhm_TestCase_Table_Data.get("OS_ProducerCode"));
 		GuidewireAutomate("Policy", OS_Policy, "sendKeys", lhm_TestCase_Table_Data.get("OS_Policy"));
 		GuidewireAutomate("Account", OS_Account, "sendKeys", lhm_TestCase_Table_Data.get("OS_Account"));
-
+        getStaleElement("Search Button", PolicyCenter_Resuables.Search_Button);
 		GuidewireAutomate("Search Button", PolicyCenter_Resuables.Search_Button, "click", lhm_TestCase_Table_Data.get("Search_Button"));
 
 		// GuidewireAutomate("Reset Button",
@@ -386,16 +387,18 @@ public class PC_Account extends SeleniumWebDriver_Commands {
 		GuidewireAutomate("Company Name", SA_CompanyNameExactMatch, "click", lhm_TestCase_Table_Data.get("SA_CompanyNameExactMatch"));
 		GuidewireAutomate("First Name Exact Match", SA_FirstNameExactMatch, "click", lhm_TestCase_Table_Data.get("SA_FirstNameExactMatch"));
 		GuidewireAutomate("Last Name Exact Match", SA_LastNameExactMatch, "click", lhm_TestCase_Table_Data.get("SA_LastNameExactMatch"));
-
+        getStaleElement("Country", GW_Country);
 		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
+		getStaleElement("State", GW_State);
 		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
-		GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
-		GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
+		//GuidewireAutomate("Country", GW_Country, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_Country"));
+		//GuidewireAutomate("State", GW_State, "selectByVisibleText", lhm_TestCase_Table_Data.get("GW_State"));
 		/*
 		 * GuidewireAutomate("City", GW_City, "", lhm_TestCase_Table_Data.get("GW_City")); GuidewireAutomate("County", GW_County, "",
 		 * lhm_TestCase_Table_Data.get("GW_County")); GuidewireAutomate("ZipCode", GW_ZipCode, "", lhm_TestCase_Table_Data.get("GW_ZIPCode"));
 		 * 
-		 */ PolicyCenter_Resuables.clickButton("Search");
+		 */
+		PolicyCenter_Resuables.clickButton("Search");
 
 		/*
 		 * CreateNewAccount_Button
@@ -418,9 +421,11 @@ public class PC_Account extends SeleniumWebDriver_Commands {
 		GuidewireAutomate_Validation("Please confirm account information", CA_PleaseConfirmAccountInformation, "equals", "Please confirm account information");
 
 		GuidewireAutomate_Validation("Company Name", SA_CompanyName, "valueEquals", strCompanyName);
-
+        getStaleElement("officephone", CA_OfficePhone);
 		GuidewireAutomate("officephone", CA_OfficePhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_OfficePhone"));
-		GuidewireAutomate("officephone", CA_FaxPhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_FaxPhone"));
+		getStaleElement("Faxphone", CA_FaxPhone);
+		GuidewireAutomate("Faxphone", CA_FaxPhone, "sendKeys", lhm_TestCase_Table_Data.get("CA_FaxPhone"));
+		getStaleElement("primaryEmail", CA_PrimaryEmail);
 		GuidewireAutomate("primaryEmail", CA_PrimaryEmail, "sendKeys", strPrimaryEmail);
 		GuidewireAutomate("secondaryEmail", CA_SecondaryEmail, "", lhm_TestCase_Table_Data.get("CA_SecondaryEmail"));
 

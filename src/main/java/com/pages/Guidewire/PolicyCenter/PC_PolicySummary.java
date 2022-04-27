@@ -46,8 +46,8 @@ public class PC_PolicySummary extends SeleniumWebDriver_Commands {
 	private static By Tools_Billing       = By.xpath("//div[contains(@id,'PolicyFile_Billing')]/div[@role='menuitem']");
 	private static By Billing_Name        = By.xpath("//div[contains(@id,'BillingScreen-ttlBar')]");
 	private static By ViewBillingStatus   = By.xpath("//div[contains(@id,'ViewAccount')]");
-	private static By BillingStatus       = By.xpath("//div[contains(@id,'BillingPoliciesLV-1-Status')]//div[contains(text(),'In Good Standing')]");
-	private static By PolicyNumber        = By.xpath("//div[contains(@id,'BillingPoliciesLV-3-PolicyNumber_button')]");
+	private static By BillingStatus       = By.xpath("//div[contains(@id,'BillingPoliciesLV-0-Status')]//div[contains(text(),'In Good Standing')]");
+	private static By PolicyNumber        = By.xpath("//div[contains(@id,'BillingPoliciesLV-0-PolicyNumber_button')]");
 	private static By PS_OPT_DataDisplay  = By.xpath("//div[contains(@id,'PendingPolicyTransactionsListViewTile_LV-0-JobInProgressType')]");
 	private static By PS_OPT_PolicyNumber = By.xpath("//div[contains(@id,'PendingPolicyTransactionsListViewTile_LV-0-JobNumber_button')]");
 	private static By CPT_Header          = By.xpath("//div[contains(@id,'CompletedPolicyTransactionsListViewTile')]//span[@class='gw-TitleText']");
@@ -183,7 +183,7 @@ public class PC_PolicySummary extends SeleniumWebDriver_Commands {
 		GuidewireAutomate_Validation("Screen Header", Billing_Name, "equals", "Billing");
 		GuidewireAutomate("View Account Billing Status", ViewBillingStatus, "clickAndwait", "click");
 		GuidewireAutomate_Validation("In Good Standing", BillingStatus, "equals", "In Good Standing");
-		// GuidewireAutomate("PolicyNumber",PolicyNumber,"clickAndwait","click");
+		 GuidewireAutomate("PolicyNumber",PolicyNumber,"clickAndwait","click");
 
 	}
 

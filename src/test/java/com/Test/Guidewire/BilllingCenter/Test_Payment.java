@@ -1,5 +1,7 @@
 package com.Test.Guidewire.BilllingCenter;
 
+import com.pages.Guidewire.GW_CM_PC_BC_CC_Login;
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import org.testng.annotations.Test;
 
 import com.Utils.Selenium.GW_GetDriver;
@@ -49,6 +51,22 @@ public class Test_Payment extends GW_GetDriver {
 		BC_Resuables.logout_BillingCenter();
 
 	}
+	@Test
+	public void ReverseFee() throws Throwable {
+
+		BC_Resuables.login_BillingCenter_User("SuperUser");
+
+		BC_Resuables.bcTabNavigation_Acct_Search();
+		BC_AccountSummary.AccountSummary();
+		BC_AccountSummary.AccountSummary_Financials();
+		BC_Resuables.bcMenuNavigation("Charges");
+		BC_Resuables.bcMenuNavigation("Charge Reversal");
+		BC_Invoices.ChargeReversal();
+		BC_Invoices.ChargesScreen();
+		BC_Resuables.logout_BillingCenter();
+
+	}
+
 
 	@Test
 	public void PaymentSchedule() throws Throwable {

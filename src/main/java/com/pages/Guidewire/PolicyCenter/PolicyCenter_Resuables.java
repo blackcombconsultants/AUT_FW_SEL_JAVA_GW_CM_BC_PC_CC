@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
+import com.pages.Guidewire.PolicyCenter.CommercialAuto.CA_Reusables;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -240,67 +241,67 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 			switch (strLabel) {
 				case "Job" :
 					strInfobar = getText_Element(InfoBar_Job);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "ReinstatementJob" :
 					strInfobar = getText_Element(InfoBar_ReinstatementJob);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "RewriteJob" :
 					strInfobar = getText_Element(InfoBar_RewriteJob);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "SubmissionNumber" :
 					strInfobar = getText_Element(InfoBar_SubmissionNumber);
 					strInfobar = strInfobar.substring("Submission".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "PolicyChangeNumber" :
 					strInfobar = getText_Element(InfoBar_SubmissionNumber);
 					strInfobar = strInfobar.substring("Policy Change".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "RenewalNumber" :
 					strInfobar = getText_Element(InfoBar_SubmissionNumber);
 					strInfobar = strInfobar.substring("Renewal".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "ReinstatementNumber" :
 					strInfobar = getText_Element(InfoBar_ReinstatementNumber);
 					strInfobar = strInfobar.substring("Reinstatement".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "RewriteNumber" :
 					strInfobar = getText_Element(InfoBar_RewriteNumber);
 					strInfobar = strInfobar.substring("Rewrite".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "Workflow" :
 					strInfobar = getText_Element(InfoBar_Workflow);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Workflow", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Workflow", strInfobar);
 					break;
 				case "LOB" :
 					strInfobar = getText_Element(InfoBar_LOB);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "LOB", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "LOB", strInfobar);
 					break;
 				case "EffectiveDate" :
 					strInfobar = getText_Element(InfoBar_EffectiveDate);
 					break;
 				case "Status" :
 					strInfobar = getText_Element(InfoBar_Status);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "AccountName" :
 					strInfobar = getText_Element(InfoBar_AccountName);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "AccountName", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "AccountName", strInfobar);
 					break;
 				case "AccountNumber" :
 					strInfobar = getText_Element(InfoBar_AccountNumber);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "AccountNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "AccountNumber", strInfobar);
 					break;
 				case "PolicyNumber" :
 					strInfobar = getText_Element(InfoBar_PolicyNumber);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "PolicyNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "PolicyNumber", strInfobar);
 					break;
 				case "EditLock" :
 					strInfobar = getText_Element(InfoBar_EditLock);
@@ -333,7 +334,8 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				PolicyCenter_Resuables.clickButton("Next");
 				CA_PolicyInfo.primaryNamedInsured_ChangeTo_NewPerson();
 				PolicyCenter_Resuables.clickButton("Update");
-				PolicyCenter_Resuables.NavigateToPolicyReviewScreen();
+				Thread.sleep(2000);
+				CA_Reusables.submissionMenuNavigation("Policy Review");
 				PolicyCenter_Resuables.PolicyReview_Preemption();
 				PolicyCenter_Resuables.clickButton("Quote");
 				PolicyCenter_Resuables.clickButton("IssuePolicy for ChangePolicy");
@@ -542,6 +544,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 
 	}
 
+
 	public static void newSubmissions_Verify() throws Throwable {
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("newSubmissions", strTestCaseName);
@@ -603,6 +606,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 			GuidewireAutomate("Source", SCFP_Source, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CP_Source"));
 			getStaleElement("Reason", SCFP_Reason);
 			GuidewireAutomate("Reason", SCFP_Reason, "selectByVisibleText", lhm_TestCase_Table_Data.get("CP_Reason"));
+			getStaleElement("ReasonDescription", SCFP_ReasonDescription);
 			GuidewireAutomate("ReasonDescription", SCFP_ReasonDescription, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CP_Reason _Description"));
 			GuidewireAutomate("StartCancellation", StartCancellation_Button, "clickAndwait", "click");
 			oExtentTest.log(Status.PASS, "startCancellationForPolicy is Succesful");
@@ -630,11 +634,10 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 			GuidewireAutomate("Source", SCFP_Source, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("CP_Source"));
 			getStaleElement("Reason", SCFP_Reason);
 			GuidewireAutomate("Reason", SCFP_Reason, "selectByVisibleText", lhm_TestCase_Table_Data.get("CP_Reason"));
-			GuidewireAutomate("ReasonDescription", SCFP_ReasonDescription, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CP_Reason _Description"));
+			getStaleElement("ReasonDescription", SCFP_ReasonDescription);
+			GuidewireAutomate("ReasonDescription", SCFP_ReasonDescription, "sendKeys", lhm_TestCase_Table_Data.get("CP_Reason _Description"));
 			getStaleElement("CancellationDate", SCFP_CancellationEffectiveDate);
 			GuidewireAutomate("CancellationDate", SCFP_CancellationEffectiveDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CP_Cancellation _Effective_ Date"));
-			getStaleElement("StartCancellation", StartCancellation_Button);
-			GuidewireAutomate("StartCancellation", StartCancellation_Button, "clickAndwait", "click");
 			getStaleElement("StartCancellation", StartCancellation_Button);
 			GuidewireAutomate("StartCancellation", StartCancellation_Button, "clickAndwait", "click");
 			oExtentTest.log(Status.PASS, "startCancellationForPolicy is Succesful");
@@ -773,12 +776,12 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		GuidewireAutomate("PC_Contact", MenuPC_Account_Contacts, "clickAndwait", "click");
 		GuidewireAutomate_Validation("Screen Header", AccountFileContacts, "equals", "Account File Contacts");
 		GuidewireAutomate("CreateNewContact", CreateNewContact, "clickAndwait", "click");
-		GuidewireAutomate("NamedInsured", NamedInsured, "moveToElement", "NameedInsured");
+		GuidewireAutomate("NamedInsured", NamedInsured, "moveToElement", "NamedInsured");
 		GuidewireAutomate("NewCompany", NewCompany, "clickAndwait", "click");
 		getStaleElement("NewNamedInsured", NewNamedInsured);
 		GuidewireAutomate_Validation("NewNamedInsured", NewNamedInsured, "equals", "New Named Insured");
 		GuidewireAutomate_Validation("CompanyHeader", CompanyHeader, "equals", "Company");
-		GuidewireAutomate("CompanyName", CompanyName, "sendKeys", lhm_TestCase_Table_Data.get("CA_CompanyName"));
+		GuidewireAutomate("CompanyName", CompanyName, "sendKeys", lhm_TestCase_Table_Data.get("CompanyName"));
 		getStaleElement("Address", Address);
 		GuidewireAutomate("Address", Address, "click", "click");
 		getStaleElement("Account", AccountHolder);
@@ -877,5 +880,6 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		lhm_TestCase_Table_Data.clear();
 
 	}
+
 
 }

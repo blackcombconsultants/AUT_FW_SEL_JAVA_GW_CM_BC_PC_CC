@@ -44,7 +44,7 @@ public class CA_RenewalPolicy extends GW_GetDriver {
 		CA_Reusables.SubmissionProcess("New Company Account", "Issue Policy");
 		// Navigate to Renew policy
 		Tab_Menu_Navigation.pcMenuNavigation("Renew Policy");
-		BO_Resuables.InfoBarPolicyLink();
+		CA_Reusables.InfoBarPolicyLink();
 		// Validating Type and Status
 		PC_PolicySummary.VerifyOpenPolicyTransactionDetails();
 		// Navigating to Policy change
@@ -67,7 +67,7 @@ public class CA_RenewalPolicy extends GW_GetDriver {
 		CA_Reusables.SubmissionProcess("New Company Account", "Issue Policy");
 		// Navigate to Renew policy
 		Tab_Menu_Navigation.pcMenuNavigation("Renew Policy");
-		BO_Resuables.InfoBarPolicyLink();
+		CA_Reusables.InfoBarPolicyLink();
 		// Navigating to Policy change
 		PolicyCenter_Resuables.Policytransactions("Change Policy");
 		PC_Bound.Renewal_ViewTheUnboundRenewal();

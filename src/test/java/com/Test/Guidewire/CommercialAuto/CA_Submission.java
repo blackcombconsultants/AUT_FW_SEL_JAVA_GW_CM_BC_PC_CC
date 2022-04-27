@@ -30,68 +30,9 @@ public class CA_Submission extends GW_GetDriver {
 	public void AUT_CA_PC_NewSubmission_NewAccount_NewSubmission() throws Throwable {
 
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter_User("SuperUser");
-		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
-		PC_Account.createCompanyAccount();
-		PC_AccountSummary.detail_Verify();
-		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
-		PolicyCenter_Resuables.newSubmissions_Verify();
-		CA_Reusables.newSubmission_SelectLOB_CommercialAuto();// select
-																// LOB
-
-		strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
-		strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
-
-		PolicyCenter_Resuables.offering();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Qualification.qualification();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_PolicyInfo.dateQuoteNeeded();
-		CA_PolicyInfo.primaryNamedInsured();
-		CA_PolicyInfo.policyAddress();
-		CA_PolicyInfo.OfficialID();
-		CA_PolicyInfo.OrganizationType();
-		CA_PolicyInfo.policyDetails();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_CommercialAutoLine.coverages_Product();
-		CA_CommercialAutoLine.coverages_Fleet();
-		CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Locations.Location();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Vehicles.VehicleInformation();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_StateInfo.Stateinfo();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Drivers.Driver();
-		CA_Drivers.DriverDetails();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_CoveredVehicles.CoveredVehicles();
-		PolicyCenter_Resuables.clickButton("Next");
-		Thread.sleep(2000);
-		CA_Modifiers.Modifiers();
-		PolicyCenter_Resuables.clickButton("Next");
-		Thread.sleep(2000);
-		CA_RiskAnalysis.button_Verify();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_PolicyReview.PolicyReview();
-		CA_PolicyReview.PolicyDetails();
-		PolicyCenter_Resuables.clickButton("Quote");
-		CA_Reusables.CaValidationError();
-		CA_Reusables.submissionMenuNavigation("Commercial Auto Line");
-		CA_Reusables.CaValidationError();
-		PolicyCenter_Resuables.clickButton("Quote");
-		Thread.sleep(2000);
-		CA_Quote.quoteDetails();
-
-		PolicyCenter_Resuables.clickButton("Bind Options");
-		PolicyCenter_Resuables.clickButton("Issue Policy");
-		strJob          = PolicyCenter_Resuables.infoBar("Job");
-		strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
-
-		PC_Bound.ViewYourPolicy();
-		PC_PolicySummary.detail_Verify();
-		PC_PolicySummary.account_Verify();
+		// New submission
+		CA_Reusables.SubmissionProcess("New Company Account", "Issue Policy");
+		//logout
 		GW_CM_PC_BC_CC_Login.logout_PolicyCenter();
 	}
 
@@ -100,59 +41,7 @@ public class CA_Submission extends GW_GetDriver {
 
 		// login to pc
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter_User("SuperUser");
-		// create person account
-		Tab_Menu_Navigation.pcTabNavigation("New Account", "NA");
-		PC_Account.createPersonAccount();
-		PC_AccountSummary.detail_Verify();
-		// Navigate to New submission
-		Tab_Menu_Navigation.pcMenuNavigation("New Submission");
-		PolicyCenter_Resuables.newSubmissions_Verify();
-		// select LOB
-		CA_Reusables.newSubmission_SelectLOB_CommercialAuto();
-
-		strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
-		strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
-		strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
-
-		// new submission
-		PolicyCenter_Resuables.offering();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Qualification.qualification();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_PolicyInfo.dateQuoteNeeded();
-		CA_PolicyInfo.primaryNamedInsured();
-		CA_PolicyInfo.policyAddress();
-		CA_PolicyInfo.OfficialID();
-		CA_PolicyInfo.OrganizationType();
-		CA_PolicyInfo.policyDetails();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_CommercialAutoLine.coverages_Product();
-		CA_CommercialAutoLine.coverages_Fleet();
-		CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Locations.Location();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Vehicles.VehicleInformation();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_StateInfo.Stateinfo();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Drivers.Driver();
-		CA_Drivers.DriverDetails();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_CoveredVehicles.CoveredVehicles();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_Modifiers.Modifiers();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_RiskAnalysis.button_Verify();
-		PolicyCenter_Resuables.clickButton("Next");
-		CA_PolicyReview.PolicyReview();
-		CA_PolicyReview.PolicyDetails();
-		PolicyCenter_Resuables.clickButton("Quote");
-		CA_Reusables.CaValidationError();
-		CA_Reusables.submissionMenuNavigation("Commercial Auto Line");
-		CA_Reusables.CaValidationError();
-		PolicyCenter_Resuables.clickButton("Quote");
-		CA_Quote.quoteDetails();
+		CA_Reusables.SubmissionProcess("New Company Account", "Quote");
 		PolicyCenter_Resuables.clickButton("Close Options");
 		PolicyCenter_Resuables.clickButton("Decline");
 		// submission declined

@@ -24,6 +24,7 @@ public class CA_Vehicles extends SeleniumWebDriver_Commands {
 	private static By BasicVehicleInformationSection = By.xpath("//div[@class='gw-label gw-boldLabel' and text()='Basic Vehicle Information']");
 	private static By VehicleDetailsVehicleType      = By.xpath("//select[@name='BAVehiclePopup-VehicleScreen-BAVehicleCV-VehicleDV-Type']");
 	private static By VehicleDetailsVin              = By.xpath("//input[@name='BAVehiclePopup-VehicleScreen-BAVehicleCV-VehicleDV-Vin']");
+	private static By ModelYearInfo                  = By.xpath("//input[@name='BAVehiclePopup-VehicleScreen-BAVehicleCV-VehicleDV-Year']");
 	private static By VehicleDetailsCost             = By.xpath("//input[@name='BAVehiclePopup-VehicleScreen-BAVehicleCV-VehicleDV-Cost']");
 
 	private static By VehicleDetailsClassificationInformationSection = By.xpath("//div[@class='gw-label gw-boldLabel' and text()='Classification Information']");
@@ -50,16 +51,20 @@ public class CA_Vehicles extends SeleniumWebDriver_Commands {
 			GuidewireAutomate_Validation("Vehicle Details Section", VehicleDetailsSection, "equals", "Vehicle Details");
 			GuidewireAutomate_Validation("Garaged At Section", VehicleDetailsGaragedAtSection, "equals", "Garaged At");
 			GuidewireAutomate("Garaged At", VehicleDetailsGaragedAt, "selectByIndex", "1");
+			getStaleElement("Vehicle Type", VehicleDetailsVehicleType);
 			GuidewireAutomate("Vehicle Type", VehicleDetailsVehicleType, "selectByVisibleText", lhm_TestCase_Table_Data.get("CA_VehicleType"));
+			getStaleElement("VIN", VehicleDetailsVin);
 			GuidewireAutomate("VIN", VehicleDetailsVin, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_VIN"));
-			Thread.sleep(2000);
+			GuidewireAutomate("Verify Model Year", ModelYearInfo,"click","click");
+			getStaleElement("Cost", VehicleDetailsCost);
 			GuidewireAutomate("Cost", VehicleDetailsCost, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_Cost"));
-
+            getStaleElement("Classification Information Section", VehicleDetailsClassificationInformationSection);
 			GuidewireAutomate_Validation("Classification Information Section", VehicleDetailsClassificationInformationSection, "equals", "Classification Information");
+			getStaleElement("Class", VehicleDetailsClass);
 			GuidewireAutomate("Class", VehicleDetailsClass, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_Class"));
 			getStaleElement("Ok Button", VehicleDetailsOkButton);
 			GuidewireAutomate("Ok Button", VehicleDetailsOkButton, "clickAndwait", "click");
-
+            getStaleElement("Verify Vehicle Type", VehicleType);
 			GuidewireAutomate_Validation("Verify Vehicle Type", VehicleType, "equals", lhm_TestCase_Table_Data.get("CA_VehicleType"));
 			// GuidewireAutomate_Validation("Verify Location Name", LocationName, "equals", lhm_TestCase_Table_Data.get("CA_VerifyLocationName"));
 			GuidewireAutomate_Validation("Verify Model Year", ModelYear, "equals", lhm_TestCase_Table_Data.get("CA_VerifyModelYear"));

@@ -31,46 +31,47 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 	/*
 	 * Menu
 	 */
-	private static By SW_Offering              = By.xpath("//div[@id='SubmissionWizard-Offering']/div[@role='menuitem']");
-	private static By SW_PreQualification      = By.xpath("//div[@id='SubmissionWizard-PreQualification']/div[@role='menuitem']");
+	private static By SW_Offering              = By.xpath("//div[contains(@id,'Offering')]/div[@role='menuitem']");
+	private static By SW_PreQualification      = By.xpath("//div[contains(@id,'PreQualification')]/div[@role='menuitem']");
 	private static By SW_CA_PolicyContract     = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup']/div[@role='menuitem']");
-	private static By SW_CA_PolicyInfo         = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-PolicyInfo']/div[@role='menuitem']");
-	private static By SW_CA_CommercialAutoLine = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-baLineStep']/div[@role='menuitem']");
-	private static By SW_CA_Locations          = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-Locations']/div[@role='menuitem']");
-	private static By SW_CA_Vehicles           = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-BusinessVehicles']/div[@role='menuitem']");
-	private static By SW_CA_StateInfo          = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-StateInfo']/div[@role='menuitem']");
-	private static By SW_CA_Drivers            = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-BADrivers']/div[@role='menuitem']");
-	private static By SW_CA_CoveredVehicles    = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-CoveredAutoSymbols']/div[@role='menuitem']");
-	private static By SW_CA_Modifiers          = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-Modifiers']/div[@role='menuitem']");
-	private static By SW_CA_RiskAnalysis       = By.xpath("//div[@id='SubmissionWizard-RiskAnalysis']/div[@role='menuitem']");
-	private static By SW_CA_PolicyReview       = By.xpath("//div[@id='SubmissionWizard-PolicyReview']/div[@role='menuitem']");
-	private static By SW_CA_Quote              = By.xpath("//div[@id='SubmissionWizard-ViewQuote']/div[@role='menuitem']");
-	private static By SW_CA_Forms              = By.xpath("//div[@id='SubmissionWizard-Forms']/div[@role='menuitem']");
-	private static By SW_CA_Payment            = By.xpath("//div[@id='SubmissionWizard-BillingInfo']/div[@role='menuitem']");
+	private static By SW_CA_PolicyInfo         = By.xpath("//div[contains(@id,'PolicyInfo')]/div[@role='menuitem']");
+	private static By SW_CA_CommercialAutoLine = By.xpath("//div[contains(@id,'baLineStep')]/div[@role='menuitem']");
+	private static By SW_CA_Locations          = By.xpath("//div[contains(@id,'LOBWizardStepGroup-Locations')]/div[@role='menuitem']");
+	private static By SW_CA_Vehicles           = By.xpath("//div[contains(@id,'LOBWizardStepGroup-BusinessVehicles')]/div[@role='menuitem']");
+	private static By SW_CA_StateInfo          = By.xpath("//div[contains(@id,'LOBWizardStepGroup-StateInfo')]/div[@role='menuitem']");
+	private static By SW_CA_Drivers            = By.xpath("//div[contains(@id,'LOBWizardStepGroup-BADrivers')]/div[@role='menuitem']");
+	private static By SW_CA_CoveredVehicles    = By.xpath("//div[contains(@id,'LOBWizardStepGroup-CoveredAutoSymbols')]/div[@role='menuitem']");
+	private static By SW_CA_Modifiers          = By.xpath("//div[contains(@id,'LOBWizardStepGroup-Modifiers')]/div[@role='menuitem']");
+	private static By SW_CA_RiskAnalysis       = By.xpath("//div[contains(@id,'RiskAnalysis')]/div[@role='menuitem']");
+	private static By SW_CA_PolicyReview       = By.xpath("//div[contains(@id,'PolicyReview')]/div[@role='menuitem']");
+	private static By SW_CA_Quote              = By.xpath("//div[contains(@id,'ViewQuote')]/div[@role='menuitem']");
+	private static By SW_CA_Forms              = By.xpath("//div[contains(@id,'Forms')]/div[@role='menuitem']");
+	private static By SW_CA_Payment            = By.xpath("//div[contains(@id,'BillingInfo')]/div[@role='menuitem']");
+
 
 	// Validation Error
-	private static By ValidationErrorHeader = By.xpath("//div[contains(@id,'wsTabBar-wsTab')]//div[@role='menuitem']");
+	private static By ValidationErrorHeader = By.xpath("//div[contains(@id,'wsTabBar-wsTab_0')]//div[@role='tab']");
 	private static By ClearButton           = By.xpath("//div[contains(@id,'ClearButton')]//div[@role='button']");
-
+	static By Infobar_PolicyNumberLink  = By.xpath("//div[contains(@id,'JobWizardInfoBar-PolicyNumber')]//div[@class='gw-label gw-infoValue']");
 	/*
 	 * 
 	 */
 
 	public static LinkedHashMap<String, String> getData_CommercialAuto(String strTable) throws Throwable {
 
-		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_Fillo(pTestDataFile_ClaimsCenter, strTable, strTestCaseName);
+		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_Fillo(pTestDataFile_CommercialAuto, strTable, strTestCaseName);
 
 	}
 
 	public static LinkedHashMap<String, String> getData_Row_CommercialAuto(String strTable, int SecondKey) throws Throwable {
 
-		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(pTestDataFile_ClaimsCenter, strTable, strTestCaseName, SecondKey);
+		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(pTestDataFile_CommercialAuto, strTable, strTestCaseName, SecondKey);
 
 	}
 
 	public static void UpdateData_CommercialAuto(String strTable, String strColumn, String strValue) throws Throwable {
 
-		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Column_Fillo(pTestDataFile_ClaimsCenter, strTable, strColumn, strValue);
+		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Column_Fillo(pTestDataFile_CommercialAuto, strTable, strColumn, strValue);
 
 	}
 
@@ -82,52 +83,52 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 		try {
 
 			switch (Menu) {
-				case "Offering" :
+				case "Offering":
 					GuidewireAutomate("Offering", SW_Offering, "clickAndwait", "click");
 					break;
-				case "Qualification" :
+				case "Qualification":
 					GuidewireAutomate("Qualification", SW_PreQualification, "clickAndwait", "click");
 					break;
-				case "Policy Info" :
+				case "Policy Info":
 					GuidewireAutomate("Policy Info", SW_CA_PolicyInfo, "clickAndwait", "click");
 					break;
-				case "Commercial Auto Line" :
-					GuidewireAutomate("Policy Info", SW_CA_CommercialAutoLine, "clickAndwait", "click");
+				case "Commercial Auto Line":
+					GuidewireAutomate("Commercial Auto Line", SW_CA_CommercialAutoLine, "clickAndwait", "click");
 					break;
-				case "Locations" :
-					GuidewireAutomate("Policy Info", SW_CA_Locations, "clickAndwait", "click");
+				case "Locations":
+					GuidewireAutomate("Locations", SW_CA_Locations, "clickAndwait", "click");
 					break;
-				case "Vehicles" :
+				case "Vehicles":
 					GuidewireAutomate("Vehicles", SW_CA_Vehicles, "clickAndwait", "click");
 					break;
-				case "State Info" :
+				case "State Info":
 					GuidewireAutomate("PACoverages", SW_CA_StateInfo, "clickAndwait", "click");
 					break;
-				case "Drivers" :
+				case "Drivers":
 					GuidewireAutomate("Drivers", SW_CA_Drivers, "clickAndwait", "click");
 					break;
-				case "Covered Vehicles" :
+				case "Covered Vehicles":
 					GuidewireAutomate("PACoverages", SW_CA_CoveredVehicles, "clickAndwait", "click");
 					break;
-				case "Modifiers" :
+				case "Modifiers":
 					GuidewireAutomate("PACoverages", SW_CA_Modifiers, "clickAndwait", "click");
 					break;
-				case "Risk Analysis" :
+				case "Risk Analysis":
 					GuidewireAutomate("PACoverages", SW_CA_RiskAnalysis, "clickAndwait", "click");
 					break;
-				case "Policy Review" :
+				case "Policy Review":
 					GuidewireAutomate("PACoverages", SW_CA_PolicyReview, "clickAndwait", "click");
 					break;
-				case "Quote" :
+				case "Quote":
 					GuidewireAutomate("PACoverages", SW_CA_Quote, "clickAndwait", "click");
 					break;
-				case "Forms" :
+				case "Forms":
 					GuidewireAutomate("PACoverages", SW_CA_Forms, "clickAndwait", "click");
 					break;
-				case "Payment" :
+				case "Payment":
 					GuidewireAutomate("PACoverages", SW_CA_Payment, "clickAndwait", "click");
 					break;
-				default :
+				default:
 					throw new IOException("No support for Menu : " + Menu);
 			}
 			oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));
@@ -136,8 +137,8 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 			e.printStackTrace();
 			throw e;
 		}
-
 	}
+
 
 	/*
 	 * Name:shanta
@@ -406,14 +407,12 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 				CA_Reusables.submissionMenuNavigation("Commercial Auto Line");
 				CA_Reusables.CaValidationError();
 				PolicyCenter_Resuables.clickButton("Quote");
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				CA_Quote.quoteDetails();
-
 				PolicyCenter_Resuables.clickButton("Bind Options");
 				PolicyCenter_Resuables.clickButton("Issue Policy");
 				strJob = PolicyCenter_Resuables.infoBar("Job");
 				strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
-
 				PC_Bound.ViewYourPolicy();
 				PC_PolicySummary.detail_Verify();
 				PC_PolicySummary.account_Verify();
@@ -432,11 +431,24 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 
 	public static void CaValidationError() throws Throwable {
 		try {
+			getStaleElement("Validation Error Header", ValidationErrorHeader);
 			GuidewireAutomate_Validation("Validation Error Header", ValidationErrorHeader, "equals", "Validation Results");
 			GuidewireAutomate("Clear Button", ClearButton, "clickAndwait", "click");
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
 		}
+	}
+	public static void InfoBarPolicyLink() throws Throwable {
+		try {
+
+			GuidewireAutomate("Policy Number Link", Infobar_PolicyNumberLink, "clickAndwait", "clickAndwait");
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+
 	}
 }

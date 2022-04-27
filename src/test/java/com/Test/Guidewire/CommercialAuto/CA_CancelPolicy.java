@@ -19,12 +19,8 @@ public class CA_CancelPolicy extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter_User("SuperUser");
 		// New submission
 		CA_Reusables.SubmissionProcess("New Company Account", "Issue Policy");
-		// Fetching policy number
-		GW_Base.strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		// Validating Billing Status
 		PC_PolicySummary.tools_Billing();
-		// search existing policy
-		Tab_Menu_Navigation.pcTabNavigation("Policy Search By Fetching", "NA");
 		// cancel policy
 		PolicyCenter_Resuables.Policytransactions("CancelPolicy_Schedule Cancellation");
 		// logout
@@ -38,12 +34,8 @@ public class CA_CancelPolicy extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter_User("SuperUser");
 		// New submission
 		CA_Reusables.SubmissionProcess("New Company Account", "Issue Policy");
-		// Fetching policy number
-		GW_Base.strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		// Validating Billing Status
 		PC_PolicySummary.tools_Billing();
-		// search existing policy
-		Tab_Menu_Navigation.pcTabNavigation("Policy Search By Fetching", "NA");
 		// cancel policy
 		PolicyCenter_Resuables.Policytransactions("CancelPolicy_Schedule CancellationLaterDate");
 		// logout
@@ -57,12 +49,8 @@ public class CA_CancelPolicy extends GW_GetDriver {
 		GW_CM_PC_BC_CC_Login.login_PolicyCenter_User("SuperUser");
 		// New submission
 		CA_Reusables.SubmissionProcess("New Company Account", "Issue Policy");
-		// Fetching policy number
-		GW_Base.strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
 		// Validating Billing Status
 		PC_PolicySummary.tools_Billing();
-		// search existing policy
-		Tab_Menu_Navigation.pcTabNavigation("Policy Search By Fetching", "NA");
 		// cancel policy
 		PolicyCenter_Resuables.Policytransactions("CancelPolicy_CancelNow");
 		// validate completed policyTransaction

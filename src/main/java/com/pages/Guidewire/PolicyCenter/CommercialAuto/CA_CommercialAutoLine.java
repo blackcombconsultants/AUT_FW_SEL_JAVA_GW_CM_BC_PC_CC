@@ -110,6 +110,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("CommercialAutoLine");
 			GuidewireAutomate_Validation("Fleet Section", CoveragesFleetSection, "equals", "Fleet");
+			Thread.sleep(2000);
 			GuidewireAutomate("Fleet", CoveragesFleet, "selectByVisibleText", lhm_TestCase_Table_Data.get("CAL_Fleet"));
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);

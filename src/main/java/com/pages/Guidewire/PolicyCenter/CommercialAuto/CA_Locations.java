@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -36,7 +37,12 @@ public class CA_Locations extends SeleniumWebDriver_Commands {
 	private static By LI_City                                 = By.xpath("//input[contains(@name,'GlobalAddressInputSet-City')]");
 	private static By LI_State                                = By.xpath("//select[contains(@name,'GlobalAddressInputSet-State')]");
 	private static By LI_ZIPCode                              = By.xpath("//input[contains(@name,'GlobalAddressInputSet-PostalCode')]");
-	private static By LI_TerritoryCodeforGeneralLiabilityLine = By.xpath("//input[contains(@name,'TerritoryCodeInputSet-0-TerritoryCode')]");
+	private static By LI_TerritoryCode                        = By.xpath("//div[contains(@id,'TerritoryCodeInputSet-AutofillLink')]");
+    private static By LI_OK_Button                              = By.xpath("//div[contains(@class,'gw-ToolbarButtonWidget')]//div[@class='gw-minimized-view']/following-sibling::div[text()='OK']");
+
+	//remove location
+	static By LocationCheckBox = By.xpath("//div[contains(@id,'LocationsEdit_LV-1-_Checkbox')]");
+	static By RemoveButton = By.xpath("//div[contains(@id,'LocationsEdit_DP_tb-Remove')]//div[@role='button']");
 
 	public static void Location() throws Throwable {
 		try {
@@ -61,20 +67,36 @@ public class CA_Locations extends SeleniumWebDriver_Commands {
 			throw e;
 		}
 	}
+	/*
+	shanta
+	 */
 	public static void NewLocation() throws Throwable {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("Locations");
 
 			GuidewireAutomate("New Location", NewLocationButton, "clickAndwait", "click");
-			/*
-			 * GuidewireAutomate_Validation("Screen Header", LocationInformation_Header, "equals", "Location Information");
-			 * GuidewireAutomate("Address1", LI_Address1, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_Address1")); GuidewireAutomate("City",
-			 * LI_City, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_City")); GuidewireAutomate("State", LI_State, "selectByVisibleText",
-			 * lhm_TestCase_Table_Data.get("CA_State")); GuidewireAutomate("ZIPCode", LI_ZIPCode, "clearANDsendKeys",
-			 * lhm_TestCase_Table_Data.get("CA_ZIPCode")); GuidewireAutomate("TerritoryCodeforGeneralLiabilityLine",
-			 * LI_TerritoryCodeforGeneralLiabilityLine, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_TCGL"));
-			 */
 
+			  GuidewireAutomate_Validation("Screen Header", LocationInformation_Header, "equals", "Location Information");
+			  GuidewireAutomate("Address1", LI_Address1, "sendKeys",lhm_TestCase_Table_Data.get("CA_Address1"));
+			  GuidewireAutomate("City",LI_City, "sendKeys",lhm_TestCase_Table_Data.get("CA_City"));
+			  GuidewireAutomate("ZIPCode", LI_ZIPCode,"click","click");
+			  GuidewireAutomate("AutofillTerritoryCode",LI_TerritoryCode,"clickAndwait", "cluck");
+			  GuidewireAutomate("OkButton",LI_OK_Button,"clickAndwait","click");
+			  oExtentTest.log(Status.PASS, "New Location is Added");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	/*
+	shanta
+	 */
+	public static void RemoveLocation() throws Throwable {
+		try {
+			GuidewireAutomate_Validation("Location Heading", LocationsHeading, "equals", "Locations");
+			GuidewireAutomate("LocationCheckBox",LocationCheckBox,"clickAndwait","click");
+			GuidewireAutomate("RemoveButton",RemoveButton,"clickAndwait","click");
+			oExtentTest.log(Status.PASS, "New Location is Removed");
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;

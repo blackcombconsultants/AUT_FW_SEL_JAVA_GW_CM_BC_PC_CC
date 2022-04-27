@@ -40,9 +40,9 @@ public class CA_Qualification extends SeleniumWebDriver_Commands {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("qualification");
 
-			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Qualification_Header, "equals", "Qualification");
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Qualification_Header, "contains", "Qualification");
 
-			GuidewireAutomate_Validation("PA Pre-Qualification", QU_CA_PreQualification, "equals", "Commercial Auto Pre-Qualification");
+			GuidewireAutomate_Validation("CA Pre-Qualification", QU_CA_PreQualification, "equals", "Commercial Auto Pre-Qualification");
 
 			GuidewireAutomate("Did agent inspect vehicles?", QU_Did_Agent_Inspect_Vehicles, "click", lhm_TestCase_Table_Data.get("QU_DidAgentInspectVehicles"));
 

@@ -13,9 +13,9 @@
 		name="CommercialAuto PolicyCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.CommercialAuto.GW_PC_CA_ReinstatePolicy">
+				name="com.Test.Guidewire.CommercialAuto.CA_ChangePolicy">
 				<methods>
-					<include name="AUT_CA_PC_CommercialAuto_Reinstatement" />
+					<include name="AUT_CA_PC_OutOfSequenceAndPreemptionRules" />
 				</methods>
 			</class>	<!-- class -->
 		</classes>	<!-- classes -->
