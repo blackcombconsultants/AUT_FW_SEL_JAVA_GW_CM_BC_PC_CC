@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -36,7 +37,7 @@ public class CA_StateInfo extends SeleniumWebDriver_Commands {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("CA_StateInfo");
 
-			GuidewireAutomate_Validation("State Info Header", SateInfoHeader, "equals", "State Info");
+			GuidewireAutomate_Validation("State Info Header", PolicyCenter_Resuables_PO.Screen_Header, "contains", "State Info");
 			GuidewireAutomate_Validation("State", StateInfoState, "equals", lhm_TestCase_Table_Data.get("CA_State"));;
 
 		} catch (Exception e) {

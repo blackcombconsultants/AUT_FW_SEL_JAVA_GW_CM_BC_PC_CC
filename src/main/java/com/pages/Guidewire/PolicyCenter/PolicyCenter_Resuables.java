@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
+import com.pages.Guidewire.PolicyCenter.CommercialAuto.CA_PolicyInfo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +13,6 @@ import com.Utils.Selenium.Selenium_Utils_DataBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.pages.Guidewire.Tab_Menu_Navigation;
-import com.pages.Guidewire.PolicyCenter.CommercialAuto.CA_PolicyInfo;
 import com.pages.Guidewire.PolicyCenter.PersonalAuto.PA_RiskAnalysis;
 
 public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implements PolicyCenter_Resuables_PO {
@@ -48,7 +48,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 
 	public static void clickButton(String ButtonName) throws Throwable {
 
-		String DynamicXpath_InfoBar_Jobstatus = "//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label' and text()='Jobstatus']";
+		String DynamicXpath_InfoBar_Jobstatus = "//div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label']";
 		By     InfoBar_Jobstatus;
 
 		switch (ButtonName) {
@@ -78,6 +78,12 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				getStaleElement("Next", Next_Button);
 				GuidewireAutomate("Next", Next_Button, "clickAndwait", "click");
 				break;
+
+			case "Save Next" :
+				getStaleElement("Next", SaveAndNext_Button);
+				GuidewireAutomate("Next", SaveAndNext_Button, "clickAndwait", "click");
+				Thread.sleep(6000);
+				break;
 			case "Edit" :
 				GuidewireAutomate("Edit", Edit_Button, "clickAndwait", "click");
 				break;
@@ -94,7 +100,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate("AS_Edit_Button", AS_Edit_Button, "clickAndwait", "click");
 				break;
 			case "Quote" :
-				getStaleElement("Quote", Quote_Button);
+				Thread.sleep(3000);
 				GuidewireAutomate("Quote", Quote_Button, "clickAndwait", "click");
 				break;
 			case "Save Draft" :
@@ -120,7 +126,7 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 				GuidewireAutomate("Issue Policy", Bindoptions_IssuePolicy_Button, "clickAndwait", "click");
 				GuidewireAutomate_Handle("alertaccept", "NA");
 				InfoBar_Jobstatus = By.xpath(DynamicXpath_InfoBar_Jobstatus.replace("Jobstatus", "Submission (Bound)"));
-				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "equals", "Submission (Bound)");
+				GuidewireAutomate_Validation("Infobar Job", InfoBar_Jobstatus, "contains", "Submission");
 				break;
 
 			case "IssuePolicy for ChangePolicy" :
@@ -240,67 +246,67 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 			switch (strLabel) {
 				case "Job" :
 					strInfobar = getText_Element(InfoBar_Job);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "ReinstatementJob" :
 					strInfobar = getText_Element(InfoBar_ReinstatementJob);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "RewriteJob" :
 					strInfobar = getText_Element(InfoBar_RewriteJob);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "SubmissionNumber" :
 					strInfobar = getText_Element(InfoBar_SubmissionNumber);
 					strInfobar = strInfobar.substring("Submission".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "PolicyChangeNumber" :
 					strInfobar = getText_Element(InfoBar_SubmissionNumber);
 					strInfobar = strInfobar.substring("Policy Change".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "RenewalNumber" :
 					strInfobar = getText_Element(InfoBar_SubmissionNumber);
 					strInfobar = strInfobar.substring("Renewal".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "ReinstatementNumber" :
 					strInfobar = getText_Element(InfoBar_ReinstatementNumber);
 					strInfobar = strInfobar.substring("Reinstatement".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "RewriteNumber" :
 					strInfobar = getText_Element(InfoBar_RewriteNumber);
 					strInfobar = strInfobar.substring("Rewrite".length() + 1, strInfobar.length());
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "SubmissionNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "SubmissionNumber", strInfobar);
 					break;
 				case "Workflow" :
 					strInfobar = getText_Element(InfoBar_Workflow);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Workflow", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Workflow", strInfobar);
 					break;
 				case "LOB" :
 					strInfobar = getText_Element(InfoBar_LOB);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "LOB", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "LOB", strInfobar);
 					break;
 				case "EffectiveDate" :
 					strInfobar = getText_Element(InfoBar_EffectiveDate);
 					break;
 				case "Status" :
 					strInfobar = getText_Element(InfoBar_Status);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Job", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Job", strInfobar);
 					break;
 				case "AccountName" :
 					strInfobar = getText_Element(InfoBar_AccountName);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "AccountName", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "AccountName", strInfobar);
 					break;
 				case "AccountNumber" :
 					strInfobar = getText_Element(InfoBar_AccountNumber);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "AccountNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "AccountNumber", strInfobar);
 					break;
 				case "PolicyNumber" :
 					strInfobar = getText_Element(InfoBar_PolicyNumber);
-					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "PolicyNumber", strInfobar);
+					Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "PolicyNumber", strInfobar);
 					break;
 				case "EditLock" :
 					strInfobar = getText_Element(InfoBar_EditLock);
@@ -875,6 +881,11 @@ public class PolicyCenter_Resuables extends SeleniumWebDriver_Commands implement
 		GuidewireAutomate("Addbutton", AddButton, "clickAndwait", "click");
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();
+
+	}
+	public static LinkedHashMap<String, String> getData_PolicyCenter(String strTable) throws Throwable {
+
+		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_Fillo(pTestDataFile_PolicyCenter, strTable, strTestCaseName);
 
 	}
 

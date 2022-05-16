@@ -183,6 +183,7 @@ public class BC_AccountSummary extends SeleniumWebDriver_Commands {
 
 	}
 	public static void AccountSummary_Financials() throws Throwable {
+
 		lhm_TestCase_Table_Data = BC_Resuables.getData_BillingCenter("AcctSummary");
 
 		GuidewireAutomate_Validation("Total Unapplied", AS_Financials_DefaultUnapplied, "fetch", lhm_TestCase_Table_Data.get("TD_Unapplied"));

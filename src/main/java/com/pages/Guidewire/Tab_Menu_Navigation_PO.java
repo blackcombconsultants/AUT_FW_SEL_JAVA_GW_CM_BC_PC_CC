@@ -59,7 +59,7 @@ public interface Tab_Menu_Navigation_PO {
 	final By TabPC_Account_NewAccount          = By.id("TabBar-AccountTab-AccountTab_NewAccount");
 	final By TabPC_Account_AccountNumber       = By.xpath("//*[@id='TabBar-AccountTab-AccountTab_AccountNumberSearchItem']/div/input");
 	final By TabPC_Account_AccountNumberSearch = By.xpath("//*[@id='TabBar-AccountTab-AccountTab_AccountNumberSearchItem_Button']/span");
-	final By Tab_Account                       = By.xpath("//div[@id='TabBar-AccountTab']//div[@role='tab']");
+	final By Tab_Account                       = By.xpath("//div[@id='TabBar-AccountTab']//div[@role='menuitem']//div[text()='A']");
 	/*
 	 * Create
 	 */
@@ -74,19 +74,21 @@ public interface Tab_Menu_Navigation_PO {
 	final By MenuPC_Account_Actions_RewritePoliciesToThisAccount = By.xpath("//div[contains(@id,'AccountFileMenuActions_RewritePolicies')]//div[@role='menuitem']");
 	final By MenuPC_Account_Actions_MergeAccountIntoThisAccount  = By.xpath("//div[contains(@id,'AccountFileMenuActions_MergeAccounts')]//div[@role='menuitem']");
 	final By PreRenewalDirection                                 = By.xpath("//div[contains(@id,'PolicyFileMenuActions_PreRenewalDirection')]");
-	final By MenuPC_Account_Summary                              = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Summary']//div[@class='gw-label']");
+	final By MenuPC_Account_Summary                              = By.xpath("//div[contains(@id,'AccountFile_Summary')]//div[@role='menuitem']");
 	final By MenuPC_Account_Contacts                             = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Contacts']//div[@role='menuitem']");
-	final By MenuPC_Account_Locations                            = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Locations']//div[@class='gw-label']");
-	final By MenuPC_Account_Participants                         = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Participants']final By MenuPC_Account_]");
-	final By MenuPC_Account_PolicyTransactions                   = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_PolicyTransactions']//div[@class='gw-label']");
-	final By MenuPC_Account_SubmissonManager                     = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_SubmissionManager']//div[@class='gw-label']");
-	final By MenuPC_Account_UnderwritingFiles                    = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_UnderwritingFiles']//div[@class='gw-label']");
-	final By MenuPC_Account_RelatedAccounts                      = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_RelatedAccounts']//div[@class='gw-label']");
-	final By MenuPC_Account_Documents                            = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Documents']//div[@class='gw-label']");
-	final By MenuPC_Account_Notes                                = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Notes']//div[@class='gw-label']");
-	final By MenuPC_Account_Claims                               = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Claims']//div[@class='gw-label']");
-	final By MenuPC_Account_Billing                              = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_Billing']//div[@class='gw-label']");
-	final By MenuPC_Account_History                              = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_History']//div[@class='gw-label']");
+	final By MenuPC_Account_Locations                            = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Locations']//div[@role='menuitem']");
+	final By MenuPC_Account_Participants                         = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Roles']//div[@role='menuitem']");
+	final By MenuPC_Account_PolicyTransactions                   = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_WorkOrders']//div[@role='menuitem']");
+	final By MenuPC_Account_SubmissonManager                     = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_SubmissionManager']//div[@role='menuitem']");
+	final By MenuPC_Account_UnderwritingFiles                    = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_UnderwritingFiles']//div[@role='menuitem']");
+	final By MenuPC_Account_RelatedAccounts                      = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_RelatedAccounts']//div[@role='menuitem']");
+	final By MenuPC_Account_Documents                            = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Documents']//div[@role='menuitem']");
+	final By MenuPC_Account_Notes                                = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Notes']//div[@role='menuitem']");
+	final By MenuPC_Account_Claims                               = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Claims']//div[@role='menuitem']");
+	final By MenuPC_Account_Billing                              = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_Billing']//div[@role='menuitem']");
+	final By MenuPC_Account_History                              = By.xpath("//div[@id='AccountFile-MenuLinks-AccountFile_AccountFile_History']//div[@role='menuitem']");
+	final By MenuPC_Account_Actions_Create_NewDocument_UploadDocument           = By.xpath("//div[contains(@id,'AccountNewDocumentMenuItemSet-AccountNewDocumentMenuItemSet_Linked')]");
+	final By MenuPC_Account_Actions_Create_NewDocument_CreateTemplate          = By.xpath("//div[contains(@id,'AccountNewDocumentMenuItemSet-AccountNewDocumentMenuItemSet_Template')]");
 
 	/*
 	 * ------------------------------------------------------------------------- ---- Policy Tab
@@ -106,10 +108,16 @@ public interface Tab_Menu_Navigation_PO {
 	final By MenuPC_Actions_Submission_GoTo_PolicyFile         = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
 	final By MenuPC_Actions_Submission_GoTo_SuubmissionManager = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
 	final By MenuPC_Actions_Submission_GoTo_Group              = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
+	final By MenuPC_Actions_CheckPolicyFormPatternsForErrors   = By.xpath("//div[contains(@id,'AdminMenuActions_ValidateFormPatterns')]//div[@role='menuitem']");
 	/*
 	 * Create
 	 */
 	final By MenuPC_Actions_Submission_Create_CopySubmission = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]//div[@role='menuitem']");
+	final By MenuPC_Actions_NewUser = By.xpath("//div[contains(@id,'AdminMenuActions_NewUser')]//div[@role='menuitem']");
+	final By MenuPC_Actions_NewGroup = By.xpath("//div[contains(@id,'AdminMenuActions_NewGroup')]//div[@role='menuitem']");
+	final By MenuPC_Actions_NewOrganization = By.xpath("//div[contains(@id,'AdminMenuActions_NewOrganization')]//div[@role='menuitem']");
+	final By MenuPC_Actions_NewProducerCode = By.xpath("//div[contains(@id,'AdminMenuActions_NewProducerCode')]//div[@role='menuitem']");
+	final By MenuPC_Actions_NewAffinityGroup = By.xpath("//div[contains(@id,'AdminMenuActions_NewAffinityGroup')]//div[@role='menuitem']");
 	/*
 	 * Archiving
 	 */
@@ -167,7 +175,7 @@ public interface Tab_Menu_Navigation_PO {
 	final By TabPC_Search_Policies      = By.id("TabBar-SearchTab-Search_PolicySearch");
 	final By TabPC_Search_Accounts      = By.id("TabBar-SearchTab-Search_AccountSearch");
 	final By TabPC_Search_ProducerCodes = By.id("TabBar-SearchTab-Search_ProducerCodeSearch");
-	final By TabPC_Search_Activities    = By.id("TabBar-SearchTab-TabBar-SearchTab-Search_ActivitySearch");
+	final By TabPC_Search_Activities    = By.id("//div[@id='TabBar-SearchTab-Search_ActivitySearch']//div[text()='Activities']");
 	final By TabPC_Search_Contacts      = By.id("TabBar-SearchTab-TabBar-SearchTab-Search_ContactSearch");
 
 	/*
@@ -180,13 +188,43 @@ public interface Tab_Menu_Navigation_PO {
 	 * ------------------------------------------------------------------------- ---- Administration Tab
 	 * ------------------------------------------------------------------------- ----
 	 */
-	final By TabPC_Administration    = By.xpath("//div[@id='TabBar-AdministrationTab']/div[@class='gw-label']");
-	final By TabPC_Administration_dd = By.xpath("//div[@id='TabBar-AdministrationTab']/div[3]");
+	final By TabPC_Administration    = By.xpath("//div[@id='TabBar-AdminTab']//div[@role='tab']");
+	final By TabPC_Administration_dd = By.xpath("//div[@id='TabBar-AdminTab']/div[3]");
 
 	final By TabPC_Administration_UsersSecurity    = By.xpath("//div[@id='TabBar-AdminTab-Admin_UsersAndSecurity']/div[@class='gw-action--expand-button']");
+	final By TabPC_Admin_UsersSecurity_Users = By.xpath("//div[contains(@id,'AdminUserSearchPage')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_Groups = By.xpath("//div[contains(@id,'AdminGroupSearchPage')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_Roles = By.xpath("//div[contains(@id,'UsersAndSecurity_Roles')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_Regions = By.xpath("//div[contains(@id,'UsersAndSecurity_Regions')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_Organizations = By.xpath("//div[contains(@id,'OrganizationSearchPage')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_ProducerCodes = By.xpath("//div[contains(@id,'AdminProducerCodeSearch')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_AuthorityProfiles = By.xpath("//div[contains(@id,'UWAuthorityProfiles')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_Attributes = By.xpath("//div[contains(@id,'UsersAndSecurity_Attributes')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_UsersSecurity_AffinityGroups = By.xpath("//div[contains(@id,'SearchAffinityGroup')]//div[@class='gw-action--inner gw-hasDivider']");
 	final By TabPC_Administration_BusinessSettings = By.xpath("//div[@id='TabBar-AdminTab-Admin_BusinessSettings']/div[@class='gw-action--expand-button']");
+	final By TabPC_Admin_BusinessSettings_ActivityPatterns = By.xpath("//div[contains(@id,'ActivityPatterns')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_BusinessSettings_Holidays = By.xpath("//div[contains(@id,'Holidays')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_BusinessSettings_BusinessRules = By.xpath("//div[@id='TabBar-AdminTab-Admin_BusinessSettings-BusinessSettings_BizRules']");
+	final By TabPC_Admin_BusinessSettings_UnderwritingRules = By.xpath("//div[contains(@id,'BizRules-BizRules_UWRules')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_BusinessSettings_ImportExportStatus = By.xpath("//div[contains(@id,'BizRules_PCBizRulesExportImportStatus')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_BusinessSettings_ManageDataLookupTables = By.xpath("//div[contains(@id,'BizRules-BizRules_LookupPage')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_BusinessSettings_PolicyFormPatterns = By.xpath("//div[contains(@id,'BusinessSettings_FormPatterns')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_BusinessSettings_PolicyHolds = By.xpath("//div[contains(@id,'BusinessSettings_PolicyHolds')]//div[@class='gw-action--inner gw-hasDivider']");
 	final By TabPC_Administration_Monitoring       = By.xpath("//div[@id='TabBar-AdminTab-Admin_Monitoring']/div[@class='gw-action--expand-button']");
+	final By TabPC_Admin_Monitoring_Messages = By.xpath("//div[contains(@id,'MessageSearch')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Monitoring_MessageQueues = By.xpath("//div[contains(@id,'MessagingDestinationControlList')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Monitoring_WorkFlows = By.xpath("//div[contains(@id,'WorkflowSearch')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Monitoring_WorkFlowStatistics = By.xpath("//div[contains(@id,'WorkflowStats')]//div[@class='gw-action--inner gw-hasDivider']");
 	final By TabPC_Administration_Utilities        = By.xpath("//div[@id='TabBar-AdminTab-Admin_Utilities']/div[@class='gw-action--expand-button']");
+    final By TabPC_Admin_Utilities_ImportData = By.xpath("//div[contains(@id,'Utilities_ImportWizard')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Utilities_ExportData = By.xpath("//div[contains(@id,'Utilities_ExportData')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Utilities_ScriptParameters = By.xpath("//div[contains(@id,'ScriptParametersPage')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Utilities_SpreadSheetExportFormats = By.xpath("//div[contains(@id,'Utilities_DataFlowMasks')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Utilities_DataChange = By.xpath("//div[contains(@id,'Utilities_DataChangePage')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Utilities_RuntimeProperties = By.xpath("//div[contains(@id,'Utilities_Properties')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Utilities_InboundFiles = By.xpath("//div[contains(@id,'Utilities_InboundFileSearch')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_Utilities_OutboundFiles = By.xpath("//div[contains(@id,'Utilities_OutboundFileSearch')]//div[@class='gw-action--inner gw-hasDivider']");
+	final By TabPC_Admin_ProductManagement = By.xpath("//div[contains(@id,'APDProductManagementPage')]//div[@class='gw-action--inner gw-hasDivider']");
 
 	/*
 	 * ------------------------------------------------------------------------- ----

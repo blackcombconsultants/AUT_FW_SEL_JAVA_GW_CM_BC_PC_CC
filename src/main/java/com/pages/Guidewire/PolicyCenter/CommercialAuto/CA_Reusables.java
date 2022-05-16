@@ -26,7 +26,7 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 	/*
 	 * LOB
 	 */
-	private static By LOB_CommercialAuto = By.xpath("//div[text()='Commercial Auto']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
+	private static By LOB_CommercialAuto = By.xpath("//div[contains(@id,'ProductOffersDV-ProductSelectionLV-1-addSubmission')]");
 
 	/*
 	 * Menu
@@ -58,19 +58,19 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 
 	public static LinkedHashMap<String, String> getData_CommercialAuto(String strTable) throws Throwable {
 
-		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_Fillo(pTestDataFile_ClaimsCenter, strTable, strTestCaseName);
+		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_Fillo(pTestDataFile_CommercialAuto, strTable, strTestCaseName);
 
 	}
 
 	public static LinkedHashMap<String, String> getData_Row_CommercialAuto(String strTable, int SecondKey) throws Throwable {
 
-		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(pTestDataFile_ClaimsCenter, strTable, strTestCaseName, SecondKey);
+		return Selenium_Utils_DataBase.getData_MSExcel_WorkBook_WorkSheet_DataSet_Fillo(pTestDataFile_CommercialAuto, strTable, strTestCaseName, SecondKey);
 
 	}
 
 	public static void UpdateData_CommercialAuto(String strTable, String strColumn, String strValue) throws Throwable {
 
-		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Column_Fillo(pTestDataFile_ClaimsCenter, strTable, strColumn, strValue);
+		Selenium_Utils_DataBase.UpdateData_MSExcel_WorkSheet_Column_Fillo(pTestDataFile_CommercialAuto, strTable, strColumn, strValue);
 
 	}
 
@@ -125,7 +125,9 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 					GuidewireAutomate("PACoverages", SW_CA_Forms, "clickAndwait", "click");
 					break;
 				case "Payment" :
-					GuidewireAutomate("PACoverages", SW_CA_Payment, "clickAndwait", "click");
+					getStaleElement("Payment", SW_CA_Payment);
+					getStaleElement("Payment", SW_CA_Payment);
+					GuidewireAutomate("Payment", SW_CA_Payment, "clickAndwait", "click");
 					break;
 				default :
 					throw new IOException("No support for Menu : " + Menu);
@@ -358,62 +360,69 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 
 			case "Issue Policy" :
 
-				Tab_Menu_Navigation.pcMenuNavigation("New Submission");
+				Tab_Menu_Navigation.pcMenuNavigation("New Submission Desktop");
 				PolicyCenter_Resuables.newSubmissions_Verify();
 				CA_Reusables.newSubmission_SelectLOB_CommercialAuto();// select
 				// LOB
 
-				strAccountName = PolicyCenter_Resuables.infoBar("AccountName");
-				strAccountNumber = PolicyCenter_Resuables.infoBar("AccountNumber");
+				strAccountName      = PolicyCenter_Resuables.infoBar("AccountName");
+				strAccountNumber    = PolicyCenter_Resuables.infoBar("AccountNumber");
 				strSubmissionNumber = PolicyCenter_Resuables.infoBar("SubmissionNumber");
 
-				PolicyCenter_Resuables.offering();
-				PolicyCenter_Resuables.clickButton("Next");
+		/*PolicyCenter_Resuables.offering();
+		PolicyCenter_Resuables.clickButton("Next");*/
 				CA_Qualification.qualification();
-				PolicyCenter_Resuables.clickButton("Next");
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_PolicyInfo.dateQuoteNeeded();
 				CA_PolicyInfo.primaryNamedInsured();
 				CA_PolicyInfo.policyAddress();
 				CA_PolicyInfo.OfficialID();
+				CA_PolicyInfo.BusinessAndOperations();
 				CA_PolicyInfo.OrganizationType();
 				CA_PolicyInfo.policyDetails();
-				PolicyCenter_Resuables.clickButton("Next");
-				CA_CommercialAutoLine.coverages_Product();
+				PolicyCenter_Resuables.clickButton("Save Next");
+				//CA_CommercialAutoLine.coverages_Product();
 				CA_CommercialAutoLine.coverages_Fleet();
-				CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
-				PolicyCenter_Resuables.clickButton("Next");
+				//CA_CommercialAutoLine.coverages_SeasonalTrailerLiability();
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_Locations.Location();
-				PolicyCenter_Resuables.clickButton("Next");
-				CA_Vehicles.VehicleInformation();
-				PolicyCenter_Resuables.clickButton("Next");
+				PolicyCenter_Resuables.clickButton("Save Next");
+				CA_Vehicles.AddVehicleDetails();
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_StateInfo.Stateinfo();
-				PolicyCenter_Resuables.clickButton("Next");
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_Drivers.Driver();
 				CA_Drivers.DriverDetails();
-				PolicyCenter_Resuables.clickButton("Next");
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_CoveredVehicles.CoveredVehicles();
-				PolicyCenter_Resuables.clickButton("Next");
-				Thread.sleep(2000);
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_Modifiers.Modifiers();
-				PolicyCenter_Resuables.clickButton("Next");
-				Thread.sleep(2000);
+				PolicyCenter_Resuables.clickButton("Save Next");
+				CA_Supplimentary.CA_Supplimentary_GQ();
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_RiskAnalysis.button_Verify();
-				PolicyCenter_Resuables.clickButton("Next");
+				PolicyCenter_Resuables.clickButton("Save Next");
 				CA_PolicyReview.PolicyReview();
-				CA_PolicyReview.PolicyDetails();
+				//CA_PolicyReview.PolicyDetails();
 				PolicyCenter_Resuables.clickButton("Quote");
-				CA_Reusables.CaValidationError();
-				CA_Reusables.submissionMenuNavigation("Commercial Auto Line");
-				CA_Reusables.CaValidationError();
-				PolicyCenter_Resuables.clickButton("Quote");
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				CA_Quote.quoteDetails();
-
+				PolicyCenter_Resuables.clickButton("Save Next");
+				CA_Forms.ValidateForms();
+				PolicyCenter_Resuables.clickButton("Save Next");
+				CA_Payment.premiumSummary();
+				CA_Payment.payments();
+				CA_Payment.invoicing();
+				CA_Payment.billing();
+				CA_Payment.paymentSchedule();
+				PolicyCenter_Resuables.clickButton("Bind Options");
+				PolicyCenter_Resuables.clickButton("Issue Policy");
+				CA_IssuesTheBlockIssuance.Issuance();
+				CA_Reusables.submissionMenuNavigation("Payment");
 				PolicyCenter_Resuables.clickButton("Bind Options");
 				PolicyCenter_Resuables.clickButton("Issue Policy");
 				strJob = PolicyCenter_Resuables.infoBar("Job");
 				strPolicyNumber = PolicyCenter_Resuables.infoBar("PolicyNumber");
-
 				PC_Bound.ViewYourPolicy();
 				PC_PolicySummary.detail_Verify();
 				PC_PolicySummary.account_Verify();

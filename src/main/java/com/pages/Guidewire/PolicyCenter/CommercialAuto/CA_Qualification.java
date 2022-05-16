@@ -14,7 +14,7 @@ public class CA_Qualification extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
-	private static By QU_CA_PreQualification = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Commercial Auto Pre-Qualification']");
+	private static By QU_CA_PreQualification = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Pre-Qualification Questions']");
 
 	private static By QU_Did_Agent_Inspect_Vehicles                                                                                               = By.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_1')]");
 	private static By QU_Any_Vehicles_Customized_Altered_Or_Which_Have_Special_Equipment                                                          = By.xpath("//input[contains(@id,'QuestionSetLV-1-QuestionModalInput-BooleanRadioInput_NoPost_1')]");
@@ -34,17 +34,19 @@ public class CA_Qualification extends SeleniumWebDriver_Commands {
 	private static By QU_Does_Applicant_Do_Spraying_Or_Pruning                                                                                    = By.xpath("//input[contains(@id,'QuestionSetLV-15-QuestionModalInput-BooleanRadioInput_NoPost_1')]");
 	private static By QU_Any_Vehicle_Maintenance_Program_In_Operation                                                                             = By.xpath("//input[contains(@id,'QuestionSetLV-16-QuestionModalInput-BooleanRadioInput_NoPost_1')]");
 	private static By QU_Are_Any_Drivers_Not_Covered_By_Work_Comp                                                                                 = By.xpath("//input[contains(@id,'QuestionSetLV-17-QuestionModalInput-BooleanRadioInput_NoPost_1')]");
+	private static By QU_Doanyofthefollowingquestionapply = By.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_NoPost_1')]");
 
 	public static void qualification() throws Throwable {
 
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("qualification");
 
-			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Qualification_Header, "equals", "Qualification");
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "contains", "Qualification");
 
-			GuidewireAutomate_Validation("PA Pre-Qualification", QU_CA_PreQualification, "equals", "Commercial Auto Pre-Qualification");
+			GuidewireAutomate_Validation("CA Pre-Qualification", QU_CA_PreQualification, "equals", "Pre-Qualification Questions");
+			GuidewireAutomate("Do any of the following question(s) apply?", QU_Doanyofthefollowingquestionapply, "clickAndwait", lhm_TestCase_Table_Data.get("QU_Doanyofthefollowingquestionapply"));
 
-			GuidewireAutomate("Did agent inspect vehicles?", QU_Did_Agent_Inspect_Vehicles, "click", lhm_TestCase_Table_Data.get("QU_DidAgentInspectVehicles"));
+			/*GuidewireAutomate("Did agent inspect vehicles?", QU_Did_Agent_Inspect_Vehicles, "click", lhm_TestCase_Table_Data.get("QU_DidAgentInspectVehicles"));
 
 			GuidewireAutomate("Any vehicles customized, altered or which have special equipment?", QU_Any_Vehicles_Customized_Altered_Or_Which_Have_Special_Equipment, "click", lhm_TestCase_Table_Data.get("QU_AnyVehiclesCustomizedAltered"));
 
@@ -61,7 +63,7 @@ public class CA_Qualification extends SeleniumWebDriver_Commands {
 			GuidewireAutomate("Do over 50% of employees use their autos for business purposes?", QU_Do_Over_50Persent_Of_Employees_Use_Their_Autos_For_Business_Purposes, "click", lhm_TestCase_Table_Data.get("QU_DoOver50PersentOfEmployees"));
 
 			GuidewireAutomate("Are any vehicles used by family members?", QU_Are_Any_Vehicles_Used_By_Family_Members, "click", lhm_TestCase_Table_Data.get("QU_AreAnyVehiclesUsedBy"));
-
+*/
 			/*
 			 * GuidewireAutomate("Do operations involve transporting hazardous material?", QU_Do_Operations_Involve_Transporting_Hazardous_Material,
 			 * "click", lhm_TestCase_Table_Data.get("QU_DoOperationsInvolveTransporting"));

@@ -12,7 +12,7 @@ public class BC_Contacts extends SeleniumWebDriver_Commands {
 	private static By Contacts_EditButton = By.xpath("//div[@id='AccountDetailContacts-AccountDetailContactsScreen-Edit']//div[@role='button']");
 
 	private static By Contacts_CI_Type  = By.xpath("//div[contains(@id,'AccountContactDetailDV-Type')]//div[@class='gw-value-readonly-wrapper']");
-	private static By Contacts_CI_Name  = By.xpath("//div[contains(@id,'GlobalPersonNameInputSet-NameSummary')]//div[@class='gw-value-readonly-wrapper']");
+	private static By Contacts_CI_Name  = By.xpath("//div[contains(@id,'GlobalContactNameInputSet-Name')]//div[@class='gw-value-readonly-wrapper']");
 	private static By Contacts_CI_Email = By.xpath("//div[contains(@id,'AccountContactDetailDV-Email')]//div[@class='gw-value-readonly-wrapper']");
 
 	private static By Contats_CI_Address1  = By.xpath("//div[contains(@id,'GlobalAddressInputSet-AddressLine1')]//input[@type='text']");

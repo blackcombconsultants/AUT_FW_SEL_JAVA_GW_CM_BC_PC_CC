@@ -56,19 +56,28 @@ public class CA_PolicyReview extends SeleniumWebDriver_Commands {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("PolicyReview");
 
-			GuidewireAutomate_Validation("Policy Review Header", PolicyReviewHeader, "equals", "Policy Review");
+			GuidewireAutomate_Validation("Policy Review Header",PolicyCenter_Resuables_PO.Screen_Header, "contains", "Policy Review");
 			GuidewireAutomate_Validation("Primary Named Insured Section", PrimaryNamedInsuredSection, "equals", "Primary Named Insured");
 			GuidewireAutomate_Validation("Primary Named Insured", PrimaryNamedInsured, "equals", strAccountName);
 			GuidewireAutomate_Validation("Policy Address", Address, "contains", lhm_TestCase_Table_Data.get("CA_Address"));
 			GuidewireAutomate_Validation("County", County, "equals", lhm_TestCase_Table_Data.get("CA_County"));
-			// GuidewireAutomate_Validation("Address Type", AddressType, "equals",lhm_TestCase_Table_Data.get("CA_AddressType"));
-			GuidewireAutomate_Validation("DateQuoteNeeded", DateQuoteNeeded, "equals", lhm_TestCase_Table_Data.get("CA_DateQuoteNeeded"));
+			GuidewireAutomate_Validation("Address Type", AddressType, "equals",lhm_TestCase_Table_Data.get("CA_AddressType"));
+			String value=lhm_TestCase_Table_Data.get("CA_DateQuoteNeeded");
+			String datevalue=value.replace("-","/");
+			System.out.println(datevalue);
+			GuidewireAutomate_Validation("DateQuoteNeeded", DateQuoteNeeded, "contains", datevalue );
 			GuidewireAutomate_Validation("Product Section", ProductSection, "equals", "Product");
 			GuidewireAutomate_Validation("Product", Product, "equals", lhm_TestCase_Table_Data.get("CA_Product"));
-			GuidewireAutomate_Validation("Effective Date Section", EffectiveDateSection, "equals", "Effective Date");
-			GuidewireAutomate_Validation("Effective Date", EffectiveDate, "equals", lhm_TestCase_Table_Data.get("CA_EffectiveDate"));
+			GuidewireAutomate_Validation("Effective Date Section", EffectiveDateSection, "contains", "Effective Date");
+			String Value=lhm_TestCase_Table_Data.get("CA_EffectiveDate");
+			String dateValue=Value.replace("-","/");
+			System.out.println(dateValue);
+			GuidewireAutomate_Validation("Effective Date", EffectiveDate, "contains",dateValue);
 			GuidewireAutomate_Validation("Expiration Date Section", ExpirationDateSection, "equals", "Expiration Date");
-			GuidewireAutomate_Validation("Expiration Date", ExpirationDate, "equals", lhm_TestCase_Table_Data.get("CA_ExpirationeDate"));
+			String Values=lhm_TestCase_Table_Data.get("CA_ExpirationDate");
+			String DateValue=Values.replace("-","/");
+			System.out.println(DateValue);
+			GuidewireAutomate_Validation("Expiration Date", ExpirationDate, "contains",DateValue);
 
 		} catch (Exception e) {
 			e.printStackTrace();

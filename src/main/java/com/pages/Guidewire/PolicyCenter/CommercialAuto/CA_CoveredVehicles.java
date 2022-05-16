@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -20,8 +21,8 @@ public class CA_CoveredVehicles extends SeleniumWebDriver_Commands {
 
 		try {
 
-			GuidewireAutomate_Validation("Covered Vehicles Header", CoveredVehiclesHeader, "equals", "Covered Vehicles");
-			GuidewireAutomate_Validation("Covered Autos Header", CoveredAutosHeader, "equals", "Covered Autos");
+			//GuidewireAutomate_Validation("Covered Vehicles Header", CoveredVehiclesHeader, "contains", "Covered Vehicles");
+			GuidewireAutomate_Validation("Covered Autos Header", PolicyCenter_Resuables_PO.Screen_Header, "contains", "Covered Auto");
 
 		} catch (Exception e) {
 			e.printStackTrace();

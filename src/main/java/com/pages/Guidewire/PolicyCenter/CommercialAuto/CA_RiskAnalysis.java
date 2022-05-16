@@ -598,7 +598,7 @@ public class CA_RiskAnalysis extends SeleniumWebDriver_Commands {
 
 	public static void button_Verify() throws Throwable {
 		// Validating Risk Analysis screen
-		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.RiskAnalysis_Header, "equals", "Risk Analysis");
+		GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "contains", "Risk Analysis");
 
 		GuidewireAutomate_Validation("Add UWIssue", RA_AddUWIssue_Button, "isDisplayed", "true");
 		GuidewireAutomate_Validation("Add Contingency", RA_AddContingency_Button, "isDisplayed", "true");

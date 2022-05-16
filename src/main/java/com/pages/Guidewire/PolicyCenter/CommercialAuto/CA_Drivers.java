@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,14 +18,14 @@ public class CA_Drivers extends SeleniumWebDriver_Commands {
 	private static By DriversAddDriver = By.xpath("//div[contains(@id,'AddDriverDirectly')]//div[@role='button']");
 
 	// Driver Details
-	private static By DriverDetailsHeader      = By.xpath("//div[@id='BADriverPopup-BADriverScreen-ttlBar']//div[@role='heading']");
-	private static By DriverInformationSection = By.xpath("//div[contains(@id,'BADriverScreen-BADriversDV')]//div[@class='gw-label gw-boldLabel']");
-	private static By DriverFirstName          = By.xpath("//input[contains(@name,'GlobalPersonNameInputSet-FirstName')]");
-	private static By DriverLastName           = By.xpath("//input[contains(@name,'GlobalPersonNameInputSet-LastName')]");
-	private static By DriverDateOfBirth        = By.xpath("//input[contains(@name,'BADriversDV-DateOfBirth')]");
-	private static By DriverLicenseNumber      = By.xpath("//input[contains(@name,'BADriversDV-LicenseNumber')]");
-	private static By DriverLicenseState       = By.xpath("//select[contains(@name,'BADriversDV-LicenseState')]");
-	private static By DriverDetailsOkButton    = By.xpath("//div[contains(@id,'BADriverPopup-BADriverScreen-Update')]//div[@role='button']");
+	private static By DriverDetailsHeader      = By.xpath("//div[@id='CA7DriverPopup-CA7DriverScreen-ttlBar']//div[@role='heading']");
+	private static By DriverInformationSection = By.xpath("//div[contains(@id,'CA7DriverScreen-CA7DriversDV-1')]//div[@class='gw-label gw-boldLabel']");
+	private static By DriverFirstName          = By.xpath("//input[contains(@name,'CA7DriversDV-FirstName')]");
+	private static By DriverLastName           = By.xpath("//input[contains(@name,'CA7DriversDV-LastName')]");
+	private static By DriverDateOfBirth        = By.xpath("//input[contains(@name,'CA7DriversDV-DateOfBirth')]");
+	private static By DriverLicenseNumber      = By.xpath("//input[contains(@name,'CA7DriversDV-LicenseNumber')]");
+	private static By DriverLicenseState       = By.xpath("//select[contains(@name,'CA7DriversDV-LicenseState')]");
+	private static By DriverDetailsOkButton    = By.xpath("//div[contains(@id,'CA7DriverScreen-Update')]//div[@role='button']");
 
 	private static By VerifyDriverLastName     = By.xpath("//div[contains(@id,'LastName_button')]");
 	private static By VerifyDriverFirstName    = By.xpath("//div[contains(@id,'FirstName_button')]");
@@ -34,7 +35,7 @@ public class CA_Drivers extends SeleniumWebDriver_Commands {
 
 		try {
 
-			GuidewireAutomate_Validation("Drivers Header", DriversHeader, "equals", "Drivers");
+			GuidewireAutomate_Validation("Drivers Header", PolicyCenter_Resuables_PO.Screen_Header , "contains", "Drivers");
 			GuidewireAutomate("Add Driver", DriversAddDriver, "clickAndwait", "click");
 
 		} catch (Exception e) {
