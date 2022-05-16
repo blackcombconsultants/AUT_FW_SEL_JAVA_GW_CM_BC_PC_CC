@@ -23,6 +23,7 @@ public class CA_Reusables extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	/*
 	 * LOB
 	 */

@@ -13,10 +13,10 @@
 		name="PersonalAuto ClaimsCenter Regression">
 		<classes>
 			<class
-				name="com.Test.Guidewire.BilllingCenter.GW_BC_ReverseFee">
+				name="com.Test.Guidewire.BilllingCenter.Smoke_test">
 				<methods>
 					<include
-						name="ReverseFee" />
+						name="Smoke_Test1" />
 				</methods>
 			</class>	<!-- class -->
 

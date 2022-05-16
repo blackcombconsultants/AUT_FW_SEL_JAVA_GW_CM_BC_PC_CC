@@ -14,6 +14,7 @@ public class CA_Supplimentary extends SeleniumWebDriver_Commands {
 
     private static By CA_Applicantsubsdiaryentity = By.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_1')]");
 //misba
+
     public static void CA_Supplimentary_GQ() throws Throwable {
     try{
     lhm_TestCase_Table_Data=CA_Reusables.getData_CommercialAuto("Supplimentary");

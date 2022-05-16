@@ -132,6 +132,7 @@ public class PC_NewDocument extends SeleniumWebDriver_Commands {
 		GuidewireAutomate("Type", DT_Type, "selectByVisibleText", lhm_TestCase_Table_Data.get("Type"));
 		GuidewireAutomate("LineOfBusiness", DT_LineOfBusiness, "selectByVisibleText", lhm_TestCase_Table_Data.get("LineOfBusiness"));
 		GuidewireAutomate("Jurisdiction", DT_Jurisdiction, "selectByVisibleText", lhm_TestCase_Table_Data.get("Jurisdiction"));
+
 		/*
 		 * GuidewireAutomate("Folder", DT_Folder, "selectByVisibleText", lhm_TestCase_Table_Data.get("Folder"));
 		 */

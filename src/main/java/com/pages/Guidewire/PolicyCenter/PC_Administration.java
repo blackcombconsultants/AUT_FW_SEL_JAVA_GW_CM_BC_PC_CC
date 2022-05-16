@@ -19,6 +19,7 @@ public class PC_Administration extends SeleniumWebDriver_Commands {
     * New user
      */
 
+
     //Basics
     private static By NewUser_BasicsHeader = By.xpath("//div[contains(@id,'UserDetail_BasicCardTab')]//div[@role='tab']");
     private static By Basics_FirstName = By.xpath("//input[contains(@name,'GlobalPersonNameInputSet-FirstName')]");

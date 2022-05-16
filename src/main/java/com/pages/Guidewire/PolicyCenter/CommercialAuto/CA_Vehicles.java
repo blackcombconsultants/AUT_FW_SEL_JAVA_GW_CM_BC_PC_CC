@@ -17,6 +17,7 @@ public class CA_Vehicles extends SeleniumWebDriver_Commands {
 	private static By CreateVehicle      = By.xpath("//div[contains(@id,'BAVehiclesLV_tb-Add')]//div[@role='button']");
 	private static By VehicleInformation = By.xpath("//div[contains(@id,'VehicleScreen-ttlBar')]//div[@role='heading']");
 
+
 	// Vehicle Details
 	private static By VehicleDetailsSection          = By.xpath("//div[contains(@id,'VehicleDetailCardTab')]//div[@role='tab']");
 	private static By VehicleDetailsGaragedAtSection = By.xpath("//div[contains(@id,'BAGarageLocationInput_Input')]//div[@class='gw-label' and text()='Garaged At']");

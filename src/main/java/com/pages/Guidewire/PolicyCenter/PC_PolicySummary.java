@@ -11,6 +11,7 @@ import com.pages.Guidewire.Tab_Menu_Navigation;
 
 public class PC_PolicySummary extends SeleniumWebDriver_Commands {
 
+
 	private static By PS_Details = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']");
 
 	private static By PS_D_PolicyNumber        = By.xpath("//div[contains(@id,'PolicyDetailsDetailViewTile_DV-PolicyNumber')]//div[@class='gw-value-readonly-wrapper']");

@@ -14,6 +14,7 @@ public class CA_Qualification extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By QU_CA_PreQualification = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Pre-Qualification Questions']");
 
 	private static By QU_Did_Agent_Inspect_Vehicles                                                                                               = By.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_1')]");

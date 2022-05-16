@@ -370,6 +370,7 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Create From Template", MenuPC_Account_Actions_Create_NewDocument_CreateTemplate, "clickAndwait", "click");
 				break;
 
+
 			case "Account File" :
 				break;
 			case "Policy File" :

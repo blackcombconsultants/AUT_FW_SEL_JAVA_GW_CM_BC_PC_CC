@@ -14,6 +14,7 @@ public class CA_Locations extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 
 	}
+
 	// Location
 	private static By LocationsHeading        = By.xpath("//div[contains(@id,'LocationsScreen-ttlBar')]//div[@role='heading']");
 	private static By L_D_NonSpecificLocation = By.xpath("//div[contains(@id,'LocationDetailInputSet-NonSpecificLocation')]//div[@class='gw-RangeValue']/div[@class='gw-label']");

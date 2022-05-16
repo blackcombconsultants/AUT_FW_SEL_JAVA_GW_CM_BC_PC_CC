@@ -13,6 +13,7 @@ public class CA_PolicyReview extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By PolicyReviewHeader              = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 	private static By PrimaryNamedInsuredSection      = By.xpath("//div[contains(@id,'PrimaryNamedInsured_Input')]//div[@class='gw-label gw-boldLabel']");
 	private static By PrimaryNamedInsured             = By.xpath("//div[contains(@id,'PrimaryNamedInsured_Input')]//div[@class='gw-value-readonly-wrapper']");

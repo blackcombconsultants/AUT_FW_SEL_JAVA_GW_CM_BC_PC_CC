@@ -19,6 +19,7 @@ public class CA_CoveredVehicles extends SeleniumWebDriver_Commands {
 
 	public static void CoveredVehicles() throws Throwable {
 
+
 		try {
 
 			//GuidewireAutomate_Validation("Covered Vehicles Header", CoveredVehiclesHeader, "contains", "Covered Vehicles");

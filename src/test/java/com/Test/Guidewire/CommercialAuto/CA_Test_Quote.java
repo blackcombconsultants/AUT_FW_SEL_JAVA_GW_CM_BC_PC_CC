@@ -57,6 +57,7 @@ public class CA_Test_Quote extends GW_GetDriver {
     public void AUT_PC_CA_Quote_MultiVersionQuote() throws Throwable {
 
     }
+
     @Test
     public void AUT_PC_CA_Quote_SideBySideQuote() throws Throwable {
 

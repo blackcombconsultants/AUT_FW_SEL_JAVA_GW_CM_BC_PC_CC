@@ -21,6 +21,7 @@ public class CA_Forms extends SeleniumWebDriver_Commands {
 	private static By Endorsement_Validate = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[3]//div[@class='gw-value-readonly-wrapper']");
 	private static By Replacement_Validate = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[4]//div[@class='gw-value-readonly-wrapper']");
 
+
 	public static void ValidateForms() throws Throwable {
 		lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("Forms");
 		GuidewireAutomate_Validation("forms Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Forms");

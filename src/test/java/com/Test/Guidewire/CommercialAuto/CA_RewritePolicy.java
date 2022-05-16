@@ -23,6 +23,7 @@ public class CA_RewritePolicy extends GW_GetDriver {
 
     }
 
+
     @Test
     public void AUT_PC_CA_Rewrite_FullTerm() throws Throwable {
 
@@ -84,7 +85,7 @@ public class CA_RewritePolicy extends GW_GetDriver {
         PolicyCenter_Resuables.clickButton("Quote");
         Thread.sleep(3000);
         CA_Quote.quoteDetails();
-        CA_Quote.policyPremium();
+       // CA_Quote.policyPremium();
         PolicyCenter_Resuables.clickButton("Issue Policy for Rewrite New Term Bound");
 
     }

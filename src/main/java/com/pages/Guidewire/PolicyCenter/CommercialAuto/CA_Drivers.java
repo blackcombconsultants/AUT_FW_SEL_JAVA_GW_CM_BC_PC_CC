@@ -17,6 +17,7 @@ public class CA_Drivers extends SeleniumWebDriver_Commands {
 	private static By DriversHeader    = By.xpath("//div[contains(@id,'BADriversScreen-ttlBar')]//div[@role='heading']");
 	private static By DriversAddDriver = By.xpath("//div[contains(@id,'AddDriverDirectly')]//div[@role='button']");
 
+
 	// Driver Details
 	private static By DriverDetailsHeader      = By.xpath("//div[@id='CA7DriverPopup-CA7DriverScreen-ttlBar']//div[@role='heading']");
 	private static By DriverInformationSection = By.xpath("//div[contains(@id,'CA7DriverScreen-CA7DriversDV-1')]//div[@class='gw-label gw-boldLabel']");

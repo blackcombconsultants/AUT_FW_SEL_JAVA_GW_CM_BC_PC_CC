@@ -1,4 +1,4 @@
-package com.Test.Guidewire.CommercialAuto;
+package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
 import com.pages.Guidewire.PolicyCenter.CommercialAuto.*;
 import org.testng.annotations.Test;
@@ -21,6 +21,7 @@ public class CA_Submission extends GW_GetDriver {
 		CA_Reusables.SubmissionProcess("New Company Account", "Issue Policy");
 
 	}
+
 
 	@Test
 	public void AUT_CA_PC_DeclinedNewBusinessSubmission() throws Throwable {

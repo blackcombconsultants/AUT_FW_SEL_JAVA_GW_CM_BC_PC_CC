@@ -179,6 +179,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	}
 
+
 	public static void coverages_HiredAutoCollision() throws Throwable {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("CommercialAutoLine");
