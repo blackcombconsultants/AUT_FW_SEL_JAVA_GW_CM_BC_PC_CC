@@ -22,6 +22,7 @@ public class CPACK_Payment extends SeleniumWebDriver_Commands {
 
 	private static By PA_P_Frequency = By.xpath("//div[contains(@id,'PaymentsSummaryInputSet-Frequency')]//div[@class='gw-value-readonly-wrapper']");
 
+
 	// Invoicing
 	private static By PA_Invoicing       = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Invoicing']");
 	private static By PA_I_Frequency     = By.xpath("//div[contains(@id,'InvoiceStreamInputSet-InvoiceFrequency')]//div[@class='gw-value-readonly-wrapper']");

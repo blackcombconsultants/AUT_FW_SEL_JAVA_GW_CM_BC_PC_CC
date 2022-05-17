@@ -12,8 +12,8 @@ public class CPACK_IM_LineReview extends SeleniumWebDriver_Commands {
 	public CPACK_IM_LineReview(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}
-	private static By LineReview_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 
+	private static By LineReview_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 	/*
 	 * Primary Named Insured
 	 */

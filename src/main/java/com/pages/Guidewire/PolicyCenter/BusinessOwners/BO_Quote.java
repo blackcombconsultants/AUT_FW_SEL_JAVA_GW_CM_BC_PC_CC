@@ -14,6 +14,7 @@ public class BO_Quote extends SeleniumWebDriver_Commands {
 
 	private static By Quote_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 
+
 	private static By QU_SubmissionNumber    = By.xpath("//div[contains(@id,'JobNumber')]//div[@class='gw-value-readonly-wrapper']");
 	private static By QU_PolicyPeriod        = By.xpath("//div[contains(@id,'PolicyPeriod')]//div[@class='gw-value-readonly-wrapper']");
 	private static By QU_PrimaryNamedInsured = By.xpath("//div[contains(@id,'Insured')]//div[@class='gw-value-readonly-wrapper']");

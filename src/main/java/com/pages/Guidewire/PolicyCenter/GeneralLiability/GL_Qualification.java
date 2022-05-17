@@ -15,6 +15,7 @@ public class GL_Qualification extends SeleniumWebDriver_Commands {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	private static By QU_GL_PreQualification = By.xpath(
 			"//div[contains(@id,'PreQualQuestionSetsDV-QuestionSetsDV-0-1')]/div[@class='gw-label gw-boldLabel']");
 

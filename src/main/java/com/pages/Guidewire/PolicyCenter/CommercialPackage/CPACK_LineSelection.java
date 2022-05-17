@@ -15,6 +15,7 @@ public class CPACK_LineSelection extends SeleniumWebDriver_Commands {
 	private static By LineSelection_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 	private static By LS_CoveragePart      = By.xpath("//div[contains(@id,'CPPLineSelectionDV')]//div[@class='gw-label gw-boldLabel' and text()='Coverage Part Selection']");
 	private static By LS_PackageRiskType   = By.xpath("//select[contains(@name,'PackageRisk')]");
+
 	public static void lineSelection() throws Throwable {
 		try {
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("lineSelection", strTestCaseName);

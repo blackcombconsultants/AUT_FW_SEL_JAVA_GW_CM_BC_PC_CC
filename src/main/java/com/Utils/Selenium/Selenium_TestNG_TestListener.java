@@ -50,7 +50,7 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 	public void onTestSuccess(ITestResult result) {
 		driver.quit();
 		try {
-			Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("searchValues", "Test", "PASS");
+			Selenium_Utils_DataBase.UpdateData_MSExcelWorkSheet_Column_Fillo("master", "Test", "PASS");
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
@@ -131,15 +131,8 @@ public class Selenium_TestNG_TestListener extends GW_Base implements ITestListen
 			/*
 			 * Get URL StrENVIRONMENT = DEV/QA/UAT/PROD/QATT
 			 */
-			url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PolicyCenter");
-			switch (StrENVIRONMENT) {
-				case "DEV" :
-					url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PC_QA");
-					break;
+			url = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BC_UAT");
 
-				default :
-					throw new IOException("No support for ENVIRONMENT : " + StrENVIRONMENT);
-			}
 
 			strURL_PolicyCenter   = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_PC_" + StrENVIRONMENT);
 			strURL_BillingCenter  = oGetFile.getValue_PropertiesFile(pConfigproperties, "URL_BC_" + StrENVIRONMENT);

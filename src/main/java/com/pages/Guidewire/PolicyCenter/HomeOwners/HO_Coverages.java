@@ -14,6 +14,7 @@ public class HO_Coverages extends SeleniumWebDriver_Commands {
 
 	private static By HO_Coverages_Screen_titlebar = By.xpath("//div[contains(@id,'HOPCoveragesScreen-ttlBar')]//div[1]//div");
 
+
 	/*
 	 * CoveragesTab
 	 */

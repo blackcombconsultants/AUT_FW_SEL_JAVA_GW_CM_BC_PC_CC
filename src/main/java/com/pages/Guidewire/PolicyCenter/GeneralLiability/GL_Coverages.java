@@ -13,6 +13,7 @@ public class GL_Coverages extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By Coverages_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Coverages']");
 	// Standard Coverages
 	private static By StandardCoverages_Tab = By.xpath("//div[contains(@id,'GeneralLiability_IncludedCardTab')]");

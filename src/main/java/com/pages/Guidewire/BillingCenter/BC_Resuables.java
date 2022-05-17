@@ -1061,7 +1061,7 @@ public class BC_Resuables extends SeleniumWebDriver_Commands {
 	 */
 
 	public static void bcTabNavigation_Acct_Search() throws Throwable {
-		lhm_TestCase_Table_Data = getData_BillingCenter("searchValues");
+		lhm_TestCase_Table_Data = getData_BillingCenter("master");
 
 		strAccountNumber = lhm_TestCase_Table_Data.get("AccountNumber");
 

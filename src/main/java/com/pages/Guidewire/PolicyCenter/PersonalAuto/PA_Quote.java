@@ -12,6 +12,7 @@ public class PA_Quote extends SeleniumWebDriver_Commands {
 
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
+
 	public PA_Quote(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}

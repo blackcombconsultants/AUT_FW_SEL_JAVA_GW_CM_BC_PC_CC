@@ -13,6 +13,7 @@ public class PA_RiskAnalysis extends SeleniumWebDriver_Commands {
 	Selenium_Utils_DataBase oDB                 = new Selenium_Utils_DataBase();
 	static String           strShortDescription = null;
 
+
 	public PA_RiskAnalysis(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}

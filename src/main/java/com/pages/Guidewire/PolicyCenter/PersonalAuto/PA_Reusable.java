@@ -23,6 +23,7 @@ public class PA_Reusable extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By LOB_PersonalAuto = By.xpath("//div[text()='Personal Auto']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
 
 	private static By SW_Offering          = By.xpath("//div[@id='SubmissionWizard-Offering']/div[@role='menuitem']");

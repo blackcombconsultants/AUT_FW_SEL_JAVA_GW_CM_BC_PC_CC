@@ -13,6 +13,7 @@ public class CP_BuildingsAndLocations extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 
 	}
+
 	private static By ScreenHeader = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 
 	private static By AddBuildingButton = By.xpath("//div[contains(@id,'CPBuildingsAndLocationsLV-0-Actions-ActionsMenuIcon')]//div[@class='gw-icon gw-icon--expand']");

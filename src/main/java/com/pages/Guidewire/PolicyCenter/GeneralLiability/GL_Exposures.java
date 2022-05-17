@@ -13,6 +13,7 @@ public class GL_Exposures extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By Exposures_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Exposures']");
 	// ExposureValuesbylocation
 	private static By EVL_Add            = By.xpath("//div[contains(@id,'ExposureUnitsLV_tb-Add')]//div[@role='button']");

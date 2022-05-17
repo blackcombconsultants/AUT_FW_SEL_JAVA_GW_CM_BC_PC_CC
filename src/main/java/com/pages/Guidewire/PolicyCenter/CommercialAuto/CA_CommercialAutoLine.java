@@ -13,14 +13,15 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	}
 
-	private static By Header = By.xpath("//div[contains(@id,'LineWizardStepSet-BALineScreen-ttlBar')]//div[@role='heading']");
+
+	private static By Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
 
 	// Coverages Part------------------------------
 	private static By Coverages               = By.xpath("//div[contains(@id,'BALinePanelSet-CoveragesCardTab')]//div[@role='tab']");
 	private static By CoveragesProductSection = By.xpath("//div[contains(@id,'PolicyType_Input')]//div[@class='gw-label']");
 	private static By CoveragesProduct        = By.xpath("//select[contains(@name,'BALineCoveragePanelSet-BALineDV-PolicyType')]");
-	private static By CoveragesFleetSection   = By.xpath("//div[contains(@id,'Fleet_Input')]//div[@class='gw-label']");
-	private static By CoveragesFleet          = By.xpath("//select[contains(@name,'BALineCoveragePanelSet-BALineDV-Fleet')]");
+	private static By CoveragesFleetSection   = By.xpath("//div[contains(@id,'CA7LineCoveragesScreen-FleetType')]//div[@class='gw-label']");
+	private static By CoveragesFleet          = By.xpath("//select[contains(@name,'CA7LineCoveragesScreen-FleetType')]");
 
 	// Commercial Auto Owned Liability Group -> Seasonal Trailer Liability
 	private static By CommercialAutoOwnedLiabilityGroup = By.xpath("//div[contains(@id,'BALinePanelSet-BALineCoveragePanelSet-2')]//div[@class='gw-TitleBar--title']");
@@ -109,6 +110,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 	public static void coverages_Fleet() throws Throwable {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("CommercialAutoLine");
+			GuidewireAutomate_Validation("Screen Header", Header, "contains", "Commercial Auto Line");
 			GuidewireAutomate_Validation("Fleet Section", CoveragesFleetSection, "equals", "Fleet");
 			GuidewireAutomate("Fleet", CoveragesFleet, "selectByVisibleText", lhm_TestCase_Table_Data.get("CAL_Fleet"));
 
@@ -177,6 +179,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 		}
 
 	}
+
 
 	public static void coverages_HiredAutoCollision() throws Throwable {
 		try {

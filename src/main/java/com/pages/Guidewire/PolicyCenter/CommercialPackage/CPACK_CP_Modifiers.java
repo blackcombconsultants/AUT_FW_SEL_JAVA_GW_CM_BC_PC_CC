@@ -13,6 +13,7 @@ public class CPACK_CP_Modifiers extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By Modifiers_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 
 	// Rating Inputs

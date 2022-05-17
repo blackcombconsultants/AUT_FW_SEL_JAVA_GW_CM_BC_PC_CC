@@ -14,6 +14,7 @@ public class GL_Modifiers extends SeleniumWebDriver_Commands {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	private static By Modifiers_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Modifiers']");
 
 	// Rating Inputs

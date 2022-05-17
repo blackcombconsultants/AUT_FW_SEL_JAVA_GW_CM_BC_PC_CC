@@ -13,6 +13,7 @@ public class WC_PolicyInfo extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	/*
 	 * Page Objects
 	 */

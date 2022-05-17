@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="260.478" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="37.446" tests="1" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="gwSUITE" value="gwTestSuite/TestSuite_PersonalAuto_Demo.xml"/>
-    <property name="gwAPPLICATION" value="PersonalAuto"/>
-    <property name="java.specification.version" value="15"/>
-    <property name="webdriver.chrome.driver" value="D:\Users\agowda\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe"/>
+    <property name="gwSUITE" value="gwTestSuite/dsfdsf.xml"/>
+    <property name="gwAPPLICATION" value="BillingCenter"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="webdriver.chrome.driver" value="C:\Users\Lenovo\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="sun.awt.enableExtraMouseButtons" value="true"/>
-    <property name="java.class.path" value="D:\Users\agowda\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\target\test-classes;D:\Users\agowda\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\target\classes;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;D:\Users\agowda\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;D:\Users\agowda\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;D:\Users\agowda\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;D:\Users\agowda\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;D:\Users\agowda\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;D:\Users\agowda\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;D:\Users\agowda\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;D:\Users\agowda\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;D:\Users\agowda\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;D:\Users\agowda\.m2\repository\io\appium\java-client\7.4.1\java-client-7.4.1.jar;D:\Users\agowda\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;D:\Users\agowda\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;D:\Users\agowda\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;D:\Users\agowda\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;D:\Users\agowda\.m2\repository\cglib\cglib\3.3.0\cglib-3.3.0.jar;D:\Users\agowda\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-context\5.3.1\spring-context-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-aop\5.3.1\spring-aop-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-beans\5.3.1\spring-beans-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-core\5.3.1\spring-core-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-jcl\5.3.1\spring-jcl-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-expression\5.3.1\spring-expression-5.3.1.jar;D:\Users\agowda\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;D:\Users\agowda\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;D:\Users\agowda\.m2\repository\io\rest-assured\rest-assured\4.3.0\rest-assured-4.3.0.jar;D:\Users\agowda\.m2\repository\org\codehaus\groovy\groovy\3.0.2\groovy-3.0.2.jar;D:\Users\agowda\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.2\groovy-xml-3.0.2.jar;D:\Users\agowda\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;D:\Users\agowda\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;D:\Users\agowda\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;D:\Users\agowda\.m2\repository\io\rest-assured\json-path\4.3.0\json-path-4.3.0.jar;D:\Users\agowda\.m2\repository\org\codehaus\groovy\groovy-json\3.0.2\groovy-json-3.0.2.jar;D:\Users\agowda\.m2\repository\io\rest-assured\rest-assured-common\4.3.0\rest-assured-common-4.3.0.jar;D:\Users\agowda\.m2\repository\io\rest-assured\xml-path\4.3.0\xml-path-4.3.0.jar;D:\Users\agowda\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;D:\Users\agowda\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;D:\Users\agowda\.m2\repository\com\sun\xml\bind\jaxb-osgi\2.3.0.1\jaxb-osgi-2.3.0.1.jar;D:\Users\agowda\.m2\repository\org\apache\sling\org.apache.sling.javax.activation\0.1.0\org.apache.sling.javax.activation-0.1.0.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;D:\Users\agowda\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;D:\Users\agowda\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;D:\Users\agowda\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;D:\Users\agowda\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Users\agowda\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;D:\Users\agowda\.m2\repository\commons-io\commons-io\2.7\commons-io-2.7.jar;D:\Users\agowda\.m2\repository\io\github\bonigarcia\webdrivermanager\3.7.1\webdrivermanager-3.7.1.jar;D:\Users\agowda\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.47.1\htmlunit-driver-2.47.1.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.47.1\htmlunit-2.47.1.jar;D:\Users\agowda\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;D:\Users\agowda\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.47.0\htmlunit-core-js-2.47.0.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.47.1\neko-htmlunit-2.47.1.jar;D:\Users\agowda\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;D:\Users\agowda\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\htmlunit-cssparser\1.7.0\htmlunit-cssparser-1.7.0.jar;D:\Users\agowda\.m2\repository\commons-net\commons-net\3.7.2\commons-net-3.7.2.jar;D:\Users\agowda\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;D:\Users\agowda\.m2\repository\com\shapesecurity\salvation2\3.0.0\salvation2-3.0.0.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.36.v20210114\websocket-client-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-client\9.4.36.v20210114\jetty-client-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-http\9.4.36.v20210114\jetty-http-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-util\9.4.36.v20210114\jetty-util-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-io\9.4.36.v20210114\jetty-io-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.36.v20210114\websocket-common-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.36.v20210114\websocket-api-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\com\codoid\products\fillo\1.21\fillo-1.21.jar;D:\Users\agowda\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;D:\Users\agowda\.m2\repository\com\opencsv\opencsv\5.3\opencsv-5.3.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;D:\Users\agowda\.m2\repository\org\jsoup\jsoup\1.10.2\jsoup-1.10.2.jar;D:\Users\agowda\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;D:\Users\agowda\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\Users\agowda\.m2\repository\org\testng\testng\6.10\testng-6.10.jar;D:\Users\agowda\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;D:\Users\agowda\.m2\repository\io\cucumber\cucumber-core\1.2.6\cucumber-core-1.2.6.jar;D:\Users\agowda\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;D:\Users\agowda\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;D:\Users\agowda\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;D:\Users\agowda\.m2\repository\com\aventstack\extentreports\4.0.9\extentreports-4.0.9.jar;D:\Users\agowda\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;D:\Users\agowda\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;D:\Users\agowda\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;D:\Users\agowda\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;D:\Users\agowda\.m2\repository\com\sun\mail\javax.mail\1.6.0\javax.mail-1.6.0.jar;D:\Users\agowda\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;D:\Users\agowda\.m2\repository\org\apache\pdfbox\pdfbox\2.0.24\pdfbox-2.0.24.jar;D:\Users\agowda\.m2\repository\org\apache\pdfbox\fontbox\2.0.24\fontbox-2.0.24.jar;D:\Users\agowda\.m2\repository\net\rcarz\jira-client\0.5\jira-client-0.5.jar;D:\Users\agowda\.m2\repository\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;D:\Users\agowda\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;D:\Users\agowda\.m2\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;D:\Users\agowda\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;D:\Users\agowda\.m2\repository\org\mockito\mockito-all\1.9.0\mockito-all-1.9.0.jar;D:\Users\agowda\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\Lenovo\IdeaProjects\CIG\target\test-classes;C:\Users\Lenovo\IdeaProjects\CIG\target\classes;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Lenovo\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Lenovo\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Lenovo\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Lenovo\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Lenovo\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Lenovo\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Lenovo\.m2\repository\io\appium\java-client\7.4.1\java-client-7.4.1.jar;C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Lenovo\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Lenovo\.m2\repository\cglib\cglib\3.3.0\cglib-3.3.0.jar;C:\Users\Lenovo\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-context\5.3.1\spring-context-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-aop\5.3.1\spring-aop-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-beans\5.3.1\spring-beans-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-core\5.3.1\spring-core-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-jcl\5.3.1\spring-jcl-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-expression\5.3.1\spring-expression-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\rest-assured\4.3.0\rest-assured-4.3.0.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\groovy\groovy\3.0.2\groovy-3.0.2.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.2\groovy-xml-3.0.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;C:\Users\Lenovo\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Lenovo\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\json-path\4.3.0\json-path-4.3.0.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\groovy\groovy-json\3.0.2\groovy-json-3.0.2.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\rest-assured-common\4.3.0\rest-assured-common-4.3.0.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\xml-path\4.3.0\xml-path-4.3.0.jar;C:\Users\Lenovo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\Lenovo\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\Lenovo\.m2\repository\com\sun\xml\bind\jaxb-osgi\2.3.0.1\jaxb-osgi-2.3.0.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\sling\org.apache.sling.javax.activation\0.1.0\org.apache.sling.javax.activation-0.1.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;C:\Users\Lenovo\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;C:\Users\Lenovo\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;C:\Users\Lenovo\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;C:\Users\Lenovo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Lenovo\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.7\commons-io-2.7.jar;C:\Users\Lenovo\.m2\repository\io\github\bonigarcia\webdrivermanager\3.7.1\webdrivermanager-3.7.1.jar;C:\Users\Lenovo\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.47.1\htmlunit-driver-2.47.1.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.47.1\htmlunit-2.47.1.jar;C:\Users\Lenovo\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\Lenovo\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.47.0\htmlunit-core-js-2.47.0.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.47.1\neko-htmlunit-2.47.1.jar;C:\Users\Lenovo\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\Lenovo\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\htmlunit-cssparser\1.7.0\htmlunit-cssparser-1.7.0.jar;C:\Users\Lenovo\.m2\repository\commons-net\commons-net\3.7.2\commons-net-3.7.2.jar;C:\Users\Lenovo\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Lenovo\.m2\repository\com\shapesecurity\salvation2\3.0.0\salvation2-3.0.0.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.36.v20210114\websocket-client-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-client\9.4.36.v20210114\jetty-client-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-http\9.4.36.v20210114\jetty-http-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-util\9.4.36.v20210114\jetty-util-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-io\9.4.36.v20210114\jetty-io-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.36.v20210114\websocket-common-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.36.v20210114\websocket-api-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\com\codoid\products\fillo\1.21\fillo-1.21.jar;C:\Users\Lenovo\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\Lenovo\.m2\repository\com\opencsv\opencsv\5.3\opencsv-5.3.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Lenovo\.m2\repository\org\jsoup\jsoup\1.10.2\jsoup-1.10.2.jar;C:\Users\Lenovo\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\Lenovo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Lenovo\.m2\repository\org\testng\testng\6.10\testng-6.10.jar;C:\Users\Lenovo\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-core\1.2.6\cucumber-core-1.2.6.jar;C:\Users\Lenovo\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\Lenovo\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\Lenovo\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\Lenovo\.m2\repository\com\aventstack\extentreports\4.0.9\extentreports-4.0.9.jar;C:\Users\Lenovo\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\Lenovo\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\Lenovo\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\Lenovo\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\Lenovo\.m2\repository\com\sun\mail\javax.mail\1.6.0\javax.mail-1.6.0.jar;C:\Users\Lenovo\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\pdfbox\pdfbox\2.0.24\pdfbox-2.0.24.jar;C:\Users\Lenovo\.m2\repository\org\apache\pdfbox\fontbox\2.0.24\fontbox-2.0.24.jar;C:\Users\Lenovo\.m2\repository\net\rcarz\jira-client\0.5\jira-client-0.5.jar;C:\Users\Lenovo\.m2\repository\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;C:\Users\Lenovo\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;C:\Users\Lenovo\.m2\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;C:\Users\Lenovo\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;C:\Users\Lenovo\.m2\repository\org\mockito\mockito-all\1.9.0\mockito-all-1.9.0.jar;C:\Users\Lenovo\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="gwCOUNTRY" value="UnitedStates"/>
@@ -16,750 +16,194 @@
     <property name="INTERFACE" value="GUI"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
-    <property name="os.name" value="Windows Server 2016"/>
-    <property name="java.vm.specification.version" value="15"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="D:\Users\agowda\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin"/>
-    <property name="sun.java.command" value="D:\Users\agowda\AppData\Local\Temp\3\surefire3697375226096872294\surefirebooter18265639942702050729.jar D:\Users\agowda\AppData\Local\Temp\3\surefire3697375226096872294 2022-01-17T22-05-24_709-jvmRun1 surefire5910283573231179299tmp surefire_0769432359789505737tmp"/>
+    <property name="sun.boot.library.path" value="C:\Users\Lenovo\.jdks\openjdk-17.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire5641790306612121168\surefirebooter12354454453327001557.jar C:\Users\Lenovo\AppData\Local\Temp\surefire5641790306612121168 2022-04-28T18-34-22_559-jvmRun1 surefire16808244046772117650tmp surefire_03041701834990042924tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\Users\agowda\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\target\test-classes;D:\Users\agowda\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\target\classes;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;D:\Users\agowda\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;D:\Users\agowda\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;D:\Users\agowda\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;D:\Users\agowda\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;D:\Users\agowda\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;D:\Users\agowda\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;D:\Users\agowda\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;D:\Users\agowda\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;D:\Users\agowda\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;D:\Users\agowda\.m2\repository\io\appium\java-client\7.4.1\java-client-7.4.1.jar;D:\Users\agowda\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;D:\Users\agowda\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;D:\Users\agowda\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;D:\Users\agowda\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;D:\Users\agowda\.m2\repository\cglib\cglib\3.3.0\cglib-3.3.0.jar;D:\Users\agowda\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-context\5.3.1\spring-context-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-aop\5.3.1\spring-aop-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-beans\5.3.1\spring-beans-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-core\5.3.1\spring-core-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-jcl\5.3.1\spring-jcl-5.3.1.jar;D:\Users\agowda\.m2\repository\org\springframework\spring-expression\5.3.1\spring-expression-5.3.1.jar;D:\Users\agowda\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;D:\Users\agowda\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;D:\Users\agowda\.m2\repository\io\rest-assured\rest-assured\4.3.0\rest-assured-4.3.0.jar;D:\Users\agowda\.m2\repository\org\codehaus\groovy\groovy\3.0.2\groovy-3.0.2.jar;D:\Users\agowda\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.2\groovy-xml-3.0.2.jar;D:\Users\agowda\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;D:\Users\agowda\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;D:\Users\agowda\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;D:\Users\agowda\.m2\repository\io\rest-assured\json-path\4.3.0\json-path-4.3.0.jar;D:\Users\agowda\.m2\repository\org\codehaus\groovy\groovy-json\3.0.2\groovy-json-3.0.2.jar;D:\Users\agowda\.m2\repository\io\rest-assured\rest-assured-common\4.3.0\rest-assured-common-4.3.0.jar;D:\Users\agowda\.m2\repository\io\rest-assured\xml-path\4.3.0\xml-path-4.3.0.jar;D:\Users\agowda\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;D:\Users\agowda\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;D:\Users\agowda\.m2\repository\com\sun\xml\bind\jaxb-osgi\2.3.0.1\jaxb-osgi-2.3.0.1.jar;D:\Users\agowda\.m2\repository\org\apache\sling\org.apache.sling.javax.activation\0.1.0\org.apache.sling.javax.activation-0.1.0.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;D:\Users\agowda\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;D:\Users\agowda\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;D:\Users\agowda\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;D:\Users\agowda\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Users\agowda\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;D:\Users\agowda\.m2\repository\commons-io\commons-io\2.7\commons-io-2.7.jar;D:\Users\agowda\.m2\repository\io\github\bonigarcia\webdrivermanager\3.7.1\webdrivermanager-3.7.1.jar;D:\Users\agowda\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;D:\Users\agowda\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.47.1\htmlunit-driver-2.47.1.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.47.1\htmlunit-2.47.1.jar;D:\Users\agowda\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;D:\Users\agowda\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.47.0\htmlunit-core-js-2.47.0.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.47.1\neko-htmlunit-2.47.1.jar;D:\Users\agowda\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;D:\Users\agowda\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;D:\Users\agowda\.m2\repository\net\sourceforge\htmlunit\htmlunit-cssparser\1.7.0\htmlunit-cssparser-1.7.0.jar;D:\Users\agowda\.m2\repository\commons-net\commons-net\3.7.2\commons-net-3.7.2.jar;D:\Users\agowda\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;D:\Users\agowda\.m2\repository\com\shapesecurity\salvation2\3.0.0\salvation2-3.0.0.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.36.v20210114\websocket-client-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-client\9.4.36.v20210114\jetty-client-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-http\9.4.36.v20210114\jetty-http-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-util\9.4.36.v20210114\jetty-util-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\jetty-io\9.4.36.v20210114\jetty-io-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.36.v20210114\websocket-common-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.36.v20210114\websocket-api-9.4.36.v20210114.jar;D:\Users\agowda\.m2\repository\com\codoid\products\fillo\1.21\fillo-1.21.jar;D:\Users\agowda\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;D:\Users\agowda\.m2\repository\com\opencsv\opencsv\5.3\opencsv-5.3.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;D:\Users\agowda\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;D:\Users\agowda\.m2\repository\org\jsoup\jsoup\1.10.2\jsoup-1.10.2.jar;D:\Users\agowda\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;D:\Users\agowda\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\Users\agowda\.m2\repository\org\testng\testng\6.10\testng-6.10.jar;D:\Users\agowda\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;D:\Users\agowda\.m2\repository\io\cucumber\cucumber-core\1.2.6\cucumber-core-1.2.6.jar;D:\Users\agowda\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;D:\Users\agowda\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;D:\Users\agowda\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;D:\Users\agowda\.m2\repository\com\aventstack\extentreports\4.0.9\extentreports-4.0.9.jar;D:\Users\agowda\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;D:\Users\agowda\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;D:\Users\agowda\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;D:\Users\agowda\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;D:\Users\agowda\.m2\repository\com\sun\mail\javax.mail\1.6.0\javax.mail-1.6.0.jar;D:\Users\agowda\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;D:\Users\agowda\.m2\repository\org\apache\pdfbox\pdfbox\2.0.24\pdfbox-2.0.24.jar;D:\Users\agowda\.m2\repository\org\apache\pdfbox\fontbox\2.0.24\fontbox-2.0.24.jar;D:\Users\agowda\.m2\repository\net\rcarz\jira-client\0.5\jira-client-0.5.jar;D:\Users\agowda\.m2\repository\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;D:\Users\agowda\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;D:\Users\agowda\.m2\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;D:\Users\agowda\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;D:\Users\agowda\.m2\repository\org\mockito\mockito-all\1.9.0\mockito-all-1.9.0.jar;D:\Users\agowda\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Lenovo\IdeaProjects\CIG\target\test-classes;C:\Users\Lenovo\IdeaProjects\CIG\target\classes;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Lenovo\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Lenovo\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Lenovo\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Lenovo\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Lenovo\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Lenovo\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Lenovo\.m2\repository\io\appium\java-client\7.4.1\java-client-7.4.1.jar;C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Lenovo\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Lenovo\.m2\repository\cglib\cglib\3.3.0\cglib-3.3.0.jar;C:\Users\Lenovo\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-context\5.3.1\spring-context-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-aop\5.3.1\spring-aop-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-beans\5.3.1\spring-beans-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-core\5.3.1\spring-core-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-jcl\5.3.1\spring-jcl-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\springframework\spring-expression\5.3.1\spring-expression-5.3.1.jar;C:\Users\Lenovo\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\rest-assured\4.3.0\rest-assured-4.3.0.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\groovy\groovy\3.0.2\groovy-3.0.2.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.2\groovy-xml-3.0.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;C:\Users\Lenovo\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Lenovo\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\json-path\4.3.0\json-path-4.3.0.jar;C:\Users\Lenovo\.m2\repository\org\codehaus\groovy\groovy-json\3.0.2\groovy-json-3.0.2.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\rest-assured-common\4.3.0\rest-assured-common-4.3.0.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\xml-path\4.3.0\xml-path-4.3.0.jar;C:\Users\Lenovo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\Lenovo\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\Lenovo\.m2\repository\com\sun\xml\bind\jaxb-osgi\2.3.0.1\jaxb-osgi-2.3.0.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\sling\org.apache.sling.javax.activation\0.1.0\org.apache.sling.javax.activation-0.1.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;C:\Users\Lenovo\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;C:\Users\Lenovo\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;C:\Users\Lenovo\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;C:\Users\Lenovo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Lenovo\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.7\commons-io-2.7.jar;C:\Users\Lenovo\.m2\repository\io\github\bonigarcia\webdrivermanager\3.7.1\webdrivermanager-3.7.1.jar;C:\Users\Lenovo\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.47.1\htmlunit-driver-2.47.1.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.47.1\htmlunit-2.47.1.jar;C:\Users\Lenovo\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\Lenovo\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.47.0\htmlunit-core-js-2.47.0.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.47.1\neko-htmlunit-2.47.1.jar;C:\Users\Lenovo\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\Lenovo\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\Lenovo\.m2\repository\net\sourceforge\htmlunit\htmlunit-cssparser\1.7.0\htmlunit-cssparser-1.7.0.jar;C:\Users\Lenovo\.m2\repository\commons-net\commons-net\3.7.2\commons-net-3.7.2.jar;C:\Users\Lenovo\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Lenovo\.m2\repository\com\shapesecurity\salvation2\3.0.0\salvation2-3.0.0.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.36.v20210114\websocket-client-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-client\9.4.36.v20210114\jetty-client-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-http\9.4.36.v20210114\jetty-http-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-util\9.4.36.v20210114\jetty-util-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\jetty-io\9.4.36.v20210114\jetty-io-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.36.v20210114\websocket-common-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.36.v20210114\websocket-api-9.4.36.v20210114.jar;C:\Users\Lenovo\.m2\repository\com\codoid\products\fillo\1.21\fillo-1.21.jar;C:\Users\Lenovo\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\Lenovo\.m2\repository\com\opencsv\opencsv\5.3\opencsv-5.3.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Lenovo\.m2\repository\org\jsoup\jsoup\1.10.2\jsoup-1.10.2.jar;C:\Users\Lenovo\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\Lenovo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Lenovo\.m2\repository\org\testng\testng\6.10\testng-6.10.jar;C:\Users\Lenovo\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-core\1.2.6\cucumber-core-1.2.6.jar;C:\Users\Lenovo\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\Lenovo\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\Lenovo\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\Lenovo\.m2\repository\com\aventstack\extentreports\4.0.9\extentreports-4.0.9.jar;C:\Users\Lenovo\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\Lenovo\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\Lenovo\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\Lenovo\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\Lenovo\.m2\repository\com\sun\mail\javax.mail\1.6.0\javax.mail-1.6.0.jar;C:\Users\Lenovo\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\pdfbox\pdfbox\2.0.24\pdfbox-2.0.24.jar;C:\Users\Lenovo\.m2\repository\org\apache\pdfbox\fontbox\2.0.24\fontbox-2.0.24.jar;C:\Users\Lenovo\.m2\repository\net\rcarz\jira-client\0.5\jira-client-0.5.jar;C:\Users\Lenovo\.m2\repository\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;C:\Users\Lenovo\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;C:\Users\Lenovo\.m2\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;C:\Users\Lenovo\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;C:\Users\Lenovo\.m2\repository\org\mockito\mockito-all\1.9.0\mockito-all-1.9.0.jar;C:\Users\Lenovo\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="D:\Users\agowda"/>
+    <property name="user.home" value="C:\Users\Lenovo"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2021-01-19"/>
-    <property name="java.home" value="D:\Users\agowda\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.home" value="C:\Users\Lenovo\.jdks\openjdk-17.0.1"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="D:\Users\agowda\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC"/>
+    <property name="basedir" value="C:\Users\Lenovo\IdeaProjects\CIG"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="D:\Users\agowda\AppData\Local\Temp\3\surefire3697375226096872294\surefirebooter18265639942702050729.jar"/>
+    <property name="java.awt.headless" value="false"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire5641790306612121168\surefirebooter12354454453327001557.jar"/>
     <property name="BROWSER" value="CHROME"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ENVIRONMENT" value="OOTB"/>
-    <property name="java.runtime.version" value="15.0.2+7-27"/>
-    <property name="user.name" value="agowda"/>
+    <property name="ENVIRONMENT" value="UAT"/>
+    <property name="java.runtime.version" value="17.0.1+12-39"/>
+    <property name="user.name" value="Pankaj"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="D:\Users\agowda\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\Lenovo\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="D:\Users\agowda\AppData\Local\Temp\3\"/>
-    <property name="java.version" value="15.0.2"/>
-    <property name="user.dir" value="D:\Users\agowda\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC"/>
+    <property name="java.io.tmpdir" value="C:\Users\Lenovo\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2021.3"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="user.dir" value="C:\Users\Lenovo\IdeaProjects\CIG"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="gwSTATE" value="Alaska"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="D:\Users\agowda\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Users/agowda/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;D:/Users/agowda/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files\Amazon Corretto\jdk11.0.13_8\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Amazon\cfn-bootstrap\;C:\Program Files\Java\jdk1.8.0_291\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.8.1\bin;C:\Program Files\Amazon\WSP;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;D:\Users\agowda\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin;;D:\Users\agowda\AppData\Roaming\npm;D:\Users\agowda\AppData\Local\Programs\Microsoft VS Code\bin;D:\Users\agowda\Desktop;;."/>
-    <property name="java.vm.info" value="mixed mode"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\Lenovo\.jdks\openjdk-17.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_291\bin;C:\Program Files\apache-maven-3.8.1\bin;C:\Program Files\Java\jre1.8.0_291\bin;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\RubyMine 2021.2.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\bin;;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="15.0.2+7-27"/>
+    <property name="java.vm.version" value="17.0.1+12-39"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="59.0"/>
+    <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="AUT_PA_PC_NewSubmission_NewAccount_NewSubmission" classname="com.Test.Guidewire.PolicyCenter.GW_PC_PersonalAuto_Submission" time="258.491">
+  <testcase name="Smoke_Test1" classname="com.Test.Guidewire.BilllingCenter.Smoke_test" time="33.671">
     <system-out><![CDATA[[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
 -------------------------------------------------------------------------
 onStart
 -------------------------------------------------------------------------
-File Path = D:\Users\agowda\git\AUT_FW_SEL_JAVA_GW_CM_BC_PC_CC\src\main\resources\Config.Properties
-URL_PolicyCenter = http://ec2-65-2-11-216.ap-south-1.compute.amazonaws.com:8080/PolicyCenter.do
--------------------------------------------------------------------------
-@BeforeTest
--------------------------------------------------------------------------
+File Path = C:\Users\Lenovo\IdeaProjects\CIG/src/main/resources/Config.Properties
+URL_BC_UAT = https://billingcenter-dev.devops.blackcombcloud.com/BillingCenter.do
+File Path = C:\Users\Lenovo\IdeaProjects\CIG/src/main/resources/Config.Properties
+URL_PC_UAT = http://ec2-65-2-11-216.ap-south-1.compute.amazonaws.com:8080/PolicyCenter.do
+File Path = C:\Users\Lenovo\IdeaProjects\CIG/src/main/resources/Config.Properties
+URL_BC_UAT = https://billingcenter-dev.devops.blackcombcloud.com/BillingCenter.do
+File Path = C:\Users\Lenovo\IdeaProjects\CIG/src/main/resources/Config.Properties
+URL_CC_UAT = http://ec2-3-6-92-216.ap-south-1.compute.amazonaws.com:8080/ClaimCenter.do
+File Path = C:\Users\Lenovo\IdeaProjects\CIG/src/main/resources/Config.Properties
+URL_CM_UAT = http://ec2-13-232-72-99.ap-south-1.compute.amazonaws.com:8080/ContactManager.do
+OS=Windows 10
+Username=Pankaj
+Hostname=null
+ENVIRONMENT=UAT
+Automation report=C:\Users\Lenovo\IdeaProjects\CIG\test-output\BillingCenter\extentreports\BillingCenter.html
+TestData FilePath=C:\Users\Lenovo\IdeaProjects\CIG\testdata\BillingCenter.xlsx
 -------------------------------------------------------------------------
 onTestStart
 -------------------------------------------------------------------------
-strTestCaseName AUT_PA_PC_NewSubmission_NewAccount_NewSubmission
+strTestCaseName Smoke_Test1
 -------------------------------------------------------------------------
-launching Chrome browser
-Before navigating to: 'http://ec2-65-2-11-216.ap-south-1.compute.amazonaws.com:8080/PolicyCenter.do'
-Navigated to:'http://ec2-65-2-11-216.ap-south-1.compute.amazonaws.com:8080/PolicyCenter.do'
- executeQuery   strQuery = Select * from login WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
+launching Chrome browser in OS =Windows 10
+Navigated to:'https://billingcenter-dev.devops.blackcombcloud.com/BillingCenter.do'
+Navigated to:'https://billingcenter-dev.devops.blackcombcloud.com/BillingCenter.do'
+ executeQuery   strQuery = Select * from login WHERE PrimaryKey='SuperUser'
 Found Element By : By.xpath: //input[contains(@name,'LoginDV-username')]
 Element : Username command : [sendKeys] Value : [su]
 Found Element By : By.xpath: //input[contains(@name,'LoginDV-password')]
 Element : Password command : [sendKeys] Value : [gw]
 Found Element By : By.xpath: //div[@id='Login-LoginScreen-LoginDV-submit']//div
 Element : Login command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[@id='TabBar-AccountTab']/div[3]
-Element : Account command : [clickAndwait] Value : [click]
-Found Element By : By.id: TabBar-AccountTab-AccountTab_NewAccount
-Element : New Account command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Enter Account Information']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Enter Account Information']
-Enter Account Information => Actual = [Enter Account Information] <equals> Expected = [Enter Account Information]
- executeQuery   strQuery = Select * from createAccount WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[text()='First name']/following-sibling::div//input[contains(@name,'GlobalPersonNameInputSet-FirstName')]
-Element : First Name command : [sendKeys] Value : [MCLIgpcul]
-Found Element By : By.xpath: //div[text()='Last name']/following-sibling::div//input[contains(@name,'GlobalPersonNameInputSet-LastName')]
-Element : Last Name command : [sendKeys] Value : [Automation]
-Found Element By : By.xpath: //div[text()='Company name is an exact match']/following-sibling::div//input[@type='checkbox' and contains(@name,'CompanyNameExact')]
-Element : Company Name command : [click] Value : [On]
-Found Element By : By.xpath: //div[text()='First name is an exact match']/following-sibling::div//input[@type='checkbox' and contains(@name,'FirstNameExact')]
-Element : First Name Exact Match command : [click] Value : [On]
-Found Element By : By.xpath: //div[text()='Last name is an exact match']/following-sibling::div//input[@type='checkbox' and contains(@name,'LastNameExact')]
-Found Element By : By.xpath: //select[contains(@name,'GlobalAddressInputSet-Country')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "United States"]
-Element : Country command : [selectByVisibleTextAndwait] Value : [United States]
+ executeQuery   strQuery = Select * from master WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[@id='TabBar-AccountsTab']/div[3]
+Element : Account Tab command : [clickAndwait] Value : [click]
+Found Element By : By.xpath: //input[@name='TabBar-AccountsTab-AccountNumberSearchItem']
+Element : Account Number command : [clearANDsendKeys] Value : [7250464988]
+Found Element By : By.xpath: //div[@id='TabBar-AccountsTab-AccountNumberSearchItem_Button']/span
+Element : AccountNumberSearch command : [clickAndwait] Value : [click]
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Screen Header => Actual = [Account Summary] <equals> Expected = [Account Summary]
+ executeQuery   strQuery = Select * from AcctSummary WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Screen Header => Actual = [Account Summary] <equals> Expected = [Account Summary]
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-Name']//div[@class='gw-ActionValueWidget']
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-Name']//div[@class='gw-ActionValueWidget']
+AccountName => Actual = [adzcYzCee] <equals> Expected = [adzcYzCee]
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-PrimaryContact']//div[@class='gw-ActionValueWidget']
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-PrimaryContact']//div[@class='gw-ActionValueWidget']
+PrimaryContact => Actual = [adzcYzCee] <equals> Expected = [adzcYzCee]
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-Currency']//div[@class='gw-label']
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-Currency']//div[@class='gw-label']
+Currency => Fetched value = [USD]
+Found Element By : By.xpath: //div[@id='AccountGroup-MenuLinks-AccountGroup_AccountOverview-AccountOverview_AccountDetailSummary']//div[@class='gw-label']
+Element : Details command : [clickAndwait] Value : [click]
+ executeQuery   strQuery = Select * from AcctDetails WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Screen Header => Actual = [Account Details] <equals> Expected = [Account Details]
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-AccountName']//div[@class='gw-value-readonly-wrapper']
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-AccountName']//div[@class='gw-value-readonly-wrapper']
+Account Name => Actual = [adzcYzCee] <equals> Expected = [adzcYzCee]
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-AccountType']//div[@class='gw-label']
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-AccountType']//div[@class='gw-label']
+AccountType => Actual = [Insured] <equals> Expected = [Insured]
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-CreationDate']//div[@class='gw-value-readonly-wrapper']
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-CreationDate']//div[@class='gw-value-readonly-wrapper']
+Creation Date => Fetched value = [04/27/2022]
+ executeQuery   strQuery = Select * from AcctDetails WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-AccountUnbilledAmount']//div[@class='gw-value-readonly-wrapper']
+Found Element By : By.xpath: //div[@id='AccountDetailSummary-AccountDetailSummaryScreen-AccountDetailDV-AccountUnbilledAmount']//div[@class='gw-value-readonly-wrapper']
+Total Un-Billed => Actual = [$1,098.80] <equals> Expected = [$1,098.80]
+Found Element By : By.xpath: //div[@id='AccountGroup-MenuLinks-AccountGroup_AccountDetailContacts']//div[@class='gw-label']
+Element : Contacts command : [clickAndwait] Value : [click]
+ executeQuery   strQuery = Select * from Contacts WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[@id='AccountDetailContacts-AccountDetailContactsScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Found Element By : By.xpath: //div[@id='AccountDetailContacts-AccountDetailContactsScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Screen Header => Actual = [Contacts] <equals> Expected = [Contacts]
+Found Element By : By.xpath: //div[contains(@id,'AccountContactDetailDV-Type')]//div[@class='gw-value-readonly-wrapper']
+Found Element By : By.xpath: //div[contains(@id,'AccountContactDetailDV-Type')]//div[@class='gw-value-readonly-wrapper']
+CI Type => Actual = [Company] <equals> Expected = [Company]
+Found Element By : By.xpath: //div[contains(@id,'GlobalContactNameInputSet-Name')]//div[@class='gw-value-readonly-wrapper']
+Found Element By : By.xpath: //div[contains(@id,'GlobalContactNameInputSet-Name')]//div[@class='gw-value-readonly-wrapper']
+CI Name => Actual = [adzcYzCee] <equals> Expected = [adzcYzCee]
+ executeQuery   strQuery = Select * from Contacts WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[@id='AccountDetailContacts-AccountDetailContactsScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Found Element By : By.xpath: //div[@id='AccountDetailContacts-AccountDetailContactsScreen-ttlBar']//div[ @class='gw-TitleBar--title']
+Screen Header => Actual = [Contacts] <equals> Expected = [Contacts]
+Found Element By : By.xpath: //div[@id='AccountDetailContacts-AccountDetailContactsScreen-Edit']//div[@role='button']
+Element : Edit Button command : [clickAndwait] Value : [click]
+Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-AddressLine1')]//input[@type='text']
+Element : CI Address1 command : [clearANDsendKeys] Value : [123 test ]
+Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-AddressLine2')]//input[@type='text']
+Element : CI Address2 command : [clearANDsendKeys] Value : [Ave]
 Found Element By : By.xpath: //select[contains(@name,'GlobalAddressInputSet-State')]
 Found Element By : By.xpath: .//option[normalize-space(.) = "Alaska"]
-Element : State command : [selectByVisibleTextAndwait] Value : [Alaska]
-Found Element By : By.xpath: //div[contains(@id,'SearchLinksInputSet-Search')]
-Element : Search command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']
-Found Element By : By.xpath: //div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']
-The search returned zero results => Actual = [The search returned zero results.] <equals> Expected = [The search returned zero results.]
-Found Element By : By.xpath: //div[@id='NewAccount-NewAccountScreen-NewAccountButton']
-Element : Create New Account command : [clickAndwait] Value : [Click]
-Found Element By : By.xpath: //div[@id='NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Person']
-Found Element By : By.xpath: //div[@id='NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Person']
-Found Element By : By.xpath: //div[@id='NewAccount-NewAccountScreen-NewAccountButton-NewAccount_Person']
-Element : Person command : [clickAndwait] Value : [Click]
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Create account']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Create account']
-Create account => Actual = [Create account] <equals> Expected = [Create account]
-Found Element By : By.xpath: //div[contains(@class,'gw-VerbatimWidget--inner') and text()='Please confirm account information']
-Found Element By : By.xpath: //div[contains(@class,'gw-VerbatimWidget--inner') and text()='Please confirm account information']
-Please confirm account information => Actual = [Please confirm account information] <equals> Expected = [Please confirm account information]
-Found Element By : By.xpath: //div[text()='First name']/following-sibling::div//input[contains(@name,'GlobalPersonNameInputSet-FirstName')]
-Found Element By : By.xpath: //div[text()='First name']/following-sibling::div//input[contains(@name,'GlobalPersonNameInputSet-FirstName')]
-First Name => Actual = [MCLIgpcul] <valueEquals> Expected = [MCLIgpcul]
-Found Element By : By.xpath: //div[text()='Last name']/following-sibling::div//input[contains(@name,'GlobalPersonNameInputSet-LastName')]
-Found Element By : By.xpath: //div[text()='Last name']/following-sibling::div//input[contains(@name,'GlobalPersonNameInputSet-LastName')]
-Last Name => Actual = [Automation] <valueEquals> Expected = [Automation]
-Found Element By : By.xpath: //div[contains(text(),'Home Phone')]/following-sibling::div//input[contains(@name,'HomePhone')]
-Element : HomePhone command : [sendKeys] Value : [2015551002]
-Found Element By : By.xpath: //div[contains(text(),'Work Phone')]/following-sibling::div//input[contains(@name,'Phone')]
-Element : WorkPhone command : [sendKeys] Value : [2015551003]
-Found Element By : By.xpath: //div[contains(text(),'Mobile Phone')]/following-sibling::div//input[contains(@name,'CellPhone')]
-Element : MobilePhone command : [sendKeys] Value : [2015551004]
-Found Element By : By.xpath: //div[contains(text(),'Fax')]/following-sibling::div//input[contains(@name,'FaxPhone')]
-Element : FaxPhone command : [sendKeys] Value : [2015551005]
-Found Element By : By.xpath: //select[contains(@name,'PrimaryPhone')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Work"]
-Element : primaryphone command : [selectByVisibleText] Value : [Work]
-Found Element By : By.xpath: //input[contains(@name,'EmailAddress1')]
-Element : Primary Email command : [sendKeys] Value : [MCLIgpcul.Automation@blackcombconsultants.com]
-Found Element By : By.xpath: //input[contains(@name,'EmailAddress2')]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Address']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Address']
-Address => Actual = [Address] <equals> Expected = [Address]
-Found Element By : By.xpath: //select[contains(@name,'GlobalAddressInputSet-Country')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "United States"]
-Element : Country command : [selectByVisibleText] Value : [United States]
-Found Element By : By.xpath: //select[contains(@name,'GlobalAddressInputSet-State')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Alaska"]
-Element : State command : [selectByVisibleText] Value : [Alaska]
-Found Element By : By.xpath: //input[contains(@name,'AddressLine1')]
-Element : Address1 command : [sendKeys] Value : [549  fVMNPNp Suites]
-Found Element By : By.xpath: //input[contains(@name,'AddressLine2')]
-Element : Address2 command : [sendKeys] Value : [South Avenue]
-Found Element By : By.xpath: //input[contains(@name,'AddressLine3')]
-Element : Address3 command : [sendKeys] Value : [DownTown]
-Found Element By : By.xpath: //select[contains(@name,'AddressType')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Home"]
-Element : addresstype command : [selectByVisibleText] Value : [Home]
-Found Element By : By.xpath: //input[contains(@name,'AddressDescription')]
-Element : description command : [sendKeys] Value : [MCLIgpcul AutomationLikes to ]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Official IDs']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Official IDs']
-Official IDs => Actual = [Official IDs] <equals> Expected = [Official IDs]
-Found Element By : By.xpath: //input[contains(@name,'OfficialIDDV_Input')]
-Element : SSN command : [sendKeys] Value : [999-11-1225]
-Found Element By : By.xpath: //input[contains(@name,'Nickname')]
-Element : accountnickname command : [sendKeys] Value : [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Select Producer']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Select Producer']
-Select Producer => Actual = [Select Producer] <equals> Expected = [Select Producer]
- executeQuery   strQuery = Select * from organizations WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@id,'Producer-SelectOrganization')]
-Element : OrganizationSearch command : [click] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Organizations']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Organizations']
-Organization Name => Actual = [Organizations] <equals> Expected = [Organizations]
-Found Element By : By.xpath: //input[contains(@name,'SearchDV-GlobalContactNameInputSet-Name')]
-Element : Organization Name command : [sendKeys] Value : [ACV Property Insurance]
-Found Element By : By.xpath: //select[contains(@name,'SearchDV-Type')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Agency"]
-Element : Organization Type command : [selectByVisibleText] Value : [Agency]
-Found Element By : By.xpath: //select[contains(@name,'GlobalAddressInputSet-Country')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "United States"]
-Element : Country command : [selectByVisibleText] Value : [United States]
-Found Element By : By.xpath: //select[contains(@name,'SearchDV-Tier')]
-Found Element By : By.xpath: //input[contains(@name,'SearchDV-ProducerCode')]
-Element : Producer Code command : [sendKeys] Value : [301-008578]
-Found Element By : By.xpath: //input[contains(@name,'SearchDV-PolicyNumber')]
-Found Element By : By.xpath: //input[contains(@name,'SearchDV-AccountNumber')]
-Found Element By : By.xpath: //div[contains(@id,'SearchLinksInputSet-Search')]
-Element : Search Button command : [click] Value : [click]
- executeQuery   strQuery = Select * from organizations WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@id,'SearchResultsLV-0')]/div[@role='button']
-Found Element By : By.xpath: //div[contains(@id,'SearchResultsLV-0')]/div[@role='button']
-Element : Select command : [click] Value : [click]
+Element : CI State command : [selectByVisibleText] Value : [Alaska]
 Found Element By : By.xpath: //div[contains(@id,'Update')]
 Found Element By : By.xpath: //div[contains(@id,'Update')]
-Element : Update Button command : [click] Value : [click]
-Found Element By : By.xpath: //div[contains(@id,'AccountFile_Summary-ttlBar')]//div[contains(text(),'Account Summary')]
-Found Element By : By.xpath: //div[contains(@id,'AccountFile_Summary-ttlBar')]//div[contains(text(),'Account Summary')]
-Account Summary => Actual = [Account Summary: MCLIgpcul Automation (MCLIgpcul Automation)] <contains> Expected = [MCLIgpcul Automation]
- executeQuery   strQuery = Select * from accountSummary WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Screen Header => Actual = [Account Summary: MCLIgpcul Automation (MCLIgpcul Automation)] <contains> Expected = [Account Summary]
-Found Element By : By.xpath: //div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']
-Found Element By : By.xpath: //div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']
-Details => Actual = [Details] <equals> Expected = [Details]
-Found Element By : By.xpath: //div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountNumber')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'AccountHolder_button')]
-Found Element By : By.xpath: //div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountNumber')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountNumber')]//div[@class='gw-value-readonly-wrapper']
-AccountNo => Actual = [5746722792] <equals> Expected = [5746722792]
-Found Element By : By.xpath: //div[contains(@id,'AccountHolder_button')]
-Found Element By : By.xpath: //div[contains(@id,'AccountHolder_button')]
-AccountHolder => Actual = [MCLIgpcul Automation] <equals> Expected = [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[contains(@id,'AccountDetailsDetailViewTile_DV-AddressDescription')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'AccountDetailsDetailViewTile_DV-AddressDescription')]//div[@class='gw-value-readonly-wrapper']
-Description => Actual = [MCLIgpcul AutomationLikes to] <contains> Expected = [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountStatus')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountStatus')]//div[@class='gw-value-readonly-wrapper']
-Status => Actual = [Pending] <equals> Expected = [Pending]
+Element : Update command : [clickAndwait] Value : [click]
 Found Element By : By.xpath: //div[contains(@id,'MenuActions')]/div[@role='button']/div[2]
 Element : Actions command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@id,'AccountFileMenuActions_NewSubmission')]//div[@role='menuitem']
-Element : New_Activity command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from newSubmissions WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Select Producer']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Select Producer']
-Select Producer => Actual = [Select Producer] <equals> Expected = [Select Producer]
-Found Element By : By.xpath: //input[contains(@name,'Producer')]
-Found Element By : By.xpath: //input[contains(@name,'Producer')]
-Organization => Actual = [ACV Property Insurance] <valueEquals> Expected = [ACV Property Insurance]
-Found Element By : By.xpath: //select[contains(@name,'ProducerCode')]
-Found Element By : By.xpath: //select[contains(@name,'ProducerCode')]
-Found Element By : By.tagName: option
-Producer Code => Actual = [301-008578 ACV Property Insurance] <FirstSelectedOptionEquals> Expected = [301-008578 ACV Property Insurance]
-Found Element By : By.xpath: //select[contains(@name,'ProductSettingsDV-QuoteType')]
-Found Element By : By.xpath: //select[contains(@name,'ProductSettingsDV-QuoteType')]
-Found Element By : By.tagName: option
-Quote Type => Actual = [Full Application] <FirstSelectedOptionEquals> Expected = [Full Application]
-Found Element By : By.xpath: //select[contains(@name,'ProductSettingsDV-DefaultBaseState')]
-Found Element By : By.xpath: //select[contains(@name,'ProductSettingsDV-DefaultBaseState')]
-Found Element By : By.tagName: option
-Default Base State => Actual = [Alaska] <FirstSelectedOptionEquals> Expected = [Alaska]
-Found Element By : By.xpath: //input[contains(@name,'DefaultPPEffDate')]
-Found Element By : By.xpath: //input[contains(@name,'DefaultPPEffDate')]
-Default Effective Date => Actual = [01/17/2022] <valueEquals> Expected = [01/17/2022]
-Found Element By : By.xpath: //div[text()='Personal Auto']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']
-Element : LOB PersonalAuto command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-AccountName')]//div[@class='gw-label gw-infoValue']
-UPDATE searchValues SET AccountName='MCLIgpcul Automation' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-AccountNumber')]//div[@class='gw-label gw-infoValue']
-UPDATE searchValues SET AccountNumber='5746722792' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Submission ')]
-UPDATE searchValues SET SubmissionNumber='0609295159' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
- executeQuery   strQuery = Select * from offering WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Offerings']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Offerings']
-Screen Header => Actual = [Offerings] <equals> Expected = [Offerings]
-Found Element By : By.xpath: //select[contains(@name,'OfferingScreen-OfferingSelection')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Standard Program"]
-Element : Offering Selection command : [selectByVisibleText] Value : [Standard Program]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from qualification WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Qualification']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Qualification']
-Screen Header => Actual = [Qualification] <equals> Expected = [Qualification]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='PA Pre-Qualification']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='PA Pre-Qualification']
-PA Pre-Qualification => Actual = [PA Pre-Qualification] <equals> Expected = [PA Pre-Qualification]
-Found Element By : By.xpath: //select[contains(@name,'QuestionSetLV-0-QuestionModalInput-ChoiceSelectInput_NoPost')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "No - New Driver"]
-Element : Is the applicant currently insured? command : [selectByVisibleText] Value : [No - New Driver]
-Found Element By : By.xpath: //input[contains(@id,'QuestionSetLV-1-QuestionModalInput-BooleanRadioInput_NoPost_1')]
-Element : Is the applicant's license currently suspended, canceled, or revoked? command : [click] Value : [No]
-Found Element By : By.xpath: //input[contains(@id,'QuestionSetLV-2-QuestionModalInput-BooleanRadioInput_NoPost_1')]
-Element : Has the applicant's license ever been canceled, suspended or revoked? command : [click] Value : [No]
-Found Element By : By.xpath: //input[contains(@id,'QuestionSetLV-3-QuestionModalInput-BooleanRadioInput_1')]
-Element : Any drivers with convictions for moving traffic violations within the past 3 years? If 'Yes' please explain command : [click] Value : [No]
-Found Element By : By.xpath: //input[contains(@id,'QuestionSetLV-4-QuestionModalInput-BooleanRadioInput_NoPost_1')]
-Element : Has any policy or coverage been declined, canceled, or non-renewed during the prior 3 years? command : [click] Value : [No]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from policyInfo WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Screen Header => Actual = [Policy Info] <equals> Expected = [Policy Info]
-Found Element By : By.xpath: //input[contains(@name,'DateQuoteNeeded')]
-Element : Date Quote Needed command : [sendKeys] Value : [01/17/2022]
- executeQuery   strQuery = Select * from policyInfo WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Screen Header => Actual = [Policy Info] <equals> Expected = [Policy Info]
-Found Element By : By.xpath: //div[contains(@id,'AccountInfoInputSet-Name')]//div[contains(@id,'AccountInfoInputSet-Name_button')]
-Found Element By : By.xpath: //div[contains(@id,'AccountInfoInputSet-Name')]//div[contains(@id,'AccountInfoInputSet-Name_button')]
-Name => Actual = [MCLIgpcul Automation] <equals> Expected = [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[contains(@id,'AccountInfoInputSet-Phone-GlobalPhoneInputSet-PhoneDisplay')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Found Element By : By.xpath: //div[contains(@id,'AccountInfoInputSet-Phone-GlobalPhoneInputSet-PhoneDisplay')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Phone => Actual = [201-555-1003] <equals> Expected = [201-555-1003]
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Policy Address => Actual = [549 fVMNPNp Suites
-South Avenue
-DownTown
-Anchorage, AK 99501] <contains> Expected = [Suites
-South Avenue
-DownTown
-Anchorage, AK 99501]
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-County')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-County')]//div[contains(@class,'gw-value-readonly-wrapper')]
-County => Actual = [Anchorage] <equals> Expected = [Anchorage]
-Found Element By : By.xpath: //div[contains(@id,'AddressType') and contains(@class,'gw-ValueWidget')]//div[contains(@class,'gw-label')]
-Found Element By : By.xpath: //div[contains(@id,'AddressType') and contains(@class,'gw-ValueWidget')]//div[contains(@class,'gw-label')]
-Address Type => Actual = [Home] <equals> Expected = [Home]
- executeQuery   strQuery = Select * from policyInfo WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Official IDs']
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Official IDs']
-Official IDs => Actual = [Official IDs] <equals> Expected = [Official IDs]
- executeQuery   strQuery = Select * from policyInfo WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Policy Details']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Policy Details']
-Section => Actual = [Policy Details] <equals> Expected = [Policy Details]
-Found Element By : By.xpath: //select[contains(@name,'PolicyInfoInputSet-TermType')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "6 months"]
-Element : Term Type command : [selectByVisibleTextAndwait] Value : [6 months]
-Found Element By : By.xpath: //input[contains(@name,'PolicyInfoInputSet-EffectiveDate')]
-Element : Effective Date command : [clearsendKeysTABTAB] Value : [01/17/2022]
-Found Element By : By.xpath: //input[contains(@name,'PolicyInfoInputSet-WrittenDate')]
-Element : Written Date command : [clearANDsendKeys] Value : [01/17/2022]
-Found Element By : By.xpath: //div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Found Element By : By.xpath: //div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Found Element By : By.xpath: //div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Found Element By : By.xpath: //div[contains(@id,'PolicyInfoInputSet-ExpirationDate')]//div[contains(@class,'gw-value-readonly-wrapper')]
-Expiration Date => Actual = [07/17/2022] <equals> Expected = [07/17/2022]
-Found Element By : By.xpath: //select[contains(@name,'PolicyInfoInputSet-PrimaryLanguage')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Edge English (US)"]
-Element : Preffered Language command : [selectByVisibleText] Value : [Edge English (US)]
- executeQuery   strQuery = Select * from policyInfo WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Affinity Group']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Affinity Group']
-Section => Actual = [Affinity Group] <equals> Expected = [Affinity Group]
-Found Element By : By.xpath: //input[contains(@name,'PolicyInfoInputSet-AffinityGroup')]
- executeQuery   strQuery = Select * from policyInfo WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Producer of Record']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Producer of Record']
-Section => Actual = [Producer of Record] <equals> Expected = [Producer of Record]
-Found Element By : By.xpath: //input[contains(@name,'PolicyInfoProducerOfRecordInputSet-Producer')]
-Found Element By : By.xpath: //input[contains(@name,'PolicyInfoProducerOfRecordInputSet-Producer')]
-Organization => Actual = [ACV Property Insurance] <valueEquals> Expected = [ACV Property Insurance]
-Found Element By : By.xpath: //select[contains(@name,'PolicyInfoProducerOfRecordInputSet-ProducerCode')]
-Found Element By : By.xpath: //select[contains(@name,'PolicyInfoProducerOfRecordInputSet-ProducerCode')]
-Found Element By : By.tagName: option
-ProducerCode => Actual = [301-008578 ACV Property Insurance] <FirstSelectedOptionEquals> Expected = [301-008578 ACV Property Insurance]
- executeQuery   strQuery = Select * from policyInfo WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Underwriting Companies']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Underwriting Companies']
-Section => Actual = [Underwriting Companies] <equals> Expected = [Underwriting Companies]
-Found Element By : By.xpath: //select[contains(@name,'UWCompanyInputSet-UWCompany')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Acme Medium Hazard Insurance"]
-Element : UC Name command : [selectByVisibleText] Value : [Acme Medium Hazard Insurance]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from drivers WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Screen Header => Actual = [Drivers] <equals> Expected = [Drivers]
-Found Element By : By.xpath: //div[contains(@id,'DriversLV_tb-Add')]/div[@role='button']
-Element : Add command : [click] Value : [Existing Driver]
-Found Element By : By.xpath: //div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']//div[@class='gw-label' and text()='Existing Driver']
-Element : Existing Driver command : [moveToElement] Value : [Existing Driver]
-Found Element By : By.xpath: //div[contains(@id,'DriversListDetailPanel-DriversLV_tb-AddDriver') and contains(@class,'gw-AddButtonWidget')]/div[@class='gw-subMenu gw-open']/div[contains(@id,'DriversLV_tb-AddDriver-AddExistingContact')]//div[contains(@id,'UnassignedDriver')]//div[@class='gw-label' and text()='MCLIgpcul Automation']
-Element : Existing Driver MCLIgpcul Automation command : [clickAndwait] Value : [MCLIgpcul Automation]
- executeQuery   strQuery = Select * from drivers WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@id,'DriverDetailsCV-PolicyContactDetailCardTab')]
-Element : Contat Details Tab command : [click] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Person']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Person']
-Person => Actual = [Person] <equals> Expected = [Person]
-Found Element By : By.xpath: //div[contains(@id,'DateOfBirth_Input')]//div[@class='gw-value']//input[contains(@name,'DateOfBirth')]
-Element : Date Of Birth command : [clearANDsendKeys] Value : [09/01/1994]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Address']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Address']
-Address => Actual = [Address] <equals> Expected = [Address]
-Found Element By : By.xpath: //input[contains(@name,'LicenseInputSet-LicenseNumber')]
-Element : LicenseNumber command : [clearANDsendKeys] Value : [01172022220647]
-Found Element By : By.xpath: //select[contains(@name,'LicenseInputSet-LicenseState')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Alaska"]
-Element : LicenseState command : [selectByVisibleText] Value : [Alaska]
- executeQuery   strQuery = Select * from drivers WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@id,'DriverDetailsCV-RolesCardTab')]
-Element : Roles Tab command : [click] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Primary Named Insured']
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Primary Named Insured']
-Primary Named Insured => Actual = [Primary Named Insured] <equals> Expected = [Primary Named Insured]
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Driver']
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Driver']
-Driver => Actual = [Driver] <equals> Expected = [Driver]
-Found Element By : By.xpath: //input[contains(@name,'PolicyContactRolePanelSet-PolicyDriverInfoDV-datecompletedtrainingclass')]
-Element : DateCompletedTrainingClass command : [clearANDsendKeys] Value : [01/20/2012]
-Found Element By : By.xpath: //input[contains(@name,'PolicyContactRolePanelSet-PolicyDriverInfoDV-yearlicensed')]
-Element : YearFirstLicensed command : [clearANDsendKeys] Value : [2013]
-Found Element By : By.xpath: //input[contains(@id,'ExcludedDriver_1')]
-Element : Excluded? command : [click] Value : [Yes]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Accident/Violation Summary']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Accident/Violation Summary']
-Accident/Violation Summary => Actual = [Accident/Violation Summary] <equals> Expected = [Accident/Violation Summary]
-Found Element By : By.xpath: //select[contains(@name,'PolicyContactRolePanelSet-PolicyDriverNumberOfAccidents')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "0"]
-Element : NumberOfAccidents_PolicyLevel command : [selectByVisibleText] Value : [0]
-Found Element By : By.xpath: //select[contains(@name,'PolicyContactRolePanelSet-DriverNumberOfAccidents')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "0"]
-Element : NumberOfAccidents_AccountLevel command : [selectByVisibleText] Value : [0]
-Found Element By : By.xpath: //select[contains(@name,'PolicyContactRolePanelSet-PolicyDriverNumberOfViolations')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "0"]
-Element : NumberOfViolations_PolicyLevel command : [selectByVisibleText] Value : [0]
-Found Element By : By.xpath: //select[contains(@name,'PolicyContactRolePanelSet-DriverNumberOfViolations')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "0"]
-Element : NumberOfViolations_AccountLevel command : [selectByVisibleText] Value : [0]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from vehicles WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Screen Header => Actual = [Vehicles] <equals> Expected = [Vehicles]
-Found Element By : By.xpath: //div[contains(@id,'VehiclesListDetailPanel_tb-Add')]//div[@class='gw-label']
-Element : Create Vehicle command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@id,'VehiclesDetailsCV-VehicleDetailCardTab')]
-Element : VehicleDetails Tab command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Basic Vehicle Information']
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Basic Vehicle Information']
-Basic Vehicle Information => Actual = [Basic Vehicle Information] <equals> Expected = [Basic Vehicle Information]
-Found Element By : By.xpath: //select[contains(@name,'VehiclesDetailsCV-PersonalAuto_VehicleDV-Type_DV')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Passenger/Light Truck"]
-Element : Vehicle Type command : [selectByVisibleText] Value : [Passenger/Light Truck]
-Found Element By : By.xpath: //input[contains(@name,'VehiclesDetailsCV-PersonalAuto_VehicleDV-Vin_DV')]
-Element : Vin command : [sendKeys] Value : [2B4FK45J3KR949274]
-Found Element By : By.xpath: //select[contains(@name, 'VehiclesDetailsCV-PersonalAuto_VehicleDV-BodyType_DV')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "SUV"]
-Element : Body Type command : [selectByVisibleText] Value : [SUV]
-Found Element By : By.xpath: //select[contains(@name, 'VehiclesDetailsCV-PersonalAuto_VehicleDV-LicenseState_DV')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Alaska"]
-Element : License_State command : [selectByVisibleText] Value : [Alaska]
-Found Element By : By.xpath: //input[contains(@name,'VehiclesDetailsCV-PersonalAuto_VehicleDV-CostNew_DV')]
-Element : Cost New command : [sendKeys] Value : [10000]
-Found Element By : By.xpath: //input[contains(@name,'PersonalAuto_VehicleDV-StatedValue_DV')]
-Element : Stated Value command : [sendKeys] Value : [5000]
-Found Element By : By.xpath: //input[contains(@name,'PersonalAuto_VehicleDV-annualmiles_DV')]
-Element : Annual Mileage command : [sendKeys] Value : [2345]
-Found Element By : By.xpath: //select[contains(@name,'PersonalAuto_VehicleDV-primaryuse_DV')]
-Element : Primary Use command : [sendKeys] Value : [Pleasure]
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Vehicle Rate Modifiers']
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Vehicle Rate Modifiers']
-Vehicle Rate Modifiers => Actual = [Vehicle Rate Modifiers] <equals> Expected = [Vehicle Rate Modifiers]
-Found Element By : By.xpath: //input[contains(@id,'PAVehicleModifiersInputSet-0-BooleanModifier_1')]
-Element : Anti-Lock Brakes Discount command : [click] Value : [No]
-Found Element By : By.xpath: //select[contains(@name,'PAVehicleModifiersInputSet-1-TypeKeyModifier')]
-Element : Passive Restraint System command : [sendKeys] Value : [No]
-Found Element By : By.xpath: //select[contains(@name,'PAVehicleModifiersInputSet-2-TypeKeyModifier')]
-Element : Anti Theft Discount command : [sendKeys] Value : [None]
- executeQuery   strQuery = Select * from vehicles WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Assign Drivers to Vehicles']
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Assign Drivers to Vehicles']
-Assign Drivers to Vehicles => Actual = [Assign Drivers to Vehicles] <equals> Expected = [Assign Drivers to Vehicles]
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='What percentage does each driver use this vehicle?']
-Found Element By : By.xpath: //div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='What percentage does each driver use this vehicle?']
-What percentage does each driver use this vehicle? => Actual = [What percentage does each driver use this vehicle?] <equals> Expected = [What percentage does each driver use this vehicle?]
-Found Element By : By.xpath: //div[contains(@id,'PersonalAuto_AssignDriversInputSet-DriverPctLV_tb-Add')]/div[@role='button']
-Element : Add command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[@class='gw-subMenu gw-open']//div[contains(@id,'DriverPctLV_tb-AddDriver') and contains(@class,'gw-AddMenuItemWidget')]//div[@class='gw-label' and text()='MCLIgpcul Automation']
-Element : Driver MCLIgpcul Automation command : [clickAndwait] Value : [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from paCoverages WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='PA Coverages']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='PA Coverages']
-Screen Header => Actual = [PA Coverages] <equals> Expected = [PA Coverages]
-Found Element By : By.xpath: //div[contains(@id,'PersonalAutoScreen-CoveragesTab')]
-Element : Coverages tab command : [click] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Coverages applied to all vehicles')]
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Coverages applied to all vehicles')]
-Coverages applied to all vehicles => Actual = [Coverages applied to all vehicles in Alaska] <contains> Expected = [Coverages applied to all vehicles]
-Found Element By : By.xpath: //div[@role='heading' and text()='Liability - Bodily Injury and Property Damage']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Found Element By : By.xpath: //div[@role='heading' and text()='Liability - Bodily Injury and Property Damage']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Liability - Bodily Injury and Property Damage => Actual = [isDisabled] <isDisabled> Expected = [isDisabled]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Auto Liability Package']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Auto Liability Package']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.tagName: option
-Auto Liability Package => Actual = [250/500/100] <FirstSelectedOptionEquals> Expected = [250/500/100]
-Found Element By : By.xpath: //div[@role='heading' and text()='Medical Payments']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Found Element By : By.xpath: //div[@role='heading' and text()='Medical Payments']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Medical Payments => Actual = [isSelected] <isSelected> Expected = [isSelected]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Medical Limit']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Medical Limit']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.tagName: option
-Medical Limit => Actual = [5,000] <FirstSelectedOptionEquals> Expected = [5,000]
-Found Element By : By.xpath: //div[@role='heading' and text()='Uninsured Motorist - Bodily Injury']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Found Element By : By.xpath: //div[@role='heading' and text()='Uninsured Motorist - Bodily Injury']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Uninsured Motorist - Bodily Injury => Actual = [isSelected] <isSelected> Expected = [isSelected]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Uninsured Motorist - BI Limits']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Uninsured Motorist - BI Limits']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.tagName: option
-Uninsured Motorist - BI Limits => Actual = [50/100] <FirstSelectedOptionEquals> Expected = [50/100]
- executeQuery   strQuery = Select * from paCoverages WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='PA Coverages']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='PA Coverages']
-Screen Header => Actual = [PA Coverages] <equals> Expected = [PA Coverages]
-Found Element By : By.xpath: //div[contains(@id,'PersonalAutoScreen-CoveragesTab')]
-Element : Coverages tab command : [click] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Coverages applied per vehicle in')]
-Found Element By : By.xpath: //div[contains(@class,'gw-TitleBarWidget')]//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Coverages applied per vehicle in')]
-Coverages applied per vehicle in => Actual = [Coverages applied per vehicle in Alaska] <contains> Expected = [Coverages applied per vehicle in]
-Found Element By : By.xpath: //div[@role='heading' and text()='Comprehensive']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Found Element By : By.xpath: //div[@role='heading' and text()='Comprehensive']/preceding-sibling::div//input[contains(@name,'CoverageInputSet-CovPatternInputGroup')]
-Comprehensive => Actual = [isSelected] <isSelected> Expected = [isSelected]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Comprehensive Deductible']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Comprehensive Deductible']/parent::div//select[contains(@name,'CoverageInputSet')]
-Found Element By : By.tagName: option
-Comprehensive Deductible => Actual = [500] <FirstSelectedOptionEquals> Expected = [500]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Risk Analysis']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Risk Analysis']
-Screen Header => Actual = [Risk Analysis] <equals> Expected = [Risk Analysis]
-Found Element By : By.xpath: //div[contains(@id,'RiskAnalysisCV_tb-AddManualIssue')]//div[@class='gw-label' and text()='Add UW Issue']
-Found Element By : By.xpath: //div[contains(@id,'RiskAnalysisCV_tb-AddManualIssue')]//div[@class='gw-label' and text()='Add UW Issue']
-Add UWIssue => Actual = [isDisplayed] <isDisplayed> Expected = [isDisplayed]
-Found Element By : By.xpath: //div[contains(@id,'RiskAnalysisCV_tb-AddNewContingencyButton')]//div[@class='gw-label' and text()='Add Contingency']
-Found Element By : By.xpath: //div[contains(@id,'RiskAnalysisCV_tb-AddNewContingencyButton')]//div[@class='gw-label' and text()='Add Contingency']
-Add Contingency => Actual = [isDisplayed] <isDisplayed> Expected = [isDisplayed]
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Request Approval']
-Found Element By : By.xpath: //div[@class='gw-label' and text()='Request Approval']
-Request Approval => Actual = [isDisplayed] <isDisplayed> Expected = [isDisplayed]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from policyReview WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Policy Review']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Policy Review']
-Screen Header => Actual = [Policy Review] <equals> Expected = [Policy Review]
-Found Element By : By.xpath: //div[contains(@id,'ReviewSummaryDV-PrimaryNamedInsured')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'ReviewSummaryDV-PrimaryNamedInsured')]//div[@class='gw-value-readonly-wrapper']
-Primary Named Insured => Actual = [MCLIgpcul Automation] <equals> Expected = [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']
-County => Actual = [Anchorage] <equals> Expected = [Anchorage]
-Found Element By : By.xpath: //div[contains(@id,'PolicyAddressDisplayInputSet-AddressType') and contains(@class,'gw-ValueWidget')]//div[@class='gw-label']
-Found Element By : By.xpath: //div[contains(@id,'PolicyAddressDisplayInputSet-AddressType') and contains(@class,'gw-ValueWidget')]//div[@class='gw-label']
-Address Type => Actual = [Home] <contains> Expected = [Home]
-Found Element By : By.xpath: //div[contains(@id,'SubmissionWizard_ReviewSummaryDV-Product')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'SubmissionWizard_ReviewSummaryDV-Product')]//div[@class='gw-value-readonly-wrapper']
-Product => Actual = [Personal Auto] <equals> Expected = [Personal Auto]
-Found Element By : By.xpath: //div[contains(@id,'SubmissionWizard_ReviewSummaryDV-EffectiveDate')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'SubmissionWizard_ReviewSummaryDV-EffectiveDate')]//div[@class='gw-value-readonly-wrapper']
-Effective Date => Actual = [01/17/2022] <equals> Expected = [01/17/2022]
-Found Element By : By.xpath: //div[contains(@id,'SubmissionWizard_ReviewSummaryDV-ExpirationDate_Input')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'SubmissionWizard_ReviewSummaryDV-ExpirationDate_Input')]//div[@class='gw-value-readonly-wrapper']
-Expiration Date => Actual = [07/17/2022] <equals> Expected = [07/17/2022]
- executeQuery   strQuery = Select * from policyReview WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Personal Auto Line']
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Personal Auto Line']
-Personal Auto Line => Actual = [Personal Auto Line] <equals> Expected = [Personal Auto Line]
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Policy Level Coverages']
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Policy Level Coverages']
-Policy Level Coverages => Actual = [Policy Level Coverages] <equals> Expected = [Policy Level Coverages]
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Auto Liability Package']
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Auto Liability Package']
-Coverage - Auto Liability Package => Actual = [Auto Liability Package] <equals> Expected = [Auto Liability Package]
-Found Element By : By.xpath: //div[@class='gw-value-readonly-wrapper' and text()='Auto Liability Package']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[@class='gw-value-readonly-wrapper' and text()='Auto Liability Package']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']
-Auto Liability Package Value => Actual = [250/500/100] <equals> Expected = [250/500/100]
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Medical Limit']
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[@class='gw-value-readonly-wrapper' and text()='Medical Limit']
-Coverage - Medical Limit Coverage => Actual = [Medical Limit] <equals> Expected = [Medical Limit]
-Found Element By : By.xpath: //div[@class='gw-value-readonly-wrapper' and text()='Medical Limit']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[@class='gw-value-readonly-wrapper' and text()='Medical Limit']/ancestor::td[contains(@id,'Description_Cell')]/following-sibling::td//div[@class='gw-value-readonly-wrapper']
-Medical Limit Coverage Value => Actual = [5,000] <equals> Expected = [5,000]
- executeQuery   strQuery = Select * from policyReview WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle Level Coverages']
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle Level Coverages']
-Vehicle Level Coverages => Actual = [Vehicle Level Coverages] <equals> Expected = [Vehicle Level Coverages]
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Garage 1']
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Garage 1']
-Garage 1 => Actual = [Garage 1] <equals> Expected = [Garage 1]
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle 1']
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle 1']
-Vehicle 1 => Actual = [Vehicle 1] <equals> Expected = [Vehicle 1]
-Found Element By : By.xpath: //div[@class='gw-VerbatimWidget--inner' and contains(text(),'Primary Driver')]
-Found Element By : By.xpath: //div[@class='gw-VerbatimWidget--inner' and contains(text(),'Primary Driver')]
-Primary Drivers => Actual = [Primary Driver: MCLIgpcul Automation] <contains> Expected = [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[@class='gw-VerbatimWidget--inner' and text()='Assigned Drivers']
-Found Element By : By.xpath: //div[@class='gw-VerbatimWidget--inner' and text()='Assigned Drivers']
-Assigned Drivers => Actual = [Assigned Drivers] <equals> Expected = [Assigned Drivers]
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Driver_Cell')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Driver_Cell')]//div[@class='gw-value-readonly-wrapper']
-Driver => Actual = [MCLIgpcul Automation] <equals> Expected = [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[@class='gw-VerbatimWidget--inner' and text()='Vehicle Rate Modifiers']
-Found Element By : By.xpath: //div[@class='gw-VerbatimWidget--inner' and text()='Vehicle Rate Modifiers']
-Vehicle Rate Modifiers => Actual = [Vehicle Rate Modifiers] <equals> Expected = [Vehicle Rate Modifiers]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@id,'Draft')]/div[@role='button']
-Element : Save Draft command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='uote']
-Element : Quote command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from quote WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Quote']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Quote']
-Screen Header => Actual = [Quote] <equals> Expected = [Quote]
-Found Element By : By.xpath: //div[contains(@id,'Insured')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'Insured')]//div[@class='gw-value-readonly-wrapper']
-PrimaryNamedInsured => Actual = [MCLIgpcul Automation] <equals> Expected = [MCLIgpcul Automation]
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']
-Address => Actual = [549 fVMNPNp Suites
-South Avenue
-DownTown
-Anchorage, AK 99501] <contains> Expected = [Suites
-South Avenue
-DownTown
-Anchorage, AK 99501]
-Found Element By : By.xpath: //div[contains(@id,'PolicyAddressDisplayInputSet-AddressType')]//div[@class='gw-RangeValue']/div[@class='gw-label']
-Found Element By : By.xpath: //div[contains(@id,'PolicyAddressDisplayInputSet-AddressType')]//div[@class='gw-RangeValue']/div[@class='gw-label']
-Address Type => Actual = [Home] <equals> Expected = [Home]
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Garage 1']
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Garage 1']
-Garage 1 => Actual = [Garage 1] <equals> Expected = [Garage 1]
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle 1']
-Found Element By : By.xpath: //div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicle 1']
-Vehicle 1 => Actual = [Vehicle 1] <equals> Expected = [Vehicle 1]
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[contains(@id,'Description')]//div[@class='gw-value-readonly-wrapper' and text()='Liability - Bodily Injury and Property Damage Coverage']
-Found Element By : By.xpath: //tr[contains(@class,'gw-standard-row')]/td[contains(@id,'Description_Cell')]//div[contains(@id,'Description')]//div[@class='gw-value-readonly-wrapper' and text()='Liability - Bodily Injury and Property Damage Coverage']
-Liability - Bodily Injury and Property Damage Coverage => Actual = [Liability - Bodily Injury and Property Damage Coverage] <equals> Expected = [Liability - Bodily Injury and Property Damage Coverage]
-Found Element By : By.xpath: //div[@role='heading' and text()='Premium Subtotal and Taxes']
-Found Element By : By.xpath: //div[@role='heading' and text()='Premium Subtotal and Taxes']
-Premium Subtotal and Taxes => Actual = [Premium Subtotal and Taxes] <equals> Expected = [Premium Subtotal and Taxes]
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label']
-UPDATE searchValues SET Job='Submission (Quoted)' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-LOBLabel')]//div[@class='gw-label']
-UPDATE searchValues SET LOB='Personal Auto' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-EffectiveDate')]//div[@class='gw-label']
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-AccountName')]//div[@class='gw-label gw-infoValue']
-UPDATE searchValues SET AccountName='MCLIgpcul Automation' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-AccountNumber')]//div[@class='gw-label gw-infoValue']
-UPDATE searchValues SET AccountNumber='5746722792' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-Underwriter')]//div[@class='gw-label gw-infoValue']
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from forms WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Forms']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Forms']
-forms Header => Actual = [Forms] <equals> Expected = [Forms]
-Found Element By : By.xpath: //tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[1]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[1]//div[@class='gw-value-readonly-wrapper']
-forms Validate => Actual = [PA 00DS] <equals> Expected = [PA 00DS]
-Found Element By : By.xpath: //tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[2]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[2]//div[@class='gw-value-readonly-wrapper']
-Description Validate => Actual = [Dec Sheet] <equals> Expected = [Dec Sheet]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']
-Element : Next command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from payment WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Payment']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Payment']
-Screen Header => Actual = [Payment] <equals> Expected = [Payment]
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Premium Summary']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Premium Summary']
-Premium Summary => Actual = [Premium Summary] <equals> Expected = [Premium Summary]
- executeQuery   strQuery = Select * from payment WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Payments']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Payments']
-Payments => Actual = [Payments] <equals> Expected = [Payments]
-Found Element By : By.xpath: //div[contains(@id,'PaymentsSummaryInputSet-Frequency')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'PaymentsSummaryInputSet-Frequency')]//div[@class='gw-value-readonly-wrapper']
-Frequency => Actual = [Monthly] <equals> Expected = [Monthly]
- executeQuery   strQuery = Select * from payment WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Invoicing']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Invoicing']
-Invoicing => Actual = [Invoicing] <equals> Expected = [Invoicing]
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-InvoiceFrequency')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-InvoiceFrequency')]//div[@class='gw-value-readonly-wrapper']
-Frequency => Actual = [Monthly] <equals> Expected = [Monthly]
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-FixInvoicesBy')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-FixInvoicesBy')]//div[@class='gw-value-readonly-wrapper']
-FixInvoicesby => Actual = [Bill Date] <equals> Expected = [Bill Date]
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-DayOfMonth')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-DayOfMonth')]//div[@class='gw-value-readonly-wrapper']
-InvoicingDay => Actual = [Billing Account Defaults] <equals> Expected = [Billing Account Defaults]
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-PayUsing')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'InvoiceStreamInputSet-PayUsing')]//div[@class='gw-value-readonly-wrapper']
-PayUsing => Actual = [Billing Account Defaults] <equals> Expected = [Billing Account Defaults]
- executeQuery   strQuery = Select * from payment WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Billing']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Billing']
-Billing => Actual = [Billing] <equals> Expected = [Billing]
-Found Element By : By.xpath: //div[contains(@id,'BillingPanel-BillingLevel')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //select[contains(@name,'BillingPanel-BillingMethod')]
-Found Element By : By.xpath: .//option[normalize-space(.) = "Direct Bill"]
-Element : Billing_Method command : [selectByVisibleText] Value : [Direct Bill]
- executeQuery   strQuery = Select * from payment WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Payment Schedule']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Payment Schedule']
-Payment Schedule => Actual = [Payment Schedule] <equals> Expected = [Payment Schedule]
-Found Element By : By.xpath: //div[text()='A Monthly 10% Down, 9 Max installments']/ancestor::td[contains(@class,'gw-CellWidget')]/preceding-sibling::td[contains(@class,'gw-CellWidget')]//div[@role='radio']
-Element : Payment Plan = A Monthly 10% Down, 9 Max installments command : [clickAndwait] Value : [click]
- executeQuery   strQuery = Select * from payment WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Up-front Payment']
-Found Element By : By.xpath: //div[contains(@class,'gw-boldLabel') and text()='Up-front Payment']
-Up-front Payment => Actual = [Up-front Payment] <equals> Expected = [Up-front Payment]
-Found Element By : By.xpath: //div[contains(@id,'CashChoiceOption_Choice_radio')]
-Element : Cash command : [clickAndwait] Value : [Yes]
-Found Element By : By.xpath: //input[contains(@name,'UpFrontPaymentDV-CashAmount')]
-Found Element By : By.xpath: //input[contains(@name,'UpFrontPaymentDV-CashAmount')]
-Found Element By : By.xpath: //input[contains(@name,'UpFrontPaymentDV-CashAmount')]
-Amount => Fetched value = [124.80]
-UPDATE searchValues SET Amount='124.80' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions')]/div[@role='button']
-Element : Bind Options command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[@id='gw-center-title-toolbar']//div[contains(@id,'BindOptions-BindAndIssue')]/div[@role='menuitem']
-Element : Issue Policy command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label' and text()='Submission (Bound)']
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label' and text()='Submission (Bound)']
-Infobar Job => Actual = [Submission (Bound)] <equals> Expected = [Submission (Bound)]
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-JobLabel')]//div[@class='gw-label']
-UPDATE searchValues SET Job='Submission (Bound)' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[contains(@id,'InfoBar-PolicyNumber')]//div[@class='gw-label gw-infoValue']
-UPDATE searchValues SET PolicyNumber='5099582535' WHERE PrimaryKey='AUT_PA_PC_NewSubmission_NewAccount_NewSubmission'
-1 row(s) affected
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Found Element By : By.xpath: //div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']
-Screen Header => Actual = [Submission Bound] <equals> Expected = [Submission Bound]
-Found Element By : By.xpath: //div[contains(@id,'JobCompleteDV-ViewPolicy')]//div[contains(text(),'View your policy')]
-Element : View your Policy command : [clickAndwait] Value : [click]
-Found Element By : By.xpath: //div[@id='PolicyFile_Summary-ttlBar']//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Policy Summary')]
-Found Element By : By.xpath: //div[@id='PolicyFile_Summary-ttlBar']//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Policy Summary')]
-Screen Header => Actual = [Policy Summary: 5099582535] <contains> Expected = [Policy Summary]
-Found Element By : By.xpath: //div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']
-Found Element By : By.xpath: //div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']
-Details => Actual = [Details] <equals> Expected = [Details]
-Found Element By : By.xpath: //div[contains(@id,'PolicyDetailsDetailViewTile_DV-PolicyNumber')]//div[@class='gw-value-readonly-wrapper']
-Found Element By : By.xpath: //div[contains(@id,'PolicyDetailsDetailViewTile_DV-PolicyNumber')]//div[@class='gw-value-readonly-wrapper']
-Policy Number => Actual = [5099582535] <equals> Expected = [5099582535]
-Found Element By : By.xpath: //div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Account']
-Found Element By : By.xpath: //div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Account']
-Account => Actual = [Account] <equals> Expected = [Account]
+Found Element By : By.id: AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_Payments
+Element : New Payment command : [moveToElement] Value : [moveToElement]
+Found Element By : By.id: AccountGroup-AccountDetailMenuActions-AccountDetailMenuActions_Payments-AccountDetailMenuActions_NewDirectBillPayment
+Element : New Payment command : [clickAndwait] Value : [click]
+ executeQuery   strQuery = Select * from payment WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[contains(@id,'ttlBar')]//div[@role='heading']
+Found Element By : By.xpath: //div[contains(@id,'ttlBar')]//div[@role='heading']
+Direct Bill Payment => Actual = [Direct Bill Payment] <equals> Expected = [Direct Bill Payment]
+Found Element By : By.xpath: //input[contains(@name,'PaymentDetailsDV-Amount')]
+Element : Amount command : [sendKeys] Value : [50]
+Found Element By : By.xpath: //select[contains(@name,'-PaymentInstrument')]
+Element : PaymentInstrument command : [moveToElement] Value : [moveToElement]
+Found Element By : By.xpath: //select[contains(@name,'-PaymentInstrument')]
+Found Element By : By.xpath: .//option[normalize-space(.) = "Cash"]
+Element : PaymentInstrument command : [selectByVisibleText] Value : [Cash]
+Found Element By : By.xpath: //div[contains(@id,'ExecuteWithoutDistribution')]//div[@role='button']
+Element : Execute Without Distribution command : [clickAndwait] Value : [click]
+Found Element By : By.xpath: //div[@id='AccountGroup-MenuLinks-AccountGroup_AccountOverview-AccountOverview_AccountSummary']//div[@class='gw-label']
+Element : Summary command : [clickAndwait] Value : [click]
+ executeQuery   strQuery = Select * from AcctSummary WHERE PrimaryKey='Smoke_Test1'
+Found Element By : By.xpath: //div[contains(@id,'TotalUnappliedAmount_button')]
+Found Element By : By.xpath: //div[contains(@id,'TotalUnappliedAmount_button')]
+Total Unapplied => Fetched value = [$1,550.00]
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-PayoffAmount']//div[@class='gw-value-readonly-wrapper']
+Found Element By : By.xpath: //div[@id='AccountSummary-AccountSummaryScreen-PayoffAmount']//div[@class='gw-value-readonly-wrapper']
+Pay off Amount => Fetched value = [$1,186.00]
+Found Element By : By.xpath: //table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'TotalValue_Cell')]
+Found Element By : By.xpath: //table[@class='gw-ListViewWidget--table gw-table']//td[contains(@id,'TotalValue_Cell')]
+TotalValue => Fetched value = [$593.00]
 Found Element By : By.id: gw-TabBarWidget--settings
 Element : Setting command : [clickAndwait] Value : [click]
 Found Element By : By.id: TabBar-LogoutTabBarLink
@@ -768,11 +212,12 @@ Element : Logout command : [clickAndwait] Value : [click]
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}) on port 57490
+Starting ChromeDriver 100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}) on port 4000
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Jan 17, 2022 10:05:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1651151067.475][WARNING]: This version of ChromeDriver has not been tested with Chrome version 101.
+Apr 28, 2022 6:34:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>

@@ -15,6 +15,7 @@ public class GL_Payment extends SeleniumWebDriver_Commands {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	// PremiumSummary
 	private static By PA_PremiumSummary = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Premium Summary']");
 

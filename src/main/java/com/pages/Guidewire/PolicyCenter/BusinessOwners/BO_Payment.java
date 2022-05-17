@@ -13,6 +13,7 @@ public class BO_Payment extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	// PremiumSummary
 	private static By PA_PremiumSummary = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Premium Summary']");
 

@@ -13,7 +13,6 @@ public class HO_Dwelling extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 
 	}
-
 	private static By Dwelling_Header                  = By.xpath("//div[contains(@id,'HOPDwellingScreen-ttlBar')]");
 	private static By Dwelling_General                 = By.xpath("//div[contains(@id,'HOPDwellingInputSet-0')]");
 	private static By Dwelling_Location                = By.xpath("//div[contains(@id,'HOPDwellingInputSet-Location_Input')]//select[contains(@name,'HOPDwellingDetailsDV-HOPDwellingInputSet-Location')]");

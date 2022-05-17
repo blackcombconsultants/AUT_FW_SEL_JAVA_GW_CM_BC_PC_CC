@@ -13,6 +13,7 @@ public class HO_Modifiers extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By HO_Modifiers_Screen_titlebar = By.xpath("//div[contains(@id,'HOPModifiersScreen-ttlBar')]//div[1]//div");
 	/***
 	 * POLICY

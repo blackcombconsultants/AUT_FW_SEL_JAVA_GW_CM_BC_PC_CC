@@ -8,6 +8,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class BO_BusinessOwners_Line extends SeleniumWebDriver_Commands {
 
+
 	public BO_BusinessOwners_Line(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}

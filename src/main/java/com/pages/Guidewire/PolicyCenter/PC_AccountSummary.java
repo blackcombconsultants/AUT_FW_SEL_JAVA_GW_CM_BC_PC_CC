@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter;
 
+import com.pages.Guidewire.Tab_Menu_Navigation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -14,6 +15,7 @@ public class PC_AccountSummary extends SeleniumWebDriver_Commands {
 	}
 
 	private static By AS_Details = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']");
+
 
 	private static By AS_D_AccountNo            = By.xpath("//div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountNumber')]//div[@class='gw-value-readonly-wrapper']");
 	private static By AS_D_AccountHolder        = By.xpath("//div[contains(@id,'AccountHolder_button')]");
@@ -34,6 +36,14 @@ public class PC_AccountSummary extends SeleniumWebDriver_Commands {
 	private static By AS_RelatedAccounts        = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Related Accounts']");
 	private static By AS_Notes                  = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Notes']");
 
+
+	private static By SB_PolicyNumber                  = By.xpath("//div[contains(@id,'JobWizardInfoBar-PolicyNumber')]//div[@class='gw-label gw-infoValue']");
+	private static By SB_ViewYourPolicypreemption                  = By.xpath("//div[contains(@id,'ViewPreemptedPolicy')]//div[@class='gw-action']");
+	private static By SB_AccntNumber                  = By.xpath("//div[contains(@id,'JobWizardInfoBar-AccountNumber')]//div[@class='gw-label gw-infoValue']");
+	private static By SB_PolicyPreemptionchanged                  = By.xpath("//div[contains(@id,'PanelSet-Warning')]//div[@class='gw-VerbatimWidget--inner']");
+	private static By SB_PolicyTransaction                  = By.xpath("//div[contains(@id,'1-Transaction')]//div[@class='gw-vw--value gw-align-h--left']");
+	private static By SB_HandlePreemptionChanged                 = By.xpath("//div[contains(@id,'HandlePreemption_DifferencesScreen-1')]//div[@class='gw-VerbatimWidget--inner']");
+	private static By PolicyChange_EffectiveDate = By.xpath("//input[contains(@name,'StartPolicyChangeDV-EffectiveDate')]");
 	public static void detail_Verify() throws Throwable {
 
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("accountSummary", strTestCaseName);
@@ -126,10 +136,12 @@ public class PC_AccountSummary extends SeleniumWebDriver_Commands {
 	public static void Notes_Verify() throws Throwable {
 		// TODO Auto-generated method stub
 
+
 	}
 
 	public static void accountHolderSummary() throws Throwable {
 		// TODO Auto-generated method stub
+
 
 	}
 
@@ -172,5 +184,39 @@ public class PC_AccountSummary extends SeleniumWebDriver_Commands {
 		// TODO Auto-generated method stub
 
 	}
+
+	public static void Preemption() throws Throwable {
+		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("policyChange", strTestCaseName);
+		try {
+			GuidewireAutomate_Validation("Screen Header",  PolicyCenter_Resuables_PO.Screen_Header, "equals", "Start Policy Change");
+			for (int i = 1; i <= 3; i++) {
+				if (i == 1 || i == 2) {
+					GuidewireAutomate("Effective Date", PolicyChange_EffectiveDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("EffectiveDate" + i));
+					PolicyCenter_Resuables.clickButton("Next");
+					PolicyCenter_Resuables.clickButton("Quote");
+					GuidewireAutomate("Policy Number", SB_PolicyNumber, "clickAndwait", "click");
+					Tab_Menu_Navigation.pcMenuNavigation("Change Policy");
+					if (i == 3) {
+						GuidewireAutomate("Effective Date", PolicyChange_EffectiveDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("EffectiveDate" + i));
+						PolicyCenter_Resuables.clickButton("Next");
+						PolicyCenter_Resuables.clickButton("Quote");
+						GuidewireAutomate("Accnt Number", SB_AccntNumber, "clickAndwait", "click");
+						GuidewireAutomate("Policy Transaction", SB_PolicyTransaction, "clickAndwait", "click");
+						PolicyCenter_Resuables.clickButton("Issue Policy");
+						GuidewireAutomate("View your Policy changed preemption", SB_ViewYourPolicypreemption, "clickAndwait", "click");
+						GuidewireAutomate_Validation("validate policy preemption", SB_PolicyPreemptionchanged, "contains", "Your Policy Change was preempted by Policy Change ");
+						PolicyCenter_Resuables.clickButton("Handle Preemption");
+						GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "contains", "Handle Preemptions");
+						GuidewireAutomate_Validation("Handle Preemption Validate", SB_HandlePreemptionChanged, "contains", "Your Policy Change was preempted by Policy Change 0037830719");
+					}
+				}
+			}
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
 
 }

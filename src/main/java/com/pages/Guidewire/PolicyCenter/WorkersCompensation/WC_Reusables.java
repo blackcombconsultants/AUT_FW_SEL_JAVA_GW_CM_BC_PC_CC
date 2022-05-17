@@ -23,6 +23,7 @@ public class WC_Reusables extends SeleniumWebDriver_Commands {
 	/*
 	 * 
 	 */
+
 	private static By LOB_WorkersCompensation = By.xpath("//div[text()='Workers' Compensation']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
 
 	// Submission Menu

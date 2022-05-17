@@ -28,6 +28,7 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 	 * ------------------------------------------------------------------------- ----
 	 */
 
+
 	public static void pcTabNavigation(String Tab, String Value) throws Throwable {
 		switch (Tab) {
 			case "New Account" :
@@ -94,22 +95,179 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				break;
 			case "Activities" :
 				GuidewireAutomate("SearchTab", TabPC_Search_dd, "clickAndwait", "click");
-				GuidewireAutomate("SearchTab_Activities", TabPC_Search_Activities, "clickAndwait", "click");
+				getStaleElement("SearchTab_Activities", TabPC_Search_Activities);
+				GuidewireAutomate("SearchTab_Activities", TabPC_Search_Activities, "click", "click");
 				break;
+
 			case "Contacts" :
 				GuidewireAutomate("SearchTab", TabPC_Search_dd, "clickAndwait", "click");
 				GuidewireAutomate("SearchTab_Contacts", TabPC_Search_Contacts, "clickAndwait", "click");
 				break;
 
 			case "Team" :
-				GuidewireAutomate("AdministrationTab", TabPC_Team, "clickAndwait", "click");
+				GuidewireAutomate("TeamTab", TabPC_Team, "clickAndwait", "click");
 				break;
 			/*
 			 * ownerName:shanta date:28/03/2022
 			 */
 			case "Account" :
 				GuidewireAutomate("AccountTab", Tab_Account, "clickAndwait", "click");
+                break;
 
+			case "Administration" :
+               GuidewireAutomate("AdministrationTab",TabPC_Administration,"clickAndwait","click");
+			   break;
+			case "Users" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","Users");
+				GuidewireAutomate("Users",TabPC_Admin_UsersSecurity_Users,"clickAndwait","click");
+                break;
+			case "Groups" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","Groups");
+				GuidewireAutomate("Groups",TabPC_Admin_UsersSecurity_Groups,"clickAndwait","click");
+				break;
+			case "Roles" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","Roles");
+				GuidewireAutomate("Roles",TabPC_Admin_UsersSecurity_Roles,"clickAndwait","click");
+				break;
+			case "Regions" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","Regions");
+				GuidewireAutomate("Regions",TabPC_Admin_UsersSecurity_Regions,"clickAndwait","click");
+				break;
+
+			case "Organizations" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","Organizations");
+				GuidewireAutomate("Organizations",TabPC_Admin_UsersSecurity_Organizations,"clickAndwait","click");
+				break;
+			case "ProducerCodes" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","ProducerCodes");
+				GuidewireAutomate("ProducerCodes",TabPC_Admin_UsersSecurity_ProducerCodes,"clickAndwait","click");
+				break;
+			case "AuthorityProfiles" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","AuthorityProfiles");
+				GuidewireAutomate("AuthorityProfiles",TabPC_Admin_UsersSecurity_AuthorityProfiles,"clickAndwait","click");
+				break;
+			case "Attributes" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","Attributes");
+				GuidewireAutomate("Attributes",TabPC_Admin_UsersSecurity_Attributes,"clickAndwait","click");
+				break;
+			case "AffinityGroups" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("UsersAndSecurity",TabPC_Administration_UsersSecurity,"moveToElement","AffinityGroups");
+				GuidewireAutomate("AffinityGroups",TabPC_Admin_UsersSecurity_AffinityGroups,"clickAndwait","click");
+				break;
+
+			case "ActivityPatterns" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("BusinessSettings",TabPC_Administration_BusinessSettings,"moveToElement","ActivityPatterns");
+                GuidewireAutomate("ActivityPatterns",TabPC_Admin_BusinessSettings_ActivityPatterns,"clickAndwait","click");
+				break;
+			case "Holidays" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("BusinessSettings",TabPC_Administration_BusinessSettings,"moveToElement","Holidays");
+				GuidewireAutomate("Holidays",TabPC_Admin_BusinessSettings_Holidays,"clickAndwait","click");
+				break;
+			case "UnderwritingRules" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("BusinessSettings",TabPC_Administration_BusinessSettings,"moveToElement","BusinessRules");
+				GuidewireAutomate("BusinessRules",TabPC_Admin_BusinessSettings_BusinessRules,"moveToElement","UnderwritingRules");
+				GuidewireAutomate("UnderwritingRules",TabPC_Admin_BusinessSettings_UnderwritingRules,"clickAndwait","click");
+				break;
+			case "ImportExportStatus" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("BusinessSettings",TabPC_Administration_BusinessSettings,"moveToElement","BusinessRules");
+				GuidewireAutomate("BusinessRules",TabPC_Admin_BusinessSettings_BusinessRules,"moveToElement","ImportExportStatus");
+				GuidewireAutomate("ImportExportStatus",TabPC_Admin_BusinessSettings_ImportExportStatus,"clickAndwait","click");
+				break;
+			case "ManageDataLookupTables" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("BusinessSettings",TabPC_Administration_BusinessSettings,"moveToElement","BusinessRules");
+				GuidewireAutomate("BusinessRules",TabPC_Admin_BusinessSettings_BusinessRules,"moveToElement","ManageDataLookupTables");
+				GuidewireAutomate("ManageDataLookupTables",TabPC_Admin_BusinessSettings_ManageDataLookupTables,"clickAndwait","click");
+				break;
+			case "PolicyFormPatterns" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("BusinessSettings",TabPC_Administration_BusinessSettings,"moveToElement","PolicyFormPatterns");
+				GuidewireAutomate("PolicyFormPatterns",TabPC_Admin_BusinessSettings_PolicyFormPatterns,"clickAndwait","click");
+				break;
+			case "PolicyHolds" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("BusinessSettings",TabPC_Administration_BusinessSettings,"moveToElement","PolicyHolds");
+				GuidewireAutomate("PolicyHolds",TabPC_Admin_BusinessSettings_PolicyHolds,"clickAndwait","click");
+				break;
+
+			case "Messages" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Monitoring",TabPC_Administration_Monitoring,"moveToElement","Messages");
+                GuidewireAutomate("Messages",TabPC_Admin_Monitoring_Messages,"clickAndwait","click");
+				break;
+			case "MessageQueues" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Monitoring",TabPC_Administration_Monitoring,"moveToElement","MessageQueues");
+				GuidewireAutomate("MessageQueues",TabPC_Admin_Monitoring_MessageQueues,"clickAndwait","click");
+				break;
+			case "Workflows" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Monitoring",TabPC_Administration_Monitoring,"moveToElement","Workflows");
+				GuidewireAutomate("Workflows",TabPC_Admin_Monitoring_WorkFlows,"clickAndwait","click");
+				break;
+			case "WorkflowStatistics" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Monitoring",TabPC_Administration_Monitoring,"moveToElement","WorkflowStatistics");
+				GuidewireAutomate("WorkflowStatistics",TabPC_Admin_Monitoring_WorkFlowStatistics,"clickAndwait","click");
+				break;
+
+			case "ImportData" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","ImportData");
+				GuidewireAutomate("ImportData",TabPC_Admin_Utilities_ImportData,"clickAndwait","click");
+				break;
+			case "ExportData" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","ExportData");
+				GuidewireAutomate("ExportData",TabPC_Admin_Utilities_ExportData,"clickAndwait","click");
+				break;
+			case "ScriptParameters" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","ScriptParameters");
+				GuidewireAutomate("ScriptParameters",TabPC_Admin_Utilities_ScriptParameters,"clickAndwait","click");
+				break;
+			case "SpreadSheetExportFormats" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","SpreadSheetExportFormats");
+				GuidewireAutomate("SpreadSheetExportFormats",TabPC_Admin_Utilities_SpreadSheetExportFormats,"clickAndwait","click");
+				break;
+			case "DataChange" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","DataChange");
+				GuidewireAutomate("DataChange",TabPC_Admin_Utilities_DataChange,"clickAndwait","click");
+				break;
+			case "RuntimeProperties" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","RuntimeProperties");
+				GuidewireAutomate("RuntimeProperties",TabPC_Admin_Utilities_RuntimeProperties,"clickAndwait","click");
+				break;
+			case "InboundFiles" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","InboundFiles");
+				GuidewireAutomate("InboundFiles",TabPC_Admin_Utilities_InboundFiles,"clickAndwait","click");
+				break;
+			case "OutboundFiles" :
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("Utilities",TabPC_Administration_Utilities ,"moveToElement","OutboundFiles");
+				GuidewireAutomate("OutboundFiles",TabPC_Admin_Utilities_OutboundFiles,"clickAndwait","click");
+				break;
+			case "ProductManagement":
+				GuidewireAutomate("Administration",TabPC_Administration_dd,"clickAndwait","click");
+				GuidewireAutomate("ProductManagement",TabPC_Admin_ProductManagement,"clickAndwait","click");
+                break;
 			default :
 				throw new IOException("No support for Tab : " + Tab);
 		}
@@ -202,6 +360,17 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("Merge_Account_into_this_Account", MenuPC_Account_Actions_MergeAccountIntoThisAccount, "clickAndwait", "click");
 				break;
+			case "New Document Upload Document" :
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("New_Document", MenuPC_Account_Actions_Create_NewDocument, "moveToElement", "moveToElement");
+				GuidewireAutomate("Upload Document", MenuPC_Account_Actions_Create_NewDocument_UploadDocument, "clickAndwait", "click");
+				break;
+			case "New Document Create Template" :
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("New_Document", MenuPC_Account_Actions_Create_NewDocument, "moveToElement", "moveToElement");
+				GuidewireAutomate("Create From Template", MenuPC_Account_Actions_Create_NewDocument_CreateTemplate, "clickAndwait", "click");
+				break;
+
 
 			case "Account File" :
 				break;
@@ -265,7 +434,73 @@ public class Tab_Menu_Navigation extends SeleniumWebDriver_Commands implements T
 				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
 				GuidewireAutomate("copysubmission", MenuPC_Actions_Policy_NewPolicyTransaction_Copysubmission, "click", "click");
 				break;
-			default :
+			case "NewUser":
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+                GuidewireAutomate("NewUser",MenuPC_Actions_NewUser,"clickAndwait","click");
+				break;
+			case "NewGroup":
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("NewGroup",MenuPC_Actions_NewGroup,"clickAndwait","click");
+				break;
+			case "NewOrganization":
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("NewOrganization",MenuPC_Actions_NewOrganization,"clickAndwait","click");
+				break;
+			case "NewProducerCode":
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("NewProducerCode",MenuPC_Actions_NewProducerCode,"clickAndwait","click");
+				break;
+			case "NewAffinityGroup":
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+				GuidewireAutomate("NewAffinityGroup",MenuPC_Actions_NewAffinityGroup,"clickAndwait","click");
+				break;
+			case "CheckPolicyFormPatternsForErrors":
+				GuidewireAutomate("Actions", Menu_Actions, "clickAndwait", "click");
+                GuidewireAutomate("CheckPolicyFormPatterns",MenuPC_Actions_CheckPolicyFormPatternsForErrors,"clickAndwait","click");
+				break;
+            /*
+            PC_MenuLinks
+            */
+			case "summary":
+                GuidewireAutomate("Summary",MenuPC_Account_Summary,"clickAndwait","click");
+				break;
+			case "Contacts":
+				GuidewireAutomate("Contacts",MenuPC_Account_Contacts,"clickAndwait","click");
+				break;
+			case "Locations":
+				GuidewireAutomate("Locations",MenuPC_Account_Locations,"clickAndwait","click");
+				break;
+			case "Participants":
+				GuidewireAutomate("Participants",MenuPC_Account_Participants,"clickAndwait","click");
+				break;
+			case "Policy Transactions":
+				GuidewireAutomate("Policy Transactions",MenuPC_Account_PolicyTransactions,"clickAndwait","click");
+				break;
+			case "Submission Manager":
+				GuidewireAutomate("Submission Manager",MenuPC_Account_SubmissonManager,"clickAndwait","click");
+				break;
+			case "Underwriting Files":
+				GuidewireAutomate("Underwriting Files",MenuPC_Account_UnderwritingFiles,"clickAndwait","click");
+				break;
+			case "Related Accounts":
+				GuidewireAutomate("Related Accounts",MenuPC_Account_RelatedAccounts,"clickAndwait","click");
+				break;
+			case "Documents":
+				GuidewireAutomate("Documents",MenuPC_Account_Documents,"clickAndwait","click");
+				break;
+			case "Notes":
+				GuidewireAutomate("Notes",MenuPC_Account_Notes,"clickAndwait","click");
+				break;
+			case "Claims":
+				GuidewireAutomate("Claims",MenuPC_Account_Claims,"clickAndwait","click");
+				break;
+			case "Billing":
+				GuidewireAutomate("Billing",MenuPC_Account_Billing,"clickAndwait","click");
+				break;
+			case "History":
+				GuidewireAutomate("History",MenuPC_Account_History,"clickAndwait","click");
+				break;
+				default :
 				throw new IOException("No support for Menu : " + Menu);
 		}
 		oExtentTest.addScreenCaptureFromPath(SeleniumWebDriver_Commands.getScreenShot_addScreenCaptureFromPath(driver));

@@ -125,9 +125,9 @@ public class BC_AccountDetails extends SeleniumWebDriver_Commands {
 	}
 
 	public static void AD_AccountTotals_Verify() throws Throwable {
-		lhm_TestCase_Table_Data = BC_Resuables.getData_BillingCenter("AcctSummary");
+		lhm_TestCase_Table_Data = BC_Resuables.getData_BillingCenter("AcctDetails");
 
-		GuidewireAutomate_Validation("Total Unbilled", AD_AT_TotalUnbilled, "equals", lhm_TestCase_Table_Data.get("TD_TotalUnbilled"));
+		GuidewireAutomate_Validation("Total Un-Billed", AD_AT_TotalUnbilled, "equals", lhm_TestCase_Table_Data.get("TD_TotalUnbilled"));
 
 		lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 		lhm_TestCase_Table_Data.clear();

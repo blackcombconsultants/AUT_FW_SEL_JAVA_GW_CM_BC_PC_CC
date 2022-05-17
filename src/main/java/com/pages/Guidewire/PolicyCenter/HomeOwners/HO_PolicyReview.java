@@ -18,6 +18,7 @@ public class HO_PolicyReview extends SeleniumWebDriver_Commands {
 	/*
 	 * Primary Named Insured
 	 */
+
 	private static By PR_PrimaryNamedInsured = By.xpath("//div[contains(@id,'PrimaryNamedInsured')]//div[@class='gw-value']");
 	private static By PR_Address             = By.xpath("//div[contains(@id,'AddressSummary')]//div[@class='gw-value']");
 	private static By PR_County              = By.xpath("//div[contains(@id,'GlobalAddressInputSet-County')]//div[@class='gw-value-readonly-wrapper']");

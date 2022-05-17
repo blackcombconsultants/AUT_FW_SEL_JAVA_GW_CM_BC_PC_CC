@@ -21,6 +21,7 @@ public class CPACK_Qualification extends SeleniumWebDriver_Commands {
 	private static By QU_GL_Inaddition_to_disclosedClaimHistory_have_you_paid_anydirectsettlements_related_to_businessactivities_or_products = By.xpath("//input[contains(@id,'QuestionSetLV-2-QuestionModalInput-BooleanRadioInput_NoPost_1')]");
 	private static By QU_GL_Are_there_anypending_suits_or_anticipated_legalaction_related_to_businessactivities_or_products                  = By.xpath("//input[contains(@id,'QuestionSetLV-3-QuestionModalInput-BooleanRadioInput_NoPost_1')]");
 
+
 	public static void qualification() throws Throwable {
 		try {
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("qualification", strTestCaseName);

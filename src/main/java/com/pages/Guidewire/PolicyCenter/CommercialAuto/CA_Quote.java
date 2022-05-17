@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -30,8 +31,9 @@ public class CA_Quote extends SeleniumWebDriver_Commands {
 	public static void quoteDetails() throws Throwable {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("Quote");
-			getStaleElement("Screen Header", Quote_Header);
-			GuidewireAutomate_Validation("Screen Header", Quote_Header, "equals", "Quote");
+			Thread.sleep(2000);
+			getStaleElement("Screen Header",PolicyCenter_Resuables_PO.Screen_Header);
+			GuidewireAutomate_Validation("Screen Header",PolicyCenter_Resuables_PO.Screen_Header, "equals", "Quote");
 			// GuidewireAutomate_Validation("SubmissionNumber", QU_SubmissionNumber,"equals", strSubmissionNumber);
 			// GuidewireAutomate_Validation("PolicyPeriod", QU_PolicyPeriod, "contains",
 			// lhm_TestCase_Table_Data.get("QU_PolicyPeriod"));GuidewireAutomate_Validation("PrimaryNamedInsured", QU_PrimaryNamedInsured, "equals",
@@ -39,8 +41,7 @@ public class CA_Quote extends SeleniumWebDriver_Commands {
 			GuidewireAutomate_Validation("Address", QU_Address, "contains", lhm_TestCase_Table_Data.get("QU_Address"));
 			GuidewireAutomate_Validation("County", QU_County, "equals", lhm_TestCase_Table_Data.get("QU_County"));
 			GuidewireAutomate_Validation("Address Type", QU_AddressType, "equals", lhm_TestCase_Table_Data.get("QU_AddressType"));
-			// GuidewireAutomate_Validation("Address Description", QU_AddressDescription,
-			// "contains",lhm_TestCase_Table_Data.get("QU_AddressDescription"));
+			//GuidewireAutomate_Validation("Address Description", QU_AddressDescription, "contains",lhm_TestCase_Table_Data.get("QU_AddressDescription"));
 
 		} catch (Exception e) {
 			e.printStackTrace();

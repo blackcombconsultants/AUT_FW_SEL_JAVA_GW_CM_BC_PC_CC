@@ -13,7 +13,6 @@ public class IM_ContractorsEquipment extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 		// TODO Auto-generated constructor stub
 	}
-
 	private static By ContractorsEquipment_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Contractors Equipment']");
 
 	// Coverage-PartLevelInformation

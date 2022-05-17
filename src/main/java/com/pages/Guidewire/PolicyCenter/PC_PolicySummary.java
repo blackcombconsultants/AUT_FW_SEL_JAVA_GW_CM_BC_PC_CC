@@ -11,6 +11,7 @@ import com.pages.Guidewire.Tab_Menu_Navigation;
 
 public class PC_PolicySummary extends SeleniumWebDriver_Commands {
 
+
 	private static By PS_Details = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']");
 
 	private static By PS_D_PolicyNumber        = By.xpath("//div[contains(@id,'PolicyDetailsDetailViewTile_DV-PolicyNumber')]//div[@class='gw-value-readonly-wrapper']");
@@ -20,6 +21,7 @@ public class PC_PolicySummary extends SeleniumWebDriver_Commands {
 	private static By PS_D_Underwriter         = By.xpath("//div[contains(@id,'PolicyDetailsDetailViewTile_DV-Underwriter')]//div[@class='gw-value-readonly-wrapper']");
 	private static By PS_D_EffectiveDate       = By.xpath("//div[contains(@id,'PolicyDetailsDetailViewTile_DV-EffectiveDate')]//div[@class='gw-value-readonly-wrapper']");
 	private static By PS_D_ExpirationDate      = By.xpath("//div[contains(@id,'PolicyDetailsDetailViewTile_DV-ExpirationDate')]//div[@class='gw-value-readonly-wrapper']");
+
 
 	private static By PS_Account                     = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Account']");
 	private static By PS_TermFinancials              = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Term Financials']");

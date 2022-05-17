@@ -12,6 +12,7 @@ public class HO_Quote extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By Quote_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Quote']");
 
 	private static By QU_SubmissionNumber    = By.xpath("//div[contains(@id,'JobNumber')]//div[@class='gw-value-readonly-wrapper']");

@@ -1,3225 +1,419 @@
 
 
-
-
-
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Automation Report</title>
-    <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
-    <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
-    <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/css/style.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Automation Report</title>
 
-</style></head><script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
-<body class="test-view -report standard">
-    <div class="app header-dark side-nav-folded">
-        <div class="layout">
-<div class="header navbar">
-    <div class="header-container">
-        <div class="nav-logo">
-          <a href="index.html">
-            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
-            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
-          </a>
-        </div>
-        <ul class="nav-left">
-          <li>
-            <a class="sidenav-fold-toggler" href="javascript:void(0);">
-              <i class="fa fa-bars"></i>
-            </a>
-            <a class="sidenav-expand-toggler" href="javascript:void(0);">
-              <i class="fa fa-bars"></i>
-            </a>
-          </li>
-          <li class="search-box">
-            <a class="search-toggle" href="javascript:void(0);">
-              <i class="search-icon fa fa-search"></i>
-              <i class="search-icon-close fa fa-close"></i>
-            </a>
-          </li>
-          <li class="search-input">
-            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
-          </li>
-        </ul>
-        <ul class="nav-right">
-          <li class="m-r-10">
-            <a href="#">
-              <span class="badge badge-primary">PersonalAuto</span>
-            </a>
-          </li>
-            <li class="m-r-10">
-                <a href="#">
-                    <span class="badge badge-primary">Aug 2, 2021 10:03:47 PM</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div><div class="side-nav side-nav-folded">
-  <div class="side-nav-inner">
-    <ul class="side-nav-menu scrollable">
-      <li class="nav-item dropdown">
-        <a id="nav-test" class="dropdown-toggle" href="index.html">
-          <span class="icon-holder">
-            <i class="fa fa-align-left"></i>
-          </span>
-          <span class="title">Tests</span>
-        </a>
-      </li>
-            <li class="nav-item dropdown">
-        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
-          <span class="icon-holder">
-            <i class="fa fa-bar-chart"></i>
-          </span>
-          <span class="title">Dashboard</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-            <div class="page-container">
-                <div class="main-content">
-                    <div class="test-wrapper row">
-                        <div class="test-list">
-                            <div class="test-list-tools">
-                                <ul class="tools pull-left">
-                                    <li>
-                                        <a href="">
-                                            <span class="font-size-14">Tests</span>
-                                        </a>
-                                    </li> 
-                                </ul>
-                                <ul class="tools text-right">
-                                    <li class="user-profile dropdown dropdown-animated scale-left">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <i class="fa fa-exclamation-circle"></i>
-                                        </a>
-                                        <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-                                            
-	                                        <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
-	                                        
-	                                        
-	                                        
-	                                        
-	                                        <div class="dropdown-divider"></div>
-                                            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="test-list-wrapper scrollable">
-                                <ul class="test-list-item">
-                                    <li class="test-item"  status="fail" test-id="1"
-                                            author=""
-                                            tag=""
-                                            device="">
-                                        <div class="status-avatar fail-bg">
-                                            <i class="fa fa-times text-white"></i>
-                                        </div>
-                                        <div class="open-test">
-                                            <div class="test-detail"> 
-                                                <p class="name">AUT_PA_PC_Rewrite_FullTerm_01</p> 
-                                                <p class="duration text-sm">0h 5m 28s+215ms</p> 
-                                                <span class="datetime">22:03:47 PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="test-contents d-none">
-                                            <div class="detail-head">
-                                                <div class="p-v-10 d-inline-block"> 
-                                                    <div class="info">
-                                                        <h5 class="test-status text-fail">AUT_PA_PC_Rewrite_FullTerm_01</h5>
-                                                        <span class='badge badge-success'>08.02.2021 22:03:47</span>
-                                                        <span class='badge badge-danger'>08.02.2021 22:09:15</span>
-                                                        <span class='badge badge-default'>0h 5m 28s+215ms</span>
-                                                    </div>
-                                                    <div class="m-t-10 m-l-5">
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-<div class="detail-body mt-4">                                              
-<table class="table table-sm">
-	<thead><tr>
-		<th class="status-col">Status</th>
-		<th class="timestamp-col">Timestamp</th>
-		<th class="details-col">Details</th>
-	</tr></thead>
-	<tbody>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:03:50 PM</td>
-				<td>
-						Appliaction Launched  http://ec2-65-2-11-216.ap-south-1.compute.amazonaws.com:8080/PolicyCenter.do
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:52 PM</td>
-				<td>
-						Username input  = [su]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:53 PM</td>
-				<td>
-						Password input  = [gw]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:53 PM</td>
-				<td>
-						clicked Field = Login
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:03:53 PM</td>
-				<td>
-						Login succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:55 PM</td>
-				<td>
-						clicked Field = Account
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:55 PM</td>
-				<td>
-						clicked Field = New Account
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:55 PM</td>
-				<td>
-						Navigation to PolicyCenter Tab : New Account is Succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:03:56 PM</td>
-				<td>
-						Enter Account Information => Actual = [Enter Account Information] equals Expected = [Enter Account Information]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:57 PM</td>
-				<td>
-						First Name input  = [IVFgSVSpQ]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:58 PM</td>
-				<td>
-						Last Name input  = [Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:59 PM</td>
-				<td>
-						clicked Field = Company Name
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:03:59 PM</td>
-				<td>
-						clicked Field = First Name Exact Match
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:00 PM</td>
-				<td>
-						Country  Selected = United States
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:01 PM</td>
-				<td>
-						State  Selected = Alaska
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:02 PM</td>
-				<td>
-						Clicked = Search
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:02 PM</td>
-				<td>
-						The search returned zero results => Actual = [The search returned zero results.] equals Expected = [The search returned zero results.]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:03 PM</td>
-				<td>
-						Clicked = Create New Account
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:04 PM</td>
-				<td>
-						Clicked = Person
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:04 PM</td>
-				<td>
-						Create account => Actual = [Create account] equals Expected = [Create account]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:05 PM</td>
-				<td>
-						Please confirm account information => Actual = [Please confirm account information] equals Expected = [Please confirm account information]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:06 PM</td>
-				<td>
-						First Name => Actual = [IVFgSVSpQ] valueEquals Expected = [IVFgSVSpQ]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:06 PM</td>
-				<td>
-						Last Name => Actual = [Automation] valueEquals Expected = [Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:07 PM</td>
-				<td>
-						HomePhone input  = [2015551002]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:07 PM</td>
-				<td>
-						WorkPhone input  = [2015551003]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:08 PM</td>
-				<td>
-						MobilePhone input  = [2015551004]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:09 PM</td>
-				<td>
-						FaxPhone input  = [2015551005]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:09 PM</td>
-				<td>
-						primaryphone  Selected = Work
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:10 PM</td>
-				<td>
-						Primary Email input  = [IVFgSVSpQ.Automation@blackcombconsultants.com]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:11 PM</td>
-				<td>
-						Address => Actual = [Address] equals Expected = [Address]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:12 PM</td>
-				<td>
-						Country  Selected = United States
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:12 PM</td>
-				<td>
-						State  Selected = Alaska
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:13 PM</td>
-				<td>
-						Address1 input  = [591  bJLCIQc Suites]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:14 PM</td>
-				<td>
-						Address2 input  = [South Avenue]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:14 PM</td>
-				<td>
-						Address3 input  = [DownTown]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:15 PM</td>
-				<td>
-						City => Actual = [Anchorage] valueEquals Expected = [Anchorage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:15 PM</td>
-				<td>
-						County => Actual = [Anchorage] valueEquals Expected = [Anchorage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:16 PM</td>
-				<td>
-						ZipCode => Actual = [99501] valueEquals Expected = [99501]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:17 PM</td>
-				<td>
-						addresstype  Selected = Home
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:17 PM</td>
-				<td>
-						description input  = [IVFgSVSpQ AutomationLikes to ]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:18 PM</td>
-				<td>
-						Official IDs => Actual = [Official IDs] equals Expected = [Official IDs]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:18 PM</td>
-				<td>
-						SSN input  = [999-11-4734]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:19 PM</td>
-				<td>
-						accountnickname input  = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:20 PM</td>
-				<td>
-						Select Producer => Actual = [Select Producer] equals Expected = [Select Producer]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:20 PM</td>
-				<td>
-						clicked Field = OrganizationSearch
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:21 PM</td>
-				<td>
-						Organization Name => Actual = [Organizations] equals Expected = [Organizations]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:22 PM</td>
-				<td>
-						Organization Name input  = [ACV Property Insurance]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:22 PM</td>
-				<td>
-						Organization Type  Selected = Agency
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:23 PM</td>
-				<td>
-						Country  Selected = United States
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:24 PM</td>
-				<td>
-						Producer Code input  = [301-008578]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:26 PM</td>
-				<td>
-						clicked Field = Search Button
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:27 PM</td>
-				<td>
-						clicked Field = Select
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:29 PM</td>
-				<td>
-						clicked Field = Update Button
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:30 PM</td>
-				<td>
-						Account Summary => Actual = [Account Summary: IVFgSVSpQ Automation (IVFgSVSpQ Automation)] contains Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:31 PM</td>
-				<td>
-						Screen Header => Actual = [Account Summary: IVFgSVSpQ Automation (IVFgSVSpQ Automation)] contains Expected = [Account Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:32 PM</td>
-				<td>
-						Details => Actual = [Details] equals Expected = [Details]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:33 PM</td>
-				<td>
-						AccountNo => Actual = [5753012798] equals Expected = [5753012798]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:34 PM</td>
-				<td>
-						AccountHolder => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:34 PM</td>
-				<td>
-						Description => Actual = [IVFgSVSpQ AutomationLikes to] contains Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:35 PM</td>
-				<td>
-						Status => Actual = [Pending] equals Expected = [Pending]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:36 PM</td>
-				<td>
-						clicked Field = Actions
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:36 PM</td>
-				<td>
-						clicked Field = New_Activity
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:36 PM</td>
-				<td>
-						Navigation to PolicyCenter Menu : New Submission is Succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:37 PM</td>
-				<td>
-						Select Producer => Actual = [Select Producer] equals Expected = [Select Producer]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:38 PM</td>
-				<td>
-						Organization => Actual = [ACV Property Insurance] valueEquals Expected = [ACV Property Insurance]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:39 PM</td>
-				<td>
-						Producer Code => Actual = [301-008578 ACV Property Insurance] FirstSelectedOptionEquals Expected = [301-008578 ACV Property Insurance]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:39 PM</td>
-				<td>
-						Quote Type => Actual = [Full Application] FirstSelectedOptionEquals Expected = [Full Application]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:40 PM</td>
-				<td>
-						Default Base State => Actual = [Alaska] FirstSelectedOptionEquals Expected = [Alaska]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:40 PM</td>
-				<td>
-						Default Effective Date => Actual = [08/02/2021] valueEquals Expected = [08/02/2021]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:41 PM</td>
-				<td>
-						Clicked = LOB PersonalAuto
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:44 PM</td>
-				<td>
-						Fetched from Info Bar => AccountName = IVFgSVSpQ Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:47 PM</td>
-				<td>
-						Fetched from Info Bar => AccountNumber = 5753012798
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:49 PM</td>
-				<td>
-						Fetched from Info Bar => SubmissionNumber = 0254626638
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:50 PM</td>
-				<td>
-						Screen Header => Actual = [Offerings] equals Expected = [Offerings]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:50 PM</td>
-				<td>
-						Offering Selection  Selected = Standard Program
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:51 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:52 PM</td>
-				<td>
-						Screen Header => Actual = [Qualification] equals Expected = [Qualification]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:52 PM</td>
-				<td>
-						PA Pre-Qualification => Actual = [PA Pre-Qualification] equals Expected = [PA Pre-Qualification]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:53 PM</td>
-				<td>
-						Is the applicant currently insured?  Selected = No - New Driver
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:54 PM</td>
-				<td>
-						clicked Field = Is the applicant's license currently suspended, canceled, or revoked?
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:54 PM</td>
-				<td>
-						clicked Field = Has the applicant's license ever been canceled, suspended or revoked?
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:55 PM</td>
-				<td>
-						clicked Field = Any drivers with convictions for moving traffic violations within the past 3 years? If 'Yes' please explain
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:55 PM</td>
-				<td>
-						clicked Field = Has any policy or coverage been declined, canceled, or non-renewed during the prior 3 years?
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:56 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:57 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Info] equals Expected = [Policy Info]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:04:58 PM</td>
-				<td>
-						Date Quote Needed input  = [08/02/2021]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:59 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Info] equals Expected = [Policy Info]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:04:59 PM</td>
-				<td>
-						Name => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:00 PM</td>
-				<td>
-						Phone => Actual = [201-555-1003] equals Expected = [201-555-1003]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:01 PM</td>
-				<td>
-						Policy Address => Actual = [591 bJLCIQc Suites
-South Avenue
-DownTown
-Anchorage, AK 99501] contains Expected = [Suites
-South Avenue
-DownTown
-Anchorage, AK 99501]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:01 PM</td>
-				<td>
-						County => Actual = [Anchorage] equals Expected = [Anchorage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:02 PM</td>
-				<td>
-						Address Type => Actual = [Home] equals Expected = [Home]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:03 PM</td>
-				<td>
-						Official IDs => Actual = [Official IDs] equals Expected = [Official IDs]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:04 PM</td>
-				<td>
-						Section => Actual = [Policy Details] equals Expected = [Policy Details]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:04 PM</td>
-				<td>
-						Term Type  Selected = 6 months
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:05 PM</td>
-				<td>
-						Effective Date  cleared value and input  = [08/02/2021] And pressed TAB
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:06 PM</td>
-				<td>
-						Written Date  cleared value And input  = [08/02/2021]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:07 PM</td>
-				<td>
-						Expiration Date => Actual = [02/02/2022] equals Expected = [02/02/2022]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:08 PM</td>
-				<td>
-						Preffered Language  Selected = Edge Policyholder English (US)
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:09 PM</td>
-				<td>
-						Section => Actual = [Affinity Group] equals Expected = [Affinity Group]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:10 PM</td>
-				<td>
-						Section => Actual = [Producer of Record] equals Expected = [Producer of Record]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:11 PM</td>
-				<td>
-						Organization => Actual = [ACV Property Insurance] valueEquals Expected = [ACV Property Insurance]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:12 PM</td>
-				<td>
-						ProducerCode => Actual = [301-008578 ACV Property Insurance] FirstSelectedOptionEquals Expected = [301-008578 ACV Property Insurance]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:13 PM</td>
-				<td>
-						Section => Actual = [Underwriting Companies] equals Expected = [Underwriting Companies]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:13 PM</td>
-				<td>
-						UC Name  Selected = Acme Medium Hazard Insurance
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:14 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:15 PM</td>
-				<td>
-						Screen Header => Actual = [Drivers] equals Expected = [Drivers]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:16 PM</td>
-				<td>
-						clicked Field = Add
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:16 PM</td>
-				<td>
-						moveToElement = Existing Driver
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:17 PM</td>
-				<td>
-						Clicked = Existing Driver IVFgSVSpQ Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:18 PM</td>
-				<td>
-						clicked Field = Contat Details Tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:19 PM</td>
-				<td>
-						Person => Actual = [Person] equals Expected = [Person]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:20 PM</td>
-				<td>
-						Date Of Birth  cleared value And input  = [03/17/1994]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:20 PM</td>
-				<td>
-						Address => Actual = [Address] equals Expected = [Address]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:21 PM</td>
-				<td>
-						LicenseNumber  cleared value And input  = [08022021220448]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:21 PM</td>
-				<td>
-						LicenseState  Selected = Alaska
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:22 PM</td>
-				<td>
-						clicked Field = Roles Tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:23 PM</td>
-				<td>
-						Primary Named Insured => Actual = [Primary Named Insured] equals Expected = [Primary Named Insured]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:24 PM</td>
-				<td>
-						Driver => Actual = [Driver] equals Expected = [Driver]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:25 PM</td>
-				<td>
-						DateCompletedTrainingClass  cleared value And input  = [08/05/2011]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:25 PM</td>
-				<td>
-						YearFirstLicensed  cleared value And input  = [2012]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:26 PM</td>
-				<td>
-						clicked Field = Excluded?
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:26 PM</td>
-				<td>
-						Accident/Violation Summary => Actual = [Accident/Violation Summary] equals Expected = [Accident/Violation Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:27 PM</td>
-				<td>
-						NumberOfAccidents_PolicyLevel  Selected = 0
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:28 PM</td>
-				<td>
-						NumberOfAccidents_AccountLevel  Selected = 0
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:28 PM</td>
-				<td>
-						NumberOfViolations_PolicyLevel  Selected = 0
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:29 PM</td>
-				<td>
-						NumberOfViolations_AccountLevel  Selected = 0
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:29 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:30 PM</td>
-				<td>
-						Screen Header => Actual = [Vehicles] equals Expected = [Vehicles]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:31 PM</td>
-				<td>
-						Clicked = Create Vehicle
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:32 PM</td>
-				<td>
-						Clicked = VehicleDetails Tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:32 PM</td>
-				<td>
-						Basic Vehicle Information => Actual = [Basic Vehicle Information] equals Expected = [Basic Vehicle Information]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:33 PM</td>
-				<td>
-						Vehicle Type  Selected = Passenger/Light Truck
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:34 PM</td>
-				<td>
-						Vin input  = [2B4FK45J3KR090720]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:34 PM</td>
-				<td>
-						Body Type  Selected = SUV
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:35 PM</td>
-				<td>
-						License_State  Selected = Alaska
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:36 PM</td>
-				<td>
-						Cost New input  = [10000]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:36 PM</td>
-				<td>
-						Stated Value input  = [5000]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:37 PM</td>
-				<td>
-						Annual Mileage input  = [2345]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:37 PM</td>
-				<td>
-						Primary Use input  = [Pleasure]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:38 PM</td>
-				<td>
-						Vehicle Rate Modifiers => Actual = [Vehicle Rate Modifiers] equals Expected = [Vehicle Rate Modifiers]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:39 PM</td>
-				<td>
-						clicked Field = Anti-Lock Brakes Discount
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:39 PM</td>
-				<td>
-						Passive Restraint System input  = [No]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:40 PM</td>
-				<td>
-						Anti Theft Discount input  = [None]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:41 PM</td>
-				<td>
-						Assign Drivers to Vehicles => Actual = [Assign Drivers to Vehicles] equals Expected = [Assign Drivers to Vehicles]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:41 PM</td>
-				<td>
-						What percentage does each driver use this vehicle? => Actual = [What percentage does each driver use this vehicle?] equals Expected = [What percentage does each driver use this vehicle?]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:42 PM</td>
-				<td>
-						Clicked = Add
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:42 PM</td>
-				<td>
-						Clicked = Driver IVFgSVSpQ Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:43 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:44 PM</td>
-				<td>
-						Screen Header => Actual = [PA Coverages] equals Expected = [PA Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:45 PM</td>
-				<td>
-						clicked Field = Coverages tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:45 PM</td>
-				<td>
-						Coverages applied to all vehicles => Actual = [Coverages applied to all vehicles in Alaska] contains Expected = [Coverages applied to all vehicles]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:46 PM</td>
-				<td>
-						Liability - Bodily Injury and Property Damage => Actual = [isDisabled] isDisabled Expected = [isDisabled]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:47 PM</td>
-				<td>
-						Auto Liability Package => Actual = [250/500/100] FirstSelectedOptionEquals Expected = [250/500/100]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:47 PM</td>
-				<td>
-						Medical Payments => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:48 PM</td>
-				<td>
-						Medical Limit => Actual = [5,000] FirstSelectedOptionEquals Expected = [5,000]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:48 PM</td>
-				<td>
-						Uninsured Motorist - Bodily Injury => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:49 PM</td>
-				<td>
-						Uninsured Motorist - BI Limits => Actual = [50/100] FirstSelectedOptionEquals Expected = [50/100]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:50 PM</td>
-				<td>
-						Screen Header => Actual = [PA Coverages] equals Expected = [PA Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:50 PM</td>
-				<td>
-						clicked Field = Coverages tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:51 PM</td>
-				<td>
-						Coverages applied per vehicle in => Actual = [Coverages applied per vehicle in Alaska] contains Expected = [Coverages applied per vehicle in]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:52 PM</td>
-				<td>
-						Comprehensive => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:52 PM</td>
-				<td>
-						Comprehensive Deductible => Actual = [500] FirstSelectedOptionEquals Expected = [500]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:53 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:54 PM</td>
-				<td>
-						Screen Header => Actual = [Risk Analysis] equals Expected = [Risk Analysis]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:55 PM</td>
-				<td>
-						Add UWIssue => Actual = [isDisplayed] isDisplayed Expected = [isDisplayed]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:55 PM</td>
-				<td>
-						Add Contingency => Actual = [isDisplayed] isDisplayed Expected = [isDisplayed]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:56 PM</td>
-				<td>
-						Request Approval => Actual = [isDisplayed] isDisplayed Expected = [isDisplayed]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:05:56 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:58 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Review] equals Expected = [Policy Review]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:59 PM</td>
-				<td>
-						Primary Named Insured => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:05:59 PM</td>
-				<td>
-						County => Actual = [Anchorage] equals Expected = [Anchorage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:00 PM</td>
-				<td>
-						Address Type => Actual = [Home] contains Expected = [Home]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:00 PM</td>
-				<td>
-						Product => Actual = [Personal Auto] equals Expected = [Personal Auto]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:01 PM</td>
-				<td>
-						Effective Date => Actual = [08/02/2021] equals Expected = [08/02/2021]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:02 PM</td>
-				<td>
-						Expiration Date => Actual = [02/02/2022] equals Expected = [02/02/2022]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:03 PM</td>
-				<td>
-						Personal Auto Line => Actual = [Personal Auto Line] equals Expected = [Personal Auto Line]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:04 PM</td>
-				<td>
-						Policy Level Coverages => Actual = [Policy Level Coverages] equals Expected = [Policy Level Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:04 PM</td>
-				<td>
-						Coverage - Auto Liability Package => Actual = [Auto Liability Package] equals Expected = [Auto Liability Package]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:05 PM</td>
-				<td>
-						Auto Liability Package Value => Actual = [250/500/100] equals Expected = [250/500/100]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:05 PM</td>
-				<td>
-						Coverage - Medical Limit Coverage => Actual = [Medical Limit] equals Expected = [Medical Limit]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:06 PM</td>
-				<td>
-						Medical Limit Coverage Value => Actual = [5,000] equals Expected = [5,000]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:07 PM</td>
-				<td>
-						Vehicle Level Coverages => Actual = [Vehicle Level Coverages] equals Expected = [Vehicle Level Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:08 PM</td>
-				<td>
-						Garage 1 => Actual = [Garage 1] equals Expected = [Garage 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:08 PM</td>
-				<td>
-						Vehicle 1 => Actual = [Vehicle 1] equals Expected = [Vehicle 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:09 PM</td>
-				<td>
-						Primary Drivers => Actual = [Primary Driver: IVFgSVSpQ Automation] contains Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:10 PM</td>
-				<td>
-						Assigned Drivers => Actual = [Assigned Drivers] equals Expected = [Assigned Drivers]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:10 PM</td>
-				<td>
-						Driver => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:11 PM</td>
-				<td>
-						Vehicle Rate Modifiers => Actual = [Vehicle Rate Modifiers] equals Expected = [Vehicle Rate Modifiers]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:11 PM</td>
-				<td>
-						Clicked = Save Draft
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:12 PM</td>
-				<td>
-						Clicked = Quote
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:15 PM</td>
-				<td>
-						Screen Header => Actual = [Quote] equals Expected = [Quote]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:15 PM</td>
-				<td>
-						PrimaryNamedInsured => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:16 PM</td>
-				<td>
-						Address => Actual = [591 bJLCIQc Suites
-South Avenue
-DownTown
-Anchorage, AK 99501] contains Expected = [Suites
-South Avenue
-DownTown
-Anchorage, AK 99501]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:16 PM</td>
-				<td>
-						Address Type => Actual = [Home] equals Expected = [Home]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:17 PM</td>
-				<td>
-						Garage 1 => Actual = [Garage 1] equals Expected = [Garage 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:18 PM</td>
-				<td>
-						Vehicle 1 => Actual = [Vehicle 1] equals Expected = [Vehicle 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:18 PM</td>
-				<td>
-						Liability - Bodily Injury and Property Damage Coverage => Actual = [Liability - Bodily Injury and Property Damage Coverage] equals Expected = [Liability - Bodily Injury and Property Damage Coverage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:19 PM</td>
-				<td>
-						Premium Subtotal and Taxes => Actual = [Premium Subtotal and Taxes] equals Expected = [Premium Subtotal and Taxes]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:21 PM</td>
-				<td>
-						Fetched from Info Bar => Job = Submission (Quoted)
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:23 PM</td>
-				<td>
-						Fetched from Info Bar => LOB = Personal Auto
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:23 PM</td>
-				<td>
-						Fetched from Info Bar => EffectiveDate = Effective: 08/02/2021
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:25 PM</td>
-				<td>
-						Fetched from Info Bar => AccountName = IVFgSVSpQ Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:28 PM</td>
-				<td>
-						Fetched from Info Bar => AccountNumber = 5753012798
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:28 PM</td>
-				<td>
-						Fetched from Info Bar => Underwriter = Elizabith Nyugen
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:29 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:30 PM</td>
-				<td>
-						forms Header => Actual = [Forms] equals Expected = [Forms]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:30 PM</td>
-				<td>
-						forms Validate => Actual = [PA 00DS] equals Expected = [PA 00DS]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:31 PM</td>
-				<td>
-						Description Validate => Actual = [Dec Sheet] equals Expected = [Dec Sheet]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:31 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:35 PM</td>
-				<td>
-						Screen Header => Actual = [Payment] equals Expected = [Payment]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:36 PM</td>
-				<td>
-						Premium Summary => Actual = [Premium Summary] equals Expected = [Premium Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:37 PM</td>
-				<td>
-						Payments => Actual = [Payments] equals Expected = [Payments]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:37 PM</td>
-				<td>
-						Frequency => Actual = [Monthly] equals Expected = [Monthly]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:38 PM</td>
-				<td>
-						Invoicing => Actual = [Invoicing] equals Expected = [Invoicing]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:39 PM</td>
-				<td>
-						Frequency => Actual = [Monthly] equals Expected = [Monthly]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:39 PM</td>
-				<td>
-						FixInvoicesby => Actual = [Bill Date] equals Expected = [Bill Date]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:40 PM</td>
-				<td>
-						InvoicingDay => Actual = [Billing Account Defaults] equals Expected = [Billing Account Defaults]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:41 PM</td>
-				<td>
-						PayUsing => Actual = [Billing Account Defaults] equals Expected = [Billing Account Defaults]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:41 PM</td>
-				<td>
-						Billing => Actual = [Billing] equals Expected = [Billing]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:42 PM</td>
-				<td>
-						Billing_Method  Selected = Direct Bill
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:43 PM</td>
-				<td>
-						Payment Schedule => Actual = [Payment Schedule] equals Expected = [Payment Schedule]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:44 PM</td>
-				<td>
-						Clicked = Payment Plan = A Monthly 10% Down, 9 Max installments
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:45 PM</td>
-				<td>
-						Up-front Payment => Actual = [Up-front Payment] equals Expected = [Up-front Payment]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:45 PM</td>
-				<td>
-						Clicked = Cash
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:46 PM</td>
-				<td>
-						Amount => Fetched value = [124.80]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:48 PM</td>
-				<td>
-						Clicked = Bind Options
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:49 PM</td>
-				<td>
-						Clicked = Issue Policy
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:49 PM</td>
-				<td>
-						alertaccept = Are you sure you want to bind and issue this policy?
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:53 PM</td>
-				<td>
-						Infobar Job => Actual = [Submission (Bound)] equals Expected = [Submission (Bound)]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:56 PM</td>
-				<td>
-						Fetched from Info Bar => Job = Submission (Bound)
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:57 PM</td>
-				<td>
-						Fetched from Info Bar => PolicyNumber = 3870248032
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:06:58 PM</td>
-				<td>
-						Screen Header => Actual = [Submission Bound] equals Expected = [Submission Bound]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:06:59 PM</td>
-				<td>
-						Clicked = View your Policy
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:00 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Summary: 3870248032] contains Expected = [Policy Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:01 PM</td>
-				<td>
-						Details => Actual = [Details] equals Expected = [Details]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:01 PM</td>
-				<td>
-						Policy Number => Actual = [3870248032] equals Expected = [3870248032]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:02 PM</td>
-				<td>
-						Account => Actual = [Account] equals Expected = [Account]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:02 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Summary: 3870248032] contains Expected = [Policy Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:03 PM</td>
-				<td>
-						Details => Actual = [Details] equals Expected = [Details]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:03 PM</td>
-				<td>
-						Policy Number => Actual = [3870248032] equals Expected = [3870248032]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:04 PM</td>
-				<td>
-						clicked Field = Actions
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:05 PM</td>
-				<td>
-						clicked Field = Cancel Policy
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:05 PM</td>
-				<td>
-						Navigation to PolicyCenter Menu : Cancel Policy is Succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:06 PM</td>
-				<td>
-						Screen Header => Actual = [Start Cancellation For Policy #3870248032] contains Expected = [Start Cancellation For Policy]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:06 PM</td>
-				<td>
-						Source  Selected = Insurer
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:07 PM</td>
-				<td>
-						Reason  Selected = Policy rewritten or replaced (flat cancel)
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:08 PM</td>
-				<td>
-						ReasonDescription  cleared value And input  = [Full Term]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:09 PM</td>
-				<td>
-						Clicked = StartCancellation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:09 PM</td>
-				<td>
-						startCancellationForPolicy is Succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:10 PM</td>
-				<td>
-						Screen Header => Actual = [Confirmation] equals Expected = [Confirmation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:10 PM</td>
-				<td>
-						PolicyNumber => Actual = [3870248032] equals Expected = [3870248032]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:11 PM</td>
-				<td>
-						Primary_Named_Insured => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:12 PM</td>
-				<td>
-						Address => Actual = [591 bJLCIQc Suites
-South Avenue
-DownTown
-Anchorage, AK 99501] contains Expected = [Suites
-South Avenue
-DownTown
-Anchorage, AK 99501]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:12 PM</td>
-				<td>
-						County => Actual = [Anchorage] equals Expected = [Anchorage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:13 PM</td>
-				<td>
-						Address Type => Actual = [Home] equals Expected = [Home]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:13 PM</td>
-				<td>
-						Address_Description => Actual = [IVFgSVSpQ AutomationLikes to] contains Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:13 PM</td>
-				<td>
-						Confirmation is Succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:14 PM</td>
-				<td>
-						Clicked = Bind Options
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:15 PM</td>
-				<td>
-						Clicked = Cancel Now
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:15 PM</td>
-				<td>
-						alertaccept = Are you sure you want to cancel this policy?
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:15 PM</td>
-				<td>
-						Infobar Job => Actual = [Cancellation (Bound)] equals Expected = [Cancellation (Bound)]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:16 PM</td>
-				<td>
-						Screen Header => Actual = [Cancellation Bound] equals Expected = [Cancellation Bound]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:17 PM</td>
-				<td>
-						Clicked = View your Policy
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:18 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Summary: 3870248032] contains Expected = [Policy Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:19 PM</td>
-				<td>
-						Details => Actual = [Details] equals Expected = [Details]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:19 PM</td>
-				<td>
-						Policy Number => Actual = [3870248032] equals Expected = [3870248032]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:21 PM</td>
-				<td>
-						Fetched from Info Bar => Status = Canceled Flat: 08/02/2021
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:22 PM</td>
-				<td>
-						clicked Field = Actions
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:23 PM</td>
-				<td>
-						clicked Field = Rewrite Full Term
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:23 PM</td>
-				<td>
-						Navigation to PolicyCenter Menu : Rewrite Full Term is Succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:25 PM</td>
-				<td>
-						Fetched from Info Bar => Job = Rewrite Full Term (Draft)
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:27 PM</td>
-				<td>
-						Fetched from Info Bar => LOB = Personal Auto
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:28 PM</td>
-				<td>
-						Fetched from Info Bar => EffectiveDate = Effective: 08/02/2021
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:30 PM</td>
-				<td>
-						Fetched from Info Bar => AccountName = IVFgSVSpQ Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:32 PM</td>
-				<td>
-						Fetched from Info Bar => AccountNumber = 5753012798
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:34 PM</td>
-				<td>
-						Fetched from Info Bar => PolicyNumber = 3870248032
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:34 PM</td>
-				<td>
-						Fetched from Info Bar => Underwriter = Elizabith Nyugen
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:36 PM</td>
-				<td>
-						Fetched from Info Bar => RewriteNumber = 0254859612
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:37 PM</td>
-				<td>
-						Screen Header => Actual = [Offerings] equals Expected = [Offerings]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:38 PM</td>
-				<td>
-						Offering Selection  Selected = Standard Program
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:38 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:40 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Info] equals Expected = [Policy Info]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:40 PM</td>
-				<td>
-						Name => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:41 PM</td>
-				<td>
-						Phone => Actual = [201-555-1003] equals Expected = [201-555-1003]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:41 PM</td>
-				<td>
-						Policy Address => Actual = [591 bJLCIQc Suites
-South Avenue
-DownTown
-Anchorage, AK 99501] contains Expected = [Suites
-South Avenue
-DownTown
-Anchorage, AK 99501]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:42 PM</td>
-				<td>
-						County => Actual = [Anchorage] equals Expected = [Anchorage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:43 PM</td>
-				<td>
-						Address Type => Actual = [Home] equals Expected = [Home]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:44 PM</td>
-				<td>
-						Official IDs => Actual = [Official IDs] equals Expected = [Official IDs]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:45 PM</td>
-				<td>
-						Section => Actual = [Policy Details] equals Expected = [Policy Details]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:45 PM</td>
-				<td>
-						Term Type  Selected = 6 months
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:46 PM</td>
-				<td>
-						Effective Date  cleared value and input  = [08/02/2021] And pressed TAB
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:47 PM</td>
-				<td>
-						Written Date  cleared value And input  = [08/02/2021]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:48 PM</td>
-				<td>
-						Expiration Date => Actual = [02/02/2022] equals Expected = [02/02/2022]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:48 PM</td>
-				<td>
-						Preffered Language  Selected = Edge Policyholder English (US)
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:49 PM</td>
-				<td>
-						Section => Actual = [Affinity Group] equals Expected = [Affinity Group]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:51 PM</td>
-				<td>
-						Section => Actual = [Producer of Record] equals Expected = [Producer of Record]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:52 PM</td>
-				<td>
-						Organization => Actual = [ACV Property Insurance] valueEquals Expected = [ACV Property Insurance]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:52 PM</td>
-				<td>
-						ProducerCode => Actual = [301-008578 ACV Property Insurance] FirstSelectedOptionEquals Expected = [301-008578 ACV Property Insurance]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:53 PM</td>
-				<td>
-						Section => Actual = [Underwriting Companies] equals Expected = [Underwriting Companies]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:54 PM</td>
-				<td>
-						UC Name  Selected = Acme Medium Hazard Insurance
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:54 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:56 PM</td>
-				<td>
-						Screen Header => Actual = [Drivers] equals Expected = [Drivers]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:56 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:07:57 PM</td>
-				<td>
-						Screen Header => Actual = [Vehicles] equals Expected = [Vehicles]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:58 PM</td>
-				<td>
-						Clicked = Select
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:58 PM</td>
-				<td>
-						Clicked = VehicleDetails Tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:07:59 PM</td>
-				<td>
-						Body Type  Selected = SUV
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:00 PM</td>
-				<td>
-						Cost New  cleared value And input  = [10000]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:00 PM</td>
-				<td>
-						Annual Mileage  cleared value And input  = [2345]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:01 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:02 PM</td>
-				<td>
-						Screen Header => Actual = [PA Coverages] equals Expected = [PA Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:03 PM</td>
-				<td>
-						clicked Field = Coverages tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:04 PM</td>
-				<td>
-						Coverages applied to all vehicles => Actual = [Coverages applied to all vehicles in Alaska] contains Expected = [Coverages applied to all vehicles]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:04 PM</td>
-				<td>
-						Liability - Bodily Injury and Property Damage => Actual = [isDisabled] isDisabled Expected = [isDisabled]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:05 PM</td>
-				<td>
-						Auto Liability Package => Actual = [250/500/100] FirstSelectedOptionEquals Expected = [250/500/100]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:05 PM</td>
-				<td>
-						Medical Payments => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:06 PM</td>
-				<td>
-						Medical Limit => Actual = [5,000] FirstSelectedOptionEquals Expected = [5,000]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:07 PM</td>
-				<td>
-						Uninsured Motorist - Bodily Injury => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:07 PM</td>
-				<td>
-						Uninsured Motorist - BI Limits => Actual = [50/100] FirstSelectedOptionEquals Expected = [50/100]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:08 PM</td>
-				<td>
-						Screen Header => Actual = [PA Coverages] equals Expected = [PA Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:09 PM</td>
-				<td>
-						clicked Field = Coverages tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:09 PM</td>
-				<td>
-						Coverages applied per vehicle in => Actual = [Coverages applied per vehicle in Alaska] contains Expected = [Coverages applied per vehicle in]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:10 PM</td>
-				<td>
-						Comprehensive => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:10 PM</td>
-				<td>
-						Comprehensive Deductible => Actual = [500] FirstSelectedOptionEquals Expected = [500]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:11 PM</td>
-				<td>
-						Screen Header => Actual = [PA Coverages] equals Expected = [PA Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:12 PM</td>
-				<td>
-						Clicked = Additional Coverages tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:13 PM</td>
-				<td>
-						Coverages applied to all vehicles => Actual = [Coverages applied to all vehicles in Alaska] contains Expected = [Coverages applied to all vehicles]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:14 PM</td>
-				<td>
-						Clicked = Rental Car Loss of Use
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:15 PM</td>
-				<td>
-						Rental Car Loss of Use => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:15 PM</td>
-				<td>
-						Rental Car Loss of Use Limit  Selected = 2,000
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:15 PM</td>
-				<td>
-						additionalcoveragesAppliedtoallVehiclesIn is succcesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:16 PM</td>
-				<td>
-						Screen Header => Actual = [PA Coverages] equals Expected = [PA Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:17 PM</td>
-				<td>
-						Clicked = Additional Coverages tab
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:18 PM</td>
-				<td>
-						Coverages applied per vehicle in => Actual = [Coverages applied per vehicle in Alaska] contains Expected = [Coverages applied per vehicle in]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:19 PM</td>
-				<td>
-						Clicked = Electronic Equipment
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:20 PM</td>
-				<td>
-						Electronic Equipment => Actual = [isSelected] isSelected Expected = [isSelected]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:20 PM</td>
-				<td>
-						Increased Limit  Selected = 2,000
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:20 PM</td>
-				<td>
-						additional applied per vehicle in is succcesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:21 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:22 PM</td>
-				<td>
-						Screen Header => Actual = [Risk Analysis] equals Expected = [Risk Analysis]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:23 PM</td>
-				<td>
-						Add UWIssue => Actual = [isDisplayed] isDisplayed Expected = [isDisplayed]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:23 PM</td>
-				<td>
-						Add Contingency => Actual = [isDisplayed] isDisplayed Expected = [isDisplayed]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:24 PM</td>
-				<td>
-						Request Approval => Actual = [isDisplayed] isDisplayed Expected = [isDisplayed]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:24 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:25 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Review] equals Expected = [Policy Review]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:26 PM</td>
-				<td>
-						Clicked = Search
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:26 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Review] equals Expected = [Policy Review]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:27 PM</td>
-				<td>
-						Clicked = Search
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:28 PM</td>
-				<td>
-						Personal Auto Line => Actual = [Personal Auto Line] equals Expected = [Personal Auto Line]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:29 PM</td>
-				<td>
-						Policy Level Coverages => Actual = [Policy Level Coverages] equals Expected = [Policy Level Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:30 PM</td>
-				<td>
-						Coverage - Auto Liability Package => Actual = [Auto Liability Package] equals Expected = [Auto Liability Package]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:30 PM</td>
-				<td>
-						Auto Liability Package Value => Actual = [250/500/100] equals Expected = [250/500/100]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:31 PM</td>
-				<td>
-						Coverage - Medical Limit Coverage => Actual = [Medical Limit] equals Expected = [Medical Limit]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:31 PM</td>
-				<td>
-						Medical Limit Coverage Value => Actual = [5,000] equals Expected = [5,000]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:33 PM</td>
-				<td>
-						Vehicle Level Coverages => Actual = [Vehicle Level Coverages] equals Expected = [Vehicle Level Coverages]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:33 PM</td>
-				<td>
-						Garage 1 => Actual = [Garage 1] equals Expected = [Garage 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:34 PM</td>
-				<td>
-						Vehicle 1 => Actual = [Vehicle 1] equals Expected = [Vehicle 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:34 PM</td>
-				<td>
-						Primary Drivers => Actual = [Primary Driver: IVFgSVSpQ Automation] contains Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:35 PM</td>
-				<td>
-						Assigned Drivers => Actual = [Assigned Drivers] equals Expected = [Assigned Drivers]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:36 PM</td>
-				<td>
-						Driver => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:36 PM</td>
-				<td>
-						Vehicle Rate Modifiers => Actual = [Vehicle Rate Modifiers] equals Expected = [Vehicle Rate Modifiers]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:37 PM</td>
-				<td>
-						Clicked = Save Draft
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:37 PM</td>
-				<td>
-						Clicked = Quote
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:39 PM</td>
-				<td>
-						Screen Header => Actual = [Quote] equals Expected = [Quote]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:40 PM</td>
-				<td>
-						PrimaryNamedInsured => Actual = [IVFgSVSpQ Automation] equals Expected = [IVFgSVSpQ Automation]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:40 PM</td>
-				<td>
-						Address => Actual = [591 bJLCIQc Suites
-South Avenue
-DownTown
-Anchorage, AK 99501] contains Expected = [Suites
-South Avenue
-DownTown
-Anchorage, AK 99501]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:41 PM</td>
-				<td>
-						Address Type => Actual = [Home] equals Expected = [Home]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:42 PM</td>
-				<td>
-						Garage 1 => Actual = [Garage 1] equals Expected = [Garage 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:42 PM</td>
-				<td>
-						Vehicle 1 => Actual = [Vehicle 1] equals Expected = [Vehicle 1]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:43 PM</td>
-				<td>
-						Liability - Bodily Injury and Property Damage Coverage => Actual = [Liability - Bodily Injury and Property Damage Coverage] equals Expected = [Liability - Bodily Injury and Property Damage Coverage]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:43 PM</td>
-				<td>
-						Premium Subtotal and Taxes => Actual = [Premium Subtotal and Taxes] equals Expected = [Premium Subtotal and Taxes]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:44 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:45 PM</td>
-				<td>
-						forms Header => Actual = [Forms] equals Expected = [Forms]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:45 PM</td>
-				<td>
-						forms Validate => Actual = [PA 00DS] equals Expected = [PA 00DS]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:46 PM</td>
-				<td>
-						Description Validate => Actual = [Dec Sheet] equals Expected = [Dec Sheet]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:46 PM</td>
-				<td>
-						Clicked = Next
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:50 PM</td>
-				<td>
-						Screen Header => Actual = [Payment] equals Expected = [Payment]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:51 PM</td>
-				<td>
-						Premium Summary => Actual = [Premium Summary] equals Expected = [Premium Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:51 PM</td>
-				<td>
-						Payments => Actual = [Payments] equals Expected = [Payments]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:52 PM</td>
-				<td>
-						Frequency => Actual = [Monthly] equals Expected = [Monthly]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:53 PM</td>
-				<td>
-						Invoicing => Actual = [Invoicing] equals Expected = [Invoicing]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:53 PM</td>
-				<td>
-						Frequency => Actual = [Monthly] equals Expected = [Monthly]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:54 PM</td>
-				<td>
-						FixInvoicesby => Actual = [Bill Date] equals Expected = [Bill Date]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:55 PM</td>
-				<td>
-						InvoicingDay => Actual = [Billing Account Defaults] equals Expected = [Billing Account Defaults]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:55 PM</td>
-				<td>
-						PayUsing => Actual = [Billing Account Defaults] equals Expected = [Billing Account Defaults]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:56 PM</td>
-				<td>
-						Billing => Actual = [Billing] equals Expected = [Billing]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:57 PM</td>
-				<td>
-						Billing_Method  Selected = Direct Bill
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:08:58 PM</td>
-				<td>
-						Payment Schedule => Actual = [Payment Schedule] equals Expected = [Payment Schedule]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:58 PM</td>
-				<td>
-						Clicked = Payment Plan = A Monthly 10% Down, 9 Max installments
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:59 PM</td>
-				<td>
-						Clicked = Issue Policy
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:08:59 PM</td>
-				<td>
-						alertaccept = Are you sure you want to issue this policy?
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>10:09:00 PM</td>
-				<td>
-						Infobar Job => Actual = [Rewrite Full Term (Quoted)] equals Expected = [Rewrite Full Term (Bound)]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>10:09:00 PM</td>
-				<td>
-						stale element reference: element is not attached to the page document
-  (Session info: chrome=92.0.4515.107)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'JMD', ip: '192.168.29.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\labor\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55555}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 13eb84fc2535586fb164dba005313262
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:02 PM</td>
-				<td>
-						Fetched from Info Bar => LOB = Personal Auto
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:03 PM</td>
-				<td>
-						Fetched from Info Bar => EffectiveDate = Effective: 08/02/2021
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:05 PM</td>
-				<td>
-						Fetched from Info Bar => AccountName = IVFgSVSpQ Automation
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:07 PM</td>
-				<td>
-						Fetched from Info Bar => AccountNumber = 5753012798
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:09 PM</td>
-				<td>
-						Fetched from Info Bar => PolicyNumber = 3870248032
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:10 PM</td>
-				<td>
-						Fetched from Info Bar => Underwriter = Elizabith Nyugen
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:09:10 PM</td>
-				<td>
-						Screen Header => Actual = [Rewrite Full Term Bound] equals Expected = [Rewrite Full Term Bound]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:11 PM</td>
-				<td>
-						Clicked = View your Policy
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:09:12 PM</td>
-				<td>
-						Screen Header => Actual = [Policy Summary: 3870248032] contains Expected = [Policy Summary]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:09:13 PM</td>
-				<td>
-						Details => Actual = [Details] equals Expected = [Details]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:09:13 PM</td>
-				<td>
-						Policy Number => Actual = [3870248032] equals Expected = [3870248032]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:09:14 PM</td>
-				<td>
-						Account => Actual = [Account] equals Expected = [Account]
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:14 PM</td>
-				<td>
-						clicked Field = Setting
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-info text-info"></i></td>
-				<td>10:09:15 PM</td>
-				<td>
-						clicked Field = Logout
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:09:15 PM</td>
-				<td>
-						Logout is succesful
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>10:09:15 PM</td>
-				<td>
-						<span class='badge white-text green'>AUT_PA_PC_Rewrite_FullTerm_01 Test Case PASSED</span>
-				</td>
-			</tr>
-	</tbody>
-</table>
-</div>
-<div class="detail-foot">
-	<ul class="attachments">
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220353.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220353.jpeg</span>
-					<span class="file-size"> 39,243Kb</span>
-				</div>
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>PersonalAuto</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Apr 20, 2022 04:51:17 PM</span>
 			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220353.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
 				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220353.jpeg</span>
-					<span class="file-size"> 39,243Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220355.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220355.jpeg</span>
-					<span class="file-size"> 100,316Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220355.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220355.jpeg</span>
-					<span class="file-size"> 100,316Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220436.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220436.jpeg</span>
-					<span class="file-size"> 126,970Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220436.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220436.jpeg</span>
-					<span class="file-size"> 126,970Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220705.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220705.jpeg</span>
-					<span class="file-size"> 144,682Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220705.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220705.jpeg</span>
-					<span class="file-size"> 144,682Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220723.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220723.jpeg</span>
-					<span class="file-size"> 146,684Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220723.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220723.jpeg</span>
-					<span class="file-size"> 146,684Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220915.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220915.jpeg</span>
-					<span class="file-size"> 147,782Kb</span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="C:\Users\labor\git\blackcomb\test-output\Screenshots\02August2021 220915.jpeg" data-featherlight="image">
-				<div class="file-icon">
-					<i class="fa fa-file-image-o"></i> 
-				</div>
-				<div class="file-info">
-					<span class="file-name">02August2021 220915.jpeg</span>
-					<span class="file-size"> 147,782Kb</span>
-				</div>
-			</a>
-		</li>
-	</ul>
-</div>
-                                        </div>
-                                    </li>
-                                </ul>    
-                            </div>
-                        </div>
-                        <div class="test-content scrollable">
-                            <div class="test-content-tools">
-                                <ul>
-                                    <li>
-                                        <a class="back-to-test" href="javascript:void(0)">
-                                            <i class="fa fa-arrow-left"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="test-content-detail">
-                                <div class="detail-body"></div>
-                            </div>
-                        </div>
-                    </div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
     </div>
-<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/js/script.js"></script>
-</body>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Commissions</span>
+						<span class='test-time'>Apr 20, 2022 04:51:17 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 20, 2022 04:51:17 PM</span>
+	<span class='label end-time'>Apr 20, 2022 04:51:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+180ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:51:31 PM</td>
+				<td class='step-details'>
+						Launched http://ec2-65-2-11-216.ap-south-1.compute.amazonaws.com:8080/PolicyCenter.do
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:34 PM</td>
+				<td class='step-details'>
+						Username = [su]
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:35 PM</td>
+				<td class='step-details'>
+						Password = [gw]
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:36 PM</td>
+				<td class='step-details'>
+						Clicked = Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:51:36 PM</td>
+				<td class='step-details'>
+						Login succesful
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:39 PM</td>
+				<td class='step-details'>
+						Clicked = Setting
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:39 PM</td>
+				<td class='step-details'>
+						Clicked = Logout
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:51:39 PM</td>
+				<td class='step-details'>
+						Logout is succesful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:51:44 PM</td>
+				<td class='step-details'>
+						Launched BillingCenter Environment = UATURL = http://ec2-13-235-133-40.ap-south-1.compute.amazonaws.com:8080/BillingCenter.do
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:44 PM</td>
+				<td class='step-details'>
+						Username = [su]
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:45 PM</td>
+				<td class='step-details'>
+						Password = [gw]
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:46 PM</td>
+				<td class='step-details'>
+						Clicked = Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:51:46 PM</td>
+				<td class='step-details'>
+						Login succesful
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:47 PM</td>
+				<td class='step-details'>
+						Clicked = Setting
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:51:48 PM</td>
+				<td class='step-details'>
+						Clicked = Logout
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:51:48 PM</td>
+				<td class='step-details'>
+						Logout is succesful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:51:50 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>Commissions Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165135.jpeg' src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165135.jpeg' data-src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165135.jpeg'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165136.jpeg' src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165136.jpeg' data-src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165136.jpeg'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165139.jpeg' src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165139.jpeg' data-src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165139.jpeg'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165145.jpeg' src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165145.jpeg' data-src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165145.jpeg'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165146.jpeg' src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165146.jpeg' data-src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165146.jpeg'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165148.jpeg' src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165148.jpeg' data-src='C:\Users\Lenovo\IdeaProjects\CIG\test-output\Screenshots\20April2022 165148.jpeg'></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 20, 2022 04:51:17 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 20, 2022 04:51:50 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 33s+429ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Executed on OS: </td>
+								<td>Windows 10</td>
+							</tr>
+							<tr>
+								<td>Executed by User: </td>
+								<td>Pankaj</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 1,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Commissions":33.18
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
 </html>

@@ -15,6 +15,7 @@ public class CP_Payment extends SeleniumWebDriver_Commands {
 
 	}
 
+
 	// PremiumSummary
 	private static By PA_PremiumSummary = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='Premium Summary']");
 

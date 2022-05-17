@@ -13,6 +13,7 @@ public class WC_Locations extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	/*
 	 * Page Objects
 	 */

@@ -14,6 +14,7 @@ public class GL_RiskAnalysis extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 		// TODO Auto-generated constructor stub
 	}
+
 	private static By RA_AddUWIssue_Button    = By.xpath("//div[contains(@id,'RiskAnalysisCV_tb-AddManualIssue')]//div[@class='gw-label' and text()='Add UW Issue']");
 	private static By RA_AddContingency_Button = By.xpath("//div[contains(@id,'RiskAnalysisCV_tb-AddNewContingencyButton')]//div[@class='gw-label' and text()='Add Contingency']");
 	private static By RA_RequestApproval_Button = By.xpath("//div[@class='gw-label' and text()='Request Approval']");

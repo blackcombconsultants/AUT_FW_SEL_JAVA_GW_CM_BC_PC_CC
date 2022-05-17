@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +13,6 @@ public class CA_Modifiers extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	
 	}
-
 	
 private static By ModifiersHeader = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 private static By RatingInputsHeader =  By.xpath("//div[contains(@id,'ModifiersScreen')]//div[@role='heading' and text()='Rating Inputs']");
@@ -23,8 +23,8 @@ private static By PhysicalDamageRatesSection = By.xpath("//div[contains(@id,'rat
 public static void Modifiers() throws Throwable {
 	
 	try {
-		getStaleElement("Modifiers Header", ModifiersHeader);
-		GuidewireAutomate_Validation("Modifiers Header", ModifiersHeader, "equals", "Modifiers");
+		getStaleElement("Modifiers Header",PolicyCenter_Resuables_PO.Screen_Header);
+		GuidewireAutomate_Validation("Modifiers Header",PolicyCenter_Resuables_PO.Screen_Header, "equals", "Modifiers (Step 9 of 12)");
 		GuidewireAutomate_Validation("Rating Inputs Header", RatingInputsHeader, "equals", "Rating Inputs");
 		
 		

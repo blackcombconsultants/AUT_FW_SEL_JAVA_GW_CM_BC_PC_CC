@@ -1,5 +1,6 @@
 package com.pages.Guidewire.PolicyCenter.CommercialAuto;
 
+import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -37,14 +38,23 @@ public class CA_Vehicles extends SeleniumWebDriver_Commands {
 	private static By Make         = By.xpath("//div[contains(@id,'Make_button') and @class='gw-ActionValueWidget']");
 	private static By Model        = By.xpath("//div[contains(@id,'Model_button') and @class='gw-ActionValueWidget']");
 	private static By Vin          = By.xpath("//div[contains(@id,'Vin_button') and @class='gw-ActionValueWidget']");
-
+    private static By AddVehicleDetails = By.xpath("//div[contains(@id,'CA7VehicleListLV_tb-AddVehicleBtn')]//div[@class='gw-action--inner']");
+    private static By AddTruck = By.xpath("//div[contains(@id,'CA7VehicleListLV_tb-AddVehicleBtn-TruckAddMenuItem')]");
+	private static By GaragedAt = By.xpath("//div[contains(@id,'CA7BusinessVehicleScreen-CA7VehicleCV-5')]//div[@class='gw-label gw-boldLabel' and text()='Garaged At']");
+	private static By VehicleDetailsVIN = By.xpath("//input[@name='CA7VehiclePopup-CA7BusinessVehicleScreen-CA7VehicleCV-CA7BasicVehicleInfoDV-Vin']");
+	private static By VehicleDetailsMake = By.xpath("//input[@name='CA7VehiclePopup-CA7BusinessVehicleScreen-CA7VehicleCV-CA7BasicVehicleInfoDV-Make']");
+	private static By VehicleDetailsModel = By.xpath("//input[@name='CA7VehiclePopup-CA7BusinessVehicleScreen-CA7VehicleCV-CA7BasicVehicleInfoDV-Model']");
+	private static By VehicleDetailsYear = By.xpath("//input[@name='CA7VehiclePopup-CA7BusinessVehicleScreen-CA7VehicleCV-CA7BasicVehicleInfoDV-Year']");
+	private static By VehicleDetailsGrossVehicleWeight = By.xpath("//input[@name='CA7VehiclePopup-CA7BusinessVehicleScreen-CA7VehicleCV-CA7BasicVehicleInfoDV-GrossVehicleWeight']");
+    private static By VehicleDetailsClassCode = By.xpath("//input[@name='CA7VehiclePopup-CA7BusinessVehicleScreen-CA7VehicleCV-CA7BasicVehicleInfoDV-ClassCode']");
+    private static By VehicleDetailOKButton = By.xpath("//div[@id='CA7VehiclePopup-CA7BusinessVehicleScreen-Update']//div[@role='button']");
 	public static void VehicleInformation() throws Throwable {
 
 		try {
 
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("CA_VehicleInformation");
 
-			GuidewireAutomate_Validation("Vehicles Heading", VehiclesHeader, "equals", "Vehicles");
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles (Step 5 of 12)");
 			GuidewireAutomate("Create Vehicle Button", CreateVehicle, "clickAndwait", "click");
 			GuidewireAutomate_Validation("Vehicle Information Heading", VehicleInformation, "equals", "Vehicle Information");
 			GuidewireAutomate_Validation("Vehicle Details Section", VehicleDetailsSection, "equals", "Vehicle Details");
@@ -74,4 +84,31 @@ public class CA_Vehicles extends SeleniumWebDriver_Commands {
 
 	}
 
+	public static void AddVehicleDetails() throws Throwable {
+
+		try {
+
+			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("CA_VehicleInformation");
+
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Vehicles (Step 5 of 12)");
+			GuidewireAutomate("AddVehicleDetails",AddVehicleDetails, "clickAndwait", "click");
+			GuidewireAutomate("AddTruck",AddTruck,"clickAndwait","click");
+			GuidewireAutomate_Validation("Vehicle Information Heading", VehicleInformation, "equals", "Vehicle Information");
+			GuidewireAutomate_Validation("Vehicle Details Section", VehicleDetailsSection, "equals", "Vehicle Details");
+			GuidewireAutomate_Validation("Garaged At Section",GaragedAt, "equals", "Garaged At");
+			GuidewireAutomate("VIN",VehicleDetailsVIN,"sendKeys",lhm_TestCase_Table_Data.get("CA_VIN"));
+			GuidewireAutomate("Make",VehicleDetailsMake,"sendKeys",lhm_TestCase_Table_Data.get("CA_Make"));
+			GuidewireAutomate("Model",VehicleDetailsModel,"sendKeys",lhm_TestCase_Table_Data.get("CA_Model"));
+			GuidewireAutomate("Year",VehicleDetailsYear,"clearANDsendKeys",lhm_TestCase_Table_Data.get("CA_Year"));
+			GuidewireAutomate("Gross Vehicle Weight",VehicleDetailsGrossVehicleWeight,"sendKeys",lhm_TestCase_Table_Data.get("CA_GrossVehicleWeight"));
+			GuidewireAutomate_Validation("Classification Information Section", VehicleDetailsClassificationInformationSection, "equals", "Classification Information");
+			GuidewireAutomate("Class code", VehicleDetailsClassCode, "clearANDsendKeys", lhm_TestCase_Table_Data.get("CA_Class"));
+			getStaleElement("Ok Button",VehicleDetailOKButton);
+			GuidewireAutomate("Ok Button", VehicleDetailOKButton, "clickAndwait", "click");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
 }

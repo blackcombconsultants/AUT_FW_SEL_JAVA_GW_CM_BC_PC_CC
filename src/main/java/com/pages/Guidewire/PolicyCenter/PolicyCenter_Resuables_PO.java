@@ -8,6 +8,9 @@ public interface PolicyCenter_Resuables_PO {
 	 * InfoBar
 	 */
 
+
+
+
 	final By InfoBar_SubmissionNumber    = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Submission ')]");
 	final By InfoBar_ReinstatementNumber = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Reinstatement ')]");
 	final By InfoBar_RewriteNumber       = By.xpath("//div[@id='gw-west-center']//div[@class='gw-Wizard--Title' and contains(text(),'Rewrite ')]");
@@ -36,7 +39,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By CreateAccount_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Create account']");
 	final By Organizations_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading'  and text()='Organizations']");
 	final By Offerings_Header               = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Offerings']");
-	final By Qualification_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Qualification']");
+	final By Qualification_Header           = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Qualification (Step 1 of 12)']");
 	final By Drivers_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Drivers']");
 	final By Vehicles_Header                = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Vehicles']");
 	final By PACoverages_Header             = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='PA Coverages']");
@@ -48,6 +51,8 @@ public interface PolicyCenter_Resuables_PO {
 	final By Payment_Header                 = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Payment']");
 	final By Forms_Header                   = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Forms']");
 	final By PolicySummary_Header           = By.xpath("//div[@id='PolicyFile_Summary-ttlBar']//div[@class='gw-TitleBar--title' and @role='heading' and contains(text(),'Policy Summary')]");
+
+
 
 	final By Error_Header         = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-subGroupLabel gw-text']");
 	final By Error_Message        = By.xpath("//div[contains(@class,'gw-MessagesWidget--group-CURRENT_PAGE')]//div[@class='gw-WebMessage']//div[@class='gw-message']");
@@ -69,6 +74,7 @@ public interface PolicyCenter_Resuables_PO {
 	final By Cancel_Button                           = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Cancel']");
 	final By Back_Button                             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Back']");
 	final By Next_Button                             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Next']");
+	final By SaveAndNext_Button                             = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='Save and Next']");
 	final By Edit_Button                             = By.xpath("//div[@id='PreRenewalDirectionPage-PreRenewalDirectionScreen-Edit']");
 	final By Quote_Button                            = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@class,'gw-ToolbarButtonWidget')]/div[@role='button']//div[@class='gw-label' and text()='uote']");
 	final By ReleaseLock_Button                      = By.xpath("//div[@id='gw-center-title-toolbar']//div[contains(@id,'Quote')]/div[@role='button']");

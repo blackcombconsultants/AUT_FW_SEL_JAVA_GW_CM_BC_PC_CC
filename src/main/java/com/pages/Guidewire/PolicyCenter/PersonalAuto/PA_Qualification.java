@@ -15,6 +15,7 @@ public class PA_Qualification extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By QU_PA_PreQualification = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='PA Pre-Qualification']");
 
 	private static By QU_IsApplicantCurrentlyInsured                                                = By.xpath("//select[contains(@name,'QuestionSetLV-0-QuestionModalInput-ChoiceSelectInput_NoPost')]");

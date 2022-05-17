@@ -13,6 +13,7 @@ public class BO_Qualification extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By QU_BO_PreQualification = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='BOP Pre-Qualification']");
 
 	private static By QU_nonrenewedduringtheprior3years                                                         = By.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_NoPost_1')]");

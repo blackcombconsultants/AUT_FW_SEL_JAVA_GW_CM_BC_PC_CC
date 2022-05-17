@@ -14,6 +14,7 @@ public class IM_CoveragePartSelection extends SeleniumWebDriver_Commands {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	private static By CoveragePartSelection_Header = By.xpath(
 			"//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Coverage Part Selection']");
 

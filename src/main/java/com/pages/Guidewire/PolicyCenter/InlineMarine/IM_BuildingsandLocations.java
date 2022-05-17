@@ -9,6 +9,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class IM_BuildingsandLocations extends SeleniumWebDriver_Commands {
 
+
 	public IM_BuildingsandLocations(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}

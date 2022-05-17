@@ -12,6 +12,7 @@ public class WC_Qualification extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	/*
 	 * Page Objects
 	 */

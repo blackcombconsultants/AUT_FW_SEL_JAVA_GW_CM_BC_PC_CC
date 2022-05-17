@@ -15,15 +15,17 @@ public class CA_Forms extends SeleniumWebDriver_Commands {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	private static By Forms_Validate       = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[1]//div[@class='gw-value-readonly-wrapper']");
 	private static By Description_Validate = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[2]//div[@class='gw-value-readonly-wrapper']");
 
 	private static By Endorsement_Validate = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[3]//div[@class='gw-value-readonly-wrapper']");
 	private static By Replacement_Validate = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[4]//div[@class='gw-value-readonly-wrapper']");
 
-	public static void pa_forms() throws Throwable {
-		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("forms", strTestCaseName);
-		GuidewireAutomate_Validation("forms Header", PolicyCenter_Resuables_PO.Forms_Header, "equals", "Forms");
+
+	public static void ValidateForms() throws Throwable {
+		lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("Forms");
+		GuidewireAutomate_Validation("forms Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Forms");
 		forms_validate("VERIFY");
 		description_validate("VERIFY");
 

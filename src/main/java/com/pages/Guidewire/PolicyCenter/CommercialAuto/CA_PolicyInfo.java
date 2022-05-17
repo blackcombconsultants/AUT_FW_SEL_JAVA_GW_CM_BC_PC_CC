@@ -46,7 +46,13 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 	 */
 	private static By PI_OfficialID = By.xpath("//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Official IDs']");
 	private static By PI_OI_SSN     = By.xpath("//input[contains(@name,'OfficialIDDV_Input')]");
-
+   /*
+    * Business And Operations
+    */
+   private static By PI_BusinessOperation= By.xpath("//div[contains(@class,'gw-LabelWidget')]/div[contains(@class,'gw-label') and text()='Business and Operations']");
+   private static By PI_YearBusinessStarted = By.xpath("//input[contains(@name,'CommercialInputSet-YearBusinessStarted')]");
+	private static By PI_Doestheclienthaveanexistingcig     = By.xpath("//select[contains(@name,'CommercialInputSet-MultiLineOrMonoLineCommission')]");
+    private static By PI_Descriptionofbusinessandoperations = By.xpath("//textarea[contains(@name,'CommercialInputSet-BusOps')]");
 	// Organization Type
 	private static By OrganizationTypeSection = By.xpath("//div[contains(@id,'OrganizationType_Input')]//div[@class='gw-label']");
 	private static By OrganizationType        = By.xpath("//select[contains(@name,'AccountInfoInputSet-OrganizationType')]");
@@ -118,10 +124,10 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
 
-			GuidewireAutomate_Validation("Screen Header", PolicyInfo_Header, "equals", "Policy Info");
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info (Step 2 of 12)");
 
 			GuidewireAutomate("Date Quote Needed", PI_DateQuoteNeeded, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PI_DateQuoteNeeded"));
-
+			  System.out.println(lhm_TestCase_Table_Data.get("PI_DateQuoteNeeded"));
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
 		} catch (Exception e) {
@@ -134,7 +140,7 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 
 		try {
 			getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
-			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
+			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "contains", "Policy Info");
 
 			GuidewireAutomate_Validation("Name", PrimaryNamedInsured_Name, "equals", strAccountName);
 
@@ -157,20 +163,6 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 	}
 
 	public static void primaryNamedInsured_ChangeTo_NewPerson() throws Throwable {
-
-		try {
-
-			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
-			lhm_TestCase_Table_Data.clear();
-		} catch (Exception e) {
-
-			e.printStackTrace();
-			throw e;
-		}
-
-	}
-
-	public static void primaryNamedInsured_ChangeTo_FromAddressBook() throws Throwable {
 		lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
 		try {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
@@ -187,6 +179,20 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 			getStaleElement("State", PI_StateName);
 			GuidewireAutomate("State", PI_StateName, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_StateName"));
 			GuidewireAutomate("AddressType", PI_AddressType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_AddressType"));
+
+			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
+			lhm_TestCase_Table_Data.clear();
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			throw e;
+		}
+
+	}
+
+	public static void primaryNamedInsured_ChangeTo_FromAddressBook() throws Throwable {
+
+		try {
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
@@ -226,9 +232,9 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 	public static void policyAddress() throws Throwable {
 		lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
 		try {
-			getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
-			GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
-			GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "contains", lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
+			//getStaleElement("Screen Header", PolicyCenter_Resuables_PO.Screen_Header);
+			//GuidewireAutomate_Validation("Screen Header", PolicyCenter_Resuables_PO.Screen_Header, "equals", "Policy Info");
+			//GuidewireAutomate_Validation("Phone", PrimaryNamedInsured_Phone, "contains", lhm_TestCase_Table_Data.get("PrimaryNI_Phone"));
 			GuidewireAutomate_Validation("Policy Address", PrimaryNamedInsured_PolicyAddress, "contains", lhm_TestCase_Table_Data.get("PI_PolicyAddress"));
 			GuidewireAutomate_Validation("County", PrimaryNamedInsured_County, "equals", lhm_TestCase_Table_Data.get("PI_County"));
 
@@ -271,7 +277,22 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 			throw e;
 		}
 	}
+	//misba
+	public static void BusinessAndOperations() throws Throwable{
+		lhm_TestCase_Table_Data=CA_Reusables.getData_CommercialAuto("policyInfo");
+		try{
+			GuidewireAutomate_Validation("Business and Operations", PI_BusinessOperation, "equals", "Business and Operations");
+            GuidewireAutomate("Year Business Started",PI_YearBusinessStarted,"clearANDsendKeys",lhm_TestCase_Table_Data.get("PI_YearBusinessStarted"));
+			GuidewireAutomate("Does the client have an existing CIG Commercial Lines BOP or Property policy?", PI_Doestheclienthaveanexistingcig, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_Doestheclienthaveanexistingcig"));
+			GuidewireAutomate("Description of business and operations",PI_Descriptionofbusinessandoperations,"clearANDsendKeys",lhm_TestCase_Table_Data.get("PI_Descriptionofbusinessandoperations"));
 
+			lhm_TestCase_Data.putAll((lhm_TestCase_Table_Data));
+			lhm_TestCase_Table_Data.clear();
+		}catch(Exception e){
+			throw e;
+		}
+
+	}
 	public static void policyAddress_ChangeTo_EditCurrentAddress() throws Throwable {
 		lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
 		try {
@@ -308,7 +329,7 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 			lhm_TestCase_Table_Data = CA_Reusables.getData_CommercialAuto("policyInfo");
 			getStaleElement("Organization Type", OrganizationTypeSection);
 			GuidewireAutomate_Validation("Organization Type", OrganizationTypeSection, "equals", "Organization Type");
-			GuidewireAutomate("Product", OrganizationType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_OrganizationType"));
+			//GuidewireAutomate("Product", OrganizationType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_OrganizationType"));
 			GuidewireAutomate("Product", OrganizationType, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_OrganizationType"));
 
 			// GuidewireAutomate_Validation("SSN", PI_OI_SSN, "valueEquals",
@@ -434,12 +455,14 @@ public class CA_PolicyInfo extends SeleniumWebDriver_Commands {
 
 			GuidewireAutomate("Term Type", PI_PD_TermType, "selectByVisibleTextAndwait", lhm_TestCase_Table_Data.get("PI_PD_TermType"));
 			GuidewireAutomate("Effective Date", PI_PD_EffectiveDate, "clearsendKeysTABTAB", lhm_TestCase_Table_Data.get("PI_PD_EffectiveDate"));
-			GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "equals", lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate"));
-			GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
 			getStaleElement("Expiration Date", PI_PD_ExpirationDate);
-
+			String value=lhm_TestCase_Table_Data.get("PI_PD_ExpirationDate");
+			String datevalue=value.replace("-","/");
+			System.out.println(datevalue);
+			GuidewireAutomate_Validation("Expiration Date", PI_PD_ExpirationDate, "contains", datevalue);
+			GuidewireAutomate("Written Date", PI_PD_WrittenDate, "clearANDsendKeys", lhm_TestCase_Table_Data.get("PI_PD_WrittenDate"));
 			GuidewireAutomate("Base State", PI_PD_RateAsOfDateBaseState, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_BaseState"));
-			GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
+			//GuidewireAutomate("Preffered Language", PI_PD_PrefferedLanguage, "selectByVisibleText", lhm_TestCase_Table_Data.get("PI_PD_PrefferedLanguage"));
 
 			lhm_TestCase_Data.putAll(lhm_TestCase_Table_Data);
 			lhm_TestCase_Table_Data.clear();
