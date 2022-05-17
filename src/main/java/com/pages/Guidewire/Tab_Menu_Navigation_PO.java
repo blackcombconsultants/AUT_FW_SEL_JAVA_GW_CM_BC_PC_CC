@@ -27,6 +27,7 @@ public interface Tab_Menu_Navigation_PO {
 	 * ------------------------------------------------------------------------- Desktop Tab
 	 * -------------------------------------------------------------------------
 	 */
+
 	final By TabPC_Desktop                         = By.xpath("//div[@id='TabBar-DesktopTab']//div[@class='gw-label']");
 	final By TabPC_Desktop_dd                      = By.xpath("//div[@id='TabBar-DesktopTab']/div[3]");
 	final By TabPC_Desktop_Summary                 = By.id("TabBar-DesktopTab-Desktop_Underwriter_MySummary");

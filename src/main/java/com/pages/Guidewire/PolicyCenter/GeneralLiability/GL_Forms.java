@@ -19,6 +19,7 @@ public class GL_Forms extends SeleniumWebDriver_Commands {
 	private static By Endorsement_Validate = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[3]//div[@class='gw-value-readonly-wrapper']");
 	private static By Replacement_Validate = By.xpath("//tr[contains(@id,'FormsScreen-FormsDV-FormsLV-0-0')]//td[4]//div[@class='gw-value-readonly-wrapper']");
 
+
 	public static void pa_forms() throws Throwable {
 		lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("forms", strTestCaseName);
 		GuidewireAutomate_Validation("forms Header", PolicyCenter_Resuables_PO.Forms_Header, "equals", "Forms");

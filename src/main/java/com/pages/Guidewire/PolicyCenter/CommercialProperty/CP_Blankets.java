@@ -14,6 +14,7 @@ public class CP_Blankets extends SeleniumWebDriver_Commands {
 
 	}
 
+
 	private static By ScreenHeader     = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 	private static By AddBlanketButton = By.xpath("//div[contains(@id,'CPBlanket_tb-AddBlanket')]//div[@role='button']");
 

@@ -13,6 +13,7 @@ public class IM_Reusable extends SeleniumWebDriver_Commands {
 
 	}
 
+	
 	private static By LOB_InlineMarine = By.xpath(
 			"//div[text()='Inland Marine']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
 

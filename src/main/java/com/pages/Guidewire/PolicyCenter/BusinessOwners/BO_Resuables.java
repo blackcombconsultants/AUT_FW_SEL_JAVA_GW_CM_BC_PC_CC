@@ -26,6 +26,7 @@ public class BO_Resuables extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	static By NewNote_Topic                      = By.xpath("//select[@name='NewNoteWorksheet-NewNoteScreen-NewNoteDV-Topic']");
 	static By NewNote_Text                       = By.xpath("//textarea[@name='NewNoteWorksheet-NewNoteScreen-NewNoteDV-Text']");
 	static By NotesScreen                        = By.xpath("//div[@id='PolicyFile-MenuLinks-PolicyFile_PolicyFile_Notes']//div[@class='gw-label gw-hasIcon']");

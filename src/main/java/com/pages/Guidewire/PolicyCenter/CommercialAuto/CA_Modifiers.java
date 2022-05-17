@@ -13,8 +13,6 @@ public class CA_Modifiers extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	
 	}
-
-
 	
 private static By ModifiersHeader = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 private static By RatingInputsHeader =  By.xpath("//div[contains(@id,'ModifiersScreen')]//div[@role='heading' and text()='Rating Inputs']");

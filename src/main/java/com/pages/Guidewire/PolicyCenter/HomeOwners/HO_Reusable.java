@@ -12,6 +12,7 @@ public class HO_Reusable  extends SeleniumWebDriver_Commands  {
 		super(driver, oExtentTest);
 		
 	}
+
 	private static By LOB_HomeOwners= By.xpath("//div[text()='Homeowners']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
 
 	private static By SW_Offering          = By.xpath("//div[@id='SubmissionWizard-Offering']/div[@role='menuitem']");

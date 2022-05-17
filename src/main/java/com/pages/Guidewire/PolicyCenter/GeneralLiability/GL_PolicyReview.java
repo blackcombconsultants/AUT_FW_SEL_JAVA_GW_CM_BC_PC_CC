@@ -15,6 +15,7 @@ public class GL_PolicyReview extends SeleniumWebDriver_Commands {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	// Primary Named Insured
 	public static By PR_PrimaryNamedInsured = By.xpath("//div[contains(@id,'ReviewSummaryDV-PrimaryNamedInsured')]//div[@class='gw-value-readonly-wrapper']");
 	public static By PR_Address             = By.xpath("//div[contains(@id,'GlobalAddressInputSet-AddressSummary')]//div[@class='gw-value-readonly-wrapper']");

@@ -12,6 +12,7 @@ public class CPACK_CP_Blankets extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 
 	}
+
 	private static By ScreenHeader = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 
 	private static By AddBuildingButton = By.xpath("//div[@id='SubmissionWizard-LOBWizardStepGroup-LineWizardStepSet-IMWizardStepGroup-IMBuildingsScreen-IMBuildingsAndLocationsLV-0-Actions-ActionsMenuIcon']/div[2]/div[1]");

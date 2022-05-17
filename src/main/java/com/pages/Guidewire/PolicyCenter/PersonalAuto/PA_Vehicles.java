@@ -11,6 +11,7 @@ import com.pages.Guidewire.PolicyCenter.PolicyCenter_Resuables_PO;
 public class PA_Vehicles extends SeleniumWebDriver_Commands {
 	Selenium_Utils_DataBase oDB = new Selenium_Utils_DataBase();
 
+
 	private static By VehicleDetails = By.xpath("//div[contains(@class,'gw-panelRefWidget--titleArea')]//div[@class='gw-TitleBar--title']");
 
 	private static By CreateVehicle_Button = By.xpath("//div[contains(@id,'VehiclesListDetailPanel_tb-Add')]//div[@class='gw-label']");

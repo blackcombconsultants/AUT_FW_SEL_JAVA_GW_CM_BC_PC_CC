@@ -14,7 +14,6 @@ public class CA_StateInfo extends SeleniumWebDriver_Commands {
 
 	}
 
-
 	private static By SateInfoHeader = By.xpath("//div[contains(@id,'BAStateInfoScreen-ttlBar')]//div[@role='heading']");
 
 	private static By StateInfoState = By.xpath("//td[contains(@id,'States_Cell')]//div[contains(@id,'States')]");

@@ -16,4 +16,5 @@ public class CPACK_Reusables extends SeleniumWebDriver_Commands {
 	public static void newSubmission_SelectLOB_CommercialPackage() throws Throwable {
 		GuidewireAutomate("LOB CommercialPackage", LOB_CommercialPackage, "clickAndwait", "click");
 	}
+
 }

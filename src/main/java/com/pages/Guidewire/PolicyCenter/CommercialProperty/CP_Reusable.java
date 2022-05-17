@@ -12,7 +12,6 @@ public class CP_Reusable extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 
 	}
-
 	private static By LOB_CommercialProperty = By.xpath("//div[text()='Commercial Property']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
 	private static By RateButton             = By.xpath("//div[contains(@id,'Rate')]//div[@role='button']");
 	private static By FinishQuoteButton      = By.xpath("//div[contains(@id,'FinishQuote')]//div[@role='button']");

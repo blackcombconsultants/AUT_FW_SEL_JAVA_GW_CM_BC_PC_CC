@@ -16,6 +16,7 @@ public class PA_PolicyReview extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By Tab_Differences  = By.xpath("//div[contains(@id,'DiffsTab')]");
 	private static By Tab_PolicyReview = By.xpath("//div[contains(@id,'RewriteWizard_DifferencesScreen-PolicyReviewTab')]");
 

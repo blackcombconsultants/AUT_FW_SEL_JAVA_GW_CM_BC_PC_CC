@@ -30,6 +30,7 @@ public class PC_NewDocument extends SeleniumWebDriver_Commands {
 	private static By UploadDocuments_AddFiles1 = By.xpath("//div[contains(@id,'browseButton')]");
 	private static By UploadDocuments_AddFiles  = By.xpath("//input[contains(@id,'FileInput--file')]");
 
+
 	private static By UploadDocuments_Name         = By.xpath("//input[contains(@name,'Name')]");
 	private static By UploadDocuments_Description  = By.xpath("//input[contains(@name,'Description')]");
 	private static By UploadDocuments_FileType     = By.xpath("//select[contains(@name,'DocType')]");

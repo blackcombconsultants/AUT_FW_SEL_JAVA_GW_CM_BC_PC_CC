@@ -1,6 +1,8 @@
 package com.Test.Guidewire.BilllingCenter;
 
 import com.pages.Guidewire.BillingCenter.*;
+import com.pages.Guidewire.ClaimsCenter.BillingCenter.*;
+import com.pages.Guidewire.PolicyCenter.GeneralLiability.BillingCenter.*;
 import org.testng.annotations.Test;
 
 public class Smoke_test {

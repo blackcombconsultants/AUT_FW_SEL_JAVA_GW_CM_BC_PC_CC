@@ -17,6 +17,7 @@ public class PA_Payments extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	/*
 	 * PremiumSummary
 	 */

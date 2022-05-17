@@ -14,8 +14,6 @@ public class  PC_AccountSummary_Actions extends SeleniumWebDriver_Commands {
 	static By Menu_Actions   = By.xpath("//div[contains(@id,'MenuActions')]/div[@role='button']/div[2]");
 	// add xpath for New Note section
 	static By MenuPC_Account_Actions_Create_NewNote = By.xpath("//div[contains(@id,'AccountFileMenuActions_NewNote')]");
-
-
 	private static By PolicyChangeHeader = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
 	private static By PolicyChange_EffectiveDate = By.xpath("//input[contains(@name,'StartPolicyChangeDV-EffectiveDate')]");
 	private static By SB_ViewYourPolicy  = By.xpath("//div[contains(@id,'JobCompleteDV-ViewPolicy')]//div[contains(text(),'View your policy')]");

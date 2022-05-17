@@ -12,7 +12,6 @@ public class CA_Quote extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
-
 	private static By Quote_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 
 	private static By QU_SubmissionNumber    = By.xpath("//div[contains(@id,'JobNumber')]//div[@class='gw-value-readonly-wrapper']");

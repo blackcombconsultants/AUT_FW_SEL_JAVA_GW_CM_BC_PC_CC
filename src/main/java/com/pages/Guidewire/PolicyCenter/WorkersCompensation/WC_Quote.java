@@ -14,6 +14,7 @@ public class WC_Quote extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	/*
 	 * Policy details
 	 */

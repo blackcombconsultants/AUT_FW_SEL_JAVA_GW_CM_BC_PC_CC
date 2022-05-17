@@ -12,6 +12,7 @@ public class CA_CoveredVehicles extends SeleniumWebDriver_Commands {
 	public CA_CoveredVehicles(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 
+
 	}
 	private static By CoveredVehiclesHeader    = By.xpath("//div[contains(@id,'CoveredAutoSymbolsScreen-ttlBar')]//div[@role='heading']");
 	private static By EditCoveredVehicleButton = By.xpath("//div[contains(@id,'EditAutoSymbols')]//div[@role='button']");

@@ -22,7 +22,6 @@ public class CA_Submission extends GW_GetDriver {
 
 	}
 
-
 	@Test
 	public void AUT_CA_PC_DeclinedNewBusinessSubmission() throws Throwable {
 

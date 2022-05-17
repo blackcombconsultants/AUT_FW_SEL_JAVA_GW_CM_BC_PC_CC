@@ -17,6 +17,7 @@ public class WC_PolicyReview extends SeleniumWebDriver_Commands {
 	private static By Tab_Differences  = By.xpath("//div[contains(@id,'DiffsTab')]");
 	private static By Tab_PolicyReview = By.xpath("//div[contains(@id,'RewriteWizard_DifferencesScreen-PolicyReviewTab')]");
 
+
 	/*
 	 * Primary Named Insured
 	 */

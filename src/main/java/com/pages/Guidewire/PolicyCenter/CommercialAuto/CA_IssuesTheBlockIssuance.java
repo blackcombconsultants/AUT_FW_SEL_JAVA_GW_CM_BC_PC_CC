@@ -11,6 +11,7 @@ public class CA_IssuesTheBlockIssuance  extends SeleniumWebDriver_Commands {
     public CA_IssuesTheBlockIssuance(WebDriver driver, ExtentTest oExtentTest) {
         super(driver, oExtentTest);
 
+
     }
     //Issuance
     static By IssuanceScreenHeader = By.xpath("//div[@id='UWBlockProgressIssuesPopup-IssuesScreen-PreQuoteIssueTitle']");

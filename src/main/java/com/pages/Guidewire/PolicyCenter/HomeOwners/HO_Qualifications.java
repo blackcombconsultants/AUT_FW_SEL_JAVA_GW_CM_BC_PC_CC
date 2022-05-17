@@ -18,6 +18,7 @@ public class HO_Qualifications extends SeleniumWebDriver_Commands {
 	private static By QU_Qualification_CoverageForm = By.xpath("//select[contains(@name,'HOPCoverageForm')]");
 	private static By QU_PA_PreQualification        = By.xpath("//div[contains(@class,'gw-boldLabel') and text()='HOP Pre-Qualification']");
 
+
 	private static By QU_Do_you_have_a_dog                     = By.xpath("//input[contains(@id,'QuestionSetLV-0-QuestionModalInput-BooleanRadioInput_1')]");
 	private static By QU_Is_this_property_vacant               = By.xpath("//input[contains(@id,'QuestionSetLV-1-QuestionModalInput-BooleanRadioInput_1')]");
 	private static By QU_Who_occupies_this_dwelling            = By.xpath("//select[contains(@name,'QuestionSetLV-2-QuestionModalInput-ChoiceSelectInput')]");

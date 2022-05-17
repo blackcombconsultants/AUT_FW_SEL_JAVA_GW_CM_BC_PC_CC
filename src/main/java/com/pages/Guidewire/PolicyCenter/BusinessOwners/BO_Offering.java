@@ -8,6 +8,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class BO_Offering extends SeleniumWebDriver_Commands {
 
+
 	public BO_Offering(WebDriver driver, ExtentTest oExtentTest) {
 		super(driver, oExtentTest);
 	}

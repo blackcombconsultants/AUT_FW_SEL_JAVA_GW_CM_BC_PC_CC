@@ -13,6 +13,7 @@ public class GL_Reusable extends SeleniumWebDriver_Commands {
 
 	}
 
+
 	private static By LOB_GeneralLiability = By.xpath(
 			"//div[text()='General Liability']/ancestor::td[contains(@id,'Name_Cell')]/preceding-sibling::td//div[contains(@id,'ProductSelection') and text()='Select']");
 

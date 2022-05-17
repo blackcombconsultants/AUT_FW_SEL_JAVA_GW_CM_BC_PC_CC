@@ -21,6 +21,7 @@ public class PA_Coverages extends SeleniumWebDriver_Commands {
 
 	private static By PA_Coverages_Screen_titlebar = By.xpath("//div[contains(@id,'PersonalAutoScreen-ttlBar')]//div[1]//div");
 
+
 	/*
 	 * CoveragesTab
 	 */

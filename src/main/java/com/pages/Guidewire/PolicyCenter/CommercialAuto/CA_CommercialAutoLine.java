@@ -13,6 +13,7 @@ public class CA_CommercialAutoLine extends SeleniumWebDriver_Commands {
 
 	}
 
+
 	private static By Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading']");
 
 	// Coverages Part------------------------------

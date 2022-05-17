@@ -20,6 +20,7 @@ public class GL_Quote extends SeleniumWebDriver_Commands {
 	public static By QU_AddressType         = By.xpath("//div[contains(@id,'PolicyAddressDisplayInputSet-AddressType') and contains(@class,'gw-ValueWidget')]//div[@class='gw-label']");
 	public static By QU_AddressDescription  = By.xpath("//div[contains(@id,'AddressDescription') and contains(@class,'gw-ValueWidget')]//div[@class='gw-value-readonly-wrapper']");
 
+
 	public static void QuoteDetails() throws Throwable {
 		try {
 			lhm_TestCase_Table_Data = Selenium_Utils_DataBase.getData_MSExcelWorkSheet_Fillo("quote", strTestCaseName);

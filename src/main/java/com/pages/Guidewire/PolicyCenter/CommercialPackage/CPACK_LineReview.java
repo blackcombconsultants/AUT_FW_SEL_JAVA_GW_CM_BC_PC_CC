@@ -13,7 +13,6 @@ public class CPACK_LineReview extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 	private static By LineReview_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
-
 	/*
 	 * Primary Named Insured
 	 */

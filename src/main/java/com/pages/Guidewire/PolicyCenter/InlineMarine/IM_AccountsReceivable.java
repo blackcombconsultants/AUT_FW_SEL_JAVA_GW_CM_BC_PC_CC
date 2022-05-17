@@ -13,6 +13,7 @@ public class IM_AccountsReceivable extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By AccountsReceivable_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Accounts Receivable']");
 
 	// AccountsReceivable-Part Level Information

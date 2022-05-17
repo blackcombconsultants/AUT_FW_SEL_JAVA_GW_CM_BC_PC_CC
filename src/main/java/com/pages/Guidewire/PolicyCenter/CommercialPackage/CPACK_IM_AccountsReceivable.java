@@ -14,6 +14,7 @@ public class CPACK_IM_AccountsReceivable extends SeleniumWebDriver_Commands {
 
 	}
 
+
 	private static By Modifiers_Header = By.xpath("//div[contains(@id,'ttlBar')]//div[@role='heading']");
 
 	// Rating Inputs

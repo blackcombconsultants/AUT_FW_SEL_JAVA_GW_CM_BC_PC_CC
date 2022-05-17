@@ -14,6 +14,7 @@ public class BO_Modifiers extends SeleniumWebDriver_Commands {
 
 	private static By Modifiers_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Modifiers']");
 
+
 	// Rating Inputs
 	private static By RatingInputs = By.xpath("//div[contains(@id,'ModifiersScreen')]//div[@class='gw-TitleBar--title' and text()='Rating Inputs'] ");
 	/*

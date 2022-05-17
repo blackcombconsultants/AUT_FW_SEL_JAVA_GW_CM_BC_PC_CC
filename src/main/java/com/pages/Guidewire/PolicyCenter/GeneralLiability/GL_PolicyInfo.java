@@ -13,6 +13,7 @@ public class GL_PolicyInfo extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
 	private static By PolicyInfo_Header  = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[@class='gw-TitleBar--title' and @role='heading' and text()='Policy Info']");
 	private static By PI_DateQuoteNeeded = By.xpath("//input[contains(@name,'DateQuoteNeeded')]");
 	private static By Next               = By.xpath("//div[@id='SubmissionWizard-Next']/div[@role='button']");

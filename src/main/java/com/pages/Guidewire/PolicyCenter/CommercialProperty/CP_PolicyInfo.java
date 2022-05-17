@@ -13,6 +13,7 @@ public class CP_PolicyInfo extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 
 	}
+
 	private static By PolicyInfo_Header = By.xpath("//div[contains(@class,'gw-isScreenTitle')]//div[text()='Policy Info']");
 
 	private static By PI_DateQuoteNeeded                                            = By.xpath("//input[contains(@name,'DateQuoteNeeded')]");

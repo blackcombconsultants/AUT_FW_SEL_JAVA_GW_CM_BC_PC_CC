@@ -12,6 +12,8 @@ public class BO_Building extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 	}
 
+
+
 	private static By BO_BuildingHeader = By.xpath("//div[contains(@id,'BOPBuildingsScreen-ttlBar')]");
 	/*
 	 * BuildingsTab

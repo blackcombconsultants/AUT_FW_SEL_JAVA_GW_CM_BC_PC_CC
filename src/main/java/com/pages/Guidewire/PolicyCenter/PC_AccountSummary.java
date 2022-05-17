@@ -16,6 +16,7 @@ public class PC_AccountSummary extends SeleniumWebDriver_Commands {
 
 	private static By AS_Details = By.xpath("//div[@class='gw-TitleSection']/div[@role='heading']/span[text()='Details']");
 
+
 	private static By AS_D_AccountNo            = By.xpath("//div[contains(@id,'AccountDetailsDetailViewTile_DV-AccountNumber')]//div[@class='gw-value-readonly-wrapper']");
 	private static By AS_D_AccountHolder        = By.xpath("//div[contains(@id,'AccountHolder_button')]");
 	private static By AS_D_HomeAddress          = By.xpath("//div[contains(@id,'AccountDetailsDetailViewTile_DV-Address')]//div[@class='gw-value-readonly-wrapper']");

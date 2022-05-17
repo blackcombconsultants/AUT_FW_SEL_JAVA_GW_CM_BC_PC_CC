@@ -12,6 +12,7 @@ public class CP_RiskAnalysis extends SeleniumWebDriver_Commands {
 		super(driver, oExtentTest);
 
 	}
+
 	private static By RiskAnalysisHeader = By.xpath("//div[contains(@id,'RiskAnalysisScreen')]//div[@role='heading']");
 
 	private static By AddUWIssueButton = By.xpath("//div[contains(@id,'AddManualIssue')]//div[@role='button']");
