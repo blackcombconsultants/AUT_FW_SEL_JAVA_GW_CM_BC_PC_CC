@@ -59,6 +59,8 @@ public class BC_AccountSummary extends SeleniumWebDriver_Commands {
 	private static By address3       = By.xpath("//input[contains(@name,'AddressLine3')]");
 	private static By addresstype    = By.xpath("//select[contains(@name,'AddressType')]");
 	private static By description    = By.xpath("//input[contains(@name,'AddressDescription')]");
+
+
 	/*
 	 * private static By officialID = By.xpath("//input[contains(@name,'OfficialIDDV_Input')]");
 	 * 
